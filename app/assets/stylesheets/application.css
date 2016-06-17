@@ -35,3 +35,14 @@ p{
 .nav>li>a{
     display: inline-block;
 }
+
+#idioma_izq{
+    padding: 10px 0px 10px 15px;
+}
+
+#idioma_der{
+    padding: 10px 15px 10px 0px;
+}
+
+
+
