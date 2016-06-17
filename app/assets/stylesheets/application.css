@@ -31,3 +31,7 @@ p{
     font-style: normal;
     font-weight: 300;
 }
+
+.navbar .navbar-nav li a{
+    display: inline;
+}
