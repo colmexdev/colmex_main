@@ -22,7 +22,8 @@
 
   <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <li><a href="#">EN</a> | <a href="#">ES </a> <span class="sr-only">(current)</span></li>
+        <li><p><a href="#">EN</a> | <a href="#">ES </a></p> <span class="sr-only">(current)</span></li>
+
         <li><a href="#">Correo electrónico</a></li>
 	<li><a href="#">Intranet</a></li> 
       </ul>
