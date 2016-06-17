@@ -19,3 +19,9 @@ a{
     font-style: normal;
     font-weight: 700;
 }
+
+h1{
+    font-family: "Gotham SSm A", "Gotham SSm B";
+    font-style: italic;
+    font-weight: 400;
+}
