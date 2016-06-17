@@ -11,4 +11,11 @@
  * file per style scope.
  *
  *= require bootstrap.min
+ *= require_self
  */
+
+a{  
+    font-family: "Whitney SSm A", "Whitney SSm B";
+    font-style: normal;
+    font-weight: 700;
+}
