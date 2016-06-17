@@ -32,6 +32,6 @@ p{
     font-weight: 300;
 }
 
-.idioma ~ a{
+.idioma > a{
     display: inline;
 }
