@@ -13,19 +13,19 @@
   <!-- Wrapper for slides -->
   <div class="carousel-inner" role="listbox">
     <div class="item active">
-      <img src=<%= image_tag("flores1.jpg") %>>
+      <%= image_tag("flores1.jpg") %>
     </div>
 
     <div class="item">
-      <img src=<%= image_tag("flores2.jpeg") %>>
+      <%= image_tag("flores2.jpeg") %>
     </div>
 
     <div class="item">
-      <img src=<%= image_tag("flores3.jpeg") %>>
+      <%= image_tag("flores3.jpeg") %>
     </div>
 
     <div class="item">
-      <img src=<%= image_tag("flores4.jpg") %>>
+      <%= image_tag("flores4.jpg") %>
     </div>
   </div>
 
