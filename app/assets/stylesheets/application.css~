@@ -37,11 +37,13 @@ p{
 }
 
 #idioma_izq{
-    padding: 10px 0px 10px 15px;
+    padding: 0px;
+    margin: 15px 0px 0px 0px;
 }
 
 #idioma_der{
-    padding: 10px 15px 10px 0px;
+    padding: 0px;
+    margin: 15px 0px 0px 3px;
 }
 
 
