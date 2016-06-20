@@ -13,6 +13,12 @@
  *= require bootstrap.min
  *= require_self
  */
+#myCarousel{
+    position: relative;
+    text-align: center;
+    display: inline-block;
+    margin: 0 auto;
+}
 
 a{  
     font-family: "Whitney SSm A", "Whitney SSm B";
@@ -44,13 +50,6 @@ p{
 #idioma_der{
     padding: 0px;
     margin: 15px 0px 0px 3px;
-}
-
-#myCarousel{
-    position: relative;
-    text-align: center;
-    display: inline-block;
-    margin: 0 auto;
 }
 
 
