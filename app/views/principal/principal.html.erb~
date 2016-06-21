@@ -51,7 +51,7 @@
 				<span class="sr-only">Siguiente</span>
 			</a>
 		</div>
-	</div> <!--Cierre de col-sm-12 -->
+	</div> <!--Cierre de columnas slider -->
 </div> <!-- Cierre de row de slider -->
 
 <div class="row"> <!-- Fila para eventos -->
