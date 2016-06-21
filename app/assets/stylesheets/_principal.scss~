@@ -110,6 +110,7 @@ p{
 
 img{
 	max-height: 550px;
+	width: 100%;
 }
 
 .carousel-control{
