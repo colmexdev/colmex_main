@@ -103,13 +103,14 @@ p{
 #myCarousel{
     position: relative;
     text-align: center;
-    display: inline-block;
+    /*display: inline-block;*/
     margin: 0 auto;
     max-height: 550px;
 }
 
 img{
 	max-height: 550px;
+	width: 100%;
 }
 
 .carousel-control{
