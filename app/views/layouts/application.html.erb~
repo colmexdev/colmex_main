@@ -10,9 +10,11 @@
 </head>
 <body>
 	<div class="container-fluid">
-		<div class="col-md-12" id="barra_nav">
+		<div class="row">
+			<div class="col-md-12" id="barra_nav">
 		
-		<div>
+			<div>
+		</div>
 		<%= yield %>
 	<div>
 </body>
