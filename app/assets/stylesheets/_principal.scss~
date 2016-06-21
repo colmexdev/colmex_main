@@ -7,13 +7,18 @@
 	background-color: #0F0F0F;
 }
 
-#id_logo{
+#div_logo{
 	height: 150px;
 	background-color: #C0C0C0;
 }
 
-#id_slider{
-	
+#div_menu{
+	height: 70px;
+	background-color: #03C0C0;
+}
+
+#div_slider{
+	max-height: 550px;
 }
 
 a{  
