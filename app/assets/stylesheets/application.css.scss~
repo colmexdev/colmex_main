@@ -13,8 +13,7 @@
  *= require bootstrap.min
  *= require_self
  */
-@import "bootstrap-sprockets";
-@import "bootstrap";
+
 
 a{  
     font-family: "Whitney SSm A", "Whitney SSm B";
