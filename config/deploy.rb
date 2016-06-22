@@ -45,6 +45,7 @@ namespace :deploy do
       # end
       system("cd prueba/current")
       system("sudo service nginx restart")
+    end
   end
 
   after :publishing, :restart
