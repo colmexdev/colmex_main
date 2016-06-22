@@ -3,12 +3,11 @@ class ApplicationController < ActionController::Base
   # For APIs, you may want to use :null_session instead.
   protect_from_forgery with: :exception
 
-  before_filter :set_language
-
   private
  
-  def set_language
-    I18n.locale = "es"
+  def set
+    locale = params[:id]
+    redirect_to :back
   end
 end
 
