@@ -1,4 +1,5 @@
 function cambiarClasesIdioma(link){
+	console.log(link);
 	link.style.color="#993366";
 	if(link.id=="idioma_en"){
 		document.getElementById("idioma_sp").style.color="#C0C0C0";
