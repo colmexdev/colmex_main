@@ -37,7 +37,7 @@ set :deploy_to, '/home/erik/prueba'
 namespace :deploy do
 
   desc 'Restart application'
-  after :restart, :clear_cache do
+  task :restart do
     on roles(:app), in: :sequence, wait: 5 do
       # Here we can do anything such as:
       # within release_path do
