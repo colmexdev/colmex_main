@@ -43,7 +43,7 @@ namespace :deploy do
       # within release_path do
       #   execute :rake, 'cache:clear'
       # end
-      system("service nginx restart")
+      system("sudo service nginx restart")
     end
   end
 
