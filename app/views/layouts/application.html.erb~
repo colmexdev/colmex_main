@@ -13,7 +13,7 @@
 		<div class="row">
 			<div class="col-md-12" id="barra_nav">
 				<ul> <!-- Lista de opciones del lado izquierdo del navbar -->
-			<li class="nav_opciones_idioma"><%= link_to "EN", {:controller => 'principal', :action => 'set_language', :id => 'en'}, :id => 'idioma_en' %> | <%= link_to "ES", {:controller => 'principal', :action => 'set_language', :id => 'sp'}, :id=> 'idioma_sp' %></li>
+			<li class="nav_opciones_idioma"><%= link_to "EN", {:controller => 'principal', :action => 'set_language', :id => 'en'}, :id => 'idioma_en', :onclick => "cambiarClasesIdioma()" %> | <%= link_to "ES", {:controller => 'principal', :action => 'set_language', :id => 'sp'}, :id=> 'idioma_sp', :onclick => "cambiarClasesIdioma()" %></li>
 			<li class="nav_opciones_mail"><%= t('navbar.mail') %></li>
 			<li class="nav_opciones_intranet"><%= t('navbar.intranet') %></li>
 		</ul> <!-- Cierre de lista de opciones del lado izquierdo del navbar -->
