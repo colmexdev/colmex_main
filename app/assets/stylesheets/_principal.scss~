@@ -29,23 +29,7 @@ padding: 0;
 
 .nav_opciones_idioma{
 	width: 100px;
-	a:link{
-		color: #909090;
-		text-decoration: none;
-	}
-	a:visited{
-		color: #909090;
-		text-decoration: none;
-	}
-	a:hover{
-		color: #909090;
-		text-decoration: none;
-	}
-	a:active{
-		text-decoration: none;
-		color: #993366;
-	}
-}
+	
 
 .nav_opciones_mail{
 	width: 200px;
