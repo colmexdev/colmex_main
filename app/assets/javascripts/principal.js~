@@ -1,0 +1,3 @@
+function cambiarClasesIdioma(){
+	return false;
+}
