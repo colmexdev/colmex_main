@@ -22,7 +22,7 @@ padding: 0;
     	font-style: normal;
     	font-weight: 700;
 	text-align: center;
-	margin-top: 20px;
+	margin-top: 5%;
 }
 
 .nav_opciones_idioma{
