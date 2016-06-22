@@ -8,7 +8,7 @@
 
 .nav_opciones{
 	display: block;
-	width: 60px;
+	width: 150px;
 	float: left;
 	font-family: "Whitney SSm A", "Whitney SSm B";
     	font-style: normal;
