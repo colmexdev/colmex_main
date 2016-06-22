@@ -15,7 +15,7 @@ padding: 0;
 	height: 70px;
 }
 
-.nav_opciones{
+.nav_opciones, .nav_opciones_idioma{
 	display: block;
 	width: 150px;
 	float: left;
@@ -23,6 +23,10 @@ padding: 0;
     	font-style: normal;
     	font-weight: 700;
 	text-align: center;
+}
+
+.nav_opciones_idioma{
+	width: 70px;
 }
 
 #div_logo{
