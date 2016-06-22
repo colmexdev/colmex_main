@@ -16,6 +16,7 @@
 			<li class="nav_opciones">EN | ES</li>
 			<li class="nav_opciones">Correo electrónico</li>
 			<li class="nav_opciones">Intranet</li>
+			<li class="nav_opciones">Dummy</li>
 		</ul> <!-- Cierre de lista de opciones del lado izquierdo del navbar -->
 			</div> <!-- Cierre de div columnas barra_nav -->
 		</div> <!-- Cierre de div row barra nav -->
