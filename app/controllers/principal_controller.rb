@@ -3,7 +3,7 @@ class PrincipalController < ApplicationController
   end
 
   def set_language
-    locale = params[:id]
+    I18n.locale = params[:id]
     redirect_to :back
   end
 end
