@@ -1,6 +1,6 @@
-function cambiarClasesIdioma(){
-	this.style.color="#993366";
-	if(this.id=="idioma_en"){
+function cambiarClasesIdioma(link){
+	link.style.color="#993366";
+	if(link.id=="idioma_en"){
 		document.getElementById("idioma_sp").style.color="#C0C0C0";
 	}
 	else{
