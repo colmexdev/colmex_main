@@ -105,12 +105,25 @@ padding: 0;
 	#img_logo{
 		height: 60px;
 		width: 35%;
+		margin-top: 45px;
 	}
 }
 
+//Clase para alterar el div donde van los botones del menú
 #div_menu{
 	height: 70px;
 	background-color: #03C0C0;
+}
+
+.lista_horizontal{
+	list-style-type: none;
+	overflow: hidden;
+	margin: 0;
+	padding: 0;
+
+	.elemento_lista{
+		float: left;
+	}
 }
 
 #div_slider{

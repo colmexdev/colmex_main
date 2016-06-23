@@ -1,12 +1,14 @@
 <div class="row"> <!-- Fila para logo -->
 	<div class="col-md-12" id="div_logo"> <!-- Columnas para logo -->	
-		<%= image_tag("colmex_logo.png", :class => "img_logo") %> 	
+		<%= image_tag("colmex_logo.png", :id => "img_logo") %> 	
 	</div> <!--Cierre de div columnas para logo -->
 </div> <!-- Cierre de div fila para logo -->
 
 <div class="row"> <!-- Fila para menú -->
 	<div class="col-md-12" id="div_menu"> <!-- Columnas para menu -->
-	
+		<ul class="Lista_horizontal"> <!-- Opciones del menú -->
+			<li></li>
+		</ul> <!-- Cierre del menú -->
 	</div> <!-- Cierre de columnas para menú -->
 </div> <!-- Ciere de div fila para menú -->
 
