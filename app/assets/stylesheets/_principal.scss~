@@ -12,7 +12,7 @@ padding: 0;
 }
 
 #barra_nav{
-	height: 70px;
+	height: 60px;
 }
 
 .nav_opciones, .nav_opciones_idioma, .nav_opciones_mail, .nav_opciones_intranet{
@@ -48,6 +48,7 @@ padding: 0;
 .img_boton{
 	height: 30px;
 	width: 30px;
+	vertical-align: middle;
 }
 
 .nav_opciones_mail{
