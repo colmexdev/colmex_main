@@ -9,8 +9,8 @@
 
 </head>
 <body>
-	<% clase_en = (I18n.locale == "en" ? "activo" : "") %>
-	<% clase_es = (I18n.locale == "sp" ? "activo" : "") %>
+	<% clase_en = "activo" %>
+	<% clase_es = "activo" %>
 	<div class="container-fluid">
 		<div class="row">
 			<div class="col-md-12" id="barra_nav">
@@ -20,6 +20,7 @@
 			<li class="nav_opciones_intranet"><%= t('navbar.intranet') %></li>
 			<li class="nav_opciones_intranet"><%= clase_en %></li>
 			<li class="nav_opciones_intranet"><%= clase_es %></li>
+			<li class="nav_opciones_intranet"><%= I18n.locale %></li>
 		</ul> <!-- Cierre de lista de opciones del lado izquierdo del navbar -->
 			</div> <!-- Cierre de div columnas barra_nav -->
 		</div> <!-- Cierre de div row barra nav -->
