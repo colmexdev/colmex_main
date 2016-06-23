@@ -118,13 +118,13 @@ padding: 0;
 		overflow: hidden;
 		margin: 0;
 		padding: 0;
+		height: 100%;
 
 		li{
 			float: left;
 			width: 20%;
 			text-align: center;
 			padding: 0 5px;
-			height: 100%;
 			background-color: #993366;
 			a{
 				display: inline-block;
