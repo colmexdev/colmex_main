@@ -9,7 +9,7 @@
 
 </head>
 <body>
-	<% if I18n. locale =="en" %>
+	<% if I18n.locale =="en" %>
 		<% clase_en = "activo" %>
 		<% clase_es = "" %>
 	<% else %>
