@@ -7,7 +7,11 @@
 <div class="row"> <!-- Fila para menú -->
 	<div class="col-md-12" id="div_menu"> <!-- Columnas para menu -->
 		<ul class="Lista_horizontal"> <!-- Opciones del menú -->
-			<li></li>
+			<li class="elemento_lista"><a href="#">Botón 1</a></li>
+			<li class="elemento_lista"><a href="#">Botón 2</a></li>
+			<li class="elemento_lista"><a href="#">Botón 3</a></li>
+			<li class="elemento_lista"><a href="#">Botón 4</a></li>
+			<li class="elemento_lista"><a href="#">Botón 5</a></li>
 		</ul> <!-- Cierre del menú -->
 	</div> <!-- Cierre de columnas para menú -->
 </div> <!-- Ciere de div fila para menú -->
