@@ -113,25 +113,27 @@ padding: 0;
 #div_menu{
 	height: 70px;
 	background-color: #03C0C0;
-}
 
-.lista_horizontal{
-	list-style-type: none;
-	overflow: hidden;
-	margin: 0;
-	padding: 0;
+	.lista_horizontal{
+		list-style-type: none;
+		overflow: hidden;
+		margin: 0;
+		padding: 0;
 
-	li{
-		float: left;
+		.elemento_lista{
+			float: left;
 	
-		a{
-			display: inline-block;
-			text-align: center;
-			text-decoration: none;
-			color: #FFFFFF;
+			a{
+				display: inline-block;
+				text-align: center;
+				text-decoration: none;
+				color: #FFFFFF;
+			}
 		}
 	}
 }
+
+
 
 #div_slider{
 	height: 550px;
