@@ -2,3 +2,9 @@ sp:
   navbar:
     mail: "Correo electrónico"
     intranet: "Intranet"
+  botones:
+    b1: "Primer botón"
+    b2: "Segundo botón"
+    b3: "Tercer botón"
+    b4: "Cuarto botón"
+    b5: "Quinto botón"

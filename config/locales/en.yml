@@ -2,3 +2,9 @@ en:
   navbar:
     mail: "E-mail"
     intranet: "Intranet"
+  botones:
+    b1: "First button"
+    b2: "Second button"
+    b3: "Third button"
+    b4: "Fourth button"
+    b5: "Fifth button"
