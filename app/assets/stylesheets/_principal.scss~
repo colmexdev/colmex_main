@@ -114,13 +114,13 @@ padding: 0;
 	height: 70px;
 	background-color: #03C0C0;
 
-	.lista_horizontal{
+	ul{
 		list-style-type: none;
 		overflow: hidden;
 		margin: 0;
 		padding: 0;
 
-		.elemento_lista{
+		li{
 			float: left;
 	
 			a{
