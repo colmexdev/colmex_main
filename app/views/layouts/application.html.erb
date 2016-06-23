@@ -9,8 +9,13 @@
 
 </head>
 <body>
-	<% clase_en = "activo" %>
-	<% clase_es = "activo" %>
+	<% if I81n. locale =="en" %>
+		<% clase_en = "activo" %>
+		<% clase_es = "" %>
+	<% else %>
+		<% clase_es = "activo" %>
+		<% clase_en = "" %>
+	<% end %>
 	<div class="container-fluid">
 		<div class="row">
 			<div class="col-md-12" id="barra_nav">
