@@ -1,7 +1,12 @@
 <div class="row"> <!-- Fila para logo -->
 	<div class="col-md-12" id="div_logo"> <!-- Columnas para logo -->		<%= I18n.locale %>
-		<%= clase_en %>
-		<%= clase_es %>
+		<% if I18n.locale == "en" %>
+		<%= clase_en = "activo" %>
+		<%= clase_es = "inactivo" %>
+	<% else %>
+		<%= clase_es = "activo" %>
+		<%= clase_en = "inactivo" %>
+	<% end %>
 	</div> <!--Cierre de div columnas para logo -->
 </div> <!-- Cierre de div fila para logo -->
 
