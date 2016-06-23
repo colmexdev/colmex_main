@@ -61,6 +61,10 @@ padding: 0;
 	color: #909090;
 }
 
+.form-control:focus{
+	border-color: #993366;
+}
+
 //Clase asociada al boton de busqueda
 .boton_lupa{
 	background-color: #CCCCCC;
