@@ -81,7 +81,16 @@ padding: 0;
 	text-align: center;
 	
 	.carousel_indicators{
-		background-color: #CCCCCC; 
+
+		li{
+			background-color: #CCCCCC;
+			border: none 
+		}
+
+		.active{
+			border: none;
+			color: #993366;
+		}
 	}
 }
 
