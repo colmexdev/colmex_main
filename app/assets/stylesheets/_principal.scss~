@@ -45,6 +45,11 @@ padding: 0;
 	color: #909090;
 }
 
+.img_boton{
+	height: 30px;
+	width: 30px;
+}
+
 .nav_opciones_mail{
 	width: 200px;
 }
