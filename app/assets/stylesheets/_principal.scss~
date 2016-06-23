@@ -123,6 +123,13 @@ padding: 0;
 
 	.elemento_lista{
 		float: left;
+	
+		a{
+			display: inline-block;
+			text-align: center;
+			text-decoration: none;
+			color: #FFFFFF;
+		}
 	}
 }
 
