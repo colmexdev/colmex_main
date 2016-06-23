@@ -123,9 +123,9 @@ padding: 0;
 		li{
 			float: left;
 			width: 20%;
+			text-align: center;
 			a{
 				display: inline-block;
-				text-align: center;
 				text-decoration: none;
 				color: #FFFFFF;
 			}
