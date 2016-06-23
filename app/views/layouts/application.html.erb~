@@ -25,7 +25,7 @@
 		<div class="row">
 			<div class="col-md-12" id="barra_nav">
 				<ul> <!-- Lista de opciones del lado izquierdo del navbar -->
-			<li class="nav_opciones_idioma"><%= link_to "EN", {:controller => 'principal', :action => 'principal', :locale => 'en'}, :class => (params[:locale] || I18n.default_locale) , :id => 'idioma_en' %> | <%= link_to "ES", {:controller => 'principal', :action => 'principal', :locale => 'sp'}, :class => (params[:locale] || I18n.default_locale) , :id=> 'idioma_sp' %></li>
+			<li class="nav_opciones_idioma"><%= link_to "EN", {:controller => 'principal', :action => 'principal', :locale => 'en'}, :class => clase_en , :id => 'idioma_en' %> | <%= link_to "ES", {:controller => 'principal', :action => 'principal', :locale => 'sp'}, :class => clase_es , :id=> 'idioma_sp' %></li>
 			<li class="nav_opciones_mail"><%= t('navbar.mail') %></li>
 			<li class="nav_opciones_intranet"><%= t('navbar.intranet') %></li>
 	
