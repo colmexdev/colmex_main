@@ -13,10 +13,9 @@
 		<div class="row">
 			<div class="col-md-12" id="barra_nav">
 				<ul> <!-- Lista de opciones del lado izquierdo del navbar -->
-			<li class="nav_opciones_idioma"><%= link_to "EN", {:controller => 'principal', :action => 'set_language', :id => 'en'}, :class => "inactivo" , :id => 'idioma_en' %> | <%= link_to "ES", {:controller => 'principal', :action => 'set_language', :id => 'sp'}, :class => "activo" , :id=> 'idioma_sp' %></li>
+			<li class="nav_opciones_idioma"><%= link_to "EN", {:controller => 'principal', :action => 'set_language', :id => 'en'}, :class => "activo" , :id => 'idioma_en' %> | <%= link_to "ES", {:controller => 'principal', :action => 'set_language', :id => 'sp'}, :class => "inactivo" , :id=> 'idioma_sp' %></li>
 			<li class="nav_opciones_mail"><%= t('navbar.mail') %></li>
 			<li class="nav_opciones_intranet"><%= t('navbar.intranet') %></li>
-			
 		</ul> <!-- Cierre de lista de opciones del lado izquierdo del navbar -->
 			</div> <!-- Cierre de div columnas barra_nav -->
 		</div> <!-- Cierre de div row barra nav -->
