@@ -79,20 +79,20 @@ padding: 0;
 	height: 550px;
 	overflow: hidden;
 	text-align: center;
-	
-	.carousel_indicators{
-
-		li{
-			background-color: #CCCCCC;
-			border: none 
-		}
-
-		.active{
-			border: none;
-			color: #993366;
-		}
-	}
 }
+
+.carousel_indicators li, .carousel-indicators .active{
+	border: none;
+}
+
+.carousel-indicators li{
+	background-color: #CCCCCC;
+}
+
+.carousel-indicators .active{
+	background-color: #993366;
+}
+
 
 #div_eventos{
 	height: 300px;
