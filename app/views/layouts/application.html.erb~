@@ -9,12 +9,12 @@
 
 </head>
 <body>
-	<% if I18n.locale =="en" %>
+	<% if I18n.locale == "en" %>
 		<% clase_en = "activo" %>
-		<% clase_es = "" %>
+		<% clase_es = "inactivo" %>
 	<% else %>
 		<% clase_es = "activo" %>
-		<% clase_en = "" %>
+		<% clase_en = "inactivo" %>
 	<% end %>
 	<div class="container-fluid">
 		<div class="row">
