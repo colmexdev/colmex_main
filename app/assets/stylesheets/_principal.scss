@@ -71,6 +71,9 @@ padding: 0;
 //Clase asociada al link a correo electronico
 .nav_opciones_mail{
 	width: 200px;
+	a{
+		color: #909090;
+	}
 	a:hover,a:active{
 		color: #993366;
 	}
@@ -79,6 +82,9 @@ padding: 0;
 //Clase asociada al link a intranet
 .nav_opciones_intranet{
 	width: 100px;
+	a{
+		color: #909090;
+	}
 	a:hover,a:active{
 		color: #993366;
 	}
@@ -161,6 +167,7 @@ a{
     font-family: "Whitney SSm A", "Whitney SSm B";
     font-style: normal;
     font-weight: 700;
+    text-decoration: none;
 }
 
 h1{
