@@ -32,7 +32,7 @@ padding: 0;
 	a{ text-decoration: none;}
 }
 
-#activo{
+.activo{
 	color: #993366;
 }
 
