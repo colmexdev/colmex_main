@@ -122,7 +122,7 @@ padding: 0;
 
 		li{
 			float: left;
-	
+			width: 20%;
 			a{
 				display: inline-block;
 				text-align: center;
