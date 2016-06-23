@@ -1,6 +1,6 @@
 <div class="row"> <!-- Fila para logo -->
 	<div class="col-md-12" id="div_logo"> <!-- Columnas para logo -->	
-		<%= image_tag("colmex_logo.png", :height => "60px", :width => "35%" %> 	
+		<%= image_tag("colmex_logo.png", :class => "img_logo") %> 	
 	</div> <!--Cierre de div columnas para logo -->
 </div> <!-- Cierre de div fila para logo -->
 
