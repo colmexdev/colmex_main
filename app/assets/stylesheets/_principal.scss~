@@ -75,6 +75,7 @@ padding: 0;
 		color: #909090;
 	}
 	a:hover,a:active{
+		text-decoration: none;
 		color: #993366;
 	}
 }
@@ -86,6 +87,7 @@ padding: 0;
 		color: #909090;
 	}
 	a:hover,a:active{
+		text-decoration: none;
 		color: #993366;
 	}
 }
