@@ -1,5 +1,5 @@
 <div class="row"> <!-- Fila para logo -->
-	<div class="col-md-12" id="div_logo"> <!-- Columnas para logo -->
+	<div class="col-md-12" id="div_logo"> <!-- Columnas para logo -->		<%= I18n.locale %>
 	</div> <!--Cierre de div columnas para logo -->
 </div> <!-- Cierre de div fila para logo -->
 
