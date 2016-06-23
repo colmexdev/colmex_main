@@ -33,7 +33,7 @@ padding: 0;
 }
 
 #activo{
-	color: ##993366;
+	color: #993366;
 }
 
 .nav_opciones_mail{
