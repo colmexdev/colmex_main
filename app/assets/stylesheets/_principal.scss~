@@ -243,5 +243,8 @@ img{
 	opacity: 0.2;
 }
 
+.carousel-control.right:hover, .carousel-control.left:hover, .carousel-control.right:focus:hover, .carousel-control.left:focus:hover{
+	opacity: 0.8;
+}
 
 
