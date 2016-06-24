@@ -18,7 +18,6 @@
 
 <div class="row"> <!-- Fila para slider -->
 	<div class="col-md-12" id="div_slider"> <!-- Columnas para slider -->
-
 		<div id="myCarousel" class="carousel slide" data-ride="carousel">
 			<!-- Indicators -->
 			<ol class="carousel-indicators">
@@ -56,12 +55,51 @@
 				<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
 				<span class="sr-only">Siguiente</span>
 			</a>
-		</div>
+		</div> <!-- Cierre de slider -->
 	</div> <!--Cierre de columnas slider -->
 </div> <!-- Cierre de row de slider -->
 
 <div class="row"> <!-- Fila para eventos -->
 	<div class="col-md-12" id="div_eventos"> <!-- Columnas para eventos -->
+		<div id="myCarousel" class="carousel slide" data-ride="carousel">
+			<!-- Indicators -->
+			<ol class="carousel-indicators">
+				<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+				<li data-target="#myCarousel" data-slide-to="1"></li>
+				<li data-target="#myCarousel" data-slide-to="2"></li>
+				<li data-target="#myCarousel" data-slide-to="3"></li>
+			</ol>
+
+			<!-- Wrapper for slides -->
+			<div class="carousel-inner" role="listbox">
+				<div class="item active">
+				  <%= image_tag("flores1.jpg") %>
+				</div>
+
+				<div class="item">
+				  <%= image_tag("flores2.jpg") %>
+				</div>
+
+				<div class="item">
+				  <%= image_tag("flores3.jpg") %>
+				</div>
+
+				<div class="item">
+				  <%= image_tag("flores4.jpg") %>
+				</div>
+			</div>
+
+			<!-- Left and right controls -->
+			<a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+				<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+				<span class="sr-only">Anterior</span>
+			</a>
+			<a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+				<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+				<span class="sr-only">Siguiente</span>
+			</a>
+		</div> <!-- Cierre de slider -->
+
 
 	</div> <!-- Cierre de columnas para eventos -->
 </div> <!-- Cierre de fila para eventos -->
