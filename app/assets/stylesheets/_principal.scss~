@@ -168,9 +168,11 @@ padding: 0;
 
 		.carousel-inner{
 			.item{
+				float: left;
 				.evento1, .evento2, .evento3, .evento4{
 					height: 100%;
 					width: 25%;
+					text-align: center;
 				}
 			}
 		}
