@@ -45,7 +45,9 @@ $ancho_division_eventos: 25%;
 $altura_div_actividades: 110px;
 $color_fondo_boton_actividades: #C76BB0;
 $color_letra_boton_actividades: #FFFFFF;
-$tamano_letra_boton_actividades: 16px;                         
+$tamano_letra_boton_actividades: 16px;
+$color_borde_boton_actividades: #993366;
+$tamano_borde_boton_actividades: 2px;                         
 
 $altura_div_suscripcion: 70px;
 
@@ -296,6 +298,9 @@ $altura_div_footer: 400px;
 		background-color: $color_fondo_boton_actividades;
 		color: $color_letra_boton_actividades;
 		font-size: $tamano_letra_boton_actividades;
+		text-decoration: none;
+		border-color: $color_borde_boton_actividades;
+		border: $tamano_borde_boton_actividades;
 	}
 }
 
