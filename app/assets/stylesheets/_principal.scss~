@@ -241,14 +241,8 @@ img{
 
 .carousel-control{
 	opacity: 0.2;
-	:hover{
+	:hover, :focus:hover{
 		opacity: 0.8;
-	}
-	:focus{
-		opacity: 0.2;
-		:hover{
-			opacity: 0.8;
-		}
 	}
 }
 
