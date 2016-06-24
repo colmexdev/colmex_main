@@ -148,12 +148,14 @@ padding: 0;
 	height: 550px;
 	overflow: hidden;
 	text-align: center;
+
 	#myCarousel{
 	    position: relative;
 	    text-align: center;
 	    margin-left: -5.5%;
 	    max-height: 550px;
 	    width:110%;
+
 		.carousel-indicators li{
 			border: none;
 			background-color: #CCCCCC;
@@ -191,6 +193,7 @@ padding: 0;
 		height: 100%;
 		text-align: center;
 		overflow: hidden;
+		width: 83.33%;
 	}
 }
 
