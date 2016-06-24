@@ -303,7 +303,7 @@ $altura_div_footer: 400px;
 		font-size: $tamano_letra_boton_actividades;
 		text-decoration: none;
 		display: inline-block;
-		vertical-align: middle;
+		padding-top: calc((#{$altura_boton_actividades} / 2) - (#{$tamano_letra_boton_actividades} / 2 ));
 		border-color: $color_borde_boton_actividades;
 		border-width: $tamano_borde_boton_actividades;
 		border-style: solid;
