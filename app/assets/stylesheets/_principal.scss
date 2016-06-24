@@ -239,7 +239,7 @@ img{
 	width: 100%;
 }
 
-.carousel-control .right, .carousel-control .left{
+.carousel-control.right, .carousel-control.left{
 	opacity: 0.2;
 	:hover, :focus:hover{
 		opacity: 0.8;
