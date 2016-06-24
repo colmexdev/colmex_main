@@ -195,8 +195,13 @@ padding: 0;
 		text-align: center;
 		overflow: hidden;
 		width: 83.33%;
-		margin: 0;
+		margin: 0 auto;
 		padding: 0;
+
+		.carousel-control.right, .carousel-control.left{
+			opacity: 0.5;
+			width: 60px;
+		}
 	}
 }
 
