@@ -167,13 +167,10 @@ padding: 0;
 		}
 
 		.carousel-inner{
-			.item{
-				float: left;
-				text-align: center;
-				.evento1, .evento2, .evento3, .evento4{
-					height: 100%;
-					width: 25%;
-					text-align: center;
+			div{
+				img{
+					max-height: 550px;
+					width: 100%;
 				}
 			}
 		}
@@ -209,9 +206,14 @@ padding: 0;
 
 		.carousel-inner{
 			.item{
-				img{
-					margin: 0 auto;
+				float: left;
+				text-align: center;
+				.evento1, .evento2, .evento3, .evento4{
+					height: 100%;
+					width: 25%;
+					text-align: center;
 				}
+			}
 			}
 		}
 	}
