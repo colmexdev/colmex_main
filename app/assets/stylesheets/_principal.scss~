@@ -191,6 +191,7 @@ padding: 0;
 	text-align: center;
 
 	.carousel.slide{
+		position: relative;
 		height: 100%;
 		text-align: center;
 		overflow: hidden;

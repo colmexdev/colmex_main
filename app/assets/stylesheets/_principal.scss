@@ -189,12 +189,12 @@ padding: 0;
 #div_eventos{
 	height: 300px;
 	text-align: center;
+	overflow: hidden;
 
 	.carousel.slide{
 		position: relative;
 		height: 100%;
 		text-align: center;
-		overflow: hidden;
 		width: 83.33%;
 		margin: 0 auto;
 		padding: 0;
