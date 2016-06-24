@@ -271,7 +271,7 @@ $altura_div_footer: 400px;
 				text-align: center;
 				height: 100%;
 				width: calc(100% - (2px * #{$ancho_flechas_eventos}));
-				width: -moz-calc(100% - (2px * #{$ancho_flechas_eventos}));
+				width: unquote("-moz-calc(100% - (2px * #{$ancho_flechas_eventos}))");
 				width: -webkit-calc(100% - (2px * #{$ancho_flechas_eventos}));
 				div{
 					float: left;
