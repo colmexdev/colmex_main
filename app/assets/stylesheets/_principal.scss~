@@ -208,7 +208,6 @@ padding: 0;
 			height:100%;
 			.item{
 				float: left;
-				display: block;
 				text-align: center;
 				height: 100%;
 				width: 100%;
