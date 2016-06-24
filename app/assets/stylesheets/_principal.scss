@@ -241,10 +241,10 @@ img{
 
 .carousel-control.right, .carousel-control.left{
 	opacity: 0.2;
-	:hover, :focus:hover{
-		opacity: 0.8;
-	}
 }
 
+.carousel-control.right:hover, .carousel-control.left:hover, .carousel-control.right:focus:hover, .carousel-control.left:focus:hover{
+	opacity: 0.8;
+}
 
 
