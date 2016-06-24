@@ -151,16 +151,6 @@ padding: 0;
 }
 
 
-.carousel-indicators li{
-	border: none;
-	background-color: #CCCCCC;
-}
-
-.carousel-indicators .active{
-	border: none;
-	background-color: #993366;
-}
-
 //Clases que afectan la sección de eventos
 #div_eventos{
 	height: 300px;
@@ -232,6 +222,16 @@ p{
     margin-left: -5.5%;
     max-height: 550px;
     width:110%;
+	.carousel-indicators li{
+		border: none;
+		background-color: #CCCCCC;
+	}
+
+	.carousel-indicators .active{
+		border: none;
+		background-color: #993366;
+	}
+
 	.carousel-inner{
 		div{
 			img{
@@ -240,14 +240,14 @@ p{
 			}
 		}
 	}
+	.carousel-control.right, .carousel-control.left{
+		opacity: 0.2;
+	}
+
+	.carousel-control.right:hover, .carousel-control.left:hover, .carousel-control.right:focus:hover, .carousel-control.left:focus:hover{
+		opacity: 0.8;
+	}
 }
 
-.carousel-control.right, .carousel-control.left{
-	opacity: 0.2;
-}
-
-.carousel-control.right:hover, .carousel-control.left:hover, .carousel-control.right:focus:hover, .carousel-control.left:focus:hover{
-	opacity: 0.8;
-}
 
 
