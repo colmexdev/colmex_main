@@ -302,6 +302,8 @@ $altura_div_footer: 400px;
 		color: $color_letra_boton_actividades;
 		font-size: $tamano_letra_boton_actividades;
 		text-decoration: none;
+		display: inline-block;
+		vertical-align: middle;
 		border-color: $color_borde_boton_actividades;
 		border-width: $tamano_borde_boton_actividades;
 		border-style: solid;
