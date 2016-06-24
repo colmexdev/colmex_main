@@ -296,7 +296,7 @@ $altura_div_footer: 400px;
 	height: $altura_div_actividades;
 	text-align: center;
 	
-	a{
+	#boton_actividades{
 		background-color: $color_fondo_boton_actividades;
 		color: $color_letra_boton_actividades;
 		font-size: $tamano_letra_boton_actividades;
