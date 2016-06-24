@@ -43,6 +43,9 @@ $color_flechas_eventos: #993366;
 $ancho_division_eventos: 25%;
 
 $altura_div_actividades: 110px;
+$color_fondo_boton_actividades: #C76BB0;
+$color_letra_boton_actividades: #FFFFFF;
+$tamano_letra_boton_actividades: 16px;                         
 
 $altura_div_suscripcion: 70px;
 
@@ -289,6 +292,11 @@ $altura_div_footer: 400px;
 	height: $altura_div_actividades;
 	text-align: center;
 	
+	a{
+		background-color: $color_fondo_boton_actividades;
+		color: $color_letra_boton_actividades;
+		font-size: $tamano_letra_boton_actividades;
+	}
 }
 
 #div_suscripcion{
