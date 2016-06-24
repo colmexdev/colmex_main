@@ -29,7 +29,7 @@ $color_fondo_menus: #993366;
 $padding_lat_menus: 5px;
 $ancho_botones: 20%;
 $color_texto_botones: #FFFFFF;
-$padding_sup_botones: 20px;
+$padding_sup_texto_botones: 20px;
 $tamano_texto_botones: 18px;
 
 $altura_div_slider: 550px;

@@ -270,7 +270,7 @@ $altura_div_footer: 400px;
 				float: left;
 				text-align: center;
 				height: 100%;
-				width: 100%;
+				width: 100% - (2px *$ancho_flechas_eventos);
 				div{
 					float: left;
 					height: 100%;
