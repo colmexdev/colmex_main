@@ -148,6 +148,38 @@ padding: 0;
 	height: 550px;
 	overflow: hidden;
 	text-align: center;
+	#myCarousel{
+	    position: relative;
+	    text-align: center;
+	    margin-left: -5.5%;
+	    max-height: 550px;
+	    width:110%;
+		.carousel-indicators li{
+			border: none;
+			background-color: #CCCCCC;
+		}
+
+		.carousel-indicators .active{
+			border: none;
+			background-color: #993366;
+		}
+
+		.carousel-inner{
+			div{
+				img{
+					max-height: 550px;
+					width: 100%;
+				}
+			}
+		}
+		.carousel-control.right, .carousel-control.left{
+			opacity: 0.2;
+		}
+
+		.carousel-control.right:hover, .carousel-control.left:hover, .carousel-control.right:focus:hover, .carousel-control.left:focus:hover{
+			opacity: 0.8;
+		}
+	}
 }
 
 
@@ -214,39 +246,6 @@ p{
     font-family: "Hoefler Titling A", "Hoefler Titling B";
     font-style: normal;
     font-weight: 300;
-}
-
-#myCarousel{
-    position: relative;
-    text-align: center;
-    margin-left: -5.5%;
-    max-height: 550px;
-    width:110%;
-	.carousel-indicators li{
-		border: none;
-		background-color: #CCCCCC;
-	}
-
-	.carousel-indicators .active{
-		border: none;
-		background-color: #993366;
-	}
-
-	.carousel-inner{
-		div{
-			img{
-				max-height: 550px;
-				width: 100%;
-			}
-		}
-	}
-	.carousel-control.right, .carousel-control.left{
-		opacity: 0.2;
-	}
-
-	.carousel-control.right:hover, .carousel-control.left:hover, .carousel-control.right:focus:hover, .carousel-control.left:focus:hover{
-		opacity: 0.8;
-	}
 }
 
 

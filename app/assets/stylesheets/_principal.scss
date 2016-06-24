@@ -186,7 +186,12 @@ padding: 0;
 //Clases que afectan la sección de eventos
 #div_eventos{
 	height: 300px;
-	
+
+	#carouselEventos{
+		height: 100%;
+		text-align: center;
+		overflow: hidden;
+	}
 }
 
 #div_actividades{
