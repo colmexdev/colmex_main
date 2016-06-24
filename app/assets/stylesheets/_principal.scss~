@@ -34,7 +34,30 @@ $padding_sup_botones: 20px;
 $tamano_texto_botones: 18px;
 
 $altura_div_slider: 550px;
+$bullet_slider: #CCCCCC;
+$bullet_slider_sel: #993366;
 
+$altura_div_eventos: 300px;
+$ancho_eventos: 100%;
+$ancho_flechas_eventos: 60px;
+$color_flechas_eventos: #993366;
+$ancho_division_eventos: 25%;
+
+$altura_div_actividades: 110px;
+
+$altura_div_suscripcion: 70px;
+
+$altura_div_revistas: 280px;
+
+$altura_div_descubre: 700px;
+
+$altura_div_logos: 500px;
+
+$altura_div_frase: 250px;
+
+$altura_div_transparencia: 250px;
+
+$altura_div_footer: 400px;
 
 //Estilos de página
 
@@ -195,12 +218,12 @@ $altura_div_slider: 550px;
 
 		.carousel-indicators li{
 			border: none;
-			background-color: #CCCCCC;
+			background-color: $bullet_slider;
 		}
 
 		.carousel-indicators .active{
 			border: none;
-			background-color: #993366;
+			background-color: $bullet_slider_sel;
 		}
 
 		.carousel-inner{
@@ -224,7 +247,7 @@ $altura_div_slider: 550px;
 
 //Clases que afectan la sección de eventos
 #div_eventos{
-	height: 300px;
+	height: $altura_div_eventos;
 	text-align: center;
 	overflow: hidden;
 
@@ -232,14 +255,14 @@ $altura_div_slider: 550px;
 		position: relative;
 		height: 100%;
 		text-align: center;
-		width: 100%;
+		width: $ancho_eventos;
 		margin: 0 auto;
 		padding: 0;
 
 		.carousel-control.right, .carousel-control.left{
 			opacity: 0.5;
-			width: 60px;
-			color: #993366;
+			width: $ancho_flechas_eventos;
+			color: $color_flechas_eventos;
 		}
 
 		.carousel-inner{
@@ -252,7 +275,7 @@ $altura_div_slider: 550px;
 				div{
 					float: left;
 					height: 100%;
-					width: 25%;
+					width: $ancho_division_eventos;
 					text-align: center;
 				}
 			}
@@ -261,42 +284,42 @@ $altura_div_slider: 550px;
 }
 
 #div_actividades{
-	height: 110px;
+	height: $altura_div_actividades;
 	background-color: #30C030;
 }
 
 #div_suscripcion{
-	height: 70px;
+	height: $altura_div_suscripcion;
 	background-color: #C0C030;
 }
 
 #div_revistas{
-	height: 280px;
+	height: $altura_div_revistas;
 	background-color: #F030C0;
 }
 
 #div_descubre{
-	height: 700px;
+	height: $altura_div_descubre;
 	background-color: #F0F000;
 }
 
 #div_logos{
-	height: 500px;
+	height: $altura_div_logos;
 	background-color: #00F0C0;
 }
 
 #div_frase{
-	height: 250px;
+	height: $altura_div_frase;
 	background-color: #00C000;
 }
 
 #div_transparencia{
-	height: 250px;
+	height: $altura_div_transparencia;
 	background-color: #6060F0;
 }
 
 #div_footer{
-	height: 400px;
+	height: $altura_div_footer;
 	background-color: #30F0C0;
 }
 
