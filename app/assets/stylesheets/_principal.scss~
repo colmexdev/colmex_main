@@ -346,7 +346,7 @@ $altura_div_footer: 400px;
 	}
 
   .form-control{
-	@include centrar;
+		@include centrar;
 		width: $ancho_textbox_suscripcion;
 	}
 }
