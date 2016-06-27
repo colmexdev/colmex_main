@@ -339,14 +339,14 @@ $altura_div_footer: 400px;
 	text-align: center;
 	position: relative;
 	display: inline;
+	@include centrado;
 	span{
-		@include centrado;
 		@include fuente_typography("Whitney SSm", normal, 14px, 500);
 		color: $color_texto_suscripcion;
 	}
 
   .form-control{
-		@include centrado;
+		//@include centrado;
 		width: $ancho_textbox_suscripcion;
 	}
 }
