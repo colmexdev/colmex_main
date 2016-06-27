@@ -143,6 +143,9 @@
 <div class="row"> <!-- Fila para formulario de suscripción -->
 	<div class="col-md-12" id="div_suscripcion"> <!-- Columnas para formulario de suscripción -->
 	<span><%= t('suscripcion.texto') %></span>
+	<%= form_tag do %>
+  		Form contents
+	<% end %>
 	</div> <!-- Cierre de columnas para formulario de suscripción -->
 </div> <!-- Cierre de fila para formulario de suscripción -->
 
