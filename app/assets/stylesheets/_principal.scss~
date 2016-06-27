@@ -45,13 +45,14 @@ $ancho_division_eventos: 25%;
 $altura_div_actividades: 110px;
 $color_fondo_boton_actividades: #C76BB0;
 $color_letra_boton_actividades: #FFFFFF;
-$tamano_letra_boton_actividades: 16px;
+$tamano_letra_boton_actividades: 15px;
 $color_borde_boton_actividades: #993366;
 $tamano_borde_boton_actividades: 2px;
 $altura_boton_actividades: 50px;
 $ancho_boton_actividades: 33.33%;                         
 
 $altura_div_suscripcion: 70px;
+$color_div_suscripcion: #993366;
 
 $altura_div_revistas: 280px;
 
@@ -328,7 +329,8 @@ $altura_div_footer: 400px;
 
 #div_suscripcion{
 	height: $altura_div_suscripcion;
-	background-color: #C0C030;
+	background-color: $color_div_suscripcion;
+	text-align: center;
 }
 
 #div_revistas{
