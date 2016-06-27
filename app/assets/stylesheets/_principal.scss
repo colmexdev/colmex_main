@@ -62,6 +62,9 @@ $padding_sup_label: 5px;
 $ancho_textbox_suscripcion: 150px;
 $color_textbox_suscripcion: #FFFFFF;
 $margen_sup_textbox_suscripcion: 5px;
+$margen_izq_textbox_suscripcion: 15px;
+$color_fondo_boton_suscripcion: #C76BB0;
+$color_texto_boton_suscripcion: #FFFFFF;
 
 
 $altura_div_revistas: 280px;
@@ -364,6 +367,12 @@ $altura_div_footer: 400px;
 				width: $ancho_textbox_suscripcion;
 				background-color: $color_textbox_suscripcion;
 				margin-top: $margen_sup_textbox_suscripcion;
+				margin-left: $margen_izq_textbox_suscripcion;
+			}
+
+			.boton_suscripcion{
+				background-color: $color_fondo_boton_suscripcion;
+				color: $color_texto_boton_suscripcion;
 			}
 		}
 	}
