@@ -337,21 +337,22 @@ $altura_div_footer: 400px;
 	height: $altura_div_suscripcion;
 	background-color: $color_div_suscripcion;
 
-	.form-group{
-		@include centrado;
-		//display: block;
-		height: 100%;
+	.navbar-form{
 
-		label{
-			//@include centrado;
-			@include fuente_typography("Whitney SSm", normal, 16px, 500);
-			color: $color_texto_suscripcion;
-			float: left;
-		}
+		
+		.form-group{
 
-		.form-control{
-			//@include centrado;
-			width: $ancho_textbox_suscripcion;
+			label{
+				//@include centrado;
+				@include fuente_typography("Whitney SSm", normal, 16px, 500);
+				color: $color_texto_suscripcion;
+				float: left;
+			}
+
+			.form-control{
+				//@include centrado;
+				width: $ancho_textbox_suscripcion;
+			}
 		}
 	}
 }
