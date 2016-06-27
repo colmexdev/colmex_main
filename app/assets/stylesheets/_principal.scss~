@@ -343,12 +343,16 @@ $altura_div_footer: 400px;
 		@include centrado;
 		display: block;
 		height: 100%;
-		span{
+
+		label{
+			@include centrado;
 			@include fuente_typography("Whitney SSm", normal, 14px, 500);
 			color: $color_texto_suscripcion;
+			float: left;
 		}
 
 		.form-control{
+			@include centrado;
 			width: $ancho_textbox_suscripcion;
 		}
 	}
