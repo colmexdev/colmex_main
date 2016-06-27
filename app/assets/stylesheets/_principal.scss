@@ -339,15 +339,18 @@ $altura_div_footer: 400px;
 	text-align: center;
 	position: relative;
 	display: inline;
-	
-	span{
-		@include fuente_typography("Whitney SSm", normal, 14px, 500);
-		color: $color_texto_suscripcion;
-	}
-
-  .form-control{
+	.form-group{
 		@include centrado;
-		width: $ancho_textbox_suscripcion;
+		display: block;
+		height: 100%;
+		span{
+			@include fuente_typography("Whitney SSm", normal, 14px, 500);
+			color: $color_texto_suscripcion;
+		}
+
+		.form-control{
+			width: $ancho_textbox_suscripcion;
+		}
 	}
 }
 
