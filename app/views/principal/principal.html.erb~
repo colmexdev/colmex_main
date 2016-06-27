@@ -142,12 +142,14 @@
 
 <div class="row"> <!-- Fila para formulario de suscripción -->
 	<div class="col-md-12" id="div_suscripcion"> <!-- Columnas para formulario de suscripción -->
-	<span><%= t('suscripcion.texto') %></span>
+	<!-- <span><%= t('suscripcion.texto') %></span> -->
 			<% texto = t('suscripcion.boton') %>
 			<% placeholder = t('suscripcion.placeholder') %>
   		<form class="forma-suscripcion" role="search">
         <div class="form-group">
-          <%= '<input type="text" class="form-control" placeholder='.html_safe + placeholder + ">".html_safe %>
+
+          <%= '<input type="text" accept-charset="UTF-8" id="text-suscripcion" class="form-control" placeholder='.html_safe + placeholder + ">".html_safe %>
+					<label for="text-suscripcion"><%= t('suscripcion.texto') %></label>
         </div>
         <button type="submit" class="btn btn-default boton_lupa"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
 				

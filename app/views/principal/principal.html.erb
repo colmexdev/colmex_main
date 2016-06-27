@@ -147,9 +147,8 @@
 			<% placeholder = t('suscripcion.placeholder') %>
   		<form class="forma-suscripcion" role="search">
         <div class="form-group">
-
-          <%= '<input type="text" id="text-suscripcion" class="form-control" placeholder='.html_safe + placeholder + ">".html_safe %>
 					<label for="text-suscripcion"><%= t('suscripcion.texto') %></label>
+          <%= '<input type="text" accept-charset="UTF-8" id="text-suscripcion" class="form-control" placeholder='.html_safe + placeholder + ">".html_safe %>
         </div>
         <button type="submit" class="btn btn-default boton_lupa"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
 				
