@@ -77,7 +77,7 @@ $altura_div_footer: 400px;
 }
 
 @mixin fuente_typography($familia, $estilo, $tamano, $peso){
-	font-family: $familia + " A", $familia" B";
+	font-family: $familia + " A", $familia + " B";
 	font-style: $estilo;
 	font-weight: $peso;
 	font-size: $tamano;
@@ -103,7 +103,7 @@ $altura_div_footer: 400px;
 .nav_opciones, .nav_opciones_idioma, .nav_opciones_mail, .nav_opciones_intranet{
 	display: block;
 	float: left;
-	@include fuente_typography("Whitney SSm", "normal", 14px, 700);
+	@include fuente_typography("Whitney SSm", normal, 14px, 700);
 	text-align: center;
 	margin-top: $margen_superior_textos_navbar;
 	color: $color_textos_navbar;
@@ -340,7 +340,7 @@ $altura_div_footer: 400px;
 	
 	span{
 		@include centrado;
-		@include fuente_typography("Whitney SSm", "normal", 14px, 500);
+		@include fuente_typography("Whitney SSm", normal, 14px, 500);
 		color: $color_texto_suscripcion;
 	}
 }

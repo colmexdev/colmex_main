@@ -53,6 +53,7 @@ $ancho_boton_actividades: 33.33%;
 
 $altura_div_suscripcion: 70px;
 $color_div_suscripcion: #993366;
+$color_texto_suscripcion: #FFFFFF;
 
 $altura_div_revistas: 280px;
 
@@ -76,7 +77,7 @@ $altura_div_footer: 400px;
 }
 
 @mixin fuente_typography($familia, $estilo, $tamano, $peso){
-	font-family: $familia + " A", $familia" B";
+	font-family: $familia + " A", $familia + " B";
 	font-style: $estilo;
 	font-weight: $peso;
 	font-size: $tamano;
