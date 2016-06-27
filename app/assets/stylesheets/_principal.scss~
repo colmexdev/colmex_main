@@ -346,7 +346,7 @@ $altura_div_footer: 400px;
 
 		label{
 			@include centrado;
-			@include fuente_typography("Whitney SSm", normal, 14px, 500);
+			@include fuente_typography("Whitney SSm", normal, 16px, 500);
 			color: $color_texto_suscripcion;
 			float: left;
 		}
