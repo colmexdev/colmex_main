@@ -303,12 +303,20 @@ $altura_div_footer: 400px;
 		font-size: $tamano_letra_boton_actividades;
 		text-decoration: none;
 		display: inline-block;
-		padding-top: calc((#{$altura_boton_actividades} / 2) - (#{$tamano_letra_boton_actividades} / 2 ));
+		//padding-top: calc((#{$altura_boton_actividades} / 2) - (#{$tamano_letra_boton_actividades} / 2 ));
 		border-color: $color_borde_boton_actividades;
 		border-width: $tamano_borde_boton_actividades;
 		border-style: solid;
 		height: $altura_boton_actividades;
 		width: $ancho_boton_actividades;
+		position: relative;
+
+		span{
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+		}
 	}
 }
 

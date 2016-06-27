@@ -65,6 +65,15 @@ $altura_div_transparencia: 250px;
 
 $altura_div_footer: 400px;
 
+//Mixin para centrar
+
+@mixin centrado {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 //Estilos de pagina
 
 * {
@@ -312,10 +321,7 @@ $altura_div_footer: 400px;
 		position: relative;
 
 		span{
-			position: absolute;
-			top: 50%;
-			left: 50%;
-			transform: translate(-50%, -50%);
+			@include centrado;
 		}
 	}
 }
