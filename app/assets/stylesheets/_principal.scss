@@ -52,7 +52,7 @@ $altura_boton_actividades: 50px;
 $ancho_boton_actividades: 33.33%;                         
 
 $altura_div_suscripcion: 70px;
-$color_div_suscripcion: #993366;
+$color_div_suscripcion: #993333;
 $color_texto_suscripcion: #FFFFFF;
 $fuente_label: "Whitney SSm";
 $estilo_label: normal;
@@ -65,6 +65,7 @@ $margen_sup_textbox_suscripcion: 5px;
 $margen_izq_textbox_suscripcion: 15px;
 $color_fondo_boton_suscripcion: #C76BB0;
 $color_texto_boton_suscripcion: #FFFFFF;
+$color_borde_boton_suscripcion: #993366;
 
 
 $altura_div_revistas: 280px;
@@ -368,12 +369,15 @@ $altura_div_footer: 400px;
 				background-color: $color_textbox_suscripcion;
 				margin-top: $margen_sup_textbox_suscripcion;
 				margin-left: $margen_izq_textbox_suscripcion;
+				border-radius: 0;
 			}
 		}
 
 		button{
 			background-color: $color_fondo_boton_suscripcion;
 			color: $color_texto_boton_suscripcion;
+			border-radius: 0;
+			border-color: $color_borde_boton_suscripcion;
 		}
 	}
 }
