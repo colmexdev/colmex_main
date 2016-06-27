@@ -146,7 +146,7 @@
 	<%= form_tag do %>
 			<% texto = t('suscripcion.boton') %>
 			<% placeholder = t('suscripcion.placeholder') %>
-  		<%= text_field_tag(:texto_suscripcion,:placeholder => placeholder) %>
+  		<%= text_field_tag(:texto_suscripcion, options = {:placeholder => placeholder}) %>
   		<%= submit_tag(texto) %>
 	<% end %>
 	</div> <!-- Cierre de columnas para formulario de suscripción -->
