@@ -337,7 +337,7 @@ $altura_div_footer: 400px;
 	background-color: $color_div_suscripcion;
 	text-align: center;
 	position: relative;
-	
+	display: inline;
 	span{
 		@include centrado;
 		@include fuente_typography("Whitney SSm", normal, 14px, 500);
