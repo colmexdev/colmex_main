@@ -54,6 +54,7 @@ $ancho_boton_actividades: 33.33%;
 $altura_div_suscripcion: 70px;
 $color_div_suscripcion: #993366;
 $color_texto_suscripcion: #FFFFFF;
+$ancho_textbox_suscripcion: 150px;
 
 $altura_div_revistas: 280px;
 
@@ -342,6 +343,10 @@ $altura_div_footer: 400px;
 		@include centrado;
 		@include fuente_typography("Whitney SSm", normal, 14px, 500);
 		color: $color_texto_suscripcion;
+	}
+
+  .form_suscripcion{
+		width: $ancho_textbox_suscripcion;
 	}
 }
 
