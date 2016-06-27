@@ -8,3 +8,5 @@ sp:
     b3: "Tercer botón"
     b4: "Cuarto botón"
     b5: "Quinto botón"
+  actividades:
+    boton: "VER TODAS LAS ACTIVIDADES"

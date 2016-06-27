@@ -10,3 +10,5 @@ en:
     b5: "Fifth button"
   actividades:
     boton: "VIEW ALL ACTIVITIES"
+  suscripcion:
+    texto: "Sign up to our Agenda"

@@ -10,3 +10,5 @@ sp:
     b5: "Quinto botón"
   actividades:
     boton: "VER TODAS LAS ACTIVIDADES"
+  suscripcion:
+    texto: "Suscríbete a nuestra Agenda"
