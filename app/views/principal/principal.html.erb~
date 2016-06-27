@@ -134,9 +134,9 @@
 
 <div class="row"> <!-- Fila para botón de actividades -->
 	<div class="col-md-12" id="div_actividades"> <!--Columnas para eventos -->
-		<form action="#"> <!-- Campo del botón -->
-			<input type="submit" value="VER TODAS LAS ACTIVIDADES">
-		</form> <!-- Cierre del campo del botón -->
+
+		<a href="#" id="boton_actividades">VER TODAS LAS ACTIVIDADES</a>
+
 	</div> <!-- Cierre de columnas para botón de actividades -->
 </div> <!-- Cierre de fila para boton actividades -->
 

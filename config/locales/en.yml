@@ -8,3 +8,5 @@ en:
     b3: "Third button"
     b4: "Fourth button"
     b5: "Fifth button"
+  actividades:
+    boton: "VIEW ALL ACTIVITIES"
