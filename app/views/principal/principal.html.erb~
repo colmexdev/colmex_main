@@ -147,10 +147,9 @@
         <div class="form-group">
 					<label for="text-suscripcion"><%= t('suscripcion.texto') %></label>
           <%= '<input type="text" accept-charset="UTF-8" id="text-suscripcion" class="form-control" placeholder='.html_safe + t('suscripcion.placeholder') + ">".html_safe %>
-					<button type="submit" class="btn btn-default boton_lupa"><span><%= t('suscripcion.boton') %></span></button>
         </div>
-        
-				
+				<button type="submit" class="btn btn-default boton_lupa"><span><%= t('suscripcion.boton') %></span></button>
+
 	</div> <!-- Cierre de columnas para formulario de suscripción -->
 </div> <!-- Cierre de fila para formulario de suscripción -->
 
