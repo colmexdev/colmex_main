@@ -59,13 +59,18 @@ $estilo_label: normal;
 $tamano_label: 25px;
 $peso_label: 500;
 $padding_sup_label: 5px;
-$ancho_textbox_suscripcion: 150px;
+$ancho_textbox_suscripcion: 220px;
 $color_textbox_suscripcion: #FFFFFF;
 $margen_sup_textbox_suscripcion: 5px;
 $margen_izq_textbox_suscripcion: 15px;
+$margen_der_textbox_suscripcion: 20px;
 $color_fondo_boton_suscripcion: #C76BB0;
 $color_texto_boton_suscripcion: #FFFFFF;
 $color_borde_boton_suscripcion: #993366;
+$fuente_boton: "Whitney SSm";
+$estilo_boton: normal;
+$tamano_boton: 18px;
+$peso_boton: 400;
 
 
 $altura_div_revistas: 280px;
@@ -369,6 +374,7 @@ $altura_div_footer: 400px;
 				background-color: $color_textbox_suscripcion;
 				margin-top: $margen_sup_textbox_suscripcion;
 				margin-left: $margen_izq_textbox_suscripcion;
+				margin-right: $margen_der_textbox_suscripcion;
 				border-radius: 0;
 			}
 		}
@@ -378,6 +384,7 @@ $altura_div_footer: 400px;
 			color: $color_texto_boton_suscripcion;
 			border-radius: 0;
 			border-color: $color_borde_boton_suscripcion;
+			@include fuente_typography($fuente_boton, $estilo_boton, $tamano_boton, $peso_boton);
 		}
 	}
 }
