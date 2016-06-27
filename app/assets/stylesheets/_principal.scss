@@ -369,11 +369,11 @@ $altura_div_footer: 400px;
 				margin-top: $margen_sup_textbox_suscripcion;
 				margin-left: $margen_izq_textbox_suscripcion;
 			}
+		}
 
-			button{
-				background-color: $color_fondo_boton_suscripcion;
-				color: $color_texto_boton_suscripcion;
-			}
+		button{
+			background-color: $color_fondo_boton_suscripcion;
+			color: $color_texto_boton_suscripcion;
 		}
 	}
 }
