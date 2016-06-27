@@ -54,7 +54,14 @@ $ancho_boton_actividades: 33.33%;
 $altura_div_suscripcion: 70px;
 $color_div_suscripcion: #993366;
 $color_texto_suscripcion: #FFFFFF;
+$fuente_label: "Whitney SSm"
+$estilo_label: normal;
+$tamano_label: 14px;
+$peso_label: 500;
+$padding_sup_label: 5px;
 $ancho_textbox_suscripcion: 150px;
+$c0olor_textbox_suscripcion: #FFFFFF;
+
 
 $altura_div_revistas: 280px;
 
@@ -339,19 +346,20 @@ $altura_div_footer: 400px;
 
 	.navbar-form{
 
-		
+		@include centrado;
+
 		.form-group{
 
 			label{
-				//@include centrado;
-				@include fuente_typography("Whitney SSm", normal, 16px, 500);
+				@include fuente_typography($fuente_label, $estilo_label, $tamano_label, $peso_label);
 				color: $color_texto_suscripcion;
 				float: left;
+				padding-top: $padding_sup_label;
 			}
 
 			.form-control{
-				//@include centrado;
 				width: $ancho_textbox_suscripcion;
+				background-color: $color_textbox_suscripcion;
 			}
 		}
 	}
