@@ -53,6 +53,7 @@ $ancho_boton_actividades: 33.33%;
 
 $altura_div_suscripcion: 70px;
 $color_div_suscripcion: #993366;
+$color_texto_suscripcion: #FFFFFF;
 
 $altura_div_revistas: 280px;
 
@@ -66,13 +67,20 @@ $altura_div_transparencia: 250px;
 
 $altura_div_footer: 400px;
 
-//Mixin para centrar
+//Mixins para evitar repeticiones
 
 @mixin centrado {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+@mixin fuente_typography($familia, $estilo, $tamano, $peso){
+	font-family: $familia + " A", $familia" B";
+	font-style: $estilo;
+	font-weight: $peso;
+	font-size: $tamano;
 }
 
 //Estilos de pagina
@@ -95,10 +103,7 @@ $altura_div_footer: 400px;
 .nav_opciones, .nav_opciones_idioma, .nav_opciones_mail, .nav_opciones_intranet{
 	display: block;
 	float: left;
-	font-family: "Whitney SSm A", "Whitney SSm B";
-    	font-style: normal;
-	font-size: 14px;
-    	font-weight: 700;
+	@include fuente_typography("Whitney SSm", "normal", 14px, 700);
 	text-align: center;
 	margin-top: $margen_superior_textos_navbar;
 	color: $color_textos_navbar;
@@ -335,6 +340,8 @@ $altura_div_footer: 400px;
 	
 	span{
 		@include centrado;
+		@include fuente_typography("Whitney SSm", "normal", 14px, 500);
+		color: $color_texto_suscripcion;
 	}
 }
 
