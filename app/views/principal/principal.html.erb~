@@ -64,7 +64,7 @@
 		<div id="carouselEventos" class="carousel slide" data-ride="carousel">
 
 			<!-- Wrapper for slides -->
-			<%= construir_slider_eventos %>
+			<%= construir_slider_eventos(@resultado) %>
 
 			<!-- Left and right controls -->
 			<a class="left carousel-control" href="#carouselEventos" role="button" data-slide="prev">

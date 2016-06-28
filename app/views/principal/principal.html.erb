@@ -64,7 +64,6 @@
 		<div id="carouselEventos" class="carousel slide" data-ride="carousel">
 
 			<!-- Wrapper for slides -->
-			<%= construir_slider_eventos(@resultado) %>
 
 			<!-- Left and right controls -->
 			<a class="left carousel-control" href="#carouselEventos" role="button" data-slide="prev">
@@ -104,7 +103,7 @@
 
 <div class="row"> <!-- Fila para revistas -->
 	<div class="col-md-12" id="div_revistas"> <!-- Columnas para revistas -->
-			<%= @resultado.fields %>
+			<%= @resultado.each %>
 		  <% @resultado.each do |fila| %>
 				<%= "<br>".html_safe + fila["tipoActividad"] %>
 			<% end %>
