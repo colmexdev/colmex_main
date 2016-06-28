@@ -5,8 +5,9 @@ module PrincipalHelper
     if slides == 0
       slides = 1
     end
+    i = 1
     j = 0
-    for i in 1..slides
+    while i <= slides
       k = 1
       '<div class=' + (i==1 ? '"item active"' : '"item"') + '>'
       while k % 4 != 0
