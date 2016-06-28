@@ -12,7 +12,7 @@ module PrincipalHelper
       while k % 4 != 0
         '<div class="evento">'
         if j < filas.do
-          filas[j]["tituloActividad"]
+          filas.each[j]["tituloActividad"]
         end
         '</div>'
         k = k + 1
