@@ -19,6 +19,6 @@ module PrincipalHelper
         j = j + 1
       end
       '</div>' 
-    end
-  end).html_safe
+    end).html_safe
+  end
 end
