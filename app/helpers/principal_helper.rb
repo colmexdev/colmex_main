@@ -1,7 +1,7 @@
 module PrincipalHelper
 
-  def construir_slider_eventos(filas)
-    (slides = (filas.do / 4).ceil
+  def construir_slider_eventos
+    (slides = (@resultado.each.length / 4).ceil
     if slides == 0
       slides = 1
     end
@@ -11,8 +11,8 @@ module PrincipalHelper
       '<div class=' + (i==1 ? '"item active"' : '"item"') + '>'
       while k % 4 != 0
         '<div class="evento">'
-        if j < filas.do
-          filas.each[j]["tituloActividad"]
+        if j < @resultado.each.length
+          @resultado.each[j]["tituloActividad"]
         end
         '</div>'
         k = k + 1
