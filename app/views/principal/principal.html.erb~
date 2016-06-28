@@ -155,7 +155,7 @@
 
 <div class="row"> <!-- Fila para revistas -->
 	<div class="col-md-12" id="div_revistas"> <!-- Columnas para revistas -->
-			<%= @resultado.fileds %>
+			<%= @resultado.fields %>
 			<!-- <% @resultado.each do |fila| %>
 				<%= fila %>
 			<% end %> -->
