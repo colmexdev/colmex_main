@@ -1,7 +1,7 @@
 module PrincipalHelper
 
   def construir_slider_eventos
-    (slides = (@resultado.size / 4).ceil)
+    (slides = (@resultado.size / 4).ceil
     if slides == 0
       slides = 1
     end
