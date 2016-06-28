@@ -19,7 +19,8 @@ module PrincipalHelper
         k = k + 1
         j = j + 1
       end
-      '</div>' 
+      '</div>'
+      i = i + 1 
     end).html_safe
   end
 end
