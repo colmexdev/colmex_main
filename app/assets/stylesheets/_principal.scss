@@ -35,6 +35,7 @@ $tamano_texto_botones: 18px;
 $altura_div_slider: 550px;
 $bullet_slider: #CCCCCC;
 $bullet_slider_sel: #993366;
+$ancho_flechas_slider: 80px;
 
 $altura_div_eventos: 300px;
 $ancho_eventos: 100%;
@@ -275,6 +276,7 @@ $altura_div_footer: 400px;
 		}
 		.carousel-control.right, .carousel-control.left{
 			opacity: 0.2;
+      width: $ancho_flechas_slider;
 		}
 
 		.carousel-control.right:hover, .carousel-control.left:hover, .carousel-control.right:focus:hover, .carousel-control.left:focus:hover{
