@@ -156,7 +156,10 @@
 <div class="row"> <!-- Fila para revistas -->
 	<div class="col-md-12" id="div_revistas"> <!-- Columnas para revistas -->
 			<%= @cliente.active? %>
-			<%= @cliente.execute("SELECT db_name") %>
+			<% resultado = @cliente.execute("SELECT db_name()") %>
+			<% resultado.each do |fila| %>
+				<%= fila %>
+			<% end %>
 	</div> <!-- Cierre de columnas para revistas -->
 </div> <!-- Cierre de fila para revistas -->
 
