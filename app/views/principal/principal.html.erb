@@ -157,7 +157,7 @@
 	<div class="col-md-12" id="div_revistas"> <!-- Columnas para revistas -->
 			<%= @resultado.fields %>
 		  <% @resultado.each do |fila| %>
-				<%= "<br>".html_safe + fila %>
+				<%= "<br>".html_safe + fila["tipoActividad"] %>
 			<% end %>
 	</div> <!-- Cierre de columnas para revistas -->
 </div> <!-- Cierre de fila para revistas -->
