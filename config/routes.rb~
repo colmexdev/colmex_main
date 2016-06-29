@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
+  devise_for :administradors
   get 'principal/principal'
-  get 'principal/set_language' => 'principal#principal', :as => :cambiar_idioma
+  get 'principal/set_language' => 'principal#set_language', :as => :cambiar_idioma
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

@@ -29,6 +29,13 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'tiny_tds'
 gem 'activerecord-sqlserver-adapter'
 
+# Devise para autenticación
+gem 'devise'
+
+# Cancancan para manejo de múltiples roles de autenticación
+gem 'cancancan', '~> 1.10'
+
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
