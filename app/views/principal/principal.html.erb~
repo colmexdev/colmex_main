@@ -1,3 +1,5 @@
+<%= render 'principal/barra' %>
+
 <div class="row"> <!-- Fila para logo -->
 	<div class="col-md-12" id="div_logo"> <!-- Columnas para logo -->	
 		<%= image_tag("colmex_logo.png", :id => "img_logo") %> 	
