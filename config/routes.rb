@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :galleries
   resources :imagens
   resources :categoria
   resources :emeritos

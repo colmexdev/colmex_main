@@ -21,11 +21,11 @@
   </div>
   <div class="field">
     <%= f.label :galeria %><br>
-    <%= f.text_field :galeria %>
+    <%= f.select(:galeria, options_from_collection_for_select(Gallery.all, :nombre, :nombre), :html_options => {:onchange => "ocultarCategoria()"}) %>
   </div>
-  <div class="field">
+  <div class="field" id="campo_categoria" style="visibility:hidden;">
     <%= f.label :categoria_premio %><br>
-    <%= f.text_field :categoria_premio %>
+    <%= f.select(:categoria_premio, options_from_collection_for_select(Categorium.all, :nombre, :nombre)) %>
   </div>
   <div class="actions">
     <%= f.submit %>
