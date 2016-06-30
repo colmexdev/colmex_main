@@ -13,3 +13,4 @@ sp:
   suscripcion:
     texto: "Suscríbete a nuestra Agenda"
     boton: "Suscribirse"
+    placeholder: "tucorreo@dominio.com"

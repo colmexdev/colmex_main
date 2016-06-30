@@ -3,11 +3,11 @@ sp:
     mail: "Correo electrónico"
     intranet: "Intranet"
   botones:
-    b1: "Primer botón"
-    b2: "Segundo botón"
-    b3: "Tercer botón"
-    b4: "Cuarto botón"
-    b5: "Quinto botón"
+    b1: "SOBRE EL COLEGIO"
+    b2: "CENTROS DE ESTUDIO"
+    b3: "PROGRAMAS DOCENTES"
+    b4: "BIBLIOTECA"
+    b5: "AGENDA"
   actividades:
     boton: "VER TODAS LAS ACTIVIDADES"
   suscripcion:
