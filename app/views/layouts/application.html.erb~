@@ -11,15 +11,15 @@
 <body>
 	<% if params[:locale] %>
 		<% if params[:locale] == "en" %>
-			<% clase_en = "activo" %>
-			<% clase_es = "inactivo" %>
+			<% @clase_en = "activo" %>
+			<% @clase_es = "inactivo" %>
 		<% else %>
-			<% clase_en = "inactivo" %>
-			<% clase_es = "activo" %>
+			<% @clase_en = "inactivo" %>
+			<% @clase_es = "activo" %>
 		<% end %>
 	<% else %>
-		<% clase_en = "inactivo" %>
-		<% clase_es = "activo" %>
+		<% @clase_en = "inactivo" %>
+		<% @clase_es = "activo" %>
 	<% end %>
 	<div class="container-fluid">
 		
