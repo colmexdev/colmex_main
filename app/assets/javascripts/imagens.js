@@ -1,5 +1,5 @@
 function ocultarCategoria(){
-	if this.value.toUpperCase() != "PREMIOS"
+	if(this.value.toUpperCase() != "PREMIOS")
 	{
 		document.getElementById("campo_categoria").style.visibility = "hidden";
 	}
