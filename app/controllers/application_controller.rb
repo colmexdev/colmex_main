@@ -15,5 +15,10 @@ class ApplicationController < ActionController::Base
   def default_url_options(options={})
     { :locale => I18n.locale }
   end
+
+  protected
+  def after_sign_in_path_for(resource)
+    redirect_to root_path
+  end
 end
 
