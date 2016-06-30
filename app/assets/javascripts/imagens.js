@@ -1,5 +1,5 @@
 function ocultarCategoria(){
-	if(this.value.toUpperCase() != "PREMIOS")
+	if(document.getElementById("imagen_galeria").value.toUpperCase() != "PREMIOS")
 	{
 		document.getElementById("campo_categoria").style.visibility = "hidden";
 	}

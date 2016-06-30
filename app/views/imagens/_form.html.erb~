@@ -1,4 +1,4 @@
-<%= form_for(@imagen :html => { :multipart => true}) do |f| %>
+<%= form_for(@imagen, :html => { :multipart => true}) do |f| %>
   <% if @imagen.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@imagen.errors.count, "error") %> prohibited this imagen from being saved:</h2>
@@ -21,7 +21,7 @@
   </div>
   <div class="field">
     <%= f.label :galeria %><br>
-    <%= f.select(:galeria, options_from_collection_for_select(Gallery.all, :nombre, :nombre), :html_options => {:onchange => "ocultarCategoria()", :id => "selector_categoria"}) %>
+    <%= f.select(:galeria, options_from_collection_for_select(Gallery.all, :nombre, :nombre), :html_options => {:onchange => "ocultarCategoria()"}) %>
   </div>
   <div class="field" id="campo_categoria" style="visibility:hidden;">
     <%= f.label :categoria_premio %><br>
