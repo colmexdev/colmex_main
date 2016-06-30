@@ -21,7 +21,7 @@
   </div>
   <div class="field">
     <%= f.label :centro %><br>
-    <%= f.text_field :centro %>
+    <%= f.select(:centro, options_for_select([['CEAA','CEAA'],['CEDUA','CEDUA'],['CEE','CEE'],['CEH','CEH'],['CEI','CEI'],['CELL','CELL'],['CES','CES']])) %>
   </div>
   <div class="field">
     <%= f.label :semblanza %><br>
