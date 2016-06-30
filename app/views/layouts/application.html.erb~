@@ -22,21 +22,7 @@
 		<% clase_es = "activo" %>
 	<% end %>
 	<div class="container-fluid">
-		<div class="row">
-			<div class="col-md-12" id="barra_nav">
-				<ul> <!-- Lista de opciones del lado izquierdo del navbar -->
-					<li class="nav_opciones_idioma"><%= link_to "EN", {:controller => 'principal', :action => 'principal', :locale => 'en'}, :class => clase_en , :id => 'idioma_en' %> | <%= link_to "ES", {:controller => 'principal', :action => 'principal', :locale => 'sp'}, :class => clase_es , :id=> 'idioma_sp' %></li>
-					<li class="nav_opciones_mail"><a href="#"><%= t('navbar.mail') %></a></li>
-					<li class="nav_opciones_intranet"><a href="#"><%= t('navbar.intranet') %></a></li>
-				</ul> <!-- Cierre de lista de opciones del lado izquierdo del navbar -->
-				<form class="navbar-form" role="search">
-        <div class="form-group">
-          <input type="text" class="form-control" placeholder="">
-        </div>
-        <button type="submit" class="btn btn-default boton_lupa"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
-				</form>
-			</div> <!-- Cierre de div columnas barra_nav -->
-		</div> <!-- Cierre de div row barra nav -->
+		
 
 		<%= yield %>
 
