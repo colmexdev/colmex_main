@@ -9,6 +9,6 @@ class Descubre < ActiveRecord::Base
   validates_presence_of :liga
   validates_presence_of :contenido
 
-  validates_attachment_of :imagen
+  validates_attachment_presence :imagen
   validates_attachment_content_type :imagen, :content_type => ['image/jpeg', 'image/png', 'image/jpg']
 end
