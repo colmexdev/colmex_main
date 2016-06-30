@@ -1,0 +1,9 @@
+<% if admin_signed_in? %>
+
+<h1>New Content</h1>
+
+<%= render 'form' %>
+
+<%= link_to 'Back', contents_path %>
+
+<% end %>

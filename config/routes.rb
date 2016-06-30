@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :descubres
+  resources :contents
   resources :galleries
   resources :imagens
   resources :categoria

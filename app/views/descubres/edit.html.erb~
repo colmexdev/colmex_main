@@ -1,0 +1,6 @@
+<h1>Editing Descubre</h1>
+
+<%= render 'form' %>
+
+<%= link_to 'Show', @descubre %> |
+<%= link_to 'Back', descubres_path %>

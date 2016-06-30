@@ -1,0 +1,13 @@
+<% if admin_signed_in? %>
+
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Tipo:</strong>
+  <%= @content.tipo %>
+</p>
+
+<%= link_to 'Edit', edit_content_path(@content) %> |
+<%= link_to 'Back', contents_path %>
+
+<% close %>
