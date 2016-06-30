@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  nombre: MyString
+  fecha_anexion: 2016-06-30
+  centro: MyString
+  semblanza: MyText
+
+two:
+  nombre: MyString
+  fecha_anexion: 2016-06-30
+  centro: MyString
+  semblanza: MyText

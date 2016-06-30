@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :emeritos
   devise_for :admins
   get 'principal/principal'
   get 'principal/set_language' => 'principal#set_language', :as => :cambiar_idioma

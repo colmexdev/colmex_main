@@ -1,0 +1,12 @@
+class CreateEmeritos < ActiveRecord::Migration
+  def change
+    create_table :emeritos do |t|
+      t.string :nombre
+      t.date :fecha_anexion
+      t.string :centro
+      t.text :semblanza
+
+      t.timestamps null: false
+    end
+  end
+end

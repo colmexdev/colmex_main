@@ -1,0 +1,33 @@
+<%= form_for(@emerito) do |f| %>
+  <% if @emerito.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@emerito.errors.count, "error") %> prohibited this emerito from being saved:</h2>
+
+      <ul>
+      <% @emerito.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :nombre %><br>
+    <%= f.text_field :nombre %>
+  </div>
+  <div class="field">
+    <%= f.label :fecha_anexion %><br>
+    <%= f.date_select :fecha_anexion %>
+  </div>
+  <div class="field">
+    <%= f.label :centro %><br>
+    <%= f.text_field :centro %>
+  </div>
+  <div class="field">
+    <%= f.label :semblanza %><br>
+    <%= f.text_area :semblanza %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

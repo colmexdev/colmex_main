@@ -1,0 +1,26 @@
+<p id="notice"><%= notice %></p>
+
+<%= image_tag @emerito.foto.url %>
+
+<p>
+  <strong>Nombre:</strong>
+  <%= @emerito.nombre %>
+</p>
+
+<p>
+  <strong>Fecha anexion:</strong>
+  <%= @emerito.fecha_anexion %>
+</p>
+
+<p>
+  <strong>Centro:</strong>
+  <%= @emerito.centro %>
+</p>
+
+<p>
+  <strong>Semblanza:</strong>
+  <%= @emerito.semblanza %>
+</p>
+
+<%= link_to 'Edit', edit_emerito_path(@emerito) %> |
+<%= link_to 'Back', emeritos_path %>
