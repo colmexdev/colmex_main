@@ -11,4 +11,6 @@ class Admin < ActiveRecord::Base
   def email_changed?
     false
   end
+
+  validates_presence_of :usuario
 end
