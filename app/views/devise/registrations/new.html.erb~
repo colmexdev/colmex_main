@@ -25,7 +25,7 @@
 
   <div class="field">
     <%= f.label :admin %><br />
-    <%= f.check_box("admin", "admin", {}, true, false) %>
+    <%= f.check_box("admin", {}, true, false) %>
   </div>
 
   <div class="actions">
