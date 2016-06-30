@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :imagens
+  resources :categoria
   resources :emeritos
   devise_for :admins
   get 'principal/principal'

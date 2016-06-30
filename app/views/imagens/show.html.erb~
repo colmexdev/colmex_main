@@ -1,0 +1,21 @@
+<% if admin_signed_in? %>
+
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Texto pie:</strong>
+  <%= @imagen.texto_pie %>
+</p>
+
+<p>
+  <strong>Galeria:</strong>
+  <%= @imagen.galeria %>
+</p>
+
+<p>
+  <strong>Categoria premio:</strong>
+  <%= @imagen.categoria_premio %>
+</p>
+
+<%= link_to 'Edit', edit_imagen_path(@imagen) %> |
+<%= link_to 'Back', imagens_path %>

@@ -1,0 +1,11 @@
+class CreateImagens < ActiveRecord::Migration
+  def change
+    create_table :imagens do |t|
+      t.text :texto_pie
+      t.string :galeria
+      t.string :categoria_premio
+
+      t.timestamps null: false
+    end
+  end
+end

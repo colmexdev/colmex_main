@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  texto_pie: MyText
+  galeria: MyString
+  categoria_premio: MyString
+
+two:
+  texto_pie: MyText
+  galeria: MyString
+  categoria_premio: MyString
