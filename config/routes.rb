@@ -2,6 +2,9 @@ Rails.application.routes.draw do
   devise_for :admins
   get 'principal/principal'
   get 'principal/set_language' => 'principal#set_language', :as => :cambiar_idioma
+  devise_scope :admin do
+  get "/acceder" => "devise/sessions#new"
+end
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
