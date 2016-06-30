@@ -4,6 +4,6 @@ class Imagen < ActiveRecord::Base
                     :url => "/assets/galeria/:id/:style/:basename.:extension",
                     :path => ":rails_root/public/assets/galeria/:id/:style/:basename.:extension"
 
-  validates_attachment_content_type :foto, :content_type => ['image/jpeg', 'image/png', 'image/jpg']
+  validates_attachment_content_type :imagen, :content_type => ['image/jpeg', 'image/png', 'image/jpg']
 
 end
