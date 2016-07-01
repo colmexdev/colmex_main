@@ -248,7 +248,7 @@ $altura_div_footer: 400px;
         li{
 
           a{
-            padding: 0 auto;
+            padding: 0 ($ancho_botones +"px");
           }
         }
 			}
