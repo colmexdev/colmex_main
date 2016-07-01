@@ -1,0 +1,4 @@
+class Slider < ActiveRecord::Base
+
+  validates_presence_of :liga
+end
