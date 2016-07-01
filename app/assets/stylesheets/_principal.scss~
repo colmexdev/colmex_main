@@ -214,6 +214,7 @@ $altura_div_footer: 400px;
 	height: $alto_div_menu;
 
 	ul{
+		overflow: visible;
 		list-style-type: none;
 		overflow: hidden;
 		margin: 0;
@@ -227,8 +228,6 @@ $altura_div_footer: 400px;
 			float: left;
 			width: $ancho_botones;
 			text-align: center;
-			z-index:50;
-			position: relative;
 
 			a{
 				display: inline-block;
