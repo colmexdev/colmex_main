@@ -216,7 +216,6 @@ $altura_div_footer: 400px;
 	ul{
 		overflow: visible;
 		list-style-type: none;
-		overflow: hidden;
 		margin: 0;
 		padding: 0;
 		height: 100%;
@@ -239,6 +238,11 @@ $altura_div_footer: 400px;
 				vertical-align: middle;
 				padding-top: $padding_sup_texto_botones;
 				font-size: $tamano_texto_botones;
+			}
+
+			ul{
+				text-align: center;
+				height: 100%;
 			}
 		}
 	}
