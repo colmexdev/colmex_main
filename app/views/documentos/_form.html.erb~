@@ -22,7 +22,7 @@
     <%= f.label :tipo %><br>
     <%= f.select(:tipo, options_for_select([['Informe de actividades','INFORME'],['Junta de Gobierno','JUNTA'],['Estatuto','ESTATUTO'],['Transparencia','TRANSPARENCIA']])) %>
   </div>
-  <div class="field">
+  <div class="field" id="campo_anio" style="display:none;">
     <%= f.label :anio %><br>
     <%= f.select :anio, (Time.zone.now.year - 15)..(Time.zone.now.year + 5) %>
   </div>
