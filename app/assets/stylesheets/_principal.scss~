@@ -250,6 +250,7 @@ $altura_div_footer: 400px;
         padding: 0;
         opacity: 0.8;
         border-radius: 0px;
+        margin: 0;
 
         li{
 
