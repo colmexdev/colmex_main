@@ -5,7 +5,7 @@ module PrincipalHelper
     html_block = ""
     control_block = ""
     Slider.all.each do |im|
-      control_block = control_block + '<li data-target="#myCarousel" data-slide-to="' + i + '"' + (i == 0 ?  'class="active"' : "") + '"></li>'
+      control_block = control_block + '<li data-target="#myCarousel" data-slide-to="' + i.to_s + '"' + (i == 0 ?  'class="active"' : "") + '"></li>'
 
 
       html_block = html_block + '<div class="item ' + (i == 0 ?  "active" : "") + '>'
