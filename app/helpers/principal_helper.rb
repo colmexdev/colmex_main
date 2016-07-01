@@ -32,18 +32,18 @@ module PrincipalHelper
         bloque_html = bloque_html + '<div class="evento">'
         if j < @resultado.each.length
           fila = @resultado.each[j]
-          bloque_html = bloque_html + fila["tituloActividad"].to_s + "<br><br>"
-          bloque_html = bloque_html + fila["centroOrganiza"].to_s + "<br><br>"
-          bloque_html = bloque_html + fila["tipoActividad"].to_s + "<br><br>"
-          bloque_html = bloque_html + fila["centroSiglas"].to_s + "<br><br>"
-          bloque_html = bloque_html + fila["fechaInicio"].to_s + "<br><br>"
-          bloque_html = bloque_html + fila["horaInicio"].to_s + "<br><br>"
-          bloque_html = bloque_html + fila["fechaFin"].to_s + "<br><br>"
-          bloque_html = bloque_html + fila["horaFin"].to_s + "<br><br>"
-          bloque_html = bloque_html + fila["subtituloActividad"].to_s + "<br><br>"
-          bloque_html = bloque_html + fila["sede"].to_s + "<br><br>"
-          bloque_html = bloque_html + fila["institucionSede"].to_s + "<br><br>"
-          bloque_html = bloque_html + fila["liga"].to_s + "<br><br>"
+          bloque_html = bloque_html + fila["tituloActividad"].to_s + "<br>"
+          bloque_html = bloque_html + fila["centroOrganiza"].to_s + "<br>"
+          bloque_html = bloque_html + fila["tipoActividad"].to_s + "<br>"
+          bloque_html = bloque_html + fila["centroSiglas"].to_s + "<br>"
+          bloque_html = bloque_html + fila["fechaInicio"].to_s + "<br>"
+          bloque_html = bloque_html + fila["horaInicio"].to_s + "<br>"
+          bloque_html = bloque_html + fila["fechaFin"].to_s + "<br>"
+          bloque_html = bloque_html + fila["horaFin"].to_s + "<br><"
+          bloque_html = bloque_html + fila["subtituloActividad"].to_s + "<br>"
+          bloque_html = bloque_html + fila["sede"].to_s + "<br>"
+          bloque_html = bloque_html + fila["institucionSede"].to_s + "<br>"
+          bloque_html = bloque_html + fila["liga"].to_s + "<br>"
         end
         bloque_html = bloque_html + '</div>'
         k = k + 1

@@ -32,18 +32,18 @@ module PrincipalHelper
         bloque_html = bloque_html + '<div class="evento">'
         if j < @resultado.each.length
           fila = @resultado.each[j]
-          bloque_html = bloque_html + fila["tituloActividad"] + "<br><br>"
-          bloque_html = bloque_html + fila["centroOrganiza"] + "<br><br>"
-          bloque_html = bloque_html + fila["tipoActividad"] + "<br><br>"
-          bloque_html = bloque_html + fila["centroSiglas"] + "<br><br>"
-          bloque_html = bloque_html + fila["fechaInicio"] + "<br><br>"
-          bloque_html = bloque_html + fila["horaInicio"] + "<br><br>"
-          bloque_html = bloque_html + fila["fechaFin"] + "<br><br>"
-          bloque_html = bloque_html + fila["horaFin"] + "<br><br>"
-          bloque_html = bloque_html + fila["subtituloActividad"] + "<br><br>"
-          bloque_html = bloque_html + fila["sede"] + "<br><br>"
-          bloque_html = bloque_html + fila["institucionSede"] + "<br><br>"
-          bloque_html = bloque_html + fila["liga"] + "<br><br>"
+          bloque_html = bloque_html + fila["tituloActividad"].to_s + "<br><br>"
+          bloque_html = bloque_html + fila["centroOrganiza"].to_s + "<br><br>"
+          bloque_html = bloque_html + fila["tipoActividad"].to_s + "<br><br>"
+          bloque_html = bloque_html + fila["centroSiglas"].to_s + "<br><br>"
+          bloque_html = bloque_html + fila["fechaInicio"].to_s + "<br><br>"
+          bloque_html = bloque_html + fila["horaInicio"].to_s + "<br><br>"
+          bloque_html = bloque_html + fila["fechaFin"].to_s + "<br><br>"
+          bloque_html = bloque_html + fila["horaFin"].to_s + "<br><br>"
+          bloque_html = bloque_html + fila["subtituloActividad"].to_s + "<br><br>"
+          bloque_html = bloque_html + fila["sede"].to_s + "<br><br>"
+          bloque_html = bloque_html + fila["institucionSede"].to_s + "<br><br>"
+          bloque_html = bloque_html + fila["liga"].to_s + "<br><br>"
         end
         bloque_html = bloque_html + '</div>'
         k = k + 1
