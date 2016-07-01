@@ -20,7 +20,7 @@
   </div>
   <div class="field">
     <%= f.label :tipo %><br>
-    <%= f.select(:tipo, options_for_select([['Informe de actividades','INFORME'],['Junta de Gobierno','JUNTA'],['Estatuto','ESTATUTO'],['Transparencia','TRANSPARENCIA']])) %>
+    <%= f.select(:tipo, options_for_select([['Informe de actividades','INFORME'],['Junta de Gobierno','JUNTA'],['Estatuto','ESTATUTO'],['Transparencia','TRANSPARENCIA']]),{},{:onchange => "ocultarAnio()"}) %>
   </div>
   <div class="field" id="campo_anio" style="display:none;">
     <%= f.label :anio %><br>
