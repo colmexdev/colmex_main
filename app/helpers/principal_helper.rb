@@ -9,7 +9,7 @@ module PrincipalHelper
 
 
       html_block = html_block + '<div class="item ' + (i == 0 ?  "active" : "") + '">'
-      html_block = html_block + link_to(image_tag(im.imagen_file_name),im.liga)
+      html_block = html_block + link_to(image_tag(im.imagen.url),im.liga)
       html_block = html_block + '</div>'
       i = i + 1
     end
