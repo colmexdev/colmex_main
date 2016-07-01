@@ -243,9 +243,9 @@ $altura_div_footer: 400px;
 				font-size: $tamano_texto_botones;
 			}
 
-			ul{
+			.dropdown-menu{
+        background-color: $color_fondo_menus;
 				text-align: left;
-				height: $ancho_opcion * 6;
         padding: 0;
         opacity: 0.6;
 
