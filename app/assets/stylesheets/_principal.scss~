@@ -267,6 +267,10 @@ $altura_div_footer: 400px;
         }
 			}
 		}
+
+    .dropdown:hover .dropdown-menu{
+      display: block;
+    }
 	}
 }
 
