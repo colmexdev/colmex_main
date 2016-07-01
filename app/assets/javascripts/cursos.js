@@ -1,10 +1,10 @@
 function ocultarTipoCurso(){
 	if(document.getElementById("curso_programa").value.toUpperCase() != "CURSO")
 	{
-		document.getElementById("tipo_curso").style.visibility = "hidden";
+		document.getElementById("tipo_curso").style.display = "none";
 	}
 	else
 	{
-		document.getElementById("tipo_curso").style.visibility = "visible";
+		document.getElementById("tipo_curso").style.display = "block";
 	}
 }
