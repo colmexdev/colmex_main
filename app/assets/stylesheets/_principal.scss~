@@ -249,6 +249,7 @@ $altura_div_footer: 400px;
 				text-align: left;
         padding: 0;
         opacity: 0.8;
+        border-radius: 0px;
 
         li{
 
