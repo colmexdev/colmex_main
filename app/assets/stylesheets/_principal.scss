@@ -221,7 +221,6 @@ $altura_div_footer: 400px;
 		height: 100%;
 		background-color: $color_fondo_menus;
 		padding: 0 $padding_lat_menus;
-		position: relative;
 		z-index: 9999;
 
 		.dropdown{
@@ -266,7 +265,6 @@ $altura_div_footer: 400px;
 //Clases que afectan al slider
 #div_slider{
 	height: $altura_div_slider;
-	overflow: hidden;
 	text-align: center;
 
 	#myCarousel{

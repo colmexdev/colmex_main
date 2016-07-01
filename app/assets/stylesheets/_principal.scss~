@@ -221,8 +221,7 @@ $altura_div_footer: 400px;
 		height: 100%;
 		background-color: $color_fondo_menus;
 		padding: 0 $padding_lat_menus;
-		position: relative;
-		z-index: 20;
+		z-index: 9999;
 
 		.dropdown{
 			float: left;
@@ -270,12 +269,12 @@ $altura_div_footer: 400px;
 	text-align: center;
 
 	#myCarousel{
-	    position: relative;
-	    text-align: center;
-	    margin: 0 auto;
-			padding: 0;
-	    max-height: $altura_div_slider;
-	    width:100%;
+	    	position: relative;
+	    	text-align: center;
+	    	margin: 0 auto;
+		padding: 0;
+	    	max-height: $altura_div_slider;
+		width:100%;
 
 		.carousel-indicators li{
 			border: none;
@@ -294,8 +293,6 @@ $altura_div_footer: 400px;
 				img{
 					max-height: $altura_div_slider;
 					width: 100%;
-					z-index: -1000;
-					position: absolute;
 				}
 			}
 		}
