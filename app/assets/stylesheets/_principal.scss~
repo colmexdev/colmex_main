@@ -216,7 +216,7 @@ $altura_div_footer: 400px;
 #div_menu{
 	height: $alto_div_menu;
 
-	ul{
+	.menu_botones{
 		overflow: visible;
 		list-style-type: none;
 		margin: 0;
@@ -246,17 +246,19 @@ $altura_div_footer: 400px;
 			ul{
 				text-align: left;
 				height: $ancho_opcion * 6;
-        opacity: 0.6;
         padding: 0;
+        opacity: 0.6;
 
         li{
 
           a{
+
             padding: $padding_sup_top_op $padding_izq_der_op;
           }
+        }
+
         li:hover{
-            opacity: 0.9;
-          }
+          opacity: 0.9;
         }
 			}
 		}
