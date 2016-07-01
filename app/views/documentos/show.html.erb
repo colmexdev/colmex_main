@@ -1,0 +1,23 @@
+<% if admin_signed_in? %>
+
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nombre:</strong>
+  <%= @documento.nombre %>
+</p>
+
+<p>
+  <strong>Tipo:</strong>
+  <%= @documento.tipo %>
+</p>
+
+<p>
+  <strong>Anio:</strong>
+  <%= @documento.anio %>
+</p>
+
+<%= link_to 'Edit', edit_documento_path(@documento) %> |
+<%= link_to 'Back', documentos_path %>
+
+<% end %

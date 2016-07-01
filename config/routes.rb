@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :documentos
   resources :cursos
   resources :tipo_cursos
   resources :descubres
