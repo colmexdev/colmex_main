@@ -16,3 +16,4 @@
 //= require bootstrap-sprockets
 //= require principal
 //= require imagens
+//= require cursos
