@@ -244,7 +244,7 @@ $altura_div_footer: 400px;
 				font-size: $tamano_texto_botones;
 			}
 
-			.dropdown-menu{
+			.dropdown:hover .dropdown-menu{
         background-color: $color_fondo_menus;
 				text-align: left;
         padding: 0;
