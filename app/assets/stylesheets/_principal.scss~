@@ -31,6 +31,7 @@ $ancho_botones: 20%;
 $color_texto_botones: #FFFFFF;
 $padding_sup_texto_botones: 20px;
 $tamano_texto_botones: 18px;
+$ancho_opcion: 48px;
 
 $altura_div_slider: 550px;
 $bullet_slider: #CCCCCC;
@@ -241,8 +242,8 @@ $altura_div_footer: 400px;
 			}
 
 			ul{
-				text-align: center;
-				height: 100%;
+				text-align: left;
+				height: $ancho_opcion * 6;
 			}
 		}
 	}
