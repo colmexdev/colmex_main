@@ -4,7 +4,7 @@ sp:
     intranet: "Intranet"
   botones:
     b1: 
-      texto: "SOBRE EL COLEGIO"
+      texto: "Sobre el Colegio"
       opciones:
         op1: "Información general"
         op2: "Historia"
@@ -12,7 +12,16 @@ sp:
         op4: "Profesores eméritos"
         op5: "Premios y distinciones"
         op6: "Transparencia"
-    b2: "CENTROS DE ESTUDIO"
+    b2:
+      texto: "Centros de estudio"
+      opciones:
+        op1: "CEAA"
+        op2: "CEDUA"
+        op3: "CEE"
+        op4: "CEH"
+        op5: "CEI"
+        op6: "CELL"
+        op7: "CES"
     b3: "PROGRAMAS DOCENTES"
     b4: "BIBLIOTECA"
     b5: "AGENDA"

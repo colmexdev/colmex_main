@@ -4,7 +4,7 @@ en:
     intranet: "Intranet"
   botones:
     b1: 
-      texto: "ABOUT THE COLLEGE"
+      texto: "About the College"
       opciones:
         op1: "General information"
         op2: "History"
@@ -12,7 +12,16 @@ en:
         op4: "Emmeritus profesors"
         op5: "Prizes and distinctions"
         op6: "Transparency"
-    b2: "STUDY CENTERS"
+    b2:
+      texto: "Study centers"
+      opciones:
+        op1: "CEAA"
+        op2: "CEDUA"
+        op3: "CEE"
+        op4: "CEH"
+        op5: "CEI"
+        op6: "CELL"
+        op7: "CES"
     b3: "SCHOLAR PROGRAMS"
     b4: "LIBRARY"
     b5: "AGENDA"
