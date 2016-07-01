@@ -226,8 +226,6 @@ $altura_div_footer: 400px;
 			float: left;
 			width: $ancho_botones;
 			text-align: center;
-			position: relative;
-			z-index: 100;
 
 			a{
 				display: inline-block;
@@ -266,6 +264,8 @@ $altura_div_footer: 400px;
 	height: $altura_div_slider;
 	overflow: hidden;
 	text-align: center;
+	position: absolute;
+	z-index: -100;
 
 	#myCarousel{
 	    position: relative;
