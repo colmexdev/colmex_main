@@ -1,10 +1,21 @@
 Rails.application.routes.draw do
+  get 'panel/administrar'
+
+  resources :documentos
+  resources :cursos
+  resources :tipo_cursos
+  resources :descubres
+  resources :contents
+  resources :galleries
+  resources :imagens
+  resources :categoria
+  resources :emeritos
   devise_for :admins
   get 'principal/principal'
   get 'principal/set_language' => 'principal#set_language', :as => :cambiar_idioma
   devise_scope :admin do
-  get "/acceder" => "devise/sessions#new"
-end
+    get "/acceder" => "devise/sessions#new"
+  end
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

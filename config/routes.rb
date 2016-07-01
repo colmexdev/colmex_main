@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+
   resources :documentos
   resources :cursos
   resources :tipo_cursos
@@ -9,6 +10,8 @@ Rails.application.routes.draw do
   resources :categoria
   resources :emeritos
   devise_for :admins
+
+  get 'panel/administrar'
   get 'principal/principal'
   get 'principal/set_language' => 'principal#set_language', :as => :cambiar_idioma
   devise_scope :admin do
