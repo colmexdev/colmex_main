@@ -224,7 +224,7 @@ $altura_div_footer: 400px;
 		padding: 0 $padding_lat_menus;
 		z-index: 9999;
 
-		div{
+		.dropdown, .no-dropdown{
 			float: left;
 			width: $ancho_botones;
 			text-align: center;
@@ -270,7 +270,6 @@ $altura_div_footer: 400px;
 		.carousel-inner{
 			div{
 			
-				position: relative;
 				img{
 					max-height: $altura_div_slider;
 					width: 100%;
