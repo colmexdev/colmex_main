@@ -3,11 +3,19 @@ en:
     mail: "E-mail"
     intranet: "Intranet"
   botones:
-    b1: "First button"
-    b2: "Second button"
-    b3: "Third button"
-    b4: "Fourth button"
-    b5: "Fifth button"
+    b1: 
+      texto: "ABOUT THE COLLEGE"
+      opciones:
+        op1: "General information"
+        op2: "History"
+        op3: "Institutional documents"
+        op4: "Emmeritus profesors"
+        op5: "Prizes and distinctions"
+        op6: "Transaperncy"
+    b2: "STUDY CENTERS"
+    b3: "SCHOLAR PROGRAMS"
+    b4: "LIBRARY"
+    b5: "AGENDA"
   actividades:
     boton: "VIEW ALL ACTIVITIES"
   suscripcion:

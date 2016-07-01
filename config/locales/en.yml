@@ -3,7 +3,15 @@ en:
     mail: "E-mail"
     intranet: "Intranet"
   botones:
-    b1: "ABOUT THE COLLEGE"
+    b1: 
+      texto: "ABOUT THE COLLEGE"
+      opciones:
+        op1: "General information"
+        op2: "History"
+        op3: "Institutional documents"
+        op4: "Emmeritus profesors"
+        op5: "Prizes and distinctions"
+        op6: "Transparency"
     b2: "STUDY CENTERS"
     b3: "SCHOLAR PROGRAMS"
     b4: "LIBRARY"

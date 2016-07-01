@@ -3,7 +3,15 @@ sp:
     mail: "Correo electrónico"
     intranet: "Intranet"
   botones:
-    b1: "SOBRE EL COLEGIO"
+    b1: 
+      texto: "SOBRE EL COLEGIO"
+      opciones:
+        op1: "Información general"
+        op2: "Historia"
+        op3: "Documentación institucional"
+        op4: "Profesores eméritos"
+        op5: "Premios y distinciones"
+        op6: "Transparencia"
     b2: "CENTROS DE ESTUDIO"
     b3: "PROGRAMAS DOCENTES"
     b4: "BIBLIOTECA"
