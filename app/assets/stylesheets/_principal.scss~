@@ -291,10 +291,11 @@ $altura_div_footer: 400px;
 			div{
 			
 				position: relative;
-				z-index: -1000;
 				img{
 					max-height: $altura_div_slider;
 					width: 100%;
+					z-index: -1000;
+					position: absolute;
 				}
 			}
 		}
