@@ -32,8 +32,8 @@ en:
         op5: "Academic interchange office"
         op6: "Courses"
         op7: "School calendar"
-    b4: "LIBRARY"
-    b5: "AGENDA"
+    b4: "Library"
+    b5: "Agenda"
   actividades:
     boton: "VIEW ALL ACTIVITIES"
   suscripcion:

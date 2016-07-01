@@ -32,8 +32,8 @@ sp:
         op5: "Oficina de intercambio académico"
         op6: "Cursos"
         op7: "Calendario escolar"
-    b4: "BIBLIOTECA"
-    b5: "AGENDA"
+    b4: "Biblioteca"
+    b5: "Agenda"
   actividades:
     boton: "VER TODAS LAS ACTIVIDADES"
   suscripcion:
