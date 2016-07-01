@@ -226,8 +226,17 @@ $altura_div_footer: 400px;
 			float: left;
 			width: $ancho_botones;
 			text-align: center;
-			@include centrado;
 
+			a{
+				display: inline-block;
+				text-decoration: none;
+				color: $color_texto_botones;
+				width: 100%;
+				height: 100%;
+				vertical-align: middle;
+				padding-top: $padding_sup_texto_botones;
+				font-size: $tamano_texto_botones;
+			}
 		}
 
 		.no-dropdown{
