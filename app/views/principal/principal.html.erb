@@ -77,7 +77,7 @@
 
 			<!-- Wrapper for slides -->
       <div class="carousel-inner" role="listbox" >
-			<% slides = (@resultado.each.length / 4).ceil %>
+			<!-- <% slides = (@resultado.each.length / 4).ceil %>
 			<%	if slides == 0 %>
 			<%		slides = 1 %>
 			<%	end %>
@@ -95,7 +95,8 @@
 			<%			j = j + 1 %>
 			<%		end %>
 			<%=		'</div>'.html_safe %>
-			<%	end %>
+			<%	end %> -->
+      <%= construye_slider_eventos %>
       </div>
 
 			<!-- Left and right controls -->
