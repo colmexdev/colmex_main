@@ -289,6 +289,9 @@ $altura_div_footer: 400px;
 
 		.carousel-inner{
 			div{
+			
+				position: absolute;
+				z-index: -1000;
 				img{
 					max-height: $altura_div_slider;
 					width: 100%;
