@@ -226,6 +226,7 @@ $altura_div_footer: 400px;
 			float: left;
 			width: $ancho_botones;
 			text-align: center;
+			z-index: 50;
 
 			a{
 				display: inline-block;
