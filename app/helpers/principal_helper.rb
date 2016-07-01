@@ -31,7 +31,19 @@ module PrincipalHelper
       while k % 5 != 0
         bloque_html = bloque_html + '<div class="evento">'
         if j < @resultado.each.length
-          bloque_html = bloque_html + @resultado.each[j]["tituloActividad"]
+          fila = @resultado.each[j]
+          bloque_html = bloque_html + fila["tituloActividad"] + "<br><br>"
+          bloque_html = bloque_html + fila["centroOrganiza"] + "<br><br>"
+          bloque_html = bloque_html + fila["tipoActividad"] + "<br><br>"
+          bloque_html = bloque_html + fila["centroSiglas"] + "<br><br>"
+          bloque_html = bloque_html + fila["fechaInicio"] + "<br><br>"
+          bloque_html = bloque_html + fila["horaInicio"] + "<br><br>"
+          bloque_html = bloque_html + fila["fechaFin"] + "<br><br>"
+          bloque_html = bloque_html + fila["horaFin"] + "<br><br>"
+          bloque_html = bloque_html + fila["subtituloActividad"] + "<br><br>"
+          bloque_html = bloque_html + fila["sede"] + "<br><br>"
+          bloque_html = bloque_html + fila["institucionSede"] + "<br><br>"
+          bloque_html = bloque_html + fila["liga"] + "<br><br>"
         end
         bloque_html = bloque_html + '</div>'
         k = k + 1
