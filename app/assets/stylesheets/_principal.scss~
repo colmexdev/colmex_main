@@ -221,11 +221,14 @@ $altura_div_footer: 400px;
 		height: 100%;
 		background-color: $color_fondo_menus;
 		padding: 0 $padding_lat_menus;
+		position: relative;
+		z-index: 20;
 
 		.dropdown{
 			float: left;
 			width: $ancho_botones;
 			text-align: center;
+			z-index:50;
 
 			a{
 				display: inline-block;
