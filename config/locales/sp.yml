@@ -22,7 +22,16 @@ sp:
         op5: "CEI"
         op6: "CELL"
         op7: "CES"
-    b3: "PROGRAMAS DOCENTES"
+    b3:
+      texto: "Programas docentes"
+      opciones:
+        op1: "Licenciaturas"
+        op2: "Maestrías"
+        op3: "Doctorados"
+        op4: "Admisiones"
+        op5: "Oficina de intercambio académico"
+        op6: "Cursos"
+        op7: "Calendario escolar"
     b4: "BIBLIOTECA"
     b5: "AGENDA"
   actividades:

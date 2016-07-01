@@ -4,7 +4,7 @@ en:
     intranet: "Intranet"
   botones:
     b1: 
-      texto: "ABOUT THE COLLEGE"
+      texto: "About the College"
       opciones:
         op1: "General information"
         op2: "History"
@@ -13,7 +13,7 @@ en:
         op5: "Prizes and distinctions"
         op6: "Transparency"
     b2:
-      texto: "STUDY CENTERS"
+      texto: "Study centers"
       opciones:
         op1: "CEAA"
         op2: "CEDUA"

@@ -34,7 +34,7 @@ $tamano_texto_botones: 18px;
 $padding_sup_top_op: 10px;
 $padding_izq_der_op: 10px;
 $ancho_opcion: 45px;
-$color_seleccion_opcion: #9933CC;
+$color_seleccion_opcion: #993399;
 
 $altura_div_slider: 550px;
 $bullet_slider: #CCCCCC;

@@ -22,7 +22,16 @@ en:
         op5: "CEI"
         op6: "CELL"
         op7: "CES"
-    b3: "SCHOLAR PROGRAMS"
+    b3:
+      texto: "College programs"
+      opciones:
+        op1: "Bachelors"
+        op2: "Masters"
+        op3: "Doctorates"
+        op4: "Admittances"
+        op5: "Academic interchange office"
+        op6: "Courses"
+        op7: "School calendar"
     b4: "LIBRARY"
     b5: "AGENDA"
   actividades:
