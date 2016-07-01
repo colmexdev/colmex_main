@@ -34,6 +34,7 @@ $tamano_texto_botones: 18px;
 $padding_sup_top_op: 10px;
 $padding_izq_der_op: 10px;
 $ancho_opcion: 45px;
+$color_seleccion_opcion: #9933CC;
 
 $altura_div_slider: 550px;
 $bullet_slider: #CCCCCC;
@@ -247,21 +248,19 @@ $altura_div_footer: 400px;
         background-color: $color_fondo_menus;
 				text-align: left;
         padding: 0;
+        opacity: 0.6;
 
         li{
-
-          opacity: 0.6;
 
           a{
 
             padding: $padding_sup_top_op $padding_izq_der_op;
           }
-        }
 
-        li:hover{
+          a:hover{
         
-          opacity: 0.9;
-          background-color: $color_fondo_menus;
+            background-color: $color_seleccion_opcion;
+          }
         }
 			}
 		}
