@@ -1,0 +1,49 @@
+<%= form_for(@curso) do |f| %>
+  <% if @curso.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@curso.errors.count, "error") %> prohibited this curso from being saved:</h2>
+
+      <ul>
+      <% @curso.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :titulo %><br>
+    <%= f.text_field :titulo %>
+  </div>
+  <div class="field">
+    <%= f.label :descripcion %><br>
+    <%= f.text_area :descripcion %>
+  </div>
+  <div class="field">
+    <%= f.label :fecha_inicio_conv %><br>
+    <%= f.date_select :fecha_inicio_conv %>
+  </div>
+  <div class="field">
+    <%= f.label :fecha_fin_conv %><br>
+    <%= f.date_select :fecha_fin_conv %>
+  </div>
+  <div class="field">
+    <%= f.label :fecha_inicio_clases %><br>
+    <%= f.date_select :fecha_inicio_clases %>
+  </div>
+  <div class="field">
+    <%= f.label :liga %><br>
+    <%= f.text_field :liga %>
+  </div>
+  <div class="field">
+    <%= f.label :programa %><br>
+    <%= f.select(:programa, options_for_select([['Licenciatura','Licenciatura'],['Maestría','Maestria'],['Doctorado','Doctorado'],['Curso','Curso']]), {}, {}) %>
+  </div>
+  <div class="field">
+    <%= f.label :tipo_curso %><br>
+    <%= f.select(:tipo_curso, options_from_collection_for_select(TipoCurso.all, :nombre, :nombre), {}, {}) %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

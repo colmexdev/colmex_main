@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  titulo: MyText
+  descripcion: MyText
+  fecha_inicio_conv: 2016-06-30
+  fecha_fin_conv: 2016-06-30
+  fecha_inicio_clases: 2016-06-30
+  liga: MyText
+  tipo_curso: MyString
+
+two:
+  titulo: MyText
+  descripcion: MyText
+  fecha_inicio_conv: 2016-06-30
+  fecha_fin_conv: 2016-06-30
+  fecha_inicio_clases: 2016-06-30
+  liga: MyText
+  tipo_curso: MyString

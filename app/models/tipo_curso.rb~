@@ -1,0 +1,2 @@
+class TipoCurso < ActiveRecord::Base
+end
