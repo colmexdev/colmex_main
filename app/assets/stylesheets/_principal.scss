@@ -226,7 +226,8 @@ $altura_div_footer: 400px;
 			float: left;
 			width: $ancho_botones;
 			text-align: center;
-			height: 100%;
+			@include centrado;
+
 		}
 
 		.no-dropdown{
