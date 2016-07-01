@@ -9,7 +9,7 @@ module PrincipalHelper
 
 
       html_block = html_block + '<div class="item ' + (i == 0 ?  "active" : "") + '>'
-      html_block = html_block + image_tag(Slider.basename + Slider.extension)
+      html_block = html_block + link_to(image_tag(Slider.basename + Slider.extension),liga)
       html_block = html_block + '</div>'
       i = i + 1
     end
