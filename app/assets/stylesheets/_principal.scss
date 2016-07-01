@@ -247,21 +247,20 @@ $altura_div_footer: 400px;
         background-color: $color_fondo_menus;
 				text-align: left;
         padding: 0;
+        opacity: 0.6;
 
         li{
-
-          opacity: 0.6;
 
           a{
 
             padding: $padding_sup_top_op $padding_izq_der_op;
           }
-        }
 
-        li:hover{
+          a:hover{
         
-          opacity: 0.9;
-          background-color: $color_fondo_menus;
+            opacity: 0.9;
+            background-color: $color_fondo_menus;
+          }
         }
 			}
 		}
