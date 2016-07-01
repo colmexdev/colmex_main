@@ -1,2 +1,13 @@
-<h1>Panel#administrar</h1>
-<p>Find me in app/views/panel/administrar.html.erb</p>
+<% if admin_signed_in? %>
+
+<%= link_to emeritos_path %>
+<%= link_to tipo_cursos_path %>
+<%= link_to cursos_path %>
+<%= link_to categoria_path %>
+<%= link_to documentos_path %>
+<%= link_to descubres_path %>
+<%= link_to contents_path %>
+<%= link_to galleries_path %>
+<%= link_to imagens_path %>
+
+<% end %>
