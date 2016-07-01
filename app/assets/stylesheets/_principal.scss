@@ -253,11 +253,11 @@ $altura_div_footer: 400px;
           a{
             padding: $padding_sup_top_op $padding_izq_der_op;
           }
+        li:hover{
+            opacity: 0.9;
+          }
         }
 			}
-      ul:hover{
-        opacity: 0.9;
-      }
 		}
 	}
 }

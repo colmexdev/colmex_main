@@ -33,6 +33,7 @@ $padding_sup_texto_botones: 20px;
 $tamano_texto_botones: 18px;
 $padding_sup_top_op: 10px;
 $padding_izq_der_op: 10px;
+$ancho_opcion: 48px;
 
 $altura_div_slider: 550px;
 $bullet_slider: #CCCCCC;
@@ -253,11 +254,10 @@ $altura_div_footer: 400px;
             padding: $padding_sup_top_op $padding_izq_der_op;
           }
         }
-
-        ul:hover{
-          opacity: 0.9;
-        }
 			}
+      ul:hover{
+        opacity: 0.9;
+      }
 		}
 	}
 }
