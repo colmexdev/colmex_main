@@ -245,12 +245,17 @@ $altura_div_footer: 400px;
 			ul{
 				text-align: left;
 				height: $ancho_opcion * 6;
+        opacity: 0.6;
 
         li{
 
           a{
             padding: $padding_sup_top_op $padding_izq_der_op;
           }
+        }
+
+        ul:hover{
+          opacity: 0.9;
         }
 			}
 		}
