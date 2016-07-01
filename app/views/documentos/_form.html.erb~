@@ -20,11 +20,11 @@
   </div>
   <div class="field">
     <%= f.label :tipo %><br>
-    <%= f.text_field :tipo %>
+    <%= f.select(:tipo, options_for_select([['Informe de actividades','INFORME'],['Junta de Gobierno','JUNTA'],['Estatuto','ESTATUTO'],['Transparencia','TRANSPARENCIA']])) %>
   </div>
   <div class="field">
     <%= f.label :anio %><br>
-    <%= f.number_field :anio %>
+    <%= f.select :anio, (Time.zone.now.year - 15)..(Time.zone.now.year + 5) %>
   </div>
   <div class="actions">
     <%= f.submit %>
