@@ -1,13 +1,13 @@
 <% if admin_signed_in? %>
 
-<%= link_to "Editar profesores eméritos",emeritos_path %>
-<%= link_to "Editar tipos de curso", tipo_cursos_path %>
-<%= link_to "Editar cursos", cursos_path %>
-<%= link_to "Editar categorías de premios", categoria_path %>
-<%= link_to "Editar documentos visibles", documentos_path %>
-<%= link_to "Editar desplegables en 'Descubre'", descubres_path %>
-<%= link_to "Editar tipos de contenido asignables a 'Descubre'", contents_path %>
-<%= link_to "Editar galerías", galleries_path %>
-<%= link_to "Editar imágenes de galerías", imagens_path %>
+<%= link_to "Editar profesores eméritos",emeritos_path %><br />
+<%= link_to "Editar tipos de curso", tipo_cursos_path %><br />
+<%= link_to "Editar cursos", cursos_path %><br />
+<%= link_to "Editar categorías de premios", categoria_path %><br />
+<%= link_to "Editar documentos visibles", documentos_path %><br />
+<%= link_to "Editar desplegables en 'Descubre'", descubres_path %><br />
+<%= link_to "Editar tipos de contenido asignables a 'Descubre'", contents_path %><br />
+<%= link_to "Editar galerías", galleries_path %><br />
+<%= link_to "Editar imágenes de galerías", imagens_path %><br />
 
 <% end %>
