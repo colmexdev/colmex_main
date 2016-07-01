@@ -216,7 +216,7 @@ $altura_div_footer: 400px;
 #div_menu{
 	height: $alto_div_menu;
 
-	.menu_botones{
+	.botones{
 		overflow: visible;
 		list-style-type: none;
 		margin: 0;
