@@ -31,7 +31,8 @@ $ancho_botones: 20%;
 $color_texto_botones: #FFFFFF;
 $padding_sup_texto_botones: 20px;
 $tamano_texto_botones: 18px;
-$ancho_opcion: 48px;
+$padding_sup_top_op: 10px;
+$padding_izq_der_op: 10px;
 
 $altura_div_slider: 550px;
 $bullet_slider: #CCCCCC;
@@ -248,7 +249,7 @@ $altura_div_footer: 400px;
         li{
 
           a{
-            padding: 0 auto;
+            padding: $padding_sup_top_op $padding_izq_der_op;
           }
         }
 			}
