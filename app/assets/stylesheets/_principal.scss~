@@ -317,6 +317,7 @@ $altura_div_footer: 400px;
 				width: -moz-calc(100% - #{$ancho_flechas_eventos});
 				width: -webkit-calc(100% - #{$ancho_flechas_eventos});
 				padding-left: $ancho_flechas_eventos;
+
 				.evento{
 					float: left;
 					height: 100%;
