@@ -272,7 +272,7 @@ $altura_div_footer: 400px;
       display: block;
     }
   
-    .dropdown:active .dropdown-menu{
+    .dropdown:focus .dropdown-menu{
       display: none;
     }
 	}
