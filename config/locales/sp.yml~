@@ -34,6 +34,8 @@ sp:
         op7: "Calendario escolar"
     b4: "Biblioteca"
     b5: "Agenda"
+  eventos:
+    liga: "Más información"
   actividades:
     boton: "VER TODAS LAS ACTIVIDADES"
   suscripcion:
