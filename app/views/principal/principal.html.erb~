@@ -9,7 +9,7 @@
 <div class="row"> <!-- Fila para menú -->
 	<div class="col-md-12" id="div_menu"> <!-- Columnas para menu -->
 		<ul class="botones"> <!-- Opciones del menú -->
-			<li class="dropdown" id="dropdown1">
+			<li class="dropdown" id="dropdown1" onhover="borrarClase()">
         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><%= t('botones.b1.texto') %></a>
           <ul class="dropdown-menu">
             <li><a href="#"><%= t('botones.b1.opciones.op1') %></a></li>
@@ -21,7 +21,7 @@
           </ul>
       </li>
 
-			<li class="dropdown" id="dropdown2">
+			<li class="dropdown" id="dropdown2" onhover="borrarClase()">
         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><%= t('botones.b2.texto') %></a>
           <ul class="dropdown-menu">
             <li><a href="#"><%= t('botones.b2.opciones.op1') %></a></li>
@@ -34,7 +34,7 @@
           </ul>
       </li>
 
-			<li class="dropdown" id="dropdown3">
+			<li class="dropdown" id="dropdown3" onhover="borrarClase()">
         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><%= t('botones.b3.texto') %></a>
           <ul class="dropdown-menu">
             <li><a href="#"><%= t('botones.b3.opciones.op1') %></a></li>
