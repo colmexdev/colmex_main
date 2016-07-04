@@ -35,7 +35,7 @@ module PrincipalHelper
           bloque_html = bloque_html + fila["tituloActividad"].to_s + "<br>"
           bloque_html = bloque_html + fila["centroOrganiza"].to_s + "<br>"
           bloque_html = bloque_html + fila["tipoActividad"].to_s + "<br>"
-          bloque_html = bloque_html + img_tag(fila["centroSiglas"].downcase + ".png", :id => "img_siglas") + "<br>"
+          bloque_html = bloque_html + image_tag(fila["centroSiglas"].downcase + ".png", :id => "img_siglas") + "<br>"
           if k == 1
             fila["fechaFin"] = "26/06/2016"
           end
