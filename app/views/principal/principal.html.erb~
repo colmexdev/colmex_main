@@ -9,7 +9,7 @@
 <div class="row"> <!-- Fila para menú -->
 	<div class="col-md-12" id="div_menu"> <!-- Columnas para menu -->
 		<ul class="botones"> <!-- Opciones del menú -->
-			<li class="dropdown">
+			<li class="dropdown" id="dropdown1">
         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><%= t('botones.b1.texto') %></a>
           <ul class="dropdown-menu">
             <li><a href="#"><%= t('botones.b1.opciones.op1') %></a></li>
@@ -21,7 +21,7 @@
           </ul>
       </li>
 
-			<li class="dropdown">
+			<li class="dropdown" id="dropdown2">
         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><%= t('botones.b2.texto') %></a>
           <ul class="dropdown-menu">
             <li><a href="#"><%= t('botones.b2.opciones.op1') %></a></li>
@@ -34,7 +34,7 @@
           </ul>
       </li>
 
-			<li class="dropdown">
+			<li class="dropdown" id="dropdown3">
         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><%= t('botones.b3.texto') %></a>
           <ul class="dropdown-menu">
             <li><a href="#"><%= t('botones.b3.opciones.op1') %></a></li>
@@ -77,7 +77,7 @@
 
 			<!-- Wrapper for slides -->
       <div class="carousel-inner" role="listbox" >
-			<% slides = (@resultado.each.length / 4).ceil %>
+			<!-- <% slides = (@resultado.each.length / 4).ceil %>
 			<%	if slides == 0 %>
 			<%		slides = 1 %>
 			<%	end %>
@@ -95,7 +95,8 @@
 			<%			j = j + 1 %>
 			<%		end %>
 			<%=		'</div>'.html_safe %>
-			<%	end %>
+			<%	end %> -->
+      <%= construye_slider_eventos %>
       </div>
 
 			<!-- Left and right controls -->
