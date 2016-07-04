@@ -4,6 +4,21 @@
 
 <p id="notice"><%= notice %></p>
 
+<p>
+  <strong>Usuario:</strong>
+  <%= @admin.usuario %>
+</p>
+
+<p>
+  <strong>Contraseña:</strong>
+  <%= @admin.password %>
+</p>
+
+<p>
+  <strong>Rol:</strong>
+  <%= @admin.admin ? "Administrador" : "Creador de contenido" %>
+</p>
+
 <%= link_to 'Edit', edit_admin_path(@admin) %> |
 <%= link_to 'Back', admins_path %>
 
