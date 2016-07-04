@@ -1,8 +1,11 @@
 <% if admin_signed_in? %>
 
+<% if current_admin.admin %>
+
 <p id="notice"><%= notice %></p>
 
 <%= link_to 'Edit', edit_admin_path(@admin) %> |
 <%= link_to 'Back', admins_path %>
 
+<% end %>
 <% end %>
