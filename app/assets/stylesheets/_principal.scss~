@@ -256,7 +256,7 @@ $altura_div_footer: 400px;
         li{
 
           a{
-
+						background-color: $color_fondo_menus;
             padding: $padding_sup_top_op $padding_izq_der_op;
           }
 
@@ -268,13 +268,7 @@ $altura_div_footer: 400px;
 			}
 		}
 
-		.dropdown:hover .dropdown-menu{
-			display: block;
-		}
-  
-		.dropdown:focus .dropdown-menu{
-			visibility: hidden;
-		}
+
 	}
 }
 
