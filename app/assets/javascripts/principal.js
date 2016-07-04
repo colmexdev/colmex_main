@@ -16,6 +16,6 @@ function borrarClase(element){
     document.getElementById("dropdown2").className = "dropdown";
     document.getElementById("dropdown1").className = "dropdown";
   }
-  this.className = "dropdown open";
+  element.className = "dropdown open";
   
 }
