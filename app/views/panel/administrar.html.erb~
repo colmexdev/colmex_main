@@ -10,6 +10,10 @@
 <%= link_to "Editar galerías", galleries_path %><br />
 <%= link_to "Editar imágenes de galerías", imagens_path %><br />
 <%= link_to "Editar imágenes de slider", sliders_path %><br />
+<% if current_admin.admin %>
+<%= link_to "Editar usuarios gestores", admins_path %></br>
+<%= current_admin.admin %>
+<% end %>
 <br />
 <br />
 <%= link_to "Cerrar sesión", destroy_admin_session_path, :method => "DELETE" %>
