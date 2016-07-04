@@ -1,0 +1,9 @@
+<% if admin_signed_in? %>
+
+<h1>New Admin</h1>
+
+<%= render 'form' %>
+
+<%= link_to 'Back', admins_path %>
+
+<% end %>
