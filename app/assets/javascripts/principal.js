@@ -9,7 +9,7 @@ function cambiarClasesIdioma(link){
 	return false;
 }
 
-function borrarClases(){
+function borrarClase(){
   dropdown1 = document.getElementById("dropdown1");
   dropdown2 = document.getElementById("dropdown2");
   dropdown3 = document.getElementById("dropdown3");
