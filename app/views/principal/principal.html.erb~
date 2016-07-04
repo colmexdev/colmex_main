@@ -11,7 +11,7 @@
 		<ul class="botones"> <!-- Opciones del menú -->
 			<li class="dropdown" id="dropdown1" onmouseover="borrarClase(this)">
         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><%= t('botones.b1.texto') %></a>
-          <ul class="dropdown-menu">
+          <ul class="dropdown-menu" onmouseleave="quitarClases()">
             <li><a href="#"><%= t('botones.b1.opciones.op1') %></a></li>
             <li><a href="#"><%= t('botones.b1.opciones.op2') %></a></li>
             <li><a href="#"><%= t('botones.b1.opciones.op3') %></a></li>
@@ -23,7 +23,7 @@
 
 			<li class="dropdown" id="dropdown2" onmouseover="borrarClase(this)">
         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><%= t('botones.b2.texto') %></a>
-          <ul class="dropdown-menu">
+          <ul class="dropdown-menu" onmouseleave="quitarClases()">
             <li><a href="#"><%= t('botones.b2.opciones.op1') %></a></li>
             <li><a href="#"><%= t('botones.b2.opciones.op2') %></a></li>
             <li><a href="#"><%= t('botones.b2.opciones.op3') %></a></li>
@@ -36,7 +36,7 @@
 
 			<li class="dropdown" id="dropdown3" onmouseover="borrarClase(this)">
         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><%= t('botones.b3.texto') %></a>
-          <ul class="dropdown-menu">
+          <ul class="dropdown-menu" onmouseleave="quitarClases()">
             <li><a href="#"><%= t('botones.b3.opciones.op1') %></a></li>
             <li><a href="#"><%= t('botones.b3.opciones.op2') %></a></li>
             <li><a href="#"><%= t('botones.b3.opciones.op3') %></a></li>
