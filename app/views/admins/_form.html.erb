@@ -11,6 +11,29 @@
     </div>
   <% end %>
 
+<div class="field">
+    <%= f.label :usuario %><br />
+    <%= f.text_field :usuario, autofocus: true %>
+  </div>
+
+  <div class="field">
+    <%= f.label :password %>
+    <% if @minimum_password_length %>
+    <em>(<%= @minimum_password_length %> characters minimum)</em>
+    <% end %><br />
+    <%= f.password_field :password, autocomplete: "off" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :password_confirmation %><br />
+    <%= f.password_field :password_confirmation, autocomplete: "off" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :admin %><br />
+    <%= f.select(:admin, options_for_select([['Administrador',true],['Editor',false]])) %>
+  </div>
+
   <div class="actions">
     <%= f.submit %>
   </div>
