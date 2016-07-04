@@ -1,5 +1,3 @@
-
-
 function borrarClase(element){
   dropdown1 = document.getElementById("dropdown1");
   dropdown2 = document.getElementById("dropdown2");
@@ -18,4 +16,10 @@ function borrarClase(element){
   }
   element.className = "dropdown open";
   
+}
+
+function quitarClases(){
+  document.getElementById("dropdown1").className = "dropdown";
+  document.getElementById("dropdown2").className = "dropdown";
+  document.getElementById("dropdown3").className = "dropdown";
 }
