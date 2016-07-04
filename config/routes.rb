@@ -12,6 +12,7 @@ Rails.application.routes.draw do
   resources :emeritos
   devise_for :admins
 
+  get 'admins/index' => 'admins#index', :as => :admins_path
   get 'panel/administrar'
   get 'principal/principal'
   get 'principal/set_language' => 'principal#set_language', :as => :cambiar_idioma
