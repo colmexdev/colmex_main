@@ -38,6 +38,9 @@ module PrincipalHelper
           bloque_html = bloque_html + fila["centroSiglas"].to_s + "<br>"
           #bloque_html = bloque_html + l(Date.strptime(fila["fechaInicio"],"%d/%m/%Y"), format: :long) + "<br>"
           #bloque_html = bloque_html + l(Date.strptime(fila["fechaFin"],"%d/%m/%Y"), format: :long) + "<br>"
+          if i == 1
+            fila["fechaFin"] = "26/06/2016"
+          end
           bloque_html = bloque_html + arregloFecha(fila["fechaInicio"], fila["fechaFin"]) + "<br />"
           bloque_html = bloque_html + l(Time.parse(fila["horaInicio"]), format: "%H:%M") + " | " + l(Time.parse(fila["horaFin"]), format: "%H:%M") + "<br>"
           bloque_html = bloque_html + fila["subtituloActividad"].to_s + "<br>"
