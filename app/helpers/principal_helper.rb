@@ -68,7 +68,7 @@ module PrincipalHelper
         dias.push(Date.strptime(dia,"%d"))
       end
       str_dias = dias.map { |d| "%#{d}" }.join(", ")
-      return l(Date.strptime(fechaI,"%d/%m/%Y").strftime(str_dias + " de %B"))
+      return Date.strptime(fechaI,"%d/%m/%Y").strftime(str_dias + " de %B")
     end
   end
 end
