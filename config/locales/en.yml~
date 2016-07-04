@@ -34,10 +34,10 @@ en:
         op7: "School calendar"
     b4: "Library"
     b5: "Agenda"
-  actividades:
-    boton: "VIEW ALL ACTIVITIES"
   eventos:
     liga: "More info"
+  actividades:
+    boton: "VIEW ALL ACTIVITIES"
   suscripcion:
     texto: "Sign up to our Agenda"
     boton: "Sign up"
