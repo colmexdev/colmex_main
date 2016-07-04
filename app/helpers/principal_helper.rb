@@ -43,7 +43,7 @@ module PrincipalHelper
           bloque_html = bloque_html + fila["subtituloActividad"].to_s + "<br>"
           bloque_html = bloque_html + fila["sede"].to_s + "<br>"
           bloque_html = bloque_html + fila["institucionSede"].to_s + "<br>"
-          bloque_html = bloque_html + fila["liga"].to_s[0..15] + "<br>"
+          bloque_html = bloque_html + '<a href="'+fila["liga"].to_s+'" class="liga_evento">Más información</a><br>'
         end
         bloque_html = bloque_html + '</div>'
         k = k + 1
