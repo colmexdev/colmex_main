@@ -1,56 +1,6 @@
 <%= render 'principal/barra' %>
 
-<div class="row"> <!-- Fila para logo -->
-	<div class="col-md-12" id="div_logo"> <!-- Columnas para logo -->	
-		<%= image_tag("colmex_logo.png", :id => "img_logo") %> 	
-	</div> <!--Cierre de div columnas para logo -->
-</div> <!-- Cierre de div fila para logo -->
 
-<div class="row"> <!-- Fila para menú -->
-	<div class="col-md-12" id="div_menu"> <!-- Columnas para menu -->
-		<ul class="botones"> <!-- Opciones del menú -->
-			<li class="dropdown" id="dropdown1" onmouseover="borrarClase(this)" onmouseleave="quitarClases()">
-        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><%= t('botones.b1.texto') %></a>
-          <ul class="dropdown-menu" onmouseleave="quitarClases()">
-            <li><a href="#"><%= t('botones.b1.opciones.op1') %></a></li>
-            <li><a href="#"><%= t('botones.b1.opciones.op2') %></a></li>
-            <li><a href="#"><%= t('botones.b1.opciones.op3') %></a></li>
-            <li><a href="#"><%= t('botones.b1.opciones.op4') %></a></li>
-            <li><a href="#"><%= t('botones.b1.opciones.op5') %></a></li>
-            <li><a href="#"><%= t('botones.b1.opciones.op6') %></a></li>
-          </ul>
-      </li>
-
-			<li class="dropdown" id="dropdown2" onmouseover="borrarClase(this)" onmouseleave="quitarClases()">
-        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><%= t('botones.b2.texto') %></a>
-          <ul class="dropdown-menu" onmouseleave="quitarClases()">
-            <li><a href="#">Centro de Estudios de Asia y África</a></li>
-            <li><a href="#">Centro de Estudios Demográficos, Urbanos y Ambientales</a></li>
-            <li><a href="#">Centro de Estudios Económicos</a></li>
-            <li><a href="#">Centro de Estudios Históricos</a></li>
-            <li><a href="#">Centro de Estudios Internacionales</a></li>
-            <li><a href="#">Centro de Estudios Lingüísticos y Literarios</a></li>
-            <li><a href="#">Centro de Estudios Sociológicos</a></li>
-          </ul>
-      </li>
-
-			<li class="dropdown" id="dropdown3" onmouseover="borrarClase(this)" onmouseleave="quitarClases()">
-        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><%= t('botones.b3.texto') %></a>
-          <ul class="dropdown-menu" onmouseleave="quitarClases()">
-            <li><a href="#"><%= t('botones.b3.opciones.op1') %></a></li>
-            <li><a href="#"><%= t('botones.b3.opciones.op2') %></a></li>
-            <li><a href="#"><%= t('botones.b3.opciones.op3') %></a></li>
-            <li><a href="#"><%= t('botones.b3.opciones.op4') %></a></li>
-            <li><a href="#"><%= t('botones.b3.opciones.op5') %></a></li>
-            <li><a href="#"><%= t('botones.b3.opciones.op6') %></a></li>
-            <li><a href="#"><%= t('botones.b3.opciones.op7') %></a></li>
-          </ul>
-      </li>
-			<li class="no-dropdown"><a href="#"><%= t('botones.b4') %></a></li>
-			<li class="no-dropdown"><a href="#"><%= t('botones.b5') %></a></li>
-		</ul> <!-- Cierre del menú -->
-	</div> <!-- Cierre de columnas para menú -->
-</div> <!-- Ciere de div fila para menú -->
 
 <div class="row"> <!-- Fila para slider -->
 	<div class="col-md-12" id="div_slider"> <!-- Columnas para slider -->
