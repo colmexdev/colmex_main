@@ -34,6 +34,8 @@ en:
         op7: "School calendar"
     b4: "Library"
     b5: "Agenda"
+  eventos:
+    liga: "More info"
   actividades:
     boton: "VIEW ALL ACTIVITIES"
   suscripcion:
