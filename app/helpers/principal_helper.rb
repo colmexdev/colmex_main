@@ -36,8 +36,9 @@ module PrincipalHelper
           bloque_html = bloque_html + fila["centroOrganiza"].to_s + "<br>"
           bloque_html = bloque_html + fila["tipoActividad"].to_s + "<br>"
           bloque_html = bloque_html + fila["centroSiglas"].to_s + "<br>"
-          bloque_html = bloque_html + l(Date.strptime(fila["fechaInicio"],"%d/%m/%Y"), format: :long) + "<br>"
-          bloque_html = bloque_html + l(Date.strptime(fila["fechaFin"],"%d/%m/%Y"), format: :long) + "<br>"
+          #bloque_html = bloque_html + l(Date.strptime(fila["fechaInicio"],"%d/%m/%Y"), format: :long) + "<br>"
+          #bloque_html = bloque_html + l(Date.strptime(fila["fechaFin"],"%d/%m/%Y"), format: :long) + "<br>"
+          bloque_html = bloque_html + arregloFecha(fila["fechaInicio"], fila["fechaFin"]) + "<br />"
           bloque_html = bloque_html + l(Time.parse(fila["horaInicio"]), format: "%H:%M") + " | " + l(Time.parse(fila["horaFin"]), format: "%H:%M") + "<br>"
           bloque_html = bloque_html + fila["subtituloActividad"].to_s + "<br>"
           bloque_html = bloque_html + fila["sede"].to_s + "<br>"
@@ -51,5 +52,20 @@ module PrincipalHelper
       bloque_html = bloque_html + '</div>'
     end
   return bloque_html.html_safe
+  end
+
+  def arregloFecha(fechaI, fechaF)
+    diferencia = Date.strptime(fechaI,"%d/%m/%Y") - Date.strptime(fechaF,"%d/%m/%Y")
+    if diferencia == 0
+      return l(Date.strptime(fechaI,"%d/%m/%Y"), format: :long)
+    else
+      dias = []
+      for i in 0..diferencia
+        dia = Date.strptime(fechaI, "%d/%m/%Y") + i.days
+        dias.push(Date.strptime(dia,"%d"))
+      end
+      str_dias = dias.map { |d| "%#{d}" }.join(", ")
+      return l(Date.strptime(fechaI,"%d/%m/%Y").strftime(str_dias + " de %B"))
+    end
   end
 end
