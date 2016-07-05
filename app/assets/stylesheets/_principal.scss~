@@ -145,6 +145,14 @@ a, a:hover, a:active, a:visited, a:link{  text-decoration: none; }
 
 	.idioma{
 		width: $ancho_idioma;
+
+    .activo{
+			color: $color_textos_navbar_sel;
+		}
+
+		.inactivo{
+			color: $color_textos_navbar;
+		}
 	}
 
 	.mail{
@@ -176,15 +184,6 @@ a, a:hover, a:active, a:visited, a:link{  text-decoration: none; }
 //Clase del contenedor del searchbox y boton de busqueda
 .navbar-form{
 	margin-top:0;
-}
-
-//Clases de las fuentes de seleccion de idioma (Activo = morado, inactivo = gris)
-.activo{
-	color: $color_textos_navbar_sel;
-}
-
-.inactivo{
-	color: $color_textos_navbar;
 }
 
 //Clase asociada al campo de texto de busqueda

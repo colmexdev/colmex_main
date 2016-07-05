@@ -473,6 +473,7 @@ a, a:hover, a:active, a:visited, a:link{  text-decoration: none; }
 		color: #fff;
 		font-size: 16px;
 		height: 75%;
+		@include centrado;
 
 		ul{
 
