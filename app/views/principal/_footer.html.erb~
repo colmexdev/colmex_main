@@ -1,5 +1,5 @@
 <div class="row" id="div_footer"> <!-- Fila para footer -->
-	<!-- <div class="col-md-12" id="div_footer">  Columnas para footer -->
+	<div class="col-md-12" id="div_footer">  Columnas para footer -->
 		<div class="col-md-2" id="footer_izq">
 			<ul>
 				<li><a href="#"><%= t('botones.b1.texto') %></a></li>
@@ -31,7 +31,7 @@ Tel.: +52 55 54493000</p>
 
 <div class="row"> <!-- Fila para redes sociales en footer -->
 	<div class="col-md-12" id="redes_footer"> <!-- Columnas para redes sociales en footer-->
-		<ul class="navbar-right">
+		<ul class="botones_footer">
 			<%= link_to image_tag("fb-bco.png", :class => "img_net"), "#" %>
 			<%= link_to image_tag("twitter-bco.png", :class => "img_net"), "#" %>
 			<%= link_to image_tag("instagram-bco.png", :class => "img_net"), "#" %>

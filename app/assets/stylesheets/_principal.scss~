@@ -519,7 +519,12 @@ a, a:hover, a:active, a:visited, a:link{  text-decoration: none; }
 #redes_footer{
 	height: 50px;
 	background-color: #5E002B;
-	text-align: center;	
+	text-align: center;
+
+	.botones_footer{
+		float: left;
+		list-style-type: none;
+	}	
 }
 
 
