@@ -142,19 +142,35 @@ a{  text-decoration: none; }
 		margin-top: 17px;
 		color: #7F7F7F;
 	}	
-}
 
-//Estilos asociados a la barra de navegacion
-
-
-//Clase de la seccion de seleccion de idioma
-.nav_opciones_idioma{
-	width: $ancho_idioma;
-	a{ 
-		text-decoration: none;
+	.nav_opciones_idioma{
+		width: $ancho_idioma;
+		a{ 
+			text-decoration: none;
+		}
+		a:hover{
+			color: $color_textos_navbar_sel;
+		}
 	}
-	a:hover{
-		color: $color_textos_navbar_sel;
+
+	.nav_opciones_mail{
+		width: $ancho_mail;
+		a{
+			color: $color_textos_navbar;
+		}
+		a:hover,a:active{
+			color: $color_textos_navbar_sel;
+		}
+	}
+
+	.nav_opciones_intranet{
+		width: $ancho_intranet;
+		a{
+			color: $color_textos_navbar;
+		}
+		a:hover,a:active{
+			color: $color_textos_navbar_sel;
+		}
 	}
 }
 
@@ -191,30 +207,8 @@ a{  text-decoration: none; }
 	font-size: $tamano_lupa;
 }
 
-//Clase asociada al link a correo electronico
-.nav_opciones_mail{
-	width: $ancho_mail;
-	a{
-		color: $color_textos_navbar;
-		text-decoration: none;
-	}
-	a:hover,a:active{
-		color: $color_textos_navbar_sel;
-	}
-}
 
-//Clase asociada al link a intranet
-.nav_opciones_intranet{
-	width: $ancho_intranet;
-	a{
-		color: $color_textos_navbar;
-		text-decoration: none;
-	}
-	a:hover,a:active{
-		text-decoration: none;
-		color: $color_textos_navbar_sel;
-	}
-}
+
 
 //Clase para alterar el div donde va el logotipo de colmex
 #div_logo{
