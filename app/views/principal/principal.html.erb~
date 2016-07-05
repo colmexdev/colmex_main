@@ -96,7 +96,7 @@
 	</div> <!-- Cierre de columnas para transparencia -->
 </div> <!-- Cierre de fila para transparencia -->
 
-<div class="row"> <!-- Fila para footer -->
+<div class="row show-grid"> <!-- Fila para footer -->
 	<div class="col-md-12" id="div_footer"> <!-- Columnas para footer -->
 
 	</div> <!-- Cierre de columnas para footer -->
