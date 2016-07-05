@@ -381,14 +381,14 @@ a, a:hover, a:active, a:visited, a:link{  text-decoration: none; }
 	display: block;
 	
 	#boton_actividades{
-		background-color: $color_fondo_boton_actividades;
-		color: $color_letra_boton_actividades;
+		background-color: #9E6680;
+		color: #fff;
 		font-size: $tamano_letra_boton_actividades;
 		text-decoration: none;
 		display: inline-block;
 		//padding-top: calc((#{$altura_boton_actividades} / 2) - (#{$tamano_letra_boton_actividades} / 2 ));
-		border-color: $color_borde_boton_actividades;
-		border-width: $tamano_borde_boton_actividades;
+		border-color: #470020;
+		border-width: 2px;
 		border-style: solid;
 		height: $altura_boton_actividades;
 		width: $ancho_boton_actividades;
