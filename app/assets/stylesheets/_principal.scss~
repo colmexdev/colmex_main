@@ -476,7 +476,7 @@ a, a:hover, a:active, a:visited, a:link{  text-decoration: none; }
 		border-left: 1px solid #fff;
 		color: #fff;
 		font-size: 14px;
-		height: 50%;
+		height: 75%;
 		@include centrado;
 		
 		img{
