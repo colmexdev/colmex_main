@@ -466,7 +466,7 @@ a, a:hover, a:active, a:visited, a:link{  text-decoration: none; }
 }
 
 #div_footer{
-	height: $altura_div_footer;
+	height: 300px;
 	background-color: #5E002B;
 	position: relative;
 
