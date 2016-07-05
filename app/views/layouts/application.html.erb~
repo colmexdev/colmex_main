@@ -18,7 +18,7 @@
 
 		<%= yield %>
 
-		<% if !admin_signed_in? %>
+		<% if !admin_signed_in? || current_page?(:controller => 'devise/registrations') %>
 			<%= render 'principal/footer' %>
 		<% end %>
 
