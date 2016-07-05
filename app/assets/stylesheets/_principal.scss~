@@ -143,28 +143,19 @@ a{  text-decoration: none; }
 		color: #7F7F7F;
 	}	
 
-	.nav_opciones_idioma{
+	.idioma{
 		width: $ancho_idioma;
-		a{ 
-			text-decoration: none;
-		}
-		a:hover{
-			color: $color_textos_navbar_sel;
-		}
 	}
 
-	.nav_opciones_mail{
+	.mail{
 		width: $ancho_mail;
-		a{
-			color: $color_textos_navbar;
-		}
-		a:hover,a:active{
-			color: $color_textos_navbar_sel;
-		}
 	}
 
-	.nav_opciones_intranet{
+	.intranet{
 		width: $ancho_intranet;
+	}
+
+	.nav_opciones{
 		a{
 			color: $color_textos_navbar;
 		}
