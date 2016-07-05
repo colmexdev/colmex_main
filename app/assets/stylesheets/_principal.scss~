@@ -474,11 +474,15 @@ a, a:hover, a:active, a:visited, a:link{  text-decoration: none; }
 		color: #fff;
 		font-size: 16px;
 		height: 75%;
+		position: relative;
 
 		ul{
 			font-size: 18px;
 
 			li{
+				top: 50%;
+				position: absolute;
+				transform: translate(-50%,0);
 				list-style-type: none;
 				padding: 5% 0 5% 0;
 
@@ -510,6 +514,11 @@ a, a:hover, a:active, a:visited, a:link{  text-decoration: none; }
 		img{
 			width: 40%;
 		}
+	}
+
+	#redes_footer{
+		background-color: #5E002B;
+		text-align: center;	
 	}
 }
 
