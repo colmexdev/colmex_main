@@ -383,7 +383,7 @@ a, a:hover, a:active, a:visited, a:link{  text-decoration: none; }
 	#boton_actividades{
 		background-color: #9E6680;
 		color: #fff;
-		font-size: $tamano_letra_boton_actividades;
+		font-size: 18px;
 		text-decoration: none;
 		display: inline-block;
 		//padding-top: calc((#{$altura_boton_actividades} / 2) - (#{$tamano_letra_boton_actividades} / 2 ));

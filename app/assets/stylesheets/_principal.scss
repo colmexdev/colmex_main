@@ -366,8 +366,17 @@ a, a:hover, a:active, a:visited, a:link{  text-decoration: none; }
 					width: $ancho_division_eventos;
 					text-align: center;
 
-					a{
-						
+					.img_evento{
+						float: left;
+						width: 37.5%;
+						height: 100%;
+						overflow: hidden;
+					}
+
+					.desc_evento{
+						width: 62.5%;
+						height: 100%;
+						overflow: hidden;
 					}
 				}
 			}
