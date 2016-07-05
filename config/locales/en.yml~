@@ -42,3 +42,6 @@ en:
     texto: "Sign up to our Agenda"
     boton: "Sign up"
     placeholder: "mail@domain.com"
+  date:
+    formats:
+      long: "%A, %B %d"

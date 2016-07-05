@@ -42,6 +42,12 @@ en:
     texto: "Sign up to our Agenda"
     boton: "Sign up"
     placeholder: "mail@domain.com"
+  footer:
+    liga1: "Ethical Principles"
+    liga2: "Privacy advice"
+    liga3: "Transparency"
+    liga4: "E-mail"
+    liga5: "Location"
   date:
     formats:
       long: "%A, %B %d"

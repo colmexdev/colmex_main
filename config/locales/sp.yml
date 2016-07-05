@@ -42,7 +42,12 @@ sp:
     texto: "Suscríbete a nuestra Agenda"
     boton: "Suscribirse"
     placeholder: "tucorreo@dominio.com"
-
+  footer:
+    liga1: "Principios Éticos"
+    liga2: "Aviso de Privacidad"
+    liga3: "Transparencia"
+    liga4: "Correo electrónico"
+    liga5: "Cómo llegar"
   activerecord:
     errors:
       messages:
