@@ -26,9 +26,7 @@ Tel.: +52 55 54493000</p>
 			</ul>
 		</div>
 	</div> <!-- Cierre de columnas para footer -->
-</div> <!-- Cierre de fila para footer -->
 
-<div class="row"> <!-- Fila para redes sociales en footer -->
 	<div class="col-md-12" id="redes_footer"> <!-- Columnas para redes sociales en footer-->
 		<ul class="navbar-right">
 		<%= link_to image_tag("fb-bco.png", :class => "img_net"), "#" %>
@@ -40,4 +38,9 @@ Tel.: +52 55 54493000</p>
 		<%= link_to image_tag("google-bco.png", :class => "img_net"), "#" %>
 	</ul>
 	</div> <!-- Cierre de columnas para redes sociales en footer -->
-</div> <!-- Cierre de fila para redes sociales en footer -->
+
+</div> <!-- Cierre de fila para footer -->
+
+<!-- <div class="row"> <!-- Fila para redes sociales en footer -->
+	
+<!-- </div> <!-- Cierre de fila para redes sociales en footer -->

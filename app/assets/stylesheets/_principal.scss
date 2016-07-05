@@ -478,11 +478,11 @@ a, a:hover, a:active, a:visited, a:link{  text-decoration: none; }
 
 		ul{
 			font-size: 18px;
-
+			top: 50%;
+			position: absolute;
+			transform: translate(0,-50%);
 			li{
-				top: 50%;
-				position: absolute;
-				transform: translate(0,-50%);
+				
 				list-style-type: none;
 				padding: 5% 0 5% 0;
 
