@@ -1,12 +1,12 @@
 <div class="row"> <!-- Fila para footer -->
-	<div class="col-md-12" id="div_footer"> <!-- Columnas para footer -->
-		<div class="col-md-3">
+	<!-- <div class="col-md-12" id="div_footer">  Columnas para footer -->
+		<div class="col-md-3" class="div_footer">
 
 		</div>
-		<div class="col-md-6">
+		<div class="col-md-6" class="div_footer">
 
 		</div>
-		<div class="col-md-3">
+		<div class="col-md-3" class="div_footer">
 
 		</div>
 	</div> <!-- Cierre de columnas para footer -->
