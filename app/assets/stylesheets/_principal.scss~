@@ -479,8 +479,8 @@ a, a:hover, a:active, a:visited, a:link{  text-decoration: none; }
 		ul{
 			font-size: 18px;
 			top: 50%;
-				position: absolute;
-				transform: translate(0,-50%);
+			position: absolute;
+			transform: translate(0,-50%);
 			li{
 				
 				list-style-type: none;
