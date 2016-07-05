@@ -49,7 +49,7 @@ module PrincipalHelper
 
   def construirEvento(fila)
     bloque_html = '<div class="img_evento">'
-    bloque_html = bloque_html + image_tag(fila["centroSiglas"].downcase + ".png", ;class => "img_sede") + "</div>"
+    bloque_html = bloque_html + image_tag(fila["centroSiglas"].downcase + ".png", :class => "img_sede") + "</div>"
     bloque_html = bloque_html + '<div class="desc_evento">'
     bloque_html = bloque_html + fila["tituloActividad"].to_s + "<br>"
     bloque_html = bloque_html + fila["centroOrganiza"].to_s + "<br>"
