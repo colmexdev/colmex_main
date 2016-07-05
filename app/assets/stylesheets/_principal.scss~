@@ -163,9 +163,13 @@ a, a:hover, a:active, a:visited, a:link{  text-decoration: none; }
 			color: $color_textos_navbar_sel;
 		}
 	}
+	
+	.navbar-right{
+		margin-left: 30px;	
 
-	.img_net{
-		margin: 0 3px;
+		.img_net{
+			margin: 0 3px;
+		}
 	}
 }
 
