@@ -476,10 +476,23 @@ a, a:hover, a:active, a:visited, a:link{  text-decoration: none; }
 		height: 75%;
 
 		ul{
+
 			li{
 				list-style-type: none;
+
+				a{
+					color: #fff;
+				}
 			}
 		}
+	}
+
+	#footer_der{
+		text-align: left;
+	}
+
+	#footer_izq{
+		text-align: right;
 	}
 
 	#footer_centro{
