@@ -5,13 +5,13 @@
 				<li><a href="#"><%= t('botones.b1.texto') %></a></li>
 				<li><a href="#"><%= t('botones.b2.texto') %></a></li>
 				<li><a href="#"><%= t('botones.b3.texto') %></a></li>
-				<li><a href="#"><%= t('botones.b4.texto') %></a></li>
-				<li><a href="#"><%= t('botones.b5.texto') %></a></li>
+				<li><a href="#"><%= t('botones.b4') %></a></li>
+				<li><a href="#"><%= t('botones.b5') %></a></li>
 			</ul>
 		</div>
 		<div class="col-md-8" id="footer_centro">
-			<%= image_tag("colmex-pie.png", :id => "img_footer") %><br><br>
-			<p>Copyright © 2016 El Colegio de México. Todos los derechos reservados.<br>
+			<%= image_tag("colmex-pie.png", :id => "img_footer") %><br><br><br>
+			<p>Copyright © 2016 El Colegio de México. Todos los derechos reservados.<br><br>
 Camino al Ajusco No. 20 Colonia Pedregal de Sta. Teresa C.P. 10740 México, D.F.<br>
 Tel.: +52 55 54493000</p>
 
@@ -27,3 +27,17 @@ Tel.: +52 55 54493000</p>
 		</div>
 	</div> <!-- Cierre de columnas para footer -->
 </div> <!-- Cierre de fila para footer -->
+
+<div class="row"> <!-- Fila para redes sociales en footer -->
+	<div class="col-md-12" id="redes_footer"> <!-- Columnas para redes sociales en footer-->
+		<ul class="navbar-right">
+		<%= link_to image_tag("fb-bco.png", :class => "img_net"), "#" %>
+		<%= link_to image_tag("twitter-bco.png", :class => "img_net"), "#" %>
+		<%= link_to image_tag("instagram-bco.png", :class => "img_net"), "#" %>
+		<%= link_to image_tag("youtube-bco.png", :class => "img_net"), "#" %>
+		<%= link_to image_tag("linkedin-bco.png", :class => "img_net"), "#" %>
+		<%= link_to image_tag("itunes-bco.png", :class => "img_net"), "#" %>
+		<%= link_to image_tag("google-bco.png", :class => "img_net"), "#" %>
+	</ul>
+	</div> <!-- Cierre de columnas para redes sociales en footer -->
+</div> <!-- Cierre de fila para redes sociales en footer -->

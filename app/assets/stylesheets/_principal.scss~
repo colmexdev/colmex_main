@@ -476,11 +476,12 @@ a, a:hover, a:active, a:visited, a:link{  text-decoration: none; }
 		height: 75%;
 
 		ul{
-			font-size: 20px;
+			font-size: 18px;
 
 			li{
 				list-style-type: none;
-				padding: 4% 0 4% 0;
+				padding: 5% 0 5% 0;
+
 				a{
 					color: #fff;
 				}
@@ -490,12 +491,12 @@ a, a:hover, a:active, a:visited, a:link{  text-decoration: none; }
 
 	#footer_der{
 		text-align: left;
-		padding-left: 10px;
+		padding-left: 20px;
 	}
 
 	#footer_izq{
 		text-align: right;
-		padding-right: 10px;
+		padding-right: 20px;
 	}
 
 	#footer_centro{
