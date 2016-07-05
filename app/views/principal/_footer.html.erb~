@@ -2,11 +2,11 @@
 	<!-- <div class="col-md-12" id="div_footer">  Columnas para footer -->
 		<div class="col-md-2" id="footer_izq">
 			<ul>
-				<li><%= t('botones.b1.texto') %></li>
-				<li><%= t('botones.b2.texto') %></li>
-				<li><%= t('botones.b3.texto') %></li>
-				<li><%= t('botones.b4.texto') %></li>
-				<li><%= t('botones.b5.texto') %></li>
+				<li><a href="#"><%= t('botones.b1.texto') %></a></li>
+				<li><a href="#"><%= t('botones.b2.texto') %></a></li>
+				<li><a href="#"><%= t('botones.b3.texto') %></a></li>
+				<li><a href="#"><%= t('botones.b4.texto') %></a></li>
+				<li><a href="#"><%= t('botones.b5.texto') %></a></li>
 			</ul>
 		</div>
 		<div class="col-md-8" id="footer_centro">
@@ -18,11 +18,11 @@ Tel.: +52 55 54493000</p>
 		</div>
 		<div class="col-md-2" id="footer_der">
 			<ul>
-				<li><%= t('footer.liga1') %></li>
-				<li><%= t('footer.liga2') %></li>
-				<li><%= t('footer.liga3') %></li>
-				<li><%= t('footer.liga4') %></li>
-				<li><%= t('footer.liga5') %></li>
+				<li><a href="#"><%= t('footer.liga1') %></a></li>
+				<li><a href="#"><%= t('footer.liga2') %></a></li>
+				<li><a href="#"><%= t('footer.liga3') %></a></li>
+				<li><a href="#"><%= t('footer.liga4') %></a></li>
+				<li><a href="#"><%= t('footer.liga5') %></a></li>
 			</ul>
 		</div>
 	</div> <!-- Cierre de columnas para footer -->
