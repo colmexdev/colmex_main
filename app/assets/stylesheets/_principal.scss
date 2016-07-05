@@ -465,7 +465,7 @@ a, a:hover, a:active, a:visited, a:link{  text-decoration: none; }
 }
 
 #div_footer{
-	height: 400px;
+	height: 350px;
 	background-color: #5E002B;
 	position: relative;
 
@@ -473,7 +473,7 @@ a, a:hover, a:active, a:visited, a:link{  text-decoration: none; }
 		margin-top: 50px;
 		color: #fff;
 		font-size: 16px;
-		height: 75%;
+		height: 87.5%;
 		position: relative;
 
 		ul{
@@ -517,8 +517,14 @@ a, a:hover, a:active, a:visited, a:link{  text-decoration: none; }
 }
 
 #redes_footer{
+	height: 50px;
 	background-color: #5E002B;
-	text-align: center;	
+	text-align: center;
+
+	.botones_footer{
+		float: left;
+		list-style-type: none;
+	}	
 }
 
 
