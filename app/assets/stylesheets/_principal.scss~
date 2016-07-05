@@ -472,9 +472,8 @@ a, a:hover, a:active, a:visited, a:link{  text-decoration: none; }
 
 	#footer_centro{
 		text-align: center;
-		border-style: solid;
-    border-right: thick double #fff;
-		border-left: thick double #fff;
+    border-right: 2px solid #fff;
+		border-left: 2px solid #fff;
 		@include centrado;
 		
 		img{
