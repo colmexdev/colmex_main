@@ -480,7 +480,7 @@ a, a:hover, a:active, a:visited, a:link{  text-decoration: none; }
 		@include centrado;
 		
 		img{
-			width: 40%;
+			width: 35%;
 		}
 	}
 }
