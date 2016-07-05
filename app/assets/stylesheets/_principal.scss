@@ -478,7 +478,7 @@ a, a:hover, a:active, a:visited, a:link{  text-decoration: none; }
 
 		ul{
 			font-size: 18px;
-			width: 100%;
+			width: 85%;
 			@include centrado;
 			li{
 				
@@ -514,11 +514,11 @@ a, a:hover, a:active, a:visited, a:link{  text-decoration: none; }
 			width: 40%;
 		}
 	}
+}
 
-	#redes_footer{
-		background-color: #5E002B;
-		text-align: center;	
-	}
+#redes_footer{
+	background-color: #5E002B;
+	text-align: center;	
 }
 
 
