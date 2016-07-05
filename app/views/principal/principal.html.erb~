@@ -1,5 +1,3 @@
-<%= render 'principal/barra' %>
-
 <div class="row"> <!-- Fila para slider -->
 	<div class="col-md-12" id="div_slider"> <!-- Columnas para slider -->
 		<div id="myCarousel" class="carousel slide" data-ride="carousel">
@@ -96,8 +94,3 @@
 	</div> <!-- Cierre de columnas para transparencia -->
 </div> <!-- Cierre de fila para transparencia -->
 
-<div class="row show-grid"> <!-- Fila para footer -->
-	<div class="col-md-12" id="div_footer"> <!-- Columnas para footer -->
-
-	</div> <!-- Cierre de columnas para footer -->
-</div> <!-- Cierre de fila para footer -->
