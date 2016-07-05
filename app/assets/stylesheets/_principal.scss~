@@ -402,7 +402,7 @@ a, a:hover, a:active, a:visited, a:link{  text-decoration: none; }
 
 #div_suscripcion{
 	height: $altura_div_suscripcion;
-	background-color: $color_div_suscripcion;
+	background-color: #7E3355;
 	text-align: center;
 
 	.navbar-form{

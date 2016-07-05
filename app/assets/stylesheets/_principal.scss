@@ -414,7 +414,7 @@ a, a:hover, a:active, a:visited, a:link{  text-decoration: none; }
 
 			label{
 				@include fuente_typography($fuente_label, $estilo_label, $tamano_label, $peso_label);
-				color: $color_texto_suscripcion;
+				color: #fff;
 				float: left;
 				padding-top: $padding_sup_label;
 			}
@@ -430,10 +430,10 @@ a, a:hover, a:active, a:visited, a:link{  text-decoration: none; }
 		}
 
 		button{
-			background-color: $color_fondo_boton_suscripcion;
-			color: $color_texto_boton_suscripcion;
+			background-color: #9E6680;
+			color: #fff;
 			border-radius: 0;
-			border-color: $color_borde_boton_suscripcion;
+			border-color: #470020;
 			@include fuente_typography($fuente_boton, $estilo_boton, $tamano_boton, $peso_boton);
 		}
 	}
