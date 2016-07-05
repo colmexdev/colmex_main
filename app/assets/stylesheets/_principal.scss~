@@ -474,10 +474,12 @@ a, a:hover, a:active, a:visited, a:link{  text-decoration: none; }
 		text-align: center;
     border-right: 1px solid #fff;
 		border-left: 1px solid #fff;
+		color: #fff;
+		font-size: 10px;
 		@include centrado;
 		
 		img{
-			width: 50%;
+			width: 60%;
 		}
 	}
 }
