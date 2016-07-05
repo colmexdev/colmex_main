@@ -470,6 +470,18 @@ a, a:hover, a:active, a:visited, a:link{  text-decoration: none; }
 	background-color: #5E002B;
 	position: relative;
 
+	div{
+		color: #fff;
+		font-size: 16px;
+		height: 75%;
+
+		ul{
+			li{
+				list-style-type: none;
+			}
+		}
+	}
+
 	#footer_centro{
 		text-align: center;
     border-right: 1px solid #fff;
@@ -477,7 +489,6 @@ a, a:hover, a:active, a:visited, a:link{  text-decoration: none; }
 		color: #fff;
 		font-size: 16px;
 		height: 75%;
-		@include centrado;
 		
 		img{
 			width: 40%;
