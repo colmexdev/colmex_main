@@ -1,6 +1,6 @@
 <div class="row" id="div_footer"> <!-- Fila para footer -->
 	<!-- <div class="col-md-12" id="div_footer">  Columnas para footer -->
-		<div class="col-md-2">
+		<div class="col-md-2" id="footer_der">
 			<ul>
 				<li><%= t('botones.b1.texto') %></li>
 				<li><%= t('botones.b2.texto') %></li>
@@ -16,7 +16,7 @@ Camino al Ajusco No. 20 Colonia Pedregal de Sta. Teresa C.P. 10740 México, D.F.
 Tel.: +52 55 54493000</p>
 
 		</div>
-		<div class="col-md-2">
+		<div class="col-md-2" id="footer_der">
 			<ul>
 				<li><%= t('footer.liga1') %></li>
 				<li><%= t('footer.liga2') %></li>
@@ -24,7 +24,6 @@ Tel.: +52 55 54493000</p>
 				<li><%= t('footer.liga4') %></li>
 				<li><%= t('footer.liga5') %></li>
 			</ul>
-		</div>
 		</div>
 	</div> <!-- Cierre de columnas para footer -->
 </div> <!-- Cierre de fila para footer -->
