@@ -17,7 +17,14 @@ Tel.: +52 55 54493000</p>
 
 		</div>
 		<div class="col-md-2">
-
+			<ul>
+				<li><%= t('footer.liga1') %></li>
+				<li><%= t('footer.liga2') %></li>
+				<li><%= t('footer.liga3') %></li>
+				<li><%= t('footer.liga4') %></li>
+				<li><%= t('footer.liga5') %></li>
+			</ul>
+		</div>
 		</div>
 	</div> <!-- Cierre de columnas para footer -->
 </div> <!-- Cierre de fila para footer -->
