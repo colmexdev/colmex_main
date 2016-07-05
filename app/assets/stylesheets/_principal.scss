@@ -473,6 +473,10 @@ a, a:hover, a:active, a:visited, a:link{  text-decoration: none; }
 	#footer_centro{
 		text-align: center;
 		@include centrado;
+	
+		img{
+			width: 50%;
+		}
 	}
 }
 
