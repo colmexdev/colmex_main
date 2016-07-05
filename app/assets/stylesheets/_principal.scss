@@ -370,13 +370,17 @@ a, a:hover, a:active, a:visited, a:link{  text-decoration: none; }
 						float: left;
 						width: 37.5%;
 						height: 100%;
-						overflow: hidden;
+						
+						img{
+							width: 80%;
+						}
 					}
 
 					.desc_evento{
 						width: 62.5%;
 						height: 100%;
 						overflow: hidden;
+						font-size: 13px;
 					}
 				}
 			}
