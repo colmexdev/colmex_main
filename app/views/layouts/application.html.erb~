@@ -12,13 +12,13 @@
 	
 	<div class="container-fluid">
 		
-		<% if !admin_signed_in? || current_page?(:controller => 'devise/registrations') %>
+		<% if !admin_signed_in? %>
 			<%= render 'principal/barra' %>
 		<% end %>
 
 		<%= yield %>
 
-		<% if !admin_signed_in? || current_page?(:controller => 'devise/registrations') %>
+		<% if !admin_signed_in? %>
 			<%= render 'principal/footer' %>
 		<% end %>
 
