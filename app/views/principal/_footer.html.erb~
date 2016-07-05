@@ -1,6 +1,6 @@
 <div class="row" id="div_footer"> <!-- Fila para footer -->
 	<!-- <div class="col-md-12" id="div_footer">  Columnas para footer -->
-		<div class="col-md-2" id="footer_der">
+		<div class="col-md-2" id="footer_izq">
 			<ul>
 				<li><%= t('botones.b1.texto') %></li>
 				<li><%= t('botones.b2.texto') %></li>
