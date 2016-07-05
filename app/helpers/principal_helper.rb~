@@ -50,18 +50,22 @@ module PrincipalHelper
   def construirEvento(fila)
     bloque_html = '<div class="img_evento">'
     bloque_html = bloque_html + image_tag(fila["centroSiglas"].downcase + ".png", :class => "img_sede") + "</div>"
+
     bloque_html = bloque_html + '<div class="desc_evento">'
+
     bloque_html = bloque_html + '<div class="tipo_evento">' + fila["tipoActividad"].to_s + "</div>"
-    bloque_html = bloque_html + fila["tituloActividad"].to_s + "<br>"
-    bloque_html = bloque_html + fila["centroOrganiza"].to_s + "<br>"
-    
+    bloque_html = bloque_html + '<div class="titulo_evento">' + fila["tituloActividad"].to_s + (fila["subtituloActividad"].to_s != nil ? ": " + fila["subtituloActividad"].to_s : "") + "</div>"
+
+    bloque_html = bloque_html + '<div class="lugar_fecha_evento">'
+    bloque_html = bloque_html + '<div class="cal">' +  '</div>'
+    bloque_html = bloque_html + '<div class="datos_evento">'
+    bloque_html = bloque_html + '<div class="fecha_evento">' + arregloFecha(fila["fechaInicio"], fila["fechaFin"]) + "</div>"
+    bloque_html = bloque_html + '<div class="hora_evento">' + l(Time.parse(fila["horaInicio"]), format: "%H:%M") + " | " + l(Time.parse(fila["horaFin"]), format: "%H:%M") + "</div>"
+    bloque_html = bloque_html + '<div class="sede_evento">' + fila["sede"].to_s + ", " + fila["institucionSede"].to_s + "</div></div></div>"
+
+    bloque_html = bloque_html + '<div class="liga_evento"><a href="'+fila["liga"].to_s+'" class="liga_evento">'+t('eventos.liga')+'</a></div>'
+
     bloque_html = bloque_html + "</div>"
-    bloque_html = bloque_html + arregloFecha(fila["fechaInicio"], fila["fechaFin"]) + "<br />"
-    bloque_html = bloque_html + l(Time.parse(fila["horaInicio"]), format: "%H:%M") + " | " + l(Time.parse(fila["horaFin"]), format: "%H:%M") + "<br>"
-    bloque_html = bloque_html + fila["subtituloActividad"].to_s + "<br>"
-    bloque_html = bloque_html + fila["sede"].to_s + "<br>"
-    bloque_html = bloque_html + fila["institucionSede"].to_s + "<br>"
-    bloque_html = bloque_html + '<a href="'+fila["liga"].to_s+'" class="liga_evento">'+t('eventos.liga')+'</a><br>'
     return bloque_html
   end
 

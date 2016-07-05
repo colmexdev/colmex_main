@@ -392,6 +392,42 @@ a, a:hover, a:active, a:visited, a:link{  text-decoration: none; }
 							width: 100%;
 							height: 25%;
 						}
+
+						.lugar_fecha_evento{
+							width: 100%;
+							height: 37.5%;
+
+							.cal{
+								width: 8.33%;
+								height: 100%;
+								float: left;
+							}
+
+							.datos_evento{
+								width: 91.66%;
+								height: 100%;
+
+								.fecha_evento{
+									width: 100%;
+									height: 41.66%;
+								}
+
+								.hora_evento{
+									width: 100%;
+									height: 41.66%;
+								}
+
+								.sede_evento{
+									width: 100%;
+									height: 16.66%;
+								}
+							}
+						}
+
+						.liga_evento{
+							width: 100%;
+							height: 12.5%;
+						}
 					}
 				}
 			}
