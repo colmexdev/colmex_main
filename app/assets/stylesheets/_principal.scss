@@ -554,6 +554,7 @@ a, a:hover, a:active, a:visited, a:link{  text-decoration: none; }
 		background-color: #5E002B;
 
 		.links{
+			display: table-row;
 			font-size: 16px;
 			width: 85%;
 			position: absolute;
@@ -576,6 +577,7 @@ a, a:hover, a:active, a:visited, a:link{  text-decoration: none; }
 		text-align: left;
 		padding-left: 20px;
 		position: relative;
+		display: table;
 	}
 
 	#footer_izq{
@@ -583,6 +585,7 @@ a, a:hover, a:active, a:visited, a:link{  text-decoration: none; }
 		text-align: right;
 		padding-left: 40px;
 		position: relative;
+		display: table;
 	}
 
 	#footer_centro{
