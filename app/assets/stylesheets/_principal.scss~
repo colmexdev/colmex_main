@@ -212,10 +212,11 @@ a, a:hover, a:active, a:visited, a:link{  text-decoration: none; }
 #div_logo{
 	height: $altura_div_logo;
 	text-align: center;
+	position: relative;
 
 	#img_logo{
 		width: $ancho_logo;
-		margin-top: $margen_sup_logo;
+		@include centrado;
 	}
 }
 

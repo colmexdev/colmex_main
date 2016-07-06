@@ -447,6 +447,7 @@ a, a:hover, a:active, a:visited, a:link{  text-decoration: none; }
 	height: $altura_div_actividades;
 	text-align: center;
 	display: block;
+	position: relative;
 	
 	#boton_actividades{
 		background-color: #9E6680;
@@ -460,10 +461,11 @@ a, a:hover, a:active, a:visited, a:link{  text-decoration: none; }
 		border-style: solid;
 		height: $altura_boton_actividades;
 		width: $ancho_boton_actividades;
-		position: relative;
+		text-align: center;
+		@include centrado;
 
 		span{
-			@include centrado;
+			/*@include centrado;*/
 		}
 	}
 }
