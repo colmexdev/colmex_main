@@ -319,8 +319,13 @@ a, a:hover, a:active, a:visited, a:link{  text-decoration: none; }
 			.item, .item.active{
 				overflow: hidden;
 			
-				.imagen_slider_fondo{
-					width: 100%;
+				.liga_img{
+					overflow: hidden;
+					height: 100%;
+
+					.imagen_slider_fondo{
+						width: 100%;
+					}
 				}
 			}
 		}
