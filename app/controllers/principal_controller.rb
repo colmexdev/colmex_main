@@ -6,4 +6,12 @@ class PrincipalController < ApplicationController
   def sobre
 
   end
+
+  def centros
+
+  end
+
+  def programas
+
+  end
 end

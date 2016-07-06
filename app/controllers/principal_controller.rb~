@@ -3,7 +3,11 @@ class PrincipalController < ApplicationController
     I18n.locale = params[:locale]
   end
 
-  def sobreColegio
+  def sobre
+
+  end
+
+  def centros
 
   end
 end

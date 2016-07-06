@@ -313,10 +313,10 @@ a, a:hover, a:active, a:visited, a:link{  text-decoration: none; }
 		}
 
 		.carousel-inner{
+			display: inline-block;
 
 			.item, .item.active{
 				overflow: hidden;
-				position: relative;
 				height: 550px;
 			
 				.liga_img{
