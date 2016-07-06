@@ -388,6 +388,13 @@ a, a:hover, a:active, a:visited, a:link{  text-decoration: none; }
 							height: 25%;
 							vertical-align: bottom;
 							text-align: left;
+							position: relative;
+
+							p{
+								position: absolute;
+								bottom: 0;
+								font-size: 14px;
+							}
 						}
 
 						.titulo_evento{
