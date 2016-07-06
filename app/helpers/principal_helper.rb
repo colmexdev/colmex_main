@@ -9,7 +9,7 @@ module PrincipalHelper
 
 
       html_block = html_block + '<div class="item ' + (i == 0 ?  "active" : "") + '">'
-      html_block = html_block + link_to(image_tag(im.imagen.url, :class => "imagen_slider_fondo") + image_tag("colmex.png", :class => "imagen_slider_sobre"),im.liga, :class => "liga_img")
+      html_block = html_block + link_to(image_tag(im.imagen.url, :class => "imagen_slider_fondo") + image_tag("fb-color.png", :class => "imagen_slider_sobre"),im.liga, :class => "liga_img")
       html_block = html_block + '</div>'
       i = i + 1
     end
