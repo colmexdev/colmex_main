@@ -323,6 +323,7 @@ a, a:hover, a:active, a:visited, a:link{  text-decoration: none; }
 
 					.imagen_slider_fondo{
 						width: 100%;
+						@include centrado;
 					}
 				}
 			}
