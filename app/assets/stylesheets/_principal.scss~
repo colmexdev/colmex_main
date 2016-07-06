@@ -550,10 +550,10 @@ a, a:hover, a:active, a:visited, a:link{  text-decoration: none; }
 
 	div{
 		color: #fff;
-		font-size: 16px;
+		font-size: 15px;
 		background-color: #5E002B;
 
-		ul{
+		.links{
 			font-size: 18px;
 			width: 85%;
 			li{
