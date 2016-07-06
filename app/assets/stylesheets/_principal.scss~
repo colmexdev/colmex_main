@@ -560,7 +560,7 @@ a, a:hover, a:active, a:visited, a:link{  text-decoration: none; }
 
 			li{
 				list-style-type: none;
-				padding: 1em 0 1em 0;
+				padding: 1em 0 0 0;
 
 				a{
 					color: #fff;
@@ -580,7 +580,7 @@ a, a:hover, a:active, a:visited, a:link{  text-decoration: none; }
 	#footer_izq{
 		margin-top: 50px;
 		text-align: right;
-		padding-left: 40px;
+		padding-right: 20px;
 		position: relative;
 		display: table;
 	}
