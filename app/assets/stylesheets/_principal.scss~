@@ -231,12 +231,11 @@ a, a:hover, a:active, a:visited, a:link{  text-decoration: none; }
 		padding: 0;
 		height: 100%;
 		background-color: #5E002B;
-		//padding: 0 $padding_lat_menus;
 		z-index: 9999;
 
 		.dropdown, .no-dropdown{
 			float: left;
-			border: 2px solid rgba(0, 0, 0, 1);
+			border: 2px solid rgba(0, 0, 0, 0);
 			width: $ancho_botones;
 			text-align: center;
 			height: 100%;
