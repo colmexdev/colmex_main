@@ -558,7 +558,6 @@ a, a:hover, a:active, a:visited, a:link{  text-decoration: none; }
 		ul{
 			font-size: 18px;
 			width: 85%;
-			@include centrado;
 			li{
 				
 				list-style-type: none;
