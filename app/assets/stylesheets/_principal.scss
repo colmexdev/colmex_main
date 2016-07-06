@@ -284,13 +284,13 @@ a, a:hover, a:active, a:visited, a:link{  text-decoration: none; }
 			}
 		}
 
+		.dropdown, .no-dropdown{
+			background-color: #470020;
+		}
+
 		.dropdown:hover .dropdown-menu{
 			display: block;
 		}
-	}
-
-	.botones:hover{
-		background-color: #470020;
 	}
 }
 
