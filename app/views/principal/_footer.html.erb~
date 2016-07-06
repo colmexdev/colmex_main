@@ -1,3 +1,4 @@
+<div class="container-fluid">
 <div class="row" id="div_footer"> <!-- Fila para footer -->
 	<div class="col-md-12" id="div_footer">  <!-- Columnas para footer -->
 		<div class="col-md-2" id="footer_izq">
@@ -10,7 +11,7 @@
 			</ul>
 		</div>
 		<div class="col-md-8" id="footer_centro">
-			<%= image_tag("colmex-pie.png", :id => "img_footer") %><br><br><br>
+			<%= image_tag("colmex-pie.png", :id => "img_footer") %><br><br>
 			<p>Copyright © 2016 El Colegio de México. Todos los derechos reservados.<br>
 Camino al Ajusco No. 20 Colonia Pedregal de Sta. Teresa C.P. 10740 México, D.F.<br>
 Tel.: +52 55 54493000</p>

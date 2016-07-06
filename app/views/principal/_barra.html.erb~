@@ -1,5 +1,3 @@
-<%= render 'principal/barra' %>
-
 <% if params[:locale] %>
 		<% if params[:locale] == "en" %>
 			<% clase_en = "activo" %>
@@ -92,4 +90,3 @@
 	</div> <!-- Cierre de columnas para menú -->
 </div> <!-- Ciere de div fila para menú -->
 
-<%= render 'principal/footer' %>

@@ -48,7 +48,7 @@
 <div class="row"> <!-- Fila para botón de actividades -->
 	<div class="col-md-12" id="div_actividades"> <!--Columnas para eventos -->
 		<div id="boton_actividades">
-			<a href="#" id="liga_actividades"><%= t('actividades.boton') %></a>
+			<a href="#" id="liga_actividades"><span><%= t('actividades.boton') %></span></a>
 		</div>
 
 	</div> <!-- Cierre de columnas para botón de actividades -->
