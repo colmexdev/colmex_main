@@ -230,12 +230,13 @@ a, a:hover, a:active, a:visited, a:link{  text-decoration: none; }
 		margin: 0;
 		padding: 0;
 		height: 100%;
-		background-color: #5E002B;
+		background-color: rgba(0,0,0,0.5);
 		z-index: 9999;
 
 		.dropdown, .no-dropdown{
 			float: left;
 			margin: 1px;
+			background-color: #5E002B;
 			width: $ancho_botones;
 			text-align: center;
 			height: 100%;
@@ -247,7 +248,11 @@ a, a:hover, a:active, a:visited, a:link{  text-decoration: none; }
 				color: #FFFFFF;
 				width: 100%;
 				height: 100%;
-				@include centrado;
+				
+				span{
+					width: 100%;
+					@include centrado;
+				}
 			}
 
 			.dropdown-menu{
