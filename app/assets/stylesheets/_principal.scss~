@@ -314,6 +314,8 @@ a, a:hover, a:active, a:visited, a:link{  text-decoration: none; }
 
 		.carousel-inner{
 			.item, .item-active{
+				overflow: hidden;
+				position: relative;
 			
 				.imagen_slider_fondo{
 					width: 100%;
