@@ -556,11 +556,10 @@ a, a:hover, a:active, a:visited, a:link{  text-decoration: none; }
 		ul{
 			font-size: 18px;
 			width: 85%;
-			//@include centrado;
 			li{
 				
 				list-style-type: none;
-				padding: 5% 0 5% 0;
+				padding: 1em 0 1em 0;
 
 				a{
 					color: #fff;
@@ -578,7 +577,7 @@ a, a:hover, a:active, a:visited, a:link{  text-decoration: none; }
 	#footer_izq{
 		margin-top: 50px;
 		text-align: right;
-		padding-right: 20px;
+		padding-left: 40px;
 	}
 
 	#footer_centro{
