@@ -554,12 +554,12 @@ a, a:hover, a:active, a:visited, a:link{  text-decoration: none; }
 		background-color: #5E002B;
 
 		.links{
-			display: table-row;
+			display: table;
 			font-size: 16px;
 			width: 85%;
 
 			li{
-				display: table-row
+				display: table-row;
 				list-style-type: none;
 
 				a{
@@ -574,7 +574,6 @@ a, a:hover, a:active, a:visited, a:link{  text-decoration: none; }
 		text-align: left;
 		padding-left: 20px;
 		position: relative;
-		display: table;
 	}
 
 	#footer_izq{
@@ -582,7 +581,6 @@ a, a:hover, a:active, a:visited, a:link{  text-decoration: none; }
 		text-align: right;
 		padding-right: 20px;
 		position: relative;
-		display: table;
 	}
 
 	#footer_centro{
