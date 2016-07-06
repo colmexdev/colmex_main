@@ -236,7 +236,7 @@ a, a:hover, a:active, a:visited, a:link{  text-decoration: none; }
 
 		.dropdown, .no-dropdown{
 			float: left;
-			border: 2px solid rgba(0, 0, 0, 0.5);
+			border: 2px solid rgba(0, 0, 0, 0.3);
 			width: $ancho_botones;
 			text-align: center;
 			height: 100%;
