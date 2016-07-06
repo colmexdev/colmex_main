@@ -313,18 +313,17 @@ a, a:hover, a:active, a:visited, a:link{  text-decoration: none; }
 		}
 
 		.carousel-inner{
-			overflow: hidden;
-			position: relative;
 
 			.item, .item.active{
 				overflow: hidden;
+				position: relative;
+				height: 550px;
 			
 				.liga_img{
-					overflow: hidden;
-					height: 100%;
 
 					.imagen_slider_fondo{
 						width: 100%;
+						@include centrado;
 					}
 				}
 			}
