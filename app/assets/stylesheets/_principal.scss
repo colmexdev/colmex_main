@@ -278,7 +278,7 @@ a, a:hover, a:active, a:visited, a:link{  text-decoration: none; }
 
           a:hover{
         
-            background-color: #470020;
+            background-color: #5E002B;
           }
         }
 			}
@@ -287,6 +287,10 @@ a, a:hover, a:active, a:visited, a:link{  text-decoration: none; }
 		.dropdown:hover .dropdown-menu{
 			display: block;
 		}
+	}
+
+	.botones:hover{
+		
 	}
 }
 
@@ -567,7 +571,7 @@ a, a:hover, a:active, a:visited, a:link{  text-decoration: none; }
 		color: #fff;
 		font-size: 15px;
 		background-color: #5E002B;
-		height: 200px;
+		height: 300px;
 
 		.links{
 			display: table;
