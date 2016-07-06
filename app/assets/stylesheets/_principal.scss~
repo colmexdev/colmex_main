@@ -237,10 +237,12 @@ a, a:hover, a:active, a:visited, a:link{  text-decoration: none; }
 			float: left;
 			margin: 1px;
 			background-color: #5E002B;
-			width: $ancho_botones;
 			text-align: center;
 			height: 100%;
 			position: relative;
+			width: calc(#{$ancho_botones} - 2px);
+			width: -moz-calc(#{$ancho_botones} - 2px);
+			width: -webkit-calc(#{$ancho_botones} - 2px);
 			
 			a{
 				display: inline-block;
