@@ -313,15 +313,13 @@ a, a:hover, a:active, a:visited, a:link{  text-decoration: none; }
 		}
 
 		.carousel-inner{
-			div{
-
-				height: 100%;
+			.item, .item-active{
+				overflow: hidden;
 				position: relative;
 			
 				.imagen_slider_fondo{
 					width: 100%;
-					overflow: hidden;
-					position: absolute;
+
 				}
 			}
 		}
