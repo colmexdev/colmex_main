@@ -10,10 +10,10 @@ Rails.application.routes.draw do
   resources :imagens
   resources :categoria
   resources :emeritos
-  resources :admins
   devise_for :admins
+  resources :admins
+  
 
-  #get 'admins/index' => 'admins#index', :as => :admins
   get 'panel/administrar'
   get 'principal/principal'
   get 'principal/set_language' => 'principal#set_language', :as => :cambiar_idioma

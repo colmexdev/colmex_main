@@ -3,7 +3,7 @@ class PrincipalController < ApplicationController
     I18n.locale = params[:locale]
   end
 
-  def historia
+  def sobre
 
   end
 end
