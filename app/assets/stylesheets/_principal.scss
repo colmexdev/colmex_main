@@ -462,7 +462,7 @@ a, a:hover, a:active, a:visited, a:link{  text-decoration: none; }
 		width: $ancho_boton_actividades;
 		text-align: center;
 		@include centrado;
-		padding-top: 50%;
+		vertical-align:middle;
 	}
 }
 

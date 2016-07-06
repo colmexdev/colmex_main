@@ -455,7 +455,6 @@ a, a:hover, a:active, a:visited, a:link{  text-decoration: none; }
 		font-size: 18px;
 		text-decoration: none;
 		display: inline-block;
-		//padding-top: calc((#{$altura_boton_actividades} / 2) - (#{$tamano_letra_boton_actividades} / 2 ));
 		border-color: #470020;
 		border-width: 2px;
 		border-style: solid;
@@ -463,10 +462,7 @@ a, a:hover, a:active, a:visited, a:link{  text-decoration: none; }
 		width: $ancho_boton_actividades;
 		text-align: center;
 		@include centrado;
-
-		a{
-			@include centrado;
-		}
+		vertical-align:middle
 	}
 }
 
