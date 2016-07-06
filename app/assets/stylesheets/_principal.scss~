@@ -298,9 +298,9 @@ a, a:hover, a:active, a:visited, a:link{  text-decoration: none; }
 	    	position: relative;
 	    	text-align: center;
 	    	margin: 0 auto;
-		padding: 0;
+				padding: 0;
 	    	max-height: $altura_div_slider;
-		width:100%;
+				width:100%;
 
 		.carousel-indicators li{
 			border: none;

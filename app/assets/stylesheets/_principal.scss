@@ -325,6 +325,10 @@ a, a:hover, a:active, a:visited, a:link{  text-decoration: none; }
 						width: 100%;
 						@include centrado;
 					}
+				
+					.imagen_slider_sobre{
+						@include centrado;
+					}
 				}
 			}
 		}
