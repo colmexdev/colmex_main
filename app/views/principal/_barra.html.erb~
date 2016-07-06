@@ -48,7 +48,7 @@
 	<div class="col-md-12" id="div_menu"> <!-- Columnas para menu -->
 		<ul class="botones"> <!-- Opciones del menú -->
 			<li class="dropdown" id="dropdown1" onmouseover="borrarClase(this)" onmouseleave="quitarClases()">
-        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><%= t('botones.b1.texto') %></a>
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span><%= t('botones.b1.texto') %></span></a>
           <ul class="dropdown-menu" onmouseleave="quitarClases()">
             <li><a href="#"><%= t('botones.b1.opciones.op1') %></a></li>
             <li><a href="#"><%= t('botones.b1.opciones.op2') %></a></li>
@@ -60,7 +60,7 @@
       </li>
 
 			<li class="dropdown" id="dropdown2" onmouseover="borrarClase(this)" onmouseleave="quitarClases()">
-        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><%= t('botones.b2.texto') %></a>
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span><%= t('botones.b2.texto') %></span></a>
           <ul class="dropdown-menu" onmouseleave="quitarClases()">
             <li><a href="#">Centro de Estudios de Asia y África</a></li>
             <li><a href="#">Centro de Estudios Demográficos, Urbanos y Ambientales</a></li>
@@ -73,7 +73,7 @@
       </li>
 
 			<li class="dropdown" id="dropdown3" onmouseover="borrarClase(this)" onmouseleave="quitarClases()">
-        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><%= t('botones.b3.texto') %></a>
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span><%= t('botones.b3.texto') %></span></a>
           <ul class="dropdown-menu" onmouseleave="quitarClases()">
             <li><a href="#"><%= t('botones.b3.opciones.op1') %></a></li>
             <li><a href="#"><%= t('botones.b3.opciones.op2') %></a></li>
@@ -84,8 +84,8 @@
             <li><a href="#"><%= t('botones.b3.opciones.op7') %></a></li>
           </ul>
       </li>
-			<li class="no-dropdown"><a href="#"><%= t('botones.b4') %></a></li>
-			<li class="no-dropdown"><a href="#"><%= t('botones.b5') %></a></li>
+			<li class="no-dropdown"><a href="#"><span><%= t('botones.b4') %></span></a></li>
+			<li class="no-dropdown"><a href="#"><span><%= t('botones.b5') %></span></a></li>
 		</ul> <!-- Cierre del menú -->
 	</div> <!-- Cierre de columnas para menú -->
 </div> <!-- Ciere de div fila para menú -->
