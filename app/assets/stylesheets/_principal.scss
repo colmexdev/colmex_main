@@ -451,9 +451,7 @@ a, a:hover, a:active, a:visited, a:link{  text-decoration: none; }
 	
 	#boton_actividades{
 		background-color: #9E6680;
-		color: #fff;
 		font-size: 18px;
-		text-decoration: none;
 		display: inline-block;
 		border-color: #470020;
 		border-width: 2px;
@@ -462,7 +460,12 @@ a, a:hover, a:active, a:visited, a:link{  text-decoration: none; }
 		width: $ancho_boton_actividades;
 		text-align: center;
 		@include centrado;
-		vertical-align:middle;
+		
+
+		a{
+			color: #fff;
+			@include centrado;
+		}
 	}
 }
 
