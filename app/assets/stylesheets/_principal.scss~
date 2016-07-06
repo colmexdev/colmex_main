@@ -386,6 +386,8 @@ a, a:hover, a:active, a:visited, a:link{  text-decoration: none; }
 						.tipo_evento{
 							width: 100%;
 							height: 25%;
+							vertical-align: bottom;
+							text-align: left;
 						}
 
 						.titulo_evento{
