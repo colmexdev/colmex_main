@@ -11,7 +11,7 @@
 		</div>
 		<div class="col-md-8" id="footer_centro">
 			<%= image_tag("colmex-pie.png", :id => "img_footer") %><br><br><br>
-			<p>Copyright © 2016 El Colegio de México. Todos los derechos reservados.<br><br>
+			<p>Copyright © 2016 El Colegio de México. Todos los derechos reservados.<br>
 Camino al Ajusco No. 20 Colonia Pedregal de Sta. Teresa C.P. 10740 México, D.F.<br>
 Tel.: +52 55 54493000</p>
 
@@ -41,6 +41,3 @@ Tel.: +52 55 54493000</p>
 
 </div> <!-- Cierre de fila para footer -->
 
-<!-- <div class="row"> <!-- Fila para redes sociales en footer -->
-	
-<!-- </div> <!-- Cierre de fila para redes sociales en footer -->
