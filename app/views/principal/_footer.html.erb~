@@ -3,11 +3,11 @@
 	<div class="col-md-12" id="div_footer">  <!-- Columnas para footer -->
 		<div class="col-md-2" id="footer_izq">
 			<ul>
-				<li><a href="#"><%= t('botones.b1.texto') %></a></li>
-				<li><a href="#"><%= t('botones.b2.texto') %></a></li>
-				<li><a href="#"><%= t('botones.b3.texto') %></a></li>
-				<li><a href="#"><%= t('botones.b4') %></a></li>
-				<li><a href="#"><%= t('botones.b5') %></a></li>
+				<li><a href="#"><span><%= t('botones.b1.texto') %></span></a></li>
+				<li><a href="#"><span><%= t('botones.b2.texto') %></span></a></li>
+				<li><a href="#"><span><%= t('botones.b3.texto') %></span></a></li>
+				<li><a href="#"><span><%= t('botones.b4') %></span></a></li>
+				<li><a href="#"><span><%= t('botones.b5') %></span></a></li>
 			</ul>
 		</div>
 		<div class="col-md-8" id="footer_centro">
