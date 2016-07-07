@@ -309,6 +309,8 @@ a, a:hover, a:active, a:visited, a:link{  text-decoration: none; }
 	}
 }
 
+.uk-accordion-title { margin-bottom: 5px; }
+
 //Clase para alterar el div donde va el logotipo de colmex
 #div_logo{
 	height: $altura_div_logo;

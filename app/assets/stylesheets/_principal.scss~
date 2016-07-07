@@ -297,9 +297,19 @@ a, a:hover, a:active, a:visited, a:link{  text-decoration: none; }
 			>a{
 				color: #fff;
 			}
+		
+			>ul{
+				
+				>li{
+	
+					>a, a:hover, a:active{ background-color: #740020;}
+				}
+			}
 		}
 	}
 }
+
+.uk-accordion-title { margin-bottom: 5px;}
 
 //Clase para alterar el div donde va el logotipo de colmex
 #div_logo{
