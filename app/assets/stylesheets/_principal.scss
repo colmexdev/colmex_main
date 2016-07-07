@@ -150,22 +150,22 @@ a, a:hover, a:active, a:visited, a:link{  text-decoration: none; }
 	.idioma{
 		width: $ancho_idioma;
 
-    .activo.en, .activo.sp{
+    >.activo.en, .activo.sp{
 			color: $color_textos_navbar_sel;
 			width: $ancho_idioma / 2.1;
 			
 		}
 
-		.inactivo.en, .inactivo.sp{
+		>.inactivo.en, .inactivo.sp{
 			color: $color_textos_navbar;
 			width: $ancho_idioma / 2.1;
 		}
 
-		.activo.en, .inactivo.en{
+		>.activo.en, .inactivo.en{
 			display: inline-block;
 		}
 
-		.activo.sp, .inactivo.sp{
+		>.activo.sp, .inactivo.sp{
 			display: inline;
 		}
 	}
