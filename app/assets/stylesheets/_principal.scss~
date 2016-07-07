@@ -99,13 +99,6 @@ $altura_div_footer: 400px;
   transform: translate(-50%, -50%);
 }
 
-@mixin fuente_typography($familia, $estilo, $tamano, $peso){
-	font-family: $familia + " A", $familia + " B";
-	font-style: $estilo;
-	font-weight: $peso;
-	font-size: $tamano;
-}
-
 //Estilos de pagina
 
 * {
@@ -438,6 +431,10 @@ a.uk-accordion-title { height: 34px; font-family: "Gotham SSm A", "Gotham SSm B"
 	}
 }
 
+@media all and (min-width: 0px) and (max-width: 1024px){
+	#div_slider{ height: 250px; } 
+}
+
 
 //Clases que afectan la sección de eventos
 #div_eventos{
@@ -620,7 +617,6 @@ a.uk-accordion-title { height: 34px; font-family: "Gotham SSm A", "Gotham SSm B"
 			color: #fff;
 			border-radius: 0;
 			border-color: #470020;
-			@include fuente_typography($fuente_boton, $estilo_boton, $tamano_boton, $peso_boton);
 		}
 	}
 }
