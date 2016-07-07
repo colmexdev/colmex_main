@@ -194,6 +194,8 @@ a, a:hover, a:active, a:visited, a:link{  text-decoration: none; }
 	@media all and (min-width: 0px) and (max-width: 768px){
 		.borrable{ display: none; }
 
+		.form-group{ width: 200px; display: inline-block; }
+
 		.mail{
 			width: 50px;
 

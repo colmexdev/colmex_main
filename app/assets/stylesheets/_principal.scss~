@@ -191,6 +191,28 @@ a, a:hover, a:active, a:visited, a:link{  text-decoration: none; }
 		}
 	}
 
+	@media all and (min-width: 0px) and (max-width: 768px){
+		.borrable{ display: none; }
+
+		.mail{
+			width: 50px;
+
+			img{
+				width: 25px;
+				margin-right: 5px;
+			}
+		}
+
+		.intranet{
+			width: 50px;
+
+			img{
+				width: 20px;
+				margin-right: 5px;
+			}
+		}
+	}
+
 	.nav_opciones{
 		a{
 			color: $color_textos_navbar;
@@ -211,7 +233,7 @@ a, a:hover, a:active, a:visited, a:link{  text-decoration: none; }
 		}
 	}
 
-  @media screen and (min-width: 0px) and (max-width: 1024px) {
+  @media all and (min-width: 0px) and (max-width: 1024px) {
 		
 		.navbar-right{
 			display: none;
