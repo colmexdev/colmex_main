@@ -99,7 +99,7 @@
 	<!-- Menu lateral -->
 	<div id="menu" class="uk-offcanvas"> <!-- Offcanvas -->
 		<div class="uk-offcanvas-bar uk-offcanvas-bar-flip">
-			<ul class="botones">
+			<ul class="uk-nav uk-nav-offcanvas">
 				<li data-uk-dropdown="{mode:'click'}">
 					<a href="#">Algo</a>
 					<div class="uk-dropdown uk-dropdown-bottom">
@@ -109,6 +109,26 @@
 						</ul>
 					</div>
 				</li>
+				<li data-uk-dropdown="{mode:'click'}">
+					<a href="#">AlgoB</a>
+					<div class="uk-dropdown uk-dropdown-bottom">
+						<ul>
+							<li>Algo3</li>
+							<li>Algo4</li>
+						</ul>
+					</div>
+				</li>
+				<li data-uk-dropdown="{mode:'click'}">
+					<a href="#">AlgoC</a>
+					<div class="uk-dropdown uk-dropdown-bottom">
+						<ul>
+							<li>Algo5</li>
+							<li>Algo6</li>
+						</ul>
+					</div>
+				</li>
+				<li><%= t('botones.b4') %></li>
+				<li><%= t('botones.b4') %></li>
 			</ul>
 		</div>
 	</div>
