@@ -194,11 +194,11 @@ a, a:hover, a:active, a:visited, a:link{  text-decoration: none; }
 	@media all and (min-width: 0px) and (max-width: 768px){
 		.borrable { display: none; }
 
-		.navbar-form.navbar-left { display: inline-block; }
+		.navbar-form.navbar-left { margin: 0; }
 
 		.form-group { margin: 0; padding: 0; float: left;}
 
-    ul.nav.navbar-nav.reajustable { float: left; margin: 0; }
+    ul.nav.navbar-nav.reajustable { float: left; }
 
 		.mail{
 			width: 50px;
