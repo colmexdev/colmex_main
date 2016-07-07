@@ -200,7 +200,7 @@ a, a:hover, a:active, a:visited, a:link{  text-decoration: none; }
 
 		.navbar-nav.navbar-right { display: inline-block; }
 
-		.navbar-form.navbar-left { margin: 0; display: inline-block; float: left;}
+		.navbar-form.navbar-left { margin: 0; display: inline-block; }
 
 		.form-group { margin: 0; padding: 0; float: left;}
 
