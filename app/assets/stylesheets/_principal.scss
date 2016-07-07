@@ -198,6 +198,8 @@ a, a:hover, a:active, a:visited, a:link{  text-decoration: none; }
 
 		.navbar-nav { margin-left: 10px;}
 
+		.navbar-nav.navbar-right: display: inline-block;
+
 		.navbar-form.navbar-left { margin: 0; display: inline-block; float: left;}
 
 		.form-group { margin: 0; padding: 0; float: left;}
