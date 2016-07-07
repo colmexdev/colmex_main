@@ -37,7 +37,7 @@
 					<li class="borrable"><%= link_to image_tag("linkedin-color.png", :class => "img_net"), "#" %></li>
 					<li class="borrable"><%= link_to image_tag("itunes-color.png", :class => "img_net"), "#" %></li>
 					<li class="borrable"><%= link_to image_tag("google-color.png", :class => "img_net"), "#" %></li>
-					<li class="mostrable"><a href="#menu_lat" class="uk-navbar-toggle uk-navbar-flip" data-uk-offcanvas></a></li>
+					<li class="mostrable"><a href="#offcanvas" class="uk-navbar-toggle uk-navbar-flip" data-uk-offcanvas></a></li>
 	      </ul>
 	    </div><!-- /.navbar-collapse -->
 	  </div><!-- /.container-fluid -->
@@ -96,7 +96,7 @@
 	</div> <!-- Cierre de columnas para menú -->
 </div> <!-- Ciere de div fila para menú -->
 
-	<div id="menu_lat" class="uk-offcanvas">
+	<div id="offcanvas" class="uk-offcanvas"> <!-- Offcanvas -->
 		<div class="uk-offcanvas-bar uk-offcanvas-bar-flip">
 			<ul class="botones"> <!-- Opciones del menú -->
 				<li class="dropdown" id="dropdown1">
