@@ -129,6 +129,10 @@ a, a:hover, a:active, a:visited, a:link{  text-decoration: none; }
 .titulo {}
 .subtitulo {color: #838383}
 
+#contenedor_nav{
+	padding: 0;
+}
+
 #barra_nav{
 
 	background-color: $color_navbar;
