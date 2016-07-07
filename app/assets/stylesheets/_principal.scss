@@ -294,9 +294,9 @@ a, a:hover, a:active, a:visited, a:link{  text-decoration: none; }
 		>li.dropdown, li.no-dropdown{
 			display: table-row;
 			
-			>a{
-				color: #fff;
-			}
+			>a.sublink { color: #fff; }
+			
+			>a.link { color: #444444; }
 		
 			>ul{
 				
