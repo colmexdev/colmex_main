@@ -133,6 +133,8 @@ a, a:hover, a:active, a:visited, a:link{  text-decoration: none; }
 	padding: 0;
 }
 
+.navbar{ border-radius: 0; }
+
 #barra_nav{
 
 	background-color: $color_navbar;
@@ -166,7 +168,8 @@ a, a:hover, a:active, a:visited, a:link{  text-decoration: none; }
 		}
 
 		>.activo.sp, .inactivo.sp{
-			display: inline;
+			display: inline-block;
+			padding-left: 3px;
 		}
 	}
 
