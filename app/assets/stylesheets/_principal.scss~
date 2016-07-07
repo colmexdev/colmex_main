@@ -209,7 +209,7 @@ a, a:hover, a:active, a:visited, a:link{  text-decoration: none; }
 
 	@media all and (min-width: 0px) and (max-width: 1024px){
 		.mail{
-			width: 50px;
+			width: 80px;
 
 			img{
 				width: 25px;
@@ -218,7 +218,7 @@ a, a:hover, a:active, a:visited, a:link{  text-decoration: none; }
 		}
 
 		.intranet{
-			width: 50px;
+			width: 80px;
 
 			img{
 				width: 20px;
