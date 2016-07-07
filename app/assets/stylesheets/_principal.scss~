@@ -191,7 +191,11 @@ a, a:hover, a:active, a:visited, a:link{  text-decoration: none; }
 		margin-right: 30px;	
 
 		>li{
-			padding: 0 2px;	
+			padding: 0 2px;
+
+			>a{
+				padding: 0;
+			}	
 		}
 	}
 }
