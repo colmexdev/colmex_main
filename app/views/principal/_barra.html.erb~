@@ -98,39 +98,16 @@
 
 	<!-- Menu lateral -->
 	<div id="menu" class="uk-offcanvas"> <!-- Offcanvas -->
-		<div class="uk-offcanvas-bar uk-offcanvas-bar-flip">
+		<div class="uk-offcanvas-bar uk-offcanvas-bar-flip uk-accordion" data-uk-accordion>
+			<h3 class="uk-accordion-title"><%= t('botones.b4') %></h3>
 			<ul class="uk-nav uk-nav-offcanvas">
-				<li data-uk-dropdown="{mode:'click'}">
-					<a href="#">Algo</a>
-					<div class="uk-dropdown uk-dropdown-bottom">
-						<ul>
-							<li>Algo1</li>
-							<li>Algo2</li>
-						</ul>
-					</div>
-				</li>
-				<li data-uk-dropdown="{mode:'click'}">
-					<a href="#">AlgoB</a>
-					<div class="uk-dropdown uk-dropdown-bottom">
-						<ul>
-							<li>Algo3</li>
-							<li>Algo4</li>
-						</ul>
-					</div>
-				</li>
-				<li data-uk-dropdown="{mode:'click'}">
-					<a href="#">AlgoC</a>
-					<div class="uk-dropdown uk-dropdown-bottom">
-						<ul>
-							<li>Algo5</li>
-							<li>Algo6</li>
-						</ul>
-					</div>
-				</li>
 				<li><a href="#"><%= t('botones.b4') %></a></li>
 				<li><a href="#"><%= t('botones.b5') %></a></li>
+				<li><a href="#"><%= t('botones.b4') %></a></li>
+				<li><a href="#"><%= t('botones.b5') %></a></li>
+				<li><a href="#"><%= t('botones.b4') %></a></li>
 				<li>
-					<ul class="nav navbar-nav navbar-right">
+					<ul class="nav navbar-nav navbar-left">
 						<li><%= link_to image_tag("fb-color.png", :class => "img_net"), "#" %></li>
 						<li><%= link_to image_tag("twitter-color.png", :class => "img_net"), "#" %></li>
 						<li><%= link_to image_tag("instagram-color.png", :class => "img_net"), "#" %></li>
