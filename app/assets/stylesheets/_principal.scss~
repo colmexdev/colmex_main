@@ -172,19 +172,19 @@ a, a:hover, a:active, a:visited, a:link{  text-decoration: none; }
 
 	.mail{
 		width: $ancho_mail;
-		position: relative;
 
 		img{
-			width: 60%;
+			width: 30px;
+			margin-left: 5px;
 		}
 	}
 
 	.intranet{
 		width: $ancho_intranet;
-		position: relative;
 
 		img{
-			width: 60%;
+			width: 30px;
+			margin-left: 5px;
 		}
 	}
 
