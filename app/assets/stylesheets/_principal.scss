@@ -16,8 +16,8 @@ $color_fondo_searchbox: #CCCCCC;
 $color_borde_searchbox: #909090;
 $tamano_lupa: 20px;
 
-$ancho_mail: 180px;
-$ancho_intranet: 120px;
+$ancho_mail: 210px;
+$ancho_intranet: 130px;
 
 $altura_div_logo: 150px;
 $altura_logo: 60px;
@@ -203,7 +203,7 @@ a, a:hover, a:active, a:visited, a:link{  text-decoration: none; }
 		>li{
 
 			>a{
-
+				padding: 15px 3px;
 			}	
 		}
 	}

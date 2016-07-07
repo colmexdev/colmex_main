@@ -16,8 +16,8 @@ $color_fondo_searchbox: #CCCCCC;
 $color_borde_searchbox: #909090;
 $tamano_lupa: 20px;
 
-$ancho_mail: 200px;
-$ancho_intranet: 140px;
+$ancho_mail: 210px;
+$ancho_intranet: 130px;
 
 $altura_div_logo: 150px;
 $altura_logo: 60px;
@@ -174,7 +174,7 @@ a, a:hover, a:active, a:visited, a:link{  text-decoration: none; }
 		width: $ancho_mail;
 
 		img{
-			width: 30px;
+			width: 25px;
 			margin-right: 5px;
 		}
 	}
@@ -183,7 +183,7 @@ a, a:hover, a:active, a:visited, a:link{  text-decoration: none; }
 		width: $ancho_intranet;
 
 		img{
-			width: 25px;
+			width: 20px;
 			margin-right: 5px;
 		}
 	}
