@@ -140,6 +140,7 @@ a, a:hover, a:active, a:visited, a:link{  text-decoration: none; }
 	background-color: $color_navbar;
 	border-radius: 0;
 	margin-right: -15px;
+	margin-left: -10px;
 
 	.nav_opciones, .nav_opciones_idioma, .nav_opciones_mail, .nav_opciones_intranet{
 		display: block;
@@ -276,9 +277,6 @@ a, a:hover, a:active, a:visited, a:link{  text-decoration: none; }
 	border: none;
 	font-size: $tamano_lupa;
 }
-
-
-
 
 //Clase para alterar el div donde va el logotipo de colmex
 #div_logo{
