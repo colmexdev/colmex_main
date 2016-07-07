@@ -399,6 +399,7 @@ a.uk-accordion-title { height: 34px; font-family: "Gotham SSm A", "Gotham SSm B"
 
 		.carousel-inner{
 			display: inline-block;
+			height: 100%;
 
 			.item, .item.active{
 				overflow: hidden;
@@ -432,7 +433,11 @@ a.uk-accordion-title { height: 34px; font-family: "Gotham SSm A", "Gotham SSm B"
 	}
 }
 
-@media all and (min-width: 0px) and (max-width: 1024px){
+@media all and (min-width: 600px) and (max-width: 1024px){
+	#div_slider{ height: 350px; } 
+}
+
+@media all and (min-width: 200px) and (max-width: 600px){
 	#div_slider{ height: 250px; } 
 }
 
