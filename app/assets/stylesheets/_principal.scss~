@@ -240,18 +240,20 @@ a, a:hover, a:active, a:visited, a:link{  text-decoration: none; }
 				padding: 15px 3px;
 			}	
 		}
+		
+		@media all and (min-width: 0px) and (max-width: 1024px) {
+			.mostrable{ display: none; }
+		}
 
-		>li.mostrable{ display: none; }
+		@media all and (min-width: 0px) and (max-width: 1024px) {
+			.mostrable{ display: none; }
+		}
 	}
 
   @media all and (min-width: 0px) and (max-width: 1024px) {
 		
 		.borrable{
 			display: none;
-		}
-
-		.mostrable{
-			display: inline-block;
 		}
 	}
 }
