@@ -175,6 +175,13 @@ a, a:hover, a:active, a:visited, a:link{  text-decoration: none; }
 		}
 	}
 
+	@media all and (min-width: 0px) and (max-width: 1024px){
+		.mail, .intranet{
+			width: 70px;
+		}
+	}
+	
+
 	.mail{
 		width: $ancho_mail;
 
@@ -365,9 +372,7 @@ a, a:hover, a:active, a:visited, a:link{  text-decoration: none; }
 }
 
 @media all and (min-width: 0px) and (max-width: 1024px){
-	#div_menu{ display: none; }
-
-	li.nav_opciones.mail, li.nav_opciones.intranet { width: 70px; } 
+	#div_menu{ display: none; } 
 }
 
 //Clases que afectan al slider
