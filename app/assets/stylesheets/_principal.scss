@@ -297,6 +297,14 @@ a, a:hover, a:active, a:visited, a:link{  text-decoration: none; }
 			>a{
 				color: #fff;
 			}
+		
+			>ul{
+				
+				>li{
+	
+					>a, a:hover, a:active{ background-color: #740020;}
+				}
+			}
 		}
 	}
 }
