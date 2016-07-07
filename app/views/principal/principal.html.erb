@@ -1,26 +1,27 @@
 <%= render 'principal/barra' %>
 
+<div class="container-fluid">
+
+	<div class="row"> <!-- Fila para slider -->
+		<div class="col-md-12" id="div_slider"> <!-- Columnas para slider -->
+			<div id="myCarousel" class="carousel slide" data-ride="carousel">
+
+	      <%= construye_slider %>
+
+				<!-- Left and right controls -->
+				<a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+					<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+					<span class="sr-only">Anterior</span>
+				</a>
+				<a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+					<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+					<span class="sr-only">Siguiente</span>
+				</a>
+			</div> <!-- Cierre de slider -->
+		</div> <!--Cierre de columnas slider -->
+	</div> <!-- Cierre de row de slider -->
+</div>
 <div class="container">
-
-<div class="row"> <!-- Fila para slider -->
-	<div class="col-md-12" id="div_slider"> <!-- Columnas para slider -->
-		<div id="myCarousel" class="carousel slide" data-ride="carousel">
-
-      <%= construye_slider %>
-
-			<!-- Left and right controls -->
-			<a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-				<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-				<span class="sr-only">Anterior</span>
-			</a>
-			<a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-				<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-				<span class="sr-only">Siguiente</span>
-			</a>
-		</div> <!-- Cierre de slider -->
-	</div> <!--Cierre de columnas slider -->
-</div> <!-- Cierre de row de slider -->
-
 <div class="row"> <!-- Fila para eventos -->
 	<div class="col-md-12" id="div_eventos"> <!-- Columnas para eventos -->
 		<div id="carouselEventos" class="carousel slide" data-ride="carousel">
