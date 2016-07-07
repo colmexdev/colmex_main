@@ -97,7 +97,7 @@
 </div> <!-- Ciere de div fila para menú -->
 
 <div id="menu_lat" class="uk-off-canvas">
-
+	<div class="uk-offcanvas-bar">...</div>
 </div>
 
 </div> <!-- Cierre de container-fluid -->
