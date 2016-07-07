@@ -29,6 +29,9 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'tiny_tds'
 gem 'activerecord-sqlserver-adapter'
 
+# Paperclip para manejar la subida de imágenes
+gem 'paperclip'
+
 # Devise para autenticación
 gem 'devise'
 
