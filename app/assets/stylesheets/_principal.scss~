@@ -196,11 +196,6 @@ a, a:hover, a:active, a:visited, a:link{  text-decoration: none; }
 	}
 }
 
-//Clase del contenedor del searchbox y boton de busqueda
-.navbar-form{
-
-}
-
 //Clase asociada al campo de texto de busqueda
 .form-control{
 	background-color: $color_fondo_searchbox;
@@ -250,7 +245,7 @@ a, a:hover, a:active, a:visited, a:link{  text-decoration: none; }
 
 		.dropdown, .no-dropdown{
 			float: left;
-			margin: 1px;
+			margin: 0 1px;
 			background-color: #5E002B;
 			text-align: center;
 			height: 100%;

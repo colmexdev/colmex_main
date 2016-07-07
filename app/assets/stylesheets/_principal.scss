@@ -190,15 +190,10 @@ a, a:hover, a:active, a:visited, a:link{  text-decoration: none; }
 	.navbar-right{
 		margin-right: 30px;	
 
-		.img_net{
-			
+		>li{
+			padding: 0 2px;	
 		}
 	}
-}
-
-//Clase del contenedor del searchbox y boton de busqueda
-.navbar-form{
-
 }
 
 //Clase asociada al campo de texto de busqueda
