@@ -168,7 +168,8 @@ a, a:hover, a:active, a:visited, a:link{  text-decoration: none; }
 		}
 
 		>.activo.sp, .inactivo.sp{
-			display: inline;
+			display: inline-block;
+			padding-left: 3px;
 		}
 	}
 
