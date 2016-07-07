@@ -402,7 +402,7 @@ a.uk-accordion-title { height: 34px; font-family: "Gotham SSm A", "Gotham SSm B"
 
 			.item, .item.active{
 				overflow: hidden;
-				height: 550px;
+				height: 100%;
 			
 				.liga_img{
 
