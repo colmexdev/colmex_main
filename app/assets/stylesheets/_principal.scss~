@@ -194,6 +194,8 @@ a, a:hover, a:active, a:visited, a:link{  text-decoration: none; }
 	@media all and (min-width: 0px) and (max-width: 768px){
 		.borrable { display: none; }
 
+		.navbar-nav { margin-left: 10px;}
+
 		.navbar-form.navbar-left { margin: 0; display: inline-block; }
 
 		.form-group { margin: 0; padding: 0; float: left;}
