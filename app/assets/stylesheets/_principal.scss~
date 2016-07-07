@@ -152,10 +152,14 @@ a, a:hover, a:active, a:visited, a:link{  text-decoration: none; }
 
     .activo{
 			color: $color_textos_navbar_sel;
+			width: $ancho_idioma / 2.1;
+			display: inline-block;
 		}
 
 		.inactivo{
 			color: $color_textos_navbar;
+			width: $ancho_idioma / 2.1;
+			display: inline-block;
 		}
 	}
 
