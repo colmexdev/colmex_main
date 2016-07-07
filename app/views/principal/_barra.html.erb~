@@ -17,7 +17,7 @@
   <div class="container-fluid" id="contenedor_nav">
 
     <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="barra_nav">
+    <div class="navbar-collapse" id="barra_nav">
       <ul class="nav navbar-nav">
 	<li class="nav_opciones idioma"><%= link_to "EN", {:controller => '/principal', :action => 'principal', :locale => 'en'}, :class => clase_en + " en" , :id => 'idioma_en' %> | <%= link_to "ES", {:controller => '/principal', :action => 'principal', :locale => 'sp'}, :class => clase_es + " sp" , :id=> 'idioma_sp' %></li>
         <li class="nav_opciones mail"><a href="#"><%= image_tag("mail.png") %><%= t('navbar.mail') %><span class="sr-only">(current)</span></a></li>
