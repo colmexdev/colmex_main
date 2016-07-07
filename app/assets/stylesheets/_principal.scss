@@ -437,11 +437,11 @@ a.uk-accordion-title { height: 34px; font-family: "Gotham SSm A", "Gotham SSm B"
 	#div_slider{ height: 450px; } 
 }
 
-@media all and (min-width: 200px) and (max-width: 600px){
-	#div_slider{ height: 350px; } 
+@media all and (min-width: 300px) and (max-width: 600px){
+	#div_slider{ height: 150px; } 
 }
 
-@media all and (min-width: 0px) and (max-width: 200px){
+@media all and (min-width: 0px) and (max-width: 300px){
 	#div_slider{ height: 0px; } 
 }
 
