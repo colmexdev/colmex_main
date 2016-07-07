@@ -289,7 +289,7 @@ a, a:hover, a:active, a:visited, a:link{  text-decoration: none; }
 
 a.uk-accordion-title { height: 34px; font-family: "Gotham SSm A", "Gotham SSm B";} 
 
-.uk-nav-offcanvas>li>a { color: #444444; } 
+.uk-nav-offcanvas>li>.uk-accordion-title { color: #444444; font-weight: bold;} 
 
 //Clase para alterar el div donde va el logotipo de colmex
 #div_logo{
