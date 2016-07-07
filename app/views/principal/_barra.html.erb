@@ -37,7 +37,7 @@
 					<li class="borrable"><%= link_to image_tag("linkedin-color.png", :class => "img_net"), "#" %></li>
 					<li class="borrable"><%= link_to image_tag("itunes-color.png", :class => "img_net"), "#" %></li>
 					<li class="borrable"><%= link_to image_tag("google-color.png", :class => "img_net"), "#" %></li>
-					<li class="mostrable"><a href="#menu_lat" class="uk-navbar-toggle" data-uk-offcanvas></a></li>
+					<li class="mostrable"><a href="#menu" class="uk-navbar-toggle" data-uk-offcanvas></a></li>
 	      </ul>
 	    </div><!-- /.navbar-collapse -->
 	  </div><!-- /.container-fluid -->
@@ -96,49 +96,10 @@
 	</div> <!-- Cierre de columnas para menú -->
 </div> <!-- Ciere de div fila para menú -->
 
-	<div id="menu_lat" class="uk-offcanvas"> <!-- Offcanvas -->
+	<!-- Menu lateral -->
+	<div id="menu" class="uk-offcanvas"> <!-- Offcanvas -->
 		<div class="uk-offcanvas-bar uk-offcanvas-bar-flip">
-			<ul class="botones"> <!-- Opciones del menú -->
-				<li class="dropdown" id="dropdown1">
-		      <a href="<%= sobre_el_colegio_url %>" class="dropdown-toggle" data-hover="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span><%= t('botones.b1.texto') %></span></a>
-		        <ul class="dropdown-menu"">
-		          <li><a href="#"><%= t('botones.b1.opciones.op1') %></a></li>
-		          <li><a href="#"><%= t('botones.b1.opciones.op2') %></a></li>
-		          <li><a href="#"><%= t('botones.b1.opciones.op3') %></a></li>
-		          <li><a href="#"><%= t('botones.b1.opciones.op4') %></a></li>
-		          <li><a href="#"><%= t('botones.b1.opciones.op5') %></a></li>
-		          <li><a href="#"><%= t('botones.b1.opciones.op6') %></a></li>
-		        </ul>
-		    </li>
-
-				<li class="dropdown" id="dropdown2">
-		      <a href="<%= centros_de_estudio_url %>" class="dropdown-toggle" data-hover="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span><%= t('botones.b2.texto') %></span></a>
-		        <ul class="dropdown-menu" onmouseleave="quitarClases()">
-		          <li><a href="#">Centro de Estudios de Asia y África</a></li>
-		          <li><a href="#">Centro de Estudios Demográficos, Urbanos y Ambientales</a></li>
-		          <li><a href="#">Centro de Estudios Económicos</a></li>
-		          <li><a href="#">Centro de Estudios Históricos</a></li>
-		          <li><a href="#">Centro de Estudios Internacionales</a></li>
-		          <li><a href="#">Centro de Estudios Lingüísticos y Literarios</a></li>
-		          <li><a href="#">Centro de Estudios Sociológicos</a></li>
-		        </ul>
-		    </li>
-
-				<li class="dropdown" id="dropdown3">
-		      <a href="<%= programas_academicos_url %>" class="dropdown-toggle" data-hover="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span><%= t('botones.b3.texto') %></span></a>
-		        <ul class="dropdown-menu" onmouseleave="quitarClases()">
-		          <li><a href="#"><%= t('botones.b3.opciones.op1') %></a></li>
-		          <li><a href="#"><%= t('botones.b3.opciones.op2') %></a></li>
-		          <li><a href="#"><%= t('botones.b3.opciones.op3') %></a></li>
-		          <li><a href="#"><%= t('botones.b3.opciones.op4') %></a></li>
-		          <li><a href="#"><%= t('botones.b3.opciones.op5') %></a></li>
-		          <li><a href="#"><%= t('botones.b3.opciones.op6') %></a></li>
-		          <li><a href="#"><%= t('botones.b3.opciones.op7') %></a></li>
-		        </ul>
-		    </li>
-				<li class="no-dropdown"><a href="#"><span><%= t('botones.b4') %></span></a></li>
-				<li class="no-dropdown"><a href="#"><span><%= t('botones.b5') %></span></a></li>
-			</ul>
+			
 		</div>
 	</div>
 
