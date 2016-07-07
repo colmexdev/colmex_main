@@ -17,3 +17,4 @@
 //= require principal
 //= require imagens
 //= require cursos
+//= require documentos
