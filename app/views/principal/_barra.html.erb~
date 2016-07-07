@@ -100,6 +100,19 @@
 	<div id="menu" class="uk-offcanvas"> <!-- Offcanvas -->
 		<div class="uk-offcanvas-bar uk-offcanvas-bar-flip uk-accordion" data-uk-accordion>
 			<h3 class="uk-accordion-title"><%= t('botones.b4') %></h3>
+			<div class="uk-accordion-content">
+				<ul class="uk-nav uk-nav-offcanvas">
+					<li><a href="#">AlgoA"</a></li>
+					<li><a href="#">AlgoB"</a></li>
+				</ul>
+			</div>
+			<h3 class="uk-accordion-title"><%= t('botones.b5') %></h3>
+			<div class="uk-accordion-content">
+				<ul class="uk-nav uk-nav-offcanvas">
+					<li><a href="#">AlgoC"</a></li>
+					<li><a href="#">AlgoD"</a></li>
+				</ul>
+			</div>
 			<ul class="uk-nav uk-nav-offcanvas">
 				<li><a href="#"><%= t('botones.b4') %></a></li>
 				<li><a href="#"><%= t('botones.b5') %></a></li>
