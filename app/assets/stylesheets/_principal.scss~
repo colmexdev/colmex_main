@@ -441,6 +441,9 @@ a.uk-accordion-title { height: 34px; font-family: "Gotham SSm A", "Gotham SSm B"
 	#div_slider{ height: 250px; } 
 }
 
+@media all and (min-width: 0px) and (max-width: 200px){
+	#div_slider{ height: 100px; } 
+}
 
 //Clases que afectan la sección de eventos
 #div_eventos{
