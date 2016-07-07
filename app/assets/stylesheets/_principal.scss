@@ -283,17 +283,13 @@ a, a:hover, a:active, a:visited, a:link{  text-decoration: none; }
 }
 
 //Clase asociada al offcanvas
-.uk-offcanvas-bar{
-	background-color: #740020;
-
-	#ligas {color: #444444;}
-}
+.uk-offcanvas-bar{ background-color: #740020; }
 
 .uk-accordion-title { margin-bottom: 5px; }
 
 a.uk-accordion-title { height: 34px; font-family: "Gotham SSm A", "Gotham SSm B";} 
 
-.uk-nav-offcanvas { color: #444444; } 
+.uk-nav-offcanvas>li>a { color: #444444; } 
 
 //Clase para alterar el div donde va el logotipo de colmex
 #div_logo{
