@@ -205,7 +205,9 @@ a, a:hover, a:active, a:visited, a:link{  text-decoration: none; }
 		.form-group { margin: 0; padding: 0; float: left;}
 
     ul.nav.navbar-nav.reajustable { float: left; }
+	}
 
+	@media all and (min-width: 0px) and (max-width: 1024px){
 		.mail{
 			width: 50px;
 
