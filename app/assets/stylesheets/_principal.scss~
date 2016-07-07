@@ -176,7 +176,7 @@ a, a:hover, a:active, a:visited, a:link{  text-decoration: none; }
 		margin-right: 30px;	
 
 		.img_net{
-			margin: 0 4px;
+			
 		}
 	}
 }
@@ -284,7 +284,7 @@ a, a:hover, a:active, a:visited, a:link{  text-decoration: none; }
 			}
 		}
 
-		.dropdown, .no-dropdown{
+		.dropdown:hover, .no-dropdown:hover{
 			background-color: #470020;
 		}
 
