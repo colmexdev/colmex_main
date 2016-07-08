@@ -593,11 +593,11 @@ a.uk-accordion-title { height: 34px; font-family: "Gotham SSm A", "Gotham SSm B"
 				@include centrado;
 			}
 
-			@media all and (min-width: 730px) and (max-width: 994px){
+			@media all and (min-width: 840px) and (max-width: 994px){
 				span { font-size: 15px; } 
 			}
 
-			@media all and (min-width: 0px) and (max-width: 730px){
+			@media all and (min-width: 0px) and (max-width: 840px){
 				span { font-size: 11px; } 
 			}
 		}
@@ -609,8 +609,8 @@ a.uk-accordion-title { height: 34px; font-family: "Gotham SSm A", "Gotham SSm B"
 	background-color: #7E3355;
 	text-align: center;
 
-	.navbar-form{
-
+	#forma_suscripcion{
+		margin-top: 0;
 		@include centrado;
 		width: 100%;
 
@@ -632,7 +632,7 @@ a.uk-accordion-title { height: 34px; font-family: "Gotham SSm A", "Gotham SSm B"
 			}
 
 			@media all and (min-width: 0px) and (max-width: 768px){
-				
+
 			}
 		}
 
