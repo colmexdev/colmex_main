@@ -560,11 +560,16 @@ a.uk-accordion-title { height: 34px; font-family: "Gotham SSm A", "Gotham SSm B"
 	}
 }
 
+//Estilos que afectan al botón de actividades
 #div_actividades{
 	height: $altura_div_actividades;
 	text-align: center;
 	display: block;
 	position: relative;
+
+	@media all and (min-width: 0px) and (max-width: 994px){
+		#boton_actividades { font-size: 15px; } 
+	}
 	
 	#boton_actividades{
 		background-color: #9E6680;
