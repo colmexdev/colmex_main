@@ -749,7 +749,7 @@ a.uk-accordion-title { height: 34px; font-family: "Gotham SSm A", "Gotham SSm B"
 			height: 30px;
 			position: relative;
 			margin-top: 25px;
-			width: 0;
+			width: 100%;
 			.links { 
 				@include centrado;
 				li { float: left; padding: 0 15px; } 
