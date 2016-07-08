@@ -721,6 +721,11 @@ a.uk-accordion-title { height: 34px; font-family: "Gotham SSm A", "Gotham SSm B"
 		#footer_centro { font-size: 13px; }
 	}
 
+  @media all and (min-width: 0px) and (max-width: 1160px){
+		#footer_der, #footer_izq { font-size: 13px; }
+		#footer_centro { font-size: 13px; }
+	} 
+
 	#redes_footer{
 		height: 50px;
 		background-color: #5E002B;
