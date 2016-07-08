@@ -257,7 +257,7 @@ div { box-sizing: border-box; }
 
 //Clase asociada al boton de busqueda
 .boton_lupa{
-	background-color: $color_navbar;
+	background-color: #E6E6E6;
 	border: none;
 	font-size: $tamano_lupa;
 }
