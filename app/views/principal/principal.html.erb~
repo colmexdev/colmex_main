@@ -21,7 +21,7 @@
 		</div> <!--Cierre de columnas slider -->
 	</div> <!-- Cierre de row de slider -->
 </div>
-<div class="container">
+<div class="container-fluid">
 <div class="row"> <!-- Fila para eventos -->
 	<div class="col-md-12" id="div_eventos"> <!-- Columnas para eventos -->
 		<div id="carouselEventos" class="carousel slide" data-ride="carousel">
