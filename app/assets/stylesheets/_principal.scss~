@@ -107,13 +107,14 @@ i {font-style: italic; }
 a, a:hover, a:active, a:visited, a:link{  text-decoration: none; }
 .titulo {}
 .subtitulo {color: #838383}
-div { box-sizing: border-box; }
 
 #contenedor_nav{
 	padding: 0;
 }
 
-.navbar{ border-radius: 0; margin-bottom: 0; }
+.navbar { border-radius: 0; margin-bottom: 0; }
+
+.navbar-collapse { margin-right: 0; margin-left: 0;}
 
 #barra_nav{
 
@@ -732,12 +733,13 @@ a.uk-accordion-title { height: 34px; font-family: "Gotham SSm A", "Gotham SSm B"
 		#footer_izq { display: none; }
 		#footer_der { 
 			height: 30px;
+			padding-left: 0;
 			position: relative;
 			margin-top: 25px;
 			width: 100%;
 			.links { 
 				@include centrado;
-				li { float: left; padding: 0 15px; } 
+				li { float: left; padding: 0 5px; } 
 			}
 		}
 	}
