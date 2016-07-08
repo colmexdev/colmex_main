@@ -632,22 +632,22 @@ a.uk-accordion-title { height: 34px; font-family: "Gotham SSm A", "Gotham SSm B"
 			}
 		}
 
-		@media all and (min-width: 0px) and (max-width: 768px){
-				#forma_suscripcion {
-					width: 100%;
-					.form-group{
-						label { float: none; }
-						.form-control {margin: 0 auto;}
-					}
-				}
-			}
-
 		button{
 			background-color: #9E6680;
 			color: #fff;
 			border-radius: 0;
 			border-color: #470020;
 			margin-top: 5px;
+		}
+	}
+}
+
+@media all and (min-width: 0px) and (max-width: 768px){
+	#forma_suscripcion {
+		width: 100%;
+		.form-group{
+			label { float: none; }
+			.form-control {margin: 0 auto;}
 		}
 	}
 }
