@@ -643,14 +643,14 @@ a.uk-accordion-title { height: 34px; font-family: "Gotham SSm A", "Gotham SSm B"
 }
 
 @media all and (min-width: 0px) and (max-width: 768px){
-				#forma_suscripcion {
-					width: 100%;
-					.form-group{
-						label { float: none; }
-						.form-control {margin: 0 auto;}
-					}
-				}
-			}
+	#forma_suscripcion {
+		width: 100%;
+		.form-group{
+			label { float: none; }
+			.form-control {margin: 0 auto;}
+		}
+	}
+}
 
 #div_revistas{
 	height: $altura_div_revistas;
