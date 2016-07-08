@@ -113,7 +113,7 @@ div { box-sizing: border-box; }
 	padding: 0;
 }
 
-.navbar{ border-radius: 0; }
+.navbar{ border-radius: 0; margin-bottom: 0; }
 
 #barra_nav{
 
