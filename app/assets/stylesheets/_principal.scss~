@@ -3,9 +3,6 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 //Declaracion de variables
 
-$altura_navbar: 60px;
-$color_navbar: #E6E6E6;
-
 $ancho_idioma: 100px;
 
 $margen_superior_textos_navbar: 17px;
@@ -45,16 +42,7 @@ $altura_div_eventos: 300px;
 $ancho_eventos: 100%;
 $ancho_flechas_eventos: 60px;
 $color_flechas_eventos: #993366;
-$ancho_division_eventos: 25%;
-
-$altura_div_actividades: 110px;
-$color_fondo_boton_actividades: #C76BB0;
-$color_letra_boton_actividades: #FFFFFF;
-$tamano_letra_boton_actividades: 15px;
-$color_borde_boton_actividades: #993366;
-$tamano_borde_boton_actividades: 2px;
-$altura_boton_actividades: 50px;
-$ancho_boton_actividades: 33.33%;                         
+$ancho_division_eventos: 25%;                         
 
 $altura_div_suscripcion: 70px;
 $color_div_suscripcion: #993333;
@@ -87,8 +75,6 @@ $altura_div_logos: 500px;
 $altura_div_frase: 250px;
 
 $altura_div_transparencia: 250px;
-
-$altura_div_footer: 400px;
 
 //Mixins para evitar repeticiones
 
@@ -130,7 +116,7 @@ a, a:hover, a:active, a:visited, a:link{  text-decoration: none; }
 
 #barra_nav{
 
-	background-color: $color_navbar;
+	background-color: #E6E6E6;
 	border-radius: 0;
 	margin-right: -15px;
 	margin-left: -10px;
@@ -564,7 +550,7 @@ a.uk-accordion-title { height: 34px; font-family: "Gotham SSm A", "Gotham SSm B"
 
 //Estilos que afectan al botón de actividades
 #div_actividades{
-	height: $altura_div_actividades;
+	height: 110px;
 	text-align: center;
 	display: block;
 	position: relative;
@@ -576,8 +562,8 @@ a.uk-accordion-title { height: 34px; font-family: "Gotham SSm A", "Gotham SSm B"
 		border-color: #470020;
 		border-width: 2px;
 		border-style: solid;
-		height: $altura_boton_actividades;
-		width: $ancho_boton_actividades;
+		height: 50px;
+		width: 33.33%;
 		text-align: center;
 		@include centrado;
 		
@@ -749,7 +735,7 @@ a.uk-accordion-title { height: 34px; font-family: "Gotham SSm A", "Gotham SSm B"
 			height: 30px;
 			position: relative;
 			margin-top: 25px;
-			width: 0;
+			width: 100%;
 			.links { 
 				@include centrado;
 				li { float: left; padding: 0 15px; } 
