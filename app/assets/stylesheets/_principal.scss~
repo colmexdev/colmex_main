@@ -725,7 +725,7 @@ a.uk-accordion-title { height: 34px; font-family: "Gotham SSm A", "Gotham SSm B"
 		#footer_der, #footer_izq { .links { font-size: 13px; } }
 	} 
 
-	@media all and (min-width: 0px) and (max-width: 995px){
+	@media all and (min-width: 0px) and (max-width: 992px){
 		#footer_izq { display: none; }
 		#footer_der { .links { li { float: left; padding: 0 15px; } } }
 	}
