@@ -734,12 +734,9 @@ a.uk-accordion-title { height: 34px; font-family: "Gotham SSm A", "Gotham SSm B"
 		#footer_der { 
 			height: 30px;
 			padding-left: 0;
-			position: relative;
 			margin-top: 25px;
-			width: 100%;
 			.links { 
 				margin: 0 auto;
-				@include centrado;
 				li { float: left; padding: 0 5px; } 
 			}
 		}
