@@ -630,8 +630,9 @@ a.uk-accordion-title { height: 34px; font-family: "Gotham SSm A", "Gotham SSm B"
 				margin-right: $margen_der_textbox_suscripcion;
 				border-radius: 0;
 			}
+		}
 
-			@media all and (min-width: 0px) and (max-width: 768px){
+		@media all and (min-width: 0px) and (max-width: 768px){
 				#forma_suscripcion {
 					width: 100%;
 					.form-group{
@@ -640,7 +641,6 @@ a.uk-accordion-title { height: 34px; font-family: "Gotham SSm A", "Gotham SSm B"
 					}
 				}
 			}
-		}
 
 		button{
 			background-color: #9E6680;
