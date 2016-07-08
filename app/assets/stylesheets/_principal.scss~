@@ -107,6 +107,7 @@ i {font-style: italic; }
 a, a:hover, a:active, a:visited, a:link{  text-decoration: none; }
 .titulo {}
 .subtitulo {color: #838383}
+div { box-sizing: border-box; }
 
 #contenedor_nav{
 	padding: 0;
