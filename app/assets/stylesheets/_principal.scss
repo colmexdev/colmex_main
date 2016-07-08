@@ -619,7 +619,7 @@ a.uk-accordion-title { height: 34px; font-family: "Gotham SSm A", "Gotham SSm B"
 			label{
 				color: #fff;
 				float: left;
-				padding-top: $padding_sup_label;
+				padding-top: 10px;
 			}
 
 			.form-control{
@@ -630,6 +630,10 @@ a.uk-accordion-title { height: 34px; font-family: "Gotham SSm A", "Gotham SSm B"
 				margin-right: $margen_der_textbox_suscripcion;
 				border-radius: 0;
 			}
+
+			@media all and (min-width: 0px) and (max-width: 768px){
+				
+			}
 		}
 
 		button{
@@ -637,6 +641,7 @@ a.uk-accordion-title { height: 34px; font-family: "Gotham SSm A", "Gotham SSm B"
 			color: #fff;
 			border-radius: 0;
 			border-color: #470020;
+			margin-top: 5px;
 		}
 	}
 }
