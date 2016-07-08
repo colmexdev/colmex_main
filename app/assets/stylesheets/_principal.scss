@@ -595,7 +595,7 @@ a.uk-accordion-title { height: 34px; font-family: "Gotham SSm A", "Gotham SSm B"
 				span { font-size: 15px; } 
 			}
 
-			@media all and (min-width: 730px) and (max-width: 994px){
+			@media all and (min-width: 0px) and (max-width: 730px){
 				span { font-size: 11px; } 
 			}
 		}
@@ -664,6 +664,10 @@ a.uk-accordion-title { height: 34px; font-family: "Gotham SSm A", "Gotham SSm B"
 	background-color: #6060F0;
 }
 
+@media all and (min-width: 0px) and (max-width: 1460px){
+	height: 300px;
+}
+
 #div_footer{
 	background-color: #5E002B;
 
@@ -678,6 +682,7 @@ a.uk-accordion-title { height: 34px; font-family: "Gotham SSm A", "Gotham SSm B"
 			font-size: 16px;
 			width: 100%;
 			height: 100%;
+			padding-left: 0;
 
 			li{
 				display: table-row;
