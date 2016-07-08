@@ -727,7 +727,16 @@ a.uk-accordion-title { height: 34px; font-family: "Gotham SSm A", "Gotham SSm B"
 
 	@media all and (min-width: 0px) and (max-width: 992px){
 		#footer_izq { display: none; }
-		#footer_der { .links { li { float: left; padding: 0 15px; } } }
+		#footer_der { 
+			height: 30px;
+			position: relative;
+			margin-top: 25px;
+			width: 0;
+			.links { 
+				@include centrado;
+				li { float: left; padding: 0 15px; } 
+			}
+		}
 	}
 
 	#redes_footer{
@@ -741,6 +750,7 @@ a.uk-accordion-title { height: 34px; font-family: "Gotham SSm A", "Gotham SSm B"
 			float: left;
 			list-style-type: none;
 			@include centrado;
+			width: 100%;
 
 			img{
 				padding: 0 4px;

@@ -275,8 +275,10 @@ a, a:hover, a:active, a:visited, a:link{  text-decoration: none; }
 	font-size: $tamano_lupa;
 }
 
-//Clase asociada al offcanvas
-.uk-offcanvas-bar{ background-color: #740020; }
+//Estilos asociados al offcanvas
+.nav>li>a:hover { background-color: transparent;}
+
+.uk-offcanvas-bar { background-color: #740020; }
 
 .uk-accordion-title { margin-bottom: 5px; }
 
@@ -730,7 +732,8 @@ a.uk-accordion-title { height: 34px; font-family: "Gotham SSm A", "Gotham SSm B"
 		#footer_der { 
 			height: 30px;
 			position: relative;
-			margin-top:10px;
+			margin-top: 25px;
+			width: 0;
 			.links { 
 				@include centrado;
 				li { float: left; padding: 0 15px; } 
@@ -749,6 +752,7 @@ a.uk-accordion-title { height: 34px; font-family: "Gotham SSm A", "Gotham SSm B"
 			float: left;
 			list-style-type: none;
 			@include centrado;
+			width: 100%;
 
 			img{
 				padding: 0 4px;
