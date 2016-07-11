@@ -276,12 +276,19 @@ a.uk-accordion-title { height: 34px; font-family: "Gotham SSm A", "Gotham SSm B"
 #div_logo{
 	height: $altura_div_logo;
 	text-align: center;
-	position: relative;
 
 	#img_logo{
 		width: $ancho_logo;
-		@include centrado;
+		display: inline-block;
+		vertical-align: middle;
 	}
+}
+
+#div_logo:before {      
+    content: ' ';
+    display: inline-block;
+    vertical-align: middle; 
+    height: 100%;
 }
 
 //Clase para alterar el div donde van los botones del menú
