@@ -1,123 +1,124 @@
 <%= render 'principal/barra' %>
+  <div id="cuerpo">
+		<div class="row"> <!-- Fila para slider -->
+			<div class="col-md-12" id="div_slider"> <!-- Columnas para slider -->
+				<div id="myCarousel" class="carousel slide" data-ride="carousel">
 
-	<div class="row"> <!-- Fila para slider -->
-		<div class="col-md-12" id="div_slider"> <!-- Columnas para slider -->
-			<div id="myCarousel" class="carousel slide" data-ride="carousel">
+			    <%= construye_slider %>
 
-	      <%= construye_slider %>
+					<!-- Left and right controls -->
+					<a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+						<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+						<span class="sr-only">Anterior</span>
+					</a>
+					<a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+						<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+						<span class="sr-only">Siguiente</span>
+					</a>
+				</div> <!-- Cierre de slider -->
+			</div> <!--Cierre de columnas slider -->
+		</div> <!-- Cierre de row de slider -->
+
+	<div class="row"> <!-- Fila para eventos -->
+		<div class="col-md-12" id="div_eventos"> <!-- Columnas para eventos -->
+			<div id="carouselEventos" class="carousel slide" data-ride="carousel">
+
+				<!-- Wrapper for slides -->
+		    <div class="carousel-inner" id="render_eventos" role="listbox" >
+
+					<%= javascript_tag do %>
+						ancho = Math.max(document.documentElement.clientWidth, window.innerWidth || document.body.ClientWidth || 0);
+
+						if(ancho < 600){ document.getElementById("render_eventos").innerHTML = gon.ev_tiny; }
+						else if(ancho < 900){ document.getElementById("render_eventos").innerHTML = gon.ev_small; }
+						else{ document.getElementById("render_eventos").innerHTML = gon.ev_big;}
+
+						window.onresize = function(){
+							var ancho_act = Math.max(document.documentElement.clientWidth, window.innerWidth || document.body.ClientWidth || 0);
+							if(ancho_act < 600 && ancho >= 600){
+								document.getElementById("render_eventos").innerHTML = gon.ev_tiny;
+								ancho = ancho_act;
+							}
+							else if(ancho_act < 1024 && (ancho >= 1024 || ancho <= 600)){
+								document.getElementById("render_eventos").innerHTML = gon.ev_small;
+								ancho = ancho_act;
+							} 
+							else if(ancho_act >= 1024 && ancho < 1024){
+								document.getElementById("render_eventos").innerHTML = gon.ev_big;
+								ancho = ancho_act;
+							}
+						}
+					<% end %>
+
+		    </div>
 
 				<!-- Left and right controls -->
-				<a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+				<a class="left carousel-control" href="#carouselEventos" role="button" data-slide="prev">
 					<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
 					<span class="sr-only">Anterior</span>
 				</a>
-				<a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+				<a class="right carousel-control" href="#carouselEventos" role="button" data-slide="next">
 					<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
 					<span class="sr-only">Siguiente</span>
 				</a>
 			</div> <!-- Cierre de slider -->
-		</div> <!--Cierre de columnas slider -->
-	</div> <!-- Cierre de row de slider -->
-
-<div class="row"> <!-- Fila para eventos -->
-	<div class="col-md-12" id="div_eventos"> <!-- Columnas para eventos -->
-		<div id="carouselEventos" class="carousel slide" data-ride="carousel">
-
-			<!-- Wrapper for slides -->
-      <div class="carousel-inner" id="render_eventos" role="listbox" >
-
-				<%= javascript_tag do %>
-					ancho = Math.max(document.documentElement.clientWidth, window.innerWidth || document.body.ClientWidth || 0);
-
-					if(ancho < 600){ document.getElementById("render_eventos").innerHTML = gon.ev_tiny; }
-					else if(ancho < 900){ document.getElementById("render_eventos").innerHTML = gon.ev_small; }
-					else{ document.getElementById("render_eventos").innerHTML = gon.ev_big;}
-
-					window.onresize = function(){
-						var ancho_act = Math.max(document.documentElement.clientWidth, window.innerWidth || document.body.ClientWidth || 0);
-						if(ancho_act < 600 && ancho >= 600){
-							document.getElementById("render_eventos").innerHTML = gon.ev_tiny;
-							ancho = ancho_act;
-						}
-						else if(ancho_act < 900 && (ancho >= 900 || ancho <= 600)){
-							document.getElementById("render_eventos").innerHTML = gon.ev_small;
-							ancho = ancho_act;
-						} 
-						else if(ancho_act >= 900 && ancho < 900){
-							document.getElementById("render_eventos").innerHTML = gon.ev_big;
-							ancho = ancho_act;
-						}
-					}
-				<% end %>
-
-      </div>
-
-			<!-- Left and right controls -->
-			<a class="left carousel-control" href="#carouselEventos" role="button" data-slide="prev">
-				<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-				<span class="sr-only">Anterior</span>
-			</a>
-			<a class="right carousel-control" href="#carouselEventos" role="button" data-slide="next">
-				<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-				<span class="sr-only">Siguiente</span>
-			</a>
-		</div> <!-- Cierre de slider -->
 
 
-	</div> <!-- Cierre de columnas para eventos -->
-</div> <!-- Cierre de fila para eventos -->
+		</div> <!-- Cierre de columnas para eventos -->
+	</div> <!-- Cierre de fila para eventos -->
 
-<div class="row"> <!-- Fila para botón de actividades -->
-	<div class="col-md-12" id="div_actividades"> <!--Columnas para eventos -->
-		<div id="boton_actividades">
-			<a href="#" id="liga_actividades"><span><%= t('actividades.boton') %></span></a>
-		</div>
+	<div class="row"> <!-- Fila para botón de actividades -->
+		<div class="col-md-12" id="div_actividades"> <!--Columnas para eventos -->
+			<div id="boton_actividades">
+				<a href="#" id="liga_actividades"><span><%= t('actividades.boton') %></span></a>
+			</div>
 
-	</div> <!-- Cierre de columnas para botón de actividades -->
-</div> <!-- Cierre de fila para boton actividades -->
+		</div> <!-- Cierre de columnas para botón de actividades -->
+	</div> <!-- Cierre de fila para boton actividades -->
 
-<div class="row"> <!-- Fila para formulario de suscripción -->
-	<div class="col-md-12" id="div_suscripcion"> <!-- Columnas para formulario de suscripción -->
+	<div class="row"> <!-- Fila para formulario de suscripción -->
+		<div class="col-md-12" id="div_suscripcion"> <!-- Columnas para formulario de suscripción -->
 
-		<form class="navbar-form navbar-left" role="search" id="forma_suscripcion">
-      <div class="form-group">
-				<label for="text-suscripcion"><%= t('suscripcion.texto') %></label>
-        <%= '<input type="text" accept-charset="UTF-8" id="text-suscripcion" class="form-control" placeholder='.html_safe + t('suscripcion.placeholder') + ">".html_safe %>
-      </div>
-			<button type="submit" class="btn btn-default"><span><%= t('suscripcion.boton') %></span></button>
-		</form>
-	</div> <!-- Cierre de columnas para formulario de suscripción -->
-</div> <!-- Cierre de fila para formulario de suscripción -->
+			<form class="navbar-form navbar-left" role="search" id="forma_suscripcion">
+		    <div class="form-group">
+					<label for="text-suscripcion"><%= t('suscripcion.texto') %></label>
+		      <%= '<input type="text" accept-charset="UTF-8" id="text-suscripcion" class="form-control" placeholder='.html_safe + t('suscripcion.placeholder') + ">".html_safe %>
+		    </div>
+				<button type="submit" class="btn btn-default"><span><%= t('suscripcion.boton') %></span></button>
+			</form>
+		</div> <!-- Cierre de columnas para formulario de suscripción -->
+	</div> <!-- Cierre de fila para formulario de suscripción -->
 
-<div class="row"> <!-- Fila para revistas -->
-	<div class="col-md-12" id="div_revistas"> <!-- Columnas para revistas -->
-			<%= @resultado.fields %>
-	</div> <!-- Cierre de columnas para revistas -->
-</div> <!-- Cierre de fila para revistas -->
+	<div class="row"> <!-- Fila para revistas -->
+		<div class="col-md-12" id="div_revistas"> <!-- Columnas para revistas -->
+				<%= @resultado.fields %>
+		</div> <!-- Cierre de columnas para revistas -->
+	</div> <!-- Cierre de fila para revistas -->
 
-<div class="row"> <!-- Fila para "Descubre" -->
-	<div class="col-md-12" id="div_descubre"> <!-- Columnas para "Descubre" -->
+	<div class="row"> <!-- Fila para "Descubre" -->
+		<div class="col-md-12" id="div_descubre"> <!-- Columnas para "Descubre" -->
 
-	</div> <!-- Cierre de columnas para "Descubre" -->
-</div> <!-- Cierre de fila para "Descubre" -->
+		</div> <!-- Cierre de columnas para "Descubre" -->
+	</div> <!-- Cierre de fila para "Descubre" -->
 
-<div class="row"> <!-- Fila para logos COLMEX -->
-	<div class="col-md-12" id="div_logos"> <!-- Columnas para logos COLMEX -->
+	<div class="row"> <!-- Fila para logos COLMEX -->
+		<div class="col-md-12" id="div_logos"> <!-- Columnas para logos COLMEX -->
 
-	</div> <!-- Cierre de columnas para logos COLMEX -->
-</div> <!-- Cierre de fila logos COLMEX -->
+		</div> <!-- Cierre de columnas para logos COLMEX -->
+	</div> <!-- Cierre de fila logos COLMEX -->
 
-<div class="row"> <!-- Fila para frase -->
-	<div class="col-md-12" id="div_frase"> <!-- Columnas para frase -->
+	<div class="row"> <!-- Fila para frase -->
+		<div class="col-md-12" id="div_frase"> <!-- Columnas para frase -->
 
-	</div> <!-- Cierre de columnas para frase -->
-</div> <!-- Cierre de fila para frase -->
+		</div> <!-- Cierre de columnas para frase -->
+	</div> <!-- Cierre de fila para frase -->
 
-<div class="row"> <!-- Fila para transparencia -->
-	<div class="col-md-12" id="div_transparencia"> <!-- Columnas para transparencia-->
+	<div class="row"> <!-- Fila para transparencia -->
+		<div class="col-md-12" id="div_transparencia"> <!-- Columnas para transparencia-->
 
-	</div> <!-- Cierre de columnas para transparencia -->
-</div> <!-- Cierre de fila para transparencia -->
+		</div> <!-- Cierre de columnas para transparencia -->
+	</div> <!-- Cierre de fila para transparencia -->
+</div> <!-- Cierre del cuerpo -->
 
 
 <%= render 'principal/footer' %>
