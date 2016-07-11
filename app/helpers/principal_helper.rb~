@@ -52,7 +52,7 @@ module PrincipalHelper
       bloque_html = bloque_html + '</div>'
 			bloque_opt_html = bloque_opt_html + '</div>'
     end
-    return bloque_html.html_safe, bloque_opt_html.html_safe
+    return bloque_html, bloque_opt_html
   end
 
   def construirEvento(fila)
