@@ -263,7 +263,8 @@ a.uk-accordion-title { height: 34px; font-family: "Gotham SSm A", "Gotham SSm B"
 
 .uk-nav-offcanvas>li>.uk-accordion-title { color: #444444; font-weight: bold;} 
 
-.uk-nav-offcanvas ul { a:hover, a:visited, a:link, a:active { color: #740020; } }
+.uk-nav.uk-nav-offcanvas ul { a:hover, a:visited, a:link, a:active { color: #740020; } }
+
 
 .nav>li { float: left; >a>img{ margin: 2px;} }
 
