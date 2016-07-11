@@ -219,16 +219,16 @@ html, body{ height: 100%; }
 			}	
 		}
 		
-		@media only screen and (min-width: 0px) and (max-width: 1060px) {
+		@media only screen and (min-width: 0px) and (max-width: 1070px) {
 			.mostrable{ display: inline-block; }
 		}
 
-		@media only screen and (min-width: 1060px) {
+		@media only screen and (min-width: 1071px) {
 			.mostrable{ display: none; }
 		}
 	}
 
-  @media only screen and (min-width: 0px) and (max-width: 1060px) {
+  @media only screen and (min-width: 0px) and (max-width: 1070px) {
 		.borrable{ display: none; }
 	}
 }
