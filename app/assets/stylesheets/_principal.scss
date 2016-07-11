@@ -387,7 +387,6 @@ a.uk-accordion-title { height: 34px; font-family: "Gotham SSm A", "Gotham SSm B"
 			.item, .item.active{
 				overflow: hidden;
 				height: 100%;
-				position: relative;
 			
 				.liga_img{
 
@@ -397,6 +396,10 @@ a.uk-accordion-title { height: 34px; font-family: "Gotham SSm A", "Gotham SSm B"
 						position: absolute;
 						top: 50%;
 						transform: translate(0,-50%);
+						-webkit-transform: translate(0,-50%);
+						-ms-transform: translate(0,-50%);
+						-moz-transform: translate(0,-50%);
+						-o-transform: translate(0,-50%);
 					}
 				
 					.imagen_slider_sobre{
