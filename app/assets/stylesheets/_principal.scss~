@@ -13,15 +13,6 @@ $color_fondo_searchbox: #CCCCCC;
 $color_borde_searchbox: #909090;
 $tamano_lupa: 20px;
 
-$ancho_mail: 210px;
-$ancho_intranet: 130px;
-
-$altura_div_logo: 150px;
-$altura_logo: 60px;
-$ancho_logo: 35%;
-$margen_sup_logo: 45px;
-
-$alto_div_menu: 70px;
 $color_fondo_menus: #993366;
 $padding_lat_menus: 5px;
 $ancho_botones: 20%;
@@ -155,7 +146,7 @@ a, a:hover, a:active, a:visited, a:link{  text-decoration: none; }
 	}	
 
 	.mail{
-		width: $ancho_mail;
+		width: 210px;
 
 		img{
 			width: 25px;
@@ -164,7 +155,7 @@ a, a:hover, a:active, a:visited, a:link{  text-decoration: none; }
 	}
 
 	.intranet{
-		width: $ancho_intranet;
+		width: 130px;
 
 		img{
 			width: 20px;
@@ -274,19 +265,26 @@ a.uk-accordion-title { height: 34px; font-family: "Gotham SSm A", "Gotham SSm B"
 
 //Clase para alterar el div donde va el logotipo de colmex
 #div_logo{
-	height: $altura_div_logo;
+	height: 150px;
 	text-align: center;
-	position: relative;
 
 	#img_logo{
-		width: $ancho_logo;
-		@include centrado;
+		width: 50%;
+		display: inline-block;
+		vertical-align: middle;
 	}
+}
+
+#div_logo:before {      
+    content: ' ';
+    display: inline-block;
+    vertical-align: middle; 
+    height: 100%;
 }
 
 //Clase para alterar el div donde van los botones del menú
 #div_menu{
-	height: $alto_div_menu;
+	height: 70px;
 
 	.botones{
 		overflow: visible;
