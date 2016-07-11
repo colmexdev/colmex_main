@@ -39,11 +39,11 @@
 							document.getElementById("render_eventos").innerHTML = gon.ev_tiny;
 							ancho = ancho_act;
 						}
-						else if(ancho_act < 900 && (ancho >= 900 || ancho <= 600)){
+						else if(ancho_act < 1024 && (ancho >= 1024 || ancho <= 600)){
 							document.getElementById("render_eventos").innerHTML = gon.ev_small;
 							ancho = ancho_act;
 						} 
-						else if(ancho_act >= 900 && ancho < 900){
+						else if(ancho_act >= 1024 && ancho < 1024){
 							document.getElementById("render_eventos").innerHTML = gon.ev_big;
 							ancho = ancho_act;
 						}
