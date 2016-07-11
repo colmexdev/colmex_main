@@ -395,7 +395,6 @@ a.uk-accordion-title { height: 34px; font-family: "Gotham SSm A", "Gotham SSm B"
 					.imagen_slider_fondo{
 						width: 100%;
 						text-align: center;
-						position: absolute;
 					}
 				
 					.imagen_slider_sobre{
