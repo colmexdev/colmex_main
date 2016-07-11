@@ -11,16 +11,8 @@
 <body>
 	
 	<div class="container-fluid">
-		
-		<% if !admin_signed_in? %>
-			<%= render 'principal/barra' %>
-		<% end %>
 
 		<%= yield %>
-
-		<% if !admin_signed_in? %>
-			<%= render 'principal/footer' %>
-		<% end %>
 
 	</div> <!-- Cierre del container-fluid -->
 </body>

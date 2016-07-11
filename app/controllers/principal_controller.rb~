@@ -1,6 +1,7 @@
 class PrincipalController < ApplicationController
   def principal
     I18n.locale = params[:locale]
+    gon.html_big, gon.html_small = construye_slider_eventos
   end
 
   def sobre
@@ -8,6 +9,10 @@ class PrincipalController < ApplicationController
   end
 
   def centros
+
+  end
+
+  def programas
 
   end
 end
