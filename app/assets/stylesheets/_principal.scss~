@@ -108,8 +108,6 @@ a, a:hover, a:active, a:visited, a:link{  text-decoration: none; }
 .titulo {}
 .subtitulo {color: #838383}
 
-#html_big, #html_small { display: none; }
-
 #contenedor_nav{
 	padding: 0;
 }
