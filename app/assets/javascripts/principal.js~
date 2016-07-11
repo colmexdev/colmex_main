@@ -4,4 +4,4 @@ $(window).on("resize",function(event){
 		console.log("Ancho mínimo");
 	}
 	else{ console.log("Ancho óptimo"); }
-})
+});
