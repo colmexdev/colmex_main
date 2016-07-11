@@ -408,9 +408,11 @@ a.uk-accordion-title { height: 34px; font-family: "Gotham SSm A", "Gotham SSm B"
 			}
 
 			.item:before, .item.active:before{
+				content: ' ';
 				display: inline-block;
 				vertical-align: middle;
 				height: 100%;
+				width: 100%;
 			}
 		}
 		.carousel-control.right, .carousel-control.left{
