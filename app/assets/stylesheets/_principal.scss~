@@ -543,6 +543,18 @@ a.uk-accordion-title { height: 34px; font-family: "Gotham SSm A", "Gotham SSm B"
 						}
 					}
 				}
+
+				@media all and (min-width: 0px) and (max-width: 600px) and (orientation: landscape){
+					.evento { width: 100%; }
+				}
+
+				@media all and (min-width: 0px) and (max-width: 600px) and (orientation: portrait){
+					.evento { width: 100%; }
+				}
+
+				@media all and (min-width: 600px) and (max-width: 900px) and (orientation: portrait){
+					.evento { width: 100%; }
+				}
 			}
 		}
 	}
