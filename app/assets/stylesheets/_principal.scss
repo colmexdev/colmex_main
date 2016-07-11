@@ -575,18 +575,16 @@ a.uk-accordion-title { height: 34px; font-family: "Gotham SSm A", "Gotham SSm B"
 		height: 50px;
 		width: 33.33%;
 		text-align: center;
-		@include centrado;
+		margin: 0 auto;
 		
 
 		a{
 			color: #fff;
-			width: 100%;
-			height: 100%;
-			display: block;
+
+			display: inline-block;
 
 			span{
-				width: 100%;
-				@include centrado;
+
 			}
 
 			@media only screen and (min-width: 0px) and (max-width: 840px){
