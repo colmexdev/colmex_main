@@ -29,14 +29,13 @@ module PrincipalHelper
       k = 1
       bloque_html = bloque_html + '<div class=' + (i==1 ? '"item active"' : '"item"') + '>' 
       bloque_opt_html = bloque_opt_html + '<div class=' + (i==1 ? '"item active"' : '"item"') + '>'
-      bloque_tiny_html = bloque_tiny_html + '<div class=' + (i==1 ? '"item active"' : '"item"') + '>'
       while k % 5 != 0
         bloque_html = bloque_html + '<div class="evento">'
         if k % 3 == 0
           bloque_opt_html = bloque_opt_html + '</div><div class="item">'
         end
         bloque_opt_html = bloque_opt_html + '<div class="evento">'
-        bloque_tiny_html = bloque_tiny_html + '</div><div class="item"><div class="evento">'
+        bloque_tiny_html = bloque_tiny_html + '<div class=' + (i==1 ? '"item active"' : '"item"') + '><div class="evento">'
         if j < @resultado.each.length
           fila = @resultado.each[j]
           if k == 1
@@ -49,13 +48,12 @@ module PrincipalHelper
         end
         bloque_html = bloque_html + '</div>'
         bloque_opt_html = bloque_opt_html + '</div>'
-        bloque_tiny_html = bloque_tiny_html + '</div>'
+        bloque_tiny_html = bloque_tiny_html + '</div></div>'
         k = k + 1
         j = j + 1
       end
       bloque_html = bloque_html + '</div>'
       bloque_opt_html = bloque_opt_html + '</div>'
-      bloque_tiny_html = bloque_tiny_html + '</div>'
     end
     return bloque_html, bloque_opt_html, bloque_tiny_html
   end
