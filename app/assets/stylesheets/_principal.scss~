@@ -762,20 +762,25 @@ a.uk-accordion-title { height: 34px; font-family: "Gotham SSm A", "Gotham SSm B"
 		height: 50px;
 		background-color: #5E002B;
 		text-align: center;
-		margin: 0 auto;
-		position: relative;
 
 		.botones_footer{
 			float: left;
 			list-style-type: none;
-			@include centrado;
 			width: 100%;
 			margin-bottom: 0;
+			display: inline-block;
+			vertical-align: middle;
 
 			img{
 				padding: 0 4px;
 			}
 		}	
+	}
+
+  #redes_footer:before {      
+    display: inline-block;
+    vertical-align: middle; 
+    height: 100%;
 	}
 }
 
