@@ -751,7 +751,7 @@ a.uk-accordion-title { height: 34px; font-family: "Gotham SSm A", "Gotham SSm B"
 			padding-left: 0;
 			margin-top: 10px;
 			.links { 
-				margin: 0 auto;
+				margin: 5px auto;
 				width: auto;
 				li { float: left; padding: 0 5px; } 
 			}
