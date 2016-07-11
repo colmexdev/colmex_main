@@ -397,7 +397,7 @@ a.uk-accordion-title { height: 34px; font-family: "Gotham SSm A", "Gotham SSm B"
 						width: 100%;
 						vertical-align: middle;
 						text-align: center;
-						@include centrado;
+						position: absolute;
 					}
 				
 					.imagen_slider_sobre{
@@ -405,7 +405,6 @@ a.uk-accordion-title { height: 34px; font-family: "Gotham SSm A", "Gotham SSm B"
 						top: 50%;
 						left: 50%;
 						position: absolute;
-						transform: translate(-50%,-70%);
 					}
 				}
 			}
