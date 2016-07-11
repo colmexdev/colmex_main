@@ -564,14 +564,6 @@ a.uk-accordion-title { height: 34px; font-family: "Gotham SSm A", "Gotham SSm B"
 	text-align: center;
 	display: inline-block;
 	vertical-align: middle;
-
-	:before{
-		content: ' ';
-    display: inline-block;
-    vertical-align: middle;
-    height: 100%;
-	}
-
 	
 	#boton_actividades{
 		background-color: #9E6680;
@@ -607,6 +599,13 @@ a.uk-accordion-title { height: 34px; font-family: "Gotham SSm A", "Gotham SSm B"
 		}
 	}
 }
+
+#div_actividades:before{
+		content: ' ';
+    display: inline-block;
+    vertical-align: middle;
+    height: 100%;
+	}
 
 #div_suscripcion{
 	height: $altura_div_suscripcion;
