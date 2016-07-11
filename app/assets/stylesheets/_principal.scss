@@ -392,12 +392,15 @@ a.uk-accordion-title { height: 34px; font-family: "Gotham SSm A", "Gotham SSm B"
 			.item, .item.active{
 				overflow: hidden;
 				height: 100%;
+				display: table-cell;
 			
 				.liga_img{
 
 					.imagen_slider_fondo{
 						width: 100%;
-						@include centrado;
+						vertical-align: middle;
+						text-align: center;
+						//@include centrado;
 					}
 				
 					.imagen_slider_sobre{
