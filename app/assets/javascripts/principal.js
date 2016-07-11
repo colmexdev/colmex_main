@@ -3,11 +3,11 @@ ancho = Math.max(document.documentElement.clientWidth, window.innerWidth || docu
 $(window).on('resize', function(){
 	var ancho_act = $(window).width();
 	if(ancho_act < 900 && ancho >= 900){
-		console.log(divs_small);
+		console.log(gon.ev_small);
 		ancho = ancho_act;
 	} 
 	else if(ancho_act >= 900 && ancho < 900){
-		console.log(divs_big);
+		console.log(gon.ev_big);
 		ancho = ancho_act;
 	}
 });
