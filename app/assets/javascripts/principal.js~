@@ -1,4 +1,4 @@
-var ancho = $(window).width();
+var w = Math.max(document.documentElement.clientWidth, window.innerWidth || document.body.ClientWidth || 0);
 
 window.addEventListener('resize', parseHTML(gon.ev_big, gon.ev_small), true);
 
