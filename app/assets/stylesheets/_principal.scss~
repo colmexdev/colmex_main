@@ -685,7 +685,13 @@ a.uk-accordion-title { height: 34px; font-family: "Gotham SSm A", "Gotham SSm B"
 	background-color: #6060F0;
 }
 
+#cuerpo{ padding-bottom: 300px; }
+
 #div_footer{
+	position:absolute;
+	bottom:0;
+	width:100%;
+	height:300px;
 	background-color: #5E002B;
 
 	#footer_der, #footer_izq, #footer_centro{

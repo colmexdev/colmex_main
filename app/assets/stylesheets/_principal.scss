@@ -99,6 +99,8 @@ a, a:hover, a:active, a:visited, a:link{  text-decoration: none; }
 .titulo {}
 .subtitulo {color: #838383}
 
+.container-fluid { min-height: 100%; position: relative;} 
+
 #contenedor_nav{
 	padding: 0;
 }
