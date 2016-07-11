@@ -263,6 +263,8 @@ a.uk-accordion-title { height: 34px; font-family: "Gotham SSm A", "Gotham SSm B"
 
 .uk-nav-offcanvas>li>.uk-accordion-title { color: #444444; font-weight: bold;} 
 
+.nav>li { float: left; >a>img{ margin: 2px;} }
+
 //Clase para alterar el div donde va el logotipo de colmex
 #div_logo{
 	height: 150px;
