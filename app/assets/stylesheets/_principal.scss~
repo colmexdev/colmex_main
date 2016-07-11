@@ -564,7 +564,14 @@ a.uk-accordion-title { height: 34px; font-family: "Gotham SSm A", "Gotham SSm B"
 	text-align: center;
 	display: inline-block;
 	vertical-align: middle;
-	position: relative;
+
+	:before{
+		content: ' ';
+    display: inline-block;
+    vertical-align: middle;
+    height: 100%;
+	}
+
 	
 	#boton_actividades{
 		background-color: #9E6680;
