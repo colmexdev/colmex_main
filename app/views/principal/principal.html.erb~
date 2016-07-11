@@ -1,9 +1,5 @@
 <%= render 'principal/barra' %>
 
-<!-- <div id="html_big"><%= raw ev_big %></div>
-<div id="html_small"><%= raw ev_small %></div> -->
-
-
 	<div class="row"> <!-- Fila para slider -->
 		<div class="col-md-12" id="div_slider"> <!-- Columnas para slider -->
 			<div id="myCarousel" class="carousel slide" data-ride="carousel">
