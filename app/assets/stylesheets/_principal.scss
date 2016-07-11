@@ -544,11 +544,11 @@ a.uk-accordion-title { height: 34px; font-family: "Gotham SSm A", "Gotham SSm B"
 					}
 				}
 
-				@media all and (min-width: 0px) and (max-width: 600px) and (-webkit-min-device-pixel-ratio: 1){
+				@media only screen and (min-width: 0px) and (max-width: 600px) and (-webkit-min-device-pixel-ratio: 2), @media only screen and (min-width: 0px) and (max-width: 600px) and (-webkit-min-device-pixel-ratio: 1.5) {
 					.evento { width: 100%; }
 				}
 
-				@media all and (min-width: 600px) and (max-width: 900px) and (-webkit-min-device-pixel-ratio: 1){
+				@media only screen and (min-width: 600px) and (max-width: 900px) and (-webkit-min-device-pixel-ratio: 2), @media only screen and (min-width: 0px) and (max-width: 600px) and (-webkit-min-device-pixel-ratio: 1.5){
 					.evento { width: 50%; }
 				}
 			}
