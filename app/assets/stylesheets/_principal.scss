@@ -392,7 +392,6 @@ a.uk-accordion-title { height: 34px; font-family: "Gotham SSm A", "Gotham SSm B"
 			.item, .item.active{
 				overflow: hidden;
 				height: 100%;
-				display: table-cell;
 			
 				.liga_img{
 
@@ -400,7 +399,7 @@ a.uk-accordion-title { height: 34px; font-family: "Gotham SSm A", "Gotham SSm B"
 						width: 100%;
 						vertical-align: middle;
 						text-align: center;
-						//@include centrado;
+						@include centrado;
 					}
 				
 					.imagen_slider_sobre{
@@ -604,10 +603,10 @@ a.uk-accordion-title { height: 34px; font-family: "Gotham SSm A", "Gotham SSm B"
 	height: $altura_div_suscripcion;
 	background-color: #7E3355;
 	text-align: center;
+	display: block;
 
 	#forma_suscripcion{
-		margin-top: 0;
-		@include centrado;
+		margin: 14.8px auto;
 		width: 100%;
 
 		.form-group{
