@@ -392,13 +392,15 @@ a.uk-accordion-title { height: 34px; font-family: "Gotham SSm A", "Gotham SSm B"
 
 					.imagen_slider_fondo{
 						width: 100%;
+						display: inline-block;
 						vertical-align: middle;
 						text-align: center;
 						position: absolute;
 					}
 				
 					.imagen_slider_sobre{
-						width: 10%;
+						width: 20%;
+						display: inline-block;
 						top: 50%;
 						left: 50%;
 						position: absolute;
@@ -415,6 +417,12 @@ a.uk-accordion-title { height: 34px; font-family: "Gotham SSm A", "Gotham SSm B"
 			opacity: 0.8;
 		}
 	}
+}
+
+.item:before, .item.active:before{
+  display: inline-block;
+  vertical-align: middle;
+  height: 100%;
 }
 
 @media only screen and (min-width: 600px) and (max-width: 1024px){
