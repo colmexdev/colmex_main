@@ -737,7 +737,7 @@ a.uk-accordion-title { height: 34px; font-family: "Gotham SSm A", "Gotham SSm B"
 
   @media only screen and (min-width: 0px) and (max-width: 1460px){
 		#footer_der, #footer_izq, #footer_centro { height: 200px; }
-		#footer_centro { font-size: 13px; }
+		#footer_centro { font-size: 13px; border: none;}
 	}
 
   @media only screen and (min-width: 0px) and (max-width: 1160px){
@@ -749,7 +749,7 @@ a.uk-accordion-title { height: 34px; font-family: "Gotham SSm A", "Gotham SSm B"
 		#footer_der { 
 			height: auto;
 			padding-left: 0;
-			margin-top: 15px;
+			margin-top: 10px;
 			.links { 
 				margin: 0 auto;
 				width: auto;
@@ -776,14 +776,7 @@ a.uk-accordion-title { height: 34px; font-family: "Gotham SSm A", "Gotham SSm B"
 			}
 		}	
 	}
-
-  #redes_footer:before {      
-    display: inline-block;
-    vertical-align: middle; 
-    height: 100%;
-	}
 }
-
 
 
 
