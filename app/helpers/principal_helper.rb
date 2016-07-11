@@ -25,6 +25,7 @@ module PrincipalHelper
       slides = 1 
     end
     j = 0
+    primer_item = true;
     for i in 1..slides
       k = 1
       bloque_html = bloque_html + '<div class=' + (i==1 ? '"item active"' : '"item"') + '>' 
@@ -35,7 +36,8 @@ module PrincipalHelper
           bloque_opt_html = bloque_opt_html + '</div><div class="item">'
         end
         bloque_opt_html = bloque_opt_html + '<div class="evento">'
-        bloque_tiny_html = bloque_tiny_html + '<div class=' + (i==1 ? '"item active"' : '"item"') + '><div class="evento">'
+        bloque_tiny_html = bloque_tiny_html + '<div class=' + (primer_item ? '"item active"' : '"item"') + '><div class="evento">'
+        primer_item = false;
         if j < @resultado.each.length
           fila = @resultado.each[j]
           if k == 1
