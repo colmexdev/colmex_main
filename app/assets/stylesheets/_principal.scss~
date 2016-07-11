@@ -387,14 +387,14 @@ a.uk-accordion-title { height: 34px; font-family: "Gotham SSm A", "Gotham SSm B"
 			.item, .item.active{
 				overflow: hidden;
 				height: 100%;
+				position: relative;
 			
 				.liga_img{
-					display: inline-block;
-					vertical-align: middle;
 
 					.imagen_slider_fondo{
 						width: 100%;
 						text-align: center;
+						position: absolute;
 					}
 				
 					.imagen_slider_sobre{
@@ -404,14 +404,6 @@ a.uk-accordion-title { height: 34px; font-family: "Gotham SSm A", "Gotham SSm B"
 						position: absolute;
 					}
 				}
-			}
-
-			.item:before, .item.active:before{
-				content: ' ';
-				display: inline-block;
-				vertical-align: middle;
-				height: 100%;
-				width: 100%;
 			}
 		}
 		.carousel-control.right, .carousel-control.left{
