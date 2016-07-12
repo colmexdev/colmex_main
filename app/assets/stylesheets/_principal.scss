@@ -690,14 +690,14 @@ a.uk-accordion-title { height: 34px; font-family: "Gotham SSm A", "Gotham SSm B"
 	img { @include centrado; width: 90%; max-height: 90%; } 
 }
 
-@media only screen and (min-width: 0px) and (max-width: 992px){
+@media only screen and (min-width: 0px) and (max-width: 1260px){
 	#fundacion-colmex, #video-colmex { height: 325px; }
 }
 
 @media only screen and (min-width: 585px) and (max-width: 992px){
 	#fundacion-colmex{ 
-		#div-donacion { width: 75%; }
-		#div-img-fundacion { width: 25%; }
+		#div-donacion { width: 65%; }
+		#div-img-fundacion { width: 35%; }
  }
 }
 
