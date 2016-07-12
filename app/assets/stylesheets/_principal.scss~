@@ -98,7 +98,7 @@ html, body{ height: 100%; }
 	background-color: #E6E6E6;
 	border-radius: 0;
 
-	.nav_opciones, .nav_opciones_idioma, .nav_opciones_mail, .nav_opciones_intranet{
+	.nav_opciones{
 		display: block;
 		float: left;
 		font-weight: 700;
@@ -109,6 +109,7 @@ html, body{ height: 100%; }
 
 	.idioma{
 		width: $ancho_idioma;
+		padding-top: 10px;
 
     >.activo.en, .activo.sp{
 			color: $color_textos_navbar_sel;
@@ -133,6 +134,7 @@ html, body{ height: 100%; }
 
 	.mail{
 		width: 210px;
+		padding-top: 10px;
 
 		img{
 			width: 25px;
@@ -142,6 +144,7 @@ html, body{ height: 100%; }
 
 	.intranet{
 		width: 130px;
+		padding-top: 10px;
 
 		img{
 			width: 20px;
