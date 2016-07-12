@@ -688,9 +688,10 @@ a.uk-accordion-title { height: 34px; font-family: "Gotham SSm A", "Gotham SSm B"
 			position: relative;
 
 			#comodin{
-				@include centrado;
+				
 
 				.boton{
+					@include centrado;
 					display: inline-block;
 					background-color: #9E6680;
 					font-size: 14px;
