@@ -687,8 +687,12 @@ a.uk-accordion-title { height: 34px; font-family: "Gotham SSm A", "Gotham SSm B"
 			p { padding-top: 55px; font-size: 13px; }
 		}
 
-		@media only screen and (min-width: 520px) and (max-width: 767px){
-			p { padding-top: 35px; font-size: 15px; }
+		@media only screen and (min-width: 520px) and (max-width: 570px){
+			p { padding-top: 45px; font-size: 15px; }
+		}
+
+		@media only screen and (min-width: 570px) and (max-width: 670px){
+			p { padding-top: 45px; font-size: 17px; }
 		}
 
 		#contenedor-botones{
