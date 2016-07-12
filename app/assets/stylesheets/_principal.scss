@@ -670,6 +670,7 @@ a.uk-accordion-title { height: 34px; font-family: "Gotham SSm A", "Gotham SSm B"
 	padding: 15px;
 
 	#div-donacion{ 
+		background-color: #CCCCCC;
 		width: 50%; 
 		height: 100%; 
 		display: inline-block;
@@ -680,7 +681,7 @@ a.uk-accordion-title { height: 34px; font-family: "Gotham SSm A", "Gotham SSm B"
 		height: 100%;
 		position: relative; 
 		float: right; 
-		img { @include centrado; width: inherit; height: inherit; }
+		img { @include centrado; width: 100%; height: 100%; }
 	}
 }
 
