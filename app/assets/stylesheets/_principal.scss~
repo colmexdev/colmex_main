@@ -677,38 +677,44 @@ a.uk-accordion-title { height: 34px; font-family: "Gotham SSm A", "Gotham SSm B"
 
 		p{
 			margin-top: 140px;
+			margin-bottom: 0;
 			padding: 0 25px;
+			display: block;
+			height: 80%;
 		}
 
-		.boton{
-			background-color: #9E6680;
-			font-size: 18px;
-			display: inline-block;
-			border-color: #470020;
-			border-width: 2px;
-			border-style: solid;
-			height: 50px;
-			width: 33.33%;
-			text-align: center;
-			margin: 0 auto;
+		#contenedor{
+			height: 20%;
+			.boton{
+				background-color: #9E6680;
+				font-size: 18px;
+				display: inline-block;
+				border-color: #470020;
+				border-width: 2px;
+				border-style: solid;
+				height: 50px;
+				width: 33.33%;
+				text-align: center;
+				margin: 0 auto;
 		
 
-			a{
-				color: #fff;
-				line-height: 46px;
-				display: block;
+				a{
+					color: #fff;
+					line-height: 46px;
+					display: block;
 
-				span{
-					display: inline-block;
-					vertical-align: middle;
-					line-height: normal;
-				}
+					span{
+						display: inline-block;
+						vertical-align: middle;
+						line-height: normal;
+					}
 
-				@media only screen and (min-width: 0px) and (max-width: 840px){
-					span { font-size: 11px; } 
-				}
-				@media only screen and (min-width: 840px) and (max-width: 994px){
-					span { font-size: 15px; } 
+					@media only screen and (min-width: 0px) and (max-width: 840px){
+						span { font-size: 11px; } 
+					}
+					@media only screen and (min-width: 840px) and (max-width: 994px){
+						span { font-size: 15px; } 
+					}
 				}
 			}
 		}

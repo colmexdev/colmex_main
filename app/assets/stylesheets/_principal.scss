@@ -683,8 +683,9 @@ a.uk-accordion-title { height: 34px; font-family: "Gotham SSm A", "Gotham SSm B"
 			height: 80%;
 		}
 
-		#contenedor{
+		#contenedor-botones{
 			height: 20%;
+
 			.boton{
 				background-color: #9E6680;
 				font-size: 18px;
@@ -698,7 +699,7 @@ a.uk-accordion-title { height: 34px; font-family: "Gotham SSm A", "Gotham SSm B"
 				margin: 0 auto;
 		
 
-				a{
+				.boton-donar{
 					color: #fff;
 					line-height: 46px;
 					display: block;
