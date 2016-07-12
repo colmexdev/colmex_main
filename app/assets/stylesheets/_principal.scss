@@ -692,6 +692,9 @@ a.uk-accordion-title { height: 34px; font-family: "Gotham SSm A", "Gotham SSm B"
 
 @media only screen and (min-width: 0px) and (max-width: 1260px){
 	#fundacion-colmex, #video-colmex { height: 350px; }
+}
+
+@media only screen and (min-width: 0px) and (max-width: 767px){
 	#video-colmex { img { height: 300px; } }
 }
 
