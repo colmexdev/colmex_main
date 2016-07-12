@@ -91,8 +91,8 @@
 
 	<div class="row"> <!-- Fila para revistas -->
 		<div class="col-md-12" id="div_revistas"> <!-- Columnas para revistas -->
-			<div class="col-xs-12 col-sm-4 revista"><%= link_to(image_tag('revistas-izq.png'), "#") %></div>
-			<div class="col-xs-12 col-sm-4 revista"><%= link_to(image_tag('revistas-centro.png'), "#") %></div>
+			<div class="col-xs-6 col-sm-4 revista"><%= link_to(image_tag('revistas-izq.png'), "#") %></div>
+			<div class="col-xs-6 col-sm-4 revista"><%= link_to(image_tag('revistas-centro.png'), "#") %></div>
 			<div class="col-xs-12 col-sm-4 revista"><%= link_to(image_tag('revistas-der.png'), "#") %></div>
 		</div> <!-- Cierre de columnas para revistas -->
 	</div> <!-- Cierre de fila para revistas -->
