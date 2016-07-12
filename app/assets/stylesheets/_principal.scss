@@ -669,13 +669,14 @@ a.uk-accordion-title { height: 34px; font-family: "Gotham SSm A", "Gotham SSm B"
 	padding: 30px 15px;
 
 	#div-donacion{ 
-		background-color: #EEEEEE;
+		background-color: #F9F9F9;
 		width: 50%; 
 		height: 100%; 
 		display: inline-block;
 		float: left;
 
 		p{
+			color: #4D4D4D;
 			margin-bottom: 0;
 			padding: 0 25px;
 			padding-top: 100px;
@@ -790,11 +791,13 @@ a.uk-accordion-title { height: 34px; font-family: "Gotham SSm A", "Gotham SSm B"
 		#video-colmex { img { height: 294px; } }
 	}
 
+//Estilos que afectan a la sección de la frase
 #div_frase{
 	height: 250px;
-	background-color: #00C000;
+	background-color: #FFFFFF;
 }
 
+//Estilos que afectan a la sección de transparencia
 #div_transparencia{
 	height: 250px;
 	background-color: #FFFFFF;
