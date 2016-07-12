@@ -686,35 +686,40 @@ a.uk-accordion-title { height: 34px; font-family: "Gotham SSm A", "Gotham SSm B"
 		#contenedor-botones{
 			height: 20%;
 			padding-left: 41px;
+			position: relative;
 
-			.boton{
-				display: inline-block;
-				background-color: #9E6680;
-				font-size: 14px;
-				border-color: #470020;
-				border-width: 2px;
-				border-style: solid;
-				height: 50px;
-				width: 110px;
-				text-align: center;
+			#comodin{
+				@include centrado;
+
+				.boton{
+					display: inline-block;
+					background-color: #9E6680;
+					font-size: 14px;
+					border-color: #470020;
+					border-width: 2px;
+					border-style: solid;
+					height: 50px;
+					width: 110px;
+					text-align: center;
 		
 
-				.boton-donar{
-					color: #fff;
-					line-height: 46px;
-					display: block;
+					.boton-donar{
+						color: #fff;
+						line-height: 46px;
+						display: block;
 
-					span{
-						display: inline-block;
-						vertical-align: middle;
-						line-height: normal;
-					}
+						span{
+							display: inline-block;
+							vertical-align: middle;
+							line-height: normal;
+						}
 
-					@media only screen and (min-width: 0px) and (max-width: 840px){
-						span { font-size: 11px; } 
-					}
-					@media only screen and (min-width: 840px) and (max-width: 994px){
-						span { font-size: 15px; } 
+						@media only screen and (min-width: 0px) and (max-width: 840px){
+							span { font-size: 11px; } 
+						}
+						@media only screen and (min-width: 840px) and (max-width: 994px){
+							span { font-size: 15px; } 
+						}
 					}
 				}
 			}

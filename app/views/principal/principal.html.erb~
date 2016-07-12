@@ -110,10 +110,10 @@
 					<p><%= t('donacion.texto') %></p>
 					<div id="contenedor-botones">
 						<div class="boton">
-							<a href="#"><span><%= t('donacion.boton_conoce') %></span></a>
+							<a href="#" class="boton-donar"><span><%= t('donacion.boton_conoce') %></span></a>
 						</div>
 						<div class="boton">
-							<a href="#"><span><%= t('donacion.boton_donar') %></span></a>
+							<a href="#" class="boton-donar"><span><%= t('donacion.boton_donar') %></span></a>
 						</div>
 					</div>
 				</div>
@@ -123,7 +123,7 @@
 			</div>
 
 			<div class="col-xs-12 col-sm-6" id="video-colmex">
-				<a href="https://www.youtube.com/watch?v=-LX7WrHCaUA" data-uk-lightbox data-lightbox-type="video" onclick="return false;">
+				<a href="https://www.youtube.com/watch?v=-LX7WrHCaUA" data-uk-lightbox data-lightbox-type="video">
 					<%= image_tag("video.png") %>
 				</a>
 			</div>
