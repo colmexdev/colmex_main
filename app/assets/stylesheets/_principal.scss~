@@ -637,7 +637,7 @@ a.uk-accordion-title { height: 34px; font-family: "Gotham SSm A", "Gotham SSm B"
 	}
 }
 
-@media only screen and (min-width: 0px) and (max-width: 768px){
+@media only screen and (min-width: 0px) and (max-width: 769px){
 	#div_suscripcion{
 		height: 130px;
 		#forma_suscripcion{
@@ -660,7 +660,13 @@ a.uk-accordion-title { height: 34px; font-family: "Gotham SSm A", "Gotham SSm B"
 		height: 100%;
 		position: relative;
 
-		a{ img{ @include centrado; } }
+		a{ 
+			img{ 
+				@include centrado; 
+				max-height: 200px;
+				max-width: 350px;
+			} 
+		}
 	}
 }
 
