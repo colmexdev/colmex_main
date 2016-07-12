@@ -35,14 +35,6 @@ $ancho_flechas_eventos: 60px;
 $color_flechas_eventos: #993366;
 $ancho_division_eventos: 25%;                         
 
-$altura_div_suscripcion: 70px;
-$color_div_suscripcion: #993333;
-$color_texto_suscripcion: #FFFFFF;
-$fuente_label: "Whitney SSm";
-$estilo_label: normal;
-$tamano_label: 25px;
-$peso_label: 500;
-$padding_sup_label: 5px;
 $ancho_textbox_suscripcion: 220px;
 $color_textbox_suscripcion: #FFFFFF;
 $margen_sup_textbox_suscripcion: 5px;
@@ -51,13 +43,6 @@ $margen_der_textbox_suscripcion: 20px;
 $color_fondo_boton_suscripcion: #C76BB0;
 $color_texto_boton_suscripcion: #FFFFFF;
 $color_borde_boton_suscripcion: #993366;
-$fuente_boton: "Whitney SSm";
-$estilo_boton: normal;
-$tamano_boton: 18px;
-$peso_boton: 400;
-
-
-$altura_div_revistas: 280px;
 
 $altura_div_descubre: 700px;
 
@@ -600,7 +585,7 @@ a.uk-accordion-title { height: 34px; font-family: "Gotham SSm A", "Gotham SSm B"
 
 
 #div_suscripcion{
-	height: $altura_div_suscripcion;
+	height: 70px;
 	background-color: #7E3355;
 	text-align: center;
 	display: block;
@@ -637,9 +622,10 @@ a.uk-accordion-title { height: 34px; font-family: "Gotham SSm A", "Gotham SSm B"
 	}
 }
 
-@media only screen and (min-width: 0px) and (max-width: 769px){
+@media only screen and (min-width: 0px) and (max-width: 767px){
 	#div_suscripcion{
 		height: 130px;
+
 		#forma_suscripcion{
 			height: 100%;
 			padding: 0;
@@ -654,7 +640,7 @@ a.uk-accordion-title { height: 34px; font-family: "Gotham SSm A", "Gotham SSm B"
 
 //Clases que afectan a la sección de revistas
 #div_revistas{
-	height: $altura_div_revistas;
+	height: 280px;
 	background-color: #FFFFFF;
 
 	.revista{
@@ -673,8 +659,8 @@ a.uk-accordion-title { height: 34px; font-family: "Gotham SSm A", "Gotham SSm B"
 
 @media only screen and (max-width: 768px) {
 	#div_revistas{ 
-		height: 150px;
-		.revista { a { img { max-height: 100px; max-width: 190px; } } } 
+		height: 180px;
+		.revista { a { img { max-height: 120px; max-width: 190px; } } } 
 	}
 }
 
