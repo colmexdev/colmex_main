@@ -46,10 +46,6 @@ $color_borde_boton_suscripcion: #993366;
 
 $altura_div_descubre: 700px;
 
-$altura_div_logos: 500px;
-
-$altura_div_frase: 250px;
-
 //Mixins para evitar repeticiones
 
 @mixin centrado {
@@ -668,12 +664,12 @@ a.uk-accordion-title { height: 34px; font-family: "Gotham SSm A", "Gotham SSm B"
 }
 
 #div_logos{
-	height: $altura_div_logos;
-	background-color: #00F0C0;
+	height: 500px;
+	background-color: #FFFFFF;
 }
 
 #div_frase{
-	height: $altura_div_frase;
+	height: 250px;
 	background-color: #00C000;
 }
 
