@@ -110,7 +110,7 @@
 
 			<div class="col-xs-12 col-md-6" id="video-colmex">
 				<video controls class="uk-responsive-width" width="90%" height="90%">
-				<source src="https://www.youtube.com/embed/-LX7WrHCaUA" data-uk-lightbox title="Explora el Colegio de México">
+				<source src="https://www.youtube.com/watch?v=-LX7WrHCaUA" data-uk-lightbox title="Explora el Colegio de México">
 				</video>
 			</div>
 
