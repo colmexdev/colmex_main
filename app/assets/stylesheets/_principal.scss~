@@ -674,7 +674,8 @@ a.uk-accordion-title { height: 34px; font-family: "Gotham SSm A", "Gotham SSm B"
 	#div-img-fundacion{ 
 		width: 50%; 
 		height: 100%;
-		position: relative;  
+		position: relative; 
+		float: right; 
 		img { @include centrado; }
 	}
 }
