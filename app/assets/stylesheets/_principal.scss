@@ -680,13 +680,15 @@ a.uk-accordion-title { height: 34px; font-family: "Gotham SSm A", "Gotham SSm B"
 #div_transparencia{
 	height: 250px;
 	background-color: #FFFFFF;
-
-	#transp-img{
-		height: 100%;
-		text-align: center;
-		line-height: 250px;
-
-		a { img { display: inline-block; max-height: 200px; max-width: 180px;} }
+	text-align: center;
+	line-height: 250px;
+	a { 
+		img { 
+			display: inline-block; 
+			max-height: 200px;
+			max-width: 180px;
+			margin: 0 20px;
+		} 
 	}
 }
 
