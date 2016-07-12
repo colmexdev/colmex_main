@@ -106,9 +106,10 @@
 	<div class="row"> <!-- Fila para logos COLMEX -->
 
 			<div class="col-xs-12 col-md-6" id="fundacion-colmex">
-				<div class="div-donacion">
+				<div id="div-donacion">
 				</div>
-				<div class="div-img-fundacion">
+				<div id="div-img-fundacion">
+					<%= image_tag('logo-fundacion-colmex.jpg') %>
 				</div>
 			</div>
 
