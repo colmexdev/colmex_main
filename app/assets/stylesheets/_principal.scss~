@@ -652,6 +652,7 @@ a.uk-accordion-title { height: 34px; font-family: "Gotham SSm A", "Gotham SSm B"
 	}
 }
 
+//Clases que afectan a la sección de revistas
 #div_revistas{
 	height: $altura_div_revistas;
 	background-color: #FFFFFF;
@@ -673,7 +674,7 @@ a.uk-accordion-title { height: 34px; font-family: "Gotham SSm A", "Gotham SSm B"
 @media only screen and (min-width: 768px) and (max-width: 960px){
 	#div_revistas{ 
 		height: 150px;
-		.revistas { a { img { max-height: 100px; } } } 
+		.revista { a { img { max-height: 100px; max-width:  } } } 
 	}
 }
 
