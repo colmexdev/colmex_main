@@ -688,7 +688,7 @@ a.uk-accordion-title { height: 34px; font-family: "Gotham SSm A", "Gotham SSm B"
 #video-colmex{ 
 	height: 500px;
 	position: relative;
-	img { @include centrado; } 
+	img { @include centrado; width: 90%; max-height: 90%; } 
 }
 
 @media only screen and (min-width: 0px) and (max-width: 650px){
