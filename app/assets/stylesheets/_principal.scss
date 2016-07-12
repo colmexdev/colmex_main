@@ -678,14 +678,17 @@ a.uk-accordion-title { height: 34px; font-family: "Gotham SSm A", "Gotham SSm B"
 		p{
 			margin-bottom: 0;
 			padding: 0 25px;
+			padding-top: 100px;
 			display: block;
 			height: 80%;
 		}
 
 		#contenedor-botones{
 			height: 20%;
+			padding-left: 41px;
 
 			.boton{
+				display: inline-block;
 				background-color: #9E6680;
 				font-size: 14px;
 				border-color: #470020;
@@ -694,7 +697,6 @@ a.uk-accordion-title { height: 34px; font-family: "Gotham SSm A", "Gotham SSm B"
 				height: 50px;
 				width: 110px;
 				text-align: center;
-				margin: 0 auto;
 		
 
 				.boton-donar{

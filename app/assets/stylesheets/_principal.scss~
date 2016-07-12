@@ -687,13 +687,12 @@ a.uk-accordion-title { height: 34px; font-family: "Gotham SSm A", "Gotham SSm B"
 
 			.boton{
 				background-color: #9E6680;
-				font-size: 18px;
-				display: inline-block;
+				font-size: 14px;
 				border-color: #470020;
 				border-width: 2px;
 				border-style: solid;
 				height: 50px;
-				width: 33.33%;
+				width: 110px;
 				text-align: center;
 				margin: 0 auto;
 		
