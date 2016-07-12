@@ -684,7 +684,8 @@ a.uk-accordion-title { height: 34px; font-family: "Gotham SSm A", "Gotham SSm B"
 		}
 
 		#contenedor-botones{
-			height: 20%;
+			display: table;
+			padding: 0 15px;
 
 			.boton{
 				

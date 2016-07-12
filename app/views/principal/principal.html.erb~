@@ -112,6 +112,7 @@
 						<div class="boton">
 							<a href="#" class="boton-donar"><span><%= t('donacion.boton_conoce') %></span></a>
 						</div>
+						<div class="boton"></div>
 						<div class="boton">
 							<a href="#" class="boton-donar"><span><%= t('donacion.boton_donar') %></span></a>
 						</div>
