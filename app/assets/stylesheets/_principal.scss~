@@ -687,7 +687,7 @@ a.uk-accordion-title { height: 34px; font-family: "Gotham SSm A", "Gotham SSm B"
 			display: table;
 			width: 100%;
 			border-collapse: separate;
-			border-spacing: 0 20px;
+			border-spacing: 20px 0;
 			padding: 0 20px;
 
 			.boton{
@@ -714,11 +714,8 @@ a.uk-accordion-title { height: 34px; font-family: "Gotham SSm A", "Gotham SSm B"
 						line-height: normal;
 					}
 
-					@media only screen and (min-width: 0px) and (max-width: 840px){
+					@media only screen and (min-width: 0px) and (max-width: 1070px){
 						span { font-size: 11px; } 
-					}
-					@media only screen and (min-width: 840px) and (max-width: 994px){
-						span { font-size: 15px; } 
 					}
 				}
 			}

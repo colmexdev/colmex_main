@@ -691,7 +691,6 @@ a.uk-accordion-title { height: 34px; font-family: "Gotham SSm A", "Gotham SSm B"
 			padding: 0 20px;
 
 			.boton{
-				
 				display: table-cell;
 				background-color: #9E6680;
 				font-size: 14px;
@@ -714,13 +713,20 @@ a.uk-accordion-title { height: 34px; font-family: "Gotham SSm A", "Gotham SSm B"
 						line-height: normal;
 					}
 
-					@media only screen and (min-width: 0px) and (max-width: 840px){
+					@media only screen and (min-width: 0px) and (max-width: 1070px){
 						span { font-size: 11px; } 
 					}
-					@media only screen and (min-width: 840px) and (max-width: 994px){
-						span { font-size: 15px; } 
-					}
 				}
+			}
+
+			#conocer{
+				background-color: #9E6680;
+				border: solid 2px #5E002B;
+			}
+
+			#donar{	
+				background-color: #7E3355;
+				border: solid 2px #470020;
 			}
 		}
 	}
