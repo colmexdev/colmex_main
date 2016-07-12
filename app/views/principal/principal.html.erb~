@@ -120,5 +120,4 @@
 	</div> <!-- Cierre de fila para transparencia -->
 </div> <!-- Cierre del cuerpo -->
 
-
 <%= render 'principal/footer' %>
