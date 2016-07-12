@@ -669,7 +669,7 @@ a.uk-accordion-title { height: 34px; font-family: "Gotham SSm A", "Gotham SSm B"
 	padding: 30px 15px;
 
 	#div-donacion{ 
-		background-color: #CCCCCC;
+		background-color: #EEEEEE;
 		width: 50%; 
 		height: 100%; 
 		display: inline-block;
@@ -700,7 +700,7 @@ a.uk-accordion-title { height: 34px; font-family: "Gotham SSm A", "Gotham SSm B"
 }
 
 @media only screen and (min-width: 585px) and (max-width: 767px){
-	#fundacion-colmex{ padding: 30px 40px 0 40px;
+	#fundacion-colmex{ padding: 30px 30px 0 30px;
 		#div-donacion { width: 60%; }
 		#div-img-fundacion { width: 40%; }
  }
