@@ -114,6 +114,13 @@
 				</video>
 			</div>
 
+			<div id="video-lightbox" class="uk-modal">
+				<div class="uk-modal-dialog">
+				    <a class="uk-modal-close uk-close"></a>
+				    ...
+				</div>
+		</div>
+
 	</div> <!-- Cierre de fila logos COLMEX -->
 
 	<div class="row"> <!-- Fila para frase -->
