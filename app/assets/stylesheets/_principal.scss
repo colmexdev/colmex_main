@@ -672,7 +672,7 @@ a.uk-accordion-title { height: 34px; font-family: "Gotham SSm A", "Gotham SSm B"
 #video-colmex{ 
 	height: 500px;
 	position: relative;
-	iframe { @include centrado; } 
+	video { @include centrado; } 
 }
 
 #div_frase{
