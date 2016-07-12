@@ -108,10 +108,10 @@
 			<div class="col-xs-12 col-sm-6" id="fundacion-colmex">
 				<div id="div-donacion">
 					<p><%= t('donacion.texto') %></p>
-					<div>
+					<div class="boton">
 						<a href="#"><span><%= t('donacion.boton_conoce') %></span></a>
 					</div>
-					<div>
+					<div class="boton">
 						<a href="#"><span><%= t('donacion.boton_donar') %></span></a>
 					</div>
 				</div>
