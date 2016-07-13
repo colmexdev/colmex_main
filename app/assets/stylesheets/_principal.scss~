@@ -85,14 +85,14 @@ a, a:hover, a:active, a:visited, a:link{  text-decoration: none; }
 	font-family: "Gotham SSm A", "Gotham SSm B"; 
 	font-style: normal; 
 	font-weight: 700; 
-	font-size: 36px;
+	font-size: 28px;
 }
 
 .titulo-grande{
 	font-family: "Gotham SSm A", "Gotham SSm B"; 
 	font-style: normal; 
 	font-weight: 700; 
-	font-size: 44px; 
+	font-size: 34px; 
 	line-height:25px;
 }
 
