@@ -7,10 +7,12 @@
 	padding-top: 40px;
 	padding-right: 20px;
 	padding-left: 20px;
+	background-color: aqua;
 }
 
 #texto-sobre{
 	height: 100%;
 	width: 50%;
 	padding: 0 20px;
+	background-color: red;
 }
