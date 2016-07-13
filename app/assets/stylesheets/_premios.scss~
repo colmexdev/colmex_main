@@ -13,3 +13,8 @@
 		padding-right: 30px;
 	}
 }
+
+.acordeon-premios{
+	width: 100%;
+	background-color: aqua;
+}
