@@ -30,6 +30,8 @@
 
 		img {display: inline; padding: 0 10px;}
 	}
+
+  .link-sobre:hover, .link-sobre:active { img { src: image-url("bt-flechita-abajo.png") }  }
 }
 
 #texto-sobre{
