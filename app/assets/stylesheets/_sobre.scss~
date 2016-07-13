@@ -32,21 +32,6 @@
 	width: 60%;
 	min-height: 500px;
 	padding: 120px 20px 0 20px;
-
-	.titulo-chico{
-		font-family: "Gotham SSm A", "Gotham SSm B"; 
-		font-style: normal; 
-		font-weight: 700; 
-		font-size: 36px;
-	}
-
-	.titulo-grande{
-		font-family: "Gotham SSm A", "Gotham SSm B"; 
-		font-style: normal; 
-		font-weight: 700; 
-		font-size: 44px; 
-		line-height:25px;
-	}
 	
 	p { 
 		text-align: justify; 
