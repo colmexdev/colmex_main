@@ -717,7 +717,7 @@ a.uk-accordion-title { height: 34px; font-family: "Gotham SSm A", "Gotham SSm B"
 			width: 100%;
 			border-collapse: separate;
 			border-spacing: 20px 0;
-			padding: 0 20px;
+			padding: 0 5px;
 
 			.boton{
 				display: table-cell;
