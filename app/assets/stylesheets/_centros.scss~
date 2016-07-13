@@ -1,5 +1,7 @@
 /* Estilos para alterar las páginas de centros */
 
+.pad-top { padding-top:50px; }
+
 .medio.centro{
-	padding-top: 0;
+	padding-top: 20px;
 }
