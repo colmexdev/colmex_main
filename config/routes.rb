@@ -16,13 +16,15 @@ Rails.application.routes.draw do
 
   get 'panel/administrar'
 
-  get 'principal/sobre_el_colegio' => 'principal#sobre_el_colegio', :as => :sobre_el_colegio
+  get 'centros_de_estudio/inicio' => "centros_de_estudio#inicio", :as => :centros_de_estudio
 
-  get 'principal/centros_de_estudio' => 'principal#centros_de_estudio', :as => :centros_de_estudio
+  get 'centros_de_estudio/ceh' => "centros_de_estudio#ceh", :as => :ceh
+
+  get 'sobre_el_colegio/inicio' => 'sobre_el_colegio#inicio', :as => :sobre_el_colegio
+
+  get 'sobre_el_colegio/premios_y_distinciones' => 'sobre_el_colegio#premios_y_distinciones', :as => :premios
 
   get 'principal/programas_academicos' => 'principal#programas_academicos', :as => :programas_academicos
-
-  get 'principal/premios_y_distinciones' => 'principal#premios_y_distinciones', :as => :premios
 
   get 'principal/principios_eticos' => 'principal#principios_eticos', :as => :principios
 

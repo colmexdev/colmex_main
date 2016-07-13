@@ -19,4 +19,8 @@ class PrincipalController < ApplicationController
   def premios_y_distinciones
 
   end
+
+  def principios_eticos
+ 
+  end
 end

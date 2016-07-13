@@ -1,0 +1,4 @@
+class SobreElColegioController < ApplicationController
+  def inicio
+  end
+end
