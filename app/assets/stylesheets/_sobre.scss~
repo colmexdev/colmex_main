@@ -7,7 +7,7 @@
 	height:500px;
 	padding: 120px 40px 0 40px;
 
-	.img-muestra { display: block; width: 350px; }
+	.img-muestra { display: block; margin: 0 auto; min-height: 300px; max-width: 450px; }
 
 	.lista-links { list-style-type: none; padding-left: 150px; }
 
