@@ -13,7 +13,9 @@ progreso del país.
 		</p>
 	</div>
 	<div class="medio">
-		<%= image_tag("sobre.png", :class => "img-muestra") %>
+		<a href=<%= image_url("sobre.png") %> data-uk-lightbox data-lightbox-type="image">
+			<%= image_tag("sobre.png", :class => "img-muestra") %>
+		</a>
 	</div>
 
 	<div class="acordeon-premios">
