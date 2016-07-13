@@ -5,13 +5,11 @@
 	float: left;
 	width: 40%;
 	height:500px;
-	padding-top: 120px;
-	padding-right: 20px;
-	padding-left: 20px;
+	padding: 120px 40px 0 40px;
 
 	.img-muestra { display: block; margin: 0 auto; }
 
-	.lista-links { list-style-type: none; }
+	.lista-links { list-style-type: none; padding-left: 150px; }
 
 	.link-sobre{
 		color: #999999;
