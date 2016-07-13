@@ -27,7 +27,7 @@
 	}
 
 	.link-sobre{
-		color: #999999;
+		color: #4E4E4E;
 		font-size: 15px;
 		font-weight: 700;
 
@@ -41,5 +41,9 @@
 	min-height: 500px;
 	padding: 120px 20px 0 20px;
 	
-	p { text-align: justify; padding-right: 250px; }
+	p { 
+		text-align: justify; 
+		padding-right: 250px; 
+		font-size: 17px;
+	}
 }

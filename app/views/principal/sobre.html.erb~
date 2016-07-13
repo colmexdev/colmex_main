@@ -2,7 +2,7 @@
 
 <div id="cuerpo">
 	<div class="row">
-		<div id="titulo-sobre">
+		<div id="titulo-sobre">Sobre el Colegio
 		</div>
 		<div id="img-menus-sobre">
 			<a href=<%= image_url("sobre.png") %> data-uk-lightbox data-lightbox-type="image">
