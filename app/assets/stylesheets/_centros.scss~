@@ -2,8 +2,4 @@
 
 .medio.centro{
 	padding-top: 0;
-
-	>p{
-		text-algin: justify;
-	}
 }
