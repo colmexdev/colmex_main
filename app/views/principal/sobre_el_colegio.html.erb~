@@ -7,10 +7,10 @@
 				<%= image_tag("sobre.png", :class => "img-muestra") %>
 			</a>
 			<ul class="lista-links">
-				<li onmouseover="cambiaFlechaAbajo(<%= image_url 'bt-flechita-abajo.png' %>)" onmouseleave="cambiaFlechaFrente(<%= image_url 'bt-flechita.png' %>)"><%= construir_link("bt-flechita.png","Centros de Estudio",centros_de_estudio_url,"link-sobre") %></li>
-				<li onmouseover="cambiaFlechaAbajo(<%= image_url 'bt-flechita-abajo.png' %>)" onmouseleave="cambiaFlechaFrente(<%= image_url 'bt-flechita.png' %>)"><%= construir_link("bt-flechita.png","Publicaciones","#","link-sobre") %></li>
-				<li onmouseover="cambiaFlechaAbajo(<%= image_url 'bt-flechita-abajo.png' %>)" onmouseleave="cambiaFlechaFrente(<%= image_url 'bt-flechita.png' %>)"><%= construir_link("bt-flechita.png","Programa de Educación Digital","#","link-sobre") %></li>
-				<li onmouseover="cambiaFlechaAbajo(<%= image_url 'bt-flechita-abajo.png' %>)" onmouseleave="cambiaFlechaFrente(<%= image_url 'bt-flechita.png' %>)"><%= construir_link("bt-flechita.png","Revistas","#","link-sobre") %></li>
+				<li><%= construir_link("bt-flechita.png", "bt-flechita-abajo.png", "Centros de Estudio",centros_de_estudio_url,"link-sobre") %></li>
+				<li><%= construir_link("bt-flechita.png", "bt-flechita-abajo.png","Publicaciones","#","link-sobre") %></li>
+				<li><%= construir_link("bt-flechita.png", "bt-flechita-abajo.png","Programa de Educación Digital","#","link-sobre") %></li>
+				<li><%= construir_link("bt-flechita.png", "bt-flechita-abajo.png","Revistas","#","link-sobre") %></li>
 			</ul>
 		</div>
 		<div id="texto-sobre">

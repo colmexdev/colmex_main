@@ -1,0 +1,6 @@
+/* Estilos para la sección de premios y distinciones */
+
+.medio{
+	width:50%;
+	display: inline-block;
+}

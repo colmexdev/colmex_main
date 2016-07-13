@@ -1,0 +1,14 @@
+<%= render 'principal/barra' %>
+
+<div class="cuerpo">
+
+	<div class="medio">
+
+	</div>
+	<div class="medio">
+
+	</div>
+
+</div>
+
+<%= render 'principal/footer' %>
