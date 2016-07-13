@@ -16,7 +16,11 @@ Rails.application.routes.draw do
 
   get 'panel/administrar'
 
-  get 'centros_de_estudio/inicio'
+  get 'centros_de_estudio/inicio' => "centros_de_estudio#inicio", :as => :centros_de_estudio
+
+  get 'centros_de_estudio/ceh' => "centros_de_estudio#ceh", :as => :ceh
+
+  get 'centros_de_estudio/cee' => "centros_de_estudio#cee", :as => :cee
 
   get 'sobre_el_colegio/inicio' => 'sobre_el_colegio#inicio', :as => :sobre_el_colegio
 

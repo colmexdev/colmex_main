@@ -18,7 +18,19 @@ Rails.application.routes.draw do
 
   get 'centros_de_estudio/inicio' => "centros_de_estudio#inicio", :as => :centros_de_estudio
 
+  get 'centros_de_estudio/ceaa' => "centros_de_estudio#ceaa", :as => :ceaa
+
+  get 'centros_de_estudio/cedua' => "centros_de_estudio#cedua", :as => :cedua
+
   get 'centros_de_estudio/ceh' => "centros_de_estudio#ceh", :as => :ceh
+
+  get 'centros_de_estudio/cei' => "centros_de_estudio#cei", :as => :cei
+
+  get 'centros_de_estudio/cee' => "centros_de_estudio#cee", :as => :cee
+
+  get 'centros_de_estudio/cell' => "centros_de_estudio#cell", :as => :cell
+
+  get 'centros_de_estudio/ces' => "centros_de_estudio#ces", :as => :ces
 
   get 'sobre_el_colegio/inicio' => 'sobre_el_colegio#inicio', :as => :sobre_el_colegio
 
