@@ -18,7 +18,7 @@ Rails.application.routes.draw do
   get 'principal/sobre_el_colegio' => 'principal#sobre_el_colegio', :as => :sobre_el_colegio
   get 'principal/centros_de_estudio' => 'principal#centros_de_estudio', :as => :centros_de_estudio
   get 'principal/programas_academicos' => 'principal#programas_academicos', :as => :programas_academicos
-  get 'principal/premios_y_distinciones' => 'principal#premios', :as => :premios
+  get 'principal/premios_y_distinciones' => 'principal#premios_y_distinciones', :as => :premios
   get 'principal/principal'
   get 'principal/set_language' => 'principal#set_language', :as => :cambiar_idioma
   devise_scope :admin do
