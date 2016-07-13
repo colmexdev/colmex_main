@@ -18,4 +18,24 @@
 
 .acordeon-premios{
 	width: 100%;
+
+	.uk-accordion{
+
+		.uk-accordion-title{
+			background-color: #FFFFFF;
+			color: #4E4E4E;
+			border-bottom: solid 2px #4E4E4E;
+
+			.leave_img { display: block; margin: 0 10px; }
+			.hover_img { display: none; }
+		}
+
+		.uk-accordion-title.uk-active{
+			color: #7E3355;
+			border-bottom: solid 2px #7E3355;
+
+			.hover_img { display: block; margin: 0 10px; }
+			.leave_img { display: none; }
+		}
+	}
 }
