@@ -16,6 +16,8 @@ Rails.application.routes.draw do
 
   get 'panel/administrar'
   get 'principal/sobre' => 'principal#sobre', :as => :sobre_el_colegio
+  get 'principal/centros' => 'principal#centros', :as => :centros_de_estudio
+  get 'principal/programas' => 'principal#programas', :as => :programas_academicos
   get 'principal/principal'
   get 'principal/set_language' => 'principal#set_language', :as => :cambiar_idioma
   devise_scope :admin do
