@@ -90,4 +90,8 @@ module PrincipalHelper
       return l(Date.strptime(fechaI,"%d/%m/%Y"), format: :long) + "<br>" + l(Date.strptime(fechaF,"%d/%m/%Y"), format: :long)
     end
   end
+
+  def construir_link(imagen, texto, liga, clase)
+    link = '<a href="' + raw(liga) + '" class="' + clase + '">' + + ActionController::Base.helpers.image_tag(imagen) + raw(texto) + "</a>"
+  end
 end
