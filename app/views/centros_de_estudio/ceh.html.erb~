@@ -3,9 +3,6 @@
 <div id="cuerpo">
 	<span class="titulo-grande">Centro de Estudios Históricos</span>
 	<br>
-  <div class="medio centro">
-	</div>
-	<div class="medio centro">
-	</div>
+  
 </div>
 <%= render 'principal/footer' %>
