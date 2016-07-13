@@ -2,16 +2,15 @@
 
 <div id="cuerpo">
 	<div class="row">
-		<div id="titulo-sobre">Sobre el Colegio
-		</div>
 		<div id="img-menus-sobre">
 			<a href=<%= image_url("sobre.png") %> data-uk-lightbox data-lightbox-type="image">
 				<%= image_tag("sobre.png", :class => "img-muestra") %>
 			</a>
 			<ul class="lista-links">
-				<li><%= construir_link("bt-flechita.png","Liga 1","#","link-sobre") %></li>
-				<li><%= construir_link("bt-flechita.png","Liga 2","#","link-sobre") %></li>
-				<li><%= construir_link("bt-flechita.png","Liga un poco más larga para probar","#","link-sobre") %></li>
+				<li><%= construir_link("bt-flechita.png","Centros de Estudio",centros_de_estudio_url,"link-sobre") %></li>
+				<li><%= construir_link("bt-flechita.png","Publicaciones","#","link-sobre") %></li>
+				<li><%= construir_link("bt-flechita.png","Programa de Educación Digital","#","link-sobre") %></li>
+				<li><%= construir_link("bt-flechita.png","Revistas","#","link-sobre") %></li>
 			</ul>
 		</div>
 		<div id="texto-sobre">

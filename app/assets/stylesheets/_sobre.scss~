@@ -27,7 +27,7 @@
 	}
 
 	.link-sobre{
-		color: #999999;
+		color: #4E4E4E;
 		font-size: 15px;
 		font-weight: 700;
 
