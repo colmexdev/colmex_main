@@ -2,7 +2,6 @@ class PrincipalController < ApplicationController
   def principal
     I18n.locale = params[:locale]
     gon.ev_big, gon.ev_small, gon.ev_tiny = construye_slider_eventos
-    redirect_to :back
   end
 
   def sobre
