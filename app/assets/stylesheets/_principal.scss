@@ -82,7 +82,7 @@ a, a:hover, a:active, a:visited, a:link{  text-decoration: none; }
 .titulo {}
 .subtitulo {color: #838383}
 
-html{ height: 100%; }
+html, body{ height: 100%; }
 .container-fluid { min-height: 100%; position: relative;} 
 
 #contenedor_nav{
