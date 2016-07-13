@@ -1,0 +1,16 @@
+/* Estilos para la sección "Sobre el Colegio" */
+
+#img-menus{
+	position: fixed;
+	float: left;
+	height:100%;
+	padding-top: 40px;
+	padding-right: 20px;
+	padding-left: 20px;
+}
+
+#texto-sobre{
+	height: 100%;
+	width: 50%;
+	padding: 0 20px;
+}
