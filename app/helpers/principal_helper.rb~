@@ -92,6 +92,6 @@ module PrincipalHelper
   end
 
   def construir_link(imagen, texto, liga, clase)
-    link = '<a href="' + raw(liga) + '" class="' + raw(clase) + '">' + + ActionController::Base.helpers.image_tag(imagen) + raw(texto) + "</a>"
+    return ('<a href="' + raw(liga) + '" class="' + raw(clase) + '">' + + ActionController::Base.helpers.image_tag(imagen) + raw(texto) + "</a>").html_safe
   end
 end

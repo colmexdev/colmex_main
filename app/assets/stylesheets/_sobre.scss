@@ -28,10 +28,14 @@
 		font-size: 15px;
 		font-weight: 700;
 
-		img {display: inline; padding: 0 10px;}
+		.leave_img {display: inline; padding: 0 10px;}
+		.hover_img { display: none; }
 	}
 
-  .link-sobre:hover, .link-sobre:active { img { src: <%= image_url("bt-flechita-abajo.png") %> }  }
+	.link-sobre:hover, .link-sobre:active{
+		.hover_img {display: inline; padding: 0 10px;}
+		.leave_img { display: none; }
+	}
 }
 
 #texto-sobre{
