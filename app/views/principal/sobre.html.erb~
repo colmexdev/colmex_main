@@ -5,6 +5,8 @@
 		<div id="img-menus">
 				<a href=<%= image_url("sobre.png") %> data-uk-lightbox data-lightbox-type="image">
 					<%= image_tag("sobre.png") %>
+
+					<%= construir_link("bt-flechita.png","Liga 1","#","link-sobre") %>
 				</a>
 		</div>
 		<div id="texto-sobre">
