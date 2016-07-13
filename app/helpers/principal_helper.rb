@@ -90,4 +90,8 @@ module PrincipalHelper
       return l(Date.strptime(fechaI,"%d/%m/%Y"), format: :long) + "<br>" + l(Date.strptime(fechaF,"%d/%m/%Y"), format: :long)
     end
   end
+
+  def construir_links
+
+  end
 end
