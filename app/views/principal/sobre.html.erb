@@ -3,11 +3,13 @@
 <div id="cuerpo">
 	<div class="row">
 		<div id="img-menus">
-				<a href=<%= image_url("sobre.png") %> data-uk-lightbox data-lightbox-type="image">
-					<%= image_tag("sobre.png", :class => "img-muestra") %>
-
-					<%= construir_link("bt-flechita.png","Liga 1","#","link-sobre") %>
-				</a>
+			<a href=<%= image_url("sobre.png") %> data-uk-lightbox data-lightbox-type="image">
+				<%= image_tag("sobre.png", :class => "img-muestra") %>
+			</a>
+			<ul>
+				<li><%= construir_link("bt-flechita.png","Liga 1","#","link-sobre") %></li>
+				<li><%= construir_link("bt-flechita.png","Liga 2","#","link-sobre") %></li>
+			</ul>
 		</div>
 		<div id="texto-sobre">
 		</div>
