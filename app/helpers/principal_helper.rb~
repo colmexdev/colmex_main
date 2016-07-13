@@ -91,7 +91,7 @@ module PrincipalHelper
     end
   end
 
-  def construir_link(imagen, texto, liga, clase)
-    return ('<a href="' + raw(liga) + '" class="' + raw(clase) + '">' + + ActionController::Base.helpers.image_tag(imagen) + raw(texto) + "</a>").html_safe
+  def construir_link(imagen, imagen_hover, texto, liga, clase)
+    return ('<a href="' + raw(liga) + '" class="' + raw(clase) + '">' + ActionController::Base.helpers.image_tag(imagen, :class => "leave_img") + ActionController::Base.helpers.image_tag(imagen_hover, :class => "hover_img") + raw(texto) + "</a>").html_safe
   end
 end

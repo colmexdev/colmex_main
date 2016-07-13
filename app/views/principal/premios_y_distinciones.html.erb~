@@ -1,6 +1,6 @@
 <%= render 'principal/barra' %>
 
-<div class="cuerpo">
+<div id="cuerpo">
 
 	<div class="row">
 		<div class="medio">
@@ -24,13 +24,19 @@
 		<div class="acordeon-premios">
 			<div class="uk-accordion" data-uk-accordion>
 
-				<h3 class="uk-accordion-title">...</h3>
+				<h3 class="uk-accordion-title"><%= construir_encabezado("bt-flechita.ńg", "bt-flechita-abajo.png", "Institucionales") %></h3>
 				<div class="uk-accordion-content">...</div>
 
-				<h3 class="uk-accordion-title">...</h3>
+				<h3 class="uk-accordion-title"><%= construir_encabezado("bt-flechita.ńg", "bt-flechita-abajo.png", "Profesores eméritos") %></h3>
 				<div class="uk-accordion-content">...</div>
 
-				<h3 class="uk-accordion-title">...</h3>
+				<h3 class="uk-accordion-title"><%= construir_encabezado("bt-flechita.ńg", "bt-flechita-abajo.png", "Profesores-Investigadores") %></h3>
+				<div class="uk-accordion-content">...</div>
+			
+				<h3 class="uk-accordion-title"><%= construir_encabezado("bt-flechita.ńg", "bt-flechita-abajo.png", "Estudiantes") %></h3>
+				<div class="uk-accordion-content">...</div>
+
+				<h3 class="uk-accordion-title"><%= construir_encabezado("bt-flechita.ńg", "bt-flechita-abajo.png", "Egresados") %></h3>
 				<div class="uk-accordion-content">...</div>
 
 			</div>
