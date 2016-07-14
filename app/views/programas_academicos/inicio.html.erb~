@@ -9,13 +9,13 @@
 			<div class="medio centro">
 				<span class="titulo-chico morado"><%= t('botones.b3.opciones.op1') %></span>
 			</div>
-			<div class="medio-centro">
+			<div class="medio centro">
 				<%= image_tag("sobre.png", :class => "img-muestra img-pa") %>
 			</div>
 		</div>
 
 		<div id="seccion-mst">
-			<div class="medio-centro">
+			<div class="medio centro">
 				<%= image_tag("sobre.png", :class => "img-muestra img-pa") %>
 			</div>
 			<div class="medio centro">
@@ -27,7 +27,7 @@
 			<div class="medio centro">
 				<span class="titulo-chico morado"><%= t('botones.b3.opciones.op3') %></span>
 			</div>
-			<div class="medio-centro">
+			<div class="medio centro">
 				<%= image_tag("sobre.png", :class => "img-muestra img-pa") %>
 			</div>
 		</div>
