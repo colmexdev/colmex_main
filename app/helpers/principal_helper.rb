@@ -70,7 +70,7 @@ module PrincipalHelper
     bloque_html = bloque_html + '<div class="titulo_evento">' + fila["tituloActividad"].to_s + (fila["subtituloActividad"].to_s != nil ? (": " + fila["subtituloActividad"].to_s) : "") + "</div>"
 
     bloque_html = bloque_html + '<div class="lugar_fecha_evento">'
-    bloque_html = bloque_html + '<div class="cal">' +  '</div>'
+    bloque_html = bloque_html + '<div class="cal">' + ActionController::Base.helpers.image_tag("calendario.png", :class => "img_cal")  '</div>'
     bloque_html = bloque_html + '<div class="datos_evento">'
     bloque_html = bloque_html + arregloFecha(fila["fechaInicio"], fila["fechaFin"]) + "<br>"
     bloque_html = bloque_html + l(Time.parse(fila["horaInicio"]), format: "%H:%M") + " | " + l(Time.parse(fila["horaFin"]), format: "%H:%M") + "<br>"

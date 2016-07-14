@@ -70,7 +70,7 @@ module PrincipalHelper
     bloque_html = bloque_html + '<div class="titulo_evento">' + fila["tituloActividad"].to_s + (fila["subtituloActividad"].to_s != nil ? (": " + fila["subtituloActividad"].to_s) : "") + "</div>"
 
     bloque_html = bloque_html + '<div class="lugar_fecha_evento">'
-    bloque_html = bloque_html + '<div class="cal">' +  '</div>'
+    bloque_html = bloque_html + '<div class="cal">' + ActionController::Base.helpers.image_tag("calendario.png", :class => "img_cal")  '</div>'
     bloque_html = bloque_html + '<div class="datos_evento">'
     bloque_html = bloque_html + arregloFecha(fila["fechaInicio"], fila["fechaFin"]) + "<br>"
     bloque_html = bloque_html + l(Time.parse(fila["horaInicio"]), format: "%H:%M") + " | " + l(Time.parse(fila["horaFin"]), format: "%H:%M") + "<br>"
@@ -93,5 +93,9 @@ module PrincipalHelper
 
   def construir_link(imagen, imagen_hover, texto, liga, clase)
     return ('<a href="' + raw(liga) + '" class="' + raw(clase) + '">' + ActionController::Base.helpers.image_tag(imagen, :class => "leave_img") + ActionController::Base.helpers.image_tag(imagen_hover, :class => "hover_img") + raw(texto) + "</a>").html_safe
+  end
+
+  def construir_encabezado(imagen, imagen_hover, texto)
+    return (ActionController::Base.helpers.image_tag(imagen, :class => "leave_img") + ActionController::Base.helpers.image_tag(imagen_hover, :class => "hover_img") + raw(texto) ).html_safe
   end
 end
