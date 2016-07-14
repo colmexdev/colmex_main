@@ -77,7 +77,7 @@ module PrincipalHelper
     bloque_html = bloque_html + l(Time.parse(fila["horaInicio"]), format: "%H:%M") + " | " + l(Time.parse(fila["horaFin"]), format: "%H:%M") + "<br>"
     bloque_html = bloque_html + fila["sede"].to_s + ", " + fila["institucionSede"].to_s + "</div></div>"
 
-    bloque_html = bloque_html + '<div class="liga_evento"><a href="'+fila["liga"].to_s+'" class="liga_evento">'+t('eventos.liga')+'</a></div>'
+    bloque_html = bloque_html + '<div class="liga_evento"><a href="'+fila["liga"].to_s+'" class="liga_evento">'+t('eventos.liga')+ raw(' >') + '</a></div>'
 
     bloque_html = bloque_html + "</div>"
     return bloque_html
@@ -86,7 +86,7 @@ module PrincipalHelper
   def arregloFecha(fechaI, fechaF)
     diferencia = Date.strptime(fechaI,"%d/%m/%Y") - Date.strptime(fechaF,"%d/%m/%Y")
     if diferencia == 0
-      return l(Date.strptime(fechaI,"%d/%m/%Y"), format: :long) + "<br>"
+      return "<br>" + l(Date.strptime(fechaI,"%d/%m/%Y"), format: :long)
     else
       return l(Date.strptime(fechaI,"%d/%m/%Y"), format: :long) + "<br>" + l(Date.strptime(fechaF,"%d/%m/%Y"), format: :long)
     end
