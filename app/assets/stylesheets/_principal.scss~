@@ -527,9 +527,10 @@ a.uk-accordion-title { height: 34px; font-family: "Gotham SSm A", "Gotham SSm B"
 						.lugar_fecha_evento{
 							width: 100%;
 							height: 37.5%;
+							padding-top: 10px;
 
 							.cal{
-								padding-top: 13px;
+								padding-top: 3px;
 								min-width: 20px;
 								width: 8.33%;
 								height: 100%;
@@ -539,7 +540,6 @@ a.uk-accordion-title { height: 34px; font-family: "Gotham SSm A", "Gotham SSm B"
 							.datos_evento{
 								display: inline-block;
 								padding-left: 10px;
-								padding-top: 10px;
 								max-width: calc(100% - 22px);
 								max-width: -webkit-calc(100% - 22px);
 								max-width: -moz-calc(100% - 22px);
