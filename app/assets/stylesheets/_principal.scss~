@@ -224,7 +224,7 @@ html, body{ height: 100%; }
 			.mostrable{ display: inline-block; }
 		}
 
-		@media only screen and (min-width: 1071px), only screen and (min-device-width: 1071px) and (-webkit-min-device-pixel-ratio: 1) {
+		@media only screen and (min-width: 1070px){
 			.mostrable{ display: none; }
 		}
 	}
