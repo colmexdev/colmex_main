@@ -23,7 +23,7 @@ en:
         op6: "CELL"
         op7: "CES"
     b3:
-      texto: "College programs"
+      texto: "Academic programs"
       opciones:
         op1: "Bachelors"
         op2: "Masters"

@@ -12,7 +12,6 @@ Rails.application.routes.draw do
   resources :emeritos
   devise_for :admins
   resources :admins
-  
 
   get 'panel/administrar'
 
@@ -32,11 +31,11 @@ Rails.application.routes.draw do
 
   get 'centros_de_estudio/ces' => "centros_de_estudio#ces", :as => :ces
 
+  get 'programas_academicos/inicio' => "programas_academicos#inicio", :as => :programas_academicos
+
   get 'sobre_el_colegio/inicio' => 'sobre_el_colegio#inicio', :as => :sobre_el_colegio
 
   get 'sobre_el_colegio/premios_y_distinciones' => 'sobre_el_colegio#premios_y_distinciones', :as => :premios
-
-  get 'principal/programas_academicos' => 'principal#programas_academicos', :as => :programas_academicos
 
   get 'principal/principios_eticos' => 'principal#principios_eticos', :as => :principios
 

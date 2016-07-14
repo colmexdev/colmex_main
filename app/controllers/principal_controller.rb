@@ -4,14 +4,6 @@ class PrincipalController < ApplicationController
     gon.ev_big, gon.ev_small, gon.ev_tiny = construye_slider_eventos
   end
 
-  def centros_de_estudio
-
-  end
-
-  def programas_academicos
-
-  end
-
   def premios_y_distinciones
 
   end

@@ -1,0 +1,13 @@
+<%= render 'principal/barra' %>
+
+<div id="cuerpo">
+	<div class="row">
+		<span class="titulo-grande"><%= t('b3.texto') %></span>
+		<div class="medio">
+		</div>
+		<div class="medio">
+		</div>
+	</div>
+</div>
+
+<%= render 'principal/footer'%>
