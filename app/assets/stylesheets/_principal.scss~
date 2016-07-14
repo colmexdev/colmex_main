@@ -29,7 +29,6 @@ $bullet_slider: #CCCCCC;
 $bullet_slider_sel: #993366;
 $ancho_flechas_slider: 80px;
 
-$altura_div_eventos: 300px;
 $ancho_eventos: 100%;
 $ancho_flechas_eventos: 60px;
 $color_flechas_eventos: #993366;
@@ -492,9 +491,9 @@ a.uk-accordion-title { height: 34px; font-family: "Gotham SSm A", "Gotham SSm B"
 					}
 
 					.desc_evento{
-						min-width: calc(100% - 88px);
-						min-width: -moz-calc(100% - 88px);
-						min-width: -webkit-calc(100% - 88px);
+						max-width: calc(100% - 88px);
+						max-width: -moz-calc(100% - 88px);
+						max-width: -webkit-calc(100% - 88px);
 						width: 75%;
 						height: 100%;
 						overflow: hidden;
