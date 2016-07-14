@@ -35,11 +35,12 @@
 
 						window.onresize = function(){
 							var ancho_act = Math.max(document.documentElement.clientWidth, window.innerWidth || document.body.ClientWidth || 0);
-							if(ancho_act < 768 && ancho >= 768){
-								document.getElementById("render_eventos").innerHTML = gon.ev_tiny;
-								ancho = ancho_act;
-							}
-							else if(ancho_act < 1024 && (ancho >= 1024 || ancho <= 768)){
+							//if(ancho_act < 768 && ancho >= 768){
+							//	document.getElementById("render_eventos").innerHTML = gon.ev_tiny;
+							//	ancho = ancho_act;
+							//}
+							//else 
+							if(ancho_act < 1024 && (ancho >= 1024 /*|| ancho <= 768*/)){
 								document.getElementById("render_eventos").innerHTML = gon.ev_small;
 								ancho = ancho_act;
 							} 
