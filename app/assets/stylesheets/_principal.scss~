@@ -507,6 +507,8 @@ a.uk-accordion-title { height: 34px; font-family: "Gotham SSm A", "Gotham SSm B"
 							height: 25%;
 							text-align: left;
 							color: #5E002B;
+							text-overflow: ellipsis;
+							-o-text-overflow: ellipsis;
 							
 						}
 
