@@ -6,7 +6,7 @@
 			<span class="titulo-grande">Centro de Estudios Económicos</span>
 		</div>
 		<div class="medio centro">
-			<%= image_tag("sobre.png", :class=> "img-muestra") %>
+			<%= image_tag("sobre.png", :class=> "img-muestra img-centro") %>
 		</div>
 		<div class="medio centro">
 			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In gravida aliquam
