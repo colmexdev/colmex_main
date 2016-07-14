@@ -75,7 +75,7 @@ module PrincipalHelper
     bloque_html = bloque_html + '<div class="datos_evento">'
     bloque_html = bloque_html + arregloFecha(fila["fechaInicio"], fila["fechaFin"]) + "<br>"
     bloque_html = bloque_html + l(Time.parse(fila["horaInicio"]), format: "%H:%M") + " | " + l(Time.parse(fila["horaFin"]), format: "%H:%M") + "<br>"
-    bloque_html = bloque_html + fila["sede"].to_s + ", " + fila["institucionSede"].to_s + "</div></div>"
+    bloque_html = bloque_html + fila["sede"].to_s + ',<br><span>' + fila["institucionSede"].to_s + "</span></div></div>"
 
     bloque_html = bloque_html + '<div class="liga_evento"><a href="'+fila["liga"].to_s+'" class="liga_evento">' + t('eventos.liga') + ' >' + '</a></div>'
 
