@@ -494,7 +494,7 @@ a.uk-accordion-title { height: 34px; font-family: "Gotham SSm A", "Gotham SSm B"
 					.desc_evento{
 						min-width: calc(#{$ancho_division_eventos} - 88px);
 						min-width: -moz-calc(#{$ancho_division_eventos} - 88px);
-						min-width: -webkit-calc(#{$ancho_division_eventos} - 88px)
+						min-width: -webkit-calc(#{$ancho_division_eventos} - 88px);
 						width: 75%;
 						height: 100%;
 						overflow: hidden;
