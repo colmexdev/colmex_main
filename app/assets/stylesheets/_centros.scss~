@@ -13,3 +13,7 @@
 .centro{
 	padding: 20px 30px 30px 30px;
 }
+
+.img-centro{
+	padding-top: 40px;
+}
