@@ -43,6 +43,7 @@ module PrincipalHelper
           if k == 1
             fila["fechaFin"] = "26/06/2016"
             fila["centroSiglas"] = "CEDUA"
+            fila["subtituloActividad"] = "Una cadena larga para poder cortarla"
           end
           bloque_html = bloque_html + construirEvento(fila)
           bloque_opt_html = bloque_opt_html + construirEvento(fila)
@@ -67,7 +68,7 @@ module PrincipalHelper
     bloque_html = bloque_html + '<div class="desc_evento">'
 
     bloque_html = bloque_html + '<div class="tipo_evento"><p>' + fila["tipoActividad"].to_s + "</p></div>"
-    bloque_html = bloque_html + '<div class="titulo_evento"><p>' + fila["tituloActividad"].to_s + (fila["subtituloActividad"].to_s != nil ? (": " + fila["subtituloActividad"].to_s) : "") + "</p></div>"
+    bloque_html = bloque_html + '<div class="titulo_evento"><p>' + fila["tituloActividad"].to_s + (fila["subtituloActividad"].to_s != "" ? (": " + fila["subtituloActividad"].to_s) : "") + "</p></div>"
 
     bloque_html = bloque_html + '<div class="lugar_fecha_evento">'
     bloque_html = bloque_html + '<div class="cal">' + ActionController::Base.helpers.image_tag("calendario.png", :class => "img_cal") + '</div>'
