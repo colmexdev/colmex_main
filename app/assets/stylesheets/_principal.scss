@@ -433,6 +433,7 @@ a.uk-accordion-title { height: 34px; font-family: "Gotham SSm A", "Gotham SSm B"
 	height: 230px;
 	text-align: center;
 	overflow: hidden;
+	border-bottom: solid 1px rgba(50,50,50,0.3);
 
 	.carousel.slide{
 		position: relative;
@@ -506,6 +507,8 @@ a.uk-accordion-title { height: 34px; font-family: "Gotham SSm A", "Gotham SSm B"
 							height: 25%;
 							text-align: left;
 							color: #5E002B;
+							text-overflow: ellipsis;
+							-o-text-overflow: ellipsis;
 							
 						}
 
@@ -542,10 +545,6 @@ a.uk-accordion-title { height: 34px; font-family: "Gotham SSm A", "Gotham SSm B"
 						}
 					}
 				}
-
-				/*@media only screen and (min-width: 0px) and (max-width: 768px), only screen and (min-device-width: 0px) and (max-device-width: 768px) and (-webkit-min-device-pixel-ratio: 1){
-					.evento { width: 100%; }
-				}*/
 
 				@media only screen and (min-width: 0px) and (max-width: 1024px), only screen and (min-device-width: 0px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1){
 					.evento { 
