@@ -481,6 +481,7 @@ a.uk-accordion-title { height: 34px; font-family: "Gotham SSm A", "Gotham SSm B"
 
 					.img_evento{
 						float: left;
+						min-width: 88px;
 						width: 25%;
 						height: 100%;
 						
@@ -491,6 +492,9 @@ a.uk-accordion-title { height: 34px; font-family: "Gotham SSm A", "Gotham SSm B"
 					}
 
 					.desc_evento{
+						min-width: calc(#{$ancho_division_eventos} - 88px);
+						min-width: -moz-calc(#{$ancho_division_eventos} - 88px);
+						min-width: -webkit-calc(#{$ancho_division_eventos} - 88px)
 						width: 75%;
 						height: 100%;
 						overflow: hidden;
@@ -552,7 +556,7 @@ a.uk-accordion-title { height: 34px; font-family: "Gotham SSm A", "Gotham SSm B"
 					}
 				}
 
-				@media only screen and (min-width: 0px) and (max-width: 768px), only screen and (min-device-width: 0px) and (max-device-width: 600px) and (-webkit-min-device-pixel-ratio: 1){
+				@media only screen and (min-width: 0px) and (max-width: 768px), only screen and (min-device-width: 0px) and (max-device-width: 768px) and (-webkit-min-device-pixel-ratio: 1){
 					.evento { width: 100%; }
 				}
 
