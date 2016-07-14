@@ -530,7 +530,7 @@ a.uk-accordion-title { height: 34px; font-family: "Gotham SSm A", "Gotham SSm B"
 
 							.cal{
 								padding-top: 13px;
-								min-width: 22px;
+								min-width: 20px;
 								width: 8.33%;
 								height: 100%;
 								float: left;
@@ -554,7 +554,7 @@ a.uk-accordion-title { height: 34px; font-family: "Gotham SSm A", "Gotham SSm B"
 
 							}
 							
-							.titulo_evento:after {
+							.datos_evento:after {
 								content: "";
 								text-align: right;
 								position: absolute;
