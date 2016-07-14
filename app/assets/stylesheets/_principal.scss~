@@ -494,6 +494,7 @@ a.uk-accordion-title { height: 34px; font-family: "Gotham SSm A", "Gotham SSm B"
 							vertical-align: bottom;
 							text-align: left;
 							position: relative;
+							font-weight: 600;
 
 							p{
 								position: absolute;
@@ -510,7 +511,8 @@ a.uk-accordion-title { height: 34px; font-family: "Gotham SSm A", "Gotham SSm B"
 							line-height:1.2em;
 							position: relative;
 							height: 2.4em;
-							overflow: hidden;			
+							overflow: hidden;	
+							font-weight: 600;		
 						}
 
 						.titulo_evento:after {
@@ -519,7 +521,7 @@ a.uk-accordion-title { height: 34px; font-family: "Gotham SSm A", "Gotham SSm B"
 							position: absolute;
 							bottom: 0;
 							right: 0;
-							width: 80%;
+							width: 30%;
 							height: 1.2em;
 							background: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1) 50%);
 						}
