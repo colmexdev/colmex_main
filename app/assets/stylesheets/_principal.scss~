@@ -424,25 +424,13 @@ a.uk-accordion-title { height: 34px; font-family: "Gotham SSm A", "Gotham SSm B"
 	#div_slider{ height: 450px; } 
 }
 
-/*@media only screen and (min-width: 500px) and (max-width: 600px), only screen and (min-device-width: 500px) and (max-device-width: 600px) and (-webkit-min-device-pixel-ratio: 1){
-	#div_slider{ height: 325px; } 
-}
-
-@media only screen and (min-width: 400px) and (max-width: 500px), only screen and (min-device-width: 400px) and (max-device-width: 500px) and (-webkit-min-device-pixel-ratio: 1){
-	#div_slider{ height: 250px; } 
-}
-
-@media only screen and (min-width: 300px) and (max-width: 400px), only screen and (min-device-width: 300px) and (max-device-width: 400px) and (-webkit-min-device-pixel-ratio: 1){
-	#div_slider{ height: 200px; } 
-} */
-
 @media only screen and (min-width: 0px) and (max-width: 768px), only screen and (min-device-width: 0px) and (max-device-width: 768px) and (-webkit-min-device-pixel-ratio: 1){
 	#div_slider{ height: 400px; } 
 }
 
 //Clases que afectan la sección de eventos
 #div_eventos{
-	height: $altura_div_eventos;
+	height: 230px;
 	text-align: center;
 	overflow: hidden;
 
