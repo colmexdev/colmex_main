@@ -18,6 +18,7 @@
 @import "principal";
 @import "sobre";
 @import "premios";
+@import "centros";
 
 
 
