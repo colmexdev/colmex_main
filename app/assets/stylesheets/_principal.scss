@@ -552,6 +552,7 @@ a.uk-accordion-title { height: 34px; font-family: "Gotham SSm A", "Gotham SSm B"
 								line-height: 1.3em;
 								position: relative;
 								overflow: hidden;
+								white-space: nowrap;
 
 							}
 							
@@ -561,7 +562,7 @@ a.uk-accordion-title { height: 34px; font-family: "Gotham SSm A", "Gotham SSm B"
 								position: absolute;
 								bottom: 0;
 								right: 0;
-								width: 30%;
+								width: 20%;
 								height: 100%;
 								background: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1) 50%);
 							}
