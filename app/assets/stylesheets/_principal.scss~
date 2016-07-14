@@ -529,7 +529,7 @@ a.uk-accordion-title { height: 34px; font-family: "Gotham SSm A", "Gotham SSm B"
 							height: 37.5%;
 
 							.cal{
-								padding-top: 15px;
+								padding-top: 18px;
 								min-width: 22px;
 								width: 8.33%;
 								height: 100%;
@@ -546,7 +546,7 @@ a.uk-accordion-title { height: 34px; font-family: "Gotham SSm A", "Gotham SSm B"
 								width: 91.66%;
 								height: 100%;
 								text-align: left;
-								font-size: 12px;
+								font-size: 11px;
 								color: #999999;
 							}
 						}
