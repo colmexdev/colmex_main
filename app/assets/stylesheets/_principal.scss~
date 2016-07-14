@@ -86,9 +86,9 @@ a, a:hover, a:active, a:visited, a:link{  text-decoration: none; }
 	font-style: normal; 
 	font-weight: 700; 
 	font-size: 28px;
-
-	.morado{ color: #7E3355; }
 }
+
+.titulo-chico.morado{ color: #7E3355; }
 
 .titulo-grande{
 	font-family: "Gotham SSm A", "Gotham SSm B"; 
