@@ -1,0 +1,8 @@
+/* Estilos para las páginas principales */
+
+.titular-pagina{
+	display: block;
+	margin: 30px auto;
+	
+	.titulo-grande { padding- left: 30px; }
+}
