@@ -21,7 +21,11 @@
 @media only screen and (min-width: 0px) and (max-width: 1024px), only screen and (min-device-width: 0px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1){
 	.centro{
 		display: block;
+		float: none;
+		padding: 0;
+		padding-top: 10px;
 		margin: 0 auto;
+		padding-bottom: 35px;
 
 	}
 }
