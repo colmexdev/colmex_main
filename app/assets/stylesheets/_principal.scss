@@ -548,6 +548,24 @@ a.uk-accordion-title { height: 34px; font-family: "Gotham SSm A", "Gotham SSm B"
 								text-align: left;
 								font-size: 11px;
 								color: #999999;
+								position: relative;
+								line-height: 1em;
+
+								p{
+									position: absolute;
+									bottom: 0;
+								}
+							}
+							
+							.titulo_evento:after {
+								content: "";
+								text-align: right;
+								position: absolute;
+								bottom: 0;
+								right: 0;
+								width: 80%;
+								height: 100%;
+								background: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1) 50%);
 							}
 						}
 
