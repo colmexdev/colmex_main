@@ -33,7 +33,7 @@
 		</div>
 
 		<div id="seccion-cursos">
-			<div class="medio-centro">
+			<div class="medio centro">
 				<%= image_tag("sobre.png", :class => "img-muestra img-pa") %>
 			</div>
 			<div class="medio centro">
