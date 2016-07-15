@@ -4,7 +4,7 @@
 	<div class="medio padded">
 		<span class="titulo-grande"><%= t('sobre.autoridades.titulo') %></span><br>
 		<ul class="lista-links unpadded">
-			<li><%= construir_link('bt-flechita.png', 'bt-flechita-hover.png', t('sobre.autoridades.asamblea'), "#", "link-sobre") %></li>
+			<li><%= link_to t('sobre.autoridades.asamblea'), asamblea, :remote => true %></li>
 			<li><%= construir_link('bt-flechita.png', 'bt-flechita-hover.png', t('sobre.autoridades.junta'), "#", "link-sobre") %></li>
 			<li><%= construir_link('bt-flechita.png', 'bt-flechita-hover.png', t('sobre.autoridades.presidencia'), "#", "link-sobre") %></li>
 			<li><%= construir_link('bt-flechita.png', 'bt-flechita-hover.png', t('sobre.autoridades.admin'), "#", "link-sobre") %></li>
