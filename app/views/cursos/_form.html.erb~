@@ -45,11 +45,12 @@
   </div>
   <div class="field">
     <%= f.label :programa %><br>
-    <%= f.select :programa, [['Licenciatura', 'licenciatura'], ['Maestría', 'maestria'], ['Doctorado', 'doctorado'], ['Curso', 'curso']], {:selected => 'Licenciatura'}, {:onchange => "ocultarTipoCurso()"} %>
+    <%= select(:curso, :programa, [['Licenciatura', 'licenciatura'], ['Maestría', 'maestria'], ['Doctorado', 'doctorado'], ['Curso', 'curso']]) %>
+    <!-- <%= f.select :programa, , {}, {:onchange => "ocultarTipoCurso()"} %> -->
   </div>
   <div class="field" id="tipo_curso" style="display:none;">
     <%= f.label :tipo_curso %><br>
-    <%= f.select(:tipo_curso, options_from_collection_for_select(TipoCurso.all, "tipo", "tipo", :selected => f.object.tipo_curso), {}, {}) %>
+     <%= select :curso, :tipo_curso, options_from_collection_for_select(TipoCurso.all, "tipo", "tipo", TipoCurso.all.first) %>
   </div>
   <div class="actions">
     <%= f.submit %>
