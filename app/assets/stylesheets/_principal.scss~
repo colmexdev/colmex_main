@@ -100,7 +100,9 @@ a, a:hover, a:active, a:visited, a:link{  text-decoration: none; }
 html, body{ height: 100%; }
 .container-fluid { position: relative;}
 
- 
+#header{
+	position: fixed; }
+}
 
 #contenedor_nav{
 	padding: 0;
