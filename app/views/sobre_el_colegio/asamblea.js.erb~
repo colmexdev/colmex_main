@@ -1,0 +1,1 @@
+$("#autoridades-render").html("<%= j render :partial => 'asamblea' %>");

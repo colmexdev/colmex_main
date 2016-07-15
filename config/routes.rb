@@ -41,6 +41,14 @@ Rails.application.routes.draw do
 
   get 'sobre_el_colegio/asamblea' => 'sobre_el_colegio#asamblea', :as => :asamblea
 
+  get 'sobre_el_colegio/junta' => 'sobre_el_colegio#junta', :as => :junta
+
+  get 'sobre_el_colegio/presidencia' => 'sobre_el_colegio#presidencia', :as => :presidencia
+
+  get 'sobre_el_colegio/administracion' => 'sobre_el_colegio#administracion', :as => :administracion
+
+  get 'sobre_el_colegio/operativas' => 'sobre_el_colegio#operativas', :as => :operativas
+
   get 'sobre_el_colegio/premios_y_distinciones' => 'sobre_el_colegio#premios_y_distinciones', :as => :premios
 
   get 'principal/principios_eticos' => 'principal#principios_eticos', :as => :principios
