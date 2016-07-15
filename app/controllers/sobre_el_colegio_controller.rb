@@ -7,4 +7,8 @@ class SobreElColegioController < ApplicationController
 
   def historia
   end
+
+  def autoridades
+
+  end
 end
