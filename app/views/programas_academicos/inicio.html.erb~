@@ -1,12 +1,12 @@
 <%= render 'principal/barra' %>
 
 <div id="cuerpo">
-	<div class="tabla">
+	<div class="row">
 		<div class="titular-pagina">
 			<span class="titulo-grande"><%= t('botones.b3.texto') %></span>
 		</div>
 	</div>
-	<div class="row">
+	<div class="tabla">
 		<div class="tabla-programa">
 			<div class="medio centro programa texto-programa">
 				<span class="titulo-chico morado"><%= t('botones.b3.opciones.op1') %></span>
