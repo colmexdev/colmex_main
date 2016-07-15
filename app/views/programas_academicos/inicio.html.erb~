@@ -29,6 +29,20 @@
 			</div>
 			<div class="medio centro">
 				<span class="titulo-chico morado"><%= t('botones.b3.opciones.op2') %></span>
+				<br>
+				<p>Maestría en Ciencia Política. El programa tiene una duración de cuatro semestres y la convocatoria aparece publicada cada dos años por parte del Centro de Estudios Internacionales .</p>
+				
+				<p>Maestría en Demografía. El programa tiene una duración de cuatro semestres y abre cada dos años, de acuerdo con la convocatoria que emite el Centro de Estudios Demográficos, Urbanos y Ambientales. La siguiente promoción dará inicio en agosto de 2016.</p>
+
+				<p>Maestría en Economía. El programa tiene una duración de cuatro semestres y una nueva promoción ingresa cada año; la convocatoria respectiva es publicada por el Centro de Estudios Económicos. Los cursos inician en agosto de cada año.</p>
+
+				<p>Maestría en Estudios de Asia y África. El programa tiene una duración de cuatro semestres e inicia cada dos años, de acuerdo con la convocatoria que para el efecto publica el Centro de Estudios de Asia y África.</p>
+
+				<p>Maestría en Estudios de Género. El programa tiene una duración de cuatro semestres e inicia cada dos años, previa convocatoria por parte del Programa Interdisciplinario de Estudios de la Mujer del Centro de Estudios Sociológicos. La nueva promoción iniciará cursos en agosto de 2016.</p>
+
+				<p>Maestría en Estudios Urbanos. El programa tiene una duración de cuatro semestres y abre cada dos años, tras la convocatoria respectiva que emite el Centro de Estudios Demográficos, Urbanos y Ambientales.</p>
+
+				<p>Maestría en Traducción. El programa tiene una duración de cuatro semestres y da inicio cada dos años tras la convocatoria que es publicada por el Centro de Estudios Lingüísticos y Literarios. La nueva promoción iniciará cursos en agosto de 2016.</p>
 			</div>
 		</div>
 	</div>

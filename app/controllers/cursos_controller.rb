@@ -24,9 +24,6 @@ class CursosController < ApplicationController
   # POST /cursos
   # POST /cursos.json
   def create
-    if curso_params["programa"] != "Curso" 
-      curso_params["tipo_curso"] = ""
-    end
     @curso = Curso.new(curso_params)
 
     respond_to do |format|
