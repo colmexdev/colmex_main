@@ -18,6 +18,7 @@
 .programa{
 	display: table-cell;
 	height: auto;
+	clear: both;
 }
 
 .texto-programa{
