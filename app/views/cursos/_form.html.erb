@@ -45,7 +45,7 @@
   </div>
   <div class="field">
     <%= f.label :programa %><br>
-    <%= f.select(:programa, [], {}, {:onchange => "ocultarTipoCurso()"}) %>
+    <%= f.select(:programa, ['Licenciatura', 'Maestría', 'Doctorado', 'Curso'], {}, {:onchange => "ocultarTipoCurso()"}) %>
   </div>
   <div class="field" id="tipo_curso" style="display:none;">
     <%= f.label :tipo_curso %><br>
