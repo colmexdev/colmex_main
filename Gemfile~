@@ -18,6 +18,9 @@ gem 'coffee-rails', '~> 4.1.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 
+# gon para pasar parámetros a Javascript
+gem 'gon'
+
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
@@ -37,8 +40,8 @@ gem 'paperclip'
 # Devise para autenticación
 gem 'devise'
 
-# Cancancan para manejo de múltiples roles de autenticación
-gem 'cancancan', '~> 1.10'
+# I18n para traducciones
+gem 'i18n', '~> 4.0.0'
 
 
 # Use ActiveModel has_secure_password
