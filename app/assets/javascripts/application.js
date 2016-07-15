@@ -19,3 +19,4 @@
 //= require imagens
 //= require cursos
 //= require documentos
+//= require sobre_el_colegio

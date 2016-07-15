@@ -1,0 +1,1 @@
+$("#autoridades-render").append("<%= j render :partial => 'asamblea' %>");
