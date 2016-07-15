@@ -102,6 +102,7 @@ html, body{ height: 100%; }
 
 #header{
 	position: fixed;
+	width: 100%;
 }
 
 #resto-cuerpo { padding-top: 214px; }
