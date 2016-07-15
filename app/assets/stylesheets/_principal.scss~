@@ -98,7 +98,9 @@ a, a:hover, a:active, a:visited, a:link{  text-decoration: none; }
 }
 
 html, body{ height: 100%; }
-.container-fluid { min-height: 100%; position: relative;} 
+.container-fluid { position: relative;}
+
+ 
 
 #contenedor_nav{
 	padding: 0;
@@ -357,7 +359,7 @@ a.uk-accordion-title { height: 34px; font-family: "Gotham SSm A", "Gotham SSm B"
 	}
 }
 
-@media only screen and (min-width: 0px) and (max-width: 1024px){
+@media only screen and (min-device-width: 1070px) and (min-width: 0px) and (max-width: 1070px), only screen and (max-device-width: 1070px){
 	#div_menu{ display: none; } 
 }
 
