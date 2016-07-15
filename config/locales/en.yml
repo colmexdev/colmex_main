@@ -57,3 +57,11 @@ en:
     boton_donar: "Contribute"
   centros:
     boton: "More info"
+  sobre:
+    autoridades:
+      titulo: "Authorities"
+      asamblea: "Partners' assembly"
+      gobierno: "Government joint"
+      presidencia: "Presidency"
+      admin: "Administration"
+      operativas: "Operative areas"

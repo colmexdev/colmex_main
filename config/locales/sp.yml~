@@ -23,7 +23,7 @@ sp:
         op6: "CELL"
         op7: "CES"
     b3:
-      texto: "Programas docentes"
+      texto: "Programas académicos"
       opciones:
         op1: "Licenciaturas"
         op2: "Maestrías"
@@ -54,6 +54,14 @@ sp:
     boton_donar: "Contribuye"
   centros:
     boton: "Más información"
+  sobre:
+    autoridades:
+      titulo: "Autoridades"
+      asamblea: "Asamblea de socios"
+      gobierno: "Junta de Gobierno"
+      presidencia: "Presidencia"
+      admin: "Administración"
+      operativas: "Áreas operativas"
   activerecord:
     errors:
       messages:

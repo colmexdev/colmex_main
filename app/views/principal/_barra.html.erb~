@@ -97,7 +97,7 @@
 </div> <!-- Ciere de div fila para menú -->
 
 </div>
-<div class="container-fluid">
+<div class="container-fluid" id="resto-cuerpo">
 
 	<!-- Menu lateral -->
 	<div id="menu" class="uk-offcanvas"> <!-- Offcanvas -->

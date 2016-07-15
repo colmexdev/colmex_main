@@ -7,11 +7,12 @@ sp:
       texto: "Sobre el Colegio"
       opciones:
         op1: "Información general"
-        op2: "Historia"
-        op3: "Documentación institucional"
-        op4: "Profesores eméritos"
-        op5: "Premios y distinciones"
-        op6: "Transparencia"
+        op2: "Autoridades"
+        op3: "Historia"
+        op4: "Documentación institucional"
+        op5: "Profesores eméritos"
+        op6: "Premios y distinciones"
+        op7: "Transparencia"
     b2:
       texto: "Centros de estudio"
       opciones:
@@ -54,6 +55,14 @@ sp:
     boton_donar: "Contribuye"
   centros:
     boton: "Más información"
+  sobre:
+    autoridades:
+      titulo: "Autoridades"
+      asamblea: "Asamblea de socios"
+      gobierno: "Junta de Gobierno"
+      presidencia: "Presidencia"
+      admin: "Administración"
+      operativas: "Áreas operativas"
   activerecord:
     errors:
       messages:

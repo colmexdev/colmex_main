@@ -1,0 +1,15 @@
+<%= render 'principal/barra' %>
+
+<div class="cuerpo">
+	<div class="medio">
+		<span class="titulo-grande"><%= t('sobre.autoridades.titulo') %></span><br>
+	</div>
+	<div class="medio">
+		<span class="titulo-grande morado"><%= t('sobre.autoridades.asamblea') %></span>
+		<div id="autoridades-render">
+
+		</div>
+	</div>
+</div>
+
+<%= render 'principal/footer' %>
