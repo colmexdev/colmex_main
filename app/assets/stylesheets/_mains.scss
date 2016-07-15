@@ -7,6 +7,10 @@
 	.titulo-grande { padding-left: 30px; }
 }
 
+.tabla{
+	display: table;
+}
+
 .tabla-programa{
 	display: table-row;
 }
@@ -15,7 +19,13 @@
 	display: table-cell;
 }
 
+.texto-programa{
+	max-width: 60%;
+}
+
 .img-programa{
+	max-width: 40%;
+	vertical-align: middle;
 
 	.img-pa{
 		max-width: 400px;
