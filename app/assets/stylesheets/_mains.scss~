@@ -17,9 +17,15 @@
 
 .programa{
 	display: table-cell;
+	height: auto;
+}
+
+.texto-programa{
+	max-width: 60%;
 }
 
 .img-programa{
+	max-width: 40%;
 	vertical-align: middle;
 
 	.img-pa{
