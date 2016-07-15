@@ -74,7 +74,7 @@ $altura_div_descubre: 700px;
 /* Tipografía */
 
 body {font-family: "Whitney SSm A", "Whitney SSm B", 'Lato', sans-serif; font-style: normal; font-weight: 400; font-size: 18px; color: #333333; }
-h1, h2, h3, h4, h5, h6 {font-family: "Gotham SSm A", "Gotham SSm B", 'Lato', sans-serif;; font-style: normal; font-weight: 700;}
+h1, h2, h3, h4, h5, h6 {font-family: "Gotham SSm A", "Gotham SSm B", 'Lato', sans-serif; font-style: normal; font-weight: 700;}
 strong {font-weight: 600; color: #838383}
 i {font-style: italic; }
 a, a:hover, a:active, a:visited, a:link{  text-decoration: none; }
@@ -87,7 +87,7 @@ a, a:hover, a:active, a:visited, a:link{  text-decoration: none; }
 	font-size: 28px;
 }
 
-.titulo-chico.morado{ color: #7E3355; }
+.titulo-chico.morado, .titulo-grande.morado{ color: #7E3355; }
 
 .titulo-grande{
 	font-family: "Gotham SSm A", "Gotham SSm B"; 

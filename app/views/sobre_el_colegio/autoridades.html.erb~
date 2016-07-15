@@ -2,8 +2,8 @@
 
 <div class="cuerpo">
 	<div class="medio">
-		<span class="titulo-grande"><%= t('sobre.autoridades.titulo') %></span><br>
-		<ul>
+		<span class="titulo-grande padded"><%= t('sobre.autoridades.titulo') %></span><br>
+		<ul class="lista-links">
 			<li><%= construir_link('bt-flechita.png', 'bt-flechita-hover.png', t('sobre.autoridades.asamblea'), "#", "link-sobre") %></li>
 			<li><%= construir_link('bt-flechita.png', 'bt-flechita-hover.png', t('sobre.autoridades.junta'), "#", "link-sobre") %></li>
 			<li><%= construir_link('bt-flechita.png', 'bt-flechita-hover.png', t('sobre.autoridades.presidencia'), "#", "link-sobre") %></li>
