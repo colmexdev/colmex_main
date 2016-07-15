@@ -7,8 +7,13 @@
 	.titulo-grande { padding-left: 30px; }
 }
 
-.img-pa{
-	position: absolute;
-	@include centrado;
-	max-width: 500px;
+.img-programa{
+	position: relative;
+
+	.img-pa{
+		position: absolute;
+		max-width: 500px;
+    width: 80%;
+		min-width: 250px;
+	}
 }

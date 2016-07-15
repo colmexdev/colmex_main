@@ -8,11 +8,13 @@
 }
 
 .img-programa{
-	position: relative;
+	text-align: center;
 
 	.img-pa{
-		position: absolute;
-		@include centrado;
+		display: table-cell;
+		vertical-align: middle;
 		max-width: 500px;
+    width: 80%;
+		min-width: 250px;
 	}
 }
