@@ -3,6 +3,13 @@
 <div class="cuerpo">
 	<div class="medio">
 		<span class="titulo-grande"><%= t('sobre.autoridades.titulo') %></span><br>
+		<ul>
+			<li><%= construir_link('bt-flechita.png', 'bt-flechita-hover.png', t('sobre.autoridades.asamblea'), "link-sobre") %></li>
+			<li><%= construir_link('bt-flechita.png', 'bt-flechita-hover.png', t('sobre.autoridades.junta'), "link-sobre") %></li>
+			<li><%= construir_link('bt-flechita.png', 'bt-flechita-hover.png', t('sobre.autoridades.presidencia'), "link-sobre") %></li>
+			<li><%= construir_link('bt-flechita.png', 'bt-flechita-hover.png', t('sobre.autoridades.admin'), "link-sobre") %></li>
+			<li><%= construir_link('bt-flechita.png', 'bt-flechita-hover.png', t('sobre.autoridades.operativas'), "link-sobre") %></li>
+		</ul>
 	</div>
 	<div class="medio">
 		<span class="titulo-grande morado"><%= t('sobre.autoridades.asamblea') %></span>
