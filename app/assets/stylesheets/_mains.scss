@@ -24,14 +24,14 @@
 .texto-programa{
 	width: 60%;
 	height:100%;
-	clear: both;
+	float: none;
 }
 
 .img-programa{
 	width: 40%;
 	vertical-align: middle;
 	height: 100%;
-	clear: both;
+	float: none;
 
 	.img-pa{
 		max-width: 400px;
