@@ -48,5 +48,6 @@
 }
 
 .padded{
-	padding-left: 70px;
+	padding-left: 100px;
+	text-align: left;
 }
