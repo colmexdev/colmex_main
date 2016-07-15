@@ -23,11 +23,14 @@
 
 .texto-programa{
 	width: 60%;
+	height:100%;
 }
 
 .img-programa{
 	width: 40%;
 	vertical-align: middle;
+	height: 100%;
+	clear: both;
 
 	.img-pa{
 		max-width: 400px;
