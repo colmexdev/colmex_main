@@ -35,6 +35,8 @@ Rails.application.routes.draw do
 
   get 'sobre_el_colegio/inicio' => 'sobre_el_colegio#inicio', :as => :sobre_el_colegio
 
+  get 'sobre_el_colegio/historia' => 'sobre_el_colegio#historia', :as => :historia
+
   get 'sobre_el_colegio/premios_y_distinciones' => 'sobre_el_colegio#premios_y_distinciones', :as => :premios
 
   get 'principal/principios_eticos' => 'principal#principios_eticos', :as => :principios

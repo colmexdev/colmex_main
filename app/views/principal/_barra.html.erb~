@@ -57,7 +57,7 @@
         <a href="<%= sobre_el_colegio_url %>" class="dropdown-toggle" data-hover="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span><%= t('botones.b1.texto') %></span></a>
           <ul class="dropdown-menu"">
             <li><a href="#"><%= t('botones.b1.opciones.op1') %></a></li>
-            <li><a href="#"><%= t('botones.b1.opciones.op2') %></a></li>
+            <li><a href=<%=historia_url %>><%= t('botones.b1.opciones.op2') %></a></li>
             <li><a href="#"><%= t('botones.b1.opciones.op3') %></a></li>
             <li><a href="#"><%= t('botones.b1.opciones.op4') %></a></li>
             <li><a href=<%= premios_url %>><%= t('botones.b1.opciones.op5') %></a></li>
@@ -68,13 +68,13 @@
 			<li class="dropdown" id="dropdown2">
         <a href="<%= centros_de_estudio_url %>" class="dropdown-toggle" data-hover="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span><%= t('botones.b2.texto') %></span></a>
           <ul class="dropdown-menu">
-            <li><a href="#">Centro de Estudios de Asia y África</a></li>
-            <li><a href="#">Centro de Estudios Demográficos, Urbanos y Ambientales</a></li>
-            <li><a href="#">Centro de Estudios Económicos</a></li>
+            <li><a href="<%= ceaa_url %>">Centro de Estudios de Asia y África</a></li>
+            <li><a href="<%= cedua_url %>">Centro de Estudios Demográficos, Urbanos y Ambientales</a></li>
+            <li><a href="<%= cee_url %>">Centro de Estudios Económicos</a></li>
             <li><a href="<%= ceh_url %>">Centro de Estudios Históricos</a></li>
-            <li><a href="#">Centro de Estudios Internacionales</a></li>
-            <li><a href="#">Centro de Estudios Lingüísticos y Literarios</a></li>
-            <li><a href="#">Centro de Estudios Sociológicos</a></li>
+            <li><a href="<%= cei_url %>">Centro de Estudios Internacionales</a></li>
+            <li><a href="<%= cell_url %>">Centro de Estudios Lingüísticos y Literarios</a></li>
+            <li><a href="<%= ces_url %>">Centro de Estudios Sociológicos</a></li>
           </ul>
       </li>
 
@@ -103,7 +103,7 @@
 			<div class="uk-accordion-content">
 				<ul class="uk-nav uk-nav-offcanvas">
 					<li><a href="#" class="sublink"><%= t('botones.b1.opciones.op1') %></a></li>
-          <li><a href="#" class="sublink"><%= t('botones.b1.opciones.op2') %></a></li>
+          <li><a href=<%= historia_url %> class="sublink"><%= t('botones.b1.opciones.op2') %></a></li>
           <li><a href="#" class="sublink"><%= t('botones.b1.opciones.op3') %></a></li>
           <li><a href="#" class="sublink"><%= t('botones.b1.opciones.op4') %></a></li>
           <li><a href=<%= premios_url %> class="sublink"><%= t('botones.b1.opciones.op5') %></a></li>
@@ -113,13 +113,13 @@
 			<h3 class="uk-accordion-title"><%= t('botones.b2.texto') %></h3>
 			<div class="uk-accordion-content">
 				<ul class="uk-nav uk-nav-offcanvas">
-					<li><a href="#" class="sublink">Centro de Estudios de Asia y África</a></li>
-          <li><a href="#" class="sublink">Centro de Estudios Demográficos, Urbanos y Ambientales</a></li>
-          <li><a href="#" class="sublink">Centro de Estudios Económicos</a></li>
+					<li><a href="<%= ceaa_url %>" class="sublink">Centro de Estudios de Asia y África</a></li>
+          <li><a href="<%= cedua_url %>" class="sublink">Centro de Estudios Demográficos, Urbanos y Ambientales</a></li>
+          <li><a href="<%= cee_url %>" class="sublink">Centro de Estudios Económicos</a></li>
           <li><a href="<%= ceh_url %>" class="sublink">Centro de Estudios Históricos</a></li>
-          <li><a href="#" class="sublink">Centro de Estudios Internacionales</a></li>
-          <li><a href="#" class="sublink">Centro de Estudios Lingüísticos y Literarios</a></li>
-          <li><a href="#" class="sublink">Centro de Estudios Sociológicos</a></li>
+          <li><a href="<%= cei_url %>" class="sublink">Centro de Estudios Internacionales</a></li>
+          <li><a href="<%= cell_url %>" class="sublink">Centro de Estudios Lingüísticos y Literarios</a></li>
+          <li><a href="<%= ces_url %>" class="sublink">Centro de Estudios Sociológicos</a></li>
 				</ul>
 			</div>
 			<h3 class="uk-accordion-title"><%= t('botones.b3.texto') %></h3>

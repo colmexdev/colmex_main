@@ -42,7 +42,7 @@
 @media only screen and (min-device-width: 1024px) and (max-width: 1024px), only screen and (max-device-width: 1024px){
 	.tabla, .tabla-programa, .programa { display: block; }
 
-	.texto-programa { .titulo-chico { text-align: left; } }
+	.texto-programa { .titulo-chico { text-align: left; display: block;} }
 
 	.curso { margin-bottom: 40px; }
 }

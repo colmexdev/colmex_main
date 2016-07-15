@@ -4,4 +4,7 @@ class SobreElColegioController < ApplicationController
 
   def premios_y_distinciones
   end
+
+  def historia
+  end
 end
