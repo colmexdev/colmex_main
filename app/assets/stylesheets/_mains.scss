@@ -7,14 +7,19 @@
 	.titulo-grande { padding-left: 30px; }
 }
 
+.tabla-programa{
+	display: table-row;
+}
+
+.programa{
+	display: table-cell;
+}
+
 .img-programa{
-	text-align: center;
 
 	.img-pa{
-		display: table-cell;
-		vertical-align: middle;
-		max-width: 500px;
-    width: 80%;
-		min-width: 250px;
+		max-width: 400px;
+    width: 100%;
+		min-width: 150px;
 	}
 }
