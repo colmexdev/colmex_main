@@ -6,3 +6,13 @@
 	
 	.titulo-grande { padding-left: 30px; }
 }
+
+.img-programa{
+	position: relative;
+
+	.img-pa{
+		position: absolute;
+		@include centrado;
+		max-width: 500px;
+	}
+}
