@@ -103,15 +103,16 @@ html, body{ height: 100%; }
 #header{
 	position: fixed;
 	width: 100%;
+	z-index: 30;
 }
 
 #resto-cuerpo { padding-top: 214px; }
 
-@media only screen and (min-device-width: 542px) and (min-width: 542px) and (max-device-width: 584px), only screen and (min-device-width: 542px) and (max-device-width: 584px){
+@media only screen and (min-width: 542px) and (max-device-width: 584px){
 	#resto-cuerpo { padding-top: 270px; }
 }
 
-@media only screen and (min-device-width: 329px) and (min-width: 329px) and (max-device-width: 542px), only screen and (min-device-width: 329px) and (max-device-width: 542px){
+@media only screen and (min-width: 329px) and (max-device-width: 542px){
 	#resto-cuerpo { padding-top: 282px; }
 }
 
