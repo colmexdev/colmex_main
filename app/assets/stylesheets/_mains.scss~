@@ -46,3 +46,7 @@
 
 	.curso { margin-bottom: 40px; }
 }
+
+.padded{
+	padding-left: 70px;
+}
