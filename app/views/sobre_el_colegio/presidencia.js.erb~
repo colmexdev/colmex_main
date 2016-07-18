@@ -1,8 +1,8 @@
 $(".link-sobre .leave_img").css("display", "inline");
 $(".link-sobre .hover_img").css("display", "none");
 $(".link-sobre").css("color", "#4E4E4E");
-$(".link-sobre:hover").css("color", "#7E3355");
-$(".link-sobre:active").css("color", "#7E3355");
+$(".link-sobre").hover(function(){$(this).css("color", "#7E3355")});
+$(".link-sobre").click(function(){$(this).css("color", "#7E3355")});
 $("#presidencia-link .leave_img").css('display','none');
 $("#presidencia-link .hover_img").css('display','inline');
 $("#presidencia-link").css("color", "#7E3355");
