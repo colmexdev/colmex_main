@@ -146,6 +146,13 @@ html, body{ height: 100%; }
 		width: $ancho_idioma;
 		padding-top: 10px;
 
+		>a{
+			-webkit-transition: color 0.4s linear;
+			-moz-transition: color 0.4s linear;
+			-o-transition: color 0.4s linear;
+			transition: color 0.4s linear;
+		}
+
     >.activo{
 			color: $color_textos_navbar_sel;
 			width: $ancho_idioma / 2.5;
@@ -226,6 +233,10 @@ html, body{ height: 100%; }
 	.nav_opciones{
 		a{
 			color: $color_textos_navbar;
+			-webkit-transition: color 0.4s linear;
+			-moz-transition: color 0.4s linear;
+			-o-transition: color 0.4s linear;
+			transition: color 0.4s linear;
 		}
 		a:hover,a:active{
 			color: $color_textos_navbar_sel;

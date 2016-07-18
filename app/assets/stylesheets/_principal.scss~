@@ -146,25 +146,27 @@ html, body{ height: 100%; }
 		width: $ancho_idioma;
 		padding-top: 10px;
 
-    >.activo.en, .activo.sp{
+    >.activo{
 			color: $color_textos_navbar_sel;
 			width: $ancho_idioma / 2.5;
 			
 		}
 
-		>.inactivo.en, .inactivo.sp{
+		>.inactivo{
 			color: $color_textos_navbar;
 			width: $ancho_idioma / 2.5;
 		}
 
-		>.activo.en, .inactivo.en{
+		>.en{
 			display: inline-block;
 		}
 
-		>.activo.sp, .inactivo.sp{
+		>.sp{
 			display: inline-block;
 			padding-left: 3px;
 		}
+
+		>a:hover{ color: #993366; }
 	}	
 
 	.mail{
