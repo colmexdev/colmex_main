@@ -290,6 +290,7 @@ html, body{ height: 100%; }
 		transition: all 0.3s linear;
 		
 		>a{
+			color: #4E4E4E
 			font-size: 18px;
 			font-weight: bold;
 		}
@@ -316,7 +317,6 @@ html, body{ height: 100%; }
 	}
  	.uk-parent:hover{
 		background-color: #4E4E4E;
-		>a { color: #FFFFFF; }
 	}
 }
 
