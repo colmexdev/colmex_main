@@ -281,7 +281,7 @@ html, body{ height: 100%; }
 .uk-nav.uk-nav-offcanvas{
 
 	.uk-parent{
-		margin-bottom: 10px;
+		margin-bottom: 5px;
 		
 		>a{
 			background-color: #EEEEEE;
@@ -291,10 +291,17 @@ html, body{ height: 100%; }
 		}
 
 		.uk-nav-sub{
-			padding-left: 17px;
-			font-size: 15px;
-			color: #EEEEEE;
+			padding-left: 30px;
+			font-size: 17px;
 			background-color: #740020;
+
+			>li >a { color: #EEEEEE; }
+
+			>li{ 
+				>a:hover, >a:active{
+					background-color: #4E4E4E;
+				}	
+			}
 		}
 	}
 }

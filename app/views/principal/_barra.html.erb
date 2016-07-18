@@ -107,7 +107,7 @@ https://www.youtube.com/c/elcolegiodemexicociudaddemexico" %></li>
 	<div id="menu" class="uk-offcanvas"> <!-- Offcanvas -->
 		<div class="uk-offcanvas-bar uk-offcanvas-bar-flip">
 			
-			<ul class="uk-nav uk-nav-offcanvas" data-uk-nav>
+			<ul class="uk-nav uk-nav-offcanvas uk-nav-parent-icon" data-uk-nav>
 				<li class="uk-parent">
 					<a href="#"><%= t('botones.b1.texto') %></a>
 					<ul class="uk-nav-sub">
@@ -144,8 +144,8 @@ https://www.youtube.com/c/elcolegiodemexicociudaddemexico" %></li>
           	<li><a href="#" class="sublink"><%= t('botones.b3.opciones.op7') %></a></li>
 					</ul>
 				</li>
-				<li><a href="http://biblioteca.colmex.mx/"><%= t('botones.b4') %></a></li>
-				<li><a href="#"><%= t('botones.b5') %></a></li>
+				<li class="uk-parent"><a href="http://biblioteca.colmex.mx/"><%= t('botones.b4') %></a></li>
+				<li class="uk-parent"><a href="#"><%= t('botones.b5') %></a></li>
 				<li>
 					<ul class="nav navbar-nav navbar-left">
 						<li><%= link_to image_tag("fb-bco.png", :class => "img_net uk-animation-hover uk-animation-shake"), "https://www.facebook.com/elcolmex/" %></li>
