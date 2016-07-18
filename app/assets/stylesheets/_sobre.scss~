@@ -35,7 +35,7 @@
 }
 
 .link-sobre:hover, .link-sobre:active{
-	color: #7e3355; 	
+	color: #7E3355; 	
 
 	.hover_img {display: inline; padding: 0 10px;}
 	.leave_img { display: none; }
