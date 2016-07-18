@@ -1,1 +1,1 @@
-$("#autoridades-render").html("<%= j render :partial => 'asamblea' %>");
+$("#autoridades-render").html("<%= j render :partial => 'junta' %>");
