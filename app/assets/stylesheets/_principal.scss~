@@ -326,11 +326,6 @@ a.uk-accordion-title { height: 34px; font-family: "Gotham SSm A", "Gotham SSm B"
 			width: calc(#{$ancho_botones} - 2px);
 			width: -moz-calc(#{$ancho_botones} - 2px);
 			width: -webkit-calc(#{$ancho_botones} - 2px);
-			visibility: hidden;
-			-moz-transition: all 0.3s linear;
-			-webkit-transition: all 0.3s linear;
-			-o-transition: all 0.3s linear;
-			transition: all 0.3s linear;
 			
 			a{
 				display: inline-block;
@@ -345,7 +340,7 @@ a.uk-accordion-title { height: 34px; font-family: "Gotham SSm A", "Gotham SSm B"
 				}
 			}
 
-			>.dropdown-menu{
+			.dropdown-menu{
 				opacity: 0.9;
         background-color: #993366;
 				text-align: left;
@@ -354,6 +349,7 @@ a.uk-accordion-title { height: 34px; font-family: "Gotham SSm A", "Gotham SSm B"
         border: none;
         margin: 0;
 				min-width: 100%;
+				visibility: hidden;
 				-moz-transition: all 0.4s linear;
 				-webkit-transition: all 0.4s linear;
 				-o-transition: all 0.4s linear;
@@ -388,18 +384,14 @@ a.uk-accordion-title { height: 34px; font-family: "Gotham SSm A", "Gotham SSm B"
 			}
 		}
 
-		>.dropdown:hover, .no-dropdown:hover{
+		.dropdown:hover, .no-dropdown:hover{
 			background-color: #470020;
-		}
-
-		>.dropdown:hover .dropdown-menu{
-			display: block;
-			visibility: visible;
+			> .dropdown-menu { opacity: 0.9; }
 		}
 	}
 }
 
-@media only screen and (min-device-width: 1070px) and (min-width: 0px) and (max-width: 1070px), only screen and (max-device-width: 1070px){
+@media only screen and (min-device-width: 1070px) and (min-width: 0px) and (max-width: 1070px){
 	#div_menu{ display: none; } 
 }
 

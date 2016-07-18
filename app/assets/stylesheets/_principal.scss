@@ -340,8 +340,8 @@ a.uk-accordion-title { height: 34px; font-family: "Gotham SSm A", "Gotham SSm B"
 				}
 			}
 
-			>.dropdown-menu{
-				opacity: 0.9;
+			.dropdown-menu{
+				opacity: 0;
         background-color: #993366;
 				text-align: left;
         padding: 0;
@@ -384,18 +384,14 @@ a.uk-accordion-title { height: 34px; font-family: "Gotham SSm A", "Gotham SSm B"
 			}
 		}
 
-		>.dropdown:hover, .no-dropdown:hover{
+		.dropdown:hover, .no-dropdown:hover{
 			background-color: #470020;
-		}
-
-		>.dropdown:hover .dropdown-menu{
-			display: block;
-			visibility: visible;
+			> .dropdown-menu { opacity: 0.9; }
 		}
 	}
 }
 
-@media only screen and (min-device-width: 1070px) and (min-width: 0px) and (max-width: 1070px), only screen and (max-device-width: 1070px){
+@media only screen and (min-device-width: 1070px) and (min-width: 0px) and (max-width: 1070px){
 	#div_menu{ display: none; } 
 }
 
