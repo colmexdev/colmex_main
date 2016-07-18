@@ -278,8 +278,21 @@ html, body{ height: 100%; }
 
 .uk-offcanvas-bar { background-color: #993366; }
 
+.uk-nav.uk-nav-offcanvas{
 
-.uk-nav.uk-nav-offcanvas ul { a:hover, a:visited, a:link, a:active { background-color: #740020; } }
+	.uk-parent{
+		background-color: #EEEEEE;
+		color: #4E4E4E;
+		font-size: 18px;
+		font-weight: bold;
+
+		.uk-nav-sub{
+			padding-left: 15px;
+			font-size: 15px;
+			color: #EEEEEE;
+		}
+	}
+}
 
 
 .nav>li { float: left; >a>img{ margin: 2px;} }

@@ -276,9 +276,10 @@ html, body{ height: 100%; }
 //Estilos asociados al offcanvas
 .nav>li>a:hover { background-color: transparent;}
 
-.uk-offcanvas-bar { background-color: #993366; }
+.uk-offcanvas-bar { background-color: #740020; }
 
 .uk-nav.uk-nav-offcanvas{
+
 	.uk-parent{
 		background-color: #EEEEEE;
 		color: #4E4E4E;
@@ -289,6 +290,7 @@ html, body{ height: 100%; }
 			padding-left: 15px;
 			font-size: 15px;
 			color: #EEEEEE;
+			background-color: #740020;
 		}
 	}
 }
