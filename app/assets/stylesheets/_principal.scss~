@@ -564,7 +564,7 @@ html, body{ height: 100%; }
 
 					.img_evento{
 						float: left;
-						min-width: 88px;
+						max-width: 55px;
 						width: 25%;
 						height: 100%;
 						
