@@ -282,6 +282,7 @@ html, body{ height: 100%; }
 
 	.uk-parent{
 		background-color: #EEEEEE;
+		color: #4E4E4E;
 		margin-bottom: 5px;
 		-webkit-transition: all 0.3s linear;
 		-moz-transition: all 0.3s linear;
@@ -289,7 +290,6 @@ html, body{ height: 100%; }
 		transition: all 0.3s linear;
 		
 		>a{
-			color: #4E4E4E;
 			font-size: 18px;
 			font-weight: bold;
 		}
@@ -306,13 +306,17 @@ html, body{ height: 100%; }
 				-o-transition: all 0.3s linear;
 				transition: all 0.3s linear;
 
-				>a { padding-left: 30px; color: #EEEEEE; }
+				>a { padding: 0 30px; color: #EEEEEE; }
 			}
 
 			>li:hover { 
 				background-color: #4E4E4E;
 			}
 		}
+	}
+ 	.uk-parent:hover{
+		background-color: #4E4E4E;
+		color: #EEEEEE;
 	}
 }
 

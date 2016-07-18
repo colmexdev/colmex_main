@@ -281,6 +281,7 @@ html, body{ height: 100%; }
 .uk-nav.uk-nav-offcanvas{
 
 	.uk-parent{
+		background-color: #EEEEEE;
 		margin-bottom: 5px;
 		-webkit-transition: all 0.3s linear;
 		-moz-transition: all 0.3s linear;
@@ -288,7 +289,6 @@ html, body{ height: 100%; }
 		transition: all 0.3s linear;
 		
 		>a{
-			background-color: #EEEEEE;
 			color: #4E4E4E;
 			font-size: 18px;
 			font-weight: bold;
@@ -306,7 +306,7 @@ html, body{ height: 100%; }
 				-o-transition: all 0.3s linear;
 				transition: all 0.3s linear;
 
-				>a { padding-left: 30px; color: #EEEEEE; }
+				>a { padding: 0 30px; color: #EEEEEE; }
 			}
 
 			>li:hover { 
