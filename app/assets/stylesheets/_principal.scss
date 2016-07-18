@@ -316,7 +316,7 @@ html, body{ height: 100%; }
 	}
  	.uk-parent:hover{
 		background-color: #4E4E4E;
-		color: #EEEEEE;
+		>a { color: #FFFFFF; }
 	}
 }
 
