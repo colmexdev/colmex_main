@@ -54,9 +54,9 @@
 	}
 
 	.boton-centro{
-		display: inline-block;
+		float: none;
 		margin: 0 auto;
 	}
 
-	.img-centro { margin-bottom: 60px; }
+	.img-centro { margin-bottom: 60px; padding-top: 10px; }
 }
