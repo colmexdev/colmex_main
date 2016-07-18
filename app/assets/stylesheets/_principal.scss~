@@ -290,15 +290,16 @@ html, body{ height: 100%; }
 		transition: all 0.3s linear;
 		
 		>a{
-			color: #4E4E4E
+			color: #4E4E4E;
 			font-size: 18px;
 			font-weight: bold;
 		}
 
 		.uk-nav-sub{
-			padding-left: 0;
+			padding: 0;
 			font-size: 17px;
 			background-color: #740020;
+			
 
 			>li{
 				background-color: #740020;
