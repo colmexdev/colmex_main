@@ -276,15 +276,22 @@ html, body{ height: 100%; }
 //Estilos asociados al offcanvas
 .nav>li>a:hover { background-color: transparent;}
 
-.uk-offcanvas-bar { background-color: #740020; }
+.uk-offcanvas-bar { background-color: #993366; }
 
-.uk-accordion-title { margin-bottom: 5px; }
+.uk-nav.uk-nav-offcanvas{
+	.uk-parent{
+		background-color: #EEEEEE;
+		color: #4E4E4E;
+		font-size: 18px;
+		font-weight: bold;
 
-a.uk-accordion-title { height: 34px; font-family: "Gotham SSm A", "Gotham SSm B";} 
-
-.uk-nav-offcanvas>li>.uk-accordion-title { color: #444444; font-weight: bold;} 
-
-.uk-nav.uk-nav-offcanvas ul { a:hover, a:visited, a:link, a:active { background-color: #740020; } }
+		.uk-nav-sub{
+			padding-left: 15px;
+			font-size: 15px;
+			color: #EEEEEE;
+		}
+	}
+}
 
 
 .nav>li { float: left; >a>img{ margin: 2px;} }

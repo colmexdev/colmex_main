@@ -276,13 +276,8 @@ html, body{ height: 100%; }
 //Estilos asociados al offcanvas
 .nav>li>a:hover { background-color: transparent;}
 
-.uk-offcanvas-bar { background-color: #740020; }
+.uk-offcanvas-bar { background-color: #993366; }
 
-.uk-accordion-title { margin-bottom: 5px; }
-
-a.uk-accordion-title { height: 34px; font-family: "Gotham SSm A", "Gotham SSm B";} 
-
-.uk-nav-offcanvas>li>.uk-accordion-title { color: #444444; font-weight: bold;} 
 
 .uk-nav.uk-nav-offcanvas ul { a:hover, a:visited, a:link, a:active { background-color: #740020; } }
 
@@ -631,7 +626,7 @@ a.uk-accordion-title { height: 34px; font-family: "Gotham SSm A", "Gotham SSm B"
 					}
 				}
 
-				@media only screen and (min-device-width: 1024px) and (min-width: 785px) and (max-width: 1024px), only screen and (min-device-width: 0px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1){
+				@media only screen and (min-device-width: 1024px) and (min-width: 785px) and (max-width: 1024px){
 					.evento { 
 						width: 50%;
 						padding: 0 6%;
@@ -645,7 +640,7 @@ a.uk-accordion-title { height: 34px; font-family: "Gotham SSm A", "Gotham SSm B"
 					}
 				}
 
-				@media only screen and (min-width: 0px) and (max-width: 785px), only screen and (min-device-width: 0px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1){
+				@media only screen and (min-width: 0px) and (max-width: 785px){
 					.evento { 
 						width: 100%;
 						padding: 0;
@@ -693,10 +688,10 @@ a.uk-accordion-title { height: 34px; font-family: "Gotham SSm A", "Gotham SSm B"
 				line-height: normal;
 			}
 
-			@media only screen and (min-width: 0px) and (max-width: 840px), only screen and (min-device-width: 0px) and (max-device-width: 840px) and (-webkit-min-device-pixel-ratio: 1){
+			@media only screen and (min-width: 0px) and (max-width: 840px){
 				span { font-size: 11px; } 
 			}
-			@media only screen and (min-width: 840px) and (max-width: 994px), only screen and (min-device-width: 840px) and (max-device-width: 994px) and (-webkit-min-device-pixel-ratio: 1){
+			@media only screen and (min-width: 840px) and (max-width: 994px){
 				span { font-size: 15px; } 
 			}
 		}
@@ -743,7 +738,7 @@ a.uk-accordion-title { height: 34px; font-family: "Gotham SSm A", "Gotham SSm B"
 }
 
 
-@media only screen and (min-width: 0px) and (max-width: 767px), only screen and (min-device-width: 0px) and (max-device-width: 384px) and (-webkit-min-device-pixel-ratio: 2){
+@media only screen and (min-width: 0px) and (max-width: 767px){
 	#div_suscripcion{
 		height: 130px;
 		#forma_suscripcion{
@@ -777,7 +772,7 @@ a.uk-accordion-title { height: 34px; font-family: "Gotham SSm A", "Gotham SSm B"
 	}
 }
 
-@media only screen and (max-width: 768px), only screen and (max-device-width: 768px) and (-webkit-min-device-pixel-ratio: 1) {
+@media only screen and (max-width: 768px){
 	#div_revistas{ 
 		height: 180px;
 		.revista { a { img { max-height: 120px; max-width: 190px; } } } 
@@ -810,19 +805,19 @@ a.uk-accordion-title { height: 34px; font-family: "Gotham SSm A", "Gotham SSm B"
 			height: 80%;
 		}
 		
-		@media only screen and (min-width: 0px) and (max-width: 520px), only screen and (min-device-width: 0px) and (max-device-width: 520px) and (-webkit-min-device-pixel-ratio: 1){
+		@media only screen and (min-width: 0px) and (max-width: 520px){
 			p { padding-top: 35px; font-size: 13px; }
 		}
 
-		@media only screen and (min-width: 520px) and (max-width: 570px), only screen and (min-device-width: 520px) and (max-device-width: 570px) and (-webkit-min-device-pixel-ratio: 1){
+		@media only screen and (min-width: 520px) and (max-width: 570px){
 			p { padding-top: 45px; font-size: 15px; }
 		}
 
-		@media only screen and (min-width: 570px) and (max-width: 670px), only screen and (min-device-width: 570px) and (max-device-width: 670px) and (-webkit-min-device-pixel-ratio: 1){
+		@media only screen and (min-width: 570px) and (max-width: 670px){
 			p { padding-top: 45px; font-size: 17px; }
 		}
 
-		@media only screen and (min-width: 670px) and (max-width: 767px), only screen and (min-device-width: 670px) and (max-device-width: 767px) and (-webkit-min-device-pixel-ratio: 1){
+		@media only screen and (min-width: 670px) and (max-width: 767px){
 			p { padding-top: 45px; font-size: 20px; }
 		}
 
@@ -830,7 +825,7 @@ a.uk-accordion-title { height: 34px; font-family: "Gotham SSm A", "Gotham SSm B"
 			p { padding-top: 25px; font-size: 13px; }
 		}
 
-		@media only screen and (min-width: 970px) and (max-width: 1260px), only screen and (min-device-width: 970px) and (max-device-width: 1260px) and (-webkit-min-device-pixel-ratio: 1){
+		@media only screen and (min-width: 970px) and (max-width: 1260px){
 			p { padding-top: 40px; font-size: 14px; }
 		}
 
@@ -864,7 +859,7 @@ a.uk-accordion-title { height: 34px; font-family: "Gotham SSm A", "Gotham SSm B"
 						line-height: normal;
 					}
 
-					@media only screen and (min-width: 0px) and (max-width: 1070px), only screen and (min-device-width: 0px) and (max-device-width: 1070px) and (-webkit-min-device-pixel-ratio: 1){
+					@media only screen and (min-width: 0px) and (max-width: 1070px){
 						span { font-size: 11px; } 
 					}
 				}
@@ -897,11 +892,11 @@ a.uk-accordion-title { height: 34px; font-family: "Gotham SSm A", "Gotham SSm B"
 	img { @include centrado; width: 90%; height: 440px; } 
 }
 
-@media only screen and (min-width: 0px) and (max-width: 1260px), only screen and (min-device-width: 0px) and (max-device-width: 1260px) and (-webkit-min-device-pixel-ratio: 1){
+@media only screen and (min-width: 0px) and (max-width: 1260px){
 	#fundacion-colmex, #video-colmex { height: 350px; }
 }
 
-@media only screen and (min-width: 0px) and (max-width: 767px), only screen and (min-device-width: 0px) and (max-device-width: 767px) and (-webkit-min-device-pixel-ratio: 1){
+@media only screen and (min-width: 0px) and (max-width: 767px){
 	#video-colmex { img { height: 300px; } }
 	#fundacion-colmex { padding-bottom: 0; }
 }
@@ -913,7 +908,7 @@ a.uk-accordion-title { height: 34px; font-family: "Gotham SSm A", "Gotham SSm B"
  }
 }
 
-@media only screen and (min-width: 767px) and (max-width: 1260px), only screen and (min-device-width: 767px) and (max-device-width: 1260px) and (-wrbkit-min-device-pixel-ratio: 1){
+@media only screen and (min-width: 767px) and (max-width: 1260px){
 		#video-colmex { img { height: 294px; } }
 	}
 
@@ -1001,16 +996,16 @@ a.uk-accordion-title { height: 34px; font-family: "Gotham SSm A", "Gotham SSm B"
 		}
 	}
 
-  @media only screen and (min-width: 0px) and (max-width: 1460px), only screen and (min-device-width: 0px) and (max-device-width: 1460px) and (-webkit-min-device-pixel-ratio: 1){
+  @media only screen and (min-width: 0px) and (max-width: 1460px){
 		#footer_der, #footer_izq, #footer_centro { height: 200px; }
 		#footer_centro { font-size: 13px;}
 	}
 
-  @media only screen and (min-width: 0px) and (max-width: 1160px), only screen and (min-device-width: 0px) and (max-device-width: 1160px) and (-webkit-min-device-pixel-ratio: 1){
+  @media only screen and (min-width: 0px) and (max-width: 1160px){
 		#footer_der, #footer_izq { .links { font-size: 13px; } }
 	} 
 
-	@media only screen and (min-device-width: 991px) and (min-width: 0px) and (max-width: 991px), only screen and (min-device-width: 0px) and (max-device-width: 991px) and (-webkit-min-device-pixel-ratio: 1){
+	@media only screen and (min-device-width: 991px) and (min-width: 0px) and (max-width: 991px){
 		#footer_izq { display: none; }
 		#footer_centro { border: none; }
 		#footer_der { 
