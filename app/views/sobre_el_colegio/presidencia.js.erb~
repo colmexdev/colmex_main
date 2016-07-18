@@ -1,1 +1,2 @@
+$("#titulo-render").html("<%= t('sobre.autoridades.presidencia') %>");
 $("#autoridades-render").html("<%= j render :partial => 'presidencia' %>");

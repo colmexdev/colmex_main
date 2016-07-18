@@ -1,1 +1,2 @@
+$("#titulo-render").html("<%= t('sobre.autoridades.junta') %>");
 $("#autoridades-render").html("<%= j render :partial => 'junta' %>");
