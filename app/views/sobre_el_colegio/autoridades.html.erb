@@ -1,7 +1,7 @@
 <%= render 'principal/barra' %>
 
 <div class="cuerpo">
-	<div class="medio padded">
+	<div class="centro medio padded">
 		<span class="titulo-grande"><%= t('sobre.autoridades.titulo') %></span><br>
 		<ul class="lista-links unpadded">
 			<li><%= link_to(image_tag('bt-flechita.png', :class => "leave_img") + image_tag("bt-flechita-hover.png", :class => "hover_img") + t('sobre.autoridades.asamblea'), asamblea_path, :remote => true, :class => "link-sobre", :id => "asamblea-link") %></li>
@@ -11,7 +11,7 @@
 			<li><%= link_to image_tag('bt-flechita.png', :class => "leave_img") + image_tag("bt-flechita-hover.png", :class => "hover_img") + t('sobre.autoridades.operativas'), operativas_path, :remote => true, :class => "link-sobre", :id => "operativas-link" %></li>
 		</ul>
 	</div>
-	<div class="medio">
+	<div class="centro medio">
 		<span class="titulo-grande morado" id="titulo-render"><%= t('sobre.autoridades.asamblea') %></span>
 		<div id="autoridades-render">
 

@@ -19,7 +19,7 @@
 			</div>
 			<div class="col-xs-12 col-md-2" id="footer_der">
 				<ul class="links">
-					<li><a href="#"><%= t('footer.liga1') %></a></li>
+					<li><a href=<%= principios_url %>><%= t('footer.liga1') %></a></li>
 					<li><a href="#"><%= t('footer.liga2') %></a></li>
 					<li><a href="#"><%= t('footer.liga3') %></a></li>
 					<li><a href="#"><%= t('footer.liga4') %></a></li>

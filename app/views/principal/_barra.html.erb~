@@ -30,13 +30,16 @@
 					<button type="submit" class="btn btn-default boton_lupa"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
 	      </form>
 	      <ul class="nav navbar-nav navbar-right">
-					<li class="borrable"><%= link_to image_tag("fb-color.png", :class => "img_net"), "#" %></li>
-					<li class="borrable"><%= link_to image_tag("twitter-color.png", :class => "img_net"), "#" %></li>
+					<li class="borrable"><%= link_to image_tag("fb-color.png", :class => "img_net"), "
+https://www.facebook.com/elcolmex/" %></li>
+					<li class="borrable"><%= link_to image_tag("twitter-color.png", :class => "img_net"), "
+https://twitter.com/ELCOLMEX" %></li>
 					<li class="borrable"><%= link_to image_tag("instagram-color.png", :class => "img_net"), "#" %></li>
-					<li class="borrable"><%= link_to image_tag("youtube-color.png", :class => "img_net"), "#" %></li>
+					<li class="borrable"><%= link_to image_tag("youtube-color.png", :class => "img_net"), "
+https://www.youtube.com/c/elcolegiodemexicociudaddemexico" %></li>
 					<li class="borrable"><%= link_to image_tag("linkedin-color.png", :class => "img_net"), "#" %></li>
 					<li class="borrable"><%= link_to image_tag("itunes-color.png", :class => "img_net"), "#" %></li>
-					<li class="borrable"><%= link_to image_tag("google-color.png", :class => "img_net"), "#" %></li>
+					<li class="borrable"><%= link_to image_tag("google-color.png", :class => "img_net"), "https://plus.google.com/+ColmexMx1/posts" %></li>
 					<li class="mostrable"><a href="#menu" class="uk-navbar-toggle" data-uk-offcanvas></a></li>
 	      </ul>
 	    </div><!-- /.navbar-collapse -->
@@ -57,11 +60,12 @@
         <a href="<%= sobre_el_colegio_url %>" class="dropdown-toggle" data-hover="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span><%= t('botones.b1.texto') %></span></a>
           <ul class="dropdown-menu"">
             <li><a href="#"><%= t('botones.b1.opciones.op1') %></a></li>
-            <li><a href=<%=historia_url %>><%= t('botones.b1.opciones.op2') %></a></li>
-            <li><a href="#"><%= t('botones.b1.opciones.op3') %></a></li>
+            <li><a href=<%= autoridades_url %>><%= t('botones.b1.opciones.op2') %></a></li>
+            <li><a href=<%= historia_url %>><%= t('botones.b1.opciones.op3') %></a></li>
             <li><a href="#"><%= t('botones.b1.opciones.op4') %></a></li>
             <li><a href=<%= premios_url %>><%= t('botones.b1.opciones.op5') %></a></li>
             <li><a href="#"><%= t('botones.b1.opciones.op6') %></a></li>
+						<li><a href="#" class="sublink"><%= t('botones.b1.opciones.op7') %></a></li>
           </ul>
       </li>
 
@@ -106,11 +110,12 @@
 			<div class="uk-accordion-content">
 				<ul class="uk-nav uk-nav-offcanvas">
 					<li><a href="#" class="sublink"><%= t('botones.b1.opciones.op1') %></a></li>
-          <li><a href=<%= historia_url %> class="sublink"><%= t('botones.b1.opciones.op2') %></a></li>
-          <li><a href="#" class="sublink"><%= t('botones.b1.opciones.op3') %></a></li>
+          <li><a href=<%= autoridades_url %> class="sublink"><%= t('botones.b1.opciones.op2') %></a></li>
+          <li><a href=<%= historia_url %> class="sublink"><%= t('botones.b1.opciones.op3') %></a></li>
           <li><a href="#" class="sublink"><%= t('botones.b1.opciones.op4') %></a></li>
           <li><a href=<%= premios_url %> class="sublink"><%= t('botones.b1.opciones.op5') %></a></li>
           <li><a href="#" class="sublink"><%= t('botones.b1.opciones.op6') %></a></li>
+					<li><a href="#" class="sublink"><%= t('botones.b1.opciones.op7') %></a></li>
 				</ul>
 			</div>
 			<h3 class="uk-accordion-title"><%= t('botones.b2.texto') %></h3>
@@ -142,13 +147,14 @@
 				<li><a href="#" class="uk-accordion-title"><%= t('botones.b5') %></a></li>
 				<li>
 					<ul class="nav navbar-nav navbar-left">
-						<li><%= link_to image_tag("fb-bco.png", :class => "img_net"), "#" %></li>
-						<li><%= link_to image_tag("twitter-bco.png", :class => "img_net"), "#" %></li>
+						<li><%= link_to image_tag("fb-bco.png", :class => "img_net"), "https://www.facebook.com/elcolmex/" %></li>
+						<li><%= link_to image_tag("twitter-bco.png", :class => "img_net"), "
+https://twitter.com/ELCOLMEX" %></li>
 						<li><%= link_to image_tag("instagram-bco.png", :class => "img_net"), "#" %></li>
-						<li><%= link_to image_tag("youtube-bco.png", :class => "img_net"), "#" %></li>
+						<li><%= link_to image_tag("youtube-bco.png", :class => "img_net"), "https://www.youtube.com/c/elcolegiodemexicociudaddemexico" %></li>
 						<li><%= link_to image_tag("linkedin-bco.png", :class => "img_net"), "#" %></li>
 						<li><%= link_to image_tag("itunes-bco.png", :class => "img_net"), "#" %></li>
-						<li><%= link_to image_tag("google-bco.png", :class => "img_net"), "#" %></li>
+						<li><%= link_to image_tag("google-bco.png", :class => "img_net"), "https://plus.google.com/+ColmexMx1/posts" %></li>
 			    </ul>
 				</li>
 			</ul>
