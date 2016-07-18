@@ -2,7 +2,7 @@
 
 <div class="cuerpo">
 	<div class="medio padded">
-		<span class="titulo-grande"><%= t('sobre.autoridades.titulo') %></span><br>
+		<span class="titulo-grande" id="titulo-render"><%= t('sobre.autoridades.titulo') %></span><br>
 		<ul class="lista-links unpadded">
 			<li><%= link_to(image_tag('bt-flechita.png', :class => "leave_img") + image_tag("bt-flechita-hover.png", :class => "hover_img") + t('sobre.autoridades.asamblea'), asamblea_path, :remote => true, :class => "link-sobre") %></li>
 			<li><%= link_to image_tag('bt-flechita.png', :class => "leave_img") + image_tag("bt-flechita-hover.png", :class => "hover_img") + t('sobre.autoridades.junta'), junta_path, :remote => true, :class => "link-sobre" %></li>
