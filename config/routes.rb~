@@ -39,7 +39,7 @@ Rails.application.routes.draw do
 
   get "programas_academicos/doctorados" => "programas_academicos#doctorados", :as => :doctorados
 
-  get "programas_academicos/cursos" => "programas_academicos#cursos", :as => :cursos
+  get "programas_academicos/cursos" => "programas_academicos#cursos", :as => :cursos_varios
 
   get 'sobre_el_colegio/inicio' => 'sobre_el_colegio#inicio', :as => :sobre_el_colegio
 

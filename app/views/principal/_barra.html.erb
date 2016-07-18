@@ -85,12 +85,12 @@ https://www.youtube.com/c/elcolegiodemexicociudaddemexico" %></li>
 			<li class="dropdown" id="dropdown3">
         <a href="<%= programas_academicos_url %>" class="dropdown-toggle" data-hover="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span><%= t('botones.b3.texto') %></span></a>
           <ul class="dropdown-menu">
-            <li><a href="#"><%= t('botones.b3.opciones.op1') %></a></li>
-            <li><a href="#"><%= t('botones.b3.opciones.op2') %></a></li>
-            <li><a href="#"><%= t('botones.b3.opciones.op3') %></a></li>
+            <li><a href=<%= licenciaturas_path %>><%= t('botones.b3.opciones.op1') %></a></li>
+            <li><a href=<%= maestrias_path %>><%= t('botones.b3.opciones.op2') %></a></li>
+            <li><a href=<%= doctorados_path %>><%= t('botones.b3.opciones.op3') %></a></li>
             <li><a href="#"><%= t('botones.b3.opciones.op4') %></a></li>
             <li><a href="#"><%= t('botones.b3.opciones.op5') %></a></li>
-            <li><a href="#"><%= t('botones.b3.opciones.op6') %></a></li>
+            <li><a href=<%= cursos_varios_path %>><%= t('botones.b3.opciones.op6') %></a></li>
             <li><a href="#"><%= t('botones.b3.opciones.op7') %></a></li>
           </ul>
       </li>
@@ -133,12 +133,12 @@ https://www.youtube.com/c/elcolegiodemexicociudaddemexico" %></li>
 			<h3 class="uk-accordion-title"><%= t('botones.b3.texto') %></h3>
 			<div class="uk-accordion-content">
 				<ul class="uk-nav uk-nav-offcanvas">
-					<li><a href="#" class="sublink"><%= t('botones.b3.opciones.op1') %></a></li>
-          <li><a href="#" class="sublink"><%= t('botones.b3.opciones.op2') %></a></li>
-          <li><a href="#" class="sublink"><%= t('botones.b3.opciones.op3') %></a></li>
+					<li><a href=<%= licenciaturas_path %> class="sublink"><%= t('botones.b3.opciones.op1') %></a></li>
+          <li><a href=<%= maestrias_path %> class="sublink"><%= t('botones.b3.opciones.op2') %></a></li>
+          <li><a href=<%= doctorados_path %> class="sublink"><%= t('botones.b3.opciones.op3') %></a></li>
           <li><a href="#" class="sublink"><%= t('botones.b3.opciones.op4') %></a></li>
           <li><a href="#" class="sublink"><%= t('botones.b3.opciones.op5') %></a></li>
-          <li><a href="#" class="sublink"><%= t('botones.b3.opciones.op6') %></a></li>
+          <li><a href=<%= cursos_varios_path %> class="sublink"><%= t('botones.b3.opciones.op6') %></a></li>
           <li><a href="#" class="sublink"><%= t('botones.b3.opciones.op7') %></a></li>
 				</ul>
 			</div>

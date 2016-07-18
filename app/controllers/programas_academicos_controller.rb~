@@ -1,5 +1,6 @@
 class ProgramasAcademicosController < ApplicationController
   def inicio
+  
   end
 
   def maestrias
@@ -11,6 +12,6 @@ class ProgramasAcademicosController < ApplicationController
   def doctorados
   end
 
-  def cursos
+  def cursos_varios
   end
 end
