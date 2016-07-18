@@ -326,6 +326,10 @@ a.uk-accordion-title { height: 34px; font-family: "Gotham SSm A", "Gotham SSm B"
 			width: calc(#{$ancho_botones} - 2px);
 			width: -moz-calc(#{$ancho_botones} - 2px);
 			width: -webkit-calc(#{$ancho_botones} - 2px);
+			-moz-transition: all 0.3s linear;
+			-webkit-transition: all 0.3s linear;
+			-o-transition: all 0.3s linear;
+			transition: all 0.3s linear;
 			
 			a{
 				display: inline-block;
@@ -358,6 +362,10 @@ a.uk-accordion-title { height: 34px; font-family: "Gotham SSm A", "Gotham SSm B"
 						color: #fff;
 						font-size: 17px;
 						font-weight: 600;
+						-moz-transition: all 0.4s linear;
+						-webkit-transition: all 0.4s linear;
+						-o-transition: all 0.4s linear;
+						transition: all 0.4s linear;
           }
 
           a:hover{
