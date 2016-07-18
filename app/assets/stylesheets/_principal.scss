@@ -291,10 +291,19 @@ html, body{ height: 100%; }
 		}
 
 		.uk-nav-sub{
+			padding-left: 0;
 			font-size: 17px;
 			background-color: #740020;
 
-			>li >a { padding-left: 30px; color: #EEEEEE; }
+			>li{
+				background-color: #740020;
+				-webkit-transition: all 0.3s linear;
+				-moz-transition: all 0.3s linear;
+				-o-transition: all 0.4s linear;
+				transition: all 0.4s linear;
+
+				>a { padding-left: 30px; color: #EEEEEE; }
+			}
 
 			>li:hover { 
 				background-color: #4E4E4E;
