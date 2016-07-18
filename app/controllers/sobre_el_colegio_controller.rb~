@@ -17,4 +17,28 @@ class SobreElColegioController < ApplicationController
       format.js
     end
   end
+
+  def operativas
+    respond_to do |format|
+      format.js
+    end
+  end
+
+  def junta
+    respond_to do |format|
+      format.js
+    end
+  end
+
+  def presidencia
+    respond_to do |format|
+      format.js
+    end
+  end
+
+  def administracion
+    respond_to do |format|
+      format.js
+    end
+  end
 end
