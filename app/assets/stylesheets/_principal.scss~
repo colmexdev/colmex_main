@@ -201,7 +201,7 @@ html, body{ height: 100%; }
     ul.nav.navbar-nav.reajustable { float: left; }
 	}
 
-	@media only screen and (min-width: 0px) and (max-width: 1024px), only screen and (min-device-width: 0px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
+	@media only screen and (min-width: 0px) and (max-width: 1024px){
 		.mail{
 			width: 80px;
 
@@ -240,16 +240,16 @@ html, body{ height: 100%; }
 			}	
 		}
 		
-		@media only screen and (min-width: 0px) and (max-width: 1071px){
+		@media only screen and (min-width: 0px) and (max-width: 1160px){
 			.mostrable{ display: inline-block; }
 		}
 
-		@media only screen and (min-width: 1071px){
+		@media only screen and (min-width: 1161px){
 			.mostrable{ display: none; }
 		}
 	}
 
-  @media only screen and (min-width: 0px) and (max-width: 1070px){
+  @media only screen and (min-width: 0px) and (max-width: 1160px){
 		.borrable{ display: none; }
 	}
 }
@@ -356,10 +356,10 @@ a.uk-accordion-title { height: 34px; font-family: "Gotham SSm A", "Gotham SSm B"
         margin: 0;
 				min-width: 100%;
 				overflow: hidden;
-				-moz-transition: all 0.4s linear;
-				-webkit-transition: all 0.4s linear;
-				-o-transition: all 0.4s linear;
-				transition: all 0.4s linear;
+				-moz-transition: all 0.5s linear;
+				-webkit-transition: all 0.5s linear;
+				-o-transition: all 0.5s linear;
+				transition: all 0.5s linear;
 				
         li{
 					opacity: 0.7;
@@ -403,7 +403,7 @@ a.uk-accordion-title { height: 34px; font-family: "Gotham SSm A", "Gotham SSm B"
 	}
 }
 
-@media only screen and (min-device-width: 1070px) and (min-width: 0px) and (max-width: 1070px), only screen and (max-device-width: 1070px){
+@media only screen and (min-device-width: 1070px) and (min-width: 0px) and (max-width: 1160px){
 	#div_menu{ display: none; } 
 }
 
@@ -466,11 +466,11 @@ a.uk-accordion-title { height: 34px; font-family: "Gotham SSm A", "Gotham SSm B"
 	}
 }
 
-@media only screen and (min-device-width:1024px) and (min-width: 600px) and (max-width: 1024px), only screen and (min-device-width: 600px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1){
+@media only screen and (min-device-width:1024px) and (min-width: 600px) and (max-width: 1024px){
 	#div_slider{ height: 450px; } 
 }
 
-@media only screen and (min-device-width:768px) and (min-width: 0px) and (max-width: 768px), only screen and (min-device-width: 0px) and (max-device-width: 768px) and (-webkit-min-device-pixel-ratio: 1){
+@media only screen and (min-device-width:768px) and (min-width: 0px) and (max-width: 768px){
 	#div_slider{ height: 400px; } 
 }
 
