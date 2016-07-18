@@ -348,13 +348,17 @@ a.uk-accordion-title { height: 34px; font-family: "Gotham SSm A", "Gotham SSm B"
         background-color: #993366;
 				text-align: left;
         padding: 0;
-        opacity: 0.8;
         border-radius: 0px;
         border: none;
         margin: 0;
 				min-width: 100%;
 				
         li{
+					opacity: 0.8;
+					-moz-transition: all 0.4s linear;
+					-webkit-transition: all 0.4s linear;
+					-o-transition: all 0.4s linear;
+					transition: all 0.4s linear;
 
           a{
 						background-color: #5E002B;
@@ -373,6 +377,8 @@ a.uk-accordion-title { height: 34px; font-family: "Gotham SSm A", "Gotham SSm B"
             background-color: #470020;
           }
         }
+
+				li:hover{ opacity: 1; }
 			}
 		}
 
