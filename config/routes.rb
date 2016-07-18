@@ -33,6 +33,14 @@ Rails.application.routes.draw do
 
   get 'programas_academicos/inicio' => "programas_academicos#inicio", :as => :programas_academicos
 
+  get "programas_academicos/licenciaturas" => "programas_academicos#licenciaturas", :as => :licenciaturas
+
+  get "programas_academicos/maestrias" => "programas_academicos#maestrias", :as => :maestrias
+
+  get "programas_academicos/doctorados" => "programas_academicos#doctorados", :as => :doctorados
+
+  get "programas_academicos/cursos" => "programas_academicos#cursos", :as => :cursos
+
   get 'sobre_el_colegio/inicio' => 'sobre_el_colegio#inicio', :as => :sobre_el_colegio
 
   get 'sobre_el_colegio/autoridades' => 'sobre_el_colegio#autoridades', :as => :autoridades

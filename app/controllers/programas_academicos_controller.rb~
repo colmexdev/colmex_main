@@ -1,6 +1,5 @@
 class ProgramasAcademicosController < ApplicationController
   def inicio
-  
   end
 
   def maestrias

@@ -1,0 +1,60 @@
+<%= render 'principal/barra' %>
+
+<div id="cuerpo">
+	<div class="row">
+		<div class="titular-pagina">
+			<span class="titulo-grande"><%= t('botones.b3.texto') %></span>
+		</div>
+	</div>
+	<div class="tabla">
+		<div class="tabla-programa">
+			<div class="medio centro programa texto-programa">
+				<span class="titulo-chico morado"><%= t('botones.b3.opciones.op1') %></span>
+				<br>
+				<%= construye_cursos("Licenciatura") %>
+			</div>
+			<div class="medio centro programa img-programa">
+				<%= image_tag("sobre.png", :class => "img-muestra img-pa") %>
+			</div>
+		</div>
+	</div>
+	<div class="tabla">	
+		<div class="tabla-programa">
+			<div class="medio centro programa img-programa">
+				<%= image_tag("sobre.png", :class => "img-muestra img-pa") %>
+			</div>
+			<div class="medio centro programa texto-programa">
+				<span class="titulo-chico morado"><%= t('botones.b3.opciones.op2') %></span>
+				<br>
+				<%= construye_cursos("Maestría") %>
+			</div>
+		</div>
+	</div>
+	<div class="tabla">
+		<div class="tabla-programa">
+			<div class="medio centro programa texto-programa">
+				<span class="titulo-chico morado"><%= t('botones.b3.opciones.op3') %></span>
+				<br>
+				<%= construye_cursos("Doctorado") %>
+			</div>
+			<div class="medio centro programa img-programa">
+				<%= image_tag("sobre.png", :class => "img-muestra img-pa") %>
+			</div>
+		</div>
+	</div>
+	<div class="tabla curso">
+		<div class="tabla-programa">
+			<div class="medio centro programa img-programa">
+				<%= image_tag("sobre.png", :class => "img-muestra img-pa") %>
+			</div>
+			<div class="medio centro programa texto-programa">
+				<span class="titulo-chico morado"><%= t('botones.b3.opciones.op6') %></span>
+				<br>
+				<%= construye_cursos("Curso") %>
+			</div>
+		</div>
+
+	</div>
+</div>
+
+<%= render 'principal/footer'%>

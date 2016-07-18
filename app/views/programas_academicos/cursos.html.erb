@@ -1,0 +1,22 @@
+<%= render 'principal/barra' %>
+
+<div id="cuerpo">
+	<div class="row">
+		<div class="titular-pagina">
+			<span class="titulo-grande"><%= t('botones.b3.opciones.op6') %></span>
+		</div>
+	</div>
+	<div class="tabla curso">
+		<div class="tabla-programa">
+			<div class="medio centro programa img-programa">
+				<%= image_tag("sobre.png", :class => "img-muestra img-pa") %>
+			</div>
+			<div class="medio centro programa texto-programa">
+				<%= construye_cursos("Curso") %>
+			</div>
+		</div>
+
+	</div>
+</div>
+
+<%= render 'principal/footer'%>
