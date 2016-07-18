@@ -59,7 +59,7 @@ sp:
     autoridades:
       titulo: "Autoridades"
       asamblea: "Asamblea de socios"
-      gobierno: "Junta de Gobierno"
+      junta: "Junta de Gobierno"
       presidencia: "Presidencia"
       admin: "Administración"
       operativas: "Áreas operativas"
