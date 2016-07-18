@@ -34,7 +34,7 @@
 	.hover_img { display: none; }
 }
 
-.link-sobre:hover, .link-sobre:active, .link-sobre.visited{
+.link-sobre:hover, .link-sobre:active{
 	color: #7e3355; 	
 
 	.hover_img {display: inline; padding: 0 10px;}
