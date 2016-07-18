@@ -297,10 +297,8 @@ html, body{ height: 100%; }
 
 			>li >a { color: #EEEEEE; }
 
-			>li{ 
-				>a:hover, >a:active{
-					background-color: #4E4E4E;
-				}	
+			>li:hover { 
+				background-color: #4E4E4E;
 			}
 		}
 	}
