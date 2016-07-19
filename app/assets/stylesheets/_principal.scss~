@@ -263,8 +263,14 @@ html, body{ height: 100%; }
 		-moz-transition: all 0.3s linear;
 		-o-transition: all 0.3s linear;
 		transition: all 0.3s linear;*/
+		
+		>a{
+			color: #4E4E4E;
+			font-size: 18px;
+			font-weight: bold;
+		}
 
-		>.uk-nav-sub{
+		.uk-nav-sub{
 			padding-left: 0;
 			font-size: 17px;
 			background-color: #740020;
@@ -285,14 +291,6 @@ html, body{ height: 100%; }
 				background-color: #4E4E4E;
 			}
 		}
-		
-		>a{
-			color: #4E4E4E;
-			font-size: 18px;
-			font-weight: bold;
-		}
-
-		
 	}
  	.uk-parent:hover{
 		background-color: #4E4E4E;

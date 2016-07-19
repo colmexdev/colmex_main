@@ -289,11 +289,14 @@ html, body{ height: 100%; }
 
 			>li:hover { 
 				background-color: #4E4E4E;
+
 			}
 		}
 	}
  	.uk-parent:hover{
 		background-color: #4E4E4E;
+
+		>li >a { color: #EEEEEE; }
 	}
 }
 
