@@ -14,7 +14,7 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require bootstrap-sprockets
-//= require uikit
+//= require_tree ../../../vendor/assets/javascripts/.
 //= require principal
 //= require imagens
 //= require cursos
