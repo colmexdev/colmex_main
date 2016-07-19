@@ -3194,10 +3194,10 @@
                 });
 
                 Offcanvas.hide();
+                $html.css("margin-top","");
             });
 
             element.data("OffcanvasInit", true);
-            $html.css('margin-top','0');
         }
     };
 
