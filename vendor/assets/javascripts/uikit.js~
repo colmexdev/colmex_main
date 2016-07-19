@@ -3118,7 +3118,7 @@
                     panel.removeClass("uk-active");
 
                     bar.removeClass("uk-offcanvas-bar-show");
-                    $html.css('margin-top', '');
+                    $('html').css('margin-top', '');
                     window.scrollTo(scrollpos.x, scrollpos.y);
                     bar.trigger('hide.uk.offcanvas', [panel, bar]);
 

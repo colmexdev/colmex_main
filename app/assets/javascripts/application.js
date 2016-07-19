@@ -16,6 +16,7 @@
 //= require bootstrap-sprockets
 //= require uikit
 //= require components/accordion
+//= require components/lightbox
 //= require principal
 //= require imagens
 //= require cursos
