@@ -913,7 +913,7 @@ html, body{ height: 100%; }
 	#fundacion-colmex, #video-colmex { height: 370px; }
 
 	#fundacion-colmex { 
-		padding-left:35px;
+		padding-left: 35px;
 		#div-img-fundacion { max-width: 233px; } 
 	}
 }

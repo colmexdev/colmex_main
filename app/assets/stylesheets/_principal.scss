@@ -332,6 +332,7 @@ html, body{ height: 100%; }
 			background-color: #5E002B;
 			text-align: center;
 			height: 100%;
+			opacity: 0.6;
 			position: relative;
 			width: calc(20% - 2px);
 			width: -moz-calc(20% - 2px);
@@ -402,6 +403,7 @@ html, body{ height: 100%; }
 
 		.dropdown:hover, .no-dropdown:hover{
 			background-color: #470020;
+			opacity: 1;
 		}
 
 		.dropdown:hover .dropdown-menu{
