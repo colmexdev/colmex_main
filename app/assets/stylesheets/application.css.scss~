@@ -15,8 +15,7 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 @import "uikit.min";
-@import "components/accordion";
-@import "components/lightbox";
+@import "accordion";
 @import "principal";
 @import "sobre";
 @import "premios";
