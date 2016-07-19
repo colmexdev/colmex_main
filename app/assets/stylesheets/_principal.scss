@@ -300,6 +300,8 @@ html, body{ height: 100%; }
 
 .nav>li { float: left; >a>img{ margin: 2px;} }
 
+ul.ul-nav { float: left !important; }
+
 //Clase para alterar el div donde va el logotipo de colmex
 #div_logo{
 	height: 150px;

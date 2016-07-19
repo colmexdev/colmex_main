@@ -123,11 +123,12 @@ html, body{ height: 100%; }
 
 		>.en{
 			display: inline-block;
+			padding-right: 0;
 		}
 
 		>.sp{
 			display: inline-block;
-			padding-left: 3px;
+			padding-left: 0;
 		}
 
 		>a:hover{ color: #993366; }
