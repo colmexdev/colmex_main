@@ -912,7 +912,10 @@ html, body{ height: 100%; }
 @media only screen and (min-width: 767px) and (max-width: 1260px){
 	#fundacion-colmex, #video-colmex { height: 370px; }
 
-	#fundacion-colmex { #div-img-fundacion { max-width: 233px; } }
+	#fundacion-colmex { 
+		padding-left: 35px;
+		#div-img-fundacion { max-width: 233px; } 
+	}
 }
 
 @media only screen and (min-width: 0px) and (max-width: 767px){
