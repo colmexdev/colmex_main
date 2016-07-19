@@ -932,6 +932,7 @@ html, body{ height: 100%; }
 
 	#div-img-fundacion{ 
 		width: 50%; 
+		max-width: 323px;
 		height: 100%;
 		display: inline-block;
 		position: relative;  
@@ -1058,7 +1059,7 @@ html, body{ height: 100%; }
 		#footer_der, #footer_izq { .links { font-size: 13px; } }
 	} 
 
-	@media only screen and (min-device-width: 991px) and (min-width: 0px) and (max-width: 991px){
+	@media only screen and (max-width: 991px) and (min-width: 0px) and (max-width: 991px){
 		#footer_izq { display: none; }
 		#footer_centro { border: none; }
 		#footer_der { 
