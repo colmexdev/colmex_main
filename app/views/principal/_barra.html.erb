@@ -11,7 +11,7 @@
 		<% clase_es = "activo" %>
 	<% end %>
 
-<div class="row">
+<div class="uk-grid">
 
 	<nav class="navbar navbar-default">
 	  <div class="container-fluid" id="contenedor_nav">
@@ -49,14 +49,14 @@ https://www.youtube.com/c/elcolegiodemexicociudaddemexico" %></li>
 	</nav>
 </div> <!-- Cierre de div row barra nav -->
 
-<div class="row"> <!-- Fila para logo -->
-	<div class="col-md-12" id="div_logo"> <!-- Columnas para logo -->	
+<div class="grid"> <!-- Fila para logo -->
+	<div class="uk-width-1-1" id="div_logo"> <!-- Columnas para logo -->	
 		<%= link_to image_tag("colmex-principal.png", :id => "img_logo"), root_path %> 	
 	</div> <!--Cierre de div columnas para logo -->
 </div> <!-- Cierre de div fila para logo -->
 
 <div class="row"> <!-- Fila para menú -->
-	<div class="col-md-12" id="div_menu"> <!-- Columnas para menu -->
+	<div class="uk-width-1-1" id="div_menu"> <!-- Columnas para menu -->
 		<ul class="botones"> <!-- Opciones del menú -->
 			<li class="dropdown" id="dropdown1">
         <a href=<%= sobre_el_colegio_path %> class="dropdown-toggle" data-hover="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span><%= t('botones.b1.texto') %></span></a>
