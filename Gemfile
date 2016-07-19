@@ -8,7 +8,7 @@ gem 'mysql2', '>= 0.3.13', '< 0.5'
 # Use bootstrap compiled from SASS
 gem 'bootstrap-sass', '~> 3.3.6'
 # UIkit para estilos diversos
-gem "uikit-sass-rails"
+#gem "uikit-sass-rails"
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets

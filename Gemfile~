@@ -40,10 +40,6 @@ gem 'paperclip'
 # Devise para autenticación
 gem 'devise'
 
-# I18n para traducciones
-gem 'i18n', '~> 4.0.0'
-
-
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
