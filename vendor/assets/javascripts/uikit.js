@@ -3118,7 +3118,7 @@
                     panel.removeClass("uk-active");
 
                     bar.removeClass("uk-offcanvas-bar-show");
-                    $html.css('margin-top', '');
+                    $html.css('margin-top', 0);
                     window.scrollTo(scrollpos.x, scrollpos.y);
                     bar.trigger('hide.uk.offcanvas', [panel, bar]);
 
@@ -3164,7 +3164,6 @@
             });
 
             element.on("click", "a[href*='#']", function(e){
-                $html.css("margin-top",'');
                 var link = UI.$(this),
                     href = link.attr("href");
 

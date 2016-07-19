@@ -3095,7 +3095,7 @@
             $body.css({"width": window.innerWidth - scrollbarwidth, "height": window.innerHeight}).addClass("uk-offcanvas-page");
             $body.css((rtl ? "margin-right" : "margin-left"), (rtl ? -1 : 1) * (bar.outerWidth() * dir)).width(); // .width() - force redraw
 
-            //$html.css('margin-top', scrollpos.y * -1);
+            $html.css('margin-top', scrollpos.y * -1);
 
             bar.addClass("uk-offcanvas-bar-show");
 
@@ -3118,7 +3118,7 @@
                     panel.removeClass("uk-active");
 
                     bar.removeClass("uk-offcanvas-bar-show");
-                    $html.css('margin-top', '0');
+                    $html.css('margin-top', '');
                     window.scrollTo(scrollpos.x, scrollpos.y);
                     bar.trigger('hide.uk.offcanvas', [panel, bar]);
 
@@ -3164,7 +3164,7 @@
             });
 
             element.on("click", "a[href*='#']", function(e){
-
+                $html.css("margin-top",'');
                 var link = UI.$(this),
                     href = link.attr("href");
 
