@@ -3096,7 +3096,6 @@
             $body.css((rtl ? "margin-right" : "margin-left"), (rtl ? -1 : 1) * (bar.outerWidth() * dir)).width(); // .width() - force redraw
 
             //$html.css('margin-top', scrollpos.y * -1);
-            $html.css('margin-top', '');
 
             bar.addClass("uk-offcanvas-bar-show");
 
