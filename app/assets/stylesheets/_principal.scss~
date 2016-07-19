@@ -1,15 +1,6 @@
 /* Estilos asociados a la página principal */
-//Declaracion de variables
+//Declaracion de variables                         
 
-$altura_div_slider: 550px;
-$bullet_slider: #CCCCCC;
-$bullet_slider_sel: #993366;
-$ancho_flechas_slider: 80px;
-
-$ancho_eventos: 100%;
-$ancho_flechas_eventos: 60px;
-$color_flechas_eventos: #993366;
-$ancho_division_eventos: 25%;                         
 
 //Mixins para evitar repeticiones
 
@@ -437,12 +428,12 @@ html, body{ height: 100%; }
 
 		.carousel-indicators li{
 			border: none;
-			background-color: $bullet_slider;
+			background-color: #CCCCCC;
 		}
 
 		.carousel-indicators .active{
 			border: none;
-			background-color: $bullet_slider_sel;
+			background-color: #993366;
 		}
 
 		.carousel-inner{
@@ -472,7 +463,7 @@ html, body{ height: 100%; }
 		}
 		.carousel-control.right, .carousel-control.left{
 			opacity: 0.2;
-      width: $ancho_flechas_slider;
+      width: 80px;
 		}
 
 		.carousel-control.right:hover, .carousel-control.left:hover, .carousel-control.right:focus:hover, .carousel-control.left:focus:hover{
@@ -500,14 +491,14 @@ html, body{ height: 100%; }
 		position: relative;
 		height: 100%;
 		text-align: center;
-		width: $ancho_eventos;
+		width: 100%;
 		margin: 0 auto;
 		padding: 0;
 
 		.carousel-control.right, .carousel-control.left{
 			opacity: 0.5;
-			width: $ancho_flechas_eventos;
-			color: $color_flechas_eventos;
+			width: 60px;
+			color: #993366;
 		}
 
 		.carousel-inner{
@@ -517,15 +508,15 @@ html, body{ height: 100%; }
 				float: left;
 				text-align: center;
 				height: 100%;
-				width: calc(100% - #{$ancho_flechas_eventos});
-				width: -moz-calc(100% - #{$ancho_flechas_eventos});
-				width: -webkit-calc(100% - #{$ancho_flechas_eventos});
-				padding-left: $ancho_flechas_eventos;
+				width: calc(100% - 60px);
+				width: -moz-calc(100% - 60px);
+				width: -webkit-calc(100% - 60px);
+				padding-left: 60px;
 
 				.evento{
 					float: left;
 					height: 100%;
-					width: $ancho_division_eventos;
+					width: 25%;
 					text-align: center;
 
 					.img_evento{
