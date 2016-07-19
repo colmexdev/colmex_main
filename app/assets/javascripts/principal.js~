@@ -1,14 +1,7 @@
-ancho = Math.max(document.documentElement.clientWidth, window.innerWidth || document.body.ClientWidth || 0);
+$("[data-uk-nav]", context).each(function() {
+var nav = $(this);
 
-window.onresize = function(){
-	var ancho_act = Math.max(document.documentElement.clientWidth, window.innerWidth || document.body.ClientWidth || 0);;
-	if(ancho_act < 900 && ancho >= 900){
-		console.log(gon.ev_small);
-		ancho = ancho_act;
-	} 
-	else if(ancho_act >= 900 && ancho < 900){
-		console.log(gon.ev_big);
-		ancho = ancho_act;
-	}
-}
-
+        if (!nav.data("nav")) {
+            var obj = UI.nav(nav, UI.Utils.options(nav.attr("data-uk-nav")));
+        }
+    });
