@@ -31,7 +31,7 @@
 	      </form> -->
 				<% form_tag root_path do %>
 					<%= text_field_tag :buscar %>
-					<%= submit_tag "<span class="glyphicon glyphicon-search" aria-hidden="true"></span>".html_safe %>
+					<%= submit_tag '<span class=\"glyphicon glyphicon-search\" aria-hidden="true"></span>'.html_safe %>
 				<% end %>
 	      <ul class="nav navbar-nav navbar-right">
 					<li class="borrable"><%= link_to image_tag("fb-color.png", :class => "img_net uk-animation-hover uk-animation-shake"), "
