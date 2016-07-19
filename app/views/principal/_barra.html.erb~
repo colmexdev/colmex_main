@@ -109,8 +109,8 @@ https://www.youtube.com/c/elcolegiodemexicociudaddemexico" %></li>
 	<div id="menu" class="uk-offcanvas"> <!-- Offcanvas -->
 		<div class="uk-offcanvas-bar uk-offcanvas-bar-flip">
 			
-			<ul class="uk-nav uk-nav-offcanvas" data-uk-nav>
-				<li class="uk-parent  uk-active">
+			<ul class="uk-nav uk-nav-offcanvas uk-nav-parent-icon" data-uk-nav>
+				<li class="uk-parent">
 					<a href="#"><%= t('botones.b1.texto') %></a>
 					<ul class="uk-nav-sub">
 						<li><a href="#" class="sublink"><%= t('botones.b1.opciones.op1') %></a></li>
@@ -122,7 +122,7 @@ https://www.youtube.com/c/elcolegiodemexicociudaddemexico" %></li>
 						<li><a href="#" class="sublink"><%= t('botones.b1.opciones.op7') %></a></li>
 					</ul>
 				</li>
-				<li class="uk-parent uk-active">
+				<li class="uk-parent">
 					<a href="#"><%= t('botones.b2.texto') %></a>
 					<ul class="uk-nav-sub">
 						<li><a href="<%= ceaa_url %>" class="sublink">Centro de Estudios de Asia y África</a></li>
@@ -134,7 +134,7 @@ https://www.youtube.com/c/elcolegiodemexicociudaddemexico" %></li>
           	<li><a href="<%= ces_url %>" class="sublink">Centro de Estudios Sociológicos</a></li>
 					</ul>
 				</li>
-				<li class="uk-parent  uk-active">
+				<li class="uk-parent">
 					<a href="#"><%= t('botones.b3.texto') %></a>
 					<ul class="uk-nav-sub">
 						<li><a href=<%= licenciaturas_path %> class="sublink"><%= t('botones.b3.opciones.op1') %></a></li>
