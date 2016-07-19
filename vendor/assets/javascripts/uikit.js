@@ -3118,7 +3118,7 @@
                     panel.removeClass("uk-active");
 
                     bar.removeClass("uk-offcanvas-bar-show");
-                    $html.css('margin-top', 0);
+                    $html.css('margin-top', '');
                     window.scrollTo(scrollpos.x, scrollpos.y);
                     bar.trigger('hide.uk.offcanvas', [panel, bar]);
 
@@ -3188,6 +3188,7 @@
                     if (target.length && UI.Utils.scrollToElement) {
                         UI.Utils.scrollToElement(target, UI.Utils.options(link.attr('data-uk-smooth-scroll') || '{}'));
                     } else {
+                        $html.css('margin-top','');
                         window.location.href = href;
                     }
                 });
