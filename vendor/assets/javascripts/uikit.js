@@ -3197,6 +3197,7 @@
             });
 
             element.data("OffcanvasInit", true);
+            $html.css('margin-top','0');
         }
     };
 
