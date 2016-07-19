@@ -1,28 +1,5 @@
-// Place all the styles related to the principal controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+/* Estilos asociados a la página principal */
 //Declaracion de variables
-
-$ancho_idioma: 100px;
-
-$margen_superior_textos_navbar: 17px;
-$color_textos_navbar: #909090;
-$color_textos_navbar_sel: #993366;
-
-$color_fondo_searchbox: #CCCCCC;
-$color_borde_searchbox: #909090;
-$tamano_lupa: 20px;
-
-$color_fondo_menus: #993366;
-$padding_lat_menus: 5px;
-$ancho_botones: 20%;
-$color_texto_botones: #FFFFFF;
-$padding_sup_texto_botones: 20px;
-$tamano_texto_botones: 18px;
-$padding_sup_top_op: 10px;
-$padding_izq_der_op: 10px;
-$ancho_opcion: 45px;
-$color_seleccion_opcion: #993399;
 
 $altura_div_slider: 550px;
 $bullet_slider: #CCCCCC;
@@ -33,17 +10,6 @@ $ancho_eventos: 100%;
 $ancho_flechas_eventos: 60px;
 $color_flechas_eventos: #993366;
 $ancho_division_eventos: 25%;                         
-
-$ancho_textbox_suscripcion: 220px;
-$color_textbox_suscripcion: #FFFFFF;
-$margen_sup_textbox_suscripcion: 5px;
-$margen_izq_textbox_suscripcion: 15px;
-$margen_der_textbox_suscripcion: 20px;
-$color_fondo_boton_suscripcion: #C76BB0;
-$color_texto_boton_suscripcion: #FFFFFF;
-$color_borde_boton_suscripcion: #993366;
-
-$altura_div_descubre: 700px;
 
 //Mixins para evitar repeticiones
 
@@ -143,7 +109,7 @@ html, body{ height: 100%; }
 	}	
 
 	.idioma{
-		width: $ancho_idioma;
+		width: 100px;
 		padding-top: 10px;
 
 		>a{
@@ -154,14 +120,14 @@ html, body{ height: 100%; }
 		}
 
     >.activo{
-			color: $color_textos_navbar_sel;
-			width: $ancho_idioma / 2.5;
+			color: #993366;
+			width: 100px / 2.5;
 			
 		}
 
 		>.inactivo{
-			color: $color_textos_navbar;
-			width: $ancho_idioma / 2.5;
+			color: #909090;
+			width: 100px / 2.5;
 		}
 
 		>.en{
@@ -232,14 +198,14 @@ html, body{ height: 100%; }
 
 	.nav_opciones{
 		a{
-			color: $color_textos_navbar;
+			color: #909090;
 			-webkit-transition: color 0.4s linear;
 			-moz-transition: color 0.4s linear;
 			-o-transition: color 0.4s linear;
 			transition: color 0.4s linear;
 		}
 		a:hover,a:active{
-			color: $color_textos_navbar_sel;
+			color: #993366;
 		}
 	}
 	
@@ -269,13 +235,13 @@ html, body{ height: 100%; }
 
 //Clase asociada al campo de texto de busqueda
 .form-control{
-	background-color: $color_fondo_searchbox;
-	border-color: $color_borde_searchbox;
-	color: $color_textos_navbar;
+	background-color: #CCCCCC;
+	border-color: #909090;
+	color: #909090;
 }
 
 .form-control:focus{
-	border-color: $color_textos_navbar_sel;
+	border-color: #993366;
 	box-shadow: 0 0 5px rgba(153, 51,102, 1);
 }
 
@@ -283,7 +249,7 @@ html, body{ height: 100%; }
 .boton_lupa{
 	background-color: #E6E6E6;
 	border: none;
-	font-size: $tamano_lupa;
+	font-size: 20px;
 }
 
 //Estilos asociados al offcanvas
@@ -372,9 +338,9 @@ html, body{ height: 100%; }
 			text-align: center;
 			height: 100%;
 			position: relative;
-			width: calc(#{$ancho_botones} - 2px);
-			width: -moz-calc(#{$ancho_botones} - 2px);
-			width: -webkit-calc(#{$ancho_botones} - 2px);
+			width: calc(20% - 2px);
+			width: -moz-calc(20% - 2px);
+			width: -webkit-calc(20% - 2px);
 			-moz-transition: all 0.3s linear;
 			-webkit-transition: all 0.3s linear;
 			-o-transition: all 0.3s linear;
@@ -419,7 +385,7 @@ html, body{ height: 100%; }
 
           a{
 						background-color: #5E002B;
-            padding: $padding_sup_top_op $padding_izq_der_op;
+            padding: 10px;
 						color: #fff;
 						font-size: 17px;
 						font-weight: 600;
@@ -771,11 +737,11 @@ html, body{ height: 100%; }
 			}
 
 			.form-control{
-				width: $ancho_textbox_suscripcion;
-				background-color: $color_textbox_suscripcion;
-				margin-top: $margen_sup_textbox_suscripcion;
-				margin-left: $margen_izq_textbox_suscripcion;
-				margin-right: $margen_der_textbox_suscripcion;
+				width: 220px;
+				background-color: #FFFFFF;
+				margin-top: 5px;
+				margin-left: 15px;
+				margin-right: 20px;
 				border-radius: 0;
 			}
 		}
@@ -833,7 +799,7 @@ html, body{ height: 100%; }
 }
 
 #div_descubre{
-	height: $altura_div_descubre;
+	height: 700px;
 	background-color: #F0F000;
 }
 
@@ -841,13 +807,13 @@ html, body{ height: 100%; }
 #fundacion-colmex { 
 	height: 500px;
 	padding: 30px 15px;
+	text-align: center;
 
 	#div-donacion{ 
 		background-color: #F9F9F9;
 		width: 50%; 
 		height: 100%; 
 		display: inline-block;
-		float: left;
 
 		p{
 			color: #4D4D4D;
@@ -935,8 +901,8 @@ html, body{ height: 100%; }
 		max-width: 323px;
 		height: 100%;
 		display: inline-block;
-		position: relative;  
-		img { @include centrado; width: 100%; height: 100%; }
+		  
+		img { width: 100%; height: 100%; }
 	}
 }
 
@@ -1059,7 +1025,7 @@ html, body{ height: 100%; }
 		#footer_der, #footer_izq { .links { font-size: 13px; } }
 	} 
 
-	@media only screen and (min-device-width: 991px) and (min-width: 0px) and (max-width: 991px){
+	@media only screen and (max-width: 991px) and (min-width: 0px) and (max-width: 991px){
 		#footer_izq { display: none; }
 		#footer_centro { border: none; }
 		#footer_der { 
