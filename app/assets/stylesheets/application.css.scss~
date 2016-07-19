@@ -19,6 +19,7 @@
 @import "sobre";
 @import "premios";
 @import "centros";
+@import "mains";
 
 
 

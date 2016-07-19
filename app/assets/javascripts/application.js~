@@ -14,8 +14,9 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require bootstrap-sprockets
-//= require uikit
+//= require uikit.min
 //= require principal
 //= require imagens
 //= require cursos
 //= require documentos
+//= require sobre_el_colegio
