@@ -956,7 +956,7 @@ ul.ul-nav { display: table; float: left !important;
 		min-width: 300px;
 		color: #CCCCCC;
 
-		.uk-icon-large { vertical-align: 0; }
+		.uk-icon-large, .uk-icon-medium { vertical-align: 0; }
 
 		#span-frase{ font-style: italic; font-size: 18px; }
 
@@ -967,16 +967,15 @@ ul.ul-nav { display: table; float: left !important;
 
 //Estilos que afectan a la sección de transparencia
 #div_transparencia{
-	height: 250px;
+	height: auto;
 	background-color: #FFFFFF;
 	text-align: center;
-	line-height: 250px;
 	a { 
 		img { 
 			display: inline-block; 
 			max-height: 200px;
 			max-width: 180px;
-			margin: 0 20px;
+			margin: 10px 20px 35px 20px;
 		} 
 	}
 }
