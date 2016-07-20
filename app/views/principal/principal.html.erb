@@ -133,9 +133,11 @@
 
 	<div class="row"> <!-- Fila para frase -->
 		<div class="col-md-12" id="div_frase"> <!-- Columnas para frase -->
+			<% if Frase.order(:id).last.try(:cita) != nil %>
 			<p>
-					<%= Frase.order(:id).last.try(:cita) %>
+					<span class="uk-icon-quote-left uk-icon-large"></span><span class="span-frase"><%= Frase.order(:id).last.try(:cita) %></span><span class="uk-icon-quote-right uk-icon-large"></span><span class="span-autor"><%= Frase.order(:id).last.try(:autor) %></span>
 			</p>
+			<% end %>
 		</div> <!-- Cierre de columnas para frase -->
 	</div> <!-- Cierre de fila para frase -->
 
