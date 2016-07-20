@@ -3159,7 +3159,7 @@
                     }
                 }
 
-                //e.stopImmediatePropagation();
+                e.stopImmediatePropagation();
                 Offcanvas.hide();
             });
 
