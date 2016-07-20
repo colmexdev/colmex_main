@@ -3192,6 +3192,7 @@
                         window.location.href = href;
                     }
                 });
+                alert("Algo")
                 Offcanvas.hide();
             });
 
