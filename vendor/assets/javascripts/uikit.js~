@@ -3167,7 +3167,7 @@
             element.on("click", "a", function(e){
                 var link = UI.$(this),
                 href = link.attr("href");
-
+								alert(herf)
                 if (href == "#") {
                     return;
                 }

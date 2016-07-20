@@ -3150,6 +3150,7 @@
             element.on("click.uk.offcanvas swipeRight.uk.offcanvas swipeLeft.uk.offcanvas", function(e) {
 
                 var target = UI.$(e.target);
+								alert(target);
 
                 if (!e.type.match(/swipe/)) {
 
@@ -3234,7 +3235,7 @@
             }, this.options);
 
             this.on("click", function(e) {
-                //e.preventDefault();
+                e.preventDefault();
                 Offcanvas.show($this.options.target);
             });
         }
