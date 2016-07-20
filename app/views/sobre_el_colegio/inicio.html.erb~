@@ -1,0 +1,52 @@
+<%= render 'principal/barra' %>
+
+<div id="cuerpo">
+	<div class="row">
+		<div id="img-menus-sobre">
+
+				<%= image_tag("sobre.png", :class => "img-muestra") %>
+
+			<ul class="lista-links">
+				<li><%= construir_link("bt-flechita.png", "bt-flechita-hover.png", "Centros de Estudio",centros_de_estudio_url,"link-sobre") %></li>
+				<li><%= construir_link("bt-flechita.png", "bt-flechita-hover.png","Publicaciones","#","link-sobre") %></li>
+				<li><%= construir_link("bt-flechita.png", "bt-flechita-hover.png","Programa de Educación Digital","#","link-sobre") %></li>
+				<li><%= construir_link("bt-flechita.png", "bt-flechita-hover.png","Revistas","#","link-sobre") %></li>
+			</ul>
+		</div>
+		<div id="texto-sobre">
+			<span class="titulo-chico">Sobre</span><br>
+			<span class="titulo-grande">El Colegio de México</span><br><br>
+			<p>El Colegio de México es una institución pública, de carácter
+universitario, dedicada a la investigación y a la enseñanza
+superior en ciencias sociales y humanidades, siendo uno de
+los más destacadas en el mundo hispánico, por lo cual ha
+recibido numerosos reconocimientos desde su fundación
+hasta el presente.</p>
+<p>Para cumplir con sus fines El Colegio de México lleva a cabo
+investigaciones y docencia en las áreas de la especialidad
+de los Centros de Estudios que lo integran: Históricos,
+Lingüísticos y Literarios, Internacionales, de Asia y África,
+Económicos, Demográficos Urbanos y Ambientales, y
+Sociológicos. Ofrece licenciaturas, maestrías y doctorados
+por especialidad, así como cursos de especialización y de
+verano.</p>
+<p>El Colegio cuenta con cuenta con una gran Biblioteca,
+especializada en ciencias sociales y humanidades abierta al
+público. Su acervo está constituido por más de 700,000
+volúmenes y cuenta con una enorme cantidad de recursos
+electrónicos y digitales. También se cuenta con las
+unidades de Coordinación de Servicios de Cómputo,
+Departamento de Publicaciones y Programa de Educación
+Digital.</p>
+<p>De las aulas de El Colegio han salido varios millares de
+egresados que se han destacado en la investigación, la
+docencia, la función pública y otros campos de actividad
+profesional en México. Asimismo, cuenta con numerosos
+egresados que trabajan en la academia, en el sector público
+y privado de muchos otros países y en organismos
+internacionales.</p>
+		</div>
+	</div>
+</div>
+
+<%= render 'principal/footer'%>

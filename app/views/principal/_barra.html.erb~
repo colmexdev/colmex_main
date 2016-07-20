@@ -1,109 +1,109 @@
 <div class="container-fluid" id="header">
 
-<% if params[:locale] %>
-	<% if params[:locale] == "en" %>
-		<% clase_en = "activo" %>
-		<% clase_es = "inactivo" %>
+	<% if params[:locale] %>
+		<% if params[:locale] == "en" %>
+			<% clase_en = "activo" %>
+			<% clase_es = "inactivo" %>
+		<% else %>
+			<% clase_en = "inactivo" %>
+			<% clase_es = "activo" %>
+		<% end %>
 	<% else %>
 		<% clase_en = "inactivo" %>
 		<% clase_es = "activo" %>
 	<% end %>
-<% else %>
-	<% clase_en = "inactivo" %>
-	<% clase_es = "activo" %>
-<% end %>
 
-<div class="row">
+	<div class="row">
 
-	<nav class="navbar navbar-default">
-	  <div class="container-fluid" id="contenedor_nav">
+		<nav class="navbar navbar-default">
+			<div class="container-fluid" id="contenedor_nav">
 
-	    <!-- Collect the nav links, forms, and other content for toggling -->
-	    <div class="navbar-collapse" id="barra_nav">
-	      <ul class="nav navbar-nav reajustable">
-					<li class="nav_opciones idioma"><%= link_to "EN", {:controller => controller_name, :action => action_name, :locale => 'en'}, :class => clase_en + " en" , :id => 'idioma_en' %> | <%= link_to "ES", {:controller => controller_name, :action => action_name, :locale => 'sp'}, :class => clase_es + " sp" , :id=> 'idioma_sp' %></li>
-					<li class="nav_opciones mail"><a href="#"><%= image_tag("mail.png") %><span class="borrable"><%= t('navbar.mail') %></span></a></li>
-					<li class="nav_opciones intranet"><a href="#"><%= image_tag("intranet.png") %><span class="borrable"><%= t('navbar.intranet') %></span></a></li>
-	      </ul>
-	      <form class="navbar-form navbar-left" method="get" action="/principal">
-					<div role="search">
-					<div class="form-group">
-						<input type="text" class="form-control" placeholder="">
-					</div>
-					<button type="submit" class="btn btn-default boton_lupa"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
-					</div>
-	      </form>
-	      <ul class="nav navbar-nav navbar-right">
-					<li class="borrable"><%= link_to image_tag("fb-color.png", :class => "img_net uk-animation-hover uk-animation-shake"), "
-https://www.facebook.com/elcolmex/" %></li>
-					<li class="borrable"><%= link_to image_tag("twitter-color.png", :class => "img_net uk-animation-hover uk-animation-shake"), "
-https://twitter.com/ELCOLMEX" %></li>
-					<li class="borrable"><%= link_to image_tag("instagram-color.png", :class => "img_net uk-animation-hover uk-animation-shake"), "https://www.instagram.com/elcolmex/" %></li>
-					<li class="borrable"><%= link_to image_tag("youtube-color.png", :class => "img_net uk-animation-hover uk-animation-shake"), "
-https://www.youtube.com/c/elcolegiodemexicociudaddemexico" %></li>
-					<li class="borrable"><%= link_to image_tag("linkedin-color.png", :class => "img_net uk-animation-hover uk-animation-shake"), "https://www.linkedin.com/edu/el-colegio-de-m%C3%A9xico-14986" %></li>
-					<li class="borrable"><%= link_to image_tag("itunes-color.png", :class => "img_net uk-animation-hover uk-animation-shake"), "https://itunes.apple.com/mx/institution/el-colegio-de-mexico/id443160573?l=en" %></li>
-					<li class="borrable"><%= link_to image_tag("google-color.png", :class => "img_net uk-animation-hover uk-animation-shake"), "https://plus.google.com/+ColmexMx1/posts" %></li>
-					<li class="mostrable"><a href="#menu" class="uk-navbar-toggle" data-uk-offcanvas></a></li>
-	      </ul>
-	    </div><!-- /.navbar-collapse -->
-	  </div><!-- /.container-fluid -->
-	</nav>
-</div> <!-- Cierre de div row barra nav -->
+			  <!-- Collect the nav links, forms, and other content for toggling -->
+			  <div class="navbar-collapse" id="barra_nav">
+			    <ul class="nav navbar-nav reajustable">
+						<li class="nav_opciones idioma"><%= link_to "EN", {:controller => controller_name, :action => action_name, :locale => 'en'}, :class => clase_en + " en" , :id => 'idioma_en' %> | <%= link_to "ES", {:controller => controller_name, :action => action_name, :locale => 'sp'}, :class => clase_es + " sp" , :id=> 'idioma_sp' %></li>
+						<li class="nav_opciones mail"><a href="#"><%= image_tag("mail.png") %><span class="borrable"><%= t('navbar.mail') %></span></a></li>
+						<li class="nav_opciones intranet"><a href="#"><%= image_tag("intranet.png") %><span class="borrable"><%= t('navbar.intranet') %></span></a></li>
+			    </ul>
+			    <form class="navbar-form navbar-left" method="get" action="/principal">
+						<div role="search">
+						<div class="form-group">
+							<input type="text" class="form-control" placeholder="">
+						</div>
+						<button type="submit" class="btn btn-default boton_lupa"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
+						</div>
+			    </form>
+			    <ul class="nav navbar-nav navbar-right">
+						<li class="borrable"><%= link_to image_tag("fb-color.png", :class => "img_net uk-animation-hover uk-animation-shake"), "
+	https://www.facebook.com/elcolmex/" %></li>
+						<li class="borrable"><%= link_to image_tag("twitter-color.png", :class => "img_net uk-animation-hover uk-animation-shake"), "
+	https://twitter.com/ELCOLMEX" %></li>
+						<li class="borrable"><%= link_to image_tag("instagram-color.png", :class => "img_net uk-animation-hover uk-animation-shake"), "https://www.instagram.com/elcolmex/" %></li>
+						<li class="borrable"><%= link_to image_tag("youtube-color.png", :class => "img_net uk-animation-hover uk-animation-shake"), "
+	https://www.youtube.com/c/elcolegiodemexicociudaddemexico" %></li>
+						<li class="borrable"><%= link_to image_tag("linkedin-color.png", :class => "img_net uk-animation-hover uk-animation-shake"), "https://www.linkedin.com/edu/el-colegio-de-m%C3%A9xico-14986" %></li>
+						<li class="borrable"><%= link_to image_tag("itunes-color.png", :class => "img_net uk-animation-hover uk-animation-shake"), "https://itunes.apple.com/mx/institution/el-colegio-de-mexico/id443160573?l=en" %></li>
+						<li class="borrable"><%= link_to image_tag("google-color.png", :class => "img_net uk-animation-hover uk-animation-shake"), "https://plus.google.com/+ColmexMx1/posts" %></li>
+						<li class="mostrable"><a href="#menu" class="uk-navbar-toggle" data-uk-offcanvas></a></li>
+			    </ul>
+			  </div><!-- /.navbar-collapse -->
+			</div><!-- /.container-fluid -->
+		</nav>
+	</div> <!-- Cierre de div row barra nav -->
 
-<div class="row"> <!-- Fila para logo -->
-	<div class="col-md-12" id="div_logo"> <!-- Columnas para logo -->	
-		<%= link_to image_tag("colmex-principal.png", :id => "img_logo"), root_path %> 	
-	</div> <!--Cierre de div columnas para logo -->
-</div> <!-- Cierre de div fila para logo -->
+	<div class="row"> <!-- Fila para logo -->
+		<div class="col-md-12" id="div_logo"> <!-- Columnas para logo -->	
+			<%= link_to image_tag("colmex-principal.png", :id => "img_logo"), root_path %> 	
+		</div> <!--Cierre de div columnas para logo -->
+	</div> <!-- Cierre de div fila para logo -->
 
-<div class="row"> <!-- Fila para menú -->
-	<div class="col-md-12" id="div_menu"> <!-- Columnas para menu -->
-		<ul class="botones"> <!-- Opciones del menú -->
-			<li class="dropdown" id="dropdown1">
-        <a href=<%= sobre_el_colegio_path %> class="dropdown-toggle" data-hover="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span><%= t('botones.b1.texto') %></span></a>
-          <ul class="dropdown-menu"">
-            <li><a href="#"><%= t('botones.b1.opciones.op1') %></a></li>
-            <li><a href=<%= autoridades_path %>><%= t('botones.b1.opciones.op2') %></a></li>
-            <li><a href=<%= historia_path %>><%= t('botones.b1.opciones.op3') %></a></li>
-            <li><a href="#"><%= t('botones.b1.opciones.op4') %></a></li>
-            <li><a href=<%= premios_path %>><%= t('botones.b1.opciones.op5') %></a></li>
-            <li><a href="#"><%= t('botones.b1.opciones.op6') %></a></li>
-						<li><a href="#" class="sublink"><%= t('botones.b1.opciones.op7') %></a></li>
-          </ul>
-      </li>
+	<div class="row"> <!-- Fila para menú -->
+		<div class="col-md-12" id="div_menu"> <!-- Columnas para menu -->
+			<ul class="botones"> <!-- Opciones del menú -->
+				<li class="dropdown" id="dropdown1">
+		      <a href=<%= sobre_el_colegio_path %> class="dropdown-toggle" data-hover="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span><%= t('botones.b1.texto') %></span></a>
+		        <ul class="dropdown-menu"">
+		          <li><a href="#"><%= t('botones.b1.opciones.op1') %></a></li>
+		          <li><a href=<%= autoridades_path %>><%= t('botones.b1.opciones.op2') %></a></li>
+		          <li><a href=<%= historia_path %>><%= t('botones.b1.opciones.op3') %></a></li>
+		          <li><a href="#"><%= t('botones.b1.opciones.op4') %></a></li>
+		          <li><a href=<%= premios_path %>><%= t('botones.b1.opciones.op5') %></a></li>
+		          <li><a href="#"><%= t('botones.b1.opciones.op6') %></a></li>
+							<li><a href="#" class="sublink"><%= t('botones.b1.opciones.op7') %></a></li>
+		        </ul>
+		    </li>
 
-			<li class="dropdown" id="dropdown2">
-        <a href=<%= centros_de_estudio_path %> class="dropdown-toggle" data-hover="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span><%= t('botones.b2.texto') %></span></a>
-          <ul class="dropdown-menu">
-            <li><a href=<%= ceaa_path %>>Centro de Estudios de Asia y África</a></li>
-            <li><a href=<%= cedua_path %>>Centro de Estudios Demográficos, Urbanos y Ambientales</a></li>
-            <li><a href=<%= cee_path %>>Centro de Estudios Económicos</a></li>
-            <li><a href=<%= ceh_path %>>Centro de Estudios Históricos</a></li>
-            <li><a href=<%= cei_path %>>Centro de Estudios Internacionales</a></li>
-            <li><a href=<%= cell_path %>>Centro de Estudios Lingüísticos y Literarios</a></li>
-            <li><a href=<%= ces_path %>>Centro de Estudios Sociológicos</a></li>
-          </ul>
-      </li>
+				<li class="dropdown" id="dropdown2">
+		      <a href=<%= centros_de_estudio_path %> class="dropdown-toggle" data-hover="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span><%= t('botones.b2.texto') %></span></a>
+		        <ul class="dropdown-menu">
+		          <li><a href=<%= ceaa_path %>>Centro de Estudios de Asia y África</a></li>
+		          <li><a href=<%= cedua_path %>>Centro de Estudios Demográficos, Urbanos y Ambientales</a></li>
+		          <li><a href=<%= cee_path %>>Centro de Estudios Económicos</a></li>
+		          <li><a href=<%= ceh_path %>>Centro de Estudios Históricos</a></li>
+		          <li><a href=<%= cei_path %>>Centro de Estudios Internacionales</a></li>
+		          <li><a href=<%= cell_path %>>Centro de Estudios Lingüísticos y Literarios</a></li>
+		          <li><a href=<%= ces_path %>>Centro de Estudios Sociológicos</a></li>
+		        </ul>
+		    </li>
 
-			<li class="dropdown" id="dropdown3">
-        <a href="<%= programas_academicos_url %>" class="dropdown-toggle" data-hover="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span><%= t('botones.b3.texto') %></span></a>
-          <ul class="dropdown-menu">
-            <li><a href=<%= licenciaturas_path %>><%= t('botones.b3.opciones.op1') %></a></li>
-            <li><a href=<%= maestrias_path %>><%= t('botones.b3.opciones.op2') %></a></li>
-            <li><a href=<%= doctorados_path %>><%= t('botones.b3.opciones.op3') %></a></li>
-            <li><a href="#"><%= t('botones.b3.opciones.op4') %></a></li>
-            <li><a href="#"><%= t('botones.b3.opciones.op5') %></a></li>
-            <li><a href=<%= cursos_varios_path %>><%= t('botones.b3.opciones.op6') %></a></li>
-            <li><a href="#"><%= t('botones.b3.opciones.op7') %></a></li>
-          </ul>
-      </li>
-			<li class="no-dropdown"><a href="#"><span><%= t('botones.b4') %></span></a></li>
-			<li class="no-dropdown"><a href="#"><span><%= t('botones.b5') %></span></a></li>
-		</ul> <!-- Cierre del menú -->
-	</div> <!-- Cierre de columnas para menú -->
-</div> <!-- Cierre de div fila para menú -->
-<!-- Menu lateral -->
+				<li class="dropdown" id="dropdown3">
+		      <a href="<%= programas_academicos_url %>" class="dropdown-toggle" data-hover="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span><%= t('botones.b3.texto') %></span></a>
+		        <ul class="dropdown-menu">
+		          <li><a href=<%= licenciaturas_path %>><%= t('botones.b3.opciones.op1') %></a></li>
+		          <li><a href=<%= maestrias_path %>><%= t('botones.b3.opciones.op2') %></a></li>
+		          <li><a href=<%= doctorados_path %>><%= t('botones.b3.opciones.op3') %></a></li>
+		          <li><a href="#"><%= t('botones.b3.opciones.op4') %></a></li>
+		          <li><a href="#"><%= t('botones.b3.opciones.op5') %></a></li>
+		          <li><a href=<%= cursos_varios_path %>><%= t('botones.b3.opciones.op6') %></a></li>
+		          <li><a href="#"><%= t('botones.b3.opciones.op7') %></a></li>
+		        </ul>
+		    </li>
+				<li class="no-dropdown"><a href="#"><span><%= t('botones.b4') %></span></a></li>
+				<li class="no-dropdown"><a href="#"><span><%= t('botones.b5') %></span></a></li>
+			</ul> <!-- Cierre del menú -->
+		</div> <!-- Cierre de columnas para menú -->
+	</div> <!-- Cierre de div fila para menú -->
+	<!-- Menu lateral -->
 	<div id="menu" class="uk-offcanvas"> <!-- Offcanvas -->
 		<div class="uk-offcanvas-bar uk-offcanvas-bar-flip">
 			<ul class="uk-nav uk-nav-offcanvas" data-uk-nav>

@@ -17,7 +17,7 @@
 	Pellentesque dignissim leo ante, rhoncus ornare odio aliquet eget. Nulla
 	facilisi. Ut lobortis dui justo, eget commodo enim ullamcorper vitae.
 	Suspendisse facilisis</p>
-			<div class="boton-centro uk-animation-hover uk-animation-scale uk-animation-reverse">
+			<div class="boton-centro">
 				<a href="#"><span><%= t('centros.boton') %></span></a>
 			</div>
 		</div>
