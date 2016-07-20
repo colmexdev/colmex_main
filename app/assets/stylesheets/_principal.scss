@@ -975,7 +975,19 @@ ul.ul-nav { display: table; float: left !important;
 #video-colmex{ 
 	height: 500px;
 	position: relative;
-	img { @include centrado; width: 90%; height: 440px; } 
+
+	>img { 
+		@include centrado; 
+		width: 90%; 
+		height: 440px;
+		opacity: 1;
+		-webkit-transition: all 0.4s linear;
+		-moz-transition: all 0.4s linear;
+		-o-transition: all 0.4s linear;
+		transition: all 0.4s linear;
+	} 
+
+	>img:hover { opacity: 0.6; }
 }
 
 @media only screen and (min-width: 767px) and (max-width: 1260px){
@@ -986,16 +998,6 @@ ul.ul-nav { display: table; float: left !important;
 
 		#div-img-fundacion { 
 			max-width: 233px; 
-			
-			>img {
-				opacity: 1;
-				-webkit-transition: all 0.4s linear;
-				-moz-transition: all 0.4s linear;
-				-o-transition: all 0.4s linear;
-				transition: all 0.4s linear;
-			}
-
-			>img:hover { opacity: 0.6; }
 		} 
 	}
 }
@@ -1100,7 +1102,7 @@ ul.ul-nav { display: table; float: left !important;
 
 				a:hover{
 					color: #9E6680;
-					font-size: 18px;
+					font-size: 17px;
 				}
 			}
 		}

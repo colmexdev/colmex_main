@@ -747,6 +747,7 @@ ul.ul-nav { display: table; float: left !important;
 		background-color: #470020;
 		font-size: 19px;
 		border-color: #9E6680;
+		color: #CCCCCC;
 	}
 }
 
@@ -794,6 +795,7 @@ ul.ul-nav { display: table; float: left !important;
 		button:hover{
 			border-color: #9E6680;
 			background-color: #470020;
+			color: #CCCCCC;
 		}
 	}
 }
@@ -929,12 +931,32 @@ ul.ul-nav { display: table; float: left !important;
 
 			#conocer{
 				background-color: #9E6680;
-				border: solid 2px #5E002B;
+				border: solid 1px #5E002B;
+				-webkit-transition: all 0.4s linear;
+				-moz-transition: all 0.4s linear;
+				-o-transition: all 0.4s linear;
+				transition: all 0.4s linear;
+			}
+
+			#conocer:hover, #conocer:focus{
+				background-color: #5E002B;
+				border-color: #9E6680;
+				color: #CCCCCC;
 			}
 
 			#donar{	
 				background-color: #7E3355;
-				border: solid 2px #470020;
+				border: solid 1px #470020;
+				-webkit-transition: all 0.4s linear;
+				-moz-transition: all 0.4s linear;
+				-o-transition: all 0.4s linear;
+				transition: all 0.4s linear;
+			}
+
+			#donar:hover, #donar:focus{
+				border-color: #5E002B;
+				background-color: #9E6680;
+				color: #CCCCCC;
 			}
 		}
 	}
@@ -953,7 +975,19 @@ ul.ul-nav { display: table; float: left !important;
 #video-colmex{ 
 	height: 500px;
 	position: relative;
-	img { @include centrado; width: 90%; height: 440px; } 
+
+	>img { 
+		@include centrado; 
+		width: 90%; 
+		height: 440px;
+		opacity: 1;
+		-webkit-transition: all 0.4s linear;
+		-moz-transition: all 0.4s linear;
+		-o-transition: all 0.4s linear;
+		transition: all 0.4s linear;
+	} 
+
+	>img:hover { opacity: 0.6; }
 }
 
 @media only screen and (min-width: 767px) and (max-width: 1260px){
@@ -961,7 +995,10 @@ ul.ul-nav { display: table; float: left !important;
 
 	#fundacion-colmex { 
 		padding-left: 35px;
-		#div-img-fundacion { max-width: 233px; } 
+
+		#div-img-fundacion { 
+			max-width: 233px; 
+		} 
 	}
 }
 
@@ -1006,13 +1043,22 @@ ul.ul-nav { display: table; float: left !important;
 	height: auto;
 	background-color: #FFFFFF;
 	text-align: center;
-	a { 
-		img { 
+
+	a {
+
+		>img {
+			opacity: 1; 
 			display: inline-block; 
 			max-height: 200px;
 			max-width: 180px;
 			margin: 10px 20px 35px 20px;
-		} 
+			-webkit-transition: all 0.4s linear;
+			-moz-transition: all 0.4s linear;
+			-o-transition: all 0.4s linear;
+			transition: all 0.4s linear;
+		}
+
+		>img:hover { opacity: 0.7; } 
 	}
 }
 
@@ -1048,6 +1094,15 @@ ul.ul-nav { display: table; float: left !important;
 
 				a{
 					color: #fff;
+					-webkit-transition: all 0.4s linear;
+					-moz-transition: all 0.4s linear;
+					-o-transition: all 0.4s linear;
+					transition: all 0.4s linear;
+				}
+
+				a:hover{
+					color: #9E6680;
+					font-size: 18px;
 				}
 			}
 		}
