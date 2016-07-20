@@ -3160,7 +3160,7 @@
                 }
 
                 e.stopImmediatePropagation();
-                Offcanvas.hide();
+                Offcanvas.hide(true);
             });
 
 
