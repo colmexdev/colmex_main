@@ -3186,9 +3186,10 @@
                     }
 
                     if (target.length && UI.Utils.scrollToElement) {
+                        alert("Otro link");
                         UI.Utils.scrollToElement(target, UI.Utils.options(link.attr('data-uk-smooth-scroll') || '{}'));
                     } else {
-               
+               					alert("Link externo");
                         window.location.href = href;
                     }
                 });
