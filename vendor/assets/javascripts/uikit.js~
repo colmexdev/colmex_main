@@ -3192,6 +3192,7 @@
                         window.location.href = href;
                     }
                 });
+                $html.removeAttr('style');
                 Offcanvas.hide();
             });
 

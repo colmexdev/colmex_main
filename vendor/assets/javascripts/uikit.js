@@ -3192,7 +3192,7 @@
                         window.location.href = href;
                     }
                 });
-                alert("Algo")
+                $html.css("margin-top","");
                 Offcanvas.hide();
             });
 

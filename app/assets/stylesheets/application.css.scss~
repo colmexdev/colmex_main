@@ -14,8 +14,6 @@
  */
 @import "bootstrap-sprockets";
 @import "bootstrap";
-@import "uikit.min";
-@import "accordion";
 @import "principal";
 @import "sobre";
 @import "premios";
