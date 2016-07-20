@@ -134,9 +134,7 @@
 	<div class="row"> <!-- Fila para frase -->
 		<div class="col-md-12" id="div_frase"> <!-- Columnas para frase -->
 			<p>
-				<% if Frase.all.each != [] %>
-					<%= raw(Frase.order(:id).last.cita) %>
-				<% end %> 
+					<%= Frase.order(:id).last.try(:cita) %>
 			</p>
 		</div> <!-- Cierre de columnas para frase -->
 	</div> <!-- Cierre de fila para frase -->

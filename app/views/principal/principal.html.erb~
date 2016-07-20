@@ -123,6 +123,7 @@
 			</div>
 
 			<div class="col-xs-12 col-sm-6" id="video-colmex">
+				<script type="text/javascript" src="../js/lightbox.js"></script>
 				<a href="https://www.youtube.com/watch?v=-LX7WrHCaUA" data-uk-lightbox data-lightbox-type="video">
 					<%= image_tag("video.png") %>
 				</a>
