@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :frases
   resources :sliders
   resources :documentos
   resources :cursos

@@ -33,4 +33,4 @@
 <%= link_to 'New Imagen', new_imagen_path %>
 
 
-<%end %>
+<% end %>

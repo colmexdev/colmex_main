@@ -14,7 +14,7 @@ Rails.application.routes.draw do
   devise_for :admins
   resources :admins
 
-  get 'panel/administrar'
+  get 'panel/administrar' => 'panel#administrar', :as => :panel
 
   get 'centros_de_estudio/inicio' => "centros_de_estudio#inicio", :as => :centros_de_estudio
 

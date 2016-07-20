@@ -27,7 +27,7 @@
 <br>
 
 <%= link_to 'New Categorium', new_categorium_path %>
-
+<br>
 <%= link_to "Regresar", :back %>
 
 <% end %>
