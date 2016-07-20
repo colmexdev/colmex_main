@@ -3132,7 +3132,7 @@
 
                 $body.one(UI.support.transition.end, function() {
                     finalize();
-                }).css((rtl ? "margin-right" : "margin-left"), "");
+                }).css({(rtl ? "margin-right" : "margin-left"): "", "margin-top", ""});
 
                 setTimeout(function(){
                     bar.removeClass("uk-offcanvas-bar-show");
@@ -3186,14 +3186,12 @@
                     }
 
                     if (target.length && UI.Utils.scrollToElement) {
-                        alert("Otro link");
                         UI.Utils.scrollToElement(target, UI.Utils.options(link.attr('data-uk-smooth-scroll') || '{}'));
                     } else {
-               					alert("Link externo");
                         window.location.href = href;
                     }
                 });
-
+                alert("Algo");
                 Offcanvas.hide();
             });
 
