@@ -1102,7 +1102,7 @@ ul.ul-nav { display: table; float: left !important;
 
 				a:hover{
 					color: #9E6680;
-					font-size: 16.5px;
+					font-size: 17.5px;
 				}
 			}
 		}
@@ -1143,7 +1143,7 @@ ul.ul-nav { display: table; float: left !important;
 			.links { 
 				font-size: 13px; 
 				li a:hover{
-					font-size: 13.5px;
+					font-size: 14.5px;
 				}
 			} 
 		}
