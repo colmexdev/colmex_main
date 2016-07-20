@@ -1,29 +1,30 @@
 <%= render 'principal/barra' %>
-
-<div id="cuerpo">
-	<div class="row" id="caja-centro">
-		<div class="pad-top">
-			<span class="titulo-grande">Centro de Estudios de Asia y África</span>
-		</div>
-		<div class="medio centro texto-centro">
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In gravida aliquam
-	volutpat. Praesent blandit tortor lacus, vitae rhoncus sem egestas eget.
-	Mauris mi dui, tristique sit amet maximus elementum, fringilla ut massa.
-	Nullam aliquet erat eu pretium iaculis. Nulla rhoncus, libero nec tristique
-	gravida, urna lacus dignissim nulla, in maximus orci enim non nisi. Morbi non
-	nisi est. In at laoreet libero, vel commodo magna. Aliquam erat volutpat. Nam
-	auctor elementum gravida. Mauris vestibulum convallis nibh, vel vulputate
-	orci facilisis sed. Aenean eget pellentesque quam, eu molestie libero.
-	Pellentesque dignissim leo ante, rhoncus ornare odio aliquet eget. Nulla
-	facilisi. Ut lobortis dui justo, eget commodo enim ullamcorper vitae.
-	Suspendisse facilisis</p>
-			<div class="boton-centro">
-				<a href="#"><span><%= t('centros.boton') %></span></a>
+<div class="container-fluid" id="resto-cuerpo">
+	<div id="cuerpo">
+		<div class="row" id="caja-centro">
+			<div class="pad-top">
+				<span class="titulo-grande">Centro de Estudios de Asia y África</span>
 			</div>
+			<div class="medio centro texto-centro">
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In gravida aliquam
+		volutpat. Praesent blandit tortor lacus, vitae rhoncus sem egestas eget.
+		Mauris mi dui, tristique sit amet maximus elementum, fringilla ut massa.
+		Nullam aliquet erat eu pretium iaculis. Nulla rhoncus, libero nec tristique
+		gravida, urna lacus dignissim nulla, in maximus orci enim non nisi. Morbi non
+		nisi est. In at laoreet libero, vel commodo magna. Aliquam erat volutpat. Nam
+		auctor elementum gravida. Mauris vestibulum convallis nibh, vel vulputate
+		orci facilisis sed. Aenean eget pellentesque quam, eu molestie libero.
+		Pellentesque dignissim leo ante, rhoncus ornare odio aliquet eget. Nulla
+		facilisi. Ut lobortis dui justo, eget commodo enim ullamcorper vitae.
+		Suspendisse facilisis</p>
+				<div class="boton-centro">
+					<a href="#"><span><%= t('centros.boton') %></span></a>
+				</div>
 
-		</div>
-		<div class="medio centro imagen-centro">
-			<%= image_tag("sobre.png", :class=> "img-muestra img-centro") %>
+			</div>
+			<div class="medio centro imagen-centro">
+				<%= image_tag("sobre.png", :class=> "img-muestra img-centro") %>
+			</div>
 		</div>
 	</div>
 </div>
