@@ -11,8 +11,4 @@ class PrincipalController < ApplicationController
   def principios_eticos
  
   end
-
-  def autoridades
-
-  end
 end

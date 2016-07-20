@@ -21,7 +21,7 @@
   </div>
   <div class="field">
     <%= f.label :tipo %><br>
-    <%= f.text_field :tipo %>
+    <%= f.select(:tipo, options_for_select([['Institucional','Institucional'],['Profesor emérito','Emerito'],['Profesor-Investigador','Investigador'],['Estudiante','Estudiante'],['Egresado','Egresado']])) %>
   </div>
   <div class="actions">
     <%= f.submit %>

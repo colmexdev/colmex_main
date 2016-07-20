@@ -110,10 +110,10 @@
 					<p><%= t('donacion.texto') %></p>
 					<div id="contenedor-botones">
 						<div class="boton" id="conocer">
-							<a href="#div-donacion" class="boton-donar"><span><%= t('donacion.boton_conoce') %></span></a>
+							<a href="#" class="boton-donar"><span><%= t('donacion.boton_conoce') %></span></a>
 						</div>
 						<div class="boton" id="donar">
-							<a href="#div-donacion" class="boton-donar"><span><%= t('donacion.boton_donar') %></span></a>
+							<a href="#" class="boton-donar"><span><%= t('donacion.boton_donar') %></span></a>
 						</div>
 					</div>
 				</div>

@@ -21,7 +21,7 @@
   </div>
   <div class="field">
     <%= f.label :tipo %><br>
-    <%= f.select(:tipo, options_for_select([['Institucional','Institucional'],['Profesor emérito','Emerito'],['Profesor-Investigador','Investigador'],['Estudiante','Estudiante'],['Egresado','Egresado']])) %>
+    <%= f.select(:tipo, options_from_collection_for_select(Categorium.all, "nombre", "nombre"), {}, {}) %>
   </div>
   <div class="actions">
     <%= f.submit %>
