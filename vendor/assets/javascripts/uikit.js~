@@ -3167,10 +3167,10 @@
                 var link = UI.$(this),
                     href = link.attr("href");
 
-                console.log("Algo");
+                alert(href);
 
                 if (href == "#") {
-                    console.log("Interno");
+                    alert("Interno");
                     return;
                 }
 
@@ -3194,6 +3194,7 @@
                         window.location.href = href;
                     }
                 });
+                alert("Final");
                 Offcanvas.hide();
             });
 

@@ -3163,7 +3163,8 @@
                 Offcanvas.hide();
             });
 
-            element.on("click", "a[href*='#']", function(e){
+
+            element.on("click", "a", function(e){
                 var link = UI.$(this),
                     href = link.attr("href");
 
@@ -3194,7 +3195,6 @@
                         window.location.href = href;
                     }
                 });
-                alert("Final");
                 Offcanvas.hide();
             });
 
