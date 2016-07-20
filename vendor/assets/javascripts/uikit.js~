@@ -3166,12 +3166,10 @@
 
             element.on("click", "a", function(e){
                 var link = UI.$(this),
-                    href = link.attr("href");
 
                 alert(href);
 
                 if (href == "#") {
-                    alert("Interno");
                     return;
                 }
 
