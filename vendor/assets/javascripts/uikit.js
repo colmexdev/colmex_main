@@ -3093,7 +3093,7 @@
             element.addClass("uk-active");
 
             $body.css({"width": window.innerWidth - scrollbarwidth, "height": window.innerHeight}).addClass("uk-offcanvas-page");
-            $body.css((rtl ? "margin-right" : "margin-left"), (rtl ? -1 : 1) * (bar.outerWidth() * dir)).width(); // .width() - force redraw
+            $body.css((rtl ? "margin-right" : "margin-left"), /*(rtl ? -1 : 1) * (bar.outerWidth() * dir)*/'').width(); // .width() - force redraw
 
             $html.css('margin-top', scrollpos.y * -1);
 
@@ -3160,7 +3160,7 @@
                 }
 
                 e.stopImmediatePropagation();
-                Offcanvas.hide(true);
+                Offcanvas.hide();
             });
 
 
@@ -3234,7 +3234,7 @@
             }, this.options);
 
             this.on("click", function(e) {
-                e.preventDefault();
+                //e.preventDefault();
                 Offcanvas.show($this.options.target);
             });
         }
