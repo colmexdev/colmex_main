@@ -491,7 +491,7 @@ ul.ul-nav { display: table; float: left !important;
 		}
 
 		.carousel-control.right:hover, .carousel-control.left:hover, .carousel-control.right:focus:hover, .carousel-control.left:focus:hover{
-			opacity: 0.9;
+			opacity: 0.8;
 		}
 	}
 }
@@ -529,8 +529,8 @@ ul.ul-nav { display: table; float: left !important;
 			transition: all 0.4s linear;
 		}
 
-		.carousel-control.right, .carousel-control.left{
-			opacity: 0.9;
+		.carousel-control.right:hover, .carousel-control.left:hover{
+			opacity: 0.8;
 		}
 
 		.carousel-inner{
@@ -712,11 +712,15 @@ ul.ul-nav { display: table; float: left !important;
 		font-size: 18px;
 		display: inline-block;
 		border-color: #470020;
-		border-width: 2px;
+		border-width: 1.5px;
 		border-style: solid;
 		height: 50px;
 		width: 33.33%;
 		text-align: center;
+		-webkit-transition: all 0.5s linear;
+		-moz-transition: all 0.5s linear;
+		-o-transition: all 0.5s linear;
+		transition: all 0.5s linear;
 		@include centrado;
 
 		a{
@@ -737,6 +741,12 @@ ul.ul-nav { display: table; float: left !important;
 				span { font-size: 15px; } 
 			}
 		}
+	}
+
+	#boton_actividades:hover{
+		background-color: #470020;
+		font-size: 19px;
+		border-color: #9E6680;
 	}
 }
 
@@ -775,6 +785,15 @@ ul.ul-nav { display: table; float: left !important;
 			border-radius: 0;
 			border-color: #470020;
 			margin-top: 5px;
+			-webkit-transition: all0.5s linear;
+			-moz-transition: all 0.5s linear;
+			-o-transition: all 0.5s linear;
+			transition: all 0.5s linear;
+		}
+
+		button:hover{
+			border-color: #9E6680;
+			background-color: #470020;
 		}
 	}
 }

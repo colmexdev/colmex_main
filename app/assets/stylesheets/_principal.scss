@@ -712,11 +712,15 @@ ul.ul-nav { display: table; float: left !important;
 		font-size: 18px;
 		display: inline-block;
 		border-color: #470020;
-		border-width: 2px;
+		border-width: 1.5px;
 		border-style: solid;
 		height: 50px;
 		width: 33.33%;
 		text-align: center;
+		-webkit-transition: all 0.5s linear;
+		-moz-transition: all 0.5s linear;
+		-o-transition: all 0.5s linear;
+		transition: all 0.5s linear;
 		@include centrado;
 
 		a{
@@ -737,6 +741,13 @@ ul.ul-nav { display: table; float: left !important;
 				span { font-size: 15px; } 
 			}
 		}
+	}
+
+	#boton_actividades:hover{
+		background-color: #470020;
+		font-size: 19px;
+		border-color: #9E6680;
+		color: #CCCCCC;
 	}
 }
 
@@ -775,6 +786,16 @@ ul.ul-nav { display: table; float: left !important;
 			border-radius: 0;
 			border-color: #470020;
 			margin-top: 5px;
+			-webkit-transition: all0.5s linear;
+			-moz-transition: all 0.5s linear;
+			-o-transition: all 0.5s linear;
+			transition: all 0.5s linear;
+		}
+
+		button:hover{
+			border-color: #9E6680;
+			background-color: #470020;
+			color: #CCCCCC;
 		}
 	}
 }
@@ -910,12 +931,32 @@ ul.ul-nav { display: table; float: left !important;
 
 			#conocer{
 				background-color: #9E6680;
-				border: solid 2px #5E002B;
+				border: solid 1px #5E002B;
+				-webkit-transition: all 0.4s linear;
+				-moz-transition: all 0.4s linear;
+				-o-transition: all 0.4s linear;
+				transition: all 0.4s linear;
+			}
+
+			#conocer:hover, #conocer:focus{
+				background-color: #5E002B;
+				border-color: #9E6680;
+				color: #CCCCCC;
 			}
 
 			#donar{	
 				background-color: #7E3355;
-				border: solid 2px #470020;
+				border: solid 1px #470020;
+				-webkit-transition: all 0.4s linear;
+				-moz-transition: all 0.4s linear;
+				-o-transition: all 0.4s linear;
+				transition: all 0.4s linear;
+			}
+
+			#donar:hover, #donar:focus{
+				border-color: #5E002B;
+				background-color: #9E6680;
+				color: #CCCCCC;
 			}
 		}
 	}
@@ -942,7 +983,20 @@ ul.ul-nav { display: table; float: left !important;
 
 	#fundacion-colmex { 
 		padding-left: 35px;
-		#div-img-fundacion { max-width: 233px; } 
+
+		#div-img-fundacion { 
+			max-width: 233px; 
+			
+			>img {
+				opacity: 1;
+				-webkit-transition: all 0.4s linear;
+				-moz-transition: all 0.4s linear;
+				-o-transition: all 0.4s linear;
+				transition: all 0.4s linear;
+			}
+
+			>img:hover { opacity: 0.6; }
+		} 
 	}
 }
 
@@ -987,13 +1041,22 @@ ul.ul-nav { display: table; float: left !important;
 	height: auto;
 	background-color: #FFFFFF;
 	text-align: center;
-	a { 
-		img { 
+
+	a {
+
+		>img {
+			opacity: 1; 
 			display: inline-block; 
 			max-height: 200px;
 			max-width: 180px;
 			margin: 10px 20px 35px 20px;
-		} 
+			-webkit-transition: all 0.4s linear;
+			-moz-transition: all 0.4s linear;
+			-o-transition: all 0.4s linear;
+			transition: all 0.4s linear;
+		}
+
+		>img:hover { opacity: 0.7; } 
 	}
 }
 
@@ -1029,6 +1092,15 @@ ul.ul-nav { display: table; float: left !important;
 
 				a{
 					color: #fff;
+					-webkit-transition: all 0.4s linear;
+					-moz-transition: all 0.4s linear;
+					-o-transition: all 0.4s linear;
+					transition: all 0.4s linear;
+				}
+
+				a:hover{
+					color: #9E6680;
+					font-size: 18px;
 				}
 			}
 		}
