@@ -26,8 +26,8 @@
 					<% @categorias.each do |c| %>
 						<h3 class="uk-accordion-title"><%= construir_encabezado("bt-flechita.png", "bt-flechita-abajo.png", c.nombre) %></h3>
 						<div class="uk-accordion-content">
-							<% Premiado.where(tipo: c.nombre) do |p| %>
-								<p><%= p.nombre + ", " + p.descripcion %></p>
+							<% Premiado.where(tipo: c.nombre).each do |p| %>
+								<p style="display: list-item"><%= p.nombre + ", " + p.descripcion %></p>
 							<% end %>
 						</div>
 					<% end %>
