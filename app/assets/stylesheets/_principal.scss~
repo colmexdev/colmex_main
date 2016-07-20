@@ -947,8 +947,16 @@ ul.ul-nav { display: table; float: left !important;
 
 //Estilos que afectan a la sección de la frase
 #div_frase{
-	height: 250px;
+	height: auto;
 	background-color: #FFFFFF;
+
+	>p{
+		margin: 30px auto;
+		width: 60%;
+		min-width: 300px;
+		color: #CCCCCC;
+		font-style: italic;
+	}
 }
 
 //Estilos que afectan a la sección de transparencia
