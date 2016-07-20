@@ -3,6 +3,7 @@ class SobreElColegioController < ApplicationController
   end
 
   def premios_y_distinciones
+    @categorias = Categorium.all
   end
 
   def historia
