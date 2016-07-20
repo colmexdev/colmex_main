@@ -1,0 +1,10 @@
+<% if admin_signed_in? %>
+
+<h1>Editing Premiado</h1>
+
+<%= render 'form' %>
+
+<%= link_to 'Show', @premiado %> |
+<%= link_to 'Back', premiados_path %>
+
+<% end %>
