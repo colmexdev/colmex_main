@@ -520,9 +520,17 @@ ul.ul-nav { display: table; float: left !important;
 		padding: 0;
 
 		.carousel-control.right, .carousel-control.left{
-			opacity: 0.5;
+			opacity: 0.3;
 			width: 60px;
 			color: #993366;
+			-webkit-transition: all 0.4s linear;
+			-moz-transition: all 0.4s linear;
+			-o-transition: all 0.4s linear;
+			transition: all 0.4s linear;
+		}
+
+		.carousel-control.right, .carousel-control.left{
+			opacity: 0.9;
 		}
 
 		.carousel-inner{
