@@ -956,7 +956,7 @@ ul.ul-nav { display: table; float: left !important;
 		min-width: 300px;
 		color: #CCCCCC;
 
-		.uk-icon-large, .uk-icon-medium { vertical-align: 0; }
+		.uk-icon-large, .uk-icon-medium { vertical-align: 23%; }
 
 		#span-frase{ font-style: italic; font-size: 20px; }
 

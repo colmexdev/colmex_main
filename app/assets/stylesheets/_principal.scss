@@ -444,9 +444,14 @@ ul.ul-nav { display: table; float: left !important;
 		.carousel-indicators li{
 			border: none;
 			background-color: #CCCCCC;
+			margin: 0 2px;
+			-webkit-transition: all 0.4s linear;
+			-moz-transition: all 0.4s linear;
+			-o-transition: all 0.4s linear;
+			transition: all 0.4s linear;
 		}
 
-		.carousel-indicators .active{
+		.carousel-indicators li.active, .carousel-indicators li:hover{
 			border: none;
 			background-color: #993366;
 		}
