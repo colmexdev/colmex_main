@@ -3150,7 +3150,6 @@
             element.on("click.uk.offcanvas swipeRight.uk.offcanvas swipeLeft.uk.offcanvas", function(e) {
 
                 var target = UI.$(e.target);
-								alert(target);
 
                 if (!e.type.match(/swipe/)) {
 
@@ -3194,6 +3193,7 @@
                     }
                 });
                 $html.css("margin-top","");
+								e.stopImmediatePropagation();
                 Offcanvas.hide();
             });
 
