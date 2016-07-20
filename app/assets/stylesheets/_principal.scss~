@@ -955,7 +955,11 @@ ul.ul-nav { display: table; float: left !important;
 		width: 60%;
 		min-width: 300px;
 		color: #CCCCCC;
-		font-style: italic;
+
+		#span-frase{ font-style: italic; font-size: 18px; }
+
+		#span-autor{ font-style: 700; font-size: 20px; }
+
 	}
 }
 
