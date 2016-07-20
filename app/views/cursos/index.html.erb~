@@ -1,3 +1,5 @@
+<% if admin_signed_in? %>
+
 <p id="notice"><%= notice %></p>
 
 <h1>Listing Cursos</h1>
@@ -37,3 +39,5 @@
 <br>
 
 <%= link_to 'New Curso', new_curso_path %>
+
+<% end %>

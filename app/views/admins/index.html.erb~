@@ -1,6 +1,6 @@
 <% if admin_signed_in? %>
 
-<% if current_admin. admin %>
+<% if current_admin.admin %>
 
 <p id="notice"><%= notice %></p>
 
@@ -33,4 +33,7 @@
 <%= link_to 'New Admin', new_admin_path %>
 
 <% end %>
+
+<%= link_to "Regresar", :back %>
+
 <% end %>

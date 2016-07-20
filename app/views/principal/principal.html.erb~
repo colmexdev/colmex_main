@@ -91,9 +91,9 @@
 
 	<div class="row"> <!-- Fila para revistas -->
 		<div class="col-md-12" id="div_revistas"> <!-- Columnas para revistas -->
-			<div class="col-xs-6 col-md-4 revista"><%= link_to(image_tag('revistas-izq.png'), "#div_revistas") %></div>
-			<div class="col-xs-6 col-md-4 revista"><%= link_to(image_tag('revistas-centro.png'), "#div_revistas") %></div>
-			<div class="col-xs-12 col-md-4 revista"><%= link_to(image_tag('revistas-der.png'), "#div_revistas") %></div>
+			<div class="col-xs-6 col-md-4 revista"><%= link_to(image_tag('revistas-izq.png'), "#") %></div>
+			<div class="col-xs-6 col-md-4 revista"><%= link_to(image_tag('revistas-centro.png'), "#") %></div>
+			<div class="col-xs-12 col-md-4 revista"><%= link_to(image_tag('revistas-der.png'), "#") %></div>
 		</div> <!-- Cierre de columnas para revistas -->
 	</div> <!-- Cierre de fila para revistas -->
 
@@ -132,14 +132,18 @@
 
 	<div class="row"> <!-- Fila para frase -->
 		<div class="col-md-12" id="div_frase"> <!-- Columnas para frase -->
-
+			<p>
+				<% if Frase.all.each != [] %>
+					<%= raw(Frase.order(:id).last.cita) %>
+				<% end %> 
+			</p>
 		</div> <!-- Cierre de columnas para frase -->
 	</div> <!-- Cierre de fila para frase -->
 
 	<div class="row"> <!-- Fila para transparencia -->
 		<div class="col-xs-12" id="div_transparencia"> <!-- Columnas para transparencia-->
-				<%= link_to(image_tag('transp-izq.png'), "#div_transparencia") %>
-				<%= link_to(image_tag('transp-der.png'), "#div_transparencia") %>
+				<%= link_to(image_tag('transp-izq.png'), "#") %>
+				<%= link_to(image_tag('transp-der.png'), "#") %>
 		</div> <!-- Cierre de columnas para transparencia -->
 	</div> <!-- Cierre de fila para transparencia -->
 

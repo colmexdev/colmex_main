@@ -11,7 +11,7 @@
 <%= link_to "Editar imágenes de galerías", imagens_path %><br />
 <%= link_to "Editar imágenes de slider", sliders_path %><br />
 <% if current_admin.admin %>
-<%= link_to "Editar usuarios gestores", admins_path_url %></br>
+<%= link_to "Editar usuarios gestores", admins_path %></br>
 <% end %>
 <%= current_admin.admin %>
 <br />

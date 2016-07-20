@@ -1,0 +1,6 @@
+<h1>Editing Frase</h1>
+
+<%= render 'form' %>
+
+<%= link_to 'Show', @frase %> |
+<%= link_to 'Back', frases_path %>
