@@ -14,8 +14,6 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require bootstrap-sprockets
-//= require uikit
-//= require components/lightbox
 //= require principal
 //= require imagens
 //= require cursos
