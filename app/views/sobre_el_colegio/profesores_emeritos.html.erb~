@@ -8,7 +8,7 @@
 
 				<div class="uk-accordion" data-uk-accordion>
 					<% @centros.each do |c| %>
-						<h3 class="uk-accordion-title"><%= construir_encabezado("bt-flechita.png", "bt-flechita-abajo.png", c.nombre) %></h3>
+						<h3 class="uk-accordion-title"><%= construir_encabezado("bt-flechita.png", "bt-flechita-abajo.png", c) %></h3>
 						<div class="uk-accordion-content">
 							<% @profesores.where(centro: c).order(fecha_anexion: desc).each do |p| %>
 								<p style="display: list-item"><%= p.nombre + " (" + l(Date.strptime(fechaI,"%d/%m/%Y"), format: :long) + ", " + p.semblanza %></p>
