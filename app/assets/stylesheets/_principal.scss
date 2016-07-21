@@ -981,10 +981,10 @@ ul.ul-nav { display: table; float: left !important;
 		width: 90%; 
 		height: 440px;
 		opacity: 1;
-		-webkit-transition: all 0.4s linear;
-		-moz-transition: all 0.4s linear;
-		-o-transition: all 0.4s linear;
-		transition: all 0.4s linear;
+		-webkit-transition: opacity 0.4s linear;
+		-moz-transition: opacity 0.4s linear;
+		-o-transition: opacity 0.4s linear;
+		transition: opacity 0.4s linear;
 	} 
 
 	>a img:hover { opacity: 0.6; }
