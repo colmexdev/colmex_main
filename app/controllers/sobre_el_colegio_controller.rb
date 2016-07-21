@@ -6,6 +6,10 @@ class SobreElColegioController < ApplicationController
     @categorias = Categorium.all
   end
 
+  def documentacion_institucional
+
+  end
+
   def historia
   end
 
@@ -16,6 +20,14 @@ class SobreElColegioController < ApplicationController
   def profesores_emeritos
     @profesores = Emerito.all
     @centros = ['CEAA', 'CEDUA', 'CEE', 'CEH', 'CEI', 'CELL', 'CES']
+  end
+
+  def transparencia
+
+  end
+
+  def informacion_general
+
   end
 
   def asamblea

@@ -51,6 +51,12 @@ Rails.application.routes.draw do
 
   get 'sobre_el_colegio/historia' => 'sobre_el_colegio#historia', :as => :historia
 
+  get 'sobre_el_colegio/informacion_general' => 'sobre_el_colegio#informacion_general', :as => :informacion_general
+
+  get 'sobre_el_colegio/transparencia' => 'sobre_el_colegio#transparencia', :as => :transparencia
+
+  get 'sobre_el_colegio/documentacion_institucional' => 'sobre_el_colegio#documentacion_insitucional', :as => :documentacion
+
   get 'sobre_el_colegio/asamblea' => 'sobre_el_colegio#asamblea', :as => :asamblea
 
   get 'sobre_el_colegio/junta' => 'sobre_el_colegio#junta', :as => :junta
