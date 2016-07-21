@@ -1,5 +1,14 @@
 /* Estilos para la sección "Sobre el Colegio" */
 
+.div-titular{
+	display: block;
+
+	.titular{
+		display: inline-block;
+		margin: 20px 0;
+	}
+}
+
 #img-menus-sobre{
 	display:inline-block;
 	float: left;

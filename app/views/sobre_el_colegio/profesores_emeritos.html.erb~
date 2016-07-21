@@ -1,7 +1,8 @@
 <%= render 'principal/barra' %>
 <div class="container-fluid" id="resto-cuerpo">
 	<div class="cuerpo">
-
+		<br />
+		<span class="titulo-grande"><%= t('botones.b1.opciones.op5') %></span><br />
 		<div class="row">
 			<div class="acordeon-premios">
 			<script type="text/javascript" src="../js/accordion.js"></script>
