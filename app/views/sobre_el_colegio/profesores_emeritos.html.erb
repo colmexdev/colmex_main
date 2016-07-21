@@ -10,9 +10,11 @@
 					<% @centros.each do |c| %>
 						<h3 class="uk-accordion-title"><%= construir_encabezado("bt-flechita.png", "bt-flechita-abajo.png", c) %></h3>
 						<div class="uk-accordion-content">
-							<% @profesores.where(centro: c).order(fecha_anexion: :desc).each do |p| %>
-								<p><%= "· " + p.nombre + " (" + l(p.fecha_anexion, format: :long) + "), " + p.semblanza %></p>
-							<% end %>
+							<ul class="lista-profesor">
+								<% @profesores.where(centro: c).order(fecha_anexion: :desc).each do |p| %>
+									<li><%= p.nombre + " (" + l(p.fecha_anexion, format: :long) + "), " + p.semblanza %></li>
+								<% end %>
+							</ul>
 						</div>
 					<% end %>
 				</div>
