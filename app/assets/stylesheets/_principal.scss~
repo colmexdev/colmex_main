@@ -976,7 +976,7 @@ ul.ul-nav { display: table; float: left !important;
 	height: 500px;
 	position: relative;
 
-	>img { 
+	>a img { 
 		@include centrado; 
 		width: 90%; 
 		height: 440px;
@@ -987,7 +987,7 @@ ul.ul-nav { display: table; float: left !important;
 		transition: all 0.4s linear;
 	} 
 
-	>img:hover { opacity: 0.6; }
+	>a img:hover { opacity: 0.6; }
 }
 
 @media only screen and (min-width: 767px) and (max-width: 1260px){
