@@ -871,7 +871,7 @@ ul.ul-nav { display: table; float: left !important;
 			color: #4D4D4D;
 			margin-bottom: 0;
 			padding: 0 25px;
-			padding-top: 100px;
+			padding-top: 50px;
 			display: block;
 			height: 80%;
 			text-align: left;
@@ -882,15 +882,15 @@ ul.ul-nav { display: table; float: left !important;
 		}
 
 		@media only screen and (min-width: 520px) and (max-width: 570px){
-			p { padding-top: 45px; font-size: 15px; }
+			p { padding-top: 45px; font-size: 13px; }
 		}
 
 		@media only screen and (min-width: 570px) and (max-width: 670px){
-			p { padding-top: 45px; font-size: 17px; }
+			p { padding-top: 45px; font-size: 13px; }
 		}
 
 		@media only screen and (min-width: 670px) and (max-width: 767px){
-			p { padding-top: 45px; font-size: 20px; }
+			p { padding-top: 45px; font-size: 14px; }
 		}
 
 		@media only screen and (min-width: 767px) and (max-width: 970px){
@@ -1013,7 +1013,7 @@ ul.ul-nav { display: table; float: left !important;
 
 @media only screen and (min-width: 0px) and (max-width: 767px){
 	#video-colmex { height: 340px; >a img { height: 320px; } }
-	#fundacion-colmex { padding-bottom: 0; }
+	#fundacion-colmex { height: 340px; padding-bottom: 0; }
 }
 
 @media only screen and (min-width: 585px) and (max-width: 767px){
