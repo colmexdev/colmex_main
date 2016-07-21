@@ -991,7 +991,7 @@ ul.ul-nav { display: table; float: left !important;
 }
 
 @media only screen and (min-width: 767px) and (max-width: 1260px){
-	#fundacion-colmex, #video-colmex { height: 370px; >a img { height: 310px;} }
+	#fundacion-colmex, #video-colmex { height: 370px; >a img { height: 310px; } }
 
 	#fundacion-colmex { 
 		padding-left: 35px;
@@ -1013,10 +1013,6 @@ ul.ul-nav { display: table; float: left !important;
 		#div-img-fundacion { width: 40%; }
  }
 }
-
-@media only screen and (min-width: 767px) and (max-width: 1260px){
-		#video-colmex { >a img { height: 294px; } }
-	}
 
 //Estilos que afectan a la sección de la frase
 #div_frase{
