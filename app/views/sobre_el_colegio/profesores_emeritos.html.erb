@@ -11,7 +11,7 @@
 						<h3 class="uk-accordion-title"><%= construir_encabezado("bt-flechita.png", "bt-flechita-abajo.png", c) %></h3>
 						<div class="uk-accordion-content">
 							<% @profesores.where(centro: c).order(fecha_anexion: :desc).each do |p| %>
-								<p style="display: list-item"><%= p.nombre + " (" + l(Date.strptime(p.fecha_anexion,"%d/%m/%Y"), format: :long).to_s + ", " + p.semblanza %></p>
+								<p style="display: list-item"><%= p.nombre + " (" + l(Date.strptime(p.fecha_anexion.to_s,"%d/%m/%Y"), format: :long).to_s + ", " + p.semblanza %></p>
 							<% end %>
 						</div>
 					<% end %>
