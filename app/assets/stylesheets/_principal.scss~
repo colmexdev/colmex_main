@@ -855,8 +855,9 @@ ul.ul-nav { display: table; float: left !important;
 
 
 #fundacion-colmex { 
+	width: 55%;
 	display: inline-block;
-	height: 500px;
+	height: 400px;
 	padding: 30px 15px;
 	text-align: center;
 
@@ -981,14 +982,15 @@ ul.ul-nav { display: table; float: left !important;
 }
 
 #video-colmex{
+	width: 45%;
 	display: inline-block; 
-	height: 500px;
+	height: 400px;
 	position: relative;
 
 	>a img { 
 		@include centrado; 
 		width: 90%; 
-		height: 440px;
+		height: 340px;
 		opacity: 1;
 		-webkit-transition: opacity 0.4s linear;
 		-moz-transition: opacity 0.4s linear;
