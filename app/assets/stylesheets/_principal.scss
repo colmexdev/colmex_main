@@ -317,7 +317,7 @@ ul.ul-nav { display: table; float: left !important;
 
 	#img_logo{
 		width: 50%;
-		max-width: 500px;
+		max-width: 450px;
 		display: inline-block;
 		@include centrado;
 	}
@@ -342,7 +342,6 @@ ul.ul-nav { display: table; float: left !important;
 			background-color: #5E002B;
 			text-align: center;
 			height: 100%;
-			opacity: 0.6;
 			position: relative;
 			width: calc(20% - 2px);
 			width: -moz-calc(20% - 2px);
@@ -413,7 +412,6 @@ ul.ul-nav { display: table; float: left !important;
 
 		.dropdown:hover, .no-dropdown:hover{
 			background-color: #470020;
-			opacity: 1;
 		}
 
 		.dropdown:hover .dropdown-menu{
@@ -850,6 +848,7 @@ ul.ul-nav { display: table; float: left !important;
 
 
 #fundacion-colmex { 
+	display: inline-block;
 	height: 500px;
 	padding: 30px 15px;
 	text-align: center;
@@ -974,7 +973,8 @@ ul.ul-nav { display: table; float: left !important;
 	}
 }
 
-#video-colmex{ 
+#video-colmex{
+	display: inline-block; 
 	height: 500px;
 	position: relative;
 

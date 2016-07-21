@@ -317,7 +317,7 @@ ul.ul-nav { display: table; float: left !important;
 
 	#img_logo{
 		width: 50%;
-		max-width: 500px;
+		max-width: 450px;
 		display: inline-block;
 		@include centrado;
 	}
@@ -342,7 +342,6 @@ ul.ul-nav { display: table; float: left !important;
 			background-color: #5E002B;
 			text-align: center;
 			height: 100%;
-			opacity: 0.6;
 			position: relative;
 			width: calc(20% - 2px);
 			width: -moz-calc(20% - 2px);
@@ -413,7 +412,6 @@ ul.ul-nav { display: table; float: left !important;
 
 		.dropdown:hover, .no-dropdown:hover{
 			background-color: #470020;
-			opacity: 1;
 		}
 
 		.dropdown:hover .dropdown-menu{
@@ -1070,14 +1068,14 @@ ul.ul-nav { display: table; float: left !important;
 	position:absolute;
 	bottom:0;
 	width:100%;
-	height:300px;
+	height:200px;
 	background-color: #5E002B;
 
 	#footer_der, #footer_izq, #footer_centro{
 		color: #fff;
 		font-size: 15px;
 		background-color: #5E002B;
-		height: 300px;
+		height: 200px;
 
 		.links{
 			display: table;
@@ -1124,7 +1122,7 @@ ul.ul-nav { display: table; float: left !important;
     border-right: 1px solid #fff;
 		border-left: 1px solid #fff;
 		color: #fff;
-		font-size: 16px;
+		font-size: 13px;
 		
 		img{
 			width: 40%;
