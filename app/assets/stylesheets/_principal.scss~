@@ -1128,6 +1128,7 @@ ul.ul-nav { display: table; float: left !important;
 		
 		img{
 			width: 40%;
+			max-width: 350px;
 		}
 	}
 
