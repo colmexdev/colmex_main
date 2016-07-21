@@ -13,6 +13,11 @@ class SobreElColegioController < ApplicationController
  
   end
 
+  def profesores_emeritos
+    @profesores = Emerito.all
+    @centros = ['CEAA', 'CEDUA', 'CEE', 'CEH', 'CEI', 'CELL', 'CES']
+  end
+
   def asamblea
     respond_to do |format|
       format.js

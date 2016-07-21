@@ -13,6 +13,10 @@ class SobreElColegioController < ApplicationController
  
   end
 
+  def profesores_emeritos
+    @profesores = Emerito.all
+  end
+
   def asamblea
     respond_to do |format|
       format.js

@@ -1,0 +1,23 @@
+<%= render 'principal/barra' %>
+<div class="container-fluid" id="resto-cuerpo">
+	<div class="cuerpo">
+
+		<div class="row">
+			<div class="acordeon-premios">
+			<script type="text/javascript" src="../js/accordion.js"></script>
+
+				<div class="uk-accordion" data-uk-accordion>
+					<% @centros.each do |c| %>
+						<h3 class="uk-accordion-title"><%= construir_encabezado("bt-flechita.png", "bt-flechita-abajo.png", c.nombre) %></h3>
+						<div class="uk-accordion-content">
+							<% @profesores.where(centro: c).order(fecha_anexion: desc).each do |p| %>
+								<p style="display: list-item"><%= p.nombre + ", " + p.semblanza %></p>
+							<% end %>
+						</div>
+					<% end %>
+				</div>
+			</div>
+		</div>
+	</div>
+
+<%= render 'principal/footer' %>

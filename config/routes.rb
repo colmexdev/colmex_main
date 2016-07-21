@@ -47,6 +47,8 @@ Rails.application.routes.draw do
 
   get 'sobre_el_colegio/autoridades' => 'sobre_el_colegio#autoridades', :as => :autoridades
 
+  get 'sobre_el_colegio/profesores_emeritos' => 'sobre_el_colegio#profesores_emeritos', :as => :profesores_emeritos
+
   get 'sobre_el_colegio/historia' => 'sobre_el_colegio#historia', :as => :historia
 
   get 'sobre_el_colegio/asamblea' => 'sobre_el_colegio#asamblea', :as => :asamblea
