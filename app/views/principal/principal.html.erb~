@@ -106,8 +106,8 @@
 	</div> <!-- Cierre de fila para "Descubre" -->
 
 	<div class="row"> <!-- Fila para logos COLMEX -->
-
-			<div class="col-xs-12 col-sm-6" id="fundacion-colmex">
+		<div class="wrapper-donacion">
+			<div id="fundacion-colmex">
 				<div id="div-donacion">
 					<p><%= t('donacion.texto') %></p>
 					<div id="contenedor-botones">
@@ -124,13 +124,13 @@
 				</div>
 			</div>
 
-			<div class="col-xs-12 col-sm-6" id="video-colmex">
+			<div id="video-colmex">
 				<script type="text/javascript" src="../js/lightbox.js"></script>
 				<a href="https://www.youtube.com/watch?v=-LX7WrHCaUA" data-uk-lightbox data-lightbox-type="video">
 					<%= image_tag("video.png") %>
 				</a>
 			</div>
-
+		</div>
 	</div> <!-- Cierre de fila logos COLMEX -->
 
 	<div class="row"> <!-- Fila para frase -->
