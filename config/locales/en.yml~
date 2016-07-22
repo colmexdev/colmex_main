@@ -4,14 +4,15 @@ en:
     intranet: "Intranet"
   botones:
     b1: 
-      texto: "About the College"
+      texto: "General information"
       opciones:
         op1: "General information"
-        op2: "History"
-        op3: "Institutional documents"
-        op4: "Emmeritus profesors"
-        op5: "Prizes and distinctions"
-        op6: "Transparency"
+        op2: "Authorities"
+        op3: "History"
+        op4: "Institutional documents"
+        op5: "Emmeritus profesors"
+        op6: "Prizes and distinctions"
+        op7: "Transparency"
     b2:
       texto: "Study centers"
       opciones:
