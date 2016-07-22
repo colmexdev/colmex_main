@@ -838,20 +838,20 @@ ul.ul-nav { display: table; float: left !important;
 
 //Estilos que afectan la sección del descubre
 #div_descubre{
-	height: 700px;
+	height: auto;
 	background-color: #fff;
 
   .wrapper-descubre{
 		width: 85%;
 		min-width: 1000px;
 		height: 85%;
-		margin: auto;
+		margin: 20px auto;
 
 		.frame-descubre{
 			float: left;
 			display: inline-block;
 			width: 20%;
-			min-width:200px;
+			min-width:250px;
 			background-color: #993366;
 			position: relative;
 
