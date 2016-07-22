@@ -27,10 +27,10 @@
             mobile: false,
             weekstart: 1,
             i18n: {
-                months        : ['January','February','March','April','May','June','July','August','September','October','November','December'],
-                weekdays      : ['Sun','Mon','Tue','Wed','Thu','Fri','Sat']
+                months        : ['Enero','Febrero','Marzo','Abril','Mayo','Junio','Julio','Agosto','Septiembre','Octubre','Noviembre','Diciembre'],
+                weekdays      : ['Dom','Lun','Mar','Mie','Jue','Vie','Sab']
             },
-            format: "YYYY-MM-DD",
+            format: "MM-DD-YYYY",
             offsettop: 5,
             maxDate: false,
             minDate: false,
