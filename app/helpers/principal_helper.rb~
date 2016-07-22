@@ -108,7 +108,7 @@ module PrincipalHelper
       bloque_html = bloque_html + "<div class=\"frame-descubre\">"
 
 
-      bloque_html = bloque_html + "<div class=\"frame-descubre-hover\">"
+      bloque_html = bloque_html + "<div class=\"frame-hover\">"
 
       bloque_html = bloque_html + "</div></div>"
     end
