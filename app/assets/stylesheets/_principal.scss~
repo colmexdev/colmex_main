@@ -870,10 +870,11 @@ ul.ul-nav { display: table; float: left !important;
 				transition: opacity 0.5s linear;
 
 				.cont-descubre{
-
+					color: green;
 				}
 
 				.titulo-descubre{
+					color: #4E4E4E;
 
 				}
 

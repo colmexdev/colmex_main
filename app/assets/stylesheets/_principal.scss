@@ -858,6 +858,13 @@ ul.ul-nav { display: table; float: left !important;
 			background-color: orange;
 			position: relative;
 
+			.imagen-descubre{
+				position: absolute;
+				@include centrado;
+				width: 100%;
+				height: 100%;
+			}
+
 			.frame-hover{
 				width:100%;
 				height: 100%;
