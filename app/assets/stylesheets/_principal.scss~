@@ -1012,10 +1012,12 @@ ul.ul-nav { display: table; float: left !important;
 			max-width: 233px; 
 		} 
 	}
+
+	#video-colmex >a img { width: 495px; }
 }
 
 @media only screen and (min-width: 0px) and (max-width: 767px){
-	#video-colmex { height: 340px; >a img { height: 320px; } }
+	#video-colmex { height: 340px; >a img { height: 320px; width: 495px; } }
 	#fundacion-colmex { height: 340px; padding-bottom: 0; }
 }
 
