@@ -1026,11 +1026,6 @@ ul.ul-nav { display: table; float: left !important;
  }
 }
 
-@media only screen and (min-width: 0px) and (max-width: 925px){
-	#fundacion-colmex{ 
-		#div-img-fundacion { width: 495px; }
- }
-}
 
 //Estilos que afectan a la sección de la frase
 #div_frase{
