@@ -259,10 +259,6 @@ html, body{ height: 100%; }
 		background-color: #EEEEEE;
 		color: #999999;
 		margin-bottom: 5px;
-		/*-webkit-transition: all 0.3s linear;
-		-moz-transition: all 0.3s linear;
-		-o-transition: all 0.3s linear;
-		transition: all 0.3s linear;*/
 		
 		>a{
 			color: #4E4E4E;
@@ -473,8 +469,7 @@ ul.ul-nav { display: table; float: left !important;
 				
 					.imagen_slider_sobre{
 						min-width: 60px;
-						max-width:160px;
-						width:100%;
+						max-width:180px;
 						position: absolute;
 					}
 				}
