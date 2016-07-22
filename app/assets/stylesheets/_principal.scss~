@@ -848,6 +848,7 @@ ul.ul-nav { display: table; float: left !important;
 		margin: auto;
 
 		.frame-descubre{
+			float: left;
 			display: inline-block;
 			width: 20%;
 			min-width:200px;

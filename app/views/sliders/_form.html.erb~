@@ -19,6 +19,18 @@
     <%= f.label :imagen %><br>
     <%= f.file_field :imagen %>
   </div>
+  <div class="field">
+    <%= f.label :badge %><br>
+    <%= f.file_field :badge %>
+  </div>
+  <div class="field">
+    <%= f.label :pos_x %><br>
+    <%= f.number_field :pos_x %>
+  </div>
+  <div class="field">
+    <%= f.label :pos_y %><br>
+    <%= f.number_field :pos_y %>
+  </div>
   <div class="actions">
     <%= f.submit %>
   </div>

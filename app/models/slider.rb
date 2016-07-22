@@ -10,6 +10,7 @@ class Slider < ActiveRecord::Base
 
   validates_presence_of :pos_x
   validates_presence_of :pos_y
+  validates_presence_of :fecha_expiracion
   validates_attachment_presence :imagen
   validates_attachment_content_type :imagen, :content_type => ['image/jpeg', 'image/png', 'image/jpg']
   validates_attachment_presence :badge

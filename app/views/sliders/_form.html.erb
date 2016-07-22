@@ -31,6 +31,10 @@
     <%= f.label :pos_y %><br>
     <%= f.number_field :pos_y %>
   </div>
+  <div class="field">
+    <%= f.label :fecha_expiracion %><br>
+    <%= f.text_field :fecha_expiracion, {"data-uk-datepicker" => "format: {'YYYY-MM-DD'}"} %>
+  </div>
   <div class="actions">
     <%= f.submit %>
   </div>
