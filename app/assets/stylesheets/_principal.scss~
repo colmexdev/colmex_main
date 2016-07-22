@@ -1009,7 +1009,7 @@ ul.ul-nav { display: table; float: left !important;
 		padding-left: 35px;
 
 		#div-img-fundacion { 
-			width: 495px; 
+			max-width: 233px; 
 		} 
 	}
 }
@@ -1025,7 +1025,6 @@ ul.ul-nav { display: table; float: left !important;
 		#div-img-fundacion { width: 40%; }
  }
 }
-
 
 //Estilos que afectan a la sección de la frase
 #div_frase{
@@ -1165,7 +1164,7 @@ ul.ul-nav { display: table; float: left !important;
 		#footer_der { 
 			height: auto;
 			padding-left: 0;
-			margin-top: 10px;
+			margin-top: 0;
 			.links { 
 				margin: 5px auto;
 				width: auto;
