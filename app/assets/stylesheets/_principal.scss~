@@ -1009,7 +1009,7 @@ ul.ul-nav { display: table; float: left !important;
 		padding-left: 35px;
 
 		#div-img-fundacion { 
-			max-width: 495px; 
+			width: 495px; 
 		} 
 	}
 }
