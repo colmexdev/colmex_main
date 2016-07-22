@@ -868,6 +868,21 @@ ul.ul-nav { display: table; float: left !important;
 				-moz-transition: opacity 0.5s linear;
 				-o-transition: opaity 0.5s linear;
 				transition: opacity 0.5s linear;
+
+				.cont-descubre{
+					color: green;
+				}
+
+				.titulo-descubre{
+					color: #4E4E4E;
+
+				}
+
+				.icono-descubre{
+					position: absolute;
+					right: 0;
+					bottom: 0;
+				}
 			}
 
 			.frame-hover:hover{

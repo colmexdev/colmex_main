@@ -106,10 +106,13 @@ module PrincipalHelper
     bloque_html = ""
     descubres.each do |d|
       bloque_html = bloque_html + "<div class=\"frame-descubre\">"
-
-
+      if d.imagen != nil
+        bloque_html = bloque_html + ActionController::Base.helpers.image_tag(d.imagen, :class => "imagen_slider_fondo")
+      end
       bloque_html = bloque_html + "<div class=\"frame-hover\">"
-
+      bloque_html = bloque_html + "<span class=\"cont-descubre\">" + d.contenido + "</span><br />"
+      bloque_html = bloque_html + "span class=\"titulo-descubre\">" + d.titulo + "</span>"
+      bloque_html = bloque_html + ActionController::Base.helpers.image_tag(Content.where(tipo: d.contenido).icono.url, :class => "icono-descubre")
       bloque_html = bloque_html + "</div></div>"
     end
 
