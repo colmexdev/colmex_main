@@ -37,7 +37,7 @@
     <%= f.text_field :fecha_publicacion, {maxlength: 10, data-uk-datepicker: "{format: 'DD/MM/YYYY'}"} %>
   </div>
   <div class="field">
-    <%= f.label :fecha__limite_pub %><br>
+    <%= f.label :fecha_limite_pub %><br>
     <%= f.text_field :fecha_limite_pub, {maxlength: 10, data-uk-datepicker: "{format: 'DD/MM/YYYY'}"} %>
   </div>
   <div class="actions">
