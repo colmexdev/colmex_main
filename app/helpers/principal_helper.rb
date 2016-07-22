@@ -18,9 +18,9 @@ module PrincipalHelper
     return (control_block+html_block).html_safe
   end
 
-  def construye_slider_eventos
+  def construye_slider_eventos(sliders)
     bloque_html, bloque_opt_html, bloque_tiny_html = "", "", ""
-    slides = (@resultado.each.length / 4).ceil
+    slides = (sliders.each.length / 4).ceil
     if slides == 0
       slides = 1 
     end
@@ -38,8 +38,8 @@ module PrincipalHelper
         bloque_opt_html = bloque_opt_html + '<div class="evento">'
         bloque_tiny_html = bloque_tiny_html + '<div class=' + (primer_item ? '"item active"' : '"item"') + '><div class="evento">'
         primer_item = false;
-        if j < @resultado.each.length
-          fila = @resultado.each[j]
+        if j < sliders.each.length
+          fila = sliders.each[j]
           if k == 1
             fila["fechaFin"] = "26/06/2016"
             fila["centroSiglas"] = "CEDUA"
