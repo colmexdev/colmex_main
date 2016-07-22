@@ -6,7 +6,7 @@
 			<div class="col-md-12" id="div_slider"> <!-- Columnas para slider -->
 				<div id="myCarousel" class="carousel slide" data-ride="carousel">
 
-			    <%= construye_slider %>
+			    <%= construye_slider(@sliders) %>
 
 					<!-- Left and right controls -->
 					<a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
@@ -104,6 +104,11 @@
 
 			<div class="wrapper-descubre">
 			<%= javascript_tag do %>
+				$( document ).ready(function() {
+    			var cw = $('.frame-descubre').width();
+					$('.frame-descubre').css({'height':cw+'px'});
+				});
+
 				window.onresize = function(){
 					var cw = $('.frame-descubre').width();
 					$('.frame-descubre').css({'height':cw+'px'});

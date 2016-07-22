@@ -5,7 +5,9 @@ class PrincipalController < ApplicationController
     @resultado.do
     @resultado = cliente.execute("SELECT * from dbo.vw_DatosAgenda")
     gon.ev_big, gon.ev_small, gon.ev_tiny = construye_slider_eventos(@resultado)
-    @descubre = Descubre.where("fecha_publicacion <= ? AND fecha_limite_pub >= ?", Date.current(), Date.current())
+    @sliders = Slider.where("fecha_expiracion > ? ", Date.current()).order("RAND()")
+    @descubre = Descubre.where("fecha_publicacion <= ? AND fecha_limite_pub > ?", Date.current(), Date.current()).order("RAND()")
+    @frase = Frase.order("RAND()").limit(1)
   end
 
   def principios_eticos

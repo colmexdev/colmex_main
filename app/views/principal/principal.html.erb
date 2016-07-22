@@ -6,7 +6,7 @@
 			<div class="col-md-12" id="div_slider"> <!-- Columnas para slider -->
 				<div id="myCarousel" class="carousel slide" data-ride="carousel">
 
-			    <%= construye_slider %>
+			    <%= construye_slider(@sliders) %>
 
 					<!-- Left and right controls -->
 					<a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
@@ -150,9 +150,9 @@
 
 	<div class="row"> <!-- Fila para frase -->
 		<div class="col-md-12" id="div_frase"> <!-- Columnas para frase -->
-			<% if Frase.order(:id).last.try(:cita) != nil %>
+			<% if @frase.try(:cita) != nil %>
 			<p>
-					<span class="uk-icon-quote-left uk-icon-medium"></span><span id="span-frase"><%= Frase.order(:id).last.try(:cita) %></span><span class="uk-icon-quote-right uk-icon-medium"></span><span id="span-autor"><%= Frase.order(:id).last.try(:autor) %></span>
+					<span class="uk-icon-quote-left uk-icon-medium"></span><span id="span-frase"><%= @frase.try(:cita) %></span><span class="uk-icon-quote-right uk-icon-medium"></span><span id="span-autor"><%= @frase.try(:autor) %></span>
 			</p>
 			<% end %>
 		</div> <!-- Cierre de columnas para frase -->

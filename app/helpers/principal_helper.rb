@@ -1,10 +1,10 @@
 module PrincipalHelper
 
-  def construye_slider
+  def construye_slider(sliders)
     i = 0
     html_block = ""
     control_block = ""
-    Slider.all.each do |im|
+    sliders.each do |im|
       control_block = control_block + '<li data-target="#myCarousel" data-slide-to="' + i.to_s + '"' + (i == 0 ?  'class="active"' : '') + '></li>'
 
 
