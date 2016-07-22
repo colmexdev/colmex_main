@@ -64,20 +64,20 @@ module PrincipalHelper
   def construirEvento(fila)
     centros = ['ceaa', 'cedua', 'cee', 'ceh', 'cei', 'cell', 'ces', 'colmex', 'bdcv']
     bloque_html = '<div class="img_evento">'
-    bloque_html = bloque_html + ( centros.include?(fila["centroSiglas"].downcase) ? ActionController::Base.helpers.image_tag(fila["centroSiglas"].downcase + ".png", :class => "img_sede") : '') + "</div>"
+    bloque_html = bloque_html + ( centros.include?(fila["centroSiglas"].downcase) ? ActionController::Base.helpers.image_tag(raw(fila["centroSiglas"].downcase) + ".png", :class => "img_sede") : '') + "</div>"
 
     bloque_html = bloque_html + '<div class="desc_evento">'
 
-    bloque_html = bloque_html + '<div class="tipo_evento"><p>' + fila["tipoActividad"].to_s + "</p></div>"
-    bloque_html = bloque_html + '<div class="titulo_evento"><p>' + fila["tituloActividad"].to_s + (fila["subtituloActividad"].to_s != "" ? (": " + fila["subtituloActividad"].to_s) : "") + "</p></div>"
+    bloque_html = bloque_html + '<div class="tipo_evento"><p>' + raw(fila["tipoActividad"].to_s) + "</p></div>"
+    bloque_html = bloque_html + '<div class="titulo_evento"><p>' + raw(fila["tituloActividad"].to_s) + (fila["subtituloActividad"].to_s != "" ? (": " + raw(fila["subtituloActividad"].to_s)) : "") + "</p></div>"
 
     bloque_html = bloque_html + '<div class="lugar_fecha_evento">'
     bloque_html = bloque_html + '<div class="cal">' + ActionController::Base.helpers.image_tag("calendario.png", :class => "img_cal") + '</div>'
     bloque_html = bloque_html + '<div class="datos_evento"><p>'
     bloque_html = bloque_html + arregloFecha(fila["fechaInicio"], fila["fechaFin"]) + "<br>"
     bloque_html = bloque_html + l(Time.parse(fila["horaInicio"]), format: "%H:%M") + " | " + l(Time.parse(fila["horaFin"]), format: "%H:%M") + "<br>"
-    bloque_html = bloque_html + fila["sede"].to_s + ', 
-<br><span>' + fila["institucionSede"].to_s + "</span></p></div></div>"
+    bloque_html = bloque_html + raw(fila["sede"].to_s) + ', 
+<br><span>' + raw(fila["institucionSede"].to_s) + "</span></p></div></div>"
 
     bloque_html = bloque_html + '<div class="liga_evento"><a href="'+fila["liga"].to_s+'" class="liga_evento">' + t('eventos.liga') + ' >' + '</a></div>'
 
@@ -100,5 +100,19 @@ module PrincipalHelper
 
   def construir_encabezado(imagen, imagen_hover, texto)
     return (ActionController::Base.helpers.image_tag(imagen, :class => "leave_img") + ActionController::Base.helpers.image_tag(imagen_hover, :class => "hover_img") + raw(texto) ).html_safe
+  end
+
+  def construir_descubre(descubres)
+    bloque_html = ""
+    descubres.each do |d|
+      bloque_html = bloque_html + "<div class=\"frame-descubre\">"
+
+
+      bloque_html = bloque_html + "<div class=\"frame-hover\">"
+
+      bloque_html = bloque_html + "</div></div>"
+    end
+
+    return bloque_html.html_safe
   end
 end
