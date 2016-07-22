@@ -1,0 +1,6 @@
+class AddFechasToDescubre < ActiveRecord::Migration
+  def change
+    add_column :descubres, :echa_publicacion, :date
+    add_column :descubres, :fecha_limite_pub, :date
+  end
+end

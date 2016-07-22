@@ -888,7 +888,7 @@ ul.ul-nav { display: table; float: left !important;
 		}
 
 		@media only screen and (min-width: 570px) and (max-width: 670px){
-			p { padding-top: 45px; font-size: 13px; }
+			p { padding-top: 40px; font-size: 15px; }
 		}
 
 		@media only screen and (min-width: 670px) and (max-width: 767px){

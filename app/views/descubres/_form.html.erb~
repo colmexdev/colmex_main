@@ -27,6 +27,18 @@
     <%= f.label :contenido %><br>
     <%= f.select(:contenido, options_from_collection_for_select(Content.all, :tipo, :tipo), {}, {}) %>
   </div>
+  <div class="field">
+    <%= f.label :imagen %><br>
+    <%= f.file_field :imagen %>
+  </div>
+  <div class="field">
+    <%= f.label :fecha_publicacion %><br>
+    <%= f.text_field :fecha_publicacion, {maxlength: 10, :data-uk-datepicker: "{format: 'DD/MM/YYYY'}"} %>
+  </div>
+  <div class="field">
+    <%= f.label :fecha__limite_pub %><br>
+    <%= f.text_field :fecha_limite_pub, {maxlength: 10, :data-uk-datepicker: "{format: 'DD/MM/YYYY'}"} %>
+  </div>
   <div class="actions">
     <%= f.submit %>
   </div>

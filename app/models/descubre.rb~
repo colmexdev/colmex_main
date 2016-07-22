@@ -5,10 +5,11 @@ class Descubre < ActiveRecord::Base
                     :path => ":rails_root/public/assets/descubre/:id/:style/:basename.:extension"
 
   validates_presence_of :titulo
-  validates_presence_of :descripcion
   validates_presence_of :liga
   validates_presence_of :contenido
+  validates_presence_of :fecha_publicacion
+  validates_presence_of :fecha_limite_pub
 
-  validates_attachment_of :imagen
+  validates_attachment_presence :imagen
   validates_attachment_content_type :imagen, :content_type => ['image/jpeg', 'image/png', 'image/jpg']
 end

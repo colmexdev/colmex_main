@@ -7,6 +7,11 @@
   <%= @content.tipo %>
 </p>
 
+<p>
+  <strong>Ícono:</strong>
+  <%= image_tag @content.icono.url %>
+</p>
+
 <%= link_to 'Edit', edit_content_path(@content) %> |
 <%= link_to 'Back', contents_path %>
 

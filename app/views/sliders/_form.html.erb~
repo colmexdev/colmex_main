@@ -1,4 +1,4 @@
-<%= form_for(@slider) do |f| %>
+<%= form_for(@slider, :html=> { :multipart => true}) do |f| %>
   <% if @slider.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@slider.errors.count, "error") %> prohibited this slider from being saved:</h2>
@@ -13,7 +13,11 @@
 
   <div class="field">
     <%= f.label :liga %><br>
-    <%= f.text_area :liga %>
+    <%= f.text_field :liga %>
+  </div>
+  <div class="field">
+    <%= f.label :imagen %><br>
+    <%= f.file_field :imagen %>
   </div>
   <div class="actions">
     <%= f.submit %>

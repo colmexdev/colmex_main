@@ -2,6 +2,8 @@
 
 <p id="notice"><%= notice %></p>
 
+<%= image_tag @slider.imagen.url %>
+
 <p>
   <strong>Liga:</strong>
   <%= @slider.liga %>
