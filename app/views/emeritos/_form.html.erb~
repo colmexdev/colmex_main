@@ -18,7 +18,7 @@
   <script type="text/javascript" src="../js/datepicker.js"></script>
   <div class="field">
     <%= f.label :fecha_anexion %><br>
-    <%= f.text_field :fecha_anexion, {:maxlength => 10, "data-uk-datepicker" => "{format: 'DD/MM/YYYY'}"} %>
+    <%= f.text_field :fecha_anexion, {"data-uk-datepicker" => "{format: 'YYYY-MM-DD'}"} %>
   </div>
   <div class="field">
     <%= f.label :centro %><br>
