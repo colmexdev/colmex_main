@@ -863,7 +863,7 @@ ul.ul-nav { display: table; float: left !important;
 
 	#div-donacion{ 
 		background-color: #F9F9F9;
-		width: 50%; 
+		width: 495px; 
 		height: 100%; 
 		display: inline-block;
 		float: left;
