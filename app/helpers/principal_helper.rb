@@ -109,11 +109,12 @@ module PrincipalHelper
       if d.imagen.url != "/vacio.jpg"
         bloque_html = bloque_html + ActionController::Base.helpers.image_tag(d.imagen, :class => "imagen-descubre")
       else
-        
+        bloque_html = bloque_html + "<span class=\"cont-descubre\">" + d.contenido + "</span><br />"
+      bloque_html = bloque_html + "<span class=\"titulo-descubre\">" + d.titulo + "</span>"
       end
       bloque_html = bloque_html + "<a href=\""+ d.liga + "\"><div class=\"frame-hover\">"
       bloque_html = bloque_html + "<span class=\"cont-descubre\">" + d.contenido + "</span><br />"
-      bloque_html = bloque_html + "span class=\"titulo-descubre\">" + d.titulo + "</span>"
+      bloque_html = bloque_html + "<span class=\"titulo-descubre\">" + d.titulo + "</span>"
       bloque_html = bloque_html + ActionController::Base.helpers.image_tag(Content.where(tipo: d.contenido).first.icono.url, :class => "icono-descubre")
       bloque_html = bloque_html + "</div></a></div>"
     end

@@ -860,7 +860,6 @@ ul.ul-nav { display: table; float: left !important;
 			position: relative;
 
 			.imagen-descubre{
-				position: absolute;
 				@include centrado;
 				width: 100%;
 				height: 100%;
