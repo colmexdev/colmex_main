@@ -462,14 +462,14 @@ ul.ul-nav { display: table; float: left !important;
 			.item, .item.active{
 				overflow: hidden;
 				height: 100%;
+
+				.imagen_slider_fondo{
+					width: 100%;
+					text-align: center;
+					@include centrado;
+				}
 			
 				.liga_img{
-
-					.imagen_slider_fondo{
-						width: 100%;
-						text-align: center;
-						@include centrado;
-					}
 				
 					.imagen_slider_sobre{
 						min-width: 60px;
