@@ -32,6 +32,7 @@
     <%= f.label :fecha_publicacion %><br>
     <%= f.text_field :fecha_publicacion, {"data-uk-datepicker" => "{format: 'DD-MM-YYYY'}"} %>
   </div>
+  <script type="text/javascript" src="../js/datepicker.js"></script>
   <div class="field">
     <%= f.label :fecha_limite_pub %><br>
     <%= f.text_field :fecha_limite_pub, {"data-uk-datepicker" => "{format: 'DD-MM-YYYY'}"} %>
