@@ -10,6 +10,5 @@ class Descubre < ActiveRecord::Base
   validates_presence_of :fecha_publicacion
   validates_presence_of :fecha_limite_pub
 
-  validates_attachment_presence :imagen
   validates_attachment_content_type :imagen, :content_type => ['image/jpeg', 'image/png', 'image/jpg']
 end
