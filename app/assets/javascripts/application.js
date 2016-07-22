@@ -15,6 +15,7 @@
 //= require turbolinks
 //= require bootstrap-sprockets
 //= require uikit
+//= require datepicker
 //= require principal
 //= require imagens
 //= require cursos
