@@ -103,10 +103,12 @@
 		<div class="col-md-12" id="div_descubre"> <!-- Columnas para "Descubre" -->
 
 			<div class="wrapper-descubre">
-			<script type="text/javascript">
-				var cw = $('.frame-descubre').width();
-				$('.frame-descubre').css({'height':cw+'px'});
-			</script>
+			<%= javascript_tag do %>
+				window.onresize = function(){
+					var cw = $('.frame-descubre').width();
+					$('.frame-descubre').css({'height':cw+'px'});
+				}
+			<% end %>
 				<%= construir_descubre(@descubre) %>
 			</div>
 
