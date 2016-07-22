@@ -9,7 +9,7 @@ module PrincipalHelper
 
 
       html_block = html_block + '<div class="item ' + (i == 0 ?  "active" : "") + '">'
-      html_block = html_block + link_to(image_tag(im.imagen.url, :class => "imagen_slider_fondo") + image_tag("colmex-principal.png", :class => "imagen_slider_sobre"),im.liga, :class => "liga_img")
+      html_block = html_block + image_tag(im.imagen.url, :class => "imagen_slider_fondo") + link_to(image_tag(im.badge.url, :class => "imagen_slider_sobre", :style => "top:"+im.pos_x+";left:"+im.pos_y+";"),im.liga, :class => "liga_img")
       html_block = html_block + '</div>'
       i = i + 1
     end
