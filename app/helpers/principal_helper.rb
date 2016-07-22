@@ -112,7 +112,7 @@ module PrincipalHelper
       bloque_html = bloque_html + "<div class=\"frame-hover\">"
       bloque_html = bloque_html + "<span class=\"cont-descubre\">" + d.contenido + "</span><br />"
       bloque_html = bloque_html + "span class=\"titulo-descubre\">" + d.titulo + "</span>"
-      bloque_html = bloque_html + ActionController::Base.helpers.image_tag(Content.where(tipo: d.contenido).icono.url, :class => "icono-descubre")
+      bloque_html = bloque_html + ActionController::Base.helpers.image_tag(Content.where(tipo: d.contenido).first.icono.url, :class => "icono-descubre")
       bloque_html = bloque_html + "</div></div>"
     end
 
