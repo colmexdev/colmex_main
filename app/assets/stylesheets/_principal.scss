@@ -1003,7 +1003,7 @@ ul.ul-nav { display: table; float: left !important;
 }
 
 @media only screen and (min-width: 767px) and (max-width: 1260px){
-	#fundacion-colmex, #video-colmex { height: 370px; >a img { height: 310px; } }
+	#fundacion-colmex, #video-colmex { height: 370px; width: 495px; >a img { width:495px; height:320px; } }
 
 	#fundacion-colmex { 
 		padding-left: 35px;
@@ -1012,8 +1012,6 @@ ul.ul-nav { display: table; float: left !important;
 			max-width: 233px; 
 		} 
 	}
-
-	#video-colmex >a img { width: 495px; }
 }
 
 @media only screen and (min-width: 0px) and (max-width: 767px){
@@ -1119,19 +1117,19 @@ ul.ul-nav { display: table; float: left !important;
 	}
 
 	#footer_der{
-		margin-top: 10px;
+		margin-top: 20px;
 		text-align: left;
 		padding-left: 20px;
 	}
 
 	#footer_izq{
-		margin-top: 10px;
+		margin-top: 20px;
 		text-align: right;
 		padding-right: 20px;
 	}
 
 	#footer_centro{
-		margin-top: 10px;
+		margin-top: 20px;
 		text-align: center;
     border-right: 1px solid #fff;
 		border-left: 1px solid #fff;
