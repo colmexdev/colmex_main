@@ -72,7 +72,7 @@ class DescubresController < ApplicationController
     end
 
     def convertir_array(hash)
-      hash[:descubre][:tags] = hash[:descubre][:tags].to_s.downcase.split(",")
+      hash[:descubre][:tags] = hash[:descubre][:tags].downcase.split(",")
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
