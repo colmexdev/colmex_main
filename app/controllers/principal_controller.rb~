@@ -15,8 +15,21 @@ class PrincipalController < ApplicationController
   end
 
   def resultados_busqueda
-    @descubre = Descubre.where("tags LIKE ?", "algo")
-    @cursos = Curso.where("tags LIKE ?", "algo")
+    @resultados = []
+    descubres = Descubre.where("tags IS NOT NULL")
+    descubres.each do |d|
+      if d.lowercase.split(/ *, */).include?(params[:condicion].downcase)
+        @resultados << d
+      end
+    end
+    cursos = Curso.where("tags IS NOT NULL")
+    cursos.each do |c|
+      if c.lowercase.split(/ *, */).include?(params[:condicion].downcase)
+        @resultados << c
+      end
+    end
+    #@descubre = Descubre.where("LOWER(tags) LIKE ?", params[:condicion])
+    #@cursos = Curso.where("LOWER(tags) LIKE ?", params[:condicion])
   end
 
   def principios_eticos

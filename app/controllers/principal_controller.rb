@@ -18,13 +18,13 @@ class PrincipalController < ApplicationController
     @resultados = []
     descubres = Descubre.where("tags IS NOT NULL")
     descubres.each do |d|
-      if d.lowercase.split(/ *, */).include?(params[:condicion].downcase)
+      if d.tags.lowercase.split(/ *, */).include?(params[:condicion].downcase)
         @resultados << d
       end
     end
     cursos = Curso.where("tags IS NOT NULL")
     cursos.each do |c|
-      if c.lowercase.split(/ *, */).include?(params[:condicion].downcase)
+      if c.tags.lowercase.split(/ *, */).include?(params[:condicion].downcase)
         @resultados << c
       end
     end
