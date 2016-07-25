@@ -16,20 +16,28 @@ class PrincipalController < ApplicationController
 
   def resultados_busqueda
     @resultados = []
+    condicion_limpia = quitar_acentos(params[:condicion]).downcase
     descubres = Descubre.where("tags IS NOT NULL")
     descubres.each do |d|
-      if d.tags.lowercase.split(/ *, */).include?(params[:condicion].downcase)
+      if quitar_acentos(d.tags).downcase.split(/ *, */).include?(condicion_limpia)
         @resultados << d
       end
     end
     cursos = Curso.where("tags IS NOT NULL")
     cursos.each do |c|
-      if c.tags.lowercase.split(/ *, */).include?(params[:condicion].downcase)
+      if quitar_acentos(c.tags).downcase.split(/ *, */).include?(condicion_limpia)
         @resultados << c
       end
     end
-    #@descubre = Descubre.where("LOWER(tags) LIKE ?", params[:condicion])
-    #@cursos = Curso.where("LOWER(tags) LIKE ?", params[:condicion])
+  end
+
+  def quitar_acentos(cadena)
+    nueva_cad = cadena.gsub(/[áÁ]/, "a")
+    nueva_cad = nueva_cad.gsub(/[éÉ]/, "e")
+    nueva_cad = nueva_cad.gsub(/[íÍ]/, "i")
+    nueva_cad = nueva_cad.gsub(/[óÓ]/, "o")
+    nueva_cad = nueva_cad.gsub(/[úÚ]/, "u")
+    return nueva_cad
   end
 
   def principios_eticos
