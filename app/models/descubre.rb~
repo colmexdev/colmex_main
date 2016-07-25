@@ -1,5 +1,8 @@
 class Descubre < ActiveRecord::Base
 
+  before_save :acomodar_tags
+  before_update :acomodar_tags
+
   serialize :tags, Array
 
   has_attached_file :imagen, :styles => {},
@@ -15,6 +18,8 @@ class Descubre < ActiveRecord::Base
 
   validates_attachment_content_type :imagen, :content_type => ['image/jpeg', 'image/png', 'image/jpg']
 
-  protected
+  def acomodar_tags
+    self.tags = self.tags.to_s.downcase.split(',')
+  end
 
 end
