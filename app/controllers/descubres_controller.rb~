@@ -28,7 +28,7 @@ class DescubresController < ApplicationController
 
     respond_to do |format|
       if @descubre.save
-        format.html { redirect_to @descubre, notice: 'Descubre was successfully created.' }
+        format.html { redirect_to @descubre, notice: 'Nueva entrada de Descubre creada exitosamente.' }
         format.json { render :show, status: :created, location: @descubre }
       else
         format.html { render :new }
@@ -42,7 +42,7 @@ class DescubresController < ApplicationController
   def update
     respond_to do |format|
       if @descubre.update(descubre_params)
-        format.html { redirect_to @descubre, notice: 'Descubre was successfully updated.' }
+        format.html { redirect_to @descubre, notice: 'Entrada de Descubre editada con éxito.' }
         format.json { render :show, status: :ok, location: @descubre }
       else
         format.html { render :edit }
@@ -69,6 +69,7 @@ class DescubresController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def descubre_params
+      params[:tags] = params[:tags].downcase.split(',')
       params.require(:descubre).permit(:titulo, :liga, :contenido, :fecha_publicacion, :fecha_limite_pub, :imagen, :tags)
     end
 end
