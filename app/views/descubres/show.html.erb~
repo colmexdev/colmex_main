@@ -8,11 +8,6 @@
 </p>
 
 <p>
-  <strong>Descripcion:</strong>
-  <%= @descubre.descripcion %>
-</p>
-
-<p>
   <strong>Liga:</strong>
   <%= @descubre.liga %>
 </p>
@@ -20,6 +15,16 @@
 <p>
   <strong>Contenido:</strong>
   <%= @descubre.contenido %>
+</p>
+
+<p>
+  <strong>Fecha de publicación:</strong>
+  <%= @descubre.fecha_publicacion %>
+</p>
+
+<p>
+  <strong>Fecha de despublicación:</strong>
+  <%= @descubre.fecha_limite_pub %>
 </p>
 
 <%= link_to 'Edit', edit_descubre_path(@descubre) %> |
