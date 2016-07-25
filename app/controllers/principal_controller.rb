@@ -1,6 +1,6 @@
 class PrincipalController < ApplicationController
   def principal
-    cliente = TinyTds::Client.new username: 'agendaPRED', password: '@g3NDa#', host: '172.16.40.169', port: '49435'
+    cliente = TinyTds::Client.new username: 'agendaPRED', password: '@g3NDa#', host: '172.16.40.211', port: '49767'
     begin
       @resultado = cliente.execute("USE Agenda")
       @resultado.do
