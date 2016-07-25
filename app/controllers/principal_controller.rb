@@ -2,7 +2,7 @@ class PrincipalController < ApplicationController
   def principal
     cliente = TinyTds::Client.new username: 'agendaPRED', password: '@g3NDa#', host: '172.16.40.169', port: '49435'
     @resultado = cliente.execute("USE Agenda")
-    if not @cliente.dead?
+    if not cliente.dead?
       @resultado.do
       @resultado = cliente.execute("SELECT * from dbo.vw_DatosAgenda")
       gon.ev_big, gon.ev_small, gon.ev_tiny = construye_slider_eventos(@resultado)
