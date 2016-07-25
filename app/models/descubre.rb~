@@ -1,7 +1,7 @@
 class Descubre < ActiveRecord::Base
 
   before_save :acomodar_tags
-  beore_update :acomodar_tags
+  before_update :acomodar_tags
 
   serialize :tags, Array
 
