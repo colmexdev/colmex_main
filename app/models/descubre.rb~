@@ -1,6 +1,7 @@
 class Descubre < ActiveRecord::Base
 
   before_create :acomodar_tags
+  before_seva :acomodar_tags
 
   serialize :tags, Array
 
