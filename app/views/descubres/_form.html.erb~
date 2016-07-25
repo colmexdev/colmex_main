@@ -41,7 +41,7 @@
   </div>
   <script type="text/javascript">
     $(document).ready(function(){ 
-      $("#descubre_tags").text = "";
+      $("#descubre_tags").text("");
     });
   </script>
   <div class="actions">

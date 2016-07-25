@@ -1,6 +1,5 @@
 class DescubresController < ApplicationController
   before_action :set_descubre, only: [:show, :edit, :update, :destroy]
-  #before_action :acomoda_tags, only: [:create, :update]
 
   # GET /descubres
   # GET /descubres.json
@@ -67,14 +66,6 @@ class DescubresController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_descubre
       @descubre = Descubre.find(params[:id])
-    end
-
-    def acomoda_tags
-      convertir_array(params)
-    end
-
-    def convertir_array(hash)
-      hash[:descubre][:tags] = hash[:descubre][:tags].to_str.downcase.split(",")
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
