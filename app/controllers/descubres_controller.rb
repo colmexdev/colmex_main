@@ -24,6 +24,7 @@ class DescubresController < ApplicationController
   # POST /descubres
   # POST /descubres.json
   def create
+    params[:tags] = params[:tags].to_s.downcase.split(",")
     @descubre = Descubre.new(descubre_params)
     respond_to do |format|
       if @descubre.save
