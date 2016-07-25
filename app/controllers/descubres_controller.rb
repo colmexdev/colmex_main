@@ -1,5 +1,6 @@
 class DescubresController < ApplicationController
   before_action :set_descubre, only: [:show, :edit, :update, :destroy]
+  before_action :acomoda_tags, only: [:create, :upadate]
 
   # GET /descubres
   # GET /descubres.json
@@ -24,7 +25,6 @@ class DescubresController < ApplicationController
   # POST /descubres
   # POST /descubres.json
   def create
-    params[:tags] = params[:tags].to_s.downcase.split(",")
     @descubre = Descubre.new(descubre_params)
     respond_to do |format|
       if @descubre.save
@@ -40,7 +40,6 @@ class DescubresController < ApplicationController
   # PATCH/PUT /descubres/1
   # PATCH/PUT /descubres/1.json
   def update
-    params[:tags] = params[:tags].to_s.downcase.split(",")
     respond_to do |format|
       if @descubre.update(descubre_params)
         format.html { redirect_to @descubre, notice: 'Entrada de Descubre editada con éxito.' }
@@ -66,6 +65,10 @@ class DescubresController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_descubre
       @descubre = Descubre.find(params[:id])
+    end
+
+    def acomoda_tags
+      params[:tags] = params[:tags].to_s.downcase.split(",")
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.

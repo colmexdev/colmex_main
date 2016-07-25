@@ -1,10 +1,5 @@
 class Descubre < ActiveRecord::Base
 
-  before_validation :acomodar_tags
-  before_create :acomodar_tags
-  before_save :acomodar_tags
-  before_update :acomodar_tags
-
   serialize :tags, Array
 
   has_attached_file :imagen, :styles => {},
@@ -19,9 +14,5 @@ class Descubre < ActiveRecord::Base
   validates_presence_of :fecha_limite_pub
 
   validates_attachment_content_type :imagen, :content_type => ['image/jpeg', 'image/png', 'image/jpg']
-
-  def acomodar_tags
-    self.tags = self.tags.to_s.downcase.split(',')
-  end
 
 end
