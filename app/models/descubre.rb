@@ -1,6 +1,6 @@
 class Descubre < ActiveRecord::Base
 
-  before_validate :acomodar_tags
+  before_validation :acomodar_tags
   before_create :acomodar_tags
   before_save :acomodar_tags
   before_update :acomodar_tags
