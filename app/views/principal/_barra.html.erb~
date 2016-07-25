@@ -25,7 +25,7 @@
 						<li class="nav_opciones mail"><a href="#"><%= image_tag("mail.png") %><span class="borrable"><%= t('navbar.mail') %></span></a></li>
 						<li class="nav_opciones intranet"><a href="#"><%= image_tag("intranet.png") %><span class="borrable"><%= t('navbar.intranet') %></span></a></li>
 			    </ul>
-			    <form class="navbar-form navbar-left" method="get" action="/principal">
+			    <form class="navbar-form navbar-left" method="get" action="principal/resultados">
 						<div role="search">
 						<div class="form-group">
 							<input type="text" class="form-control" placeholder="">
@@ -62,10 +62,10 @@
 			<ul class="botones"> <!-- Opciones del menú -->
 				<li class="dropdown" id="dropdown1">
 		      <a href=<%= sobre_el_colegio_path %> class="dropdown-toggle" data-hover="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span><%= t('botones.b1.texto') %></span></a>
-		        <ul class="dropdown-menu"">
-		          <li><a href=<%= informacion_general_path %>><%= t('botones.b1.opciones.op1') %></a></li>
+		        <ul class="dropdown-menu">
+							<li><a href=<%= historia_path %>><%= t('botones.b1.opciones.op3') %></a></li>
 		          <li><a href=<%= autoridades_path %>><%= t('botones.b1.opciones.op2') %></a></li>
-		          <li><a href=<%= historia_path %>><%= t('botones.b1.opciones.op3') %></a></li>
+							<li><a href="#"><%= t('botones.b1.opciones.op1') %></a></li>
 		          <li><a href=<%= documentacion_path %>><%= t('botones.b1.opciones.op4') %></a></li>
 		          <li><a href=<%= profesores_emeritos_path %>><%= t('botones.b1.opciones.op5') %></a></li>
 		          <li><a href=<%= premios_path %>><%= t('botones.b1.opciones.op6') %></a></li>
@@ -110,9 +110,9 @@
 				<li class="uk-parent">
 					<a href="#"><%= t('botones.b1.texto') %></a>
 					<ul class="uk-nav-sub">
-						<li><a href=<%= informacion_general_path %> class="sublink"><%= t('botones.b1.opciones.op1') %></a></li>
-          	<li><a href=<%= autoridades_path %> class="sublink"><%= t('botones.b1.opciones.op2') %></a></li>
           	<li><a href=<%= historia_path %> class="sublink"><%= t('botones.b1.opciones.op3') %></a></li>
+          	<li><a href=<%= autoridades_path %> class="sublink"><%= t('botones.b1.opciones.op2') %></a></li>
+		<li><a href="#" class="sublink"><%= t('botones.b1.opciones.op1') %></a></li>
           	<li><a href=<%= documentacion_path %> class="sublink"><%= t('botones.b1.opciones.op4') %></a></li>
           	<li><a href=<%= profesores_emeritos_path %> class="sublink"><%= t('botones.b1.opciones.op5') %></a></li>
           	<li><a href=<%= premios_path %> class="sublink"><%= t('botones.b1.opciones.op6') %></a></li>
