@@ -22,7 +22,7 @@
     <%= f.label :tipo %><br>
     <%= f.select(:tipo, options_for_select([['Informe de actividades','Iforme'],['Junta de Gobierno','Junta'],['Estatuto','Estatuto'],['Transparencia','Transparencia']]),{},{:onchange => "ocultarAnio()"}) %>
   </div>
-  <div class="field" id="campo_anio" style="display:none;">
+  <div class="field" id="campo_anio" style="display:visible;">
     <%= f.label :anio %><br>
     <%= f.select :anio, (Time.zone.now.year - 15)..(Time.zone.now.year + 5) %>
   </div>

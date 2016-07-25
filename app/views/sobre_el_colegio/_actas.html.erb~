@@ -1,1 +1,14 @@
-<p>Parte de administracion</p>
+<div class="acordeon-premios">
+	<script type="text/javascript" src="../js/accordion.js"></script>
+
+	<div class="uk-accordion" data-uk-accordion>
+		<% Documento.where(:tipo => "Junta").group(:anio).each do |c| %>
+			<h3 class="uk-accordion-title"><%= construir_encabezado("bt-flechita.png", "bt-flechita-abajo.png", c.anio) %></h3>
+			<div class="uk-accordion-content">
+				<% Premiado.where(tipo: c.nombre).each do |p| %>
+					<p style="display: list-item"><%= p.nombre + ", " + p.descripcion %></p>
+				<% end %>
+			</div>
+		<% end %>
+	</div>
+</div>

@@ -1,1 +1,15 @@
-<p>Parte de actas</p>
+<div class="acordeon-premios">
+	<script type="text/javascript" src="../js/accordion.js"></script>
+
+	<div class="uk-accordion" data-uk-accordion>
+		<% @actas.group(:anio).each do |a| %>
+			<h3 class="uk-accordion-title"><%= construir_encabezado("bt-flechita.png", "bt-flechita-abajo.png", a.anio) %></h3>
+			<% anio = a.anio %>
+			<div class="uk-accordion-content">
+				<% @actas.where(:anio => anio).each do |d| %>
+					<p style="display: list-item"><a href=<%= d.archivo.url %>><%= d.nombre %></a></p>
+				<% end %>
+			</div>
+		<% end %>
+	</div>
+</div>
