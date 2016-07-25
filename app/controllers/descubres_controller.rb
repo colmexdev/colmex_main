@@ -25,7 +25,6 @@ class DescubresController < ApplicationController
   # POST /descubres.json
   def create
     @descubre = Descubre.new(descubre_params)
-    @descubre.tags = @descubre.tags.to_s.downcase.split(',')
     respond_to do |format|
       if @descubre.save
         format.html { redirect_to @descubre, notice: 'Nueva entrada de Descubre creada exitosamente.' }
@@ -70,6 +69,7 @@ class DescubresController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def descubre_params
+      params[:tags] = params[:tags].to_s.downcase.split(",")
       params.require(:descubre).permit(:titulo, :liga, :contenido, :fecha_publicacion, :fecha_limite_pub, :imagen, :tags)
     end
 end

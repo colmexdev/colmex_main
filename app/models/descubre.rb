@@ -1,7 +1,7 @@
 class Descubre < ActiveRecord::Base
 
-  before_create :acomodar_tags
   before_save :acomodar_tags
+  beore_update :acomodar_tags
 
   serialize :tags, Array
 
@@ -21,6 +21,6 @@ class Descubre < ActiveRecord::Base
   protected
 
   def acomodar_tags
-    self.tags = self.tags.downcase.split(",")
+    self.tags = self.tags.to_s.downcase.split(",")
   end
 end
