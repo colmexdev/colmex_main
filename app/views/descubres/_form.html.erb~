@@ -39,6 +39,11 @@
     <%= f.label :tags %><br>
     <%= f.text_area :tags %>
   </div>
+  <script type="text/javascript">
+    $(document).ready(function(){ 
+      $("#descubre_tags").text = "";
+    });
+  </script>
   <div class="actions">
     <%= f.submit %>
   </div>
