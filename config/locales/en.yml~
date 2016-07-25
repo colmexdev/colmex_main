@@ -6,7 +6,7 @@ en:
     b1: 
       texto: "General information"
       opciones:
-        op1: "General information"
+        op1: "Institutional directory"
         op2: "Authorities"
         op3: "History"
         op4: "Institutional documents"

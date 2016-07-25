@@ -4,9 +4,9 @@ sp:
     intranet: "Intranet"
   botones:
     b1: 
-      texto: "Sobre el Colegio"
+      texto: "Información general"
       opciones:
-        op1: "Información general"
+        op1: "Directorio institucional"
         op2: "Autoridades"
         op3: "Historia"
         op4: "Documentación institucional"

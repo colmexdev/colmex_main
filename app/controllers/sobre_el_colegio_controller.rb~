@@ -6,6 +6,10 @@ class SobreElColegioController < ApplicationController
     @categorias = Categorium.all
   end
 
+  def documentacion_institucional
+
+  end
+
   def historia
   end
 

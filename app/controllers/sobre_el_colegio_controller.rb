@@ -10,6 +10,24 @@ class SobreElColegioController < ApplicationController
 
   end
 
+  def actas
+    respond_to do |format|
+      format.js
+    end
+  end
+
+  def informes
+    respond_to do |format|
+      format.js
+    end
+  end
+
+  def estatutos
+    respond_to do |format|
+      format.js
+    end
+  end
+
   def historia
   end
 

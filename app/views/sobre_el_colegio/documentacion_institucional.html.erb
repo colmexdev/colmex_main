@@ -2,6 +2,19 @@
 
 <div class="container-fluid" id="resto-cuerpo">
 	<div class="cuerpo">
-
+		<div class="centro medio padded">
+			<span class="titulo-grande"><%= t('botones.b1.opciones.op4') %></span><br>
+			<ul class="lista-links unpadded">
+				<li><%= link_to(image_tag('bt-flechita.png', :class => "leave_img") + image_tag("bt-flechita-hover.png", :class => "hover_img") + t('sobre.documentacion.op1'), actas_path, :remote => true, :class => "link-sobre", :id => "actas-link") %></li>
+				<li><%= link_to image_tag('bt-flechita.png', :class => "leave_img") + image_tag("bt-flechita-hover.png", :class => "hover_img") + t('sobre.documentacion.op2'), informes_path, :remote => true, :class => "link-sobre", :id => "informes-link" %></li>
+				<li><%= link_to image_tag('bt-flechita.png', :class => "leave_img") + image_tag("bt-flechita-hover.png", :class => "hover_img") + t('sobre.documentacion.op3'), estatutos_path, :remote => true, :class => "link-sobre", :id => "estatutos-link" %></li>
+			</ul>
+		</div>
+		<div class="centro medio">
+			<span class="titulo-grande morado" id="titulo-render"><%= t('sobre.documentacion.op1') %></span>
+			<div id="documentacion-render">
+				<%= render "sobre_el_colegio/actas" %>
+			</div>
+		</div>
 	</div>
 <%= render 'principal/footer' %>
