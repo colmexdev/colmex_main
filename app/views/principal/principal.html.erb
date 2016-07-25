@@ -31,6 +31,10 @@
 					<%= javascript_tag do %>
 						ancho = Math.max(document.documentElement.clientWidth, window.innerWidth || document.body.ClientWidth || 0);
 
+            if(gon.ev_tiny == ""){
+							$("#div_eventos").css("height","0");
+						}
+
 						if(ancho < 600){ document.getElementById("render_eventos").innerHTML = gon.ev_tiny; }
 						else if(ancho < 900){ document.getElementById("render_eventos").innerHTML = gon.ev_small; }
 						else{ document.getElementById("render_eventos").innerHTML = gon.ev_big;}
