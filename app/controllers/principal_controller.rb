@@ -1,7 +1,7 @@
 class PrincipalController < ApplicationController
   def principal
     begin
-      cliente = TinyTds::Client.new username: 'agendaPRED', password: '@g3NDa#', host: '172.16.40.211', port: '49767'
+      cliente = TinyTds::Client.new username: 'agendaPRED', password: '@g3NDa#', host: '172.16.40.169', port: '49435'
       @resultado = cliente.execute("USE Agenda")
       @resultado.do
       @resultado = cliente.execute("SELECT * from dbo.vw_DatosAgenda")

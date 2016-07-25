@@ -850,6 +850,8 @@ ul.ul-nav { display: table; float: left !important;
 		margin: 20px auto;
 		overflow: auto;
 
+		::-webkit-scrollbar { display: none; }
+
 		.frame-descubre{
 			float: left;
 			display: inline-block;
