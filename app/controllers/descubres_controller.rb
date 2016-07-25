@@ -1,6 +1,6 @@
 class DescubresController < ApplicationController
   before_action :set_descubre, only: [:show, :edit, :update, :destroy]
-  before_action :acomoda_tags, only: [:create, :update]
+  #before_action :acomoda_tags, only: [:create, :update]
 
   # GET /descubres
   # GET /descubres.json
@@ -25,6 +25,7 @@ class DescubresController < ApplicationController
   # POST /descubres
   # POST /descubres.json
   def create
+    params[:descubre][:tags] = params[:descubre][:tags].to_str.downcase.split(",")
     @descubre = Descubre.new(descubre_params)
     respond_to do |format|
       if @descubre.save
@@ -40,6 +41,7 @@ class DescubresController < ApplicationController
   # PATCH/PUT /descubres/1
   # PATCH/PUT /descubres/1.json
   def update
+    params[:descubre][:tags] = params[:descubre][:tags].to_str.downcase.split(",")
     respond_to do |format|
       if @descubre.update(descubre_params)
         format.html { redirect_to @descubre, notice: 'Entrada de Descubre editada con éxito.' }
@@ -72,9 +74,7 @@ class DescubresController < ApplicationController
     end
 
     def convertir_array(hash)
-      logger.debug "#{hash[:descubre][:tags]}"
       hash[:descubre][:tags] = hash[:descubre][:tags].to_str.downcase.split(",")
-      logger.debug "#{hash[:descubre][:tags]}"
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
