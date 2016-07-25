@@ -29,7 +29,7 @@
 
 <p>
   <strong>Tags:</strong>
-  <%= @descubre.tags.downcase.split(',') %>
+  <%= @descubre.tags.downcase.split(',').presence || "<Sin tags>" %>
 </p>
 
 <%= link_to 'Edit', edit_descubre_path(@descubre) %> |
