@@ -25,7 +25,7 @@ class DescubresController < ApplicationController
   # POST /descubres.json
   def create
     @descubre = Descubre.new(descubre_params)
-    @descubre.tags = @descubre.tags.downcase.split(',')
+    @descubre.tags = @descubre.tags.to_s.downcase.split(',')
     respond_to do |format|
       if @descubre.save
         format.html { redirect_to @descubre, notice: 'Nueva entrada de Descubre creada exitosamente.' }
@@ -40,7 +40,7 @@ class DescubresController < ApplicationController
   # PATCH/PUT /descubres/1
   # PATCH/PUT /descubres/1.json
   def update
-    @descubre.tags = @descubre.tags.downcase.split(',')
+    @descubre.tags = @descubre.tags.to_s.downcase.split(',')
     respond_to do |format|
       if @descubre.update(descubre_params)
         format.html { redirect_to @descubre, notice: 'Entrada de Descubre editada con éxito.' }
