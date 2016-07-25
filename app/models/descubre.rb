@@ -1,7 +1,5 @@
 class Descubre < ActiveRecord::Base
 
-  #serialize :tags, Array
-
   has_attached_file :imagen, :styles => {},
                     :url => "/assets/descubre/:id/:style/:basename.:extension",
                     :path => ":rails_root/public/assets/descubre/:id/:style/:basename.:extension",

@@ -32,7 +32,7 @@
   <%= @descubre.tags.downcase.split(',').presence || "<Sin tags>" %>
 </p>
 
-<%= link_to 'Edit', edit_descubre_path(@descubre) %> |
-<%= link_to 'Back', descubres_path %>
+<%= link_to 'Modificar', edit_descubre_path(@descubre) %> |
+<%= link_to 'Regresar', descubres_path %>
 
 <% end %>
