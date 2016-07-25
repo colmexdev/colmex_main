@@ -842,11 +842,13 @@ ul.ul-nav { display: table; float: left !important;
 #div_descubre{
 	height: auto;
 	background-color: #fff;
+	border: solid 1px #CCCCC;
 
   .wrapper-descubre{
 		width: 85%;
-		height: 85%;
+		height: auto;
 		margin: 20px auto;
+		overflow: auto;
 
 		.frame-descubre{
 			float: left;
