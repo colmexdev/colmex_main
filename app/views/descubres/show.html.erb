@@ -29,7 +29,7 @@
 
 <p>
   <strong>Tags:</strong>
-  <%= @descubre.tags %>
+  <%= @descubre.tags.downcase.split(',') %>
 </p>
 
 <%= link_to 'Edit', edit_descubre_path(@descubre) %> |

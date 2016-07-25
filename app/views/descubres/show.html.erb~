@@ -27,6 +27,11 @@
   <%= @descubre.fecha_limite_pub %>
 </p>
 
+<p>
+  <strong>Tags:</strong>
+  <%= @descubre.tags %>
+</p>
+
 <%= link_to 'Edit', edit_descubre_path(@descubre) %> |
 <%= link_to 'Back', descubres_path %>
 
