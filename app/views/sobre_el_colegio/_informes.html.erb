@@ -7,7 +7,7 @@
 			<% anio = i.anio %>
 			<div class="uk-accordion-content">
 				<% @informes.where(:anio => anio).each do |d| %>
-					<p style="display: list-item"><a href=<%= d.archivo.url %>><%= d.nombre %></a></p>
+					<p class="lista-docs"><a href=<%= d.archivo.url %>><%= d.nombre %></a></p>
 				<% end %>
 			</div>
 		<% end %>

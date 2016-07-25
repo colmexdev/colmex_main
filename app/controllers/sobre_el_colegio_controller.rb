@@ -7,9 +7,7 @@ class SobreElColegioController < ApplicationController
   end
 
   def documentacion_institucional
-    @estatutos = Documento.where(:tipo => "Estatuto")
     @actas = Documento.where(:tipo => "Junta")
-    @informes = Documento.where(:tipo => "Informe")
   end
 
   def actas

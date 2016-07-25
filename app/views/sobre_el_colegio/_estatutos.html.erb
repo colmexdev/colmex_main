@@ -1,7 +1,6 @@
 
 <% @estatutos.each do |e| %>
 	<div class="uk-accordion-content">
-			<p style="display: list-item"><a href=<%= e.archivo.url %>><%= e.nombre %></a></p>
-		<% end %>
+		<p class="lista-docs"><a href=<%= e.archivo.url %>><%= e.nombre %></a></p>
 	</div>
 <% end %>
