@@ -3,7 +3,9 @@
 <div class="container-fluid" id="resto-cuerpo">
 
 	<div id="cuerpo">
-
+		<% @resultados.each do |r| %>
+			<%= r %>
+		<% end %>
 	</div>
 
 <%= render 'principal/footer' %>

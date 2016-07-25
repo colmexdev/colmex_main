@@ -14,6 +14,11 @@ class PrincipalController < ApplicationController
     @frase = Frase.order("RAND()").first
   end
 
+  def resultados_busqueda
+    @descubre = Descubre.where("tags LIKE ?", "algo")
+    @cursos = Curso.where("tags LIKE ?", "algo")
+  end
+
   def principios_eticos
  
   end
