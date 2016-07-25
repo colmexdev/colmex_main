@@ -68,7 +68,11 @@ class DescubresController < ApplicationController
     end
 
     def acomoda_tags
-      params[:tags] = params[:tags].to_s.downcase.split(",")
+      convertir_array(params)
+    end
+
+    def convertir_array(hash)
+      hash[:tags] = hash[:tags].to_s.downcase.split(",")
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
