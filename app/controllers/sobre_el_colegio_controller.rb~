@@ -18,12 +18,14 @@ class SobreElColegioController < ApplicationController
   end
 
   def informes
+    @informes = Documento.where(:tipo => "Informe")
     respond_to do |format|
       format.js
     end
   end
 
   def estatutos
+    @estatutos = Documento.where(:tipo => "Estatuto")
     respond_to do |format|
       format.js
     end
