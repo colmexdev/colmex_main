@@ -1,6 +1,6 @@
 class DescubresController < ApplicationController
   before_action :set_descubre, only: [:show, :edit, :update, :destroy]
-  before_action :acomoda_tags, only: [:create, :upadate]
+  before_action :acomoda_tags, only: [:create, :update]
 
   # GET /descubres
   # GET /descubres.json
@@ -72,7 +72,7 @@ class DescubresController < ApplicationController
     end
 
     def convertir_array(hash)
-      hash[:tags] = hash[:tags].to_s.downcase.split(",")
+      hash[:descubre][:tags] = hash[:descubre][:tags].to_s.downcase.split(",")
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
