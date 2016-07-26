@@ -427,7 +427,7 @@ ul.ul-nav { display: table; float: left !important;
 #div_slider{
 	text-align: center;
 	max-height: 470px;
-	min-height:120px;
+	min-height: 120px;
 
 	#myCarousel{
 	    	position: relative;
