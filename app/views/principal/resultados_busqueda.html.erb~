@@ -4,7 +4,12 @@
 
 	<div id="cuerpo">
 		<% @resultados.each do |r| %>
-			<%= r %>
+			<% if r.is_a?(Curso) %>
+				<%= "Curso: " + r.titulo %>
+			<% elsif r.is_a?(Descubre) %>
+				<%= "Descubre: " + r.titulo %>
+			<% end %>
+		<br>
 		<% end %>
 	</div>
 
