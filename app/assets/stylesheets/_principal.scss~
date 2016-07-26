@@ -73,8 +73,20 @@ html, body{ height: 100%; }
 	#resto-cuerpo { padding-top: 270px; }
 }
 
-@media only screen and (min-width: 329px) and (max-width: 542px){
+@media only screen and (min-width: 328px) and (max-width: 542px){
 	#resto-cuerpo { padding-top: 282px; }
+}
+
+@media only screen and (min-width: 287px) and (max-width: 328px){
+	#resto-cuerpo { padding-top: 337px; }
+}
+
+@media only screen and (min-width: 274px) and (max-width: 287px){
+	#resto-cuerpo { padding-top: 371px; }
+}
+
+@media only screen and (min-width: 174px) and (max-width: 274px){
+	#resto-cuerpo { padding-top: 421px; }
 }
 
 #contenedor_nav{
@@ -426,8 +438,7 @@ ul.ul-nav { display: table; float: left !important;
 //Clases que afectan al slider
 #div_slider{
 	text-align: center;
-	min-height: 120px;
-	max-height: 520px;
+	max-height: 570px;
 
 	#myCarousel{
 	    	position: relative;

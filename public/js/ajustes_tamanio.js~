@@ -2,7 +2,7 @@ ancho = Math.max(document.documentElement.clientWidth, window.innerWidth || docu
 
 					$(document).ready(function(){
 						var ancho_slide = $("#div_slider").width();
-						var alto_slide = (ancho_slide*(2/5) < 200 ? 200 : ancho_slide*(2/5));
+						var alto_slide = (ancho_slide*(17/40) < 220 ? 220 : ancho_slide*(17/40));
 						var cw = $('.frame-descubre').width();
 
 						if(gon.ev_tiny == ""){
@@ -21,7 +21,7 @@ ancho = Math.max(document.documentElement.clientWidth, window.innerWidth || docu
 					window.onresize = function(){
 						var cw = $('.frame-descubre').width();
 						var ancho_slide = $("#div_slider").width();
-						var alto_slide = (ancho_slide*(2/5) < 200 ? 200 : ancho_slide*(2/5));
+						var alto_slide = (ancho_slide*(17/40) < 220 ? 220 : ancho_slide*(17/40));
 						var ancho_act = Math.max(document.documentElement.clientWidth, window.innerWidth || document.body.ClientWidth || 0);
 
 						$('#div_slider').css({'height':alto_slide+'px'});
