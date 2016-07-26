@@ -95,7 +95,6 @@ html, body{ height: 100%; }
 
 #contenedor_nav{
 	padding: 0;
-	height: 40px;
 }
 
 .navbar { border-radius: 0; margin-bottom: 0; }
@@ -103,8 +102,6 @@ html, body{ height: 100%; }
 .navbar-collapse { margin-right: 0; margin-left: 0;}
 
 #barra_nav{
-
-	height: 40px;
 	background-color: #E6E6E6;
 	border-radius: 0;
 

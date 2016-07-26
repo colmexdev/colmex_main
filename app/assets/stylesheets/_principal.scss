@@ -155,8 +155,6 @@ html, body{ height: 100%; }
 		padding-top: 10px;
 
 		>a { 
-			width: 100%;
-			@include centrado;
 
 			img{
 				width: 25px;
@@ -170,8 +168,6 @@ html, body{ height: 100%; }
 		padding-top: 10px;
 
 		>a{
-			width:100%;
-			@include centrado;
 
 			img{
 				width: 20px;
