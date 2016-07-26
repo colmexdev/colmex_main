@@ -440,9 +440,9 @@ ul.ul-nav { display: table; float: left !important;
 #div_slider{
 	text-align: center;
 	height: auto;
-	@include proporcional(16 9);
 
 	#myCarousel{
+				@include proporcional(16 9);
 	    	position: relative;
 	    	text-align: center;
 	    	margin: 0 auto;
