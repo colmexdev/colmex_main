@@ -10,7 +10,7 @@
 
 					$(document).ready(function(){
 						var ancho_slide = $("#div_slider").width();
-						var alto_slide = ancho_slide*(900/16);
+						var alto_slide = ancho_slide*(9/16);
 						var cw = $('.frame-descubre').width();
 
 						if(gon.ev_tiny == ""){
@@ -29,7 +29,7 @@
 					window.onresize = function(){
 						var cw = $('.frame-descubre').width();
 						var ancho_slide = $("#div_slider").width();
-						var alto_slide = ancho_slide*(900/16);
+						var alto_slide = ancho_slide*(9/16);
 						var ancho_act = Math.max(document.documentElement.clientWidth, window.innerWidth || document.body.ClientWidth || 0);
 
 						$('#div_slider').css({'height':alto_slide+'px'});

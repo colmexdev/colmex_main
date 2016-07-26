@@ -73,8 +73,6 @@
 				<!-- Wrapper for slides -->
 		    <div class="carousel-inner" id="render_eventos" role="listbox" >
 
-					<!-- <script type="text/javascript" src="../js/ajustar_eventos.js"></script> -->
-
 		    </div>
 
 				<!-- Left and right controls -->
@@ -128,7 +126,6 @@
 				<span class="titulo-grande morado">DESCUBRE</span>
 			</div>
 			<div class="wrapper-descubre">
-				<!-- <script tye="text/javascript" src="../js/ajustar_descubre.js"></script> -->
 				<%= construir_descubre(@descubre) %>
 			</div>
 
