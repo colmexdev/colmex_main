@@ -15,6 +15,19 @@
 	-o-transform: translate(-50%,-50%);
 }
 
+@mixin proporcional($proporcion: 1 1) {
+  @if length($proporcion) < 2 or length($proporcion) > 2 {
+    @warn "$La proporción debe ser de dos valores.";
+  }
+
+  $width: 100%;
+  $height: percentage(nth($proporcion, 2) / nth($proporcion, 1));
+  
+  width: $width;
+  height: 0;
+  padding-bottom: $height;
+}
+
 //Estilos de pagina
 
 * {
@@ -429,6 +442,7 @@ ul.ul-nav { display: table; float: left !important;
 	height: 550px;
 
 	#myCarousel{
+				@include proporcional(16 9);
 	    	position: relative;
 	    	text-align: center;
 	    	margin: 0 auto;
@@ -492,13 +506,13 @@ ul.ul-nav { display: table; float: left !important;
 	}
 }
 
-@media only screen and (min-width: 560px) and (max-width: 1024px){
+/*@media only screen and (min-width: 560px) and (max-width: 1024px){
 	#div_slider{ height: 400px; } 
 }
 
 @media only screen and (min-width: 0px) and (max-width: 560px){
 	#div_slider{ height: 300px; } 
-}
+}*/
 
 //Clases que afectan la sección de eventos
 #div_eventos{

@@ -844,6 +844,11 @@ ul.ul-nav { display: table; float: left !important;
 	background-color: #fff;
 	border: solid 1px #CCCCCC;
 
+	.titulo-descubre{
+		width: 85%;
+		margin: 20px auto 0 auto;
+	}
+
   .wrapper-descubre{
 		width: 85%;
 		height: auto;
