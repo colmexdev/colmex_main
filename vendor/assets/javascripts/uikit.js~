@@ -3193,6 +3193,7 @@
                     }
                 });
                 $html.css("margin-top","");
+								e.stopImmediatePropagation();
                 Offcanvas.hide();
             });
 
