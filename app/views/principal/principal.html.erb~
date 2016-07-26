@@ -80,7 +80,7 @@
 	<div class="row"> <!-- Fila para "Descubre" -->
 		<div class="col-md-12" id="div_descubre"> <!-- Columnas para "Descubre" -->
 			<div class="titulo-descubre">
-				<span class="titulo-grande morado">DESCUBRE</span>
+				<span class="titulo-grande morado"><%= t('descubre') %></span>
 			</div>
 			<div class="wrapper-descubre">
 				<%= construir_descubre(@descubre) %>
