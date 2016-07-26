@@ -946,9 +946,7 @@ ul.ul-nav { display: table; float: left !important;
 }
 
 #wrapper-donacion{
-	margin: 0 auto;
-	width: 100%;
-	max-width: 950px;
+	margin: 0 6%;
 	text-align: center;
 }
 
