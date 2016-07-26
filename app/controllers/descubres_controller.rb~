@@ -68,6 +68,6 @@ class DescubresController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def descubre_params
-      params.require(:descubre).permit(:titulo, :liga, :contenido, :fecha_publicacion, :fecha_limite_pub, :imagen, :tags)
+      params.require(:descubre).permit(:titulo, :liga, :fecha_publicacion, :fecha_limite_pub, :imagen, :tags)
     end
 end
