@@ -18,7 +18,7 @@ class PrincipalController < ApplicationController
     @resultados = []
     condicion_limpia = quitar_acentos(params[:condicion]).downcase
     Descubre.all.each do |d|
-      if (quitar_acentos(d.titulo.to_s.downcase).include?(condicion_limpia) or quitar_acentos(d.tags.to_s.downcase).gsub(/ *, */, " ").include?(condicion_limpia)) and not @resultados.include?(d)
+      if (quitar_acentos(d.titulo.to_s.downcase).include?(condicion_limpia) or quitar_acentos(d.contenido.to_s.downcase).include?(condicion_limpia) or quitar_acentos(d.tags.to_s.downcase).gsub(/ *, */, " ").include?(condicion_limpia)) and not @resultados.include?(d)
         @resultados << d
       end
     end
