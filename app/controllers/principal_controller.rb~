@@ -17,15 +17,19 @@ class PrincipalController < ApplicationController
   def resultados_busqueda
     @resultados = []
     condicion_limpia = quitar_acentos(params[:condicion]).downcase
-    descubres = Descubre.where("tags IS NOT NULL")
-    descubres.each do |d|
-      if quitar_acentos(d.tags).downcase.split(/ *, */).include?(condicion_limpia)
+    Descubre.where("titulo LIKE ? OR contenido LIKE ?", condicion_limpia, condicion_limpia).each do |d|
+      @resultados << d
+    end
+    Descubre.where("tags IS NOT NULL").each do |d|
+      if condicion_limpia.match(quitar_acentos(d.tags).downcase.gsub(/ *, */, " "))
         @resultados << d
       end
     end
-    cursos = Curso.where("tags IS NOT NULL")
-    cursos.each do |c|
-      if quitar_acentos(c.tags).downcase.split(/ *, */).include?(condicion_limpia)
+    Curso.where("titulo LIKE ? OR descripcion LIKE ? OR programa LIKE ?", condicion_limpia, condicion_limpia, condicion_limpia).each do |c|
+      @resultados << c
+    end
+    Curso.where("tags IS NOT NULL").each do |c|
+      if condicion_limpia.match(quitar_acentos(c.tags).downcase.gsub(/ *, */, " ")) and not @resultados.include?(c)
         @resultados << c
       end
     end
