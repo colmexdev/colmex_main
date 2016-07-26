@@ -65,7 +65,7 @@ html, body{ height: 100%; }
 
 #resto-cuerpo { padding-top: 286px; min-height: 100%; padding-bottom: 300px; }
 
-@media only screen and (min-width: 584px) and (max-width: 1070px){
+@media only screen and (min-width: 584px) and (max-width: 1160px){
 	#resto-cuerpo { padding-top: 214px; }
 }
 
@@ -436,7 +436,7 @@ ul.ul-nav { display: table; float: left !important;
 }
 
 @media only screen and (min-width: 0px) and (max-width: 1160px){
-	#div_menu{ display: none; } 
+	#div_menu{ display: none; height: 0; } 
 }
 
 //Clases que afectan al slider
