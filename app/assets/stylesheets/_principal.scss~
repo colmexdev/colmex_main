@@ -1104,6 +1104,7 @@ ul.ul-nav { display: table; float: left !important;
 
 	#fundacion-colmex { 
 		padding-left: 35px;
+		height: 380px;
 
 		#div-img-fundacion { 
 			max-width: 233px; 
