@@ -63,7 +63,7 @@ html, body{ height: 100%; }
 	z-index: 30;
 }
 
-#resto-cuerpo { padding-top: 286px; min-height: 100%; padding-bottom: 300px; }
+#resto-cuerpo { padding-top: 285px; min-height: 100%; padding-bottom: 300px; }
 
 @media only screen and (min-width: 584px) and (max-width: 1160px){
 	#resto-cuerpo { padding-top: 214px; }
@@ -95,6 +95,7 @@ html, body{ height: 100%; }
 
 #contenedor_nav{
 	padding: 0;
+	height: 40px;
 }
 
 .navbar { border-radius: 0; margin-bottom: 0; }
@@ -103,6 +104,7 @@ html, body{ height: 100%; }
 
 #barra_nav{
 
+	height: 40px;
 	background-color: #E6E6E6;
 	border-radius: 0;
 
@@ -113,6 +115,7 @@ html, body{ height: 100%; }
 		font-size: 15px;
 		text-align: center;
 		color: #7F7F7F;
+		position: relative;
 	}	
 
 	.idioma{
@@ -154,9 +157,14 @@ html, body{ height: 100%; }
 		width: 210px;
 		padding-top: 10px;
 
-		img{
-			width: 25px;
-			margin-right: 5px;
+		>a { 
+			width: 100%;
+			@include centrado;
+
+			img{
+				width: 25px;
+				margin-right: 5px;
+			}
 		}
 	}
 
@@ -164,9 +172,14 @@ html, body{ height: 100%; }
 		width: 130px;
 		padding-top: 10px;
 
-		img{
-			width: 20px;
-			margin-right: 5px;
+		>a{
+			width:100%;
+			@include centrado;
+
+			img{
+				width: 20px;
+				margin-right: 5px;
+			}
 		}
 	}
 
