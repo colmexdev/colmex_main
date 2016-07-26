@@ -439,7 +439,7 @@ ul.ul-nav { display: table; float: left !important;
 //Clases que afectan al slider
 #div_slider{
 	text-align: center;
-	height: 550px;
+	height: auto;
 
 	#myCarousel{
 				@include proporcional(16 9);
