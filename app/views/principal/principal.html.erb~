@@ -7,6 +7,7 @@
 					$(document).ready(function(){
 						var ancho = $("#div_slider").width();
 						var alto = ancho/1.77;
+						
 						$('#div_slider').css({'height':alto+'px'});
 					});
 
@@ -14,7 +15,7 @@
 						var ancho = $("#div_slider").width();
 						var alto = ancho/1.77;
 						$('#div_slider').css({'height':alto+'px'});
-					});
+					}
 				</script>
 			<div class="col-md-12" id="div_slider"> <!-- Columnas para slider -->
 				

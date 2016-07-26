@@ -3,11 +3,12 @@
 <div class="container-fluid" id="resto-cuerpo">
   <div id="cuerpo">
 		<div class="row"> <!-- Fila para slider -->
+				
+			<div class="col-md-12" id="div_slider"> <!-- Columnas para slider -->
 				<script type="text/javascript">
 					$(document).ready(function(){
 						var ancho = $("#div_slider").width();
 						var alto = ancho/1.77;
-						
 						$('#div_slider').css({'height':alto+'px'});
 					});
 
@@ -17,8 +18,6 @@
 						$('#div_slider').css({'height':alto+'px'});
 					}
 				</script>
-			<div class="col-md-12" id="div_slider"> <!-- Columnas para slider -->
-				
 				<div id="myCarousel" class="carousel slide" data-ride="carousel">
 
 			    <%= construye_slider(@sliders) %>
