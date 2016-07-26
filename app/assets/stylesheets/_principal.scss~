@@ -862,7 +862,7 @@ ul.ul-nav { display: table; float: left !important;
 
 	.titulo-descubre{
 		width: 85%;
-		margin: 40px auto 0 auto;
+		margin: 40px auto 10px auto;
 	}
 
   .wrapper-descubre{
