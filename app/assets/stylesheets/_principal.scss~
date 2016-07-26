@@ -89,6 +89,10 @@ html, body{ height: 100%; }
 	#resto-cuerpo { padding-top: 421px; }
 }
 
+@media only screen and (max-width: 174px) and (min-width: 0px){
+	#resto-cuerpo { padding-top: 472px; }
+}
+
 #contenedor_nav{
 	padding: 0;
 }
@@ -858,7 +862,7 @@ ul.ul-nav { display: table; float: left !important;
 
 	.titulo-descubre{
 		width: 85%;
-		margin: 20px auto 0 auto;
+		margin: 40px auto 0 auto;
 	}
 
   .wrapper-descubre{

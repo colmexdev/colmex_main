@@ -63,6 +63,10 @@ sp:
       presidencia: "Presidencia"
       admin: "Administración"
       operativas: "Áreas operativas"
+    documentacion:
+      op1: "Actas de la Junta de Gobierno"
+      op2: "Informes"
+      op3: "Estatutos"
   activerecord:
     errors:
       messages:

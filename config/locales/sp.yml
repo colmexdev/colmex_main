@@ -43,6 +43,7 @@ sp:
     texto: "Suscríbete a nuestra Agenda"
     boton: "Suscribirse"
     placeholder: "tucorreo@dominio.com"
+  descubre: "DESCUBRE"
   footer:
     liga1: "Principios Éticos"
     liga2: "Aviso de Privacidad"

@@ -66,3 +66,7 @@ en:
       presidencia: "Presidency"
       admin: "Administration"
       operativas: "Operative areas"
+    documentacion:
+      op1: "Records from Government Joint"
+      op2: "Reports"
+      op3: "Statutes"
