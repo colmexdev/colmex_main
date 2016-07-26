@@ -28,6 +28,7 @@
 			    <form class="navbar-form navbar-left" method="get" action="/principal/resultados_busqueda">
 						<div role="search">
 						<%= hidden_field_tag :locale, I18n.locale || default_locale %>
+						<%= hidden_field_tag :algo, controller_name + "#" + action_name %>
 						<div class="form-group">
 							<input type="text" class="form-control" placeholder="" name="condicion">
 						</div>
