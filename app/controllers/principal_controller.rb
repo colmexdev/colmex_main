@@ -18,12 +18,12 @@ class PrincipalController < ApplicationController
     @resultados = []
     condicion_limpia = quitar_acentos(params[:condicion]).downcase
     Descubre.all.each do |d|
-      if (quitar_acentos(d.titulo.downcase).include?(condicion_limpia) or quitar_acentos(d.tags.downcase).gsub(/ *, */, " ").include?(condicion_limpia)) and not @resultados.include?(d)
+      if (quitar_acentos(d.titulo.to_s.downcase).include?(condicion_limpia) or quitar_acentos(d.tags.to_s.downcase).gsub(/ *, */, " ").include?(condicion_limpia)) and not @resultados.include?(d)
         @resultados << d
       end
     end
     Curso.all.each do |c|
-      if (quitar_acentos(c.titulo.downcase).include?(condicion_limpia) or quitar_acentos(c.descripcion.downcase).include?(condicion_limpia) or quitar_acentos(c.programa.downcase).include?(condicion_limpia) or (quitar_acentos(c.programa).downcase == "curso" and quitar_acentos(c.tipo_curso).downcase.include?(condicion_limpia)) or quitar_acentos(c.tags.downcase).gsub(/ *, */, " ").include?(condicion_limpia)) and not @resultados.include?(c)
+      if (quitar_acentos(c.titulo.to_s.downcase).include?(condicion_limpia) or quitar_acentos(c.descripcion.to_s.downcase).include?(condicion_limpia) or quitar_acentos(c.programa.to_s.downcase).include?(condicion_limpia) or (quitar_acentos(c.programa.to_s).downcase == "curso" and quitar_acentos(c.tipo_curso.to_s).downcase.include?(condicion_limpia)) or quitar_acentos(c.tags.to_s.downcase).gsub(/ *, */, " ").include?(condicion_limpia)) and not @resultados.include?(c)
         @resultados << c
       end
     end
