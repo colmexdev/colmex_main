@@ -30,16 +30,16 @@
 
 	<div class="col-xs-12 col-md-12" id="redes_footer"> <!-- Columnas para redes sociales en footer-->
 			<ul class="botones_footer">
-				<%= link_to image_tag("fb-bco.png", :class => "img_net  uk-animation-hover uk-animation-shake"), "
+				<%= link_to image_tag("fb-bco.png", :class => "img_net"), "
 https://www.facebook.com/elcolmex/" %>
-				<%= link_to image_tag("twitter-bco.png", :class => "img_net  uk-animation-hover uk-animation-shake"), "
+				<%= link_to image_tag("twitter-bco.png", :class => "img_net"), "
 https://twitter.com/ELCOLMEX" %>
-				<%= link_to image_tag("youtube-bco.png", :class => "img_net  uk-animation-hover uk-animation-shake"), "
+				<%= link_to image_tag("youtube-bco.png", :class => "img_net"), "
 https://www.youtube.com/c/elcolegiodemexicociudaddemexico" %>
-				<%= link_to image_tag("itunes-bco.png", :class => "img_net  uk-animation-hover uk-animation-shake"), "https://itunes.apple.com/mx/institution/el-colegio-de-mexico/id443160573?l=en" %>
-				<%= link_to image_tag("linkedin-bco.png", :class => "img_net  uk-animation-hover uk-animation-shake"), "https://www.linkedin.com/edu/el-colegio-de-m%C3%A9xico-14986" %>
-				<%= link_to image_tag("google-bco.png", :class => "img_net uk-animation-hover uk-animation-shake"), "https://plus.google.com/+ColmexMx1/posts" %>
-				<%= link_to image_tag("instagram-bco.png", :class => "img_net  uk-animation-hover uk-animation-shake"), "https://www.instagram.com/elcolmex/" %>
+				<%= link_to image_tag("itunes-bco.png", :class => "img_net"), "https://itunes.apple.com/mx/institution/el-colegio-de-mexico/id443160573?l=en" %>
+				<%= link_to image_tag("linkedin-bco.png", :class => "img_net"), "https://www.linkedin.com/edu/el-colegio-de-m%C3%A9xico-14986" %>
+				<%= link_to image_tag("google-bco.png", :class => "img_net"), "https://plus.google.com/+ColmexMx1/posts" %>
+				<%= link_to image_tag("instagram-bco.png", :class => "img_net"), "https://www.instagram.com/elcolmex/" %>
 				
 			</ul>
 		</div> <!-- Cierre de columnas para redes sociales en footer -->
