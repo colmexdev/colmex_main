@@ -983,11 +983,11 @@ ul.ul-nav { display: table; float: left !important;
 		}
 
 		@media only screen and (min-width: 0px) and (max-width: 390px){
-			p { padding-top: 27px; font-size: 14px; }
+			p { padding-top: 27px; font-size: 13px; }
 		}
 		
 		@media only screen and (min-width: 390px) and (max-width: 520px){
-			p { padding-top: 27px; font-size: 15px; }
+			p { padding-top: 27px; font-size: 14px; }
 		}
 
 		@media only screen and (min-width: 520px) and (max-width: 570px){
