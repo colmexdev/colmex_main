@@ -1154,7 +1154,7 @@ ul.ul-nav { display: table; float: left !important;
 				position: relative;
 				text-align: left;
 				top: 40px;
-				right: 55px;
+				right: 75px;
 		}
 		blockquote::after {
 				display: block;
@@ -1164,7 +1164,7 @@ ul.ul-nav { display: table; float: left !important;
 				position: relative;
 				text-align:right;
 				bottom: 50px;
-				left: 40px;
+				left: 55px;
 		}
 	//}
 }
