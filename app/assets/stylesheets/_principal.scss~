@@ -519,7 +519,7 @@ ul.ul-nav { display: table; float: left !important;
 			width: 60px;
 			color: #993366;
 			text-shadow: none;
-			color: rgb(132,131,131);
+			background-color: rgb(132,131,131);
 		}
 
 		.carousel-inner{

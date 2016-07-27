@@ -515,11 +515,13 @@ ul.ul-nav { display: table; float: left !important;
 		padding: 0;
 
 		.carousel-control.right, .carousel-control.left{
-			opacity: 0.3;
+			opacity: 0.9;
 			width: 60px;
 			color: #993366;
 			text-shadow: none;
-			background-color: rgb(132,131,131);
+			background-color: rgba(131,131,131,0.3);
+			background-image: none;
+			
 		}
 
 		.carousel-inner{
