@@ -1115,7 +1115,7 @@ ul.ul-nav { display: table; float: left !important;
 }
 
 @media only screen and (min-width: 0px) and (max-width: 997px){
-	#video-colmex { height: 340px; width: auto; >a img { height: 100%; } }
+	#video-colmex { height: 340px; padding-bottom: 0; width: auto; >a img { height: 100%; } }
 	#fundacion-colmex { height: 340px; padding-bottom: 0; }
 }
 
