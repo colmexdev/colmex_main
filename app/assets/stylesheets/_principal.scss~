@@ -1139,10 +1139,11 @@ ul.ul-nav { display: table; float: left !important;
 		/* Frase */
 		blockquote {
 				padding: 10px 20px;
-				margin: 0 0 20px;
+				margin: 0 auto;
 				font-size: 25px;
 				border-left: none;
 				width: 75%;
+				line-height: 1.3em;
 		}
 		blockquote::before {
 				display: block;
@@ -1159,7 +1160,7 @@ ul.ul-nav { display: table; float: left !important;
 				font-family: Georgia, New Times Roman, serif;
 				font-size: 120px;
 				position: relative;
-				text-align:right
+				text-align:right;
 		}
 	//}
 }
