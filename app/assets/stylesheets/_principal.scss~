@@ -1131,7 +1131,7 @@ ul.ul-nav { display: table; float: left !important;
 	text-align: center;
 
 
-	>p{
+	//>p{
 		/*margin: 30px auto;
 		width: 60%;
 		min-width: 300px;
@@ -1148,21 +1148,21 @@ ul.ul-nav { display: table; float: left !important;
 				content: '\201C';
 				font-family: Georgia, New Times Roman, serif;
 				font-size: 120px;
-			line-height: 20px;
-			position: relative;
+				line-height: 20px;
+				position: relative;
 				left: -340px;
 				top: 40px;
 		}
 		blockquote::after {
 				display: block;
-				content: '\02EE';
+				content: '\201D';
 				font-family: Georgia, New Times Roman, serif;
 				font-size: 120px;
-			position: relative;
+				position: relative;
 				left: 340px;
 				top: -115px;
 		}
-	}
+	//}
 }
 
 //Estilos que afectan a la sección de transparencia
