@@ -981,8 +981,12 @@ ul.ul-nav { display: table; float: left !important;
 			font-size: 16px;
 			text-align: left;
 		}
+
+		@media only screen and (min-width: 0px) and (max-width: 3900px){
+			p { padding-top: 35px; font-size: 11px; }
+		}
 		
-		@media only screen and (min-width: 0px) and (max-width: 520px){
+		@media only screen and (min-width: 390px) and (max-width: 520px){
 			p { padding-top: 35px; font-size: 13px; }
 		}
 
