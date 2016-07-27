@@ -1147,7 +1147,7 @@ ul.ul-nav { display: table; float: left !important;
 		}
 		blockquote::before {
 				display: block;
-				content: '\201C';
+				content: '';
 				font-family: Georgia, New Times Roman, serif;
 				font-size: 120px;
 				line-height: 20px;
@@ -1156,7 +1156,7 @@ ul.ul-nav { display: table; float: left !important;
 		}
 		blockquote::after {
 				display: block;
-				content: '\201D';
+				content: '';
 				font-family: Georgia, New Times Roman, serif;
 				font-size: 120px;
 				position: relative;
