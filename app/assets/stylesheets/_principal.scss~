@@ -1256,9 +1256,9 @@ ul.ul-nav { display: table; float: left !important;
 		}
 	} 
 
-	@media only screen and (max-width: 991px) and (min-width: 0px) and (max-width: 991px){
+	@media only screen and (max-width: 991px) and (min-width: 0px){
 		#footer_izq { display: none; }
-		#footer_centro { border: none; }
+		#footer_centro { border: none; height: auto; >p { margin: 0;} }
 		#footer_der { 
 			height: auto;
 			padding-left: 0;
@@ -1266,6 +1266,7 @@ ul.ul-nav { display: table; float: left !important;
 			.links { 
 				margin: 0 auto;
 				width: auto;
+				padding-top: 10px;
 				li { float: left; padding: 0 5px; } 
 			}
 		}
