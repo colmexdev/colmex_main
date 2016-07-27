@@ -1122,6 +1122,10 @@ ul.ul-nav { display: table; float: left !important;
  }
 }
 
+@media only screen and (min-width: 0px) and (max-width: 585px){
+	#fundacion-colmex, #video-colmex { display: block; margin: 0 auto; width: 100%; }
+}
+
 //Estilos que afectan a la sección de la frase
 #div_frase{
 	height: auto;
