@@ -320,7 +320,7 @@ ul.ul-nav { display: table; float: left !important;
 
 //Clase para alterar el div donde van los botones del menú
 #div_menu{
-	height: 70px;
+	height: 54px;
 
 	.botones{
 		overflow: visible;
@@ -328,7 +328,7 @@ ul.ul-nav { display: table; float: left !important;
 		margin: 0;
 		padding: 0;
 		height: 100%;
-		background-color: rgba(0,0,0,0.5);
+		background-color: #C3C3C3;
 		z-index: 9999;
 
 		.dropdown, .no-dropdown{
@@ -377,7 +377,7 @@ ul.ul-nav { display: table; float: left !important;
 				transition: all 0.5s linear;
 				
         li{
-					opacity: 0.7;
+					opacity: 1;
 					-moz-transition: all 0.4s linear;
 					-webkit-transition: all 0.4s linear;
 					-o-transition: all 0.4s linear;
@@ -411,7 +411,7 @@ ul.ul-nav { display: table; float: left !important;
 
 		.dropdown:hover .dropdown-menu{
 			display: block;
-			opacity: 0.9;
+			opacity: 1;
 			height: auto;
 			overflow: visible;
 		}

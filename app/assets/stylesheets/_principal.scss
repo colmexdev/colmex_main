@@ -320,7 +320,7 @@ ul.ul-nav { display: table; float: left !important;
 
 //Clase para alterar el div donde van los botones del menú
 #div_menu{
-	height: 70px;
+	height: 54px;
 
 	.botones{
 		overflow: visible;
@@ -328,7 +328,7 @@ ul.ul-nav { display: table; float: left !important;
 		margin: 0;
 		padding: 0;
 		height: 100%;
-		background-color: rgba(0,0,0,0.5);
+		background-color: #C3C3C3;
 		z-index: 9999;
 
 		.dropdown, .no-dropdown{
@@ -1194,16 +1194,8 @@ ul.ul-nav { display: table; float: left !important;
 
 				a{
 					color: #fff;
-					-webkit-transition: all 0.4s linear;
-					-moz-transition: all 0.4s linear;
-					-o-transition: all 0.4s linear;
-					transition: all 0.4s linear;
 				}
 
-				a:hover{
-					color: #9E6680;
-					font-size: 17.5px;
-				}
 			}
 		}
 	}
@@ -1243,9 +1235,6 @@ ul.ul-nav { display: table; float: left !important;
 		#footer_der, #footer_izq { 
 			.links { 
 				font-size: 13px; 
-				li a:hover{
-					font-size: 14.5px;
-				}
 			} 
 		}
 	} 
