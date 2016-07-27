@@ -983,19 +983,19 @@ ul.ul-nav { display: table; float: left !important;
 		}
 
 		@media only screen and (min-width: 0px) and (max-width: 390px){
-			p { padding-top: 25px; font-size: 12px; }
+			p { padding-top: 27px; font-size: 14px; }
 		}
 		
 		@media only screen and (min-width: 390px) and (max-width: 520px){
-			p { padding-top: 35px; font-size: 13px; }
+			p { padding-top: 27px; font-size: 15px; }
 		}
 
 		@media only screen and (min-width: 520px) and (max-width: 570px){
-			p { padding-top: 45px; font-size: 13px; }
+			p { padding-top: 27px; font-size: 15px; }
 		}
 
 		@media only screen and (min-width: 570px) and (max-width: 670px){
-			p { padding-top: 40px; font-size: 15px; }
+			p { padding-top: 27px; font-size: 15px; }
 		}
 
 		@media only screen and (min-width: 670px) and (max-width: 767px){
@@ -1115,7 +1115,7 @@ ul.ul-nav { display: table; float: left !important;
 }
 
 @media only screen and (min-width: 0px) and (max-width: 997px){
-	#video-colmex { height: 340px; padding-bottom: 0; width: auto; >a img { height: 100%; } }
+	#video-colmex { height: 340px; padding-bottom: 0; width: auto; >a img { width: 100%; } }
 	#fundacion-colmex { height: 340px; padding-bottom: 0; }
 }
 
@@ -1125,7 +1125,7 @@ ul.ul-nav { display: table; float: left !important;
 
 @media only screen and (min-width: 0px) and (max-width: 585px){
 	#fundacion-colmex, #video-colmex { display: block; margin: 0 auto; width: 100%; }
-	#video-colmex { padding: 30px 15px; }
+	#video-colmex { padding: 30px 15px; >a img { width: 100%; } }
 }
 
 //Estilos que afectan a la sección de la frase
