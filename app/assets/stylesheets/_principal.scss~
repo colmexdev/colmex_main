@@ -1141,7 +1141,8 @@ ul.ul-nav { display: table; float: left !important;
 				padding: 10px 20px;
 				margin: 0 0 20px;
 				font-size: 25px;
-				border-left: 5px solid #eee;
+				border-left: none;
+				width: 75%;
 		}
 		blockquote::before {
 				display: block;
@@ -1150,8 +1151,7 @@ ul.ul-nav { display: table; float: left !important;
 				font-size: 120px;
 				line-height: 20px;
 				position: relative;
-				left: -340px;
-				top: 40px;
+				text-align: left;
 		}
 		blockquote::after {
 				display: block;
@@ -1159,8 +1159,7 @@ ul.ul-nav { display: table; float: left !important;
 				font-family: Georgia, New Times Roman, serif;
 				font-size: 120px;
 				position: relative;
-				left: 340px;
-				top: -115px;
+				text-align:right
 		}
 	//}
 }
