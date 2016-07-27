@@ -149,14 +149,14 @@
 				<li class="uk-parent"><a href="#" target="_blank"><%= t('botones.b5') %></a></li>
 				<li>
 					<ul class="ul-nav">
-						<li><%= link_to image_tag("fb-bco.png", :class => "img_net"), "https://www.facebook.com/elcolmex/" %></li>
+						<li><%= link_to image_tag("fb-bco.png", :class => "img_net"), "https://www.facebook.com/elcolmex/", :target => "_blank" %></li>
 						<li><%= link_to image_tag("twitter-bco.png", :class => "img_net"), "
-https://twitter.com/ELCOLMEX" %></li>
-						<li><%= link_to image_tag("youtube-bco.png", :class => "img_net"), "https://www.youtube.com/c/elcolegiodemexicociudaddemexico" %></li>
-						<li><%= link_to image_tag("itunes-bco.png", :class => "img_net"), "https://itunes.apple.com/mx/institution/el-colegio-de-mexico/id443160573?l=en" %></li>
-						<li><%= link_to image_tag("linkedin-bco.png", :class => "img_net"), "https://www.linkedin.com/edu/el-colegio-de-m%C3%A9xico-14986" %></li>
-						<li><%= link_to image_tag("google-bco.png", :class => "img_net"), "https://plus.google.com/+ColmexMx1/posts" %></li>
-						<li><%= link_to image_tag("instagram-bco.png", :class => "img_net"), "https://www.instagram.com/elcolmex/" %></li>
+https://twitter.com/ELCOLMEX", :target => "_blank" %></li>
+						<li><%= link_to image_tag("youtube-bco.png", :class => "img_net"), "https://www.youtube.com/c/elcolegiodemexicociudaddemexico", :target => "_blank" %></li>
+						<li><%= link_to image_tag("itunes-bco.png", :class => "img_net"), "https://itunes.apple.com/mx/institution/el-colegio-de-mexico/id443160573", :target => "_blank" %></li>
+						<li><%= link_to image_tag("linkedin-bco.png", :class => "img_net"), "https://www.linkedin.com/edu/el-colegio-de-m%C3%A9xico-14986", :target => "_blank" %></li>
+						<li><%= link_to image_tag("google-bco.png", :class => "img_net"), "https://plus.google.com/+ColmexMx1/posts", :target => "_blank" %></li>
+						<li><%= link_to image_tag("instagram-bco.png", :class => "img_net"), "https://www.instagram.com/elcolmex/", :target => "_blank" %></li>
 			    </ul>
 				</li>
 			</ul>

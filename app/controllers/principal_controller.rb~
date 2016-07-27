@@ -30,6 +30,9 @@ class PrincipalController < ApplicationController
   end
 
   def quitar_acentos(cadena)
+    if cadena.to_s== ""
+      return ""
+    end
     nueva_cad = cadena.gsub(/[áÁ]/, "a")
     nueva_cad = nueva_cad.gsub(/[éÉ]/, "e")
     nueva_cad = nueva_cad.gsub(/[íÍ]/, "i")
