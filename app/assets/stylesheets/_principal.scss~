@@ -986,11 +986,11 @@ ul.ul-nav { display: table; float: left !important;
 			p { padding-top: 27px; font-size: 12px; }
 		}
 		
-		@media only screen and (min-width: 390px) and (max-width: 490px){
-			p { padding-top: 27px; font-size: 14px; }
+		@media only screen and (min-width: 390px) and (max-width: 450px){
+			p { padding-top: 27px; font-size: 13px; }
 		}
 
-		@media only screen and (min-width: 490px) and (max-width: 670px){
+		@media only screen and (min-width: 450px) and (max-width: 670px){
 			p { padding-top: 27px; font-size: 15px; }
 		}
 
