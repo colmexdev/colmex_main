@@ -20,6 +20,7 @@
 * {
 	margin: 0;
 	padding: 0;
+	outline: 0;
 }
 
 .col-md1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12{
@@ -513,14 +514,8 @@ ul.ul-nav { display: table; float: left !important;
 			opacity: 0.3;
 			width: 60px;
 			color: #993366;
-			-webkit-transition: all 0.4s linear;
-			-moz-transition: all 0.4s linear;
-			-o-transition: all 0.4s linear;
-			transition: all 0.4s linear;
-		}
-
-		.carousel-control.right:hover, .carousel-control.left:hover{
-			opacity: 0.8;
+			text-shadow: none;
+			color: rgb(132,131,131);
 		}
 
 		.carousel-inner{
@@ -736,10 +731,7 @@ ul.ul-nav { display: table; float: left !important;
 	}
 
 	#boton_actividades:hover{
-		background-color: #470020;
-		font-size: 19px;
-		border-color: #9E6680;
-		color: #CCCCCC;
+		background-color: #5E002B;
 	}
 }
 
