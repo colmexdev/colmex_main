@@ -123,7 +123,7 @@ https://youtu.be/8V1zBV2ABmg" data-uk-lightbox data-lightbox-type="video">
 		<div class="col-md-12" id="div_frase"> <!-- Columnas para frase -->
 			<% if @frase.try(:cita) != nil %>
 			<p>
-					<span class="uk-icon-quote-left uk-icon-medium"></span><span id="span-frase"><%= @frase.try(:cita) %></span><span class="uk-icon-quote-right uk-icon-medium"></span><span id="span-autor"><%= @frase.try(:autor) %></span>
+					<blockquote><%= @frase.try(:cita) %><br/><br/><strong><%= @frase.try(:autor) %></strong></blockquote>
 			</p>
 			<% end %>
 		</div> <!-- Cierre de columnas para frase -->
