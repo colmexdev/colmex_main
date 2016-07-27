@@ -647,6 +647,8 @@ ul.ul-nav { display: table; float: left !important;
 							height: 12.5%;
 							text-align: right;
 							padding-top: 10px;
+							font-weight: 600;
+							font-size: 14px;
 							
 							a{
 								color: #5E002B;
@@ -1230,7 +1232,7 @@ ul.ul-nav { display: table; float: left !important;
 		
 		img{
 			width: 40%;
-			max-width: 350px;
+			max-width: 300px;
 		}
 	}
 

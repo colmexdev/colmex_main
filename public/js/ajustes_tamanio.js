@@ -12,7 +12,7 @@ ancho = Math.max(document.documentElement.clientWidth, window.innerWidth || docu
 						}
 						else{
 							if(ancho < 600){ document.getElementById("render_eventos").innerHTML = gon.ev_tiny; }
-							else if(ancho < 900){ document.getElementById("render_eventos").innerHTML = gon.ev_small; }
+							else if(ancho < 1150){ document.getElementById("render_eventos").innerHTML = gon.ev_small; }
 							else{ document.getElementById("render_eventos").innerHTML = gon.ev_big;}
 						}
 
@@ -39,11 +39,11 @@ ancho = Math.max(document.documentElement.clientWidth, window.innerWidth || docu
 							document.getElementById("render_eventos").innerHTML = gon.ev_tiny;
 							ancho = ancho_act;
 						}
-						else if(ancho_act < 1024 && (ancho >= 1024 || ancho <= 785)){
+						else if(ancho_act < 1150 && (ancho >= 1150 || ancho <= 785)){
 							document.getElementById("render_eventos").innerHTML = gon.ev_small;
 							ancho = ancho_act;
 						} 
-						else if(ancho_act >= 1024 && ancho < 1024){
+						else if(ancho_act >= 1150 && ancho < 1150){
 							document.getElementById("render_eventos").innerHTML = gon.ev_big;
 							ancho = ancho_act;
 						}
