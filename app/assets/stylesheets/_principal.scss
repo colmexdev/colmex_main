@@ -1129,18 +1129,38 @@ ul.ul-nav { display: table; float: left !important;
 	height: auto;
 	background-color: #FFFFFF;
 
+
 	>p{
-		margin: 30px auto;
+		/*margin: 30px auto;
 		width: 60%;
 		min-width: 300px;
-		color: #CCCCCC;
-
-		.uk-icon-large, .uk-icon-medium { vertical-align: 23%; }
-
-		#span-frase{ font-style: italic; font-size: 20px; }
-
-		#span-autor{ font-weight: 700; font-size: 24px; vertical-align: -50%; }
-
+		color: #CCCCCC;*/
+		/* Frase */
+		blockquote {
+				padding: 10px 20px;
+				margin: 0 0 20px;
+				font-size: 25px;
+				border-left: 5px solid #eee;
+		}
+		blockquote::before {
+				display: block;
+				content: '\201C';
+				font-family: Georgia, New Times Roman, serif;
+				font-size: 120px;
+			line-height: 20px;
+			position: relative;
+				left: -340px;
+				top: 40px;
+		}
+		blockquote::after {
+				display: block;
+				content: '\02EE';
+				font-family: Georgia, New Times Roman, serif;
+				font-size: 120px;
+			position: relative;
+				left: 340px;
+				top: -115px;
+		}
 	}
 }
 
