@@ -2628,7 +2628,7 @@
                 this.element.addClass("uk-open");
             }
 
-            $html.addClass("uk-modal-page").height(); // force browser engine redraw
+            $('body').addClass("uk-modal-page").height(); // force browser engine redraw
 
             // Update ARIA
             this.element.attr('aria-hidden', 'false');
@@ -2720,7 +2720,7 @@
             this.element.attr('aria-hidden', 'true');
 
             if (!activeCount) {
-                $html.removeClass('uk-modal-page');
+                $('body').removeClass('uk-modal-page');
                 body.css(this.paddingdir, "");
             }
 
