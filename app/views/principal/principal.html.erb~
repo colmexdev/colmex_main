@@ -129,8 +129,8 @@ https://youtu.be/8V1zBV2ABmg" data-uk-lightbox data-lightbox-type="video">
 
 	<div class="row"> <!-- Fila para transparencia -->
 		<div class="col-xs-12" id="div_transparencia"> <!-- Columnas para transparencia-->
-				<%= link_to(image_tag('transp-izq.png'), "#", :target => "_blank") %>
-				<%= link_to(image_tag('transp-der.png'), "#", :target => "_blank") %>
+				<%= link_to(image_tag('transp-izq.png'), "http://inicio.ifai.org.mx/SitePages/ifai.aspx", :target => "_blank") %>
+				<%= link_to(image_tag('transp-der.png'), "https://www.infomex.org.mx/gobiernofederal/home.action", :target => "_blank") %>
 		</div> <!-- Cierre de columnas para transparencia -->
 	</div> <!-- Cierre de fila para transparencia -->
 

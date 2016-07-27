@@ -559,7 +559,6 @@ ul.ul-nav { display: table; float: left !important;
 						width: 75%;
 						height: 100%;
 						overflow: hidden;
-						font-size: 13px;
 					
 						.tipo_evento{
 							width: 100%;
@@ -572,13 +571,14 @@ ul.ul-nav { display: table; float: left !important;
 							p{
 								position: absolute;
 								bottom: 0;
-								font-size: 14px;
+								font-size: 16px;
 							}
 						}
 
 						.titulo_evento{
 							width: 100%;
 							height: 25%;
+							font-size: 15px;
 							text-align: left;
 							color: #5E002B;
 							line-height:1.2em;
@@ -621,8 +621,8 @@ ul.ul-nav { display: table; float: left !important;
 								width: 91.66%;
 								height: 100%;
 								text-align: left;
-								font-size: 11px;
-								color: #999999;
+								font-size: 13px;
+								color: #333333;
 								line-height: 1.3em;
 								position: relative;
 								overflow: hidden;
@@ -647,6 +647,8 @@ ul.ul-nav { display: table; float: left !important;
 							height: 12.5%;
 							text-align: right;
 							padding-top: 10px;
+							font-weight: 600;
+							font-size: 14px;
 							
 							a{
 								color: #5E002B;
@@ -823,6 +825,8 @@ ul.ul-nav { display: table; float: left !important;
 			} 	
 		}
 	}
+
+	#img-pred { max-height: 145px; }
 }
 
 @media only screen and (max-width: 768px){
@@ -1107,6 +1111,7 @@ ul.ul-nav { display: table; float: left !important;
 			margin: 35px auto 0 auto;
 			font-size: 25px;
 			border-left: none;
+			color: #717272;
 			width: 75%;
 			line-height: 1.3em;
 	}
