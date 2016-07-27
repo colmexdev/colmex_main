@@ -37,7 +37,7 @@ class PrincipalController < ApplicationController
     nueva_cad = nueva_cad.gsub(/[éÉ]/, "e")
     nueva_cad = nueva_cad.gsub(/[íÍ]/, "i")
     nueva_cad = nueva_cad.gsub(/[óÓ]/, "o")
-    nueva_cad = nueva_cad.gsub(/[úÚ]/, "u")
+    nueva_cad = nueva_cad.gsub(/[úÚüÜ]/, "u")
     return nueva_cad
   end
 
