@@ -63,35 +63,7 @@ html, body{ height: 100%; }
 	z-index: 30;
 }
 
-#resto-cuerpo { padding-top: 285px; min-height: 100%; padding-bottom: 300px; }
-
-@media only screen and (min-width: 584px) and (max-width: 1160px){
-	#resto-cuerpo { padding-top: 214px; }
-}
-
-@media only screen and (min-width: 542px) and (max-width: 584px){
-	#resto-cuerpo { padding-top: 270px; }
-}
-
-@media only screen and (min-width: 328px) and (max-width: 542px){
-	#resto-cuerpo { padding-top: 282px; }
-}
-
-@media only screen and (min-width: 287px) and (max-width: 328px){
-	#resto-cuerpo { padding-top: 337px; }
-}
-
-@media only screen and (min-width: 274px) and (max-width: 287px){
-	#resto-cuerpo { padding-top: 371px; }
-}
-
-@media only screen and (min-width: 174px) and (max-width: 274px){
-	#resto-cuerpo { padding-top: 421px; }
-}
-
-@media only screen and (max-width: 174px) and (min-width: 0px){
-	#resto-cuerpo { padding-top: 472px; }
-}
+#resto-cuerpo { min-height: 100%; }
 
 #contenedor_nav{
 	padding: 0;
@@ -1130,43 +1102,35 @@ ul.ul-nav { display: table; float: left !important;
 	background-color: #FFFFFF;
 	text-align: center;
 
-
-	//>p{
-		/*margin: 30px auto;
-		width: 60%;
-		min-width: 300px;
-		color: #CCCCCC;*/
-		/* Frase */
-		blockquote {
-				padding: 10px 20px;
-				margin: 35px auto 0 auto;
-				font-size: 25px;
-				border-left: none;
-				width: 75%;
-				line-height: 1.3em;
-		}
-		blockquote::before {
-				display: block;
-				content: '\201C';
-				font-family: Georgia, New Times Roman, serif;
-				font-size: 120px;
-				line-height: 20px;
-				position: relative;
-				text-align: left;
-				top: 40px;
-				right: 75px;
-		}
-		blockquote::after {
-				display: block;
-				content: '\201D';
-				font-family: Georgia, New Times Roman, serif;
-				font-size: 120px;
-				position: relative;
-				text-align:right;
-				bottom: 50px;
-				left: 55px;
-		}
-	//}
+	blockquote {
+			padding: 10px 20px;
+			margin: 35px auto 0 auto;
+			font-size: 25px;
+			border-left: none;
+			width: 75%;
+			line-height: 1.3em;
+	}
+	blockquote::before {
+			display: block;
+			content: '\201C';
+			font-family: Georgia, New Times Roman, serif;
+			font-size: 120px;
+			line-height: 20px;
+			position: relative;
+			text-align: left;
+			top: 40px;
+			right: 75px;
+	}
+	blockquote::after {
+			display: block;
+			content: '\201D';
+			font-family: Georgia, New Times Roman, serif;
+			font-size: 120px;
+			position: relative;
+			text-align:right;
+			bottom: 50px;
+			left: 55px;
+	}
 }
 
 //Estilos que afectan a la sección de transparencia

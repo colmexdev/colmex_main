@@ -1139,7 +1139,7 @@ ul.ul-nav { display: table; float: left !important;
 		/* Frase */
 		blockquote {
 				padding: 10px 20px;
-				margin: 0 auto;
+				margin: 35px auto 0 auto;
 				font-size: 25px;
 				border-left: none;
 				width: 75%;
