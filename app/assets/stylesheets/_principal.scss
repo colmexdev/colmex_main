@@ -377,7 +377,7 @@ ul.ul-nav { display: table; float: left !important;
 				transition: all 0.5s linear;
 				
         li{
-					opacity: 0.7;
+					opacity: 1;
 					-moz-transition: all 0.4s linear;
 					-webkit-transition: all 0.4s linear;
 					-o-transition: all 0.4s linear;
@@ -411,7 +411,7 @@ ul.ul-nav { display: table; float: left !important;
 
 		.dropdown:hover .dropdown-menu{
 			display: block;
-			opacity: 0.9;
+			opacity: 1;
 			height: auto;
 			overflow: visible;
 		}
