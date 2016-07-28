@@ -879,6 +879,11 @@ ul.ul-nav { display: table; float: left !important;
 		margin: 40px auto 10px auto;
 	}
 
+	.filtros-descubre{
+		width: 85%;
+		margin: 20px auto 30px auto;
+	}
+
   .wrapper-descubre{
 		width: 85%;
 		height: auto;

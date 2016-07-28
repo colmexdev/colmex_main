@@ -4,14 +4,21 @@ function filtrarDescubres(){
 	var contAFiltrar = $("#contenido").val();
 	var tagsAFiltrar = $("#tags").val();
 	var descubresFiltradosPorContenido = descubresPorContenido.filter(function(d){ return ( contAFiltrar == "" ? true : d == contAFiltrar )}).top(Infinity);
-	console.log(descubresFiltradoPorContenido);
-	var descubresFiltradosPorTags = descubresPorTags.filter(function(d){ return (tagsAFiltrar == "" ? true : d.indexOf(tagsAFiltrar) != -1)}).top(Infinity);
+	var descubresFiltradosPorTags = descubresPorTags.filter(function(d){ return (tagsAFiltrar == "" ? true : limpiarPuntuacion(d).indexOf(tagsAFiltrar) != -1)}).top(Infinity);
 	var bloqueHTML = construirDescubre(descubresFiltradosPorTags);
 	$("#wrapper").html(bloqueHTML);
   var cw = $('.frame-descubre').width();
 	$('.frame-descubre').css({'height':cw+'px'});
 }
 
+function limpiarPuntuacion(tags){
+	var new_tags = tags.replace(/[íïîì]/,"i");
+	new_tags = new_tags.replace(/[áäâà]/,"a");
+	new_tags = new_tags.replace(/[éëêè]/,"e");
+	new_tags = new_tags.replace(/[óöôò]/,"o");
+	new_tags = new_tags.replace(/[úüûù]/,"u");
+	return new_tags;
+}
 
 function construirDescubre(descubres){
 	var html_str = "";
