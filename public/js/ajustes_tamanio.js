@@ -1,7 +1,7 @@
-var ancho = Math.max(document.documentElement.clientWidth, window.innerWidth || document.body.ClientWidth || 0);
-var dataset = crossfilter(gon.descubres);
-var descubresPorContenido = dataset.dimension(function(d){ return d.contenido;});
-var descubresPorTags = dataset.dimension(function(d){ return d.titulo + " " + d.contenido + " " + d.tags.replace(/ *, */, " ")});
+ancho = Math.max(document.documentElement.clientWidth, window.innerWidth || document.body.ClientWidth || 0);
+dataset = crossfilter(gon.descubres);
+descubresPorContenido = dataset.dimension(function(d){ return d.contenido;});
+descubresPorTags = dataset.dimension(function(d){ return d.titulo + " " + d.contenido + " " + d.tags.replace(/ *, */, " ")});
 
 $(document).ready(function(){
 	var alto_footer = $('#div_footer').height();
