@@ -1,10 +1,10 @@
 function filtrarDescubresPorContenido(e){
 	var descubresFiltradosPorContenido = decubresPorContenido.filter(function(d){  return (e.value == "" ? d.contenido == e.value : true) }).top(Infinity);
-	var bloqueHTML = construirDescubre(descubresFiltradosPorContenido);
+	var bloqueHTML = "Hola" //construirDescubre(descubresFiltradosPorContenido);
 	$("#wrapper-descubre").html(bloqueHTML);
 }
 
-function construirDescubre(descubres){
+/*function construirDescubre(descubres){
 	var html_str = "";
 	$.each(descubres,function(i, v){
 		html_str = html_str + "<div class=\"frame-descubre\">";
@@ -22,6 +22,6 @@ function construirDescubre(descubres){
 		html_str = html_str + "</div></a></div>";		
 	});
 return html_str;
-}
+}*/
 
 
