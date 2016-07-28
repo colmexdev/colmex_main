@@ -228,6 +228,10 @@ html, body{ height: 100%; }
 				img { height: 20px; }
 			}	
 		}
+
+		@media only screen and (max-device-width: 1024px){
+			.mostrable, .borrable { margin-top: 5px; }
+		}
 		
 		@media only screen and (min-width: 0px) and (max-width: 1160px){
 			.mostrable{ display: inline-block; }

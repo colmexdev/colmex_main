@@ -275,6 +275,10 @@ html, body{ height: 100%; }
 	padding-left: 10px;
 }
 
+@media only screen and (max-device-width: 1024px){
+	.boton-lupa { margin-top: 13px; }
+}
+
 //Estilos asociados al offcanvas
 .nav>li>a:hover { background-color: transparent;}
 
