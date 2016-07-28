@@ -212,6 +212,7 @@ html, body{ height: 100%; }
 		
 		@media only screen and (min-width: 0px) and (max-width: 1160px){
 			.mostrable{ display: inline-block; }
+			.borrable{ display: none; }
 		}
 
 		@media only screen and (min-width: 1161px){
@@ -219,9 +220,6 @@ html, body{ height: 100%; }
 		}
 	}
 
-  @media only screen and (min-width: 0px) and (max-width: 1160px){
-		.borrable{ display: none; }
-	}
 }
 
 //Clase asociada al campo de texto de busqueda
@@ -1246,21 +1244,20 @@ ul.ul-nav { display: table; float: left !important;
 	}
 
 	#redes_footer{
-		height: 50px;
+		height: auto;
 		background-color: #5E002B;
 		text-align: center;
-		position: relative;
 
 		.botones_footer{
 			float: left;
 			list-style-type: none;
 			width: 100%;
-			margin-bottom: 0;
+			margin: 3px auto;
 			display: block;
-			@include centrado;
 
 			img{
 				padding: 0 4px;
+				height: 25px;
 			}
 		}	
 	}
