@@ -1,7 +1,8 @@
 ancho = Math.max(document.documentElement.clientWidth, window.innerWidth || document.body.ClientWidth || 0);
 dataset = crossfilter(JSON.parse(gon.descubres));
-	descubresPorContenido = dataset.dimension(function(d){ return d.contenido; });
-	descubresPorTags = dataset.dimension(function(d){ return (d.titulo + " " + d.contenido + " " + d.tags.replace(/ *, */, " ")).toLowerCase()});
+descubresPorContenido = dataset.dimension(function(d){ return d.contenido; });
+descubresPorTags = dataset.dimension(function(d){ return (d.titulo + " " + d.contenido + " " + d.tags.replace(/ *, */, " ")).toLowerCase()});
+num_filas = 2;
 
 $(document).ready(function(){
 	var alto_footer = $('#div_footer').height();
@@ -59,9 +60,9 @@ window.onresize = function(){
 function partirDescubres(){
 	var ancho_v = Math.max(document.documentElement.clientWidth, window.innerWidth || document.body.ClientWidth || 0);
 	var json_l = JSON.parse(gon.descubres).length;
-	var alto_d = $(".frame-descubre").width();
-	$("#wrapper").css({"height" : (alto_d * 2) + "px", "overflow-y" : "hidden" });
-	if((json_l > 10 && ancho_v >= 1340) || (json_l > 8 && ancho_v >= 1050 && ancho_v < 1340) || (json_l > 6 && ancho_v >= 700 && ancho_v < 1050) || (json_l >4 && ancho_v >= 450 && ancho_v < 700) || (json_l > 3 && ancho_v < 450)){
+	var alto_d = $(".frame-descubre").height();
+	$("#wrapper").css({"height" : (alto_d * num_filas) + "px", "overflow-y" : "hidden", "-webkit-transition" : "height 0.5s linear", "-moz-transition" : "height 0.5s linear", "-o-transition" : "height 0.5s linear", "transition" : "height 0.5s linear"});
+	if((json_l > 10 && ancho_v >= 1340 ) || (json_l > 8 && ancho_v >= 1050 && ancho_v < 1340) || (json_l > 6 && ancho_v >= 700 && ancho_v < 1050) || (json_l >4 && ancho_v >= 450 && ancho_v < 700) || (json_l > 3 && ancho_v < 450)){
 		$("#cutter-descubre").css("display","block");
 	}
 	else{
@@ -71,8 +72,12 @@ function partirDescubres(){
 }
 
 function desbordarDescubres(){
-	$("#cutter-descubre").css("display","none");
-	$("#wrapper").css({"height" : "auto", "overflow-y" : "visible" });
+	var ancho_v = Math.max(document.documentElement.clientWidth, window.innerWidth || document.body.ClientWidth || 0);
+	num_filas = num_filas + 2;
+	var div_filas = (ancho_v >= 1340 ? 5 : (ancho_v >= 1050 ? 4 : (ancho_v >= 700 ? 3 : (ancho_v >= 450 ? 2 : 1))));
+	var cantidad_filas = Math.ceil(JSON.parse(gon.descubres).length / div_filas);
+	$("#wrapper").css({"height" : ($("#wrapper").height() > ($(".frame-descubre").height() * cantidad_filas) ? "auto" : ($(".frame-descubre").height() * num_filas) + "px")});
+	$("#cutter-descubre").css("display", $("#wrapper").css("height") == "auto" ? "none" : "block");
 	return false;
 }
 
