@@ -52,6 +52,8 @@ window.onresize = function(){
 		document.getElementById("render_eventos").innerHTML = gon.ev_big;
 		ancho = ancho_act;
 	}
+
+	partirDescubres();
 }
 
 function partirDescubres(){
@@ -65,7 +67,6 @@ function partirDescubres(){
 	else{
 		$("#cutter-descubre").css("display","none");
 	}
-	alert("Entrada");
 	return false;
 }
 
