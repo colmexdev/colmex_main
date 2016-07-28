@@ -53,7 +53,8 @@ function encontrarIconoDescubre(tipo_desc){
 
 function desbordarDescubres(){
 	$("#cutter-descubre").css("display","none");
-	$("#wrapper-descubre").css("height","auto");
+	$("#wrapper-descubre").css({"height" : "auto", "overflow-y" : "visible" });
+	
 }
 
 

@@ -65,6 +65,13 @@ function partirDescubres(){
 	else{
 		$("#cutter-descubre").css("display","none");
 	}
+	alert("Entrada");
+	return false;
 }
 
+function desbordarDescubres(){
+	$("#cutter-descubre").css("display","none");
+	$("#wrapper-descubre").css({"height" : "auto", "overflow-y" : "visible" });
+	return false;
+}
 
