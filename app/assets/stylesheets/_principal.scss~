@@ -247,7 +247,7 @@ html, body{ height: 100%; }
 
 //Clase asociada al campo de texto de busqueda
 
-.form-control{
+#forma-control{
 	background-color: #CCCCCC;
 	border-color: #909090;
 	color: #909090;
@@ -259,10 +259,10 @@ html, body{ height: 100%; }
 }
 
 @media only screen and (max-device-width: 1024px){
-	.form-control { margin-top: 13px; }
+	#forma-control { margin-top: 13px; }
 }
 
-.form-control:focus{
+#forma-control:focus{
 	border-color: #993366;
 	box-shadow: 0 0 5px rgba(153, 51,102, 1);
 }
@@ -273,6 +273,10 @@ html, body{ height: 100%; }
 	border: none;
 	padding: 0;
 	padding-left: 10px;
+}
+
+@media only screen and (max-device-width: 1024px){
+	.boton-lupa { margin-top: 13px; }
 }
 
 //Estilos asociados al offcanvas
