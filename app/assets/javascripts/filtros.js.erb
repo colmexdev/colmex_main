@@ -1,27 +1,38 @@
 function filtrarDescubresPorContenido(e){
 	var descubresFiltradosPorContenido = descubresPorContenido.filter(function(d){ return (e.value == "" ? true : d == e.value ) }).top(Infinity);
-	var bloqueHTML = "Hola"; //construirDescubre(descubresFiltradosPorContenido);
-	$("#wrapper").html(e.value);
+	var bloqueHTML = construirDescubre(descubresFiltradosPorContenido);
+	$("#wrapper").html(bloqueHTML);
 }
 
-/*function construirDescubre(descubres){
+function construirDescubre(descubres){
 	var html_str = "";
-	$.each(descubres,function(i, v){
+	for(i = 0; i < descubres.length; i++){
 		html_str = html_str + "<div class=\"frame-descubre\">";
-		if(v["imagen"]["url"] != "/vacio.png"){
-			html_str = html_str + "<img class=\"imagen-descubre\" src=\"" + v["imagen"]["path"] + "\" >";
+		if(descubres[i]["imagen_file_name"] != null){
+			var path_img = "/assets/descubre/" + descubres[i]["id"] + "/original/" + descubres[i]["imagen_file_name";
+			html_str = html_str + "<img class=\"imagen-descubre\" src=\"" + path_img + "\" >";
 		}
 		else{
-			html_str = html_ str + "<span class=\"cont-descubre-pre\">" + v["contenido"] + "</span><br />";
-			html_str = html_str + "<span class=\"titulo-descubre-pre\">" + v["titulo"] + "</span>";
+			html_str = html_ str + "<span class=\"cont-descubre-pre\">" + descubres[i]["contenido"] + "</span><br />";
+			html_str = html_str + "<span class=\"titulo-descubre-pre\">" + descubres[i]["titulo"] + "</span>";
 		}
-		html_str = html_str + "<a href=\""+ v["liga"] + "\" " + (v["contenido"].toLowerCase() == "video" ? ("data-uk-lightbox title=\"\"") : "target=\"_blank\"" ) + "><div class=\"frame-hover\">";
-		html_str = html_str + "<span class=\"cont-descubre\">" + v["contenido"] + "</span><br />";
-		html_str = html_str + "<span class=\"titulo-descubre\">" + v["titulo"] + "</span>";
-		html_str = html_str + "<img class=\"icono-descubre\" src=\"" + "" + "\" >";
+		html_str = html_str + "<a href=\""+ v["liga"] + "\" " + (descubres[i]["contenido"].toLowerCase() == "video" ? ("data-uk-lightbox title=\"\"") : "target=\"_blank\"" ) + "><div class=\"frame-hover\">";
+		html_str = html_str + "<span class=\"cont-descubre\">" + descubres[i]["contenido"] + "</span><br />";
+		html_str = html_str + "<span class=\"titulo-descubre\">" + descubres[i]["titulo"] + "</span>";
+		html_str = html_str + "<img class=\"icono-descubre\" src=\"" + encontrarIconoDescubre(descubres[i]["contenido"]) + "\" >";
 		html_str = html_str + "</div></a></div>";		
-	});
+	};
 return html_str;
-}*/
+}
+
+function encontrarIconoDescubre(tipo_desc){
+	for(i = 0; i < gon.contenido_iconos.length; i++){
+		if(gon.contenido_iconos[i]["tipo"].toLowerCase() == tipo_desc.toLowerCase()){
+			if(gon.contenido_iconos[i]["icono_file_name"] != null)
+				return "/assets/contenidos/" + gon.contenido_iconos[i]["id"] + "/original/" + gon.contenido_iconos[i]["icono_file_name"];
+			return "/link.png";
+		}
+	}
+}
 
 
