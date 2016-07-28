@@ -161,7 +161,7 @@ html, body{ height: 100%; }
 
 		.navbar-form.navbar-left { margin: 0; display: inline-block; }
 
-		.form-group { margin: 0; padding: 0; float: left;}
+		.form-group { margin: 0; padding: 0; .form-control { width: 170px; }}
 	}
 
 	@media only screen and (min-width: 0px) and (max-width: 1024px){
