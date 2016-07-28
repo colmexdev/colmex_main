@@ -17,6 +17,7 @@
 //= require uikit
 //= require form-select
 //= require datepicker
+//= require crossfilter
 //= require principal
 //= require imagens
 //= require cursos
