@@ -1,13 +1,15 @@
-function filtrarDescubresPorContenido(e){
+function filtrarDescubres(){
+	descubresPorTags.filterAll();
 	descubresPorContenido.filterAll();
-	var descubresFiltradosPorContenido = descubresPorContenido.filter(function(d){ return (e.value == "" ? true : d == e.value ) }).top(Infinity);
+	var contAFiltrar = $("#contenido").val();
+	var tagsAFiltrar = $("#tags").val();
+	var descubresFiltradosPorContenido = descubresPorContenido.filter(function(d){ return ( contAFiltrar == "" ? true : d == contAFiltrar ) }).top(Infinity);
 	var bloqueHTML = construirDescubre(descubresFiltradosPorContenido);
-	console.log(bloqueHTML);
 	$("#wrapper").html(bloqueHTML);
-
   var cw = $('.frame-descubre').width();
 	$('.frame-descubre').css({'height':cw+'px'});
 }
+
 
 function construirDescubre(descubres){
 	var html_str = "";

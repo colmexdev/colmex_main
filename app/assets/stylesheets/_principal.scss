@@ -74,7 +74,11 @@ html, body{ height: 100%; }
 	padding: 0;
 }
 
-.navbar { border-radius: 0; margin-bottom: 0; }
+.navbar { border-radius: 0; margin-bottom: 0; min-height: 40px; }
+
+@media only screen and (max-device-width: 1024px){
+	.navbar { min-height: 60px; }
+}
 
 .navbar-collapse { margin-right: 0; margin-left: 0;}
 
@@ -82,7 +86,11 @@ html, body{ height: 100%; }
 	background-color: #E6E6E6;
 	border-radius: 0;
 
-	.nav.navbar-nav { height: 50px; margin: 0; }
+	.nav.navbar-nav { height: 40px; margin: 0; }
+
+	@media only scree and (max-device-width: 1024px){
+		.nav.navbar-nav { height: 60px; }
+	}
 
 	.nav_opciones{
 		display: block;
@@ -92,12 +100,14 @@ html, body{ height: 100%; }
 		text-align: center;
 		color: #7F7F7F;
 		position: relative;
+		height: inherit;
 	}	
 
 	.idioma{
 		width: 100px;
 
 		>a{
+			height: inherit;
 			-webkit-transition: color 0.4s linear;
 			-moz-transition: color 0.4s linear;
 			-o-transition: color 0.4s linear;
@@ -131,7 +141,8 @@ html, body{ height: 100%; }
 	.mail{
 		width: 210px;
 
-		>a { 
+		>a {
+			height: inherit; 
 
 			img{
 				width: 25px;
@@ -144,6 +155,7 @@ html, body{ height: 100%; }
 		width: 130px;
 
 		>a{
+			height: inherit;
 
 			img{
 				width: 20px;
@@ -205,10 +217,11 @@ html, body{ height: 100%; }
 		>li{
 
 			>a{
+				height: inherit;
 				padding: 0 3px;
-				padding-top: 10px;
+				margin-top: 10px;
 	
-				img { height: 25px; }
+				img { height: 20px; }
 			}	
 		}
 		
@@ -305,7 +318,7 @@ html, body{ height: 100%; }
 		>ul{
 			@include centrado;
 			padding-left: 0;
-			>li>a>img { height: 25px; margin: 0 3px; }
+			>li>a>img { height: 20px; margin: 0 3px; }
 		}
 	}
 }
@@ -1269,12 +1282,12 @@ ul.ul-nav { display: table; float: left !important;
 			float: left;
 			list-style-type: none;
 			width: 100%;
-			margin: 3px auto;
+			margin: 10px auto;
 			display: block;
 
 			img{
-				padding: 0 4px;
-				height: 25px;
+				margin: 0 4px;
+				height: 20px;
 			}
 		}	
 	}

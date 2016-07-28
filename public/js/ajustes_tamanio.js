@@ -1,7 +1,7 @@
 ancho = Math.max(document.documentElement.clientWidth, window.innerWidth || document.body.ClientWidth || 0);
 dataset = crossfilter(JSON.parse(gon.descubres));
 	descubresPorContenido = dataset.dimension(function(d){ return d.contenido; });
-	descubresPorTags = dataset.dimension(function(d){ return d.titulo + " " + d.contenido + " " + d.tags.replace(/ *, */, " ")});
+	descubresPorTags = dataset.dimension(function(d){ return (d.titulo + " " + d.contenido + " " + d.tags.replace(/ *, */, " ")).toLowerCase()});
 
 $(document).ready(function(){
 	var alto_footer = $('#div_footer').height();
