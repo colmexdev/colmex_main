@@ -1,7 +1,7 @@
 function filtrarDescubresPorContenido(e){
 	var descubresFiltradosPorContenido = descubresPorContenido.filter(function(d){ return (e.value == "" ? true : d == e.value ) }).top(Infinity);
 	var bloqueHTML = "Hola"; //construirDescubre(descubresFiltradosPorContenido);
-	document.getElementById("wrapper-descubre").innerHTML = e.value;
+	$("#wrapper").html(e.value);
 }
 
 /*function construirDescubre(descubres){
