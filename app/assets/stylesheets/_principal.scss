@@ -161,7 +161,7 @@ html, body{ height: 100%; }
 
 		.navbar-form.navbar-left { margin: 0; display: inline-block; }
 
-		.form-group { margin: 0; padding: 0; float: left; .form-control { width: 170px; }}
+		.form-group { margin: 0; padding: 0; float: left; }
 	}
 
 	@media only screen and (min-width: 0px) and (max-width: 1024px){
@@ -229,7 +229,6 @@ html, body{ height: 100%; }
 	border-color: #909090;
 	color: #909090;
 	height: 24px;
-	width: 170px;
 	-webkit-transition: all 0.4s linear;
 	-moz-transition: all 0.4s linear;
 	-o-transition: all 0.4s linear;
