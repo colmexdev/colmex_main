@@ -243,7 +243,6 @@ html, body{ height: 100%; }
 .boton_lupa{
 	background-color: #E6E6E6;
 	border: none;
-	font-size: 20px;
 }
 
 //Estilos asociados al offcanvas
