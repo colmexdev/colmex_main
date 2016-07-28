@@ -969,7 +969,8 @@ ul.ul-nav { display: table; float: left !important;
 		color: #7E3355;
 		font-size: 25px;
 		margin: 0 auto;
-		padding: 15px 0;
+		padding: 10px 0;
+		text-align: center;
 	}
 }
 
