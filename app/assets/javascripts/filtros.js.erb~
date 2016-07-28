@@ -11,7 +11,7 @@ function filtrarDescubresPorContenido(e){
 
 function construirDescubre(descubres){
 	var html_str = "";
-	for(i = 0; i < descubres.length; i++){
+	for(var i = 0; i < descubres.length; i++){
 		html_str = html_str + "<div class=\"frame-descubre\">";
 		if(descubres[i]["imagen_file_name"] != null){
 			var path_img = "/assets/descubre/" + descubres[i]["id"] + "/original/" + descubres[i]["imagen_file_name"];
@@ -31,7 +31,7 @@ function construirDescubre(descubres){
 }
 
 function encontrarIconoDescubre(tipo_desc){
-	for(i = 0; i < gon.contenido_iconos.length; i++){
+	for(var i = 0; i < gon.contenido_iconos.length; i++){
 		if(gon.contenido_iconos[i]["tipo"].toLowerCase() == tipo_desc.toLowerCase()){
 			if(gon.contenido_iconos[i]["icono_file_name"] != null)
 				return "/assets/contenidos/" + gon.contenido_iconos[i]["id"] + "/original/" + gon.contenido_iconos[i]["icono_file_name"];

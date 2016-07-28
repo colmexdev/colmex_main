@@ -207,6 +207,8 @@ html, body{ height: 100%; }
 			>a{
 				padding: 0 3px;
 				padding-top: 10px;
+	
+				img { height: 25px; }
 			}	
 		}
 		
@@ -289,10 +291,22 @@ html, body{ height: 100%; }
 			}
 		}
 	}
+
  	.uk-parent:hover{
 		background-color: #4E4E4E;
 
 		>li >a { color: #EEEEEE; }
+	}
+
+	.links-side{
+		height: 35px;
+		position: relative;
+
+		>ul{
+			@include centrado;
+
+			>a>img { hieght: 25px; }
+		}
 	}
 }
 

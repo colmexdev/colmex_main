@@ -207,6 +207,8 @@ html, body{ height: 100%; }
 			>a{
 				padding: 0 3px;
 				padding-top: 10px;
+	
+				img { height: 25px; }
 			}	
 		}
 		
@@ -229,7 +231,6 @@ html, body{ height: 100%; }
 	border-color: #909090;
 	color: #909090;
 	height: 24px;
-	width: 170px;
 	-webkit-transition: all 0.4s linear;
 	-moz-transition: all 0.4s linear;
 	-o-transition: all 0.4s linear;

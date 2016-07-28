@@ -35,16 +35,16 @@
 						</div>
 			    </form>
 			    <ul class="nav navbar-nav navbar-right">
-						<li class="borrable"><%= link_to image_tag("fb-color.png", :class => "img_net"), "
+						<li class="borrable"><%= link_to image_tag("fb-vino.png", :class => "img_net"), "
 	https://www.facebook.com/elcolmex/", :target => "_blank" %></li>
-						<li class="borrable"><%= link_to image_tag("twitter-color.png", :class => "img_net"), "
+						<li class="borrable"><%= link_to image_tag("twitter-vino.png", :class => "img_net"), "
 	https://twitter.com/ELCOLMEX", :target => "_blank" %></li>
-						<li class="borrable"><%= link_to image_tag("youtube-color.png", :class => "img_net"), "
+						<li class="borrable"><%= link_to image_tag("youtube-vino.png", :class => "img_net"), "
 	https://www.youtube.com/c/elcolegiodemexicociudaddemexico", :target => "_blank" %></li>
-						<li class="borrable"><%= link_to image_tag("itunes-color.png", :class => "img_net"), "https://itunes.apple.com/mx/institution/el-colegio-de-mexico/id443160573", :target => "_blank" %></li>
-						<li class="borrable"><%= link_to image_tag("linkedin-color.png", :class => "img_net"), "https://www.linkedin.com/edu/el-colegio-de-m%C3%A9xico-14986", :target => "_blank" %></li>
-						<li class="borrable"><%= link_to image_tag("google-color.png", :class => "img_net"), "https://plus.google.com/+ColmexMx1/posts", :target => "_blank" %></li>
-						<li class="borrable"><%= link_to image_tag("instagram-color.png", :class => "img_net"), "https://www.instagram.com/elcolmex/", :target => "_blank" %></li>
+						<li class="borrable"><%= link_to image_tag("itunes-vino.png", :class => "img_net"), "https://itunes.apple.com/mx/institution/el-colegio-de-mexico/id443160573", :target => "_blank" %></li>
+						<li class="borrable"><%= link_to image_tag("linkedin-vino.png", :class => "img_net"), "https://www.linkedin.com/edu/el-colegio-de-m%C3%A9xico-14986", :target => "_blank" %></li>
+						<li class="borrable"><%= link_to image_tag("google-vino.png", :class => "img_net"), "https://plus.google.com/+ColmexMx1/posts", :target => "_blank" %></li>
+						<li class="borrable"><%= link_to image_tag("instagram-vino.png", :class => "img_net"), "https://www.instagram.com/elcolmex/", :target => "_blank" %></li>
 						<li class="mostrable"><a href="#menu" class="uk-navbar-toggle" data-uk-offcanvas></a></li>
 			    </ul>
 			  </div><!-- /.navbar-collapse -->
