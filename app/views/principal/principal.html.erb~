@@ -84,7 +84,7 @@ http://revistas.colmex.mx/", :target => "_blank") %></div>
 				<span class="titulo-grande morado"><%= t('descubre') %></span>
 			</div>
 			<div class="filtros-descubre">
-				<%= select_tag("contenido", options_from_collection_for_select(Content.all, "tipo.downcase", "tipo", :include_blank => "Todos") %>
+				<%= select_tag("contenido", options_from_collection_for_select(Content.all, "tipo.downcase", "tipo"), :include_blank => "Todos") %>
 				<%= text_field_tag("tags") %>
 			</div>
 			<div class="wrapper-descubre">
