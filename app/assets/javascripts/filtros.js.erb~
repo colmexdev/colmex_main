@@ -1,6 +1,6 @@
 function filtrarDescubresPorContenido(e){
-	console.log(e.value);
 	var descubresFiltradosPorContenido = descubresPorContenido.filter(function(d){  return (e.value == "" ? d["contenido"] == e.value : true) }).top(Infinity);
+	console.log(descubresFiltradosPorContenido);
 	var bloqueHTML = "Hola"; //construirDescubre(descubresFiltradosPorContenido);
 	$("#wrapper-descubre").html(bloqueHTML);
 }
