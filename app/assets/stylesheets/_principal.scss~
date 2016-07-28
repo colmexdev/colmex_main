@@ -304,8 +304,8 @@ html, body{ height: 100%; }
 
 		>ul{
 			@include centrado;
-
-			>li>a>img { hieght: 25px; }
+			padding-left: 0;
+			>li>a>img { height: 25px; padding: 0 2px; }
 		}
 	}
 }
