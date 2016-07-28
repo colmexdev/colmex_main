@@ -1,9 +1,9 @@
 ancho = Math.max(document.documentElement.clientWidth, window.innerWidth || document.body.ClientWidth || 0);
-
-$(document).ready(function(){
-	dataset = crossfilter(JSON.parse(gon.descubres));
+dataset = crossfilter(JSON.parse(gon.descubres));
 	descubresPorContenido = dataset.dimension(function(d){ return d.contenido; });
 	descubresPorTags = dataset.dimension(function(d){ return d.titulo + " " + d.contenido + " " + d.tags.replace(/ *, */, " ")});
+
+$(document).ready(function(){
 	var alto_footer = $('#div_footer').height();
 	var alto_header = $('#header').height();
 	var ancho_slide = $("#div_slider").width();
@@ -50,6 +50,10 @@ window.onresize = function(){
 		document.getElementById("render_eventos").innerHTML = gon.ev_big;
 		ancho = ancho_act;
 	}
+}
+
+function filtrarDescubresPorContenido(e){
+	
 }
 
 
