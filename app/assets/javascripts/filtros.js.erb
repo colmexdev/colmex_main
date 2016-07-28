@@ -1,4 +1,27 @@
 function filtrarDescubresPorContenido(e){
-	var descubresFiltradosPorContenido = decubresPorContenido.filter(function(d){  return (e.value == "" ? d.toLowerCase() == e.value.toLowerCase() : true) }).top(Infinity);
-	$("#wrapper-descubre").html(<%= construir_descubre(ActiveSupport::JSON.decode(descubresFiltradosPorContenido)) %>);
+	var descubresFiltradosPorContenido = decubresPorContenido.filter(function(d){  return (e.value == "" ? d.contenido == e.value : true) }).top(Infinity);
+	var bloqueHTML = construirDescubre(descubresFiltradosPorContenido);
+	$("#wrapper-descubre").html(bloqueHTML);
 }
+
+function construirDescubre(descubres){
+	var html_str = "";
+	$.each(descubres,function(i, v){
+		html_str = html_str + "<div class=\"frame-descubre\">";
+		if(v["imagen"]["url"] != "/vacio.png"){
+			html_str = html_str + "<img class=\"imagen-descubre\" src=\"" + v["imagen"]["path"] + "\" >";
+		}
+		else{
+			html_str = html_ str + "<span class=\"cont-descubre-pre\">" + v["contenido"] + "</span><br />";
+			html_str = html_str + "<span class=\"titulo-descubre-pre\">" + v["titulo"] + "</span>";
+		}
+		html_str = html_str + "<a href=\""+ v["liga"] + "\" " + (v["contenido"].toLowerCase() == "video" ? ("data-uk-lightbox title=\"\"") : "target=\"_blank\"" ) + "><div class=\"frame-hover\">";
+		html_str = html_str + "<span class=\"cont-descubre\">" + v["contenido"] + "</span><br />";
+		html_str = html_str + "<span class=\"titulo-descubre\">" + v["titulo"] + "</span>";
+		html_str = html_str + "<img class=\"icono-descubre\" src=\"" + "" + "\" >";
+		html_str = html_str + "</div></a></div>";		
+	});
+return html_str;
+}
+
+
