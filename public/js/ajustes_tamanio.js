@@ -52,6 +52,4 @@ window.onresize = function(){
 	}
 }
 
-$("#contenido").onchange = function(e){
-	alert(e.value);
-}
+
