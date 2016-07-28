@@ -52,9 +52,4 @@ window.onresize = function(){
 	}
 }
 
-function filtrarDescubresPorContenido(e){
-	var descubresFiltradosPorContenido = decubresPorContenido.filter(function(d){  return e.value == "" ? d.toLowerCase() == e.value.toLowerCase() : true; }).top(Infinity);
-  <%= construir_descubre(ActiveSupport::JSON.decode(descubresFiltradosPorContenido) %>
-}
-
 
