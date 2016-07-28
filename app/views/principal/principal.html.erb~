@@ -87,7 +87,7 @@ http://revistas.colmex.mx/", :target => "_blank") %></div>
 				<%= select_tag("contenido", options_from_collection_for_select(Content.all, (:tipo).downcase, :tipo), :include_blank => "Todos", :onchange => "filtrarDescubresPorContenido(this)") %>
 				<%= text_field_tag("tags") %>
 			</div>
-			<div class="wrapper-descubre">
+			<div class="wrapper-descubre" id="wrapper">
 				<%= construir_descubre(@descubre) %>
 			</div>
 

@@ -88,7 +88,7 @@ html, body{ height: 100%; }
 
 	.nav.navbar-nav { height: 40px; margin: 0; }
 
-	@media only scree and (max-device-width: 1024px){
+	@media only screen and (max-device-width: 1024px){
 		.nav.navbar-nav { height: 60px; }
 	}
 

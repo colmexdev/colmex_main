@@ -76,6 +76,10 @@ html, body{ height: 100%; }
 
 .navbar { border-radius: 0; margin-bottom: 0; min-height: 40px; }
 
+@media only screen and (max-device-width: 1024px){
+	.navbar { min-height: 60px; }
+}
+
 .navbar-collapse { margin-right: 0; margin-left: 0;}
 
 #barra_nav{
