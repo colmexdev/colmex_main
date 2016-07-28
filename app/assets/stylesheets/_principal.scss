@@ -162,8 +162,6 @@ html, body{ height: 100%; }
 		.navbar-form.navbar-left { margin: 0; display: inline-block; }
 
 		.form-group { margin: 0; padding: 0; float: left;}
-
-    ul.nav.navbar-nav.reajustable { float: left; }
 	}
 
 	@media only screen and (min-width: 0px) and (max-width: 1024px){
@@ -184,6 +182,8 @@ html, body{ height: 100%; }
 				margin-right: 5px;
 			}
 		}
+
+		.borrable { display: none; }
 	}
 
 	.nav_opciones{
@@ -244,6 +244,8 @@ html, body{ height: 100%; }
 .boton_lupa{
 	background-color: #E6E6E6;
 	border: none;
+	padding: 0;
+	padding-left: 10px;
 }
 
 //Estilos asociados al offcanvas
