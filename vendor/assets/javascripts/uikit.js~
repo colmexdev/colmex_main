@@ -3189,8 +3189,7 @@
                     if (target.length && UI.Utils.scrollToElement) {
                         UI.Utils.scrollToElement(target, UI.Utils.options(link.attr('data-uk-smooth-scroll') || '{}'));
                     } else {
-                        alert(href);
-                        window.location.href = href;
+                        //window.location.href = href;
                     }
                 });
                 $html.css("margin-top","");
