@@ -23,6 +23,8 @@ $(document).ready(function(){
 
 	$('.frame-descubre').css({'height':cw+'px'});
 	$('#div_slider').css({'height':alto_slide+'px'});
+
+	partirDescubres();
 });
 
 window.onresize = function(){
@@ -49,6 +51,19 @@ window.onresize = function(){
 	else if(ancho_act >= 1150 && ancho < 1150){
 		document.getElementById("render_eventos").innerHTML = gon.ev_big;
 		ancho = ancho_act;
+	}
+}
+
+function partirDescubres(){
+	var ancho_v = Math.max(document.documentElement.clientWidth, window.innerWidth || document.body.ClientWidth || 0);
+	var json_l = JSON.parse(gon.descubres).length;
+	var alto_d = $(".frame-descubre").width();
+	$("#wrapper-descubre").css({"height" : (alto_d * 2) + "px", "overflow-y" : "hidden" });
+	if((json_l > 10 && ancho_v >= 1340) || (json_l > 8 && ancho_v >= 1050 && ancho_v < 1340) || (json_l > 6 && ancho_v >= 700 && ancho_v < 1050) || (json_l >4 && ancho_v >= 450 && ancho_v < 700) || (json_l > 3 && ancho_v < 450)){
+		$("#cutter-descubre").css("display","block");
+	}
+	else{
+		$("#cutter-descubre").css("display","none");
 	}
 }
 

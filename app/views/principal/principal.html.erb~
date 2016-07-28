@@ -91,7 +91,7 @@ http://revistas.colmex.mx/", :target => "_blank") %></div>
 				<%= construir_descubre(@descubre) %>
 			</div>
 			<div class="cutter-descubre">
-				Ver más
+				VER MÁS
 			</div>
 
 		</div> <!-- Cierre de columnas para "Descubre" -->

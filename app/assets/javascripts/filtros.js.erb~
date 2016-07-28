@@ -12,11 +12,11 @@ function filtrarDescubres(){
 }
 
 function limpiarPuntuacion(tags){
-	var new_tags = tags.replace(/[íïîì]/,"i");
-	new_tags = new_tags.replace(/[áäâà]/,"a");
-	new_tags = new_tags.replace(/[éëêè]/,"e");
-	new_tags = new_tags.replace(/[óöôò]/,"o");
-	new_tags = new_tags.replace(/[úüûù]/,"u");
+	var new_tags = tags.replace(/[íïîì]/i,"i");
+	new_tags = new_tags.replace(/[áäâà]/i,"a");
+	new_tags = new_tags.replace(/[éëêè]/i,"e");
+	new_tags = new_tags.replace(/[óöôò]/i,"o");
+	new_tags = new_tags.replace(/[úüûù]/i,"u");
 	return new_tags;
 }
 
@@ -49,6 +49,11 @@ function encontrarIconoDescubre(tipo_desc){
 			return "/link.png";
 		}
 	}
+}
+
+function desbordarDescubres(){
+	$("#cutter-descubre").css("display","none");
+	$("#wrapper-descubre").css("height","auto");
 }
 
 
