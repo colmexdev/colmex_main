@@ -4,6 +4,9 @@ function filtrarDescubresPorContenido(e){
 	var bloqueHTML = construirDescubre(descubresFiltradosPorContenido);
 	console.log(bloqueHTML);
 	$("#wrapper").html(bloqueHTML);
+
+  var cw = $('.frame-descubre').width();
+	$('.frame-descubre').css({'height':cw+'px'});
 }
 
 function construirDescubre(descubres){
