@@ -65,6 +65,7 @@ function partirDescubres(){
 	else{
 		$("#cutter-descubre").css("display","none");
 	}
+	alert("Entrada");
 	return false;
 }
 
