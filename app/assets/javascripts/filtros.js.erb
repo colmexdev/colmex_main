@@ -1,8 +1,7 @@
 function filtrarDescubresPorContenido(e){
-	var descubresFiltradosPorContenido = descubresPorContenido.filter(function(d){ console.log(d + " " + e.value);  return (e.value == "" ? true : d == e.value ) }).top(Infinity);
-	console.log(descubresFiltradosPorContenido);
+	var descubresFiltradosPorContenido = descubresPorContenido.filter(function(d){ return (e.value == "" ? true : d == e.value ) }).top(Infinity);
 	var bloqueHTML = "Hola"; //construirDescubre(descubresFiltradosPorContenido);
-	$("#wrapper-descubre").html(bloqueHTML);
+	$("#wrapper-descubre").html(e.value);
 }
 
 /*function construirDescubre(descubres){
