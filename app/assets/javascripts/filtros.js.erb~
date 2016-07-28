@@ -9,7 +9,7 @@ function construirDescubre(descubres){
 	for(i = 0; i < descubres.length; i++){
 		html_str = html_str + "<div class=\"frame-descubre\">";
 		if(descubres[i]["imagen_file_name"] != null){
-			var path_img = "/assets/descubre/" + descubres[i]["id"] + "/original/" + descubres[i]["imagen_file_name";
+			var path_img = "/assets/descubre/" + descubres[i]["id"] + "/original/" + descubres[i]["imagen_file_name"];
 			html_str = html_str + "<img class=\"imagen-descubre\" src=\"" + path_img + "\" >";
 		}
 		else{
