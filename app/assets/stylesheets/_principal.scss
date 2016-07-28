@@ -103,7 +103,7 @@ html, body{ height: 100%; }
 		height: inherit;
 
 		@media only screen and (max-device-width: 1024px){
-			a{ margin-top: 10px; }
+			a{ margin-top: 5px; }
 		}
 	}	
 
@@ -228,6 +228,10 @@ html, body{ height: 100%; }
 				img { height: 20px; }
 			}	
 		}
+
+		@media only screen and (max-device-width: 1024px){
+			.mostrable, .borrable { margin-top: 5px; }
+		}
 		
 		@media only screen and (min-width: 0px) and (max-width: 1160px){
 			.mostrable{ display: inline-block; }
@@ -255,7 +259,7 @@ html, body{ height: 100%; }
 }
 
 @media only screen and (max-device-width: 1024px){
-	.form-control { margin-top: 18px; }
+	.form-control { margin-top: 13px; }
 }
 
 .form-control:focus{
