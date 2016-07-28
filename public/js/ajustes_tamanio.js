@@ -1,8 +1,8 @@
 ancho = Math.max(document.documentElement.clientWidth, window.innerWidth || document.body.ClientWidth || 0);
 
 $(document).ready(function(){
-	dataset = crossfilter(gon.descubres);
-	descubresPorContenido = dataset.dimension(function(d){ return d.contenido;});
+	dataset = crossfilter(JSON.parse(gon.descubres));
+	descubresPorContenido = dataset.dimension(function(d){ return d.contenido; });
 	descubresPorTags = dataset.dimension(function(d){ return d.titulo + " " + d.contenido + " " + d.tags.replace(/ *, */, " ")});
 	var alto_footer = $('#div_footer').height();
 	var alto_header = $('#header').height();
