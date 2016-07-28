@@ -963,6 +963,14 @@ ul.ul-nav { display: table; float: left !important;
 			.frame-descubre { width: 100%; }
 		}
   }
+
+	.cutter-descubre{
+		width: 85%;
+		color: #7E3355;
+		font-size: 25px;
+		margin: 0 auto;
+		padding: 15px 0;
+	}
 }
 
 #wrapper-donacion{
