@@ -1,4 +1,4 @@
 function filtrarDescubresPorContenido(e){
 	var descubresFiltradosPorContenido = decubresPorContenido.filter(function(d){  return (e.value == "" ? d.toLowerCase() == e.value.toLowerCase() : true) }).top(Infinity);
-	$("#wrapper-descubre").html(<%= construir_descubre(ActiveSupport::JSON.decode(descubresFiltradosPorContenido) %>);
+	$("#wrapper-descubre").html(<%= construir_descubre(ActiveSupport::JSON.decode(descubresFiltradosPorContenido)) %>);
 }
