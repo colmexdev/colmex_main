@@ -12,6 +12,7 @@ class PrincipalController < ApplicationController
     @sliders = Slider.where("fecha_expiracion > ? ", Date.current()).order("RAND()")
     @descubre = Descubre.where("fecha_publicacion <= ? AND fecha_limite_pub > ?", Date.current(), Date.current()).order("RAND()")
     @frase = Frase.order("RAND()").first
+    gon.descubres = @descubre.to_json
   end
 
   def resultados_busqueda

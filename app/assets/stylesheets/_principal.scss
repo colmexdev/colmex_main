@@ -305,16 +305,16 @@ ul.ul-nav { display: table; float: left !important;
 
 //Clase para alterar el div donde va el logotipo de colmex
 #div_logo{
-	height: 150px;
+	height: auto;
 	text-align: center;
-	position: relative;
 	background-color: #fff;
 
 	#img_logo{
 		width: 85%;
 		max-width: 650px;
+		min-width: 150px;
 		display: inline-block;
-		@include centrado;
+		margin: 40px auto;
 	}
 }
 
@@ -471,8 +471,6 @@ ul.ul-nav { display: table; float: left !important;
 						max-width:180px;
 						position: absolute;
 					}
-
-					
 				}
 			}
 		}
@@ -490,14 +488,6 @@ ul.ul-nav { display: table; float: left !important;
 		}
 	}
 }
-
-/*@media only screen and (min-width: 560px) and (max-width: 1024px){
-	#div_slider{ height: 400px; } 
-}
-
-@media only screen and (min-width: 0px) and (max-width: 560px){
-	#div_slider{ height: 300px; } 
-}*/
 
 //Clases que afectan la sección de eventos
 #div_eventos{
