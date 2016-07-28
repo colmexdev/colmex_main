@@ -101,6 +101,10 @@ html, body{ height: 100%; }
 		color: #7F7F7F;
 		position: relative;
 		height: inherit;
+
+		@media only screen and (max-device-width: 1024px){
+			a{ margin-top: 10px; }
+		}
 	}	
 
 	.idioma{
@@ -248,6 +252,10 @@ html, body{ height: 100%; }
 	-moz-transition: all 0.4s linear;
 	-o-transition: all 0.4s linear;
 	transition: all 0.4s linear;
+}
+
+@media only screen and (max-device-width: 1024px){
+	.form-control { margin-top: 18px; }
 }
 
 .form-control:focus{
