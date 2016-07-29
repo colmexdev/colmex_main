@@ -959,6 +959,8 @@ ul.ul-nav { display: table; float: left !important;
 
 			p{
 				@include centrado;
+				width: 90%;
+				margin: 0 auto;
 			}
 	
 			a{
@@ -983,6 +985,8 @@ ul.ul-nav { display: table; float: left !important;
 
 					>p{
 						@include centrado;
+						width: 90%;
+						margin: 0 auto;
 
 						.cont-descubre{
 							color: #fff;
