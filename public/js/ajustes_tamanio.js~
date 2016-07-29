@@ -100,8 +100,8 @@ function ajustarImagenes(){
 	var ancho_ct = $("#col-ct").innerWidth();
 	var ancho_der = $("#col-der").innerWidth();
 	var img_izq = $("#img-pub").width();
-	var img_pred = $("#img-pred").width();
-	var img_rev = $("#img-rev").width();
+	var img_pred = $("#img-pred-xs").width();
+	var img_rev = $("#img-rev-xs").width();
 
 	if(ancho_izq - 30 < img_izq){
 		$("#img-pub").css("width","95%");
@@ -122,20 +122,6 @@ function ajustarImagenes(){
 		}
 		else{
 			$("#img-pred-xs").removeAttr("style");
-		}
-	}
-	else{
-		if(ancho_ct - 30 < img_pred){
-			$("#img-pred-sm").css("width","95%");
-		}
-		else{
-			$("#img-pred-sm").removeAttr("style");
-		}
-		if(ancho_der - 30 < img_rev){
-			$("#img-rev-sm").css("width","95%");
-		}
-		else{
-			$("#img-rev-sm").removeAttr("style");
 		}
 	}
 }

@@ -47,6 +47,7 @@ a, a:hover, a:active, a:visited, a:link{  text-decoration: none; }
 	font-weight: 700; 
 	font-size: 28px;
 }
+p {text-align: justify; font-size: 15px;}
 
 .titulo-chico.morado, .titulo-grande.morado{ color: #7E3355; }
 
@@ -176,7 +177,9 @@ html, body{ height: 100%; }
 
 		.navbar-form.navbar-left { margin: 0; display: inline-block; }
 
-		.form-group { /*margin: 0; padding: 0; float: left;*/ display: none; }
+		.form-group { display: none; }
+
+		.boton-lupa { display: none; }
 	}
 
 	@media only screen and (min-width: 0px) and (max-width: 1024px){
@@ -956,6 +959,8 @@ ul.ul-nav { display: table; float: left !important;
 
 			p{
 				@include centrado;
+				width: 90%;
+				margin: 0 auto;
 			}
 	
 			a{
@@ -980,6 +985,8 @@ ul.ul-nav { display: table; float: left !important;
 
 					>p{
 						@include centrado;
+						width: 90%;
+						margin: 0 auto;
 
 						.cont-descubre{
 							color: #fff;
