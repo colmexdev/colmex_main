@@ -75,6 +75,7 @@ function partirDescubres(){
 
 function desbordarDescubres(){
 	var ancho_v = Math.max(document.documentElement.clientWidth, window.innerWidth || document.body.ClientWidth || 0);
+	alert($("#wrapper").css("height"));
 	if($("#wrapper").css("height") != "auto"){
 		num_filas = num_filas + 2;
 	}
