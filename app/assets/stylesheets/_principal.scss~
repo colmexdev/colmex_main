@@ -176,7 +176,7 @@ html, body{ height: 100%; }
 
 		.navbar-nav { margin-left: 10px;}
 
-		.navbar-nav.navbar-right { /*float: right !important; margin-right: 10px;*/ display: none;}
+		.navbar-nav.navbar-right { /*float: right !important; margin-right: 10px;*/ display: none; }
 
 		.navbar-form.navbar-left { margin: 0; display: inline-block; }
 
