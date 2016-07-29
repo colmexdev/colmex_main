@@ -1341,11 +1341,13 @@ ul.ul-nav { display: table; float: left !important;
 		border-left: 1px solid #fff;
 		color: #fff;
 		font-size: 13px;
-		
+
 		img{
 			width: 40%;
 			max-width: 300px;
 		}
+
+		p{ text-align: center; }
 	}
 
   @media only screen and (min-width: 0px) and (max-width: 1460px){
