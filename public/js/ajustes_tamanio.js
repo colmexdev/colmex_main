@@ -61,10 +61,10 @@ function partirDescubres(){
 	var ancho_v = Math.max(document.documentElement.clientWidth, window.innerWidth || document.body.ClientWidth || 0);
 	var json_l = JSON.parse(gon.descubres).length;
 	var alto_d = $(".frame-descubre").height();
-	if( $("#wrapper").css("height") != "auto"){
-		$("#wrapper").css({"height" : (alto_d * num_filas) + "px", "overflow-y" : "hidden", "-webkit-transition" : "height 0.5s linear", "-moz-transition" : "height 0.5s linear", "-o-transition" : "height 0.5s linear", "transition" : "height 0.5s linear"});
+	if( $("#wrapper").style.height != "auto"){
+		$("#wrapper").css({"height" : $("#wrapper").height() >= alto_d * num_filas ? "auto" : (alto_d * num_filas) + "px", "overflow-y" : "hidden", "-webkit-transition" : "height 0.5s linear", "-moz-transition" : "height 0.5s linear", "-o-transition" : "height 0.5s linear", "transition" : "height 0.5s linear"});
 	}
-	if(((json_l > 10 && ancho_v >= 1340 ) || (json_l > 8 && ancho_v >= 1050 && ancho_v < 1340) || (json_l > 6 && ancho_v >= 700 && ancho_v < 1050) || (json_l >4 && ancho_v >= 450 && ancho_v < 700) || (json_l > 3 && ancho_v < 450)) && $("#wrapper").css("height") != "auto"){
+	if(((json_l > 10 && ancho_v >= 1340 ) || (json_l > 8 && ancho_v >= 1050 && ancho_v < 1340) || (json_l > 6 && ancho_v >= 700 && ancho_v < 1050) || (json_l >4 && ancho_v >= 450 && ancho_v < 700) || (json_l > 3 && ancho_v < 450)) && $("#wrapper").style.height != "auto"){
 		$("#cutter-descubre").css("display","block");
 	}
 	else{
@@ -75,8 +75,8 @@ function partirDescubres(){
 
 function desbordarDescubres(){
 	var ancho_v = Math.max(document.documentElement.clientWidth, window.innerWidth || document.body.ClientWidth || 0);
-	alert($("#wrapper").css("height"));
-	if($("#wrapper").css("height") != "auto"){
+	alert($("#wrapper").style.height);
+	if($("#wrapper").style.height != "auto"){
 		num_filas = num_filas + 2;
 	}
 	var div_filas = (ancho_v >= 1340 ? 5 : (ancho_v >= 1050 ? 4 : (ancho_v >= 700 ? 3 : (ancho_v >= 450 ? 2 : 1))));
