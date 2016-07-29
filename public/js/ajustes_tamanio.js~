@@ -103,12 +103,15 @@ function ajustarImagenes(){
 	var img_pred = $("#img-pred").width();
 	var img_rev = $("#img-rev").width();
 
+	console.log(ancho_izq + " " + img_izq);
 	if(ancho_izq < img_izq){
 		$("#img-pub").css("width","auto");
 	}
 	else{
 		$("#img-pub").removeAttr("style");
 	}
+	console.log(ancho_ct + " " + img_pred);
+	console.log(ancho_izq + " " + img_rev);
 	if(window.innerWidth <= 768){
 		if(ancho_ct < img_rev){
 			$("#img-rev").css("width","auto");
