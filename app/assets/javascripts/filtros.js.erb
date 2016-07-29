@@ -8,6 +8,7 @@ function filtrarDescubres(){
 	var bloqueHTML = construirDescubre(descubresFiltradosPorTags);
 	$("#wrapper").html(bloqueHTML);
 	$("#wrapper").css("height","auto");
+	$("#cutter-descubre").css("display","none");
   var cw = $('.frame-descubre').width();
 	$('.frame-descubre').css({'height':cw+'px'});
 	

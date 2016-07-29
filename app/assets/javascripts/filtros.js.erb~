@@ -7,8 +7,10 @@ function filtrarDescubres(){
 	var descubresFiltradosPorTags = descubresPorTags.filter(function(d){ return (tagsAFiltrar == "" ? true : limpiarPuntuacion(d).indexOf(tagsAFiltrar) != -1)}).top(Infinity);
 	var bloqueHTML = construirDescubre(descubresFiltradosPorTags);
 	$("#wrapper").html(bloqueHTML);
+	$("#wrapper").css("height","auto");
   var cw = $('.frame-descubre').width();
 	$('.frame-descubre').css({'height':cw+'px'});
+	
 }
 
 function limpiarPuntuacion(tags){
