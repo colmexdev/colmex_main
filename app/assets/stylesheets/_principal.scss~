@@ -904,6 +904,14 @@ ul.ul-nav { display: table; float: left !important;
 			color: #5E002B;
 			font-size: 20px;
 			cursor: pointer;
+			-webkit-transition: color 0.5s linear;
+			-moz-transition: color 0.5s linear;
+			-o-transition: color 0.5s linear;
+			transition: color 0.5s linear;
+		}
+
+		#lupa-descubre:hover{
+			color: #470020;
 		}
 	}
 
