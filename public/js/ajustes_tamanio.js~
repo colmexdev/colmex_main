@@ -82,6 +82,8 @@ function desbordarDescubres(){
 	var cantidad_filas = Math.ceil(JSON.parse(gon.descubres).length / div_filas);
 	$("#wrapper").css({"height" : (($("#wrapper").height() + (($(".frame-descubre").height() * 2)) > ($(".frame-descubre").height() * cantidad_filas) || document.getElementById("wrapper").style.height == "auto" ) ? "auto" : ($(".frame-descubre").height() * num_filas) + "px")});
 	$("#cutter-descubre").css("display", $("#wrapper").height() + ($(".frame-descubre").height() * 2) >= ($(".frame-descubre").height() * cantidad_filas)  ? "none" : "block");
+
+	margenAuto();
 	return false;
 }
 

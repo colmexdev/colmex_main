@@ -15,7 +15,7 @@ $(document).ready(function(){
 			$("#div_eventos").css("height","0");
 	}
 	else{
-		if(ancho < 600){ document.getElementById("render_eventos").innerHTML = gon.ev_tiny; }
+		if(ancho < 785){ document.getElementById("render_eventos").innerHTML = gon.ev_tiny; }
 		else if(ancho < 1150){ document.getElementById("render_eventos").innerHTML = gon.ev_small; }
 		else{ document.getElementById("render_eventos").innerHTML = gon.ev_big;}
 	}
