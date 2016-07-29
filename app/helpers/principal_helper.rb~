@@ -116,7 +116,7 @@ module PrincipalHelper
       bloque_html = bloque_html + ActionController::Base.helpers.image_tag(Content.where(tipo: d.contenido).first.icono.url, :class => "icono-descubre")
       bloque_html = bloque_html + "</div></a></div>"
     end
-
     return bloque_html.html_safe
   end
+
 end

@@ -45,7 +45,7 @@ module PrincipalHelper
           end
           bloque_html = bloque_html + construirEvento(fila)
           bloque_opt_html = bloque_opt_html + construirEvento(fila)
-          bloque_tiny_html = bloque_tiny_html + construirEvento(fila)
+          bloque_tiny_html = bloque_tiny_html + construirEvento(fila, true)
         end
         bloque_html = bloque_html + '</div>'
         bloque_opt_html = bloque_opt_html + '</div>'
@@ -59,7 +59,7 @@ module PrincipalHelper
     return bloque_html, bloque_opt_html, bloque_tiny_html
   end
 
-  def construirEvento(fila)
+  def construirEvento(fila, chico = false)
     centros = ['ceaa', 'cedua', 'cee', 'ceh', 'cei', 'cell', 'ces', 'colmex', 'bdcv']
     bloque_html = '<div class="img_evento">'
     bloque_html = bloque_html + ( centros.include?(fila["centroSiglas"].downcase) ? ActionController::Base.helpers.image_tag(fila["centroSiglas"].downcase + ".png", :class => "img_sede") : '') + "</div>"
@@ -72,7 +72,7 @@ module PrincipalHelper
     bloque_html = bloque_html + '<div class="lugar_fecha_evento">'
     bloque_html = bloque_html + '<div class="cal">' + ActionController::Base.helpers.image_tag("calendario.png", :class => "img_cal") + '</div>'
     bloque_html = bloque_html + '<div class="datos_evento"><p>'
-    bloque_html = bloque_html + arregloFecha(fila["fechaInicio"], fila["fechaFin"]) + "<br>"
+    bloque_html = bloque_html + arregloFecha(fila["fechaInicio"], fila["fechaFin"], chico) + "<br>"
     bloque_html = bloque_html + l(Time.parse(fila["horaInicio"]), format: "%H:%M") + " | " + l(Time.parse(fila["horaFin"]), format: "%H:%M") + "<br>"
     bloque_html = bloque_html + fila["sede"].to_s + ', 
 <br><span>' + fila["institucionSede"].to_s + "</span></p></div></div>"
@@ -83,12 +83,12 @@ module PrincipalHelper
     return bloque_html
   end
 
-  def arregloFecha(fechaI, fechaF)
+  def arregloFecha(fechaI, fechaF, chico)
     diferencia = Date.strptime(fechaI,"%d/%m/%Y") - Date.strptime(fechaF,"%d/%m/%Y")
     if diferencia == 0
       return l(Date.strptime(fechaI,"%d/%m/%Y"), format: :long)
     else
-      return l(Date.strptime(fechaI,"%d/%m/%Y"), format: :long) + "<br>" + l(Date.strptime(fechaF,"%d/%m/%Y"), format: :long)
+      return l(Date.strptime(fechaI,"%d/%m/%Y"), format: (chico ? :short : :long)) + "<br>" + l(Date.strptime(fechaF,"%d/%m/%Y"), format: (chico ? :short : :long))
     end
   end
 
