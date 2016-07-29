@@ -68,7 +68,7 @@ function partirDescubres(){
 	else{
 		$("#cutter-descubre").css("display","none");
 	}
-	if(document.getElementById("wrapper").style.height != "auto")
+	if(document.getElementById("wrapper").style.height != "auto"){
 		$("#cutter-descubre").css("display","block");
 	}
 	else{
