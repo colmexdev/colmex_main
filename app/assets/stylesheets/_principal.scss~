@@ -94,10 +94,6 @@ html, body{ height: 100%; }
 		color: #7F7F7F;
 		position: relative;
 		height: inherit;
-
-		@media only screen and (max-device-width: 1024px){
-			a{ margin-top: 5px; }
-		}
 	}	
 
 	.idioma{
