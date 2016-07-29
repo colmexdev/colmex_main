@@ -983,6 +983,7 @@ ul.ul-nav { display: table; float: left !important;
 					height: 100%;
 					background-color: #993366;
 					position: absolute;
+					text-align: center;
 					opacity: 0;
 					-webkit-transition: opacity 0.5s linear;
 					-moz-transition: opacity 0.5s linear;

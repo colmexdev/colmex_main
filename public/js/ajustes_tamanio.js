@@ -103,38 +103,38 @@ function ajustarImagenes(){
 	var img_pred = $("#img-pred").width();
 	var img_rev = $("#img-rev").width();
 
-	if(ancho_izq - 10 < img_izq){
+	if(ancho_izq - 30 < img_izq){
 		$("#img-pub").css("width","90%");
 	}
 	else{
 		$("#img-pub").removeAttr("style");
 	}
 	if(window.innerWidth <= 768){
-		if(ancho_ct - 10 < img_rev){
-			$("#img-rev").css("width","90%");
+		if(ancho_ct - 30 < img_rev){
+			$("#img-rev-xs").css("width","90%");
 		}
 		else{
-			$("#img-rev").removeAttr("style");
+			$("#img-rev-xs").removeAttr("style");
 		}
-		if(ancho_der - 10 < img_pred){
-			$("#img-pred").css("width","90%");
+		if(ancho_der - 30 < img_pred){
+			$("#img-pred-sm").css("width","90%");
 		}
 		else{
-			$("#img-pred").removeAttr("style");
+			$("#img-pred-sm").removeAttr("style");
 		}
 	}
 	else{
-		if(ancho_ct - 10 < img_pred){
-			$("#img-pred").css("width","90%");
+		if(ancho_ct - 30 < img_pred){
+			$("#img-pred-xs").css("width","99%");
 		}
 		else{
-			$("#img-pred").removeAttr("style");
+			$("#img-pred-xs").removeAttr("style");
 		}
-		if(ancho_der - 10 < img_rev){
-			$("#img-rev").css("width","90%");
+		if(ancho_der - 30 < img_rev){
+			$("#img-rev-sm").css("width","90%");
 		}
 		else{
-			$("#img-rev").removeAttr("style");
+			$("#img-rev-sm").removeAttr("style");
 		}
 	}
 }
