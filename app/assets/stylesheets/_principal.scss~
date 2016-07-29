@@ -168,15 +168,17 @@ html, body{ height: 100%; }
 		}
 	}
 
-	.mostrable-chico { display: none; }
+	.mostrable-chico { display: none; float: right;}
 
 	@media only screen and (max-width: 767px){
 
 		.borrable { display: none; }
+		
+		.mostrable-chico { display: block; }
 
 		.navbar-nav { margin-left: 10px;}
 
-		.navbar-nav.navbar-right { float: right !important; margin-right: 10px; }
+		.navbar-nav.navbar-right { display: none; }
 
 		.navbar-form.navbar-left { margin: 0; display: inline-block; }
 
@@ -1361,7 +1363,7 @@ ul.ul-nav { display: table; float: left !important;
 
 	@media only screen and (max-width: 991px) and (min-width: 0px){
 		#footer_izq { display: none; }
-		#footer_centro { border: none; height: auto; >p { margin: 0; font-size: 11px;} }
+		#footer_centro { border: none; height: auto; >p { margin: 0 auto; font-size: 11px;} }
 		#footer_der { 
 			height: auto;
 			padding-left: 0;

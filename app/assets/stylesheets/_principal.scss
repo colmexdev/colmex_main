@@ -168,15 +168,17 @@ html, body{ height: 100%; }
 		}
 	}
 
-	.mostrable-chico { display: none; }
+	.mostrable-chico { display: none; float: right;}
 
 	@media only screen and (max-width: 767px){
 
 		.borrable { display: none; }
+		
+		.mostrable-chico { display: block; }
 
 		.navbar-nav { margin-left: 10px;}
 
-		.navbar-nav.navbar-right { float: right !important; margin-right: 10px; }
+		.navbar-nav.navbar-right { display: none; }
 
 		.navbar-form.navbar-left { margin: 0; display: inline-block; }
 
@@ -1339,11 +1341,13 @@ ul.ul-nav { display: table; float: left !important;
 		border-left: 1px solid #fff;
 		color: #fff;
 		font-size: 13px;
-		
+
 		img{
 			width: 40%;
 			max-width: 300px;
 		}
+
+		p{ text-align: center; }
 	}
 
   @media only screen and (min-width: 0px) and (max-width: 1460px){
