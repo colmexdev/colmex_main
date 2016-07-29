@@ -920,7 +920,7 @@ ul.ul-nav { display: table; float: left !important;
 		>input{
 			border-radius: 5px;
 			height: 35px;
-			position: relative:
+			position: relative;
 			top: -2px;
 			font-weight: 600;
 			font-size: 15px;
@@ -990,11 +990,11 @@ ul.ul-nav { display: table; float: left !important;
 					transition: opacity 0.5s linear;
 
 					.cont-descubre{
-						color: green;
+						color: #fff;
 					}
 
 					.titulo-descubre{
-						color: #4E4E4E;
+						color: #fff;
 
 					}
 

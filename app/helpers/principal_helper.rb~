@@ -86,7 +86,7 @@ module PrincipalHelper
   def arregloFecha(fechaI, fechaF, chico)
     diferencia = Date.strptime(fechaI,"%d/%m/%Y") - Date.strptime(fechaF,"%d/%m/%Y")
     if diferencia == 0
-      return l(Date.strptime(fechaI,"%d/%m/%Y"), format: :long)
+      return l(Date.strptime(fechaI,"%d/%m/%Y"), format: (chico ? :short : :long))
     else
       return l(Date.strptime(fechaI,"%d/%m/%Y"), format: (chico ? :short : :long)) + "<br>" + l(Date.strptime(fechaF,"%d/%m/%Y"), format: (chico ? :short : :long))
     end
