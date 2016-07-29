@@ -169,17 +169,20 @@ html, body{ height: 100%; }
 	}
 
 	@media only screen and (max-width: 767px){
+
 		.borrable { display: none; }
+
+		.mostrable-chico { display: block; }
 
 		.navbar-nav { margin-left: 10px;}
 
-		.navbar-nav.navbar-right { float: right !important; margin-right: 10px;}
+		.navbar-nav.navbar-right { /*float: right !important; margin-right: 10px;*/ display: none;}
 
 		.navbar-form.navbar-left { margin: 0; display: inline-block; }
 
 		.form-group { display: none; }
 
-		.boton-lupa { display: none; }
+		.boton_lupa { display: none; }
 	}
 
 	@media only screen and (min-width: 0px) and (max-width: 1024px){
