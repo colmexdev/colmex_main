@@ -1,7 +1,6 @@
 /* Estilos asociados a la página principal */
 //Declaracion de variables                         
 
-
 //Mixins para evitar repeticiones
 
 @mixin centrado {
@@ -550,7 +549,7 @@ ul.ul-nav { display: table; float: left !important;
 
 		.carousel-control.right, .carousel-control.left{
 			opacity: 0.9;
-			width: 60px;
+			width: 40px;
 			color: #993366;
 			text-shadow: none;
 			background-color: rgba(131,131,131,0.3);
@@ -565,10 +564,10 @@ ul.ul-nav { display: table; float: left !important;
 				float: left;
 				text-align: center;
 				height: 100%;
-				width: calc(100% - 60px);
-				width: -moz-calc(100% - 60px);
-				width: -webkit-calc(100% - 60px);
-				padding-left: 60px;
+				width: calc(100% - 40px);
+				width: -moz-calc(100% - 40px);
+				width: -webkit-calc(100% - 40px);
+				padding-left: 40px;
 
 				.evento{
 					float: left;
