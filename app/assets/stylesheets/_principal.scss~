@@ -996,14 +996,14 @@ ul.ul-nav { display: table; float: left !important;
 						.titulo-descubre{
 							color: #fff;
 						}
+					}
 
-						.icono-descubre{
-							position: absolute;
-							right: 10px;
-							bottom: 10px;
-							max-width: 20px;
-							max-height: 20px;
-						}
+					.icono-descubre{
+						position: absolute;
+						right: 10px;
+						bottom: 10px;
+						max-width: 20px;
+						max-height: 20px;
 					}
 				}
 
