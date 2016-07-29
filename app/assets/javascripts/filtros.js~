@@ -7,11 +7,11 @@ function filtrarDescubres(){
 	var descubresFiltradosPorTags = descubresPorTags.filter(function(d){ return (tagsAFiltrar == "" ? true : limpiarPuntuacion(d).indexOf(tagsAFiltrar) != -1)}).top(Infinity);
 	var bloqueHTML = construirDescubre(descubresFiltradosPorTags);
 	$("#wrapper").html(bloqueHTML);
-	$("#wrapper").css("height","auto");
+	$("#wrapper").css({"height" : "auto", "margin-bottom" : "45px" });
 	$("#cutter-descubre").css("display","none");
   var cw = $('.frame-descubre').width();
 	$('.frame-descubre').css({'height':cw+'px'});
-	
+	console.log(tagsAFiltrar);
 }
 
 function limpiarPuntuacion(tags){
@@ -24,9 +24,9 @@ function limpiarPuntuacion(tags){
 }
 
 function construirDescubre(descubres){
-	var html_str = "";
-	if(descubres == [] || descubres == null)
+	if(descubres == null)
 		return "Ningún resultado coincide con los parámetros de búsqueda";
+	var html_str = "";
 	for(var i = 0; i < descubres.length; i++){
 		html_str = html_str + "<div class=\"frame-descubre\">";
 		if(descubres[i]["imagen_file_name"] != null){
