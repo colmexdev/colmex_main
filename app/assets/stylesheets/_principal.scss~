@@ -964,7 +964,7 @@ ul.ul-nav { display: table; float: left !important;
 		}
   }
 
-	.cutter-descubre{
+	#cutter-descubre{
 		width: 85%;
 		color: #7E3355;
 		font-size: 25px;

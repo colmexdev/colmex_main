@@ -61,7 +61,7 @@ function partirDescubres(){
 	var ancho_v = Math.max(document.documentElement.clientWidth, window.innerWidth || document.body.ClientWidth || 0);
 	var json_l = JSON.parse(gon.descubres).length;
 	var alto_d = $(".frame-descubre").height();
-	$("#wrapper").css({"height" : (alto_d * num_filas) + "px", "overflow-y" : "hidden", "-webkit-transition" : "height 0.5s linear", "-moz-transition" : "height 0.5s linear", "-o-transition" : "height 0.5s linear", "transition" : "height 0.5s linear"});
+	$("#wrapper").css({"height" : (document.getElementById("wrapper").style.height == "auto" ? "auto" : (alto_d * num_filas) + "px"), "overflow-y" : "hidden", "-webkit-transition" : "height 0.5s linear", "-moz-transition" : "height 0.5s linear", "-o-transition" : "height 0.5s linear", "transition" : "height 0.5s linear"});
 	if(((json_l > 10 && ancho_v >= 1340 ) || (json_l > 8 && ancho_v >= 1050 && ancho_v < 1340) || (json_l > 6 && ancho_v >= 700 && ancho_v < 1050) || (json_l >4 && ancho_v >= 450 && ancho_v < 700) || (json_l > 3 && ancho_v < 450)) && document.getElementById("wrapper").style.height != "auto"){
 		$("#cutter-descubre").css("display","block");
 	}
@@ -73,13 +73,12 @@ function partirDescubres(){
 
 function desbordarDescubres(){
 	var ancho_v = Math.max(document.documentElement.clientWidth, window.innerWidth || document.body.ClientWidth || 0);
-	alert(document.getElementById("wrapper").style.height);
 	if(document.getElementById("wrapper").style.height != "auto"){
 		num_filas = num_filas + 2;
 	}
 	var div_filas = (ancho_v >= 1340 ? 5 : (ancho_v >= 1050 ? 4 : (ancho_v >= 700 ? 3 : (ancho_v >= 450 ? 2 : 1))));
 	var cantidad_filas = Math.ceil(JSON.parse(gon.descubres).length / div_filas);
-	$("#wrapper").css({"height" : (($("#wrapper").height() + ($(".frame-descubre").height() * 2)) > ($(".frame-descubre").height() * cantidad_filas) ? "auto" : ($(".frame-descubre").height() * num_filas) + "px")});
+	$("#wrapper").css({"height" : (($("#wrapper").height() + (($(".frame-descubre").height() * 2)) > ($(".frame-descubre").height() * cantidad_filas) || document.getElementById("wrapper").style.height == "auto" ) ? "auto" : ($(".frame-descubre").height() * num_filas) + "px")});
 	$("#cutter-descubre").css("display", $("#wrapper").height() + ($(".frame-descubre").height() * 2) >= ($(".frame-descubre").height() * cantidad_filas)  ? "none" : "block");
 	return false;
 }
