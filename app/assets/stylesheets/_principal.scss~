@@ -470,7 +470,7 @@ ul.ul-nav { display: table; float: left !important;
 #div_slider{
 	text-align: center;
 	max-height: 570px;
-	min-height: 200px;
+	min-height: 240px;
 
 	#myCarousel{
 	    	position: relative;
@@ -507,7 +507,7 @@ ul.ul-nav { display: table; float: left !important;
 					width: 100%;
 					text-align: center;
 					@include centrado;
-					min-height:200px;
+					min-height:240px;
 				}
 			
 				.liga_img{
