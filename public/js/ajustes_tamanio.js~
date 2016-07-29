@@ -77,7 +77,7 @@ function desbordarDescubres(){
 	var div_filas = (ancho_v >= 1340 ? 5 : (ancho_v >= 1050 ? 4 : (ancho_v >= 700 ? 3 : (ancho_v >= 450 ? 2 : 1))));
 	var cantidad_filas = Math.ceil(JSON.parse(gon.descubres).length / div_filas);
 	$("#wrapper").css({"height" : (($("#wrapper").height() + ($(".frame-descubre").height() * 2)) > ($(".frame-descubre").height() * cantidad_filas) ? "auto" : ($(".frame-descubre").height() * num_filas) + "px")});
-	$("#cutter-descubre").css("display", $("#wrapper").height() >= ($(".frame-descubre").height() * cantidad_filas)  ? "none" : "block");
+	$("#cutter-descubre").css("display", $("#wrapper").height() + ($(".frame-descubre").height() * 2) >= ($(".frame-descubre").height() * cantidad_filas)  ? "none" : "block");
 	return false;
 }
 
