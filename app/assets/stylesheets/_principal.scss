@@ -883,6 +883,26 @@ ul.ul-nav { display: table; float: left !important;
 		width: 85%;
 		margin: 20px auto 30px auto;
 		text-align: right;
+
+		>span{
+			font-weight: 700;
+		}
+	
+		>select{
+			font-weight: 600;
+			font-size: 15px;
+			padding: 2px 5px;
+		}
+
+		>input{
+			font-size: 15px;
+		}
+
+		#lupa-descubre{
+			color: #5E002B;
+			font-size: 15px;
+			cursor: pointer;
+		}
 	}
 
   .wrapper-descubre{

@@ -84,8 +84,10 @@ http://revistas.colmex.mx/", :target => "_blank") %></div>
 				<span class="titulo-grande morado"><%= t('descubre') %></span>
 			</div>
 			<div class="filtros-descubre">
-				<%= select_tag("contenido", options_from_collection_for_select(Content.all, (:tipo).downcase, :tipo), :include_blank => "Todos", :onchange => "filtrarDescubres();") %>
-				<%= text_field_tag("tags", "", :oninput => "filtrarDescubres();") %>
+				<span class="span-filtros">Filtrar por:</span>
+				<%= select_tag("contenido", options_from_collection_for_select(Content.all, (:tipo).downcase, :tipo), :include_blank => "Categoría (Todos)", :onchange => "filtrarDescubres();") %>
+				<%= text_field_tag("tags", "", :oninput => "filtrarDescubres();", :placeholder => "Contenido") %>
+				<span id="lupa-descubre" class="glyphicon glyphicon-search" aria-hidden="true"></span>
 			</div>
 			<div class="wrapper-descubre" id="wrapper">
 				<%= construir_descubre(@descubre) %>
