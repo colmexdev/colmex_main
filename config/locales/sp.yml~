@@ -43,6 +43,7 @@ sp:
     texto: "Suscríbete a nuestra Agenda"
     boton: "Suscribirse"
     placeholder: "tucorreo@dominio.com"
+  descubre: "DESCUBRE"
   footer:
     liga1: "Principios Éticos"
     liga2: "Aviso de Privacidad"
@@ -106,7 +107,7 @@ sp:
     - Viernes
     - Sábado
     formats:
-      default: "%d/%m/%Y"
+      default: "%d-%m-%Y"
       long: "%A %d de %B"
       short: "%d de %b"
     month_names:
