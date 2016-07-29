@@ -904,6 +904,9 @@ ul.ul-nav { display: table; float: left !important;
 			font-weight: 600;
 			border-width: 1px;
 			border-radius: 5px;
+			appearance: none;
+			-webkit-appearance: none;
+			-moz-appearance: none;
 			margin: 0 10px;
 			background: image-url("select.png") no-repeat 96% 0;
 
