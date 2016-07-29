@@ -926,24 +926,6 @@ ul.ul-nav { display: table; float: left !important;
 			font-size: 15px;
 			padding: 1px 5px;
 		}
-
-		#lupa-descubre{
-			font-weight: lighter;
-			color: #5E002B;
-			top: 5px;
-			font-size: 22px;
-			cursor: pointer;
-			margin-left: 10px;
-			margin-right:25px;
-			-webkit-transition: color 0.5s linear;
-			-moz-transition: color 0.5s linear;
-			-o-transition: color 0.5s linear;
-			transition: color 0.5s linear;
-		}
-
-		#lupa-descubre:hover{
-			color: #470020;
-		}
 	}
 
   .wrapper-descubre{
@@ -964,6 +946,7 @@ ul.ul-nav { display: table; float: left !important;
 			width: 20%;
 			background-color: #993366;
 			position: relative;
+			font-style: normal;
 
 			.imagen-descubre{
 				@include centrado;
@@ -991,21 +974,25 @@ ul.ul-nav { display: table; float: left !important;
 					-o-transition: opaity 0.5s linear;
 					transition: opacity 0.5s linear;
 
-					.cont-descubre{
-						color: #fff;
+					>p{
+						@include centrado;
+
+						.cont-descubre{
+							color: #fff;
 						
-					}
+						}
 
-					.titulo-descubre{
-						color: #fff;
-					}
+						.titulo-descubre{
+							color: #fff;
+						}
 
-					.icono-descubre{
-						position: absolute;
-						right: 10px;
-						bottom: 10px;
-						max-width: 20px;
-						max-height: 20px;
+						.icono-descubre{
+							position: absolute;
+							right: 10px;
+							bottom: 10px;
+							max-width: 20px;
+							max-height: 20px;
+						}
 					}
 				}
 
