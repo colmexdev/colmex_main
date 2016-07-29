@@ -55,7 +55,7 @@ window.onresize = function(){
 	}
 
 	partirDescubres();
-	margen-
+	margenAuto();
 }
 
 function partirDescubres(){
