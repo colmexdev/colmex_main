@@ -1348,7 +1348,7 @@ ul.ul-nav { display: table; float: left !important;
 
 	@media only screen and (max-width: 991px) and (min-width: 0px){
 		#footer_izq { display: none; }
-		#footer_centro { border: none; height: auto; >p { margin: 0;} }
+		#footer_centro { border: none; height: auto; >p { margin: 0; font-size: 11px;} }
 		#footer_der { 
 			height: auto;
 			padding-left: 0;
