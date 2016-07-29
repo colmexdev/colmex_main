@@ -26,6 +26,7 @@ $(document).ready(function(){
 	$('#div_slider').css({'height':alto_slide+'px'});
 
 	partirDescubres();
+	ajustarImagenes();
 });
 
 window.onresize = function(){
@@ -56,6 +57,7 @@ window.onresize = function(){
 
 	partirDescubres();
 	margenAuto();
+	ajustarImagenes();
 }
 
 function partirDescubres(){
@@ -63,7 +65,7 @@ function partirDescubres(){
 	var json_l = JSON.parse(gon.descubres).length;
 	var alto_d = $(".frame-descubre").height();
 	$("#wrapper").css({"height" : ((($("#wrapper").height() >= alto_d * num_filas) || document.getElementById("wrapper").style.height == "auto") ? "auto" : (alto_d * num_filas) + "px"), "overflow-y" : "hidden", "-webkit-transition" : "height 0.5s linear", "-moz-transition" : "height 0.5s linear", "-o-transition" : "height 0.5s linear", "transition" : "height 0.5s linear"});
-	if(((json_l > 10 && ancho_v >= 1340 ) || (json_l > 8 && ancho_v >= 1050 && ancho_v < 1340) || (json_l > 6 && ancho_v >= 700 && ancho_v < 1050) || (json_l >4 && ancho_v >= 450 && ancho_v < 700) || (json_l > 3 && ancho_v < 450)) && document.getElementById("wrapper").style.height != "auto"){
+	if(((json_l > 10 && ancho_v >= 1200 ) || (json_l > 8 && ancho_v >= 992 && ancho_v < 1200) || (json_l > 6 && ancho_v >= 768 && ancho_v < 992) || (json_l >4 && ancho_v >= 480 && ancho_v < 768) || (json_l > 3 && ancho_v < 480)) && document.getElementById("wrapper").style.height != "auto"){
 		$("#cutter-descubre").css("display","block");
 	}
 	else{
@@ -78,7 +80,7 @@ function desbordarDescubres(){
 	if(document.getElementById("wrapper").style.height != "auto"){
 		num_filas = num_filas + 2;
 	}
-	var div_filas = (ancho_v >= 1340 ? 5 : (ancho_v >= 1050 ? 4 : (ancho_v >= 700 ? 3 : (ancho_v >= 450 ? 2 : 1))));
+	var div_filas = (ancho_v >= 1200 ? 5 : (ancho_v >= 992 ? 4 : (ancho_v >= 768 ? 3 : (ancho_v >= 480 ? 2 : 1))));
 	var cantidad_filas = Math.ceil(JSON.parse(gon.descubres).length / div_filas);
 	$("#wrapper").css({"height" : (($("#wrapper").height() + (($(".frame-descubre").height() * 2)) > ($(".frame-descubre").height() * cantidad_filas) || document.getElementById("wrapper").style.height == "auto" ) ? "auto" : ($(".frame-descubre").height() * num_filas) + "px")});
 	$("#cutter-descubre").css("display", $("#wrapper").height() + ($(".frame-descubre").height() * 2) >= ($(".frame-descubre").height() * cantidad_filas)  ? "none" : "block");
@@ -90,6 +92,50 @@ function desbordarDescubres(){
 function margenAuto(){
 	if(document.getElementById("cutter-descubre").style.display == "none"){
 		$("#wrapper").css("margin-bottom", "45px");
+	}
+}
+
+function ajustarImagenes(){
+	var ancho_izq = $("#col-izq").innerWidth();
+	var ancho_ct = $("#col-ct").innerWidth();
+	var ancho_der = $("#col-der").innerWidth();
+	var img_izq = $("#img-pub").width();
+	var img_pred = $("#img-pred").width();
+	var img_rev = $("#img-rev").width();
+
+	if(ancho_izq < img_izq){
+		$("#img-pub").css("width","auto");
+	}
+	else{
+		$("#img-pub").removeAttr("style");
+	}
+	if(window.innerWidth <= 768){
+		if(ancho_ct < img_rev){
+			$("#img-rev").css("width","auto");
+		}
+		else{
+			$("#img-rev").removeAttr("style");
+		}
+		if(ancho_der < img_pred){
+			$("#img-pred").css("width","auto");
+		}
+		else{
+			$("#img-pred").removeAttr("style");
+		}
+	}
+	else{
+		if(ancho_ct < img_pred){
+			$("#img-pred").css("width","auto");
+		}
+		else{
+			$("#img-pred").removeAttr("style");
+		}
+		if(ancho_der < img_rev){
+			$("#img-rev").css("width","auto");
+		}
+		else{
+			$("#img-rev").removeAttr("style");
+		}
 	}
 }
 

@@ -71,14 +71,14 @@
 
 	<div class="row"> <!-- Fila para revistas -->
 		<div class="col-md-12" id="div_revistas"> <!-- Columnas para revistas -->
-			<div class="col-xs-6 col-sm-4 revista"><%= link_to(image_tag('revistas-der.png'), "
+			<div class="col-xs-6 col-sm-4 revista"><%= link_to(image_tag('revistas-der.png', :id => "img-pub"), "
 http://revistas.colmex.mx/", :target => "_blank") %></div>
 			<div class="col-xs-6 col-sm-4 revista">
 				<%= link_to(image_tag('revistas-centro.png', :class => "rev-sm", :id => "img-pred"), "http://digital.colmex.mx/", :target => "_blank") %>
-				<%= link_to(image_tag('revistas-izq.png' :class => "rev-xs"), "https://publicaciones.colmex.mx/index.php", :target => "_blank") %>
+				<%= link_to(image_tag('revistas-izq.png', :class => "rev-xs", :id => "img-rev"), "https://publicaciones.colmex.mx/index.php", :target => "_blank") %>
 			</div>
 			<div class="col-xs-12 col-sm-4 revista">
-				<%= link_to(image_tag('revistas-izq.png', :class => "rev-sm"), "https://publicaciones.colmex.mx/index.php", :target => "_blank") %>
+				<%= link_to(image_tag('revistas-izq.png', :class => "rev-sm", :id => "img-rev"), "https://publicaciones.colmex.mx/index.php", :target => "_blank") %>
 				<%= link_to(image_tag('revistas-centro.png', :class => "rev-xs", :id => "img-pred"), "http://digital.colmex.mx/", :target => "_blank") %>
 			</div>
 		</div> <!-- Cierre de columnas para revistas -->

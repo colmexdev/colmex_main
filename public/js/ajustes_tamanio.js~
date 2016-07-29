@@ -15,7 +15,7 @@ $(document).ready(function(){
 			$("#div_eventos").css("height","0");
 	}
 	else{
-		if(ancho < 600){ document.getElementById("render_eventos").innerHTML = gon.ev_tiny; }
+		if(ancho < 785){ document.getElementById("render_eventos").innerHTML = gon.ev_tiny; }
 		else if(ancho < 1150){ document.getElementById("render_eventos").innerHTML = gon.ev_small; }
 		else{ document.getElementById("render_eventos").innerHTML = gon.ev_big;}
 	}
@@ -90,6 +90,50 @@ function desbordarDescubres(){
 function margenAuto(){
 	if(document.getElementById("cutter-descubre").style.display == "none"){
 		$("#wrapper").css("margin-bottom", "45px");
+	}
+}
+
+function ajustarImagenes(){
+	var ancho_izq = $("#col-izq").innerWidth();
+	var ancho_ct = $("#col-ct").innerWidth();
+	var ancho_der = $("#col-der").innerWidth();
+	var img_izq = $("#img-pub").width();
+	var img_pred = $("#img-pred").width();
+	var img_rev = $("#img-rev").width();
+
+	if(ancho_izq < img_izq){
+		$("#img-pub").css("width","auto");
+	}
+	else{
+		$("#img-pub").removeAttr("style");
+	}
+	if(window.innerWidth <= 768){
+		if(ancho_ct < img_rev){
+			$("#img-rev").css("width","auto");
+		}
+		else{
+			$("#img-rev").removeAttr("style");
+		}
+		if(ancho_der < img_pred){
+			$("#img-pred").css("width","auto");
+		}
+		else{
+			$("#img-pred").removeAttr("style");
+		}
+	}
+	else{
+		if(ancho_ct < img_pred){
+			$("#img-pred").css("width","auto");
+		}
+		else{
+			$("#img-pred").removeAttr("style");
+		}
+		if(ancho_der < img_rev){
+			$("#img-rev").css("width","auto");
+		}
+		else{
+			$("#img-rev").removeAttr("style");
+		}
 	}
 }
 

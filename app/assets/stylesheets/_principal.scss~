@@ -863,7 +863,7 @@ ul.ul-nav { display: table; float: left !important;
 
 		@media only screen and (min-width: 768px){
 			.rev-xs { display: none; }
-			.rev-sm { display: block;; }
+			.rev-sm { display: block; }
 		}
 	}
 
