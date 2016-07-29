@@ -866,7 +866,7 @@ ul.ul-nav { display: table; float: left !important;
 		}
 	}
 
-	#img-pred { max-height: 145px; }
+	.pred-sm, .pred-xs { max-height: 145px; }
 }
 
 @media only screen and (max-width: 768px){
