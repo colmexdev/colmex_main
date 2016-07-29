@@ -104,20 +104,20 @@ function ajustarImagenes(){
 	var img_rev = $("#img-rev").width();
 
 	if(ancho_izq - 30 < img_izq){
-		$("#img-pub").css("width","90%");
+		$("#img-pub").css("width","95%");
 	}
 	else{
 		$("#img-pub").removeAttr("style");
 	}
 	if(window.innerWidth <= 768){
 		if(ancho_ct - 30 < img_rev){
-			$("#img-rev-sm").css("width","90%");
+			$("#img-rev-xs").css("width","95%");
 		}
 		else{
-			$("#img-rev-sm").removeAttr("style");
+			$("#img-rev-xs").removeAttr("style");
 		}
 		if(ancho_der - 30 < img_pred){
-			$("#img-pred-xs").css("width","90%");
+			$("#img-pred-xs").css("width","95%");
 		}
 		else{
 			$("#img-pred-xs").removeAttr("style");
@@ -125,16 +125,16 @@ function ajustarImagenes(){
 	}
 	else{
 		if(ancho_ct - 30 < img_pred){
-			$("#img-pred-sm").css("width","99%");
+			$("#img-pred-sm").css("width","95%");
 		}
 		else{
 			$("#img-pred-sm").removeAttr("style");
 		}
 		if(ancho_der - 30 < img_rev){
-			$("#img-rev-xs").css("width","90%");
+			$("#img-rev-sm").css("width","95%");
 		}
 		else{
-			$("#img-rev-xs").removeAttr("style");
+			$("#img-rev-sm").removeAttr("style");
 		}
 	}
 }
