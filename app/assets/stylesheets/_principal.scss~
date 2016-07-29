@@ -896,6 +896,14 @@ ul.ul-nav { display: table; float: left !important;
 
 		>input{
 			font-size: 15px;
+			padding: 2px 5px;
+		}
+
+		#lupa-descubre{
+			font-weight: normal
+			color: #5E002B;
+			font-size: 20px;
+			cursor: pointer;
 		}
 	}
 
