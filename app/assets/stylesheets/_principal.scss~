@@ -894,12 +894,18 @@ ul.ul-nav { display: table; float: left !important;
 			padding: 2px 5px;
 			font-weight: 600;
 			border-width: 1px;
+			margin: 0 10px;
+
+			>option{
+				font-weight: inherit;
+				font-size: inherit;
+			}
 		}
 
 		>input{
+			font-weight: 600;
 			font-size: 15px;
-			padding: 2px 5px;
-			box-shadow: 0 0 5px #CECECE;
+			padding: 1px 5px;
 		}
 
 		#lupa-descubre{
@@ -907,6 +913,8 @@ ul.ul-nav { display: table; float: left !important;
 			color: #5E002B;
 			font-size: 20px;
 			cursor: pointer;
+			margin-left: 10px;
+			margin-right:25px;
 			-webkit-transition: color 0.5s linear;
 			-moz-transition: color 0.5s linear;
 			-o-transition: color 0.5s linear;
