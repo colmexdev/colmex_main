@@ -11,7 +11,7 @@ function filtrarDescubres(){
 	$("#cutter-descubre").css("display","none");
   var cw = $('.frame-descubre').width();
 	$('.frame-descubre').css({'height':cw+'px'});
-	console.log(tagsAFiltrar);
+	console.log(descubresFiltradosPorTags);
 }
 
 function limpiarPuntuacion(tags){
