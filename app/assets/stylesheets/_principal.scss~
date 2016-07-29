@@ -909,9 +909,10 @@ ul.ul-nav { display: table; float: left !important;
 		}
 
 		#lupa-descubre{
-			font-weight: normal;
+			font-weight: lighter;
 			color: #5E002B;
-			font-size: 20px;
+			top: 5px;
+			font-size: 22px;
 			cursor: pointer;
 			margin-left: 10px;
 			margin-right:25px;
@@ -932,6 +933,11 @@ ul.ul-nav { display: table; float: left !important;
 		margin: 20px auto 0 auto;
 		overflow: auto;
 		overflow-x: hidden;
+		text-align: center;
+		color: #838383;
+		font-weight: 600;
+		font-style: italic;
+		font-size: 22px;
 
 		.frame-descubre{
 			float: left;

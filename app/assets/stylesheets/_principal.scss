@@ -933,6 +933,11 @@ ul.ul-nav { display: table; float: left !important;
 		margin: 20px auto 0 auto;
 		overflow: auto;
 		overflow-x: hidden;
+		text-align: center;
+		color: #838383;
+		font-weight: 600;
+		font-style: italic;
+		font-size: 22px;
 
 		.frame-descubre{
 			float: left;
@@ -1002,6 +1007,18 @@ ul.ul-nav { display: table; float: left !important;
 		}
 
 		@media only screen and (max-width: 450px){
+			.frame-descubre { width: 100%; }
+		}
+
+		@media only screen and (max-device-width: 1024px) and (min-device-width: 800px){
+			.frame-descubre { width: 33.33%; }
+		}
+
+		@media only screen and (max-device-width: 800px) and (min-device-width: 450px){
+			.frame-descubre { width: 50%; }
+		}
+
+		@media only screen and (max-device-width: 450px) and (min-device-width: 0px){
 			.frame-descubre { width: 100%; }
 		}
   }

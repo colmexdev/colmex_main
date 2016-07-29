@@ -6,7 +6,6 @@ function filtrarDescubres(){
 	var descubresFiltradosPorContenido = descubresPorContenido.filter(function(d){ return ( contAFiltrar == "" ? true : d == contAFiltrar )}).top(Infinity);
 	var descubresFiltradosPorTags = descubresPorTags.filter(function(d){ return (tagsAFiltrar == "" ? true : limpiarPuntuacion(d).indexOf(tagsAFiltrar) != -1)}).top(Infinity);
 	var bloqueHTML = construirDescubre(descubresFiltradosPorTags);
-	console.log(bloqueHTML);
 	$("#wrapper").html(bloqueHTML);
 	$("#wrapper").css({"height" : "auto", "margin-bottom" : "45px" });
 	$("#cutter-descubre").css("display","none");
