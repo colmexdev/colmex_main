@@ -871,9 +871,11 @@ ul.ul-nav { display: table; float: left !important;
 
 @media only screen and (max-width: 768px){
 	#div_revistas{ 
-		height: 180px;
+		height: 130px;
 		.revista { a { img { max-height: 120px; max-width: 190px; } } } 
 	}
+
+	.col-sx-12.col-sm-4.revista { margin-bottom: 20px; }
 }
 
 //Estilos que afectan la sección del descubre
