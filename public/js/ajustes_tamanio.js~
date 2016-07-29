@@ -110,6 +110,7 @@ function ajustarImagenes(){
 		$("#img-pub").removeAttr("style");
 	}
 	if(window.innerWidth <= 768){
+		console.log(window.innerWidth);
 		if(ancho_ct - 30 < img_rev){
 			$("#img-rev-xs").css("width","95%");
 		}
