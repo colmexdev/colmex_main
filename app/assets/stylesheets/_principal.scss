@@ -853,8 +853,17 @@ ul.ul-nav { display: table; float: left !important;
 				@include centrado; 
 				max-height: 200px;
 				max-width: 350px;
-				width: 90%;
 			} 	
+		}
+
+		@media only screen and (max-width: 768px){
+			.rev-xs { display: block; }
+			.rev-sm { display: none; }
+		}
+
+		@media only screen and (min-width: 768px){
+			.rev-xs { display: none; }
+			.rev-sm { display: block; }
 		}
 	}
 
