@@ -1,0 +1,59 @@
+function filtrarDescubres(){
+	descubresPorTags.filterAll();
+	descubresPorContenido.filterAll();
+	var contAFiltrar = $("#contenido").val();
+	var tagsAFiltrar = $("#tags").val();
+	var descubresFiltradosPorContenido = descubresPorContenido.filter(function(d){ return ( contAFiltrar == "" ? true : d == contAFiltrar )}).top(Infinity);
+	var descubresFiltradosPorTags = descubresPorTags.filter(function(d){ return (tagsAFiltrar == "" ? true : limpiarPuntuacion(d).indexOf(tagsAFiltrar) != -1)}).top(Infinity);
+	var bloqueHTML = construirDescubre(descubresFiltradosPorTags);
+	$("#wrapper").html(bloqueHTML);
+	$("#wrapper").css("height","auto");
+	$("#cutter-descubre").css("display","none");
+  var cw = $('.frame-descubre').width();
+	$('.frame-descubre').css({'height':cw+'px'});
+	
+}
+
+function limpiarPuntuacion(tags){
+	var new_tags = tags.replace(/[íïîì]/i,"i");
+	new_tags = new_tags.replace(/[áäâà]/i,"a");
+	new_tags = new_tags.replace(/[éëêè]/i,"e");
+	new_tags = new_tags.replace(/[óöôò]/i,"o");
+	new_tags = new_tags.replace(/[úüûù]/i,"u");
+	return new_tags;
+}
+
+function construirDescubre(descubres){
+	var html_str = "";
+	if(descubres == [] || descubres == null)
+		return "Ningún resultado coincide con los parámetros de búsqueda";
+	for(var i = 0; i < descubres.length; i++){
+		html_str = html_str + "<div class=\"frame-descubre\">";
+		if(descubres[i]["imagen_file_name"] != null){
+			var path_img = "/assets/descubre/" + descubres[i]["id"] + "/original/" + descubres[i]["imagen_file_name"];
+			html_str = html_str + "<img class=\"imagen-descubre\" src=\"" + path_img + "\" >";
+		}
+		else{
+			html_str = html_str + "<span class=\"cont-descubre-pre\">" + descubres[i]["contenido"] + "</span><br />";
+			html_str = html_str + "<span class=\"titulo-descubre-pre\">" + descubres[i]["titulo"] + "</span>";
+		}
+		html_str = html_str + "<a href=\""+ descubres[i]["liga"] + "\" " + (descubres[i]["contenido"].toLowerCase() == "video" ? ("data-uk-lightbox title=\"\"") : "target=\"_blank\"" ) + "><div class=\"frame-hover\">";
+		html_str = html_str + "<span class=\"cont-descubre\">" + descubres[i]["contenido"] + "</span><br />";
+		html_str = html_str + "<span class=\"titulo-descubre\">" + descubres[i]["titulo"] + "</span>";
+		html_str = html_str + "<img class=\"icono-descubre\" src=\"" + encontrarIconoDescubre(descubres[i]["contenido"]) + "\" >";
+		html_str = html_str + "</div></a></div>";		
+	}
+	return html_str;
+}
+
+function encontrarIconoDescubre(tipo_desc){
+	for(var i = 0; i < gon.contenido_iconos.length; i++){
+		if(gon.contenido_iconos[i]["tipo"].toLowerCase() == tipo_desc.toLowerCase()){
+			if(gon.contenido_iconos[i]["icono_file_name"] != null)
+				return "/assets/contenidos/" + gon.contenido_iconos[i]["id"] + "/original/" + gon.contenido_iconos[i]["icono_file_name"];
+			return "/link.png";
+		}
+	}
+}
+
+

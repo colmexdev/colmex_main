@@ -55,6 +55,7 @@ window.onresize = function(){
 	}
 
 	partirDescubres();
+	margenAuto();
 }
 
 function partirDescubres(){
@@ -82,5 +83,11 @@ function desbordarDescubres(){
 	$("#wrapper").css({"height" : (($("#wrapper").height() + (($(".frame-descubre").height() * 2)) > ($(".frame-descubre").height() * cantidad_filas) || document.getElementById("wrapper").style.height == "auto" ) ? "auto" : ($(".frame-descubre").height() * num_filas) + "px")});
 	$("#cutter-descubre").css("display", $("#wrapper").height() + ($(".frame-descubre").height() * 2) >= ($(".frame-descubre").height() * cantidad_filas)  ? "none" : "block");
 	return false;
+}
+
+function margenAuto(){
+	if(document.getElementById("cutter-descubre").style.display == "none"){
+		$("#wrapper").css("margin-bottom", "45px");
+	}
 }
 
