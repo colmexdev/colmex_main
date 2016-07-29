@@ -6,12 +6,12 @@ function filtrarDescubres(){
 	var descubresFiltradosPorContenido = descubresPorContenido.filter(function(d){ return ( contAFiltrar == "" ? true : d == contAFiltrar )}).top(Infinity);
 	var descubresFiltradosPorTags = descubresPorTags.filter(function(d){ return (tagsAFiltrar == "" ? true : limpiarPuntuacion(d).indexOf(tagsAFiltrar) != -1)}).top(Infinity);
 	var bloqueHTML = construirDescubre(descubresFiltradosPorTags);
+	console.log(bloqueHTML);
 	$("#wrapper").html(bloqueHTML);
 	$("#wrapper").css({"height" : "auto", "margin-bottom" : "45px" });
 	$("#cutter-descubre").css("display","none");
   var cw = $('.frame-descubre').width();
 	$('.frame-descubre').css({'height':cw+'px'});
-	console.log(descubresFiltradosPorTags);
 }
 
 function limpiarPuntuacion(tags){

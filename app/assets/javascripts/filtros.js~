@@ -24,7 +24,7 @@ function limpiarPuntuacion(tags){
 }
 
 function construirDescubre(descubres){
-	if(descubres == null)
+	if(descubres == [])
 		return "Ningún resultado coincide con los parámetros de búsqueda";
 	var html_str = "";
 	for(var i = 0; i < descubres.length; i++){
