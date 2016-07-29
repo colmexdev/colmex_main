@@ -1009,6 +1009,18 @@ ul.ul-nav { display: table; float: left !important;
 		@media only screen and (max-width: 450px){
 			.frame-descubre { width: 100%; }
 		}
+
+		@media only screen and (max-device-width: 1024px) and (min-device-width: 800px){
+			.frame-descubre { width: 33.33%; }
+		}
+
+		@media only screen and (max-device-width: 800px) and (min-device-width: 450px){
+			.frame-descubre { width: 50%; }
+		}
+
+		@media only screen and (max-device-width: 450px) and (min-device-width: 0px){
+			.frame-descubre { width: 100%; }
+		}
   }
 
 	#cutter-descubre{
