@@ -35,6 +35,8 @@ Rails.application.routes.draw do
 
   get 'programas_academicos/inicio' => "programas_academicos#inicio", :as => :programas_academicos
 
+  get 'programas_academicos/admisiones' => "programas_academicos#admisiones", :as => :admisiones
+
   get "programas_academicos/licenciaturas" => "programas_academicos#licenciaturas", :as => :licenciaturas
 
   get "programas_academicos/maestrias" => "programas_academicos#maestrias", :as => :maestrias

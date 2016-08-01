@@ -3,6 +3,9 @@ class ProgramasAcademicosController < ApplicationController
   
   end
 
+  def admisiones
+  end
+
   def maestrias
   end
 
