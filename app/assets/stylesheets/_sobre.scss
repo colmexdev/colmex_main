@@ -10,6 +10,32 @@
 	}
 }
 
+.ver-mas {
+	font-family: "Gotham SSm A", "Gotham SSm B", 'Lato', sans-serif;
+ 	font-style: normal; 
+	font-weight: 700; 
+	padding: 10px 15px; 
+	background-color: #7e3355; 
+	border: solid 1px #470020; 
+	color: #fff; 
+	text-decoration: none;
+	-webkit-transition: all 0.5s linear;
+	-moz-transition: all 0.5s linear;
+	-o-transition: all 0.5s linear;
+	transition: all 0.5s linear;
+}
+
+.ver-mas:hover {
+	font-family: "Gotham SSm A", "Gotham SSm B", 'Lato', sans-serif; 
+	font-style: normal; 
+	font-weight: 700; 
+	padding: 10px 15px; 
+	background-color: #9e6680; 
+	border: solid 1px #5e002b; 
+	color: #fff; 
+	text-decoration: none; 
+}
+
 #img-menus-sobre{
 	display:inline-block;
 	float: left;

@@ -2,6 +2,7 @@
 
 .div-titular{
 	display: block;
+	padding-left: 25px;
 
 	.titular{
 		display: inline-block;
