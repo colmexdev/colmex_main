@@ -1175,8 +1175,9 @@ ul.ul-nav { display: table; float: left !important;
 		background-color: #622222;
 		display: inline-block;
 		float: left;
+		position: relative;
 		  
-		img { width: 90%; }
+		img { width: 90%; @include centrado; }
 	}
 }
 
@@ -1283,7 +1284,7 @@ ul.ul-nav { display: table; float: left !important;
 
 @media only screen and (max-width: 768px){
 	#div_transparencia{
-		img { max-height: 130px; max-width: 130px; }
+		a>img { max-height: 130px; max-width: 130px; }
 	}
 }
 
