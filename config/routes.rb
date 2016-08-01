@@ -71,6 +71,8 @@ Rails.application.routes.draw do
 
   get 'sobre_el_colegio/presidencia' => 'sobre_el_colegio#presidencia', :as => :presidencia
 
+  get 'sobre_el_colegio/centros_de_estudio' => 'sobre_el_colegio#centros_de_estudio', :as => :centros_autoridades
+
   get 'sobre_el_colegio/administracion' => 'sobre_el_colegio#administracion', :as => :administracion
 
   get 'sobre_el_colegio/operativas' => 'sobre_el_colegio#operativas', :as => :operativas

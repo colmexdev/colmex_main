@@ -86,18 +86,18 @@ sp:
     - sáb
     abbr_month_names:
     -
-    - ene
-    - feb
-    - mar
-    - abr
-    - may
-    - jun
-    - jul
-    - ago
-    - sep
-    - oct
-    - nov
-    - dic
+    - Enero
+    - Febrero
+    - Marzo
+    - Abril
+    - Mayo
+    - Junio
+    - Julio
+    - Agosto
+    - Septiembre
+    - Octubre
+    - Noviembre
+    - Diciembre
     day_names:
     - Domingo
     - Lunes
@@ -109,7 +109,7 @@ sp:
     formats:
       default: "%d/%m/%Y"
       long: "%A %d de %B"
-      short: "%B %d"
+      short: "%b %d"
     month_names:
     -
     - enero

@@ -14,7 +14,7 @@
 		<div class="centro medio">
 			<span class="titulo-grande morado" id="titulo-render"><%= t('sobre.autoridades.asamblea') %></span>
 			<div id="autoridades-render">
-
+				<%= render "sobre_el_colegio/asamblea" %>
 			</div>
 		</div>
 	</div>
