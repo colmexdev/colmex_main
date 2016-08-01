@@ -75,6 +75,8 @@ Rails.application.routes.draw do
 
   get 'sobre_el_colegio/premios_y_distinciones' => 'sobre_el_colegio#premios_y_distinciones', :as => :premios
 
+  get 'sobre_el_colegio/historia_75_años' => 'sobre_el_colegio#historia_75_años', :as => :historia75
+
   get 'principal/principios_eticos' => 'principal#principios_eticos', :as => :principios
 
   get 'principal/principal'

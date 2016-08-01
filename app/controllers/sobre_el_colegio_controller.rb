@@ -2,6 +2,9 @@ class SobreElColegioController < ApplicationController
   def inicio
   end
 
+  def historia_75_años
+  end
+
   def premios_y_distinciones
     @categorias = Categorium.all
   end

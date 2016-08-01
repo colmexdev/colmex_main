@@ -71,6 +71,7 @@ function partirDescubres(){
 	}
 	else{
 		$("#cutter-descubre").css("display","none");
+		$("#wrapper").css("height", "auto");
 	}
 
 	return false;

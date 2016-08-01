@@ -79,6 +79,8 @@ Rails.application.routes.draw do
 
   get 'principal/principal'
 
+  get 'principal/resultados_busqueda' => 'principal#resultados_busqueda', :as => :busqueda
+
   get 'principal/set_language' => 'principal#set_language', :as => :cambiar_idioma
   devise_scope :admin do
     get "/acceder" => "devise/sessions#new"
