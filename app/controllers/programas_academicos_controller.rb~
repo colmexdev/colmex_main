@@ -21,6 +21,6 @@ class ProgramasAcademicosController < ApplicationController
   end
 
   def cursos
-    @doctorados = Curso.where(:programa => "Curso")
+    @cursos = Curso.where(:programa => "Curso")
   end
 end

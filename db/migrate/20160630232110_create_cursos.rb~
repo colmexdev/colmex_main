@@ -8,6 +8,7 @@ class CreateCursos < ActiveRecord::Migration
       t.date :fecha_inicio_clases, null: false
       t.text :liga, null: false
       t.string :tipo_curso, null: false
+      t.string :programa, null: false
 
       t.timestamps null: false
     end
