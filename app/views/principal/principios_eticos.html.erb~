@@ -1,6 +1,6 @@
 <%= render 'principal/barra' %>
 <div class="container-fluid" id="resto-cuerpo">
-	<div id="cuerpo" class="principios-texto">
+	<div id="cuerpo" class="principal-chica uk-block-large">
 <div class="uk-width-1-1">
     <span class="titulo-grande">Principios éticos</span><br>
     <p>&nbsp;</p>
