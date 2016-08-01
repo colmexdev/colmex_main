@@ -119,7 +119,7 @@ http://revistas.colmex.mx/", :target => "_blank") %></div>
 					</div>
 				</div>
 				<div id="div-img-fundacion">
-					<%= image_tag('fundacion-colmex.jpg') %>
+					<%= image_tag('fundacion-colmex.png') %>
 				</div>
 			</div>
 
