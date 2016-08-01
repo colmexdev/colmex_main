@@ -78,6 +78,12 @@ class SobreElColegioController < ApplicationController
     end
   end
 
+  def centros_de_estudio
+    respond_to do |format|
+      format.js
+    end
+  end
+
   def administracion
     respond_to do |format|
       format.js
