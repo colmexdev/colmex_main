@@ -2,32 +2,27 @@
 <div class="container-fluid" id="resto-cuerpo">
 	<div id="cuerpo" class="principal-chica uk-block-large">
 
-		<div class="row">
-			<div class="medio">
-				<span class="titulo-grande"><%= t('botones.b1.opciones.op6') %></span><br />
-				<p>
-					El Colegio de México felicita a los miembros de su comunidad que
-		obtuvieron durante el año 2015 un reconocimiento especial,
-		distinciones que ratifican el compromiso de esta institución con la
-		excelencia académica, a la que consideramos el mejor camino para el
-		progreso del país.
-				</p>
-			</div>
-			<div class="medio">
-				<%= image_tag("sobre.png", :class => "img-muestra") %>
-			</div>
-		</div>
+    <div class="uk-grid uk-grid-large">
+    <div class="uk-width-large-3-5 uk-text-left">
+    <span class="titulo-grande">Premios y Distinciones</span><br>
+    <p>&nbsp;</p>
+    <p>El Colegio de México felicita a los miembros de su comunidad que obtuvieron durante el año 2015 un reconocimiento especial, distinciones que ratifican el compromiso de esta institución con la excelencia académica, a la que consideramos el mejor camino para el progreso del país.</p>
+    </div>
+    <div class="uk-width-large-2-5">
+    <img src=<%= image_url("imagen.jpg") %> alt="Historia de El Colegio de México">
+    </div>
+    </div>
+
 
 		<div class="row">
-			<div class="a
-cordeon-premios">
+			<div class="acordeon-premios">
 			<script type="text/javascript" src="../js/accordion.js"></script>
 
 				<div class="uk-accordion" data-uk-accordion>
 					<% @categorias.each do |c| %>
 						<h3 class="uk-accordion-title"><%= construir_encabezado("bt-flechita.png", "bt-flechita-abajo.png", c.nombre) %></h3>
 						<div class="uk-accordion-content">
-							<ul class=" uk-list uk-list-line">
+							<ul class="uk-list uk-list-line">
 							<% Premiado.where(tipo: c.nombre).each do |p| %>
 								<li><%= p.nombre + ", " + p.descripcion %></li>
 							<% end %>
