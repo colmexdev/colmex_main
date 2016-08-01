@@ -1,60 +1,58 @@
 <%= render 'principal/barra' %>
 <div class="container-fluid" id="resto-cuerpo">
-	<div id="cuerpo">
-		<div class="row">
-			<div class="titular-pagina">
-				<span class="titulo-grande"><%= t('botones.b3.texto') %></span>
-			</div>
-		</div>
-		<div class="tabla">
-			<div class="tabla-programa">
-				<div class="medio centro programa texto-programa">
-					<span class="titulo-chico morado"><%= t('botones.b3.opciones.op1') %></span>
-					<br>
-					<%= construye_cursos("Licenciatura") %>
-				</div>
-				<div class="medio centro programa img-programa">
-					<%= image_tag("sobre.png", :class => "img-muestra img-pa") %>
-				</div>
-			</div>
-		</div>
-		<div class="tabla">	
-			<div class="tabla-programa">
-				<div class="medio centro programa img-programa">
-					<%= image_tag("sobre.png", :class => "img-muestra img-pa") %>
-				</div>
-				<div class="medio centro programa texto-programa">
-					<span class="titulo-chico morado"><%= t('botones.b3.opciones.op2') %></span>
-					<br>
-					<%= construye_cursos("Maestría") %>
-				</div>
-			</div>
-		</div>
-		<div class="tabla">
-			<div class="tabla-programa">
-				<div class="medio centro programa texto-programa">
-					<span class="titulo-chico morado"><%= t('botones.b3.opciones.op3') %></span>
-					<br>
-					<%= construye_cursos("Doctorado") %>
-				</div>
-				<div class="medio centro programa img-programa">
-					<%= image_tag("sobre.png", :class => "img-muestra img-pa") %>
-				</div>
-			</div>
-		</div>
-		<div class="tabla curso">
-			<div class="tabla-programa">
-				<div class="medio centro programa img-programa">
-					<%= image_tag("sobre.png", :class => "img-muestra img-pa") %>
-				</div>
-				<div class="medio centro programa texto-programa">
-					<span class="titulo-chico morado"><%= t('botones.b3.opciones.op6') %></span>
-					<br>
-					<%= construye_cursos("Curso") %>
-				</div>
-			</div>
+	<div id="cuerpo" class="principal-chica uk-block-large">
+	
+    <div class="uk-width-1-1">
+    <span class="titulo-grande">Programas Académicos</span><br>
+    <p>&nbsp;</p>
+    <!--          Aquí empieza el contenido          -->
+    <div class="uk-grid uk-grid-large uk-margin-large-bottom">
+    <div class="uk-width-large-3-5 uk-text-left">
+    <span class="titulo-chico">Licenciaturas</span><br>
+    <p>&nbsp;</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas rhoncus diam sed leo porttitor consectetur. Proin nec dui sit amet libero mattis suscipit. Etiam ac convallis dui, quis varius velit. Nam at laoreet lorem. Sed fermentum lectus sed scelerisque placerat. Ut pharetra porta justo, id suscipit orci posuere eget. In accumsan ornare dictum.</p>
+    <ul class=" uk-list uk-list-space">
+		<% @licenciaturas.each do |lic| %>
+		  <li><a href=<%= lic.liga %> target="_blank" class="uk-margin-large-bottom">Licenciatura en <%= lic.nombre %></a></li>
+		<% end %>
+    </ul>
+    </div>
+    <div class="uk-width-large-2-5">
+    <img src=<%= image_url("imagen.jpg") %> alt="Historia de El Colegio de México">
+    </div>
+    </div>
+    <div class="uk-grid uk-grid-large uk-margin-large-bottom">
+    <div class="uk-width-large-2-5">
+    <img src=<%= image_url("imagen.jpg") %> alt="Historia de El Colegio de México">
+    </div>
+    <div class="uk-width-large-3-5 uk-text-left">
+    <span class="titulo-chico">Maestrías</span><br>
+    <p>&nbsp;</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas rhoncus diam sed leo porttitor consectetur. Proin nec dui sit amet libero mattis suscipit. Etiam ac convallis dui, quis varius velit. Nam at laoreet lorem. Sed fermentum lectus sed scelerisque placerat. Ut pharetra porta justo, id suscipit orci posuere eget. In accumsan ornare dictum.</p>
+    <ul class=" uk-list uk-list-space">
+    <% @maestrias.each do |mt| %>
+		  <li><a href=<%= mt.liga %> target="_blank" class="uk-margin-large-bottom">Maestría en en <%= mt.nombre %></a></li>
+		<% end %>
+    </ul>
+    </div>
+    </div>
+    <div class="uk-grid uk-grid-large uk-margin-large-bottom">
+    <div class="uk-width-large-3-5 uk-text-left">
+    <span class="titulo-chico">Doctorados</span><br>
+    <p>&nbsp;</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas rhoncus diam sed leo porttitor consectetur. Proin nec dui sit amet libero mattis suscipit. Etiam ac convallis dui, quis varius velit. Nam at laoreet lorem. Sed fermentum lectus sed scelerisque placerat. Ut pharetra porta justo, id suscipit orci posuere eget. In accumsan ornare dictum.</p>
+    <ul class=" uk-list uk-list-space">
+    <% @doctorados.each do |doc| %>
+		  <li><a href=<%= doc.liga %> target="_blank" class="uk-margin-large-bottom">Licenciatura en <%= doc.nombre %></a></li>
+		<% end %>
+    </ul>
+    </div>
+    <div class="uk-width-large-2-5">
+    <img src=<%= image_url("imagen.jpg") %> alt="Historia de El Colegio de México">
+    </div>
+    </div>
+    </div>
 
-		</div>
 	</div>
 
 <%= render 'principal/footer'%>

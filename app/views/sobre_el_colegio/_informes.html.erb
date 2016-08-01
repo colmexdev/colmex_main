@@ -1,14 +1,16 @@
+
 <div class="acordeon-premios">
 	<script type="text/javascript" src="../js/accordion.js"></script>
 
 	<div class="uk-accordion" data-uk-accordion>
-		<% @informes.group(:anio).each do |i| %>
-			<h3 class="uk-accordion-title"><%= construir_encabezado("bt-flechita.png", "bt-flechita-abajo.png", i.anio) %></h3>
-			<% anio = i.anio %>
+		<% @informes.group(:anio).each do |a| %>
+			<h3 class="uk-accordion-title"><%= construir_encabezado("bt-flechita.png", "bt-flechita-abajo.png", a.anio) %></h3>
 			<div class="uk-accordion-content">
-				<% @informes.where(:anio => anio).each do |d| %>
-					<p class="lista-docs"><a href=<%= d.archivo.url %>><%= d.nombre %></a></p>
-				<% end %>
+				<ul class=" uk-list">
+				<% @informes.where(:anio => a.anio).each do |d| %>
+   			 <li><img src=<%= image_url("documento.png") %> alt="documento" class="documento uk-vertical-align-middle"><a href=<%= d.liga.to_s == "" ? d.archivo.url : d.liga %> target="_blank" class="documento"><%= d.nombre %></a></li>
+    		<% end %>
+    		</ul>	
 			</div>
 		<% end %>
 	</div>

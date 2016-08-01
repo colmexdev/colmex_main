@@ -3,7 +3,7 @@
 	<div id="cuerpo" class="principal-chica uk-block-large">
 	
     <div class="uk-width-1-1">
-    <span class="titulo-grande">Programas Docentes</span><br>
+    <span class="titulo-grande">Programas Académicos</span><br>
     <p>&nbsp;</p>
     <!--          Aquí empieza el contenido          -->
     <div class="uk-grid uk-grid-large uk-margin-large-bottom">
@@ -12,9 +12,9 @@
     <p>&nbsp;</p>
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas rhoncus diam sed leo porttitor consectetur. Proin nec dui sit amet libero mattis suscipit. Etiam ac convallis dui, quis varius velit. Nam at laoreet lorem. Sed fermentum lectus sed scelerisque placerat. Ut pharetra porta justo, id suscipit orci posuere eget. In accumsan ornare dictum.</p>
     <ul class=" uk-list uk-list-space">
-    <li><a href="#" target="_blank" class="uk-margin-large-bottom">Licenciatura en Política y Administración Pública</a></li>
-    <li><a href="#" target="_blank" class="uk-margin-large-bottom">Licenciatura en Relaciones Internacionales</a></li>
-    <li><a href="#" target="_blank" class="uk-margin-large-bottom">Licenciatura en Economía</a></li>
+		<% @licenciaturas.each do |lic| %>
+		  <li><a href=<%= lic.liga %> target="_blank" class="uk-margin-large-bottom">Licenciatura en <%= lic.titulo %></a></li>
+		<% end %>
     </ul>
     </div>
     <div class="uk-width-large-2-5">
@@ -30,13 +30,9 @@
     <p>&nbsp;</p>
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas rhoncus diam sed leo porttitor consectetur. Proin nec dui sit amet libero mattis suscipit. Etiam ac convallis dui, quis varius velit. Nam at laoreet lorem. Sed fermentum lectus sed scelerisque placerat. Ut pharetra porta justo, id suscipit orci posuere eget. In accumsan ornare dictum.</p>
     <ul class=" uk-list uk-list-space">
-    <li><a href="#" target="_blank" class="uk-margin-large-bottom">Maestría en Ciencia Política</a></li>
-    <li><a href="#" target="_blank" class="uk-margin-large-bottom">Maestría en Demografía</a></li>
-    <li><a href="#" target="_blank" class="uk-margin-large-bottom">Maestría en Economía</a></li>
-    <li><a href="#" target="_blank" class="uk-margin-large-bottom">Maestría en Estudios de Asia y África</a></li>
-    <li><a href="#" target="_blank" class="uk-margin-large-bottom">Maestría en Estudios de Género</a></li>
-    <li><a href="#" target="_blank" class="uk-margin-large-bottom">Maestria en Estudios Urbanos</a></li>
-    <li><a href="#" target="_blank" class="uk-margin-large-bottom">Maestría en Traducción</a></li>
+    <% @maestrias.each do |mt| %>
+		  <li><a href=<%= mt.liga %> target="_blank" class="uk-margin-large-bottom">Maestría en en <%= mt.titulo %></a></li>
+		<% end %>
     </ul>
     </div>
     </div>
@@ -46,13 +42,9 @@
     <p>&nbsp;</p>
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas rhoncus diam sed leo porttitor consectetur. Proin nec dui sit amet libero mattis suscipit. Etiam ac convallis dui, quis varius velit. Nam at laoreet lorem. Sed fermentum lectus sed scelerisque placerat. Ut pharetra porta justo, id suscipit orci posuere eget. In accumsan ornare dictum.</p>
     <ul class=" uk-list uk-list-space">
-    <li><a href="#" target="_blank" class="uk-margin-large-bottom">Doctorado en Economía</a></li>
-    <li><a href="#" target="_blank" class="uk-margin-large-bottom">Doctorado en Estudios de Población</a></li>
-    <li><a href="#" target="_blank" class="uk-margin-large-bottom">Doctorado en Estudios Urbanos y Ambientales</a></li>
-    <li><a href="#" target="_blank" class="uk-margin-large-bottom">Doctorado en Historia</a></li>
-    <li><a href="#" target="_blank" class="uk-margin-large-bottom">Doctorado en Lingüística</a></li>
-    <li><a href="#" target="_blank" class="uk-margin-large-bottom">Doctorado en Literatura Hispánica</a></li>
-    <li><a href="#" target="_blank" class="uk-margin-large-bottom">Doctorado en Ciencia Social con Especialidad en Sociología</a></li>
+    <% @doctorados.each do |doc| %>
+		  <li><a href=<%= doc.liga %> target="_blank" class="uk-margin-large-bottom">Licenciatura en <%= doc.titulo %></a></li>
+		<% end %>
     </ul>
     </div>
     <div class="uk-width-large-2-5">

@@ -19,6 +19,10 @@
     <%= f.text_field :nombre %>
   </div>
   <div class="field">
+    <%= f.label :liga %><br>
+    <%= f.text_field :liga %>
+  </div>
+  <div class="field">
     <%= f.label :tipo %><br>
     <%= f.select(:tipo, options_for_select([['Informe de actividades','Informe'],['Junta de Gobierno','Junta'],['Estatuto','Estatuto'],['Transparencia','Transparencia']]),{},{:onchange => "ocultarAnio()"}) %>
   </div>

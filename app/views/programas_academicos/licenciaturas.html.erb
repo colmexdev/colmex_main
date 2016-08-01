@@ -1,22 +1,20 @@
 <%= render 'principal/barra' %>
 <div class="container-fluid" id="resto-cuerpo">
-	<div id="cuerpo">
-		<div class="row">
-			<div class="titular-pagina">
-				<span class="titulo-grande"><%= t('botones.b3.opciones.op1') %></span>
-			</div>
-		</div>
-
-		<div class="tabla">
-			<div class="tabla-programa">
-				<div class="medio centro programa texto-programa">
-					<%= construye_cursos("Licenciatura") %>
-				</div>
-				<div class="medio centro programa img-programa">
-					<%= image_tag("sobre.png", :class => "img-muestra img-pa") %>
-				</div>
-			</div>
-		</div>
+	<div id="cuerpo" class="principal-chica uk-block-large">
+		
+<div class="uk-grid uk-grid-large">
+    <div class="uk-width-large-3-5 uk-text-left">
+		<% @licenciaturas.each do |lic| %>
+    <h2 class="vino">Licenciatura en <%= lic.titulo %></h2>
+    <p class="uk-margin-large-bottom"><%= lic.descripcion %></p>
+    <a href=<%= lic.liga %> target="_blank" class="ver-mas uk-margin-large-bottom">Más información</a>
+    <p>&nbsp;</p>
+		<% end %>
+    </div>
+    <div class="uk-width-large-2-5">
+    <img src=<%= image_url("imagen.jpg") %> alt="Historia de El Colegio de México">
+    </div>
+    </div>
 
 	</div>
 

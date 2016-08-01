@@ -1,6 +1,7 @@
-
-<% @estatutos.each do |e| %>
-	<div class="uk-accordion-content">
-		<p class="lista-docs"><a href=<%= e.archivo.url %>><%= e.nombre %></a></p>
-	</div>
-<% end %>
+    <p>&nbsp;</p>
+    <ul class=" uk-list">
+    <% estatutos.each do |e| %>
+    <li><img src=<%= image_url("documento.png") %> alt="documento" class="documento uk-vertical-align-middle"><a href=<%= e.liga.to_s == "" ? e.archivo.url : e.liga %> target="_blank" class="documento"><%= e.nombre %></a></li>
+    <% end %>
+    </ul>
+    <p>&nbsp;</p>
