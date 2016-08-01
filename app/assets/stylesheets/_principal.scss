@@ -872,7 +872,7 @@ ul.ul-nav { display: table; float: left !important;
 @media only screen and (max-width: 768px){
 	#div_revistas{ 
 		height: 130px;
-		.revista { a { img { max-height: 120px; max-width: 190px; } } } 
+		.revista { a { img { max-height: 130px; max-width: 132px; } } } 
 	}
 
 	.col-xs-12.col-sm-4.revista { margin-bottom: 20px; }
@@ -920,6 +920,7 @@ ul.ul-nav { display: table; float: left !important;
 
 		>input{
 			border-radius: 5px;
+			border: solid 1px #909090;
 			height: 35px;
 			position: relative;
 			top: 2px;
@@ -1171,10 +1172,11 @@ ul.ul-nav { display: table; float: left !important;
 		width: 50%; 
 		max-width: 323px;
 		height: 100%;
+		background-color: #622222;
 		display: inline-block;
 		float: left;
 		  
-		img { width: 100%; height: 100%; }
+		img { width: 90%; }
 	}
 }
 
@@ -1279,8 +1281,14 @@ ul.ul-nav { display: table; float: left !important;
 	}
 }
 
+@media only screen and (max-width: 768px){
+	#div_transparencia{
+		img { max-height: 130px; max-width: 130px; }
+	}
+}
+
 @media only screen and (min-width: 0px) and (max-width: 417px){
-	#div_transparencia { height: 300px; line-height: 150px; }
+	#div_transparencia { line-height: 150px; }
 }
 
 #cuerpo{  }
