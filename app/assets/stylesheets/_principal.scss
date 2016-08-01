@@ -956,10 +956,21 @@ ul.ul-nav { display: table; float: left !important;
 			}
 
 			>p{
-				@include centrado;
-				width: 90%;
-				margin: 0 auto;
-				text-align: center;
+					@include centrado;
+					width: 90%;
+					text-align: center;
+					margin: 0 auto;
+					overflow: hidden;
+					height: 3.3em;
+
+					.cont-descubre{
+						color: #fff;
+					
+					}
+
+					.titulo-descubre{
+						color: #fff;
+					}
 			}
 	
 			a{
@@ -988,7 +999,6 @@ ul.ul-nav { display: table; float: left !important;
 						text-align: center;
 						margin: 0 auto;
 						overflow: hidden;
-						height: 3.3em;
 						text-overflow: ellipsis;
 
 						.cont-descubre{

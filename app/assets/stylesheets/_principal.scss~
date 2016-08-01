@@ -1284,7 +1284,7 @@ ul.ul-nav { display: table; float: left !important;
 
 @media only screen and (max-width: 768px){
 	#div_transparencia{
-		img { max-height: 130px; max-width: 130px; }
+		a>img { max-height: 130px; max-width: 130px; }
 	}
 }
 

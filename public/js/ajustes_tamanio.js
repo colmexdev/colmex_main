@@ -26,6 +26,7 @@ $(document).ready(function(){
 	$('#div_slider').css({'height':alto_slide+'px'});
 
 	partirDescubres();
+	margenAuto();
 	ajustarImagenes();
 });
 
@@ -65,7 +66,7 @@ function partirDescubres(){
 	var json_l = JSON.parse(gon.descubres).length;
 	var alto_d = $(".frame-descubre").height();
 	$("#wrapper").css({"height" : ((($("#wrapper").height() >= alto_d * num_filas) || document.getElementById("wrapper").style.height == "auto") ? "auto" : (alto_d * num_filas) + "px"), "overflow-y" : "hidden", "-webkit-transition" : "height 0.5s linear", "-moz-transition" : "height 0.5s linear", "-o-transition" : "height 0.5s linear", "transition" : "height 0.5s linear"});
-	if(((json_l > 10 && ancho_v >= 1200 ) || (json_l > 8 && ancho_v >= 992 && ancho_v < 1200) || (json_l > 6 && ancho_v >= 768 && ancho_v < 992) || (json_l >4 && ancho_v >= 480 && ancho_v < 768) || (json_l > 3 && ancho_v < 480)) && document.getElementById("wrapper").style.height != "auto"){
+	if(((json_l > 10 && ancho_v >= 1200 ) || (json_l > 8 && ancho_v >= 992 && ancho_v < 1200) || (json_l > 6 && ancho_v >= 768 && ancho_v < 992) || (json_l >4 && ancho_v >= 480 && ancho_v < 768) || (json_l > 2 && ancho_v < 480)) && document.getElementById("wrapper").style.height != "auto"){
 		$("#cutter-descubre").css("display","block");
 	}
 	else{
