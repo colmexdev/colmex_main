@@ -1,27 +1,19 @@
 <%= render 'principal/barra' %>
 <div class="container-fluid" id="resto-cuerpo">
-	<div class="cuerpo">
-		<div class="div-titular">
-			<span class="titulo-grande titular"><%= t('botones.b1.opciones.op5') %></span><br />
-		</div>
-		<div class="row">
-			<div class="acordeon-premios">
-			<script type="text/javascript" src="../js/accordion.js"></script>
-
-				<div class="uk-accordion" data-uk-accordion>
-					<% @centros.each do |c| %>
-						<h3 class="uk-accordion-title"><%= construir_encabezado("bt-flechita.png", "bt-flechita-abajo.png", c) %></h3>
-						<div class="uk-accordion-content">
-							<ul class="lista-profesor">
-								<% @profesores.where(centro: c).order(fecha_anexion: :desc).each do |p| %>
-									<li><%= p.nombre + " (" + l(p.fecha_anexion, format: :long) + "), " + p.semblanza %></li>
-								<% end %>
-							</ul>
-						</div>
-					<% end %>
-				</div>
-			</div>
-		</div>
+	<div class="cuerpo" class="principal-chica uk-block-large">
+	<% @profesores.each do |prof| %>
+	<div class="uk-grid uk-grid-medium uk-margin-large-bottom">
+    <div class="uk-width-large-2-6 uk-width-medium-2-5 uk-width-small-2-5 uk-text-center">
+    <img src=<%= image_url(prof.foto.url) %> class="uk-border-rounded" alt="Foto Profesor Emérito">
+    </div>
+    <div class="uk-width-large-4-6 uk-width-medium-2-5 uk-width-small-3-5 uk-text-left uk-text-break">
+    <h3 class="vino"><%= prof.nombre %></h3>
+    <h4><%= prof.centro %></h4>
+    <p><strong>Fecha de nombramiento: </strong><%= prof.fecha_anexion %></p>
+    <p><%= prof.semblanza || "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sit amet vestibulum lectus. Phasellus non interdum leo. Proin scelerisque sed lorem a tempor. Donec varius turpis pulvinar blandit lobortis. Sed congue placerat augue, at aliquam lectus semper ac. Pellentesque lectus justo, tristique nec feugiat nec, tincidunt sed neque. In suscipit nulla ac enim porta venenatis."  %></p>
+    </div>
+    </div>
+	<% end %>
 	</div>
 
 <%= render 'principal/footer' %>
