@@ -8,8 +8,8 @@
     </div>
     <div class="uk-width-large-4-6 uk-width-medium-2-5 uk-width-small-3-5 uk-text-left uk-text-break">
     <h3 class="vino"><%= prof.nombre %></h3>
-    <h4><%= prof.centro %></h4>
-    <p><strong>Fecha de nombramiento: </strong><%= prof.fecha_anexion %></p>
+    <h4><%= convierteCentros(prof.centro) %></h4>
+    <p><strong>Fecha de nombramiento: </strong><%= prof.fecha_anexion.strftime("%d de %B de %Y") %></p>
     <p><%= prof.semblanza || "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sit amet vestibulum lectus. Phasellus non interdum leo. Proin scelerisque sed lorem a tempor. Donec varius turpis pulvinar blandit lobortis. Sed congue placerat augue, at aliquam lectus semper ac. Pellentesque lectus justo, tristique nec feugiat nec, tincidunt sed neque. In suscipit nulla ac enim porta venenatis."  %></p>
     </div>
     </div>

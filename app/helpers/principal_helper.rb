@@ -119,4 +119,8 @@ module PrincipalHelper
     return bloque_html.html_safe
   end
 
+  def convierteCentros(siglas)
+    centros = {ceaa: "Centro de Estudios de Asia y África", cedua: "Centro de Estudios Demográficos, Urbanos y Ambientales", cee: "Centro de Estudios Económicos", ceh: "Centro de Estudios Históricos", cei: "Centro de Estudios Internacionales", cell: "Centro de Estudios Lingüísticos y Literarios", ces: "Centro de Estudios Sociológicos"}
+    return centros[siglas]
+  end
 end
