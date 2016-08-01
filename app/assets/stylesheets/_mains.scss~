@@ -52,6 +52,4 @@
 	text-align: left;
 }
 
-@media only screen and (max-width: 1024px
-
 .unpadded { padding-left: 50px; padding-top: 15px; }
