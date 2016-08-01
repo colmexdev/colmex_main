@@ -38,7 +38,7 @@ body {font-family: "Whitney SSm A", "Whitney SSm B", 'Lato', sans-serif; font-st
 h1, h2, h3, h4, h5, h6 {font-family: "Gotham SSm A", "Gotham SSm B", 'Lato', sans-serif; font-style: normal; font-weight: 700;}
 strong {font-weight: 600; color: #838383}
 i {font-style: italic; }
-a, a:hover, a:active, a:visited, a:link{  text-decoration: none; color: #fff }
+a, a:hover, a:active, a:visited, a:link{  text-decoration: none; color: #fff; }
 .titulo {}
 .subtitulo {color: #838383}
 .titulo-chico{
@@ -48,6 +48,19 @@ a, a:hover, a:active, a:visited, a:link{  text-decoration: none; color: #fff }
 	font-size: 28px;
 }
 p {text-align: justify; font-size: 15px;}
+
+@media only screen and (min-width: 768px){
+	.principal-chica {
+    max-width: 980px;
+    margin: 35px auto;
+	}
+}
+@media only screen and (min-width: 1220px){
+	.principal {
+    max-width: 1200px;
+    margin: 0 auto;
+	}
+}	
 
 .titulo-chico.morado, .titulo-grande.morado{ color: #7E3355; }
 
