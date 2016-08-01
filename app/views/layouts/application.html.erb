@@ -13,7 +13,7 @@
   <%= yield %>
 
 </body>
-<% if controller_name != "principal" and action_name != "principal" %>
+<% if (controller_name+"/"+action_name) != "principal/principal" %>
   <script type="text/javascript" src="../js/escala_auto.js"></script>
 <% end %>
 </html>
