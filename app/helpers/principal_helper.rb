@@ -120,7 +120,8 @@ module PrincipalHelper
   end
 
   def convierteCentros(siglas)
-    centros = {ceaa: "Centro de Estudios de Asia y África", cedua: "Centro de Estudios Demográficos, Urbanos y Ambientales", cee: "Centro de Estudios Económicos", ceh: "Centro de Estudios Históricos", cei: "Centro de Estudios Internacionales", cell: "Centro de Estudios Lingüísticos y Literarios", ces: "Centro de Estudios Sociológicos"}
-    return centros[siglas]
+    centros = ["Centro de Estudios de Asia y África", "Centro de Estudios Demográficos, Urbanos y Ambientales", "Centro de Estudios Económicos", "Centro de Estudios Históricos", "Centro de Estudios Internacionales", "Centro de Estudios Lingüísticos y Literarios", "Centro de Estudios Sociológicos"]
+    sigla = ["CEAA", "CEDUA", "CEE", "CEH", "CEI", "CELL", "CES"]
+    return centros[sigla.index(siglas)]
   end
 end
