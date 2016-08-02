@@ -985,7 +985,7 @@ ul.ul-nav { display: table; float: left !important;
 						font-family: "Gotham SSm A", "Gotham SSm B"; 
 						font-style: normal; 
 						font-weight: 700; 
-						font-size:18px; 
+						font-size: 18px; 
 					
 					}
 
@@ -1020,10 +1020,13 @@ ul.ul-nav { display: table; float: left !important;
 						text-align: center;
 						margin: 0 auto;
 						overflow: hidden;
-						text-overflow: ellipsis;
 
 						.cont-descubre{
 							color: #fff;
+							font-family: "Gotham SSm A", "Gotham SSm B"; 
+							font-style: normal; 
+							font-weight: 700; 
+							font-size: 18px; 
 						
 						}
 
