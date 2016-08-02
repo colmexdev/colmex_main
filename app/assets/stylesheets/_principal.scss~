@@ -936,7 +936,6 @@ ul.ul-nav { display: table; float: left !important;
 			border: solid 1px #909090;
 			height: 35px;
 			position: relative;
-			top: 2px;
 			font-weight: 600;
 			font-size: 15px;
 			padding: 1px 5px;
