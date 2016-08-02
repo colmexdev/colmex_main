@@ -977,7 +977,6 @@ ul.ul-nav { display: table; float: left !important;
 					text-align: center;
 					margin: 0 auto;
 					overflow: hidden;
-					max-height: 97px;
 
 					.cont-descubre{
 						color: #fff;
@@ -998,6 +997,7 @@ ul.ul-nav { display: table; float: left !important;
 						font-size: 24px;
 						display:block;
 						margin: 0 auto;
+						max-height: 97px;
 					}
 			}
 	
@@ -1026,7 +1026,6 @@ ul.ul-nav { display: table; float: left !important;
 						text-align: center;
 						margin: 0 auto;
 						overflow: hidden;
-						max-height: 97px;
 
 						.cont-descubre{
 							display: block;
@@ -1047,7 +1046,7 @@ ul.ul-nav { display: table; float: left !important;
 							font-style: normal; 
 							font-weight: 500; 
 							font-size: 24px;
-
+							max-height: 97px;
 						}
 					}
 
