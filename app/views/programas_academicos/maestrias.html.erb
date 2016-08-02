@@ -5,7 +5,7 @@
 		<div class="uk-grid uk-grid-large">
     <div class="uk-width-large-3-5 uk-text-left">
 		<% @maestrias.each do |mt| %>
-    <h2 class="vino">Maestría en <%= mt.nombre %></h2>
+    <h2 class="vino">Maestría en <%= mt.titulo %></h2>
     <p class="uk-margin-large-bottom"><%= mt.descripcion %></p>
     <a href=<%= mt.liga %> target="_blank" class="ver-mas uk-margin-large-bottom">Más información</a>
     <p>&nbsp;</p>
