@@ -998,7 +998,7 @@ ul.ul-nav { display: table; float: left !important;
 					display:block;
 					margin: 0 auto;
 					height: 97px;
-					position:relative;
+					position: relative;
 				}
 	
 				.titulo-descubre:after {
