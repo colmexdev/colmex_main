@@ -998,6 +998,7 @@ ul.ul-nav { display: table; float: left !important;
 					display:block;
 					margin: 0 auto;
 					height: 97px;
+					position: relative;
 				}
 	
 				.titulo-descubre:after {
@@ -1008,7 +1009,7 @@ ul.ul-nav { display: table; float: left !important;
 					right: 0;
 					width: 30%;
 					height: 24px;
-					background: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1) 50%);
+					background: linear-gradient(to right, rgba(153,51,102, 0), rgba(255, 255, 255, 1) 50%);
 				}
 			}
 	
@@ -1058,6 +1059,7 @@ ul.ul-nav { display: table; float: left !important;
 							font-weight: 500; 
 							font-size: 24px;
 							height: 97px;
+							position:relative;
 						}
 
 						.titulo-descubre:after {
@@ -1068,7 +1070,7 @@ ul.ul-nav { display: table; float: left !important;
 							right: 0;
 							width: 30%;
 							height: 24px;
-							background: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1) 50%);
+							background: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(153,51,102, 1) 50%);
 						}
 					}
 

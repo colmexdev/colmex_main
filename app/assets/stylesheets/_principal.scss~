@@ -627,7 +627,7 @@ ul.ul-nav { display: table; float: left !important;
 							font-size: 15px;
 							text-align: left;
 							color: #5E002B;
-							line-height:1.2em;
+							line-height: 1.2em;
 							position: relative;
 							height: 2.4em;
 							overflow: hidden;	
@@ -973,32 +973,44 @@ ul.ul-nav { display: table; float: left !important;
 			}
 
 			>p{
-					width: 95%;
-					text-align: center;
+				width: 95%;
+				text-align: center;
+				margin: 0 auto;
+				overflow: hidden;
+
+				.cont-descubre{
+					color: #fff;
+					display: block;
+					margin-top: 15%;
+					font-family: "Gotham SSm A", "Gotham SSm B"; 
+					font-style: normal; 
+					font-weight: 700; 
+					font-size: 17px; 
+				
+				}
+
+				.titulo-descubre{
+					color: #fff;
+					font-family: "Whitney SSm A", "Whitney SSm B"; 
+					font-style: normal; 
+					font-weight: 500; 
+					font-size: 24px;
+					display:block;
 					margin: 0 auto;
-					overflow: hidden;
-
-					.cont-descubre{
-						color: #fff;
-						display: block;
-						margin-top: 15%;
-						font-family: "Gotham SSm A", "Gotham SSm B"; 
-						font-style: normal; 
-						font-weight: 700; 
-						font-size: 17px; 
-					
-					}
-
-					.titulo-descubre{
-						color: #fff;
-						font-family: "Whitney SSm A", "Whitney SSm B"; 
-						font-style: normal; 
-						font-weight: 500; 
-						font-size: 24px;
-						display:block;
-						margin: 0 auto;
-						max-height: 97px;
-					}
+					height: 97px;
+					position:relative;
+				}
+	
+				.titulo-descubre:after {
+					content: "";
+					text-align: right;
+					position: absolute;
+					bottom: 0;
+					right: 0;
+					width: 30%;
+					height: 24px;
+					background: linear-gradient(to right, rgba(153,51,102, 0), rgba(255, 255, 255, 1) 50%);
+				}
 			}
 	
 			a{
@@ -1046,7 +1058,19 @@ ul.ul-nav { display: table; float: left !important;
 							font-style: normal; 
 							font-weight: 500; 
 							font-size: 24px;
-							max-height: 97px;
+							height: 97px;
+							position:relative;
+						}
+
+						.titulo-descubre:after {
+							content: "";
+							text-align: right;
+							position: absolute;
+							bottom: 0;
+							right: 0;
+							width: 30%;
+							height: 24px;
+							background: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(153,51,102, 1) 50%);
 						}
 					}
 
