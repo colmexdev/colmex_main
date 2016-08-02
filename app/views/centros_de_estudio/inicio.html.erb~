@@ -1,5 +1,24 @@
 <%= render 'principal/barra' %>
 <div class="container-fluid" id="resto-cuerpo">
 
+	<div class="principal-chica uk-block-large">
+
+<div class="uk-width-1-1">
+    <span class="titulo-grande">Centros de Estudio</span><br>
+    <p>&nbsp;</p>
+    <div class="uk-grid uk-grid-large uk-text-center">
+    <div class="uk-width-1-4"><img src=<%= image_url("centro-ceaa.png") %> alt="Centro de estudios de Asia y África"><br><a href=<%= ceaa_path %> target="_blank" class="ver-mas">Más información</a></div>
+    <div class="uk-width-1-4"><img src=<%= image_url("centro-cedua.png") %> alt="Centro de estudios demográficos, urbanos y ambientales"><br><a href=<%= cedua_path %> target="_blank" class="ver-mas">Más información</a></div>
+    <div class="uk-width-1-4"><img src=<%= image_url("centro-cee.png") %> alt="Centro de estudios económicos"><br><a href=<%= cee_path %> target="_blank" class="ver-mas">Más información</a></div>
+    <div class="uk-width-1-4"><img src=<%= image_url("centro-ceh.png") %> alt="Centro de estudios históricos"><br><a href=<%= ceh_path %> target="_blank" class="ver-mas">Más información</a></div>
+    </div>
+    <div class="uk-grid uk-grid-large uk-text-center">
+    <div class="uk-width-1-4"><img src=<%= image_url("centro-cei.png") %> alt="Centro de estudios internacionales"><br><a href=<%= cei_path %> target="_blank" class="ver-mas">Más información</a></div>
+    <div class="uk-width-1-4"><img src=<%= image_url("centro-cell.png") %> alt="Centro de estudios lingüísticos y literarios "><br><a href=<%= cell_path %> target="_blank" class="ver-mas">Más información</a></div>
+    <div class="uk-width-1-4"><img src=<%= image_url("centro-ces.png") %> alt="Centro de estudios sociológicos"><br><a href=<%= ces_path %> target="_blank" class="ver-mas">Más información</a></div>
+    </div>
+    </div> 
+
+	</div>
 
 <%= render 'principal/footer' %>
