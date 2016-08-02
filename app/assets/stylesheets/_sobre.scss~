@@ -19,7 +19,7 @@
 	border: solid 1px #470020; 
 	color: #fff; 
 	text-decoration: none;
-	display: block;
+	display: inline-block;
 	-webkit-transition: all 0.5s linear;
 	-moz-transition: all 0.5s linear;
 	-o-transition: all 0.5s linear;
