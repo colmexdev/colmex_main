@@ -91,10 +91,11 @@ http://revistas.colmex.mx/", :target => "_blank") %></div>
 			</div>
 			<div class="filtros-descubre">
 				<span class="span-filtros">Filtrar por:</span>
-				<%= select_tag("contenido", options_from_collection_for_select(Content.all, (:tipo).downcase, :tipo), :include_blank => "Categoría (Todos)", :onchange => "filtrarDescubres();") %>
+				<%= select_tag("contenido", options_from_collection_for_select(Content.all.order(:tipo), (:tipo).downcase, :tipo), :include_blank => "Categoría (Todos)", :onchange => "filtrarDescubres();") %>
 				<%= text_field_tag("tags", "", :oninput => "filtrarDescubres();", :placeholder => "Contenido") %>
 			</div>
-			<div class="wrapper-descubre" id="wrapper">
+			<script type="text/javascript" src="../js/grid.js"></script>
+			<div class="wrapper-descubre uk-width-small-1-2 uk-width-medium-1-3 uk-width-large-1-4" id="wrapper" data-uk-grid>
 				<%= construir_descubre(@descubre) %>
 			</div>
 			<div id="cutter-descubre" onclick="desbordarDescubres();">
