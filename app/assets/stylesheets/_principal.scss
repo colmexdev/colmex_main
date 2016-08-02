@@ -973,7 +973,7 @@ ul.ul-nav { display: table; float: left !important;
 			}
 
 			>p{
-					@include centrado;
+					//@include centrado;
 					width: 90%;
 					text-align: center;
 					margin: 0 auto;
@@ -1019,7 +1019,7 @@ ul.ul-nav { display: table; float: left !important;
 					transition: opacity 0.5s linear;
 
 					>p{
-						@include centrado;
+						//@include centrado;
 						width: 90%;
 						text-align: center;
 						margin: 0 auto;
