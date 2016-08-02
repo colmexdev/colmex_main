@@ -977,6 +977,7 @@ ul.ul-nav { display: table; float: left !important;
 					text-align: center;
 					margin: 0 auto;
 					overflow: hidden;
+					max-height: 97px;
 
 					.cont-descubre{
 						color: #fff;
@@ -995,7 +996,8 @@ ul.ul-nav { display: table; float: left !important;
 						font-style: normal; 
 						font-weight: 500; 
 						font-size: 24px;
-						max-height: 97px;
+						display:block;
+						margin: 0 auto;
 					}
 			}
 	
@@ -1024,6 +1026,7 @@ ul.ul-nav { display: table; float: left !important;
 						text-align: center;
 						margin: 0 auto;
 						overflow: hidden;
+						max-height: 97px;
 
 						.cont-descubre{
 							display: block;
@@ -1037,12 +1040,14 @@ ul.ul-nav { display: table; float: left !important;
 						}
 
 						.titulo-descubre{
+							display:block;
+							margin: 0 auto;
 							color: #fff;
 							font-family: "Whitney SSm A", "Whitney SSm B"; 
 							font-style: normal; 
 							font-weight: 500; 
 							font-size: 24px;
-							max-height: 97px;
+
 						}
 					}
 
