@@ -863,7 +863,7 @@ ul.ul-nav { display: table; float: left !important;
 		a{ 
 			img{ 
 				@include centrado; 
-				max-height: 200px;
+				max-height: 130px;
 				max-width: 350px;
 			} 	
 		}
