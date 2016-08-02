@@ -931,19 +931,19 @@ ul.ul-nav { display: table; float: left !important;
 			}
 		}
 
-		@media only screen and (max-width: 654px){
-			>select { margin: 0; }
-		}
-
 		>input{
 			border-radius: 5px;
 			border: solid 1px #909090;
 			height: 35px;
 			position: relative;
-			top: 2px;
 			font-weight: 600;
 			font-size: 15px;
 			padding: 1px 5px;
+		}
+
+		@media only screen and (max-width: 654px){
+			>select { margin: 0; }
+			>input { margin: 5px; }
 		}
 	}
 
@@ -973,13 +973,21 @@ ul.ul-nav { display: table; float: left !important;
 			}
 
 			>p{
+					@include centrado;
 					width: 90%;
 					text-align: center;
 					margin: 0 auto;
 					overflow: hidden;
 					height: 3.3em;
-					color: #fff;
 
+					.cont-descubre{
+						color: #fff;
+					
+					}
+
+					.titulo-descubre{
+						color: #fff;
+					}
 			}
 	
 			a{
@@ -1003,19 +1011,29 @@ ul.ul-nav { display: table; float: left !important;
 					transition: opacity 0.5s linear;
 
 					>p{
+						@include centrado;
 						width: 90%;
 						text-align: center;
 						margin: 0 auto;
 						overflow: hidden;
-						color: #fff;
+						text-overflow: ellipsis;
+
+						.cont-descubre{
+							color: #fff;
+						
+						}
+
+						.titulo-descubre{
+							color: #fff;
+						}
 					}
 
 					.icono-descubre{
 						position: absolute;
-						right: 15px;
-						bottom: 15px;
-						max-width: 30px;
-						max-height: 30px;
+						right: 10px;
+						bottom: 10px;
+						max-width: 20px;
+						max-height: 20px;
 					}
 				}
 
