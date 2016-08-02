@@ -931,6 +931,10 @@ ul.ul-nav { display: table; float: left !important;
 			}
 		}
 
+		@media only screen and (max-width: 654px){
+			>select { margin: 0; }
+		}
+
 		>input{
 			border-radius: 5px;
 			border: solid 1px #909090;
@@ -975,15 +979,8 @@ ul.ul-nav { display: table; float: left !important;
 					margin: 0 auto;
 					overflow: hidden;
 					height: 3.3em;
+					color: #fff;
 
-					.cont-descubre{
-						color: #fff;
-					
-					}
-
-					.titulo-descubre{
-						color: #fff;
-					}
 			}
 	
 			a{
@@ -1013,15 +1010,7 @@ ul.ul-nav { display: table; float: left !important;
 						margin: 0 auto;
 						overflow: hidden;
 						text-overflow: ellipsis;
-
-						.cont-descubre{
-							color: #fff;
-						
-						}
-
-						.titulo-descubre{
-							color: #fff;
-						}
+						color: #fff;
 					}
 
 					.icono-descubre{
