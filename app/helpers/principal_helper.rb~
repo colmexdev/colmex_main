@@ -107,11 +107,11 @@ module PrincipalHelper
       if d.imagen.url != "/vacio.jpg"
         bloque_html = bloque_html + ActionController::Base.helpers.image_tag(d.imagen, :class => "imagen-descubre")
       else
-        bloque_html = bloque_html + "<p>" + d.contenido.upcase + "</p><br />"
+        bloque_html = bloque_html + "<p>" + d.contenido.upcase + "</p>"
         bloque_html = bloque_html + "<p>" + d.titulo + "</p>"
       end
       bloque_html = bloque_html + "<a href=\""+ d.liga + "\" " + (d.contenido.downcase == "video" ? ("data-uk-lightbox title=\"\"") : "target=\"_blank\"" ) + "><div class=\"frame-hover\">"
-      bloque_html = bloque_html + "<p>" + d.contenido.upcase + "</p><br />"
+      bloque_html = bloque_html + "<p>" + d.contenido.upcase + "</p>"
       bloque_html = bloque_html + "<p>" + d.titulo + "</p>"
       bloque_html = bloque_html + ActionController::Base.helpers.image_tag(Content.where(tipo: d.contenido).first.icono.url, :class => "icono-descubre")
       bloque_html = bloque_html + "</div></a></div>"
