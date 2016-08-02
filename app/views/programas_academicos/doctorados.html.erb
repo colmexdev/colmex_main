@@ -4,7 +4,7 @@
 		
 <div class="uk-grid uk-grid-large">
     <div class="uk-width-large-3-5 uk-text-left">
-		<% doctorados.each do |doc| %>
+		<% @doctorados.each do |doc| %>
     <h2 class="vino">Doctorado en <%= doc.titulo %></h2>
     <p class="uk-margin-large-bottom"><%= doc.descripcion %></p>
     <a href=<%= doc.liga %> target="_blank" class="ver-mas uk-margin-large-bottom">Más información</a>

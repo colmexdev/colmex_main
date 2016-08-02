@@ -2,6 +2,19 @@
 <div class="container-fluid" id="resto-cuerpo">
 	<div id="cuerpo" class="principal-chica uk-block-large">
 		
+<div class="uk-grid uk-grid-large">
+    <div class="uk-width-large-3-5 uk-text-left">
+		<% doctorados.each do |doc| %>
+    <h2 class="vino">Doctorado en <%= doc.titulo %></h2>
+    <p class="uk-margin-large-bottom"><%= doc.descripcion %></p>
+    <a href=<%= doc.liga %> target="_blank" class="ver-mas uk-margin-large-bottom">Más información</a>
+    <p>&nbsp;</p>
+		<% end %>
+    </div>
+    <div class="uk-width-large-2-5">
+    <img src=<%= image_url("imagen.jpg") %> alt="Historia de El Colegio de México">
+    </div>
+    </div>
 	
 	</div>
 
