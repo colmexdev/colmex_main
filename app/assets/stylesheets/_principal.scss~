@@ -980,10 +980,12 @@ ul.ul-nav { display: table; float: left !important;
 
 					.cont-descubre{
 						color: #fff;
+						display: block;
+						margin-top: 15%;
 						font-family: "Gotham SSm A", "Gotham SSm B"; 
 						font-style: normal; 
 						font-weight: 700; 
-						font-size: 18px; 
+						font-size: 17px; 
 					
 					}
 
@@ -992,7 +994,7 @@ ul.ul-nav { display: table; float: left !important;
 						font-family: "Whitney SSm A", "Whitney SSm B"; 
 						font-style: normal; 
 						font-weight: 500; 
-						font-size: 26px;
+						font-size: 24px;
 					}
 			}
 	
@@ -1023,11 +1025,13 @@ ul.ul-nav { display: table; float: left !important;
 						overflow: hidden;
 
 						.cont-descubre{
+							display: block;
+							margin-top: 15%;
 							color: #fff;
 							font-family: "Gotham SSm A", "Gotham SSm B"; 
 							font-style: normal; 
 							font-weight: 700; 
-							font-size: 18px; 
+							font-size: 17px; 
 						
 						}
 
@@ -1036,7 +1040,7 @@ ul.ul-nav { display: table; float: left !important;
 							font-family: "Whitney SSm A", "Whitney SSm B"; 
 							font-style: normal; 
 							font-weight: 500; 
-							font-size: 26px;
+							font-size: 24px;
 						}
 					}
 
