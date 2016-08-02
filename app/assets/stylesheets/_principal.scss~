@@ -973,7 +973,7 @@ ul.ul-nav { display: table; float: left !important;
 			}
 
 			>p{
-					@include centrado;
+					//@include centrado;
 					width: 90%;
 					text-align: center;
 					margin: 0 auto;
@@ -1004,7 +1004,7 @@ ul.ul-nav { display: table; float: left !important;
 					transition: opacity 0.5s linear;
 
 					>p{
-						@include centrado;
+						//@include centrado;
 						width: 90%;
 						text-align: center;
 						margin: 0 auto;
@@ -1015,10 +1015,10 @@ ul.ul-nav { display: table; float: left !important;
 
 					.icono-descubre{
 						position: absolute;
-						right: 10px;
-						bottom: 10px;
-						max-width: 20px;
-						max-height: 20px;
+						right: 15px;
+						bottom: 15px;
+						max-width: 30px;
+						max-height: 30px;
 					}
 				}
 
