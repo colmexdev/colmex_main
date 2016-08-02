@@ -22,7 +22,7 @@
         defaults: {
             colwidth  : 'auto',
             animation : true,
-            duration  : 20,
+            duration  : 100,
             gutter    : 0,
             controls  : false,
             filter    : false
