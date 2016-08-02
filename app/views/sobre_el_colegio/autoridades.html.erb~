@@ -1,18 +1,23 @@
 <%= render 'principal/barra' %>
 <div class="container-fluid" id="resto-cuerpo">
-	<div class="cuerpo">
-		<div class="centro medio padded">
-			<span class="titulo-grande"><%= t('sobre.autoridades.titulo') %></span><br>
-			<ul class="lista-links unpadded">
-				<li><%= link_to(image_tag('bt-flechita.png', :class => "leave_img") + image_tag("bt-flechita-hover.png", :class => "hover_img") + t('sobre.autoridades.asamblea'), asamblea_path, :remote => true, :class => "link-sobre", :id => "asamblea-link") %></li>
+	<div id="cuerpo" class="principal-chica uk-block-large">
+
+<div class="uk-width-1-1">
+    <div class="uk-grid uk-grid-medium">
+    <div class="uk-width-large-2-5 uk-text-center-small uk-text-center-medium uk-text-left">
+    <span class="titulo-grande">Autoridades</span><br>
+    <!--          Aquí empieza el menú pequeño          -->
+    <ul style="text-align:left;">
+    	<li><%= link_to(image_tag('bt-flechita.png', :class => "leave_img") + image_tag("bt-flechita-hover.png", :class => "hover_img") + t('sobre.autoridades.asamblea'), asamblea_path, :remote => true, :class => "link-sobre", :id => "asamblea-link") %></li>
 				<li><%= link_to image_tag('bt-flechita.png', :class => "leave_img") + image_tag("bt-flechita-hover.png", :class => "hover_img") + t('sobre.autoridades.junta'), junta_path, :remote => true, :class => "link-sobre", :id => "junta-link" %></li>
 				<li><%= link_to image_tag('bt-flechita.png', :class => "leave_img") + image_tag("bt-flechita-hover.png", :class => "hover_img") + t('sobre.autoridades.presidencia'), presidencia_path, :remote => true, :class => "link-sobre", :id => "presidencia-link" %></li>
 				<li><%= link_to image_tag('bt-flechita.png', :class => "leave_img") + image_tag("bt-flechita-hover.png", :class => "hover_img") + t('sobre.autoridades.centros'), centros_autoridades_path, :remote => true, :class => "link-sobre", :id => "centros-link" %></li>
 				<li><%= link_to image_tag('bt-flechita.png', :class => "leave_img") + image_tag("bt-flechita-hover.png", :class => "hover_img") + t('sobre.autoridades.admin'), administracion_path, :remote => true, :class => "link-sobre", :id => "administracion-link" %></li>
 				<li><%= link_to image_tag('bt-flechita.png', :class => "leave_img") + image_tag("bt-flechita-hover.png", :class => "hover_img") + t('sobre.autoridades.operativas'), operativas_path, :remote => true, :class => "link-sobre", :id => "operativas-link" %></li>
-			</ul>
-		</div>
-		<div class="centro medio">
+    </ul>
+    <!--          Aquí termina el menú pequeño          -->
+    </div>
+    <div class="uk-width-large-3-5">
 			<span class="titulo-grande morado" id="titulo-render"><%= t('sobre.autoridades.asamblea') %></span>
 			<div id="autoridades-render">
 				<%= render "sobre_el_colegio/asamblea" %>
