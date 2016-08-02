@@ -18,6 +18,7 @@
 //= require form-select
 //= require datepicker
 //= require crossfilter
+//= require filtros
 //= require principal
 //= require imagens
 //= require cursos
