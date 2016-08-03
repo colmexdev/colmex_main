@@ -58,30 +58,35 @@ class SobreElColegioController < ApplicationController
   end
 
   def operativas
+    @operativas = Personal.where(:seccion => "Operativas")
     respond_to do |format|
       format.js
     end
   end
 
   def junta
+    @juntas = Personal.where(:seccion => "Junta")
     respond_to do |format|
       format.js
     end
   end
 
   def presidencia
+    @presidencias = Personal.where(:seccion => "Presidencia")
     respond_to do |format|
       format.js
     end
   end
 
   def centros_de_estudio
+    @centros = Personal.where(:seccion => "Centros")
     respond_to do |format|
       format.js
     end
   end
 
   def administracion
+    @admins = Personal.where(:seccion => "Administración")
     respond_to do |format|
       format.js
     end
