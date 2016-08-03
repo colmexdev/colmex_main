@@ -92,7 +92,6 @@
 }
 
 .img-link-doc { 
-	float: left; 
 	position: relative;
 
 	>img { @include centrado; }

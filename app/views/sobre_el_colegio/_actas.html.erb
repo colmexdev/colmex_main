@@ -1,15 +1,15 @@
 
 <% anio = @actas.order(anio: :desc).first.anio %>
-<table>
+
 <% @actas.where(:anio => anio).each do |d| %>
 
-<tr>
-	<td>
+<div class="wrapper-links-doc">
+	<div class="img-link-doc">
 		<a href=<%= d.liga.to_s == "" ? d.archivo.url : d.liga %> target="_blank" class="documento uk-link"><img src=<%= image_url("documento.png") %> alt="documento" class="documento uk-vertical-align-middle"></a>
-	</td>
-	<td>
+	</div>
+	<div class="liga-doc">
 		<a href=<%= d.liga.to_s == "" ? d.archivo.url : d.liga %> target="_blank" class="documento uk-link"><%= d.nombre %></a>
-	</td>
-</tr>
+	</div>
+</div>
 <% end %>
-</table>
+
