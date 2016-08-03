@@ -4,7 +4,7 @@
 
 		
     <div class="uk-width-1-1">
-    <div class="uk-container-center uk-block"><img src="1100-370.jpg" alt="Historia de El Colegio de México"></div>
+    <div class="uk-container-center uk-block"><img src=<%= image_url("1100-370.jpg") %> alt="Historia de El Colegio de México"></div>
     <span class="titulo-grande">Maestrías</span><br>
     <p>&nbsp;</p>
     <% @maestrias.each do |mt| %>
@@ -16,9 +16,9 @@
     </div>
     <div class="uk-width-large-2-5">
     <h3 class="vino uk-margin-bottom-remove">Inicio de la promoción</h3>
-    <h4 class="uk-margin-top-remove"><%= l(mt.fecha_inicio_clases, format: :long) %></h4>
+    <h4 class="uk-margin-top-remove"><%= l(mt.fecha_inicio_clases, format: :mes_anio) %></h4>
     <h3 class="vino uk-margin-bottom-remove">Próxima convocatoria</h3>
-    <h4 class="uk-margin-top-remove"><%= l(mt.fecha_inicio_conv, format: :long ) %></h4>
+    <h4 class="uk-margin-top-remove"><%= l(mt.fecha_inicio_conv, format: :mes_anio ) %></h4>
     </div>
     </div>
     <% end %>

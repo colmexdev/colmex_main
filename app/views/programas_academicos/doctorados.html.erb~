@@ -9,7 +9,7 @@
 
 
 	<% @doctorados.each do |doc| %>
-    <h2 class="vino uk-margin-large-top">Doctorado en <%= doc.nombre %></h2>
+    <h2 class="vino uk-margin-large-top">Doctorado en <%= doc.titulo %></h2>
     <div class="uk-grid uk-grid-large">
     <div class="uk-width-large-3-5 uk-text-left">
     <p><%= doc.descripcion %></p>
