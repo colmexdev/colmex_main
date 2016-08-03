@@ -32,7 +32,7 @@ class SobreElColegioController < ApplicationController
   end
 
   def historia
-    @estatuto_organico = Docmento.where("tipo = ? AND nombre LIKE ?","Estatuto","Orgánico")
+    @estatuto_organico = Documento.where("tipo = ? AND nombre LIKE ?","Estatuto","Orgánico")
   end
 
   def autoridades
