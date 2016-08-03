@@ -943,10 +943,10 @@ ul.ul-nav { display: table; float: left !important;
 			padding: 1px 5px;
 		}
 
-		>input::-webkit-input-placeholder { color: #666; }
-		>input:-moz-placeholder { color: #666; }
-		>input::-moz-placeholder { color: #666; }
-		>input:-ms-input-placeholder { color: #666; }
+		>input::-webkit-input-placeholder { color: #000; }
+		>input:-moz-placeholder { color: #000; }
+		>input::-moz-placeholder { color: #000; }
+		>input:-ms-input-placeholder { color: #000; }
 
 		@media only screen and (max-width: 654px){
 			>select { margin: 0; }
