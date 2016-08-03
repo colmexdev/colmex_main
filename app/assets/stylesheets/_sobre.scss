@@ -89,11 +89,13 @@
 .wrapper-links-doc{
 	margin-bottom: 35px;
 	overflow: auto;
+	overflow-x: hidden;
 }
 
 .img-link-doc { 
 	display: inline-block;	
 	position: relative;
+	float: left;
 	height: 100%;
 	width: 40px;
 
