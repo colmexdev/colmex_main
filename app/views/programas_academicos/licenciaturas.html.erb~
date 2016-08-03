@@ -1,23 +1,31 @@
 <%= render 'principal/barra' %>
 <div class="container-fluid" id="resto-cuerpo">
-	<div id="cuerpo">
-		<div class="row">
-			<div class="titular-pagina">
-				<span class="titulo-grande"><%= t('botones.b3.opciones.op1') %></span>
-			</div>
-		</div>
+	<div id="cuerpo" class="principal-chica uk-block-large">
+		
+<div class="uk-width-1-1">
+    <div class="uk-container-center uk-block"><img src=<%= image_url("1100-370.jpg") %> alt="Historia de El Colegio de México"></div>
+    <span class="titulo-grande">Licenciaturas</span><br>
+    <p>&nbsp;</p>
+    <!--          Aquí empiezan las licenciaturas          -->
+    <% @licenciaturas.each do |lic| %>
+    <h2 class="vino">Licenciatura en <%= lic.titulo %></h2>
+    <div class="uk-grid uk-grid-large">
+    <div class="uk-width-large-3-5 uk-text-left">
+    <p><%= lic.descripcion %></p>
+    <a href=<%= lic.liga %> target="_blank" class="ver-mas uk-margin-large-bottom uk-button-small">Más información</a>
+    </div>
+    <div class="uk-width-large-2-5">
+    <h3 class="vino uk-margin-bottom-remove">Inicio de la promoción</h3>
+    <h4 class="uk-margin-top-remove"><%= l(lic.fecha_inicio_clases, format: :long) %></h4>
+    <h3 class="vino uk-margin-bottom-remove">Próxima convocatoria</h3>
+    <h4 class="uk-margin-top-remove"><%= l(lic.fecha_inicio_conv, format: :long) %></h4>
+    </div>
+    </div>
+    <% end %>
 
-		<div class="tabla">
-			<div class="tabla-programa">
-				<div class="medio centro programa texto-programa">
-					<%= construye_cursos("Licenciatura") %>
-				</div>
-				<div class="medio centro programa img-programa">
-					<%= image_tag("sobre.png", :class => "img-muestra img-pa") %>
-				</div>
-			</div>
-		</div>
-
+    <!--          Aquí empiezan las licenciaturas          -->
+    </div>
+	</div>
 	</div>
 
 <%= render 'principal/footer'%>

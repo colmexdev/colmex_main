@@ -1,19 +1,30 @@
 <%= render 'principal/barra' %>
 <div class="container-fluid" id="resto-cuerpo">
 	<div id="cuerpo" class="principal-chica uk-block-large">
-		
-<div class="uk-grid uk-grid-large">
-    <div class="uk-width-large-3-5 uk-text-left">
-		<% @doctorados.each do |doc| %>
-    <h2 class="vino">Doctorado en <%= doc.titulo %></h2>
-    <p class="uk-margin-large-bottom"><%= doc.descripcion %></p>
-    <a href=<%= doc.liga %> target="_blank" class="ver-mas uk-margin-large-bottom">Más información</a>
+	<div class="uk-width-1-1">
+    <div class="uk-container-center uk-block"><img src="1100-370.jpg" alt="Historia de El Colegio de México"></div>
+    <span class="titulo-grande">Doctorados</span><br>
     <p>&nbsp;</p>
-		<% end %>
+    <!--          Aquí empiezan las licenciaturas          -->
+
+
+	<% @doctorados.each do |doc| %>
+    <h2 class="vino uk-margin-large-top">Doctorado en <%= doc.nombre %></h2>
+    <div class="uk-grid uk-grid-large">
+    <div class="uk-width-large-3-5 uk-text-left">
+    <p><%= doc.descripcion %></p>
+    <a href=<%= doc.liga %> target="_blank" class="ver-mas uk-margin-large-bottom uk-button-small">Más información</a>
     </div>
     <div class="uk-width-large-2-5">
-    <img src=<%= image_url("imagen.jpg") %> alt="Historia de El Colegio de México">
+    <h3 class="vino uk-margin-bottom-remove">Inicio de la promoción</h3>
+    <h4 class="uk-margin-top-remove"><%= l(doc.fecha_inicio_clases, format: :long ) %></h4>
+    <h3 class="vino uk-margin-bottom-remove">Próxima convocatoria</h3>
+    <h4 class="uk-margin-top-remove"><%= l(doc.fecha_inicio_conv, format: :long ) %></h4>
     </div>
+    </div>
+	<% end %>
+
+
     </div>
 	
 	</div>

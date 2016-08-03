@@ -2,20 +2,28 @@
 <div class="container-fluid" id="resto-cuerpo">
 	<div id="cuerpo" class="principal-chica uk-block-large">
 
-		<div class="uk-grid uk-grid-large">
-    <div class="uk-width-large-3-5 uk-text-left">
-		<% @maestrias.each do |mt| %>
-    <h2 class="vino">Maestría en <%= mt.titulo %></h2>
-    <p class="uk-margin-large-bottom"><%= mt.descripcion %></p>
-    <a href=<%= mt.liga %> target="_blank" class="ver-mas uk-margin-large-bottom">Más información</a>
+		
+    <div class="uk-width-1-1">
+    <div class="uk-container-center uk-block"><img src="1100-370.jpg" alt="Historia de El Colegio de México"></div>
+    <span class="titulo-grande">Maestrías</span><br>
     <p>&nbsp;</p>
-		<% end %>
+    <% @maestrias.each do |mt| %>
+    <h2 class="vino uk-margin-large-top">Maestría en <%= mt.titulo %></h2>
+    <div class="uk-grid uk-grid-large">
+    <div class="uk-width-large-3-5 uk-text-left">
+    <p><%= mt.descripcion %></p>
+    <a href=<%= mt.liga %> target="_blank" class="ver-mas uk-margin-large-bottom uk-button-small">Más información</a>
     </div>
     <div class="uk-width-large-2-5">
-    <img src=<%= image_url("imagen.jpg") %> alt="Historia de El Colegio de México">
+    <h3 class="vino uk-margin-bottom-remove">Inicio de la promoción</h3>
+    <h4 class="uk-margin-top-remove"><%= l(mt.fecha_inicio_clases, format: :long) %></h4>
+    <h3 class="vino uk-margin-bottom-remove">Próxima convocatoria</h3>
+    <h4 class="uk-margin-top-remove"><%= l(mt.fecha_inicio_conv, format: :long ) %></h4>
     </div>
+    </div>
+    <% end %>
     </div>
 
-	</div>
+</div>
 
 <%= render 'principal/footer'%>
