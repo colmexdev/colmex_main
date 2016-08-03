@@ -92,10 +92,14 @@
 }
 
 .img-link-doc { 
-
+	display: inline-block;	
 	position: relative;
 
 	>img { @include centrado; }
+}
+
+.liga-doc{
+	display: inline-block;
 }
 
 #texto-sobre{
