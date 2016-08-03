@@ -5,8 +5,10 @@
 <div class="uk-width-1-1">
     <div class="uk-grid">
     <div class="uk-width-large-2-5 uk-text-left">
+    <div>
     <span class="titulo-chico">La historia de</span><br>
     <span class="titulo-grande">El Colegio de México</span>
+    </div>
     <%= image_tag("historia.jpg") %>
     </div>
     <div class="uk-width-large-3-5">
