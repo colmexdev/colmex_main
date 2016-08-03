@@ -325,12 +325,12 @@ html, body{ height: 100%; }
 		.uk-nav-sub{
 			padding-left: 0;
 			font-size: 17px;
-			background-color: #740020;
+			background-color: #7E3355;
 			
 
 			>li{
 				padding: 3px 0;
-				background-color: #740020;
+				background-color: #7E3355;
 				-webkit-transition: all 0.3s linear;
 				-moz-transition: all 0.3s linear;
 				-o-transition: all 0.3s linear;
