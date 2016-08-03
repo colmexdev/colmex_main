@@ -86,8 +86,11 @@
 	.leave_img { display: none; }
 }
 
-.img-link-doc, .liga-doc{
-	display: inline-block;
+.img-link-doc { 
+	float: left; 
+	position: relative;
+
+	>img { @include centrado; }
 }
 
 #texto-sobre{
