@@ -1,7 +1,9 @@
 ancho = Math.max(document.documentElement.clientWidth, window.innerWidth || document.body.ClientWidth || 0);
+descubres = clone(JSON.parse(gon.descubres));
 dataset = crossfilter(JSON.parse(gon.descubres));
+todos_descubres = jQuery.extend(true, {}, )
 descubresPorContenido = dataset.dimension(function(d){ return d.contenido; });
-descubresPorTags = dataset.dimension(function(d){ return (d.titulo + " " + d.contenido + " " + d.tags.replace(/ *, */, " ")).toLowerCase()});
+descubresPorTags = dataset.dimension(function(d){ return (d.titulo + " " + d.contenido + " " + d.tags.replace(/ *, */, " ")).replace(/ +/, " ").toLowerCase()});
 num_filas = 2;
 
 $(document).ready(function(){
@@ -28,6 +30,7 @@ $(document).ready(function(){
 	partirDescubres();
 	margenAuto();
 	ajustarImagenes();
+	integrarVisible();
 });
 
 window.onresize = function(){
@@ -124,6 +127,48 @@ function ajustarImagenes(){
 		else{
 			$("#img-pred-xs").removeAttr("style");
 		}
+	}
+}
+
+
+
+function clone(obj) {
+    var copy;
+
+    // Handle the 3 simple types, and null or undefined
+    if (null == obj || "object" != typeof obj) return obj;
+
+    // Handle Date
+    if (obj instanceof Date) {
+        copy = new Date();
+        copy.setTime(obj.getTime());
+        return copy;
+    }
+
+    // Handle Array
+    if (obj instanceof Array) {
+        copy = [];
+        for (var i = 0, len = obj.length; i < len; i++) {
+            copy[i] = clone(obj[i]);
+        }
+        return copy;
+    }
+
+    // Handle Object
+    if (obj instanceof Object) {
+        copy = {};
+        for (var attr in obj) {
+            if (obj.hasOwnProperty(attr)) copy[attr] = clone(obj[attr]);
+        }
+        return copy;
+    }
+
+    throw new Error("Unable to copy obj! Its type isn't supported.");
+}
+
+function integrarVisible(){
+	for(var i = 0; i < descubres.length; i++){
+		descubres[i]["visible"] = true;
 	}
 }
 
