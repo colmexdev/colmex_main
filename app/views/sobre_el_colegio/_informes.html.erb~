@@ -2,11 +2,11 @@
 <% anio = @informes.order(anio: :desc).first.anio %>
 <table>
 <% @informes.where(:anio => anio).each do |d| %>
-<tr class="wrapper-links-doc">
-	<td class="img-link-doc">
+<tr>
+	<td>
 		<a href=<%= d.liga.to_s == "" ? d.archivo.url : d.liga %> target="_blank" class="documento"><img src=<%= image_url("documento.png") %> alt="documento" class="documento uk-vertical-align-middle"></a>
 	</td>
-	<td class="liga-doc">
+	<td>
 		<a href=<%= d.liga.to_s == "" ? d.archivo.url : d.liga %> target="_blank" class="documento uk-link"><%= d.nombre %></a>
 	</td>
 </tr>
