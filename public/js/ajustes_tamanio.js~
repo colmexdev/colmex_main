@@ -30,7 +30,7 @@ $(document).ready(function(){
 	partirDescubres();
 	margenAuto();
 	ajustarImagenes();
-	//integrarVisible();
+	integrarVisible();
 });
 
 window.onresize = function(){
@@ -164,5 +164,11 @@ function clone(obj) {
     }
 
     throw new Error("Unable to copy obj! Its type isn't supported.");
+}
+
+function integrarVisible(){
+	for(var i = 0; i < descubres.length; i++){
+		descubres[i]["visible"] = true;
+	}
 }
 
