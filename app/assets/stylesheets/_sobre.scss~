@@ -90,7 +90,7 @@
 	float: left; 
 	position: relative;
 
-	>img { @inclue centrado; }
+	>img { @include centrado; }
 }
 
 #texto-sobre{

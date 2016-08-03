@@ -1,10 +1,16 @@
     <p>&nbsp;</p>
-
-    <% @estatutos.each do |e| %>
-		<div style="margin-bottom:10px;">
+    <script type="text/javascript" src="../js/reescalar_links.js"></script>
+    	<% i = 0 %>
+	<% @estatutos.each do |e| %>
+		<div class="wrapper-links-doc">
 			<div class="img-link-doc">
-			<img src=<%= image_url("documento.png") %> alt="documento" class="documento uk-vertical-align-middle"><a href=<%= e.liga.to_s == "" ? e.archivo.url : e.liga %> target="_blank" class="documento uk-link"><%= e.nombre %></a>
+				<a href=<%= e.liga.to_s == "" ? e.archivo.url : e.liga %> target="_blank" class="documento uk-link"><img src=<%= image_url("documento.png") %> alt="documento" class="documento uk-vertical-align-middle"></a>
+			</div>
+			<div class="liga-doc" id =<%= i %>>
+				<a href=<%= e.liga.to_s == "" ? e.archivo.url : e.liga %> target="_blank" class="documento uk-link"><%= e.nombre %></a>
+			</div>
 		</div>
+	<% i = i + 1 %>
     <% end %>
 
     <p>&nbsp;</p>

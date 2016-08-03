@@ -1,14 +1,13 @@
-    <p>&nbsp;</p>
-
-    <% @estatutos.each do |e| %>
-		<div style="margin-bottom:10px;">
-			<div class="img-link-doc">
+<table>
+<% @estatutos.each do |e| %>
+		<tr>
+			<th class="img-link-doc">
 				<a href=<%= e.liga.to_s == "" ? e.archivo.url : e.liga %> target="_blank" class="documento uk-link"><img src=<%= image_url("documento.png") %> alt="documento" class="documento uk-vertical-align-middle"></a>
 			</div>
-			<div class="liga-doc">
+			<th class="liga-doc">
 				<a href=<%= e.liga.to_s == "" ? e.archivo.url : e.liga %> target="_blank" class="documento uk-link"><%= e.nombre %></a>
-			</div>
-		</div>
-    <% end %>
+			</th>
+		</tr>
+<% end %>
+</table>
 
-    <p>&nbsp;</p>
