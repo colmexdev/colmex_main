@@ -3,7 +3,7 @@
 <table>
 <% @actas.where(:anio => anio).each do |d| %>
 
-<tr>
+<tr class="wrapper-link-doc">
 	<th class="img-link-doc">
 		<a href=<%= d.liga.to_s == "" ? d.archivo.url : d.liga %> target="_blank" class="documento uk-link"><img src=<%= image_url("documento.png") %> alt="documento" class="documento uk-vertical-align-middle"></a>
 	</th>
