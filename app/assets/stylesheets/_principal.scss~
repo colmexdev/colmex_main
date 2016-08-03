@@ -46,13 +46,15 @@ a, a:hover, a:active, a:visited, a:link{  text-decoration: none; }
 	font-style: normal; 
 	font-weight: 700; 
 	font-size: 28px;
+	display: inline-block;
+	margin-bottom:12px;
 }
-p {text-align: justify; font-size: 15px;}
+p {text-align: justify; font-size: 16px;}
 
 @media only screen and (min-width: 768px){
 	.principal-chica {
     max-width: 980px;
-    margin: 35px auto;
+    margin: 0 auto;
 	}
 }
 @media only screen and (min-width: 1220px){
@@ -60,17 +62,27 @@ p {text-align: justify; font-size: 15px;}
     max-width: 1200px;
     margin: 0 auto;
 	}
-}	
+}
 
-.titulo-chico.morado, .titulo-grande.morado{ color: #7E3355; }
+::selection{ 
+	background: #7E3355;
+	color: #fff;
+	text-shadow: none;
+}	
 
 .titulo-grande{
 	font-family: "Gotham SSm A", "Gotham SSm B"; 
 	font-style: normal; 
 	font-weight: 700; 
 	font-size: 34px; 
-	line-height:25px;
+	display: inline-block;
+	line-height: normal;
+	margin-bottom: 30px;
 }
+
+.titulo-chico.morado, .titulo-grande.morado{ color: #7E3355; }
+
+
 
 html, body{ height: 100%; }
 .container-fluid { position: relative;}
@@ -943,10 +955,10 @@ ul.ul-nav { display: table; float: left !important;
 			padding: 1px 5px;
 		}
 
-		>input::-webkit-input-placeholder { color: #666; }
-		>input:-moz-placeholder { color: #666; }
-		>input::-moz-placeholder { color: #666; }
-		>input:-ms-input-placeholder { color: #666; }
+		>input::-webkit-input-placeholder { color: #000; }
+		>input:-moz-placeholder { color: #000; }
+		>input::-moz-placeholder { color: #000; }
+		>input:-ms-input-placeholder { color: #000; }
 
 		@media only screen and (max-width: 654px){
 			>select { margin: 0; }
@@ -972,6 +984,10 @@ ul.ul-nav { display: table; float: left !important;
 			background-color: #993366;
 			position: relative;
 			font-style: normal;
+			-webkit-transition: all 0.5s linear;
+			-moz-transition: all 0.5s linear;
+			-o-transition: all 0.5s linear;
+			transition: all 0.5s linear;
 
 			.imagen-descubre{
 				@include centrado;
@@ -988,12 +1004,12 @@ ul.ul-nav { display: table; float: left !important;
 				.cont-descubre{
 					color: #fff;
 					display: block;
-					margin-top: 15%;
+					margin-top: 17%;
 					font-family: "Gotham SSm A", "Gotham SSm B"; 
 					font-style: normal; 
 					font-weight: 700; 
 					font-size: 17px; 
-				
+					margin-bottom: 20px;
 				}
 
 				.titulo-descubre{
@@ -1048,12 +1064,13 @@ ul.ul-nav { display: table; float: left !important;
 
 						.cont-descubre{
 							display: block;
-							margin-top: 15%;
+							margin-top: 17%;
 							color: #fff;
 							font-family: "Gotham SSm A", "Gotham SSm B"; 
 							font-style: normal; 
 							font-weight: 700; 
 							font-size: 17px; 
+							margin-bottom: 20px;
 						
 						}
 

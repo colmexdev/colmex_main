@@ -5,6 +5,7 @@ sp:
   botones:
     b1: 
       texto: "Información general"
+      texto2: "Sobre el Colegio"
       opciones:
         op1: "Directorio institucional"
         op2: "Autoridades"

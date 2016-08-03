@@ -1,6 +1,4 @@
 class SobreElColegioController < ApplicationController
-  def inicio
-  end
 
   def historia_75_años
   end
@@ -10,7 +8,6 @@ class SobreElColegioController < ApplicationController
   end
 
   def documentacion_institucional
-    @actas = Documento.where(:tipo => "Junta")
   end
 
   def actas
@@ -35,6 +32,7 @@ class SobreElColegioController < ApplicationController
   end
 
   def historia
+    @estatuto_organico = Docmento.where("tipo = ? AND nombre LIKE ?","Estatuto","Orgánico")
   end
 
   def autoridades

@@ -5,6 +5,7 @@ en:
   botones:
     b1: 
       texto: "General information"
+      texto2: "About the College"
       opciones:
         op1: "Institutional directory"
         op2: "Authorities"

@@ -1,6 +1,4 @@
 class SobreElColegioController < ApplicationController
-  def inicio
-  end
 
   def historia_75_años
   end
@@ -10,7 +8,6 @@ class SobreElColegioController < ApplicationController
   end
 
   def documentacion_institucional
-    @actas = Documento.where(:tipo => "Junta")
   end
 
   def actas
@@ -43,7 +40,6 @@ class SobreElColegioController < ApplicationController
 
   def profesores_emeritos
     @profesores = Emerito.all
-    @centros = ['CEAA', 'CEDUA', 'CEE', 'CEH', 'CEI', 'CELL', 'CES']
   end
 
   def transparencia

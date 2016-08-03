@@ -45,8 +45,6 @@ Rails.application.routes.draw do
 
   get "programas_academicos/cursos" => "programas_academicos#cursos", :as => :cursos_varios
 
-  get 'sobre_el_colegio/inicio' => 'sobre_el_colegio#inicio', :as => :sobre_el_colegio
-
   get 'sobre_el_colegio/autoridades' => 'sobre_el_colegio#autoridades', :as => :autoridades
 
   get 'sobre_el_colegio/profesores_emeritos' => 'sobre_el_colegio#profesores_emeritos', :as => :profesores_emeritos

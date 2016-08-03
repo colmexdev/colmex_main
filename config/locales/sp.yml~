@@ -111,6 +111,7 @@ sp:
       default: "%d/%m/%Y"
       long: "%A %d de %B"
       short: "%b %d"
+      normal: "%d de %B de %Y"
     month_names:
     -
     - enero

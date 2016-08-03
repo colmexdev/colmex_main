@@ -33,8 +33,8 @@ function construirDescubre(descubres){
 			html_str = html_str + "<img class=\"imagen-descubre\" src=\"" + path_img + "\" >";
 		}
 		else{
-			html_str = html_str + "<span class=\"cont-descubre-pre\">" + descubres[i]["contenido"] + "</span><br />";
-			html_str = html_str + "<span class=\"titulo-descubre-pre\">" + descubres[i]["titulo"] + "</span>";
+			html_str = html_str + "<p><span class=\"cont-descubre\">" + descubres[i]["contenido"] + "</span></p>";
+			html_str = html_str + "<p><span class=\"titulo-descubre\">" + descubres[i]["titulo"] + "</span></p>";
 		}
 		html_str = html_str + "<a href=\""+ descubres[i]["liga"] + "\" " + (descubres[i]["contenido"].toLowerCase() == "video" ? ("data-uk-lightbox title=\"\"") : "target=\"_blank\"" ) + "><div class=\"frame-hover\">";
 		html_str = html_str + "<span class=\"cont-descubre\">" + descubres[i]["contenido"] + "</span><br />";
