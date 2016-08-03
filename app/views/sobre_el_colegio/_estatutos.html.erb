@@ -1,10 +1,10 @@
 <table>
 <% @estatutos.each do |e| %>
-		<tr class="wrapper-link-doc">
-			<td class="img-link-doc">
+		<tr>
+			<td>
 				<a href=<%= e.liga.to_s == "" ? e.archivo.url : e.liga %> target="_blank" class="documento uk-link"><img src=<%= image_url("documento.png") %> alt="documento" class="documento uk-vertical-align-middle"></a>
 			</td>
-			<td class="liga-doc">
+			<td>
 				<a href=<%= e.liga.to_s == "" ? e.archivo.url : e.liga %> target="_blank" class="documento uk-link"><%= e.nombre %></a>
 			</td>
 		</tr>
