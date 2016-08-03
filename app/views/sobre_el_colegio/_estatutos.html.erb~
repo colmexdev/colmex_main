@@ -1,6 +1,6 @@
 <table>
 <% @estatutos.each do |e| %>
-		<tr>
+		<tr class="wrapper-link-doc">
 			<th class="img-link-doc">
 				<a href=<%= e.liga.to_s == "" ? e.archivo.url : e.liga %> target="_blank" class="documento uk-link"><img src=<%= image_url("documento.png") %> alt="documento" class="documento uk-vertical-align-middle"></a>
 			</div>

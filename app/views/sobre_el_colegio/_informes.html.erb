@@ -3,12 +3,12 @@
 <table>
 <% @informes.where(:anio => anio).each do |d| %>
 <tr class="wrapper-links-doc">
-	<th class="img-link-doc">
+	<td class="img-link-doc">
 		<a href=<%= d.liga.to_s == "" ? d.archivo.url : d.liga %> target="_blank" class="documento"><img src=<%= image_url("documento.png") %> alt="documento" class="documento uk-vertical-align-middle"></a>
-	</th>
-	<th class="liga-doc">
+	</td>
+	<td class="liga-doc">
 		<a href=<%= d.liga.to_s == "" ? d.archivo.url : d.liga %> target="_blank" class="documento uk-link"><%= d.nombre %></a>
-	</th>
+	</td>
 </tr>
 <% end %>
 </table>
