@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :personals
   resources :premiados
   resources :frases
   resources :sliders

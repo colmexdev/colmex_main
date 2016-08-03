@@ -1,0 +1,10 @@
+<% if admin_signed_in? %>
+
+<h1>Editing Personal</h1>
+
+<%= render 'form' %>
+
+<%= link_to 'Show', @personal %> |
+<%= link_to 'Back', personals_path %>
+
+<% end %>

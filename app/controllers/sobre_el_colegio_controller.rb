@@ -36,7 +36,7 @@ class SobreElColegioController < ApplicationController
   end
 
   def autoridades
- 
+    @actas = Documento.where(:tipo => "Junta")
   end
 
   def profesores_emeritos
