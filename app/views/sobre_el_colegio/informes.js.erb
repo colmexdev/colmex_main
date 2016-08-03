@@ -1,3 +1,3 @@
 
-$("#titulo-render").html("<%= t('sobre.documentacion.op2') + " " + @informes.order(anio: :desc).first.anio %>");
+$("#titulo-render").html("<%= t('sobre.documentacion.op2') + " " + @informes.order(anio: :desc).first.anio.to_s %>");
 $("#documentacion-render").html("<%= j render :partial => 'informes' %>");
