@@ -1,101 +1,14 @@
 <p>&nbsp;</p>
-<div class="uk-grid uk-grid-medium uk-margin-large-bottom">
-    <div class="uk-width-2-6 uk-text-center">
-    <img src=<%= image_url("presidencia.png") %> class="uk-border-rounded" alt="Foto miembro Presidencia">
-    </div>
-    <div class="uk-width-4-6 uk-vertical-align-middle uk-text-left uk-text-break">
-    <h4>CENTRO DE ESTUDIOS DE ASIA Y AFRICA</h4>
-    <h3 class="vino">Alfredo Román Zavala</h3>
-    <p>Correo electrónico: correo@colmex.mx</p>
-    <p>Teléfono: +(52) 55 54493000 Extensión: 0000</p>
-    </div>
-    </div>
+    <% @centros.each do |c| %>
     <div class="uk-grid uk-grid-medium uk-margin-large-bottom">
     <div class="uk-width-2-6 uk-text-center">
-    <img src=<%= image_url("presidencia.png") %> class="uk-border-rounded" alt="Foto miembro Presidencia">
+    <img src=<%= c.foto.url %> class="uk-border-rounded" alt="Foto miembro Presidencia">
     </div>
     <div class="uk-width-4-6 uk-vertical-align-middle uk-text-left uk-text-break">
-    <h4>CENTRO DE ESTUDIOS DEMOGRÁFICOS URBANOS Y AMBIENTALES</h4>
-    <h3 class="vino">Luis Jaime Sobrino Figueroa</h3>
-    <p>Correo electrónico: correo@colmex.mx</p>
-    <p>Teléfono: +(52) 55 54493000 Extensión: 0000</p>
+    <h4><%= c.depto.upcase %></h4>
+    <h3 class="vino"><%= c.nombre %></h3>
+    <p>Correo electrónico: <%= c.correo %></p>
+    <p>Teléfono: <%= c.telefono %> Extensión: <%= c.extension %></p>
     </div>
     </div>
-    <div class="uk-grid uk-grid-medium uk-margin-large-bottom">
-    <div class="uk-width-2-6 uk-text-center">
-    <img src=<%= image_url("presidencia.png") %> class="uk-border-rounded" alt="Foto miembro Presidencia">
-    </div>
-    <div class="uk-width-4-6 uk-vertical-align-middle uk-text-left uk-text-break">
-    <h4>PROGRAMA DE ESTUDIOS AVANZADOS EN DESARROLLO SUSTENTABLE Y MEDIO AMBIENTE</h4>
-    <h3 class="vino">Boris Graizbord Ed</h3>
-    <h4><i>Coordinador</i></h4>
-    <p>Correo electrónico: correo@colmex.mx</p>
-    <p>Teléfono: +(52) 55 54493000 Extensión: 0000</p>
-    </div>
-    </div>
-    <div class="uk-grid uk-grid-medium uk-margin-large-bottom">
-    <div class="uk-width-2-6 uk-text-center">
-    <img src=<%= image_url("presidencia.png") %> class="uk-border-rounded" alt="Foto miembro Presidencia">
-    </div>
-    <div class="uk-width-4-6 uk-vertical-align-middle uk-text-left uk-text-break">
-    <h4>CENTRO DE ESTUDIOS ECONÓMICOS</h4>
-    <h3 class="vino">José Romero Tellaeche</h3>
-    <p>Correo electrónico: correo@colmex.mx</p>
-    <p>Teléfono: +(52) 55 54493000 Extensión: 0000</p>
-    </div>
-    </div>
-    <div class="uk-grid uk-grid-medium uk-margin-large-bottom">
-    <div class="uk-width-2-6 uk-text-center">
-    <img src=<%= image_url("presidencia.png") %> class="uk-border-rounded" alt="Foto miembro Presidencia">
-    </div>
-    <div class="uk-width-4-6 uk-vertical-align-middle uk-text-left uk-text-break">
-    <h4>CENTRO DE ESTUDIOS HISTÓRICOS</h4>
-    <h3 class="vino">Erika Pani Bano</h3>
-    <p>Correo electrónico: correo@colmex.mx</p>
-    <p>Teléfono: +(52) 55 54493000 Extensión: 0000</p>
-    </div>
-    </div>
-    <div class="uk-grid uk-grid-medium uk-margin-large-bottom">
-    <div class="uk-width-2-6 uk-text-center">
-    <img src=<%= image_url("presidencia.png") %> class="uk-border-rounded" alt="Foto miembro Presidencia">
-    </div>
-    <div class="uk-width-4-6 uk-vertical-align-middle uk-text-left uk-text-break">
-    <h4>CENTRO DE ESTUDIOS INTERNACIONALES</h4>
-    <h3 class="vino">Ana Covarrubias Velasco</h3>
-    <p>Correo electrónico: correo@colmex.mx</p>
-    <p>Teléfono: +(52) 55 54493000 Extensión: 0000</p>
-    </div>
-    </div>
-    <div class="uk-grid uk-grid-medium uk-margin-large-bottom">
-    <div class="uk-width-2-6 uk-text-center">
-    <img src=<%= image_url("presidencia.png") %> class="uk-border-rounded" alt="Foto miembro Presidencia">
-    </div>
-    <div class="uk-width-4-6 uk-vertical-align-middle uk-text-left uk-text-break">
-    <h4>CENTRO DE ESTUDIOS LINGÜÍSTICOS Y LITERARIOS</h4>
-    <h3 class="vino">Rafael Olea Franco</h3>
-    <p>Correo electrónico: correo@colmex.mx</p>
-    <p>Teléfono: +(52) 55 54493000 Extensión: 0000</p>
-    </div>
-    </div>
-    <div class="uk-grid uk-grid-medium uk-margin-large-bottom">
-    <div class="uk-width-2-6 uk-text-center">
-    <img src=<%= image_url("presidencia.png") %> class="uk-border-rounded" alt="Foto miembro Presidencia">
-    </div>
-    <div class="uk-width-4-6 uk-vertical-align-middle uk-text-left uk-text-break">
-    <h4>CENTRO DE ESTUDIOS SOCIOLÓGICOS</h4>
-    <h3 class="vino">Arturo Alvarado Mendoza</h3>
-    <p>Correo electrónico: correo@colmex.mx</p>
-    <p>Teléfono: +(52) 55 54493000 Extensión: 0000</p>
-    </div>
-    </div>
-    <div class="uk-grid uk-grid-medium uk-margin-large-bottom">
-    <div class="uk-width-2-6 uk-text-center">
-    <img src=<%= image_url("presidencia.png") %> class="uk-border-rounded" alt="Foto miembro Presidencia">
-    </div>
-    <div class="uk-width-4-6 uk-vertical-align-middle uk-text-left uk-text-break">
-    <h4>PROGRAMA INTERDISCIPLINARIO DE ESTUDIOS DE LA MUJER COORDINADORA</h4>
-    <h3 class="vino">Gabriela Cano</h3>
-    <p>Correo electrónico: correo@colmex.mx</p>
-    <p>Teléfono: +(52) 55 54493000 Extensión: 0000</p>
-    </div>
-    </div>
+    <% end %>
