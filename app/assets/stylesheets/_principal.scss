@@ -941,12 +941,12 @@ ul.ul-nav { display: table; float: left !important;
 			font-weight: 600;
 			font-size: 15px;
 			padding: 1px 5px;
-
-			::-webkit-input-placeholder { color: #666; }
-			:-moz-placeholder { color: #666; }
-			::-moz-placeholder { color: #666; }
-			:-ms-input-placeholder { color: #666; }
 		}
+
+		>input::-webkit-input-placeholder { color: #666; }
+		>input:-moz-placeholder { color: #666; }
+		>input::-moz-placeholder { color: #666; }
+		>input:-ms-input-placeholder { color: #666; }
 
 		@media only screen and (max-width: 654px){
 			>select { margin: 0; }
