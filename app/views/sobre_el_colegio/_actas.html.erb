@@ -1,17 +1,14 @@
 
-<div class="acordeon-premios">
-	<script type="text/javascript" src="../js/accordion.js"></script>
+		  <% anio = @actas.order(anio: :desc).first.anio %>
 
-	<div class="uk-accordion" data-uk-accordion>
-		<% @actas.group(:anio).each do |a| %>
-			<h3 class="uk-accordion-title"><%= construir_encabezado("bt-flechita.png", "bt-flechita-abajo.png", a.anio) %></h3>
-			<div class="uk-accordion-content">
-				<ul class=" uk-list">
-				<% @actas.where(:anio => a.anio).each do |d| %>
-   			 <li style="margin-bottom:10px;"><img src=<%= image_url("documento.png") %> alt="documento" class="documento uk-vertical-align-middle"><a href=<%= d.liga.to_s == "" ? d.archivo.url : d.liga %> target="_blank" class="documento"><%= d.nombre %></a></li>
-    		<% end %>
-    		</ul>	
+			<% @actas.where(:anio => anio).each do |d| %>
+   		<div style="margin-bottom:35px;">
+				<div class="img-link-doc">
+					<a href=<%= d.liga.to_s == "" ? d.archivo.url : d.liga %> target="_blank" class="documento uk-link"><img src=<%= image_url("documento.png") %> alt="documento" class="documento uk-vertical-align-middle"></a>
+				</div>
+				<div class="liga-doc">
+					<a href=<%= d.liga.to_s == "" ? d.archivo.url : d.liga %> target="_blank" class="documento uk-link"><%= d.nombre %></a>
+				</div>
 			</div>
-		<% end %>
-	</div>
-</div>
+    	<% end %>
+

@@ -1,3 +1,3 @@
 
-$("#titulo-render").html("<%= t('sobre.autoridades.admin') %>");
-$("#autoridades-render").html("<%= j render :partial => 'administracion' %>");
+$("#titulo-render").html("<%= t('sobre.documentacion.op2') %>");
+$("#documentacion-render").html("<%= j render :partial => 'informes' %>");
