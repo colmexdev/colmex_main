@@ -22,8 +22,8 @@
 			  <div class="navbar-collapse" id="barra_nav">
 			    <ul class="nav navbar-nav reajustable">
 						<li class="nav_opciones idioma"><%= link_to "EN", {:controller => controller_name, :action => action_name, :locale => 'en', :condicion => (params[:condicion] if action_name == "resultados_busqueda")}, :class => clase_en + " en" , :id => 'idioma_en' %> | <%= link_to "ES", {:controller => controller_name, :action => action_name, :locale => 'sp', :condicion => (params[:condicion] if action_name == "resultados_busqueda")}, :class => clase_es + " sp" , :id=> 'idioma_sp' %></li>
-						<li class="nav_opciones mail"><a href="portal.office.com"><%= image_tag("mail.png") %><span class="borrable"><%= t('navbar.mail') %></span></a></li>
-						<li class="nav_opciones intranet"><a href="#"><%= image_tag("intranet.png") %><span class="borrable"><%= t('navbar.intranet') %></span></a></li>
+						<li class="nav_opciones mail"><a href="http://portal.office.com" target="_blank"><%= image_tag("mail.png") %><span class="borrable"><%= t('navbar.mail') %></span></a></li>
+						<li class="nav_opciones intranet"><a href="http://intranet.colmex.mx/" target="_blank"><%= image_tag("intranet.png") %><span class="borrable"><%= t('navbar.intranet') %></span></a></li>
 						<li class="mostrable-chico"><a href="#menu" class="uk-navbar-toggle" data-uk-offcanvas></a></li>
 			    </ul>
 			    <form class="navbar-form navbar-left" method="get" action="/principal/resultados_busqueda">
@@ -101,7 +101,7 @@
 		        </ul>
 		    </li>
 				<li class="no-dropdown"><a href="http://biblioteca.colmex.mx/" target="_blank"><span><%= t('botones.b4') %></span></a></li>
-				<li class="no-dropdown"><a href="#" target="_blank"><span><%= t('botones.b5') %></span></a></li>
+				<li class="no-dropdown"><a href="http://agenda.colmex.mx" target="_blank"><span><%= t('botones.b5') %></span></a></li>
 			</ul> <!-- Cierre del menú -->
 		</div> <!-- Cierre de columnas para menú -->
 	</div> <!-- Cierre de div fila para menú -->
