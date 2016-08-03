@@ -24,6 +24,10 @@
     <%= f.text_field :correo %>
   </div>
   <div class="field">
+    <%= f.label :foto %><br>
+    <%= f.file_field :foto %>
+  </div>
+  <div class="field">
     <%= f.label :telefono %><br>
     <%= f.text_field :telefono %>
   </div>
