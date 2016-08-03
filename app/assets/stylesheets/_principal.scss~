@@ -68,7 +68,11 @@ p {text-align: justify; font-size: 16px;}
 	background: #7E3355;
 	color: #fff;
 	text-shadow: none;
-}	
+}
+
+.uk-link { color: #7E3355; text-decoration: none; outine: none; }
+
+.uk-link:hover { color: #7E3355; }	
 
 .titulo-grande{
 	font-family: "Gotham SSm A", "Gotham SSm B"; 
