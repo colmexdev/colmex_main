@@ -22,7 +22,7 @@ function actualizarVisibleDescubres(visibles){
 		descubres[visibles[i]["index"]]["visible"] = true;
 	}
 	for(var i = 0; i < descubres.length; i++){
-		$("#frame-" + i).css({"opacity" : (descubres[i]["visible"] ? "1" : "0"), "display" : (descubres[i]["visible"] ? "inline-block" : "none") });
+		$("#frame-" + i).css({"opacity" : (descubres[i]["visible"] ? "1" : "0"), "visibility" : (descubres[i]["visible"] ? "visible" : "hidden") });
 	}
 }
 
