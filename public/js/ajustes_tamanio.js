@@ -1,5 +1,5 @@
 ancho = Math.max(document.documentElement.clientWidth, window.innerWidth || document.body.ClientWidth || 0);
-descubres = clone(JSON.parse(gon.descubres));
+descubres = clone(agregarVisible(JSON.parse(gon.descubres)));
 dataset = crossfilter(descubres);
 descubresPorContenido = dataset.dimension(function(d){ return d.contenido; });
 descubresPorTags = dataset.dimension(function(d){ return (d.titulo + " " + d.contenido + " " + d.tags.replace(/ *, */, " ")).replace(/ +/, " ").toLowerCase()});
@@ -29,7 +29,6 @@ $(document).ready(function(){
 	partirDescubres();
 	margenAuto();
 	ajustarImagenes();
-	agregarVisible();
 });
 
 window.onresize = function(){
@@ -165,8 +164,8 @@ function clone(obj) {
     throw new Error("Unable to copy obj! Its type isn't supported.");
 }
 
-function agregarVisible(){
-	for(var i = 0; i < descubres.length; i++){
-		descubres[i]["visible"] = true;
+function agregarVisible(desc){
+	for(var i = 0; i < desc.length; i++){
+		desc[i]["visible"] = true;
 	}
 }
