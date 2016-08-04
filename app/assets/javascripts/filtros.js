@@ -6,8 +6,8 @@ function filtrarDescubres(){
 	var descubresFiltradosPorContenido = descubresPorContenido.filter(function(d){ return ( contAFiltrar == "" ? true : d == contAFiltrar )}).top(Infinity);
 	var descubresFiltradosPorTags = descubresPorTags.filter(function(d){ return (tagsAFiltrar == "" ? true : limpiarPuntuacion(d).indexOf(tagsAFiltrar) != -1)}).top(Infinity);
 	actualizarVisibleDescubres(descubresFiltradosPorTags);
-	var bloqueHTML = construirDescubre(descubresFiltradosPorTags);
-	$("#wrapper").html(bloqueHTML);
+	//var bloqueHTML = construirDescubre(descubresFiltradosPorTags);
+	//$("#wrapper").html(bloqueHTML);
 	$("#wrapper").css({"height" : "auto", "margin-bottom" : "45px" });
 	$("#cutter-descubre").css("display","none");
   var cw = $('.frame-descubre').width();
@@ -20,6 +20,9 @@ function actualizarVisibleDescubres(visibles){
 	}
 	for(var i = 0; i < visibles.length; i++){
 		descubres[visibles[i]["index"]]["visible"] = true;
+	}
+	for(var i = 0; i < descubres.length; i++){
+		$("#frame-" + i).css({"opacity" : (descubres[i]["visible"] ? "1" : "0"), "display" : (descubres[i]["visible"] ? "inline-block" : "none" });
 	}
 }
 
@@ -37,7 +40,7 @@ function construirDescubre(descubres){
 		return "Ningún resultado coincide con los parámetros de búsqueda";
 	var html_str = "";
 	for(var i = 0; i < descubres.length; i++){
-		html_str = html_str + "<div class=\"frame-descubre\">";
+		html_str = html_str + "<div class=\"frame-descubre\" id=\"frame-" + i + "\">";
 		if(descubres[i]["imagen_file_name"] != null){
 			var path_img = "/assets/descubre/" + descubres[i]["id"] + "/original/" + descubres[i]["imagen_file_name"];
 			html_str = html_str + "<img class=\"imagen-descubre\" src=\"" + path_img + "\" >";

@@ -102,8 +102,9 @@ module PrincipalHelper
 
   def construir_descubre(descubres)
     bloque_html = ""
+    i = 0;
     descubres.each do |d|
-      bloque_html = bloque_html + "<div class=\"frame-descubre\">"
+      bloque_html = bloque_html + "<div class=\"frame-descubre\" id=\"frame-" + i.to_s + "\">"
       if d.imagen.url != "/vacio.jpg"
         bloque_html = bloque_html + ActionController::Base.helpers.image_tag(d.imagen, :class => "imagen-descubre")
       else
@@ -115,6 +116,7 @@ module PrincipalHelper
       bloque_html = bloque_html + "<p><span class=\"titulo-descubre\">" + d.titulo + "</span></p>"
       bloque_html = bloque_html + ActionController::Base.helpers.image_tag(Content.where(tipo: d.contenido).first.icono.url, :class => "icono-descubre")
       bloque_html = bloque_html + "</div></a></div>"
+      i = i + 1
     end
     return bloque_html.html_safe
   end
