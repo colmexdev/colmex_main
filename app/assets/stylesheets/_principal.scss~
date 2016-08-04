@@ -646,6 +646,7 @@ ul.ul-nav { display: table; float: left !important;
 								position: absolute;
 								bottom: 0;
 								font-size: 16px;
+								text-align: left;
 							}
 						}
 
@@ -657,6 +658,7 @@ ul.ul-nav { display: table; float: left !important;
 							color: #5E002B;
 							line-height: 1.2em;
 							position: relative;
+							text-align: left;
 							height: 2.4em;
 							overflow: hidden;	
 							font-weight: 600;	

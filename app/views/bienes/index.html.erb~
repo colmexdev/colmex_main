@@ -12,7 +12,7 @@
 <li class="link"><a href="BIENES_INMUEBLES-2015.pdf" target="_blank">Relación de Bienes Inmuebles que Componen el Patrimonio. Cuenta de la Hacienda Pública Federal 2015</a></li>
 </ul>
 </div>
-<p><em>Copyright © 2015. El Colegio de México. Camino al Ajusco No.20 Col. Pedregal de Santa Teresa C.P. 10740, México D.F.</em></p>
+<p id="dir"><em>Copyright © 2015. El Colegio de México. Camino al Ajusco No.20 Col. Pedregal de Santa Teresa C.P. 10740, México D.F.</em></p>
 
 </div>
 <%= render "principal/footer" %>
