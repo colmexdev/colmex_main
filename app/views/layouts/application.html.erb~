@@ -7,6 +7,9 @@
   <%= csrf_meta_tags %>
   <meta name="viewport" content="width=device-width, user-scalable=no">
   <link rel="stylesheet" type="text/css" href="https://cloud.typography.com/7936112/7663952/css/fonts.css" />
+  <% if (controller_name + "/" + action_name) == "bienes/index" %>
+    <link rel="stylesheet" media="all" href="../css/index.css" data-turbolinks-track="true">
+  <% end %>
 </head>
 <body>
 
