@@ -8,7 +8,9 @@
 <div id="main">
 <h1 id="texto-pre">La relación de los Bienes Muebles e Inmuebles de El Colegio de México se encuentra en el siguiente listado de archivos descargables: </h1>
 <ul id="lista">
-<li class="link-rel"><a href="BIENES-MUEBLES-2015.pdf" target="_blank">Relación de Bienes Muebles que Componen el Patrimonio. Cuenta de la Hacienda Pública Federal 2015</a></li>
+<% @transparencias.each do |t| %>
+<li class="link-rel"><a href=<%= t.archivo.url %> target="_blank"><%= t.nombre %></a></li>
+<% end %>
 <li class="link-rel"><a href="BIENES_INMUEBLES-2015.pdf" target="_blank">Relación de Bienes Inmuebles que Componen el Patrimonio. Cuenta de la Hacienda Pública Federal 2015</a></li>
 </ul>
 </div>
