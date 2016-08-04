@@ -20,6 +20,7 @@ function actualizarVisibleDescubres(visibles){
 	}
 	for(var i = 0; i < visibles.length; i++){
 		descubres[visibles[i]["index"]]["visible"] = true;
+		$("#frame-" + visibles[i]["index"]).css("opacity","1");
 	}
 	for(var i = 0; i < descubres.length; i++){
 		$("#frame-" + i).css({"opacity" : (descubres[i]["visible"] ? "1" : "0"), "visibility" : (descubres[i]["visible"] ? "visible" : "hidden") });
