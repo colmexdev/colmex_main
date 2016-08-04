@@ -14,15 +14,18 @@ function filtrarDescubres(){
 }
 
 function actualizarVisibleDescubres(visibles){
+	var lista_alturas = [];
 	for(var i = 0; i < descubres.length; i++){
 		descubres[i]["visible"] = false;
+		lista_alturas.push(0);
 	}
 	for(var i = 0; i < visibles.length; i++){
 		descubres[visibles[i]["index"]]["visible"] = true;
 		$("#frame-" + visibles[i]["index"]).css("opacity","1");
+		lista_alturas[visibles[i]["index"]] = $("#frame-" + visibles[i]["index"]).height();
 	}
 	for(var i = 0; i < descubres.length; i++){
-		$("#frame-" + i).css({"opacity" : (descubres[i]["visible"] ? "1" : "0"), "visibility" : (descubres[i]["visible"] ? "visible" : "hidden"), "width" : (descubres[i]["visible"] ? "" : "0")/*, "height" : (descubres[i]["visible"] ? $(".frame-descubre").width() + "px" : "0")*/ });
+		$("#frame-" + i).css({"opacity" : (descubres[i]["visible"] ? "1" : "0"), "visibility" : (descubres[i]["visible"] ? "visible" : "hidden"), "width" : (descubres[i]["visible"] ? "" : "0"), "height" : lista_alturas[i]+"px" });
 	}
 }
 
