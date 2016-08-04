@@ -990,10 +990,13 @@ ul.ul-nav { display: table; float: left !important;
 		margin: 20px auto 0 auto;
 		overflow: auto;
 		overflow-x: hidden;
-		color: #838383;
-		font-weight: 600;
-		font-style: italic;
-		font-size: 22px;
+
+		#frase-desc{
+			color: #838383;
+			font-weight: 600;
+			font-style: italic;
+			font-size: 22px;
+		}
 
 		.frame-descubre{
 			float: left;
@@ -1040,7 +1043,7 @@ ul.ul-nav { display: table; float: left !important;
 					font-size: 21px;
 					display:block;
 					margin: 0 auto;
-					height: 97px;
+					height: 87px;
 					position: relative;
 				}
 	
@@ -1103,7 +1106,7 @@ ul.ul-nav { display: table; float: left !important;
 							font-style: normal; 
 							font-weight: 500; 
 							font-size: 21px;
-							height: 97px;
+							height: 87px;
 							position:relative;
 						}
 
