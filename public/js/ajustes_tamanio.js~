@@ -29,7 +29,6 @@ $(document).ready(function(){
 	partirDescubres();
 	margenAuto();
 	ajustarImagenes();
-	agregarVisible();
 });
 
 window.onresize = function(){
