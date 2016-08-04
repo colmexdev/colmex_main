@@ -14,7 +14,7 @@ $(document).ready(function(){
 	var cw = $('.frame-descubre').width();
 
 	if(gon.ev_tiny == ""){
-			$("#div_eventos").css("height","0");
+		$("#div_eventos").css("height","0");
 	}
 	else{
 		if(ancho < 785){ document.getElementById("render_eventos").innerHTML = gon.ev_tiny; }
@@ -65,7 +65,7 @@ window.onresize = function(){
 
 function partirDescubres(){
 	var ancho_v = Math.max(document.documentElement.clientWidth, window.innerWidth || document.body.ClientWidth || 0);
-	var json_l = JSON.parse(gon.descubres).length;
+	var json_l = descubres.length;
 	var alto_d = $(".frame-descubre").height();
 	$("#wrapper").css({"height" : ((($("#wrapper").height() >= alto_d * num_filas) || document.getElementById("wrapper").style.height == "auto") ? "auto" : (alto_d * num_filas) + "px"), "overflow-y" : "hidden", "-webkit-transition" : "height 0.5s linear", "-moz-transition" : "height 0.5s linear", "-o-transition" : "height 0.5s linear", "transition" : "height 0.5s linear"});
 	if(((json_l > 10 && ancho_v >= 1200 ) || (json_l > 8 && ancho_v >= 992 && ancho_v < 1200) || (json_l > 6 && ancho_v >= 768 && ancho_v < 992) || (json_l >4 && ancho_v >= 480 && ancho_v < 768) || (json_l > 2 && ancho_v < 480)) && document.getElementById("wrapper").style.height != "auto"){
@@ -85,7 +85,7 @@ function desbordarDescubres(){
 		num_filas = num_filas + 2;
 	}
 	var div_filas = (ancho_v >= 1200 ? 5 : (ancho_v >= 992 ? 4 : (ancho_v >= 768 ? 3 : (ancho_v >= 480 ? 2 : 1))));
-	var cantidad_filas = Math.ceil(JSON.parse(gon.descubres).length / div_filas);
+	var cantidad_filas = Math.ceil(dewscubres.length / div_filas);
 	$("#wrapper").css({"height" : (($("#wrapper").height() + (($(".frame-descubre").height() * 2)) > ($(".frame-descubre").height() * cantidad_filas) || document.getElementById("wrapper").style.height == "auto" ) ? "auto" : ($(".frame-descubre").height() * num_filas) + "px")});
 	$("#cutter-descubre").css("display", $("#wrapper").height() + ($(".frame-descubre").height() * 2) >= ($(".frame-descubre").height() * cantidad_filas)  ? "none" : "block");
 
@@ -168,5 +168,6 @@ function clone(obj) {
 function agregarVisible(desc){
 	for(var i = 0; i < desc.length; i++){
 		desc[i]["visible"] = true;
+		desc[i]["index"] = i;
 	}
 }

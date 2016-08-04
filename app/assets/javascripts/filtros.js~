@@ -15,7 +15,6 @@ function filtrarDescubres(){
 }
 
 function actualizarVisibleDescubres(visibles){
-	var ancho_actual;
 	for(var i = 0; i < descubres.length; i++){
 		descubres[i]["visible"] = false;
 	}

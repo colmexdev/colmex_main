@@ -25,6 +25,7 @@ function actualizarVisibleDescubres(visibles){
 	for(var i = 0; i < descubres.length; i++){
 		$("#frame-" + i).css({"opacity" : (descubres[i]["visible"] ? "1" : "0"), "visibility" : (descubres[i]["visible"] ? "visible" : "hidden"), "width" : (descubres[i]["visible"] ? "" : "0") });
 	}
+	partirDescubres();
 }
 
 function limpiarPuntuacion(tags){
