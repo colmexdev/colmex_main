@@ -51,10 +51,6 @@ a, a:hover, a:active, a:visited, a:link{  text-decoration: none; }
 }
 p {text-align: justify; font-size: 16px;}
 
-.link-rel{ list-style:none; height: auto; font-size: 18px; margin-bottom:5px;}
-.link-rel>a{ background-image: image-url("btn.png"); background-repeat: no-repeat; padding: 2px 0 2px 115px; text-decoration:none; color:#660033;}
-.link-rel>a:hover{ color:#999}
-
 @media only screen and (min-width: 768px){
 	.principal-chica {
     max-width: 980px;
