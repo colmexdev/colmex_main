@@ -15,15 +15,17 @@ function filtrarDescubres(){
 }
 
 function actualizarVisibleDescubres(visibles){
+	var ancho_actual;
 	for(var i = 0; i < descubres.length; i++){
 		descubres[i]["visible"] = false;
 	}
 	for(var i = 0; i < visibles.length; i++){
 		descubres[visibles[i]["index"]]["visible"] = true;
 		$("#frame-" + visibles[i]["index"]).css("opacity","1");
+		ancho_actual = $("#frame-" + visibles[i]["index"]).width();
 	}
 	for(var i = 0; i < descubres.length; i++){
-		$("#frame-" + i).css({"opacity" : (descubres[i]["visible"] ? "1" : "0"), "visibility" : (descubres[i]["visible"] ? "visible" : "hidden"), "width" : (descubres[i]["visible"] ? $(".frame-descubre").width()+"px" : "0") });
+		$("#frame-" + i).css({"opacity" : (descubres[i]["visible"] ? "1" : "0"), "visibility" : (descubres[i]["visible"] ? "visible" : "hidden"), "width" : (descubres[i]["visible"] ? ancho_actual+"px" : "0") });
 	}
 }
 
