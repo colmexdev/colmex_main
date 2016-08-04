@@ -5,12 +5,22 @@ function filtrarDescubres(){
 	var tagsAFiltrar = $("#tags").val();
 	var descubresFiltradosPorContenido = descubresPorContenido.filter(function(d){ return ( contAFiltrar == "" ? true : d == contAFiltrar )}).top(Infinity);
 	var descubresFiltradosPorTags = descubresPorTags.filter(function(d){ return (tagsAFiltrar == "" ? true : limpiarPuntuacion(d).indexOf(tagsAFiltrar) != -1)}).top(Infinity);
+	actualizarVisibleDescubres(descubresFiltradosPorTags);
 	var bloqueHTML = construirDescubre(descubresFiltradosPorTags);
 	$("#wrapper").html(bloqueHTML);
 	$("#wrapper").css({"height" : "auto", "margin-bottom" : "45px" });
 	$("#cutter-descubre").css("display","none");
   var cw = $('.frame-descubre').width();
 	$('.frame-descubre').css({'height':cw+'px'});
+}
+
+function actualizarVisibleDescubres(visibles){
+	for(var i = 0; i < descubres.length; i++){
+		descubres[i]["visible"] = false;
+	}
+	for(var i = 0; i < visibles.length; i++){
+		descubres[visibles[i]["index"]]["visible"] = true;
+	}
 }
 
 function limpiarPuntuacion(tags){

@@ -14,7 +14,7 @@ $(document).ready(function(){
 	var cw = $('.frame-descubre').width();
 
 	if(gon.ev_tiny == ""){
-			$("#div_eventos").css("height","0");
+		$("#div_eventos").css("height","0");
 	}
 	else{
 		if(ancho < 785){ document.getElementById("render_eventos").innerHTML = gon.ev_tiny; }
@@ -168,5 +168,6 @@ function clone(obj) {
 function agregarVisible(desc){
 	for(var i = 0; i < desc.length; i++){
 		desc[i]["visible"] = true;
+		desc[i]["index"] = i;
 	}
 }
