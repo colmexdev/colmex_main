@@ -23,7 +23,7 @@ function actualizarVisibleDescubres(visibles){
 		$("#frame-" + visibles[i]["index"]).css("opacity","1");
 	}
 	for(var i = 0; i < descubres.length; i++){
-		$("#frame-" + i).css({"opacity" : (descubres[i]["visible"] ? "1" : "0"), "visibility" : (descubres[i]["visible"] ? "visible" : "hidden"), "display" : (descubres[i]["visible"] ? "inline-block" : "none") });
+		$("#frame-" + i).css({"opacity" : (descubres[i]["visible"] ? "1" : "0"), "visibility" : (descubres[i]["visible"] ? "visible" : "hidden"), "width" : (descubres[i]["visible"] ? $(".frame-descubre").width()+"px" : "0") });
 	}
 }
 
