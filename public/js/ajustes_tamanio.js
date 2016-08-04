@@ -1,6 +1,6 @@
 ancho = Math.max(document.documentElement.clientWidth, window.innerWidth || document.body.ClientWidth || 0);
 descubres = clone(JSON.parse(gon.descubres));
-dataset = crossfilter(JSON.parse(gon.descubres));
+dataset = crossfilter(descubres);
 descubresPorContenido = dataset.dimension(function(d){ return d.contenido; });
 descubresPorTags = dataset.dimension(function(d){ return (d.titulo + " " + d.contenido + " " + d.tags.replace(/ *, */, " ")).replace(/ +/, " ").toLowerCase()});
 num_filas = 2;
@@ -29,7 +29,7 @@ $(document).ready(function(){
 	partirDescubres();
 	margenAuto();
 	ajustarImagenes();
-	integrarVisible();
+	agregarVisible();
 });
 
 window.onresize = function(){
@@ -165,9 +165,8 @@ function clone(obj) {
     throw new Error("Unable to copy obj! Its type isn't supported.");
 }
 
-function integrarVisible(){
+function agregarVisible(){
 	for(var i = 0; i < descubres.length; i++){
 		descubres[i]["visible"] = true;
 	}
 }
-
