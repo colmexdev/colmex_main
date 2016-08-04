@@ -61,6 +61,7 @@ window.onresize = function(){
 	partirDescubres();
 	margenAuto();
 	ajustarImagenes();
+	ajustarAlturas();
 }
 
 function partirDescubres(){
