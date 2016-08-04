@@ -6,7 +6,7 @@ class Documento < ActiveRecord::Base
 
   validates_presence_of :nombre
   validates_presence_of :tipo
-  validates_presence_of :anio
+  validates_presence_of :anio, if: "tipo != 'Estatuto' or tipo != 'Transparencia'"
   validates_attachment_presence :archivo
   validates_attachment_content_type :archivo, :content_type => ['application/pdf']
 
