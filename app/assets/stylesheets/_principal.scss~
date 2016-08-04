@@ -1001,11 +1001,11 @@ ul.ul-nav { display: table; float: left !important;
 			position: relative;
 			font-style: normal;
 			opacity: 1;
-			-webkit-transition: opacity 0.5s linear, visibility 0.5s linear;
-			-moz-transition: opacity 0.5s linear, visibility 0.5s linear;
-			-ms-transition: opacity 0.5s linear, visibility 0.5s linear;
-			-o-transition: opacity 0.5s linear, visibility 0.5s linear;
-			transition: opacity 0.5s linear, visibility 0.5s linear;
+			-webkit-transition: opacity 0.5s linear, visibility 0.5s linear, display 0.1s linear 0.5s;
+			-moz-transition: opacity 0.5s linear, visibility 0.5s linear, display 0.1s linear 0.5s;
+			-ms-transition: opacity 0.5s linear, visibility 0.5s linear, display 0.1s linear 0.5s;
+			-o-transition: opacity 0.5s linear, visibility 0.5s linear, display 0.1s linear 0.5s;
+			transition: opacity 0.5s linear, visibility 0.5s linear, display 0.1s linear 0.5s;
 
 			.imagen-descubre{
 				@include centrado;
