@@ -21,8 +21,8 @@
 				<ul class="links">
 					<li><a href=<%= principios_path %>><%= t('footer.liga1') %></a></li>
 					<li><a href="#"><%= t('footer.liga2') %></a></li>
-					<li><a href="#"><%= t('footer.liga3') %></a></li>
-					<li><a href="#"><%= t('footer.liga4') %></a></li>
+					<li><a href="http://intranet.colmex.mx/directorio/"><%= t('footer.liga3') %></a></li>
+					<li><a href="http://portal.office.com"><%= t('footer.liga4') %></a></li>
 					<li><a href="#"><%= t('footer.liga5') %></a></li>
 				</ul>
 			</div>
