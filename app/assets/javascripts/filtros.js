@@ -12,18 +12,16 @@ function filtrarDescubres(){
 }
 
 function renderFrase(){
-	uno_visible = true;
+	uno_visible = false;
 	for(var i = 0; i < descubres.length; i++){
-		if(!descubres[i]["visible"]){
-			uno_visible = false;
+		if(descubres[i]["visible"]){
+			uno_visible = true;
 			break;
 		}
 	}
+	$("#frase-desc").remove();
 	if(!uno_visible){
 		$("#wrapper").append("<div id=\"frase-desc\">Ningún contenido coincide con su búsqueda.</div>");
-	}
-	else{
-		$("#frase-desc").remove();
 	}
 }
 
