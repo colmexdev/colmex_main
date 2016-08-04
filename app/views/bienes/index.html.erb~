@@ -1,14 +1,18 @@
 <%= render "principal/barra" %>
 
-<div id="header">
+<div class="container-fluid" id="resto-cuerpo">
+<div id="cuerpo">
+
+<div id="cabecera">
   <img src=<%= image_url("header.png") %>> </div>
 <div id="main">
-<h1>La relación de los Bienes Muebles e Inmuebles de El Colegio de México se encuentra en el siguiente listado de archivos descargables: </h1>
-<ul>
-<li><a href="BIENES-MUEBLES-2015.pdf" target="_blank">Relación de Bienes Muebles que Componen el Patrimonio. Cuenta de la Hacienda Pública Federal 2015</a></li>
-<li><a href="BIENES_INMUEBLES-2015.pdf" target="_blank">Relación de Bienes Inmuebles que Componen el Patrimonio. Cuenta de la Hacienda Pública Federal 2015</a></li>
+<h1 id="texto-pre">La relación de los Bienes Muebles e Inmuebles de El Colegio de México se encuentra en el siguiente listado de archivos descargables: </h1>
+<ul id="lista">
+<li class="link"><a href="BIENES-MUEBLES-2015.pdf" target="_blank">Relación de Bienes Muebles que Componen el Patrimonio. Cuenta de la Hacienda Pública Federal 2015</a></li>
+<li class="link"><a href="BIENES_INMUEBLES-2015.pdf" target="_blank">Relación de Bienes Inmuebles que Componen el Patrimonio. Cuenta de la Hacienda Pública Federal 2015</a></li>
 </ul>
 </div>
 <p><em>Copyright © 2015. El Colegio de México. Camino al Ajusco No.20 Col. Pedregal de Santa Teresa C.P. 10740, México D.F.</em></p>
 
+</div>
 <%= render "principal/footer" %>
