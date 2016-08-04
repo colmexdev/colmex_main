@@ -16,6 +16,8 @@ Rails.application.routes.draw do
   devise_for :admins
   resources :admins
 
+  get 'bienes/index' => 'bienes#index', :as => :bienes
+
   get 'panel/administrar' => 'panel#administrar', :as => :panel
 
   get 'centros_de_estudio/inicio' => "centros_de_estudio#inicio", :as => :centros_de_estudio
@@ -53,8 +55,6 @@ Rails.application.routes.draw do
   get 'sobre_el_colegio/historia' => 'sobre_el_colegio#historia', :as => :historia
 
   get 'sobre_el_colegio/informacion_general' => 'sobre_el_colegio#informacion_general', :as => :informacion_general
-
-  get 'sobre_el_colegio/transparencia' => 'sobre_el_colegio#transparencia', :as => :transparencia
 
   get 'sobre_el_colegio/documentacion_institucional' => 'sobre_el_colegio#documentacion_institucional', :as => :documentacion
 

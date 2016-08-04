@@ -13,7 +13,8 @@ sp:
         op4: "Documentación institucional"
         op5: "Profesores eméritos"
         op6: "Premios y distinciones"
-        op7: "Transparencia"
+        op7: "Servicios"
+        op8: "Relación de bienes muebles e inmuebles"
     b2:
       texto: "Centros de estudio"
       opciones:
@@ -113,6 +114,7 @@ sp:
       long: "%A %d de %B"
       short: "%b %d"
       normal: "%d de %B de %Y"
+      mes_anio: "%B de %Y"
     month_names:
     -
     - enero

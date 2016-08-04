@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :personals
   resources :premiados
   resources :frases
   resources :sliders
@@ -14,6 +15,8 @@ Rails.application.routes.draw do
   resources :emeritos
   devise_for :admins
   resources :admins
+
+  get 'bienes/index' => 'bienes#index', :as => :bienes
 
   get 'panel/administrar' => 'panel#administrar', :as => :panel
 
@@ -44,8 +47,6 @@ Rails.application.routes.draw do
   get "programas_academicos/doctorados" => "programas_academicos#doctorados", :as => :doctorados
 
   get "programas_academicos/cursos" => "programas_academicos#cursos", :as => :cursos_varios
-
-  get 'sobre_el_colegio/inicio' => 'sobre_el_colegio#inicio', :as => :sobre_el_colegio
 
   get 'sobre_el_colegio/autoridades' => 'sobre_el_colegio#autoridades', :as => :autoridades
 

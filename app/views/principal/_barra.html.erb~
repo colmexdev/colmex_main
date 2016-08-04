@@ -80,11 +80,11 @@
 		        <ul class="dropdown-menu">
 		          <li><a href="http://ceaa.colmex.mx/" target="_blank">Centro de Estudios de Asia y África</a></li>
 		          <li><a href="http://cedua.colmex.mx/" target="_blank">Centro de Estudios Demográficos, Urbanos y Ambientales</a></li>
-		          <li><a href="http://cee.colmex.mx/cee" target="_blank">Centro de Estudios Económicos</a></li>
-		          <li><a href=<%= ceh_path %>>Centro de Estudios Históricos</a></li>
-		          <li><a href=<%= cei_path %>>Centro de Estudios Internacionales</a></li>
-		          <li><a href=<%= cell_path %>>Centro de Estudios Lingüísticos y Literarios</a></li>
-		          <li><a href=<%= ces_path %>>Centro de Estudios Sociológicos</a></li>
+		          <li><a href="http://cee.colmex.mx/" target="_blank">Centro de Estudios Económicos</a></li>
+		          <li><a href="http://ceh.colmex.mx/" target="_blank">Centro de Estudios Históricos</a></li>
+		          <li><a href="http://cei.colmex.mx/" target="_blank">Centro de Estudios Internacionales</a></li>
+		          <li><a href="http://cell.colmex.mx/" target="_blank">Centro de Estudios Lingüísticos y Literarios</a></li>
+		          <li><a href="http://ces.colmex.mx/" target="_blank">Centro de Estudios Sociológicos</a></li>
 		        </ul>
 		    </li>
 
@@ -125,13 +125,13 @@
 				<li class="uk-parent">
 					<a href="#"><%= t('botones.b2.texto') %></a>
 					<ul class="uk-nav-sub">
-						<li><a href=<%= ceaa_path %> class="sublink">Centro de Estudios de Asia y África</a></li>
-          	<li><a href=<%= cedua_path %> class="sublink">Centro de Estudios Demográficos, Urbanos y Ambientales</a></li>
-          	<li><a href=<%= cee_path %> class="sublink">Centro de Estudios Económicos</a></li>
-          	<li><a href=<%= ceh_path %> class="sublink">Centro de Estudios Históricos</a></li>
-          	<li><a href=<%= cei_path %> class="sublink">Centro de Estudios Internacionales</a></li>
-          	<li><a href=<%= cell_path %> class="sublink">Centro de Estudios Lingüísticos y Literarios</a></li>
-          	<li><a href=<%= ces_path %> class="sublink">Centro de Estudios Sociológicos</a></li>
+						<li><a href="http://ceaa.colmex.mx/" target="_blank" class="sublink">Centro de Estudios de Asia y África</a></li>
+          	<li><a href="http://cedua.colmex.mx/" target="_blank" class="sublink">Centro de Estudios Demográficos, Urbanos y Ambientales</a></li>
+          	<li><a href="http://cee.colmex.mx/" target="_blank" class="sublink">Centro de Estudios Económicos</a></li>
+          	<li><a href="http://ceh.colmex.mx/" target="_blank" class="sublink">Centro de Estudios Históricos</a></li>
+          	<li><a href="http://cei.colmex.mx/" target="_blank" class="sublink">Centro de Estudios Internacionales</a></li>
+          	<li><a href="http://cell.colmex.mx/" target="_blank" class="sublink">Centro de Estudios Lingüísticos y Literarios</a></li>
+          	<li><a href="http://ces.colmex.mx/" target="_blank" class="sublink">Centro de Estudios Sociológicos</a></li>
 					</ul>
 				</li>
 				<li class="uk-parent">

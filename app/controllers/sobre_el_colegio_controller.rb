@@ -44,12 +44,7 @@ class SobreElColegioController < ApplicationController
     @profesores = Emerito.all
   end
 
-  def transparencia
-
-  end
-
   def informacion_general
-
   end
 
   def asamblea

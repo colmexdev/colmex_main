@@ -5,6 +5,7 @@ en:
   botones:
     b1: 
       texto: "General information"
+      texto2: "About the College"
       opciones:
         op1: "Institutional directory"
         op2: "Authorities"
@@ -12,7 +13,8 @@ en:
         op4: "Institutional documents"
         op5: "Emmeritus profesors"
         op6: "Prizes and distinctions"
-        op7: "Transparency"
+        op7: "Services"
+        op8: "Chattels and properties"
     b2:
       texto: "Study centers"
       opciones:

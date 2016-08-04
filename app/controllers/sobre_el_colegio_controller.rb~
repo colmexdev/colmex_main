@@ -8,6 +8,7 @@ class SobreElColegioController < ApplicationController
   end
 
   def documentacion_institucional
+    @actas = Documento.where(:tipo => "Junta")
   end
 
   def actas

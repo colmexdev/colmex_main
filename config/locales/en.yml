@@ -13,7 +13,8 @@ en:
         op4: "Institutional documents"
         op5: "Emmeritus profesors"
         op6: "Prizes and distinctions"
-        op7: "Transparency"
+        op7: "Services"
+        op8: "Chattels and properties"
     b2:
       texto: "Study centers"
       opciones:
@@ -48,7 +49,7 @@ en:
   footer:
     liga1: "Ethical Principles"
     liga2: "Privacy advice"
-    liga3: "Transparency"
+    liga3: "Institutional directory"
     liga4: "E-mail"
     liga5: "Location"
   date:
