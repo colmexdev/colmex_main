@@ -9,8 +9,8 @@ function filtrarDescubres(){
 
 	$("#wrapper").css({"height" : "auto", "margin-bottom" : "45px" });
 	$("#cutter-descubre").css("display","none");
-  var cw = $('.frame-descubre').width();
-	$('.frame-descubre').css({'height':cw+'px'});
+  	//var cw = $('.frame-descubre').width();
+	//$('.frame-descubre').css({'height':cw+'px'});
 }
 
 function actualizarVisibleDescubres(visibles){
@@ -22,11 +22,11 @@ function actualizarVisibleDescubres(visibles){
 		$("#frame-" + visibles[i]["index"]).css("opacity","1");
 	}
 	for(var i = 0; i < descubres.length; i++){
-		$("#frame-" + i).css({"opacity" : (descubres[i]["visible"] ? "1" : "0"), "visibility" : (descubres[i]["visible"] ? "visible" : "hidden"), "width" : (descubres[i]["visible"] ? "" : "0"), "height" : (descubres[i]["visible"] ? "" : "0") });
+		$("#frame-" + i).css({"opacity" : (descubres[i]["visible"] ? "1" : "0"), "visibility" : (descubres[i]["visible"] ? "visible" : "hidden"), "width" : (descubres[i]["visible"] ? "" : "0"), "height" : (descubres[i]["visible"] ? ajustarAlturas() : "0") });
 	}
 }
 
-function ajustarAlturas(descubre){
+function ajustarAlturas(){
 	var ancho = $("#wrapper").innerWidth();
 	var factor = (ancho >= 1200 ? 5 : (ancho >= 992 ? 4 : ( ancho >= 768 ? 3 : ( ancho >= 450 ? 2 : 1))))
 	return (ancho/factor) + "px";
