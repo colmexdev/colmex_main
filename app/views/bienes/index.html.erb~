@@ -1,7 +1,7 @@
 <%= render "principal/barra" %>
 
 <div id="header">
-  <img src=<%= image_url("header.png") %>/> </div>
+  <img src=<%= image_url("header.png") %>> </div>
 <div id="main">
 <h1>La relación de los Bienes Muebles e Inmuebles de El Colegio de México se encuentra en el siguiente listado de archivos descargables: </h1>
 <ul>
