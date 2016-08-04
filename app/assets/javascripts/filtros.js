@@ -29,7 +29,7 @@ function actualizarVisibleDescubres(visibles){
 function ajustarAlturas(descubre){
 	var ancho = Math.max(document.documentElement.clientWidth, window.innerWidth || document.body.ClientWidth || 0);
 	var factor = (ancho >= 1200 ? 5 : (ancho >= 992 ? 4 : ( ancho >= 768 ? 3 : ( ancho >= 450 ? 2 : 1))))
-	descubre.css("height", ((ancho*0.85)/factor) + "px");
+	return ((ancho*0.85)/factor) + "px";
 }
 
 function limpiarPuntuacion(tags){

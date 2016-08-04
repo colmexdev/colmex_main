@@ -14,19 +14,22 @@ function filtrarDescubres(){
 }
 
 function actualizarVisibleDescubres(visibles){
-	var lista_alturas = [];
 	for(var i = 0; i < descubres.length; i++){
 		descubres[i]["visible"] = false;
-		lista_alturas.push(0);
 	}
 	for(var i = 0; i < visibles.length; i++){
 		descubres[visibles[i]["index"]]["visible"] = true;
 		$("#frame-" + visibles[i]["index"]).css("opacity","1");
-		lista_alturas[visibles[i]["index"]] = $("#frame-" + visibles[i]["index"]).height();
 	}
 	for(var i = 0; i < descubres.length; i++){
-		$("#frame-" + i).css({"opacity" : (descubres[i]["visible"] ? "1" : "0"), "visibility" : (descubres[i]["visible"] ? "visible" : "hidden"), "width" : (descubres[i]["visible"] ? "" : "0"), "height" : lista_alturas[i]+"px" });
+		$("#frame-" + i).css({"opacity" : (descubres[i]["visible"] ? "1" : "0"), "visibility" : (descubres[i]["visible"] ? "visible" : "hidden"), "width" : (descubres[i]["visible"] ? "" : "0"), "height" : (descubres[i]["visible"] ? ajustarAlturas($("#frame-" + i)) : "0") });
 	}
+}
+
+function ajustarAlturas(descubre){
+	var ancho = Math.max(document.documentElement.clientWidth, window.innerWidth || document.body.ClientWidth || 0);
+	var factor = (ancho >= 1200 ? 5 : (ancho >= 992 ? 4 : ( ancho >= 768 ? 3 : ( ancho >= 450 ? 2 : 1))))
+	descubre.css("height", ((ancho*0.85)/factor) + "px");
 }
 
 function limpiarPuntuacion(tags){
