@@ -1,3 +1,5 @@
+<%= render "principal/barra" %>
+
 <div id="header">
   <img src=<%= image_url("header.png") %>/> </div>
 <div id="main">
@@ -8,3 +10,5 @@
 </ul>
 </div>
 <p><em>Copyright © 2015. El Colegio de México. Camino al Ajusco No.20 Col. Pedregal de Santa Teresa C.P. 10740, México D.F.</em></p>
+
+<%= render "principal/footer" %>
