@@ -9,8 +9,6 @@ function filtrarDescubres(){
 
 	$("#wrapper").css({"height" : "auto", "margin-bottom" : "45px" });
 	$("#cutter-descubre").css("display","none");
-  	//var cw = $('.frame-descubre').width();
-	//$('.frame-descubre').css({'height':cw+'px'});
 }
 
 function actualizarVisibleDescubres(visibles){
@@ -27,9 +25,9 @@ function actualizarVisibleDescubres(visibles){
 }
 
 function ajustarAlturas(){
-	var ancho = $("#wrapper").innerWidth();
+	var ancho = Math.max(document.documentElement.clientWidth, window.innerWidth || document.body.ClientWidth || 0);
 	var factor = (ancho >= 1200 ? 5 : (ancho >= 992 ? 4 : ( ancho >= 768 ? 3 : ( ancho >= 450 ? 2 : 1))))
-	return (ancho/factor) + "px";
+	return ($("#wrapper").innerWidth()/factor) + "px";
 }
 
 function limpiarPuntuacion(tags){

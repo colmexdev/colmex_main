@@ -1,19 +1,18 @@
 <%= render "principal/barra" %>
 
 <div class="container-fluid" id="resto-cuerpo">
-<div id="cuerpo">
+<div id="cuerpo" class="principal-chica uk-block-large">
 
-<div id="cabecera">
-  <img src=<%= image_url("header.png") %>> </div>
-<div id="main">
-<h1 id="texto-pre">La relación de los Bienes Muebles e Inmuebles de El Colegio de México se encuentra en el siguiente listado de archivos descargables: </h1>
-<ul id="lista">
-<% @transparencias.each do |t| %>
-<li class="link-rel"><a href=<%= t.archivo.url %> target="_blank"><%= t.nombre %></a></li>
-<% end %>
-</ul>
-</div>
-<p id="dir"><em>Copyright © 2015. El Colegio de México. Camino al Ajusco No.20 Col. Pedregal de Santa Teresa C.P. 10740, México D.F.</em></p>
+<div class="uk-width-1-1">
+    <span class="titulo-grande">Relación de bienes muebles e inmuebles</span><br>
+    <p>&nbsp;</p>
+    <p>La relación de los Bienes Muebles e Inmuebles de El Colegio de México se encuentra en el siguiente listado de archivos descargables:</p>
+    <ul id="lista">
+      <% @transparencias.each do |t| %>
+      <li class="link-rel"><a href=<%= t.archivo.url %> target="_blank"><%= t.nombre %></a></li>
+      <% end %>
+    </ul>
+    </div>
 
 </div>
 <%= render "principal/footer" %>

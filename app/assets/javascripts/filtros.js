@@ -6,9 +6,25 @@ function filtrarDescubres(){
 	var descubresFiltradosPorContenido = descubresPorContenido.filter(function(d){ return ( contAFiltrar == "" ? true : d == contAFiltrar )}).top(Infinity);
 	var descubresFiltradosPorTags = descubresPorTags.filter(function(d){ return (tagsAFiltrar == "" ? true : limpiarPuntuacion(d).indexOf(tagsAFiltrar) != -1)}).top(Infinity);
 	actualizarVisibleDescubres(descubresFiltradosPorTags);
-
+	renderFrase();
 	$("#wrapper").css({"height" : "auto", "margin-bottom" : "45px" });
 	$("#cutter-descubre").css("display","none");
+}
+
+function renderFrase(){
+	uno_visible = true;
+	for(var i = 0; i < descubres.length; i++){
+		if(!descubres[i]["visible"]){
+			uno_visible = false;
+			break;
+		}
+	}
+	if(!uno_visible){
+		$("#wrapper").append("<div id=\"frase-desc\">Ningún contenido coincide con su búsqueda.</div>");
+	}
+	else{
+		$("#frase-desc").remove();
+	}
 }
 
 function actualizarVisibleDescubres(visibles){
