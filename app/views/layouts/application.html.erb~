@@ -27,7 +27,7 @@
                 var map = new google.maps.Map(mapElement, mapOptions);
 
                 var marker = new google.maps.Marker({
-                    position: new google.maps.LatLng(19.309987, -99.206487),
+                    position: new google.maps.LatLng(19.29559, -99.240189),
                     map: map,
                     title: 'El Colegio de México'
                 });
