@@ -1,0 +1,26 @@
+<%= render 'principal/barra' %>
+<div class="container-fluid" id="resto-cuerpo">
+	<div id="cuerpo" class="principal-chica uk-block-large">
+
+<div class="uk-width-1-1">
+    <span class="titulo">Como llegar</span><br>
+    <p>&nbsp;</p>
+    <!--          Aquí empieza el contenido de como llegar          -->
+    <div class="uk-grid uk-grid-large">
+    <div class="uk-width-large-2-6 uk-text-left">
+    <h2><span class="vino">El Colegio de México</span></h2>
+    <h3>Camino al Ajusco No. 20 <br>
+Col. Pedregal de Sta. Teresa <br>
+C.P. 10740 <br>
+México, D.F.</h3>
+    <a href="https://www.google.com.mx/maps/dir//El+Colegio+de+M%C3%A9xico+A.C.,+Camino+al+Ajusco+20,+Tlalpan,+Pedregal+de+Santa+Teresa,+Equipamiento+Perif%C3%A9rico+Picacho+Ajusco+Canal+13,+10740+Ciudad+de+M%C3%A9xico,+D.F./@19.3035167,-99.2428773,13z/data=!3m1!4b1!4m8!4m7!1m0!1m5!1m1!1s0x85ce017458913985:0xa6be0527e2998dd8!2m2!1d-99.207858!2d19.30352" target="_blank" class="ver-mas uk-button-small">Ver direcciones</a>
+    </div>
+    <div class="uk-width-large-4-6">
+    <div id="map"></div>
+    </div>
+    </div>
+    </div>
+
+
+	</div>
+<%= render 'principal/footer' %>

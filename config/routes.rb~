@@ -56,8 +56,6 @@ Rails.application.routes.draw do
 
   get 'sobre_el_colegio/informacion_general' => 'sobre_el_colegio#informacion_general', :as => :informacion_general
 
-  get 'sobre_el_colegio/transparencia' => 'sobre_el_colegio#transparencia', :as => :transparencia
-
   get 'sobre_el_colegio/documentacion_institucional' => 'sobre_el_colegio#documentacion_institucional', :as => :documentacion
 
   get 'sobre_el_colegio/actas' => 'sobre_el_colegio#actas', :as => :actas

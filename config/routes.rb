@@ -86,10 +86,13 @@ Rails.application.routes.draw do
 
   get 'principal/resultados_busqueda' => 'principal#resultados_busqueda', :as => :busqueda
 
+  get 'principal/como_llegar' => 'principal#como_llegar', :as =>  :ubicacion
+
   get 'principal/set_language' => 'principal#set_language', :as => :cambiar_idioma
   devise_scope :admin do
     get "/acceder" => "devise/sessions#new"
   end
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

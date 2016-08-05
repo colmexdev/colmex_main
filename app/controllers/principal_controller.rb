@@ -43,6 +43,9 @@ class PrincipalController < ApplicationController
     return nueva_cad
   end
 
+  def como_llegar
+  end
+
   def principios_eticos
  
   end
