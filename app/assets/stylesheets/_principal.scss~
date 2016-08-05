@@ -655,7 +655,7 @@ ul.ul-nav { display: table; float: left !important;
 								text-align: left;
 							}
 
-							@media only screen and (max-width: 400px){
+							@media only screen and (max-width: 450px){
 								p { font-size: 14px; }
 							}
 						}
@@ -675,7 +675,7 @@ ul.ul-nav { display: table; float: left !important;
 
 							p { text-align: left; }
 
-							@media only screen and (max-width: 400px){
+							@media only screen and (max-width: 450px){
 								p { font-size: 13px; }
 							}
 						}
@@ -718,7 +718,7 @@ ul.ul-nav { display: table; float: left !important;
 
 								p { font-size: 13px; text-align: left; }
 
-								@media only screen and (max-width: 400px){
+								@media only screen and (max-width: 450px){
 									p { font-size: 11px; }
 								}
 							}
@@ -743,12 +743,12 @@ ul.ul-nav { display: table; float: left !important;
 							font-weight: 600;
 							font-size: 14px;
 							
-							a{
-								color: #5E002B;
-							}
-							a:hover, a:active{
-								color: #470020;
-							}
+							a{ color: #5E002B; }
+							a:hover, a:active{ color: #470020; }
+						}
+
+						@media only screen and (max-width:450px){
+							.liga_evento { font-size: 12px; }
 						}
 					}
 				}
@@ -770,7 +770,7 @@ ul.ul-nav { display: table; float: left !important;
 				@media only screen and (min-width: 0px) and (max-width: 785px){
 					.evento { 
 						width: 100%;
-						padding: 0;
+						padding: 0 3%;
 
 						.img_evento { 
 
