@@ -8,5 +8,4 @@ class Curso < ActiveRecord::Base
   validates_presence_of :programa
   validates_presence_of :traduccion_desc
   validates_presence_of :traduccion_tit
-  validates_presence_of :tipo_curso
 end
