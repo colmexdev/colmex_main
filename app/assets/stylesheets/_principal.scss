@@ -520,15 +520,20 @@ ul.ul-nav { display: table; float: left !important;
 	    	height: 100%;
 				width:100%;
 
-		.carousel-indicators li{
-			border: none;
-			background-color: #CCCCCC;
-			margin: 0 2px;
-			-webkit-transition: all 0.4s linear;
-			-moz-transition: all 0.4s linear;
-			-ms-transition: all 0.4s linear;
-			-o-transition: all 0.4s linear;
-			transition: all 0.4s linear;
+		.carousel-indicators{
+			bottom: 0;
+			margin-bottom: 0; 
+
+			li{
+				border: none;
+				background-color: #CCCCCC;
+				margin: 0 2px;
+				-webkit-transition: all 0.4s linear;
+				-moz-transition: all 0.4s linear;
+				-ms-transition: all 0.4s linear;
+				-o-transition: all 0.4s linear;
+				transition: all 0.4s linear;
+			}
 		}
 
 		.carousel-indicators li.active, .carousel-indicators li:hover{
