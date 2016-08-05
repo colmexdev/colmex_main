@@ -16,9 +16,9 @@
     </div>
     <div class="uk-width-large-2-5">
     <h3 class="vino uk-margin-bottom-remove">Inicio de la promoción</h3>
-    <h4 class="uk-margin-top-remove"><%= l(lic.fecha_inicio_clases, format: :mes_anio) %></h4>
+    <h4 class="uk-margin-top-remove"><%= l(lic.fecha_inicio_clases, format: :mes_anio).capitalize %></h4>
     <h3 class="vino uk-margin-bottom-remove">Próxima convocatoria</h3>
-    <h4 class="uk-margin-top-remove"><%= l(lic.fecha_inicio_conv, format: :mes_anio) %></h4>
+    <h4 class="uk-margin-top-remove"><%= l(lic.fecha_inicio_conv, format: :mes_anio).capitalize %></h4>
     </div>
     </div>
     <% end %>
