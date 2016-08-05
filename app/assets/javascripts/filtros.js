@@ -33,6 +33,10 @@ function actualizarVisibleDescubres(visibles){
 		descubres[visibles[i]["index"]]["visible"] = true;
 		$("#frame-" + visibles[i]["index"]).css("opacity","1");
 	}
+	reescalarDescubre();
+}
+
+function reescalarDescubre(){
 	for(var i = 0; i < descubres.length; i++){
 		$("#frame-" + i).css({"opacity" : (descubres[i]["visible"] ? "1" : "0"), "visibility" : (descubres[i]["visible"] ? "visible" : "hidden"), "width" : (descubres[i]["visible"] ? "" : "0"), "height" : (descubres[i]["visible"] ? ajustarAlturas() : "0") });
 	}
