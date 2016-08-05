@@ -72,6 +72,10 @@ p {text-align: justify; font-size: 16px;}
 
 #map { height: 400px; }
 
+@media only screen and (max-width: 959px){
+	#map { margin-top: 40px; }
+}
+
 .uk-link { color: #7E3355; text-decoration: none; outline: none; }
 
 .uk-link:hover, .uk-link:visited { color: #7E3355; text-decoration: none; }	
@@ -660,11 +664,12 @@ ul.ul-nav { display: table; float: left !important;
 							color: #5E002B;
 							line-height: 1.2em;
 							position: relative;
-							text-align: left;
 							height: 2.4em;
 							overflow: hidden;	
 							font-weight: 600;	
 							margin-bottom: 10px;	
+
+							p { text-align: left; }
 						}
 
 						.titulo_evento:after {

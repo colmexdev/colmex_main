@@ -654,6 +654,10 @@ ul.ul-nav { display: table; float: left !important;
 								font-size: 16px;
 								text-align: left;
 							}
+
+							@media only screen and (max-width: 400px){
+								p { font-size: 14px; }
+							}
 						}
 
 						.titulo_evento{
@@ -664,11 +668,16 @@ ul.ul-nav { display: table; float: left !important;
 							color: #5E002B;
 							line-height: 1.2em;
 							position: relative;
-							text-align: left;
 							height: 2.4em;
 							overflow: hidden;	
 							font-weight: 600;	
 							margin-bottom: 10px;	
+
+							p { text-align: left; }
+
+							@media only screen and (max-width: 400px){
+								p { font-size: 13px; }
+							}
 						}
 
 						.titulo_evento:after {
@@ -709,7 +718,10 @@ ul.ul-nav { display: table; float: left !important;
 								position: relative;
 								overflow: hidden;
 								white-space: nowrap;
+							}
 
+							@media only screen and (max-width: 400px){
+								.datos_evento { font-size: 11px; }
 							}
 							
 							.datos_evento:after {
