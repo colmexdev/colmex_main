@@ -31,6 +31,10 @@
                     map: map,
                     title: 'El Colegio de México'
                 });
+
+		google.maps.event.addDomListener(window, 'resize', function() {
+    map.setCenter(center);
+});
             }
         </script>
   <% end %>
