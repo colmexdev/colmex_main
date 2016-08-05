@@ -15,8 +15,6 @@
 //= require turbolinks
 //= require bootstrap-sprockets
 //= require uikit
-//= require form-select
-//= require datepicker
 //= require crossfilter
 //= require filtros
 //= require principal
