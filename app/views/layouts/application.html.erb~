@@ -38,6 +38,7 @@
             }
         </script>
   <% end %>
+  <script type="text/javascript" src="../js/uikit.js"></script>
   <script type="text/javascript" src="../js/form-select.js"></script>
   <script type="text/javascript" src="../js/datepicker.js"></script>
 </head>
