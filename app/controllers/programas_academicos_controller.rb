@@ -23,4 +23,16 @@ class ProgramasAcademicosController < ApplicationController
   def cursos
     @cursos = Curso.where(:programa => "Curso")
   end
+
+  def presenciales
+    respond_to do |format|
+      format.js
+    end
+  end
+
+  def electronicos
+    respond_to do |format|
+      format.js
+    end
+  end
 end
