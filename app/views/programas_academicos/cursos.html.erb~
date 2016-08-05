@@ -19,7 +19,7 @@
     <span class="titulo-chico morado" id="titulo-render">Cursos Presenciales</span><br>
 
     <div id="cursos-render">
-    	<%= render 'sobre_el_colegio/presenciales' %>
+    	<%= render 'programas_academicos/presenciales' %>
 
     </div>
     </div>
