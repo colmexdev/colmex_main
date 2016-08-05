@@ -16,7 +16,7 @@
     <h4><%= #a.cargo.upcase %></h4>
     <h3 class="vino"><%= #a.nombre %></h3>
     <p>Correo electrónico: <%= #a.correo %></p>
-    <p>Teléfono: <%= a.telefono %> Extensión: <%= #a.extension %></p>
+    <p>Teléfono: <%= #a.telefono %> Extensión: <%= #a.extension %></p>
     </div>
     <% #end %> -->
 
