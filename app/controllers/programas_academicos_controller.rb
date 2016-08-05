@@ -21,16 +21,18 @@ class ProgramasAcademicosController < ApplicationController
   end
 
   def cursos
-    @cursos = Curso.where(:programa => "Curso")
+    @presenciales = Curso.where("programa = ? AND tipo_curso = ?", "Curso", "Presencial")
   end
 
   def presenciales
+    @presenciales = Curso.where("programa = ? AND tipo_curso = ?", "Curso", "Presencial")
     respond_to do |format|
       format.js
     end
   end
 
   def electronicos
+    @electronicos = Curso.where("programa = ? AND tipo_curso = ?", "Curso", "En línea")
     respond_to do |format|
       format.js
     end
