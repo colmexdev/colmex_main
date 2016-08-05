@@ -522,7 +522,7 @@ ul.ul-nav { display: table; float: left !important;
 
 		.carousel-indicators{
 			bottom: 0;
-			margin-bottom: 0; 
+			margin-bottom: 1%; 
 
 			li{
 				border: none;
@@ -568,7 +568,8 @@ ul.ul-nav { display: table; float: left !important;
 		}
 		.carousel-control.right, .carousel-control.left{
 			opacity: 0.3;
-			width: 80px;
+			width: 60px;
+			font-size: 30px;
 			-webkit-transition: all 0.5s linear;
 			-moz-transition: all 0.5s linear;
 			-ms-transition: all 0.5s linear;
@@ -940,7 +941,7 @@ ul.ul-nav { display: table; float: left !important;
 @media only screen and (max-width: 768px){
 	#div_revistas{ 
 		height: 130px;
-		.revista { a { img { max-height: 130px; max-width: 2000px; } } } 
+		.revista { a { img { max-height: 130px; max-width: 200px; } } } 
 	}
 
 	.col-xs-12.col-sm-4.revista { margin-bottom: 20px; }

@@ -29,15 +29,19 @@
   </div>
   <div class="field">
     <%= f.label :fecha_inicio_conv %><br>
-    <%= f.date_select :fecha_inicio_conv %>
+    <%= f.text_field :fecha_inicio_conv, {"data-uk-datepicker" => "{format: 'YYYY-MM-DD'}"} %>
   </div>
   <div class="field">
     <%= f.label :fecha_fin_conv %><br>
-    <%= f.date_select :fecha_fin_conv %>
+    <%= f.text_field :fecha_fin_conv, {"data-uk-datepicker" => "{format: 'YYYY-MM-DD'}"} %>
   </div>
   <div class="field">
     <%= f.label :fecha_inicio_clases %><br>
-    <%= f.date_select :fecha_inicio_clases %>
+    <%= f.text_field :fecha_inicio_clases, {"data-uk-datepicker" => "{format: 'YYYY-MM-DD'}"} %>
+  </div>
+  <div class="field">
+    <%= f.label :fecha_fin_clases %><br>
+    <%= f.text_field :fecha_fin_clases, {"data-uk-datepicker" => "{format: 'YYYY-MM-DD'}"} %>
   </div>
   <div class="field">
     <%= f.label :liga %><br>

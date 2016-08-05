@@ -13,7 +13,7 @@
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas rhoncus diam sed leo porttitor consectetur. Proin nec dui sit amet libero mattis suscipit. Etiam ac convallis dui, quis varius velit. Nam at laoreet lorem. Sed fermentum lectus sed scelerisque placerat. Ut pharetra porta justo, id suscipit orci posuere eget. In accumsan ornare dictum.</p>
     <ul class=" uk-list uk-list-space">
 		<% @licenciaturas.each do |lic| %>
-		  <li><a href=<%= lic.liga %> target="_blank" class="uk-margin-large-bottom">Licenciatura en <%= lic.nombre %></a></li>
+		  <li><a href=<%= lic.liga %> target="_blank" class="uk-margin-large-bottom">Licenciatura en <%= lic.titulo %></a></li>
 		<% end %>
     </ul>
     </div>
@@ -31,7 +31,7 @@
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas rhoncus diam sed leo porttitor consectetur. Proin nec dui sit amet libero mattis suscipit. Etiam ac convallis dui, quis varius velit. Nam at laoreet lorem. Sed fermentum lectus sed scelerisque placerat. Ut pharetra porta justo, id suscipit orci posuere eget. In accumsan ornare dictum.</p>
     <ul class=" uk-list uk-list-space">
     <% @maestrias.each do |mt| %>
-		  <li><a href=<%= mt.liga %> target="_blank" class="uk-margin-large-bottom">Maestría en en <%= mt.nombre %></a></li>
+		  <li><a href=<%= mt.liga %> target="_blank" class="uk-margin-large-bottom">Maestría en en <%= mt.titulo %></a></li>
 		<% end %>
     </ul>
     </div>
@@ -43,7 +43,7 @@
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas rhoncus diam sed leo porttitor consectetur. Proin nec dui sit amet libero mattis suscipit. Etiam ac convallis dui, quis varius velit. Nam at laoreet lorem. Sed fermentum lectus sed scelerisque placerat. Ut pharetra porta justo, id suscipit orci posuere eget. In accumsan ornare dictum.</p>
     <ul class=" uk-list uk-list-space">
     <% @doctorados.each do |doc| %>
-		  <li><a href=<%= doc.liga %> target="_blank" class="uk-margin-large-bottom">Licenciatura en <%= doc.nombre %></a></li>
+		  <li><a href=<%= doc.liga %> target="_blank" class="uk-margin-large-bottom">Licenciatura en <%= doc.titulo %></a></li>
 		<% end %>
     </ul>
     </div>
