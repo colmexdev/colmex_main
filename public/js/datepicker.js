@@ -200,6 +200,10 @@
 
                 dropdown.appendTo("body");
             }
+
+            if ($('body').find('.uk-datepicker').length === 0) {
+              dropdown.appendTo("body");
+            }
         },
 
         pick: function(initdate) {
