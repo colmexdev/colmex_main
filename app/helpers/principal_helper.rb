@@ -126,4 +126,9 @@ module PrincipalHelper
     sigla = ["CEAA", "CEDUA", "CEE", "CEH", "CEI", "CELL", "CES"]
     return centros[sigla.index(siglas)]
   end
+
+  def num2Month(mes_num)
+    meses = ["enero", "febrero", "marzo", "abril", "mayo", "junio", "julio", "agosto", "septiembre", "octubre", "noviembre", "diciembre"]
+    return meses[mes_num]
+  end
 end

@@ -2,13 +2,13 @@
 <h2 class="vino"><%= p.titulo %></h2>
     <div class="uk-grid uk-grid-large">
     <div class="uk-width-large-3-5 uk-text-left">
-    <p><%= p.descripción %></p>
+    <p><%= p.descripcion %></p>
     <a href=<%= p.liga || "#" %> target="_blank" class="ver-mas uk-margin-large-bottom uk-button-small">Más información</a>
     </div>
     <div class="uk-width-large-2-5">
     <h3 class="vino uk-margin-bottom-remove">
     <% if !p.fecha_inicio_clases.nil? %>
-      <% if p.fecha_inicio_clases.nil? %>
+      <% if p.fecha_fin_clases.nil? %>
         <%= "Inicio de clases:" %>
       <% else %>
         <%= "Duración:" %>
@@ -17,29 +17,33 @@
     </h3>
     <h4 class="uk-margin-top-remove">
       <% if !p.fecha_inicio_clases.nil? %>
-        <%= (p.fecha_inicio_clases.day.to_s + " de " + p.fecha_inicio_clases.month.to_s) || "" %>
+        <%= (p.fecha_inicio_clases.day.to_s + " de " + num2Month(p.fecha_inicio_clases.month)) || "" %>
         <% if p.fecha_fin_clases.nil? %>
           <%= (" de " + p.fecha_inicio_clases.year.to_s) || "" %>
         <% else %>
           <% if p.fecha_fin_clases.year != p.fecha_inicio_clases.year %>
-            <%= (" de " + p.fecha_inicio_clases.year.to_s + " al " + p.fecha_fin_clases.day.to_s + " de " + p.fecha_fin_clases.month.to_s + " de " + p.fecha_fin_clases.year.to_s ) || "" %>
+            <%= (" de " + p.fecha_inicio_clases.year.to_s + " al " + p.fecha_fin_clases.day.to_s + " de " + num2Month(p.fecha_fin_clases.month) + " de " + p.fecha_fin_clases.year.to_s ) || "" %>
           <% else %>
-            <%= (" al " + p.fecha_fin_clases.day.to_s + " de " + p.fecha_fin_clases.month.to_s + " de " + p.fecha_fin_clases.year.to_s ) || "" %>
+            <%= (" al " + p.fecha_fin_clases.day.to_s + " de " + num2Month(p.fecha_fin_clases.month) + " de " + p.fecha_fin_clases.year.to_s ) || "" %>
           <% end %>
         <% end %>
       <% end %>
     </h4>
-    <h3 class="vino uk-margin-bottom-remove">Próxima convocatoria</h3>
+    <h3 class="vino uk-margin-bottom-remove">
+    <% if !p.fecha_inicio_conv.nil? and !p.fecha_fin_conv.nil? %>
+      <%= "Próxima convocatoria" %>
+    <% end %>
+    </h3>
     <h4 class="uk-margin-top-remove">
       <% if !p.fecha_inicio_conv.nil? %>
-        <%= (p.fecha_inicio_conv.day.to_s + " de " + p.fecha_inicio_conv.month.to_s) || "" %>
+        <%= (p.fecha_inicio_conv.day.to_s + " de " + num2Month(p.fecha_inicio_conv.month)) || "" %>
         <% if p.fecha_fin_conv.nil? %>
           <%= (" de " + p.fecha_inicio_conv.year.to_s) || "" %>
         <% else %>
           <% if p.fecha_fin_conv.year != p.fecha_inicio_conv.year %>
-            <%= (" de " + p.fecha_inicio_conv.year.to_s + " al " + p.fecha_fin_conv.day.to_s + " de " + p.fecha_fin_conv.month.to_s + " de " + p.fecha_fin_conv.year.to_s ) || "" %>
+            <%= (" de " + p.fecha_inicio_conv.year.to_s + " al " + p.fecha_fin_conv.day.to_s + " de " + num2Month(p.fecha_fin_conv.month) + " de " + p.fecha_fin_conv.year.to_s ) || "" %>
           <% else %>
-            <%= (" al " + p.fecha_fin_conv.day.to_s + " de " + p.fecha_fin_conv.month.to_s + " de " + p.fecha_fin_conv.year.to_s ) || "" %>
+            <%= (" al " + p.fecha_fin_conv.day.to_s + " de " + num2Month(p.fecha_fin_conv.month) + " de " + p.fecha_fin_conv.year.to_s ) || "" %>
           <% end %>
         <% end %>
       <% end %>
