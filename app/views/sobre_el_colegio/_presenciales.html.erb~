@@ -1,4 +1,30 @@
-<p>&nbsp;</p>
+<h2 class="vino">Curso de Especialización del Programa de Estudios Avanzados en Medio Ambiente y Desarrollo Sustentable (LEAD)</h2>
+    <div class="uk-grid uk-grid-large">
+    <div class="uk-width-large-3-5 uk-text-left">
+    <p>Sobre la base de una convocatoria anual del Programa, radicado en el Centro de Estudios Demográficos, Urbanos y Ambientales, se selecciona a un número de asociados para participar en actividades de capacitación.</p>
+    <a href="http://www.lead.colmex.mx/" target="_blank" class="ver-mas uk-margin-large-bottom uk-button-small">Más información</a>
+    </div>
+    <div class="uk-width-large-2-5">
+    <h3 class="vino uk-margin-bottom-remove">Inicio de la promoción</h3>
+    <h4 class="uk-margin-top-remove">8 de agosto de 2016</h4>
+    <h3 class="vino uk-margin-bottom-remove">Próxima convocatoria</h3>
+    <h4 class="uk-margin-top-remove">Agosto - Noviembre 2016</h4>
+    </div>
+    </div>
+    <h2 class="vino">Curso Público "Medio Oriente y mundo árabe contemporáneos"</h2>
+    <div class="uk-grid uk-grid-large">
+    <div class="uk-width-large-3-5 uk-text-left">
+    <p>El estudio del Medio Oriente contemporáneo se hará en torno a actores, fuerzas y procesos estatales, no estatales, locales y extranjeros, que han definido a la región desde el siglo XX a la fecha. Se discutirán: 1) los ejércitos y las relaciones cívico-militares; 2) las economías; 3) actores transnacionales (medios de comunicación, islam, sociedad civil) y 4) el papel de las grandes potencias</p>
+    <p class="uk-width-large-3-5 uk-text-left">Impartido por Martha Tawil</p>
+    <a href="http://cei.colmex.mx/cpublicos.html" target="_blank" class="ver-mas uk-margin-large-bottom uk-button-small">Más información</a>
+    </div>
+    <div class="uk-width-large-2-5">
+    <h3 class="vino uk-margin-bottom-remove">Duración:</h3>
+    <h4 class="uk-margin-top-remove">24 de agosto al 26 de octubre 2016</h4>
+    </div>
+    </div>
+
+<!-- <p>&nbsp;</p>
     <% @admins.each do |a| %>
     <div class="uk-margin-large-bottom">
     <h4><%= a.cargo.upcase %></h4>
@@ -6,5 +32,5 @@
     <p>Correo electrónico: <%= a.correo %></p>
     <p>Teléfono: <%= a.telefono %> Extensión: <%= a.extension %></p>
     </div>
-    <% end %>
+    <% end %> -->
 
