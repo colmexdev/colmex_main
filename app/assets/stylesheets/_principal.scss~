@@ -617,6 +617,7 @@ ul.ul-nav { display: table; float: left !important;
 				.evento{
 					float: left;
 					height: 100%;
+					padding: 0 3% 0 1%;
 					width: 25%;
 					text-align: center;
 

@@ -617,7 +617,7 @@ ul.ul-nav { display: table; float: left !important;
 				.evento{
 					float: left;
 					height: 100%;
-					padding: 0 3%;
+					padding: 0 3% 0 1%;
 					width: 25%;
 					text-align: center;
 
@@ -771,7 +771,7 @@ ul.ul-nav { display: table; float: left !important;
 				@media only screen and (min-width: 0px) and (max-width: 785px){
 					.evento { 
 						width: 100%;
-						padding: 0 3%;
+						padding: 0 5%;
 
 						.img_evento { 
 
