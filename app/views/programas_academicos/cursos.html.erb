@@ -2,17 +2,66 @@
 <div class="container-fluid" id="resto-cuerpo">
 	<div id="cuerpo" class="principal-chica uk-block-large">
 
-<div class="uk-grid uk-grid-large">
-    <div class="uk-width-large-3-5 uk-text-left">
-    <% @cursos.each do |curso| %>
-    <h2 class="vino"><%= curso.titulo %></h2>
-    <p class="uk-margin-large-bottom"><%= curso.descripcion %></p>
-    <a href=<%= curso.liga %> target="_blank" class="ver-mas uk-margin-large-bottom">Más información</a>
+    <div class="uk-width-1-1">
+    <div class="uk-container-center uk-block"><img src=<%= image_url("1200-370.jpg") %> alt="Cursos"></div>
     <p>&nbsp;</p>
-		<% end %>
+    <div class="uk-grid uk-grid-medium">
+    <div class="uk-width-large-2-6 uk-text-center-small uk-text-center-medium uk-text-left">
+    <span class="titulo-grande">Cursos</span><br>
+    <!--          Aquí empieza el menú pequeño          -->
+    <ul style="text-align:left;">
+    <li>Cursos Prescenciales</li>
+    <li>Cursos en línea</li>
+    </ul>
+    <!--          Aquí termina el menú pequeño          -->
+    </div>
+    <!--          Aquí empiezan los cursos en general          -->
+    <div class="uk-width-large-4-6">
+    <!--          Aquí empiezan los cursos Prescenciales          -->
+    <span class="titulo-chico morado">Cursos Prescenciales</span><br>
+    <h2 class="vino">Curso de Especialización del Programa de Estudios Avanzados en Medio Ambiente y Desarrollo Sustentable (LEAD)</h2>
+    <div class="uk-grid uk-grid-large">
+    <div class="uk-width-large-3-5 uk-text-left">
+    <p>Sobre la base de una convocatoria anual del Programa, radicado en el Centro de Estudios Demográficos, Urbanos y Ambientales, se selecciona a un número de asociados para participar en actividades de capacitación.</p>
+    <a href="http://www.lead.colmex.mx/" target="_blank" class="ver-mas uk-margin-large-bottom uk-button-small">Más información</a>
     </div>
     <div class="uk-width-large-2-5">
-    <img src=<%= image_url("imagen.jpg") %> alt="Historia de El Colegio de México">
+    <h3 class="vino uk-margin-bottom-remove">Inicio de la promoción</h3>
+    <h4 class="uk-margin-top-remove">8 de agosto de 2016</h4>
+    <h3 class="vino uk-margin-bottom-remove">Próxima convocatoria</h3>
+    <h4 class="uk-margin-top-remove">Agosto - Noviembre 2016</h4>
+    </div>
+    </div>
+    <h2 class="vino">Curso Público "Medio Oriente y mundo árabe contemporáneos"</h2>
+    <div class="uk-grid uk-grid-large">
+    <div class="uk-width-large-3-5 uk-text-left">
+    <p>El estudio del Medio Oriente contemporáneo se hará en torno a actores, fuerzas y procesos estatales, no estatales, locales y extranjeros, que han definido a la región desde el siglo XX a la fecha. Se discutirán: 1) los ejércitos y las relaciones cívico-militares; 2) las economías; 3) actores transnacionales (medios de comunicación, islam, sociedad civil) y 4) el papel de las grandes potencias</p>
+    <p class="uk-width-large-3-5 uk-text-left">Impartido por Martha Tawil</p>
+    <a href="http://cei.colmex.mx/cpublicos.html" target="_blank" class="ver-mas uk-margin-large-bottom uk-button-small">Más información</a>
+    </div>
+    <div class="uk-width-large-2-5">
+    <h3 class="vino uk-margin-bottom-remove">Duración:</h3>
+    <h4 class="uk-margin-top-remove">24 de agosto al 26 de octubre 2016</h4>
+    </div>
+    </div>
+    <!--          Aquí empiezan los cursos Prescensiales          -->
+    <p>&nbsp;</p>
+    <span class="titulo-chico morado">Cursos en línea</span><br>
+    <!--          Aquí empiezan los cursos en línea          -->
+    <h2 class="vino">Mooc: Literatura y cultura tradicional de México</h2>
+    <div class="uk-grid uk-grid-large">
+    <div class="uk-width-large-3-5 uk-text-left">
+    <p>La especificidad de la cultura y la literatura “tradicional” radica tanto en su forma de transmisión como en que está creada de acuerdo con unos principios particulares, que no son los mismos de la literatura “culta”. Por oral y por tradicional no se debe entender, entonces, simplemente lo contrario de escrito, oficial o establecido, sino una forma específica de creación literaria y de cultura que tiene valor de identidad para una comunidad y que, por tanto, la comunidad conserva y transmite. Este curso sobre la literatura y cultura tradicional de México se concibe desde esa perspectiva y trata de mostrar aquellos rasgos que corresponden a señas de identidad y aceptación de una serie de principios estéticos, valores y formas de convivencia en torno a creaciones artísticas.</p>
+    <a href="http://mx.televisioneducativa.gob.mx/courses/course-v1:El_Colegio_de_Mexico+CMLT1X+2016_2/about" target="_blank" class="ver-mas uk-margin-large-bottom uk-button-small">Más información</a>
+    </div>
+    <div class="uk-width-large-2-5">
+    <h3 class="vino uk-margin-bottom-remove">Duración </h3>
+    <h4 class="uk-margin-top-remove">22 de agosto al 3 de octubre 2016</h4>
+    </div>
+    </div>
+    <!--          Aquí empiezan los cursos en líoea          -->
+    </div>
+    
     </div>
     </div>
 
