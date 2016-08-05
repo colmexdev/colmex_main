@@ -6,7 +6,10 @@ descubresPorContenido = dataset.dimension(function(d){ return d.contenido; });
 descubresPorTags = dataset.dimension(function(d){ return (d.titulo + " " + d.contenido + " " + d.tags.replace(/ *, */, " ")).replace(/ +/, " ").toLowerCase()});
 num_filas = 2;
 
+$(document).on('page:load', function(){ UIkit.init; })
+
 $(document).ready(function(){
+	UIkit.init();
 	var alto_footer = $('#div_footer').height();
 	var alto_header = $('#header').height();
 	var ancho_slide = $("#div_slider").width();
@@ -35,7 +38,6 @@ $(document).ready(function(){
 window.onresize = function(){
 	var alto_footer = $('#div_footer').height();
 	var alto_header = $('#header').height();
-	//var cw = $('.frame-descubre').width();
 	var ancho_slide = $("#div_slider").width();
 	var alto_slide = ancho_slide*(17/40);
 	var ancho_act = Math.max(document.documentElement.clientWidth, window.innerWidth || document.body.ClientWidth || 0);
@@ -44,7 +46,7 @@ window.onresize = function(){
 
 	$('#div_slider').css({'height':alto_slide+'px'});
 
-	filtrarDescubres();
+	reescalarDescubre();
 
 	if(ancho_act < 785 && ancho >= 785){
 		document.getElementById("render_eventos").innerHTML = gon.ev_tiny;

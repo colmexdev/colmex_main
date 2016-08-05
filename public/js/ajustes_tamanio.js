@@ -6,7 +6,10 @@ descubresPorContenido = dataset.dimension(function(d){ return d.contenido; });
 descubresPorTags = dataset.dimension(function(d){ return (d.titulo + " " + d.contenido + " " + d.tags.replace(/ *, */, " ")).replace(/ +/, " ").toLowerCase()});
 num_filas = 2;
 
+$(document).on('page:load', function(){ UIkit.init(); })
+
 $(document).ready(function(){
+	UIkit.init();
 	var alto_footer = $('#div_footer').height();
 	var alto_header = $('#header').height();
 	var ancho_slide = $("#div_slider").width();
