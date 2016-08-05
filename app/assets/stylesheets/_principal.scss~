@@ -1073,9 +1073,9 @@ ul.ul-nav { display: table; float: left !important;
 					position: absolute;
 					bottom: 0;
 					right: 0;
-					width: 20%;
+					width: 30%;
 					height: 25px;
-					background: linear-gradient(to right, rgba(153,51,102, 0), rgba(153,51,102, 1) 90%);
+					background: linear-gradient(to right, rgba(153,51,102, 0), rgba(153,51,102, 1) 40%);
 				}
 			}
 	
@@ -1136,9 +1136,9 @@ ul.ul-nav { display: table; float: left !important;
 							position: absolute;
 							bottom: 0;
 							right: 0;
-							width: 20%;
+							width: 30%;
 							height: 26px;
-							background: linear-gradient(to right, rgba(153,51,102, 0), rgba(153,51,102, 1) 90%);
+							background: linear-gradient(to right, rgba(153,51,102, 0), rgba(153,51,102, 1) 40%);
 						}
 					}
 

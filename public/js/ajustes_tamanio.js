@@ -43,7 +43,7 @@ window.onresize = function(){
 	$('#resto-cuerpo').css({'padding-bottom': alto_footer+'px', 'padding-top': alto_header+'px'});
 
 	$('#div_slider').css({'height':alto_slide+'px'});
-	//$('.frame-descubre').css({'height':cw+'px'});
+
 	filtrarDescubres();
 
 	if(ancho_act < 785 && ancho >= 785){
