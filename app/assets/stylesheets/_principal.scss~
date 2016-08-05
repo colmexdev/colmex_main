@@ -70,6 +70,8 @@ p {text-align: justify; font-size: 16px;}
 	text-shadow: none;
 }
 
+#map { height: 400px; }
+
 .uk-link { color: #7E3355; text-decoration: none; outline: none; }
 
 .uk-link:hover, .uk-link:visited { color: #7E3355; text-decoration: none; }	
