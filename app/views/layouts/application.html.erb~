@@ -38,6 +38,8 @@
             }
         </script>
   <% end %>
+  <script type="text/javascript" src="../js/form-select.js"></script>
+  <script type="text/javascript" src="../js/datepicker.js"></script>
 </head>
 
 <body>
@@ -48,8 +50,7 @@
   <%= yield %>
 
 </body>
-<script type="text/javascript" src="../js/form-select.js"></script>
-<script type="text/javascript" src="../js/datepicker.js"></script>
+
 <% if (controller_name+"/"+action_name) != "principal/principal" %>
 
   <script type="text/javascript" src="../js/escala_auto.js"></script>
