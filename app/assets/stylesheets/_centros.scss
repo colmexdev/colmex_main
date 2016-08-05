@@ -47,7 +47,7 @@
 .centro-mostrar { display: none; }
 .centro-borrar { display: block; }
 
-@media only screen and (mex-width: 479px){
+@media only screen and (max-width: 479px){
 	.centro-mostrar { display: block; }
 	.centro-borrar { display: none; }
 }
