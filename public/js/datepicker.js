@@ -171,6 +171,9 @@
 
             // init dropdown
             if (!dropdown) {
+		if ($('body').find('.uk-datepicker').length === 0) {
+  			dropdown.appendTo("body");
+		}
 
                 dropdown = UI.$('<div class="uk-dropdown uk-datepicker"></div>');
 
@@ -179,9 +182,6 @@
                     e.stopPropagation();
                     e.preventDefault();
 		
-		if ($('body').find('.uk-datepicker').length === 0) {
-  dropdown.appendTo("body");
-}
                     var ele = UI.$(this);
 
                     if (ele.hasClass('uk-datepicker-date-disabled')) return false;
