@@ -3,7 +3,7 @@
 	<div id="cuerpo" class="principal-chica uk-block-large">
 		
 <div class="uk-width-1-1">
-    <div class="uk-container-center uk-block"><img src=<%= image_url("1100-370.jpg") %> alt="Historia de El Colegio de México"></div>
+    <div class="uk-container-center"><img src=<%= image_url("1100-370.jpg") %> alt="Historia de El Colegio de México"></div>
     <span class="titulo-grande">Licenciaturas</span><br>
     <p>&nbsp;</p>
     <!--          Aquí empiezan las licenciaturas          -->
