@@ -711,17 +711,16 @@ ul.ul-nav { display: table; float: left !important;
 								max-width: -moz-calc(100% - 22px);
 								width: 91.66%;
 								height: 100%;
-								text-align: left;
-								font-size: 13px;
 								color: #333333;
-								line-height: 1.3em;
 								position: relative;
 								overflow: hidden;
 								white-space: nowrap;
-							}
 
-							@media only screen and (max-width: 400px){
-								.datos_evento { font-size: 11px; }
+								p { font-size: 13px; text-align: left; }
+
+								@media only screen and (max-width: 400px){
+									p { font-size: 11px; }
+								}
 							}
 							
 							.datos_evento:after {
