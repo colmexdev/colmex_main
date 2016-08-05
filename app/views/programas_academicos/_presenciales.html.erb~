@@ -13,6 +13,7 @@
       <% else %>
         <%= "Duración:" %>
       <% end %>
+    <% end %>
     </h3>
     <h4 class="uk-margin-top-remove">
       <% if !p.fecha_inicio_clases.nil? %>
@@ -28,7 +29,6 @@
         <% end %>
       <% end %>
     </h4>
-    </h4>
     <h3 class="vino uk-margin-bottom-remove">Próxima convocatoria</h3>
     <h4 class="uk-margin-top-remove">
       <% if !p.fecha_inicio_conv.nil? %>
@@ -43,7 +43,6 @@
           <% end %>
         <% end %>
       <% end %>
-    </h4>
     </h4>
     </div>
     </div>
