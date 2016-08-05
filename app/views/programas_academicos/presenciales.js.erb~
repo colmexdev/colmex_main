@@ -1,0 +1,3 @@
+
+$("#titulo-render").html("<%= "Presenciales" %>");
+$("#presenciales-render").html("<%= j render :partial => 'presenciales' %>");
