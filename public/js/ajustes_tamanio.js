@@ -73,10 +73,8 @@ function reajustarBadges(){
 	for( var i = 0; i < gon.cant_sliders; i++){
 		var image = new Image();
 		image.src = $( "#badge-" + i).attr("src");
-		console.log("Altura real de imagen " + i + ": " + image.height);
 		var altura_nueva = ($("#div_slider").height() * image.height) / 570;
 		$( "#badge-" + i ).css("height", altura_nueva);
-		console.log("Nueva altura de imagen " + i + ": " + $("#badge-" + i).height());
 	}
 }
 
