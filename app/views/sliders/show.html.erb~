@@ -2,12 +2,30 @@
 
 <p id="notice"><%= notice %></p>
 
-<%= image_tag @slider.imagen.url %>
+
 
 <p>
   <strong>Liga:</strong>
   <%= @slider.liga %>
 </p>
+
+<p>
+  <strong>Imagen:</strong>
+  <%= image_tag @slider.imagen.url %>
+</p>
+
+<p>
+  <strong>Badge:</strong>
+  <%= image_tag @slider.badge.url %>
+</p>
+
+<p>
+  <strong>Posiciones:</strong>
+  <%= "x: " + @slider.pos_x.to_s %>
+  <%= "y: " + @slider.pos_y.to_s %>
+</p>
+
+
 
 <%= link_to 'Edit', edit_slider_path(@slider) %> |
 <%= link_to 'Back', sliders_path %>
