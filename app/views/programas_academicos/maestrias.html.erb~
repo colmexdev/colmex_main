@@ -7,7 +7,6 @@
     <div class="uk-container-center"><img src=<%= image_url("1100-370.jpg") %> alt="Historia de El Colegio de México"></div>
     <p>&nbsp;</p>    
     <span class="titulo-grande">Maestrías</span><br>
-    <p>&nbsp;</p>
     <% @maestrias.each do |mt| %>
     <h2 class="vino uk-margin-large-top">Maestría en <%= mt.titulo %></h2>
     <div class="uk-grid uk-grid-large">
