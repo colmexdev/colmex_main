@@ -7,7 +7,7 @@ module PrincipalHelper
     sliders.each do |im|
       control_block = control_block + '<li data-target="#myCarousel" data-slide-to="' + i.to_s + '"' + (i == 0 ?  'class="active"' : '') + '></li>'
       html_block = html_block + '<div class="item ' + (i == 0 ?  "active" : "") + '">'
-      html_block = html_block + image_tag(im.imagen.url, :class => "imagen_slider_fondo") + "<div class=\"ghost-slider\">" + (im.liga.to_s == "" ? link_to(image_tag(im.badge.url, {:class => "imagen_slider_sobre " + im.posicion.downcase}),im.liga, :class => "liga_img") : image_tag(im.badge.url, {:class => "imagen_slider_sobre " + im.posicion.downcase}) ) + "</div>"
+      html_block = html_block + image_tag(im.imagen.url, :class => "imagen_slider_fondo") + "<div class=\"ghost-slider\">" + (im.liga.to_s != "" ? link_to(image_tag(im.badge.url, {:class => "imagen_slider_sobre " + im.posicion.downcase}),im.liga, :class => "liga_img") : image_tag(im.badge.url, {:class => "imagen_slider_sobre " + im.posicion.downcase}) ) + "</div>"
       html_block = html_block + '</div>'
       i = i + 1
     end
