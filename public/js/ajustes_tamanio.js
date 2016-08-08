@@ -66,7 +66,20 @@ function escalarSlider(){
 	var alto_slide = ancho_slide*(17/40);
 	$('#div_slider').css({'height':alto_slide+'px'});
 	$('.ghost-slider').css("height",alto_slide+"px");
+	reajustarBadges();
 }
+
+function reajustarBadges(){
+	for( var i = 0; i < gon.cant_sliders; i++){
+		var image = new Image();
+		image.src = $("#badge-" + i).attr("src");
+		console.log("Altura real de imagen " + i + ": " + image.height();
+		//var altura_act = $("#badge-" + i).height();
+		
+	}
+}
+
+
 
 function partirDescubres(){
 	var ancho_v = Math.max(document.documentElement.clientWidth, window.innerWidth || document.body.ClientWidth || 0);

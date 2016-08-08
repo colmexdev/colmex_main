@@ -13,7 +13,8 @@ class PrincipalController < ApplicationController
     @descubre = Descubre.where("fecha_publicacion <= ? AND fecha_limite_pub > ?", Date.current(), Date.current()).order("RAND()")
     @frase = Frase.order("RAND()").first
     gon.descubres = @descubre.to_json
-    gon.contenido_iconos = Content.all;
+    gon.sliders = @sliders.size
+
   end
 
   def resultados_busqueda
@@ -41,6 +42,9 @@ class PrincipalController < ApplicationController
     nueva_cad = nueva_cad.gsub(/[óÓ]/, "o")
     nueva_cad = nueva_cad.gsub(/[úÚüÜ]/, "u")
     return nueva_cad
+  end
+
+  def como_llegar
   end
 
   def principios_eticos

@@ -13,7 +13,8 @@ class PrincipalController < ApplicationController
     @descubre = Descubre.where("fecha_publicacion <= ? AND fecha_limite_pub > ?", Date.current(), Date.current()).order("RAND()")
     @frase = Frase.order("RAND()").first
     gon.descubres = @descubre.to_json
-    gon.contenido_iconos = Content.all;
+    gon.cant_sliders = @sliders.size
+
   end
 
   def resultados_busqueda
