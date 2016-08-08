@@ -567,11 +567,6 @@ ul.ul-nav { display: table; float: left !important;
 				
 						.imagen_slider_sobre{
 							position: absolute;
-
-							&.si { top: 35px; left: 100px; }
-							&.sd { top: 35px; right: 100px; }
-							&.id { bottom: 50px; right: 100px; }
-							&.ii { bottom: 50px; left: 100px; }
 						}
 					}
 				}
@@ -593,6 +588,11 @@ ul.ul-nav { display: table; float: left !important;
 		}
 	}
 }
+
+	.si { top: 35px; left: 100px; }
+	.sd { top: 35px; right: 100px; }
+	.id { bottom: 50px; right: 100px; }
+	.ii { bottom: 50px; left: 100px; }
 
 //Clases que afectan la sección de eventos
 #div_eventos{
