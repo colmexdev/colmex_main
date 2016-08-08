@@ -8,11 +8,11 @@
 		  <p>Una vez aceptados, los estudiantes deben entregar en la Dirección de Asuntos Escolares los documentos que se señalen en cada caso, con objeto de integrar su expediente académico y realizar su inscripción.</p>
 		  <h2 class="vino">Documentación:</h2>
 		  <ul class="uk-list uk-list-space uk-margin-large-bottom">
-		  <li><a href="#" target="_blank" class="uk-margin-large-bottom">Estudiantes de nuevo ingreso Licenciatura</a></li>
-		  <li><a href="#" target="_blank" class="uk-margin-large-bottom">Estudiantes Mexicanos de nuevo ingreso a Maestrías y Doctorados</a></li>
-		  <li><a href="#" target="_blank" class="uk-margin-large-bottom">Estudiantes Extranjeros de nuevo ingreso a Maestrías y Doctorados</a></li>
+		  <li><a href="#" target="_blank" class="uk-margin-large-bottom uk-link">Estudiantes de nuevo ingreso Licenciatura</a></li>
+		  <li><a href="#" target="_blank" class="uk-margin-large-bottom uk-link">Estudiantes Mexicanos de nuevo ingreso a Maestrías y Doctorados</a></li>
+		  <li><a href="#" target="_blank" class="uk-margin-large-bottom uk-link">Estudiantes Extranjeros de nuevo ingreso a Maestrías y Doctorados</a></li>
 		  </ul>
-		  <a href="#" target="_blank" class="ver-mas uk-margin-large-bottom">Más información</a>
+		  <!-- <a href="#" target="_blank" class="ver-mas uk-margin-large-bottom">Más información</a> -->
 		</div>
 
 <%= render 'principal/footer' %>
