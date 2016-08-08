@@ -8,7 +8,7 @@ set :repo_url, 'https://github.com/RickS1/colmex_main'
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
 
 # Default deploy_to directory is /var/www/my_app_name
-set :deploy_to, '/home/erik/prueba'
+set :deploy_to, '/home/erik/principal_colmex'
 
 # Default value for :scm is :git
 # set :scm, :git
@@ -37,7 +37,7 @@ set :deploy_to, '/home/erik/prueba'
 namespace :deploy do
 
   desc 'Restart application'
-  after :restart, :clear_cache do
+  task :restart do
     on roles(:app), in: :sequence, wait: 5 do
       # Here we can do anything such as:
       # within release_path do

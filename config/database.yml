@@ -14,7 +14,7 @@ default: &default
   encoding: utf8
   pool: 5
   username: root
-  password: RickS1
+  password: qwert
   socket: /var/run/mysqld/mysqld.sock
 
 development:
@@ -50,5 +50,5 @@ test:
 production:
   <<: *default
   database: colmex_production
-  username: erik
-  password: RickS1
+  username: root
+  password: Pr1nCip@l_
