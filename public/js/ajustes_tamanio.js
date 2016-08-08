@@ -65,6 +65,7 @@ function escalarSlider(){
 	var ancho_slide = $("#div_slider").width();
 	var alto_slide = ancho_slide*(17/40);
 	$('#div_slider').css({'height':alto_slide+'px'});
+	$('.ghost-slider').css("height",alto_slide+"px");
 }
 
 function partirDescubres(){

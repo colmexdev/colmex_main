@@ -556,12 +556,19 @@ ul.ul-nav { display: table; float: left !important;
 					min-height:240px;
 				}
 			
-				.liga_img{
+				.ghost-slider{
+					background: rgba(255,255,255,0);
+					height: 100%;
+					width: 100%;
+					min-height: 240px;
+
+					.liga_img{
 				
-					.imagen_slider_sobre{
-						min-width: 60px;
-						max-width:180px;
-						position: absolute;
+						.imagen_slider_sobre{
+							min-width: 60px;
+							max-width:180px;
+							position: absolute;
+						}
 					}
 				}
 			}

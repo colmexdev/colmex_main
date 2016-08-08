@@ -12,8 +12,6 @@ $(document).ready(function(){
 	UIkit.init();
 	var alto_footer = $('#div_footer').height();
 	var alto_header = $('#header').height();
-	var ancho_slide = $("#div_slider").width();
-	var alto_slide = ancho_slide*(17/40);
 	var cw = $('.frame-descubre').width();
 
 	if(gon.ev_tiny == ""){
@@ -28,8 +26,8 @@ $(document).ready(function(){
 	$('#resto-cuerpo').css({'padding-bottom': alto_footer+'px', 'padding-top': alto_header+'px'});
 
 	$('.frame-descubre').css({'height':cw+'px'});
-	$('#div_slider').css({'height':alto_slide+'px'});
 
+	escalarSlider();
 	partirDescubres();
 	margenAuto();
 	ajustarImagenes();
@@ -38,13 +36,9 @@ $(document).ready(function(){
 window.onresize = function(){
 	var alto_footer = $('#div_footer').height();
 	var alto_header = $('#header').height();
-	var ancho_slide = $("#div_slider").width();
-	var alto_slide = ancho_slide*(17/40);
 	var ancho_act = Math.max(document.documentElement.clientWidth, window.innerWidth || document.body.ClientWidth || 0);
 
 	$('#resto-cuerpo').css({'padding-bottom': alto_footer+'px', 'padding-top': alto_header+'px'});
-
-	$('#div_slider').css({'height':alto_slide+'px'});
 
 	reescalarDescubre();
 
@@ -61,9 +55,16 @@ window.onresize = function(){
 		ancho = ancho_act;
 	}
 
+	escalarSlider();
 	partirDescubres();
 	margenAuto();
 	ajustarImagenes();
+}
+
+function escalarSlider(){
+	var ancho_slide = $("#div_slider").width();
+	var alto_slide = ancho_slide*(17/40);
+	$('#div_slider').css({'height':alto_slide+'px'});
 }
 
 function partirDescubres(){
