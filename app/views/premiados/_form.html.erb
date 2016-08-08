@@ -21,7 +21,7 @@
   </div>
   <div class="field">
     <%= f.label :tipo %><br>
-    <%= f.select(:tipo, options_from_collection_for_select(Categorium.all, "nombre", "nombre"), {}, {}) %>
+    <%= f.select(:tipo, options_from_collection_for_select(Categorium.all, "nombre", "nombre", @premiado.tipo || Categorium.first.nombre), {}, {}) %>
   </div>
   <div class="actions">
     <%= f.submit %>

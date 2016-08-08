@@ -1,5 +1,3 @@
-<script type="text/javascript" src="../js/form-select.js"></script>
-<script type="text/javascript" src="../js/datepicker.js"></script>
 <%= form_for(@curso) do |f| %>
   <% if @curso.errors.any? %>
     <div id="error_explanation">
@@ -51,7 +49,7 @@
   </div>
   <div class="field">
     <%= f.label :programa %><br>
-    <%= f.select(:programa, options_for_select([['Licenciatura','Licenciatura'],['Maestría','Maestria'],['Doctorado','Doctorado'],['Curso','Curso']],  params[:programa]), {}, {:onchange => "ocultarTipoCurso()"}) %>
+    <%= f.select(:programa, options_for_select([['Licenciatura','Licenciatura'],['Maestría','Maestria'],['Doctorado','Doctorado'],['Curso','Curso']],  @curso.programa || 'Licenciatura'), {}, {:onchange => "ocultarTipoCurso()"}) %>
   </div>
   <div class="field" id="tipo_curso" style="display:none;">
     <%= f.label :tipo_curso %><br>

@@ -21,7 +21,7 @@
   </div>
   <div class="field">
     <%= f.label :contenido %><br>
-    <%= f.select(:contenido, options_from_collection_for_select(Content.all, :tipo, :tipo), {}, {}) %>
+    <%= f.select(:contenido, options_from_collection_for_select(Content.all, :tipo, :tipo, @descubre.contenido || Content.first.tipo), {}, {}) %>
   </div>
   <div class="field">
     <%= f.label :imagen %><br>

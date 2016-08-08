@@ -25,7 +25,7 @@
   </div>
   <div class="field" id="campo_categoria" style="display:none;">
     <%= f.label :categoria_premio %><br>
-    <%= f.select(:categoria_premio, options_from_collection_for_select(Categorium.all, :nombre, :nombre)) %>
+    <%= f.select(:categoria_premio, options_from_collection_for_select(Categorium.all, :nombre, :nombre, @imagen.campo_categoria || Categorium.first.nombre)) %>
   </div>
   <div class="actions">
     <%= f.submit %>
