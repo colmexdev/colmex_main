@@ -23,7 +23,7 @@
   </div>
   <div class="field">
     <%= f.label :centro %><br>
-    <%= f.select(:centro, options_for_select([['CEAA','CEAA'],['CEDUA','CEDUA'],['CEE','CEE'],['CEH','CEH'],['CEI','CEI'],['CELL','CELL'],['CES','CES']]), :selected => (params[:centro] || 'CEAA')) %>
+    <%= f.select(:centro, [['CEAA','CEAA'],['CEDUA','CEDUA'],['CEE','CEE'],['CEH','CEH'],['CEI','CEI'],['CELL','CELL'],['CES','CES']], :selected => (@emerito.centro || 'CEAA')) %>
   </div>
   <div class="field">
     <%= f.label :semblanza %><br>
