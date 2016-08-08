@@ -568,7 +568,8 @@ ul.ul-nav { display: table; float: left !important;
 		}
 		.carousel-control.right, .carousel-control.left{
 			opacity: 0.3;
-			width: 80px;
+			width: 60px;
+			font-size: 30px;
 			-webkit-transition: all 0.5s linear;
 			-moz-transition: all 0.5s linear;
 			-ms-transition: all 0.5s linear;
