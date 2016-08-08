@@ -1,0 +1,6 @@
+class RemovePosicionesFromSliders < ActiveRecord::Migration
+  def change
+    remove_column :sliders, :pos_x, :string
+    remove_column :sliders, :pos_y, :string
+  end
+end
