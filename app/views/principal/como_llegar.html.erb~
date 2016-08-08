@@ -3,7 +3,7 @@
 	<div id="cuerpo" class="principal-chica uk-block-large">
 
 <div class="uk-width-1-1">
-    <span class="titulo">Como llegar</span><br>
+    <span class="titulo-grande">Como llegar</span><br>
     <p>&nbsp;</p>
     <!--          Aquí empieza el contenido de como llegar          -->
     <div class="uk-grid uk-grid-large">
