@@ -1,4 +1,5 @@
->%= @emerito %>
+<%= @emerito.centro %>
+
 <%= form_for(@emerito, :html => { :multipart => true }) do |f| %>
   <% if @emerito.errors.any? %>
     <div id="error_explanation">
