@@ -223,7 +223,7 @@ html, body{ height: 100%; }
 		.boton_lupa { display: none; }
 	}
 
-	@media only screen and (min-width: 0px) and (max-width: 1024px){
+	@media only screen and (min-width: 0px) and (max-width: 500px){
 		.mail{
 			width: 80px;
 
@@ -242,7 +242,7 @@ html, body{ height: 100%; }
 			}
 		}
 
-		.borrable { display: none; }
+		.borrable-500 { display: none; }
 	}
 
 	.nav_opciones{

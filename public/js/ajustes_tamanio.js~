@@ -133,11 +133,11 @@ function partirDescubres(){
 	var altura_wrapper = document.getElementById("wrapper").clientHeight;
 	console.log(altura_wrapper + "; " + altura_real + "; " + altura_actual);
 
-	$("#wrapper").css({"height" : ((altura_wrapper >= altura_real) ? "auto" : altura_actual + "px") });
+	$("#wrapper").css({"height" : ((altura_wrapper >= altura_real - 1) ? "auto" : altura_actual + "px") });
 
 	altura_wrapper = document.getElementById("wrapper").clientHeight;
 	console.log("Nueva altura: " + altura_wrapper + "; alto_d: " + alto_d);
-	if(((json_l > 10 && ancho_v >= 1200 ) || (json_l > 8 && ancho_v >= 992 && ancho_v < 1200) || (json_l > 6 && ancho_v >= 768 && ancho_v < 992) || (json_l >4 && ancho_v >= 480 && ancho_v < 768) || (json_l > 2 && ancho_v < 480)) && altura_wrapper <= altura_real){
+	if(((json_l > 10 && ancho_v >= 1200 ) || (json_l > 8 && ancho_v >= 992 && ancho_v < 1200) || (json_l > 6 && ancho_v >= 768 && ancho_v < 992) || (json_l >4 && ancho_v >= 480 && ancho_v < 768) || (json_l > 2 && ancho_v < 480)) && $("#cutter-descubre").css("display") != "none"){
 		$("#cutter-descubre").css("display","block");
 	}
 	else{
@@ -160,10 +160,15 @@ function desbordarDescubres(){
 	}
 	var div_filas = (ancho_v >= 1200 ? 5 : (ancho_v >= 992 ? 4 : (ancho_v >= 768 ? 3 : (ancho_v >= 480 ? 2 : 1))));
 	var cantidad_filas = Math.ceil(descubres.length / div_filas);
+	var altura_actual = alto_d * num_filas;
+	var altura_real = alto_d * cantidad_filas;
+	var altura_wrapper = document.getElementById("wrapper").clientHeight;
 
-
-	$("#wrapper").css({"height" : (($("#wrapper").height() + (alto_d * 2) > (alto_d * cantidad_filas) || document.getElementById("wrapper").style.height == "auto" ) ? "auto" : (alto_d * num_filas) + "px")});
+	$("#wrapper").css({"height" : (($("#wrapper").height() + (alto_d * 2) > (alto_d * cantidad_filas) || document.getElementById("wrapper").style.height == "auto" ) ? altura_real + "px" : (alto_d * num_filas) + "px")});
 	console.log($("#wrapper").css("height"));
+	if($("#wrapper").height() >= altura_real){
+		$("#wrapper").css("height","auto");
+	}
 	$("#cutter-descubre").css("display", $("#wrapper").height() + (alto_d * 2) >= (alto_d * cantidad_filas)  ? "none" : "block");
 
 	margenAuto();
