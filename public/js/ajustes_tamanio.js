@@ -38,9 +38,9 @@ $(document).ready(function(){
 $(document).scroll(function() {
   var y = $(this).scrollTop();
   if (y > 400) {
-	$("#header").css("display","none");
+	$("#div_logo").css("display","none");
   } else {
-	$("#header").css("display", "block");
+	$("#div_logo").css("display", "block");
   }
 });
 

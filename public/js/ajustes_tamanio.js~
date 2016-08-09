@@ -38,10 +38,9 @@ $(document).ready(function(){
 $(document).scroll(function() {
   var y = $(this).scrollTop();
   if (y > 400) {
-	console.log("Aparece barra");
-    //$('.bottomMenu').fadeIn();
+	$("#header").css("display","none");
   } else {
-    //$('.bottomMenu').fadeOut();
+	$("#header").css("display", "block");
   }
 });
 
