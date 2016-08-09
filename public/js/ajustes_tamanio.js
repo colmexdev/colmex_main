@@ -108,7 +108,7 @@ function partirDescubres(){
 	}
 	else{
 		$("#cutter-descubre").css("display","none");
-		$("#wrapper").css("overflow-y", "auto");
+		$("#wrapper").css("overflow", "auto");
 	}
 }
 

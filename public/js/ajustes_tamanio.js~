@@ -92,7 +92,7 @@ function partirDescubres(){
 	var ancho_v = Math.max(document.documentElement.clientWidth, window.innerWidth || document.body.ClientWidth || 0);
 	var json_l = descubres.length;
 	var alto_d = $(".frame-descubre").height();
-	var div_filas = (ancho_v >= 1200 ? 5 : (ancho_v >= 992 ? 4 : (ancho_v >= 768 ? 3 : (ancho_v >= 480 ? 2 : 1))));
+	var div_filas = (ancho_v > 1200 ? 5 : (ancho_v > 992 ? 4 : (ancho_v > 768 ? 3 : (ancho_v > 480 ? 2 : 1))));
 	var cantidad_filas = Math.ceil(descubres.length / div_filas);
 	var altura_wrapper = $("#wrapper").height();
 	if($("#cutter-descubre").css("display") == "none"){
