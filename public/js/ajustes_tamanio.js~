@@ -130,12 +130,12 @@ function partirDescubres(){
 	var cantidad_filas = Math.ceil(descubres.length / div_filas);
 	var altura_actual = alto_d * num_filas;
 	var altura_real = alto_d * cantidad_filas;
-	var altura_wrapper = document.getElementById("wrapper").style.height || $("#wrapper").height();
+	var altura_wrapper = document.getElementById("wrapper").style.height;
 	console.log(altura_wrapper);
 
 	$("#wrapper").css({"height" : ((altura_wrapper >= altura_real) ? "auto" : (alto_d * num_filas) + "px") });
 
-	altura_wrapper = document.getElementById("wrapper").style.height || $("#wrapper").height();
+	altura_wrapper = document.getElementById("wrapper").style.height;
 	console.log("Nueva altura: " + altura_wrapper + "; alto_d: " + alto_d);
 	if(((json_l > 10 && ancho_v >= 1200 ) || (json_l > 8 && ancho_v >= 992 && ancho_v < 1200) || (json_l > 6 && ancho_v >= 768 && ancho_v < 992) || (json_l >4 && ancho_v >= 480 && ancho_v < 768) || (json_l > 2 && ancho_v < 480)) && altura_wrapper <= altura_real){
 		$("#cutter-descubre").css("display","block");
