@@ -122,7 +122,7 @@ function partirDescubres(){
 	var alto_d; 
 	for( var i = 0; i < json_l; i++){
 		if(descubres[i]["visible"]){
-			alto_d = window.getComputedStyle(document.getElementById("frame-"+i),null).height;
+			alto_d = document.getElementById("frame-"+i).height;
 			break;
 		}
 	}
@@ -150,7 +150,7 @@ function desbordarDescubres(){
 	var alto_d; 
 	for( var i = 0; i < descubres.length; i++){
 		if(descubres[i]["visible"]){
-			alto_d = window.getComputedStyle(document.getElementById("frame-"+i),null).height;
+			alto_d = document.getElementById("frame-"+i).height;
 			break;
 		}
 	}
