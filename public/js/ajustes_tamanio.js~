@@ -131,9 +131,9 @@ function partirDescubres(){
 	var altura_actual = alto_d * num_filas;
 	var altura_real = alto_d * cantidad_filas;
 	var altura_wrapper = document.getElementById("wrapper").clientHeight;
-	console.log(altura_wrapper + "; " + altura_real);
+	console.log(altura_wrapper + "; " + altura_real + "; " + altura_actual);
 
-	$("#wrapper").css({"height" : ((altura_wrapper >= altura_real) ? "auto" : (alto_d * num_filas) + "px") });
+	$("#wrapper").css({"height" : ((altura_wrapper >= altura_real) ? "auto" : altura_actual + "px") });
 
 	altura_wrapper = document.getElementById("wrapper").clientHeight;
 	console.log("Nueva altura: " + altura_wrapper + "; alto_d: " + alto_d);
