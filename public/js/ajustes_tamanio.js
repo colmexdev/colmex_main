@@ -122,7 +122,7 @@ function partirDescubres(){
 	var alto_d; 
 	for( var i = 0; i < json_l; i++){
 		if(descubres[i]["visible"]){
-			alto_d = document.getElementById("frame-"+i).height;
+			alto_d = document.getElementById("frame-"+i).style.height;
 			break;
 		}
 	}
