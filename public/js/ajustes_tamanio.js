@@ -119,12 +119,18 @@ function reajustarBadges(){
 function partirDescubres(){
 	var ancho_v = Math.max(document.documentElement.clientWidth, window.innerWidth || document.body.ClientWidth || 0);
 	var json_l = descubres.length;
-	var alto_d = $(".frame-descubre").height();
+	var alto_d; 
+	for( var i = 0; i < json_l; i++){
+		if(descubres[i]["visible"]){
+			alto_d = window.getComputedStyle(document.getElementById("frame-"+i),null).height;
+			break;
+		}
+	}
 	var div_filas = (ancho_v >= 1200 ? 5 : (ancho_v >= 992 ? 4 : (ancho_v >= 768 ? 3 : (ancho_v >= 480 ? 2 : 1))));
 	var cantidad_filas = Math.ceil(descubres.length / div_filas);
 	var altura_actual = alto_d * num_filas;
 	var altura_real = alto_d * cantidad_filas;
-	var altura_wrapper = $("#wrapper").height();
+	var altura_wrapper = window.getComputedStyle(document.getElementById("wrapper"), null).height;
 
 	$("#wrapper").css({"height" : ((altura_wrapper >= altura_real) ? "auto" : (alto_d * num_filas) + "px") });
 	if(((json_l > 10 && ancho_v >= 1200 ) || (json_l > 8 && ancho_v >= 992 && ancho_v < 1200) || (json_l > 6 && ancho_v >= 768 && ancho_v < 992) || (json_l >4 && ancho_v >= 480 && ancho_v < 768) || (json_l > 2 && ancho_v < 480)) && document.getElementById("wrapper").style.height != "auto"){
@@ -141,12 +147,19 @@ function desbordarDescubres(){
 	if(document.getElementById("wrapper").style.height != "auto"){
 		num_filas = num_filas + 2;
 	}
+	var alto_d; 
+	for( var i = 0; i < json_l; i++){
+		if(descubres[i]["visible"]){
+			alto_d = window.getComputedStyle(document.getElementById("frame-"+i),null).height;
+			break;
+		}
+	}
 	var div_filas = (ancho_v >= 1200 ? 5 : (ancho_v >= 992 ? 4 : (ancho_v >= 768 ? 3 : (ancho_v >= 480 ? 2 : 1))));
 	var cantidad_filas = Math.ceil(descubres.length / div_filas);
 
 
-	$("#wrapper").css({"height" : (($("#wrapper").height() + (($(".frame-descubre").height() * 2)) > ($(".frame-descubre").height() * cantidad_filas) || document.getElementById("wrapper").style.height == "auto" ) ? "auto" : ($(".frame-descubre").height() * num_filas) + "px")});
-	$("#cutter-descubre").css("display", $("#wrapper").height() + ($(".frame-descubre").height() * 2) >= ($(".frame-descubre").height() * cantidad_filas)  ? "none" : "block");
+	$("#wrapper").css({"height" : (($("#wrapper").height() + (alto_d * 2) > (alto_d * cantidad_filas) || document.getElementById("wrapper").style.height == "auto" ) ? "auto" : (alto_d * num_filas) + "px")});
+	$("#cutter-descubre").css("display", $("#wrapper").height() + (alto_d * 2) >= (alto_d * cantidad_filas)  ? "none" : "block");
 
 	margenAuto();
 }
