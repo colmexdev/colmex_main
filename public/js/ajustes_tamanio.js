@@ -37,10 +37,16 @@ $(document).ready(function(){
 
 $(document).scroll(function() {
   var y = $(this).scrollTop();
+  var ancho_act = Math.max(document.documentElement.clientWidth, window.innerWidth || document.body.ClientWidth || 0);
   if (y > 400) {
 	$("#div_logo").css("display", "none");
 	$("#div_menu").css("display", "none");
-	$("#header-links").css("display", "block");
+	if(ancho_act > 992){
+	  $("#header-links").css("display", "block");
+	}
+	else{
+	  $("#header-links").css("display", "none");
+	}
   } else {
 	$("#div_logo").css("display", "block");
 	$("#div_menu").css("display", "block");
