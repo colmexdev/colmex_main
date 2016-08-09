@@ -38,11 +38,6 @@ module PrincipalHelper
         primer_item = false;
         if j < sliders.each.length
           fila = sliders.each[j]
-          if k == 1
-            fila["fechaFin"] = "26/06/2016"
-            fila["centroSiglas"] = "CEDUA"
-            fila["subtituloActividad"] = "Una cadena larga para poder cortarla si es necesario"
-          end
           bloque_html = bloque_html + construirEvento(fila)
           bloque_opt_html = bloque_opt_html + construirEvento(fila)
           bloque_tiny_html = bloque_tiny_html + construirEvento(fila, true)
@@ -77,7 +72,7 @@ module PrincipalHelper
     bloque_html = bloque_html + fila["sede"].to_s + ', 
 <br><span>' + fila["institucionSede"].to_s + "</span></p></div></div>"
 
-    bloque_html = bloque_html + '<div class="liga_evento"><a href="'+fila["liga"].to_s+'" class="liga_evento">' + t('eventos.liga') + ' +' + '</a></div>'
+    bloque_html = bloque_html + '<div class="liga_evento"><a href="'+fila["liga"].to_s+'" class="liga_evento" target="_blank">' + t('eventos.liga') + ' +' + '</a></div>'
 
     bloque_html = bloque_html + "</div>"
     return bloque_html
