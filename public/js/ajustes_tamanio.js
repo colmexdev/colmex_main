@@ -92,15 +92,11 @@ function partirDescubres(){
 	var ancho_v = Math.max(document.documentElement.clientWidth, window.innerWidth || document.body.ClientWidth || 0);
 	var json_l = descubres.length;
 	var alto_d = $(".frame-descubre").height();
-	var div_filas = (ancho_v > 1200 ? 5 : (ancho_v > 992 ? 4 : (ancho_v > 768 ? 3 : (ancho_v > 480 ? 2 : 1))));
+	var div_filas = (ancho_v >= 1200 ? 5 : (ancho_v >= 992 ? 4 : (ancho_v >= 768 ? 3 : (ancho_v >= 480 ? 2 : 1))));
 	var cantidad_filas = Math.ceil(descubres.length / div_filas);
-	var altura_wrapper = $("#wrapper").height();
-	if($("#cutter-descubre").css("display") == "none"){
-		num_filas = cantidad_filas;
-	}
+	var altura_wrapper = window.getComputedStyle(document.getElementById("wrapper")).height;
 	var altura_actual = alto_d * num_filas;
 	var altura_real = alto_d * cantidad_filas;
-
 
 	$("#wrapper").css({"height" : (altura_wrapper >= altura_real ? altura_real + "px" : altura_actual + "px") });
 	if(((json_l > 10 && ancho_v > 1200 ) || (json_l > 8 && ancho_v > 992 && ancho_v <= 1200) || (json_l > 6 && ancho_v > 768 && ancho_v <= 992) || (json_l >4 && ancho_v > 480 && ancho_v <= 768) || (json_l > 2 && ancho_v <= 480)) && $("#wrapper").height() != altura_real && $("#cutter-descubre").css("display") != "none" ){
@@ -118,13 +114,14 @@ function desbordarDescubres(){
 	var alto_d = $(".frame-descubre").height();
 	var div_filas = (ancho_v > 1200 ? 5 : (ancho_v > 992 ? 4 : (ancho_v > 768 ? 3 : (ancho_v > 480 ? 2 : 1))));
 	var cantidad_filas = Math.ceil(descubres.length / div_filas);
-	var altura_actual = alto_d * num_filas;
-	var altura_real = alto_d * cantidad_filas;
-	var altura_wrapper = $("#wrapper").height();
+	var altura_wrapper = window.getComputedStyle(document.getElementById("wrapper")).height;
  
 	if(altura_wrapper <= altura_real){
 		num_filas = num_filas + 2;
 	}
+
+	var altura_actual = alto_d * num_filas;
+	var altura_real = alto_d * cantidad_filas;
 
 	$("#wrapper").css({"height" : ( altura_wrapper + (alto_d * 2) > altura_real ? altura_real + "px" : altura_actual + "px")});
 	$("#cutter-descubre").css("display", altura_wrapper + (alto_d * 2) >= altura_real  ? "none" : "block");
