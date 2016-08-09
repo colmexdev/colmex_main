@@ -98,7 +98,7 @@ function partirDescubres(){
 	var div_filas = (ancho_v >= 1200 ? 5 : (ancho_v >= 992 ? 4 : (ancho_v >= 768 ? 3 : (ancho_v >= 480 ? 2 : 1))));
 	var cantidad_filas = Math.ceil(descubres.length / div_filas);
 	//var elem = document.getElementById("wrapper");
-	var altura_wrapper = document.getElementById("wrapper").height;
+	var altura_wrapper = $("#wrapper").height();
 	var altura_actual = alto_d * num_filas;
 	var altura_real = alto_d * cantidad_filas;
 
@@ -119,7 +119,7 @@ function desbordarDescubres(){
 	var div_filas = (ancho_v > 1200 ? 5 : (ancho_v > 992 ? 4 : (ancho_v > 768 ? 3 : (ancho_v > 480 ? 2 : 1))));
 	var cantidad_filas = Math.ceil(descubres.length / div_filas);
 	//var elem = document.getElementById("wrapper");
-	var altura_wrapper = document.getElementById("wrapper").height;
+	var altura_wrapper = $("#wrapper").height;
  
 	if(altura_wrapper <= altura_real){
 		num_filas = num_filas + 2;
