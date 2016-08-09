@@ -41,6 +41,7 @@ $(document).scroll(function() {
   if (y > 400) {
 	$("#div_logo").css("display", "none");
 	$("#div_menu").css("display", "none");
+	$(".navbar-right").css("display","none");
 	if(ancho_act > 992){
 	  $("#header-links").css("display", "block");
 	}
@@ -50,6 +51,7 @@ $(document).scroll(function() {
   } else {
 	$("#div_logo").css("display", "block");
 	$("#div_menu").css("display", "block");
+	$(".navbar-right").css("display","block;");
 	$("#header-links").css("display", "none");
   }
 });
