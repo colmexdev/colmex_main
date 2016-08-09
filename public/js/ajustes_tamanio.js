@@ -108,7 +108,7 @@ function partirDescubres(){
 	}
 	else{
 		$("#cutter-descubre").css("display","none");
-		$("#wrapper").css("overflow", "auto");
+		$("#wrapper").css("height", "auto");
 	}
 }
 
@@ -134,7 +134,7 @@ function desbordarDescubres(){
 
 function margenAuto(){
 	if(document.getElementById("cutter-descubre").style.display == "none"){
-		$("#wrapper").css("margin-bottom", "45px");
+		$("#wrapper").css({"margin-bottom" : "45px", "height" : "auto"});
 	}
 }
 
