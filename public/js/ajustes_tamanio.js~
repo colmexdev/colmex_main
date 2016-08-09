@@ -131,7 +131,7 @@ function partirDescubres(){
 	var altura_actual = alto_d * num_filas;
 	var altura_real = alto_d * cantidad_filas;
 	var altura_wrapper = document.getElementById("wrapper").clientHeight;
-	console.log(altura_wrapper);
+	console.log(altura_wrapper + "; " + altura_real);
 
 	$("#wrapper").css({"height" : ((altura_wrapper >= altura_real) ? "auto" : (alto_d * num_filas) + "px") });
 
