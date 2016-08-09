@@ -21,11 +21,14 @@
 			  <!-- Collect the nav links, forms, and other content for toggling -->
 			  <div class="navbar-collapse" id="barra_nav">
 			    <ul class="nav navbar-nav reajustable">
+						<% if false %>
 						<li class="nav_opciones idioma"><%= link_to "EN", {:controller => controller_name, :action => action_name, :locale => 'en', :condicion => (params[:condicion] if action_name == "resultados_busqueda")}, :class => clase_en + " en" , :id => 'idioma_en' %> | <%= link_to "ES", {:controller => controller_name, :action => action_name, :locale => 'sp', :condicion => (params[:condicion] if action_name == "resultados_busqueda")}, :class => clase_es + " sp" , :id=> 'idioma_sp' %></li>
+						<% end %>
 						<li class="nav_opciones mail"><a href="http://portal.office.com" target="_blank"><%= image_tag("mail.png") %><span class="borrable"><%= t('navbar.mail') %></span></a></li>
 						<li class="nav_opciones intranet"><a href="http://intranet.colmex.mx/" target="_blank"><%= image_tag("intranet.png") %><span class="borrable"><%= t('navbar.intranet') %></span></a></li>
 						<li class="mostrable-chico"><a href="#menu" class="uk-navbar-toggle" data-uk-offcanvas></a></li>
 			    </ul>
+					<% if false %>
 			    <form class="navbar-form navbar-left" method="get" action="/principal/resultados_busqueda">
 						<div role="search">
 						<%= hidden_field_tag :locale, I18n.locale || default_locale %>
@@ -35,6 +38,7 @@
 						<button type="submit" class="btn btn-default boton_lupa" name="Commit" ><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
 						</div>
 			    </form>
+					<% end %>
 			    <ul class="nav navbar-nav navbar-right">
 						<li class="borrable"><%= link_to image_tag("fb-vino.png", :class => "img_net"), "
 	https://www.facebook.com/elcolmex/", :target => "_blank" %></li>
@@ -63,8 +67,9 @@
 		<div class="col-md-12" id="div_menu"> <!-- Columnas para menu -->
 			<ul class="botones"> <!-- Opciones del menú -->
 				<li class="dropdown" id="dropdown1">
-		      <a href=<%= informacion_general_path %> class="dropdown-toggle" data-hover="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span><%= t('botones.b1.texto') %></span></a>
+		      <a class="dropdown-toggle" data-hover="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span><%= t('botones.b1.texto') %></span></a>
 		        <ul class="dropdown-menu">
+							<li><a href=<%= informacion_general_path %>><%= t('botones.b1.texto2') %></a></li>
 							<li><a href=<%= historia_path %>><%= t('botones.b1.opciones.op3') %></a></li>
 		          <li><a href=<%= autoridades_path %>><%= t('botones.b1.opciones.op2') %></a></li>
 							<li><a href="http://intranet.colmex.mx/directorio/" target="_blank"><%= t('botones.b1.opciones.op1') %></a></li>
