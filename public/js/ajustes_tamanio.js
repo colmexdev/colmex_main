@@ -35,6 +35,16 @@ $(document).ready(function(){
 	ajustarImagenes();
 });
 
+$(document).scroll(function() {
+  var y = $(this).scrollTop();
+  if (y > 400) {
+	console.log("Aparece barra");
+    //$('.bottomMenu').fadeIn();
+  } else {
+    //$('.bottomMenu').fadeOut();
+  }
+});
+
 $(window).on("orientationchange", function(){
 	var alto_footer = $('#div_footer').height();
 	var alto_header = $('#header').height();
