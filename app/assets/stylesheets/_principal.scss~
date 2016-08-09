@@ -242,7 +242,7 @@ html, body{ height: 100%; }
 			}
 		}
 
-		.borrable-500 { display: none; }
+		.borrable { display: none; }
 	}
 
 	.nav_opciones{
