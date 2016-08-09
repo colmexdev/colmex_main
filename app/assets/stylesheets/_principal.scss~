@@ -123,7 +123,9 @@ html, body{ height: 100%; }
 	.borrable-500 { display: block; }
 }
 
-
+@media only screen and (max-width: 992px){
+	#header-links { display: none; }
+}
 
 #barra_nav{
 	background-color: #E6E6E6;
