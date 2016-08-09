@@ -154,8 +154,7 @@ function desbordarDescubres(){
 	var alto_d; 
 	for( var i = 0; i < descubres.length; i++){
 		if(descubres[i]["visible"]){
-			alto_d = document.getElementById("frame-"+i).style.height;
-			console.log(alto_d);
+			alto_d = document.getElementById("frame-"+i).clientHeight;
 			break;
 		}
 	}
