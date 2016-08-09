@@ -412,8 +412,9 @@ ul.ul-nav { display: table; float: left !important;
 }
 
 //Clase para alterar el div donde van los botones del menú
-#div_menu{
-	height: 54px;
+#div_menu{ height: 54px; }
+
+#div_menu, #header-links{
 
 	.botones{
 		overflow: visible;
