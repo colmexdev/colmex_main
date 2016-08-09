@@ -35,7 +35,10 @@ $(document).ready(function(){
 	ajustarImagenes();
 });
 
-window.onresize = function(){
+window.onresize = ajustesConstantes();
+$(window).on("orientationchange", ajustesConstantes());
+
+function ajustesConstantes(){
 	var alto_footer = $('#div_footer').height();
 	var alto_header = $('#header').height();
 	var ancho_act = Math.max(document.documentElement.clientWidth, window.innerWidth || document.body.ClientWidth || 0);
