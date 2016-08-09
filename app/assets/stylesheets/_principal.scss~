@@ -223,7 +223,7 @@ html, body{ height: 100%; }
 		.boton_lupa { display: none; }
 	}
 
-	@media only screen and (min-width: 0px) and (max-width: 500px){
+	@media only screen and (max-width: 500px){
 		.mail{
 			width: 80px;
 
@@ -1584,4 +1584,9 @@ ul.ul-nav { display: table; float: left !important;
 			}
 		}	
 	}
+}
+
+.uk-modal-dialog-lightbox, .uk-modal-dialog-lightbox iframe {
+height: 782px !important;
+width: 1390px !important;
 }
