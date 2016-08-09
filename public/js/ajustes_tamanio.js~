@@ -151,6 +151,7 @@ function desbordarDescubres(){
 	for( var i = 0; i < descubres.length; i++){
 		if(descubres[i]["visible"]){
 			alto_d = document.getElementById("frame-"+i).height;
+			console.log(alto_d);
 			break;
 		}
 	}
@@ -159,6 +160,7 @@ function desbordarDescubres(){
 
 
 	$("#wrapper").css({"height" : (($("#wrapper").height() + (alto_d * 2) > (alto_d * cantidad_filas) || document.getElementById("wrapper").style.height == "auto" ) ? "auto" : (alto_d * num_filas) + "px")});
+	console.log($("#wrapper").css("height"));
 	$("#cutter-descubre").css("display", $("#wrapper").height() + (alto_d * 2) >= (alto_d * cantidad_filas)  ? "none" : "block");
 
 	margenAuto();
