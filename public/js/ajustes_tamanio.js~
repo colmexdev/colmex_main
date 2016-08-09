@@ -120,9 +120,9 @@ function partirDescubres(){
 	var ancho_v = Math.max(document.documentElement.clientWidth, window.innerWidth || document.body.ClientWidth || 0);
 	var json_l = descubres.length;
 	var alto_d; 
-	for( var i = 0; i < json_l; i++){
+	for( var i = 0; i < descubres.length; i++){
 		if(descubres[i]["visible"]){
-			alto_d = document.getElementById("frame-"+i).style.height;
+			alto_d = document.getElementById("frame-"+i).clientHeight;
 			break;
 		}
 	}
