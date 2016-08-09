@@ -173,7 +173,7 @@ function desbordarDescubres(){
 	if($("#wrapper").height() >= altura_real){
 		$("#wrapper").css("height","auto");
 	}
-	$("#cutter-descubre").css("display", $("#wrapper").height() + (alto_d * 2) >= (alto_d * cantidad_filas)  ? "none" : "block");
+	$("#cutter-descubre").css("display", $("#wrapper").height() + (alto_d * 2) >= altura_real  ? "none" : "block");
 
 	margenAuto();
 }

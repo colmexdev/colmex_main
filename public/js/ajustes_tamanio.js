@@ -131,7 +131,6 @@ function partirDescubres(){
 	var altura_actual = alto_d * num_filas;
 	var altura_real = alto_d * cantidad_filas;
 	var altura_wrapper = document.getElementById("wrapper").clientHeight;
-	console.log(altura_wrapper + "; " + altura_real + "; " + altura_actual);
 
 	$("#wrapper").css({"height" : ((altura_wrapper >= altura_real - 1) ? altura_real + "px" : altura_actual + "px") });
 
@@ -140,7 +139,6 @@ function partirDescubres(){
 		$("#wrapper").css("height","auto");
 	}
 
-	console.log("Nueva altura: " + altura_wrapper + "; alto_d: " + alto_d);
 	if(((json_l > 10 && ancho_v >= 1200 ) || (json_l > 8 && ancho_v >= 992 && ancho_v < 1200) || (json_l > 6 && ancho_v >= 768 && ancho_v < 992) || (json_l >4 && ancho_v >= 480 && ancho_v < 768) || (json_l > 2 && ancho_v < 480)) && $("#cutter-descubre").css("display") != "none"){
 		$("#cutter-descubre").css("display","block");
 	}
@@ -169,7 +167,7 @@ function desbordarDescubres(){
 	var altura_wrapper = document.getElementById("wrapper").clientHeight;
 
 	$("#wrapper").css({"height" : (($("#wrapper").height() + (alto_d * 2) > (alto_d * cantidad_filas) || document.getElementById("wrapper").style.height == "auto" ) ? altura_real + "px" : (alto_d * num_filas) + "px")});
-	console.log($("#wrapper").css("height"));
+
 	if($("#wrapper").height() >= altura_real){
 		$("#wrapper").css("height","auto");
 	}
