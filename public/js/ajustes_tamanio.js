@@ -107,9 +107,8 @@ function partirDescubres(){
 	}
 	else{
 		$("#cutter-descubre").css("display","none");
+		$("#wrapper").css("overflow-y", "auto");
 	}
-
-	return false;
 }
 
 function desbordarDescubres(){
@@ -122,7 +121,7 @@ function desbordarDescubres(){
 	var altura_real = alto_d * cantidad_filas;
 	var altura_wrapper = $("#wrapper").height();
  
-	if(altura_wrapper != altura_real){
+	if(altura_wrapper < altura_real){
 		num_filas = num_filas + 2;
 	}
 
@@ -130,7 +129,6 @@ function desbordarDescubres(){
 	$("#cutter-descubre").css("display", altura_wrapper + (alto_d * 2) >= altura_real  ? "none" : "block");
 
 	margenAuto();
-	return false;
 }
 
 function margenAuto(){
