@@ -123,7 +123,9 @@ html, body{ height: 100%; }
 	.borrable-500 { display: block; }
 }
 
-
+@media only screen and (max-width: 992px){
+	#header-links { display: none; }
+}
 
 #barra_nav{
 	background-color: #E6E6E6;
@@ -1587,6 +1589,6 @@ ul.ul-nav { display: table; float: left !important;
 }
 
 .uk-modal-dialog-lightbox, .uk-modal-dialog-lightbox iframe {
-height: 402px !important;
+height: 782px !important;
 width: 1390px !important;
 }

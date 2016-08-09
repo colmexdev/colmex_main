@@ -38,9 +38,13 @@ $(document).ready(function(){
 $(document).scroll(function() {
   var y = $(this).scrollTop();
   if (y > 400) {
-	$("#div_logo").css("display","none");
+	$("#div_logo").css("display", "none");
+	$("#div_menu").css("display", "none");
+	$("#header-links").css("display", "block");
   } else {
 	$("#div_logo").css("display", "block");
+	$("#div_menu").css("display", "block");
+	$("#header-links").css("display", "none");
   }
 });
 

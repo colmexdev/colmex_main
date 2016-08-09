@@ -24,8 +24,8 @@
 						<% if false %>
 						<li class="nav_opciones idioma"><%= link_to "EN", {:controller => controller_name, :action => action_name, :locale => 'en', :condicion => (params[:condicion] if action_name == "resultados_busqueda")}, :class => clase_en + " en" , :id => 'idioma_en' %> | <%= link_to "ES", {:controller => controller_name, :action => action_name, :locale => 'sp', :condicion => (params[:condicion] if action_name == "resultados_busqueda")}, :class => clase_es + " sp" , :id=> 'idioma_sp' %></li>
 						<% end %>
-						<li class="nav_opciones mail"><a href="http://portal.office.com" target="_blank"><%= image_tag("mail.png") %><span class="borrable borrable-500"><%= t('navbar.mail') %></span></a></li>
-						<li class="nav_opciones intranet"><a href="http://intranet.colmex.mx/" target="_blank"><%= image_tag("intranet.png") %><span class="borrable borrable-500"><%= t('navbar.intranet') %></span></a></li>
+						<li class="nav_opciones mail"><a href="http://portal.office.com" target="_blank"><%= image_tag("mail.png") %><span class="borrable"><%= t('navbar.mail') %></span></a></li>
+						<li class="nav_opciones intranet"><a href="http://intranet.colmex.mx/" target="_blank"><%= image_tag("intranet.png") %><span class="borrable"><%= t('navbar.intranet') %></span></a></li>
 						<li class="mostrable-chico"><a href="#menu" class="uk-navbar-toggle" data-uk-offcanvas></a></li>
 			    </ul>
 					<% if false %>
