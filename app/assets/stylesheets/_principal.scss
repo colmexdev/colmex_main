@@ -115,6 +115,16 @@ html, body{ height: 100%; }
 
 .navbar-collapse { margin-right: 0; margin-left: 0;}
 
+@media only screen and (max-width: 500px){
+	.borrable-500 { display: none; }
+}
+
+@media only screen and (min-width: 500px){
+	.borrable-500 { display: block; }
+}
+
+
+
 #barra_nav{
 	background-color: #E6E6E6;
 	border-radius: 0;

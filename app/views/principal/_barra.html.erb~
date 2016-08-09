@@ -116,9 +116,9 @@
 		<div class="uk-offcanvas-bar uk-offcanvas-bar-flip">
 			<ul class="uk-nav uk-nav-offcanvas" data-uk-nav>
 				<li class="uk-parent">
-					<a href="#"><%= t('botones.b1.texto2') %></a>
+					<a href="#"><%= t('botones.b1.texto') %></a>
 					<ul class="uk-nav-sub">
-						<li><a href=<%= informacion_general_path %> class="sublink"><%= t('botones.b1.texto') %></a></li>
+						<li><a href=<%= informacion_general_path %> class="sublink"><%= t('botones.b1.texto2') %></a></li>
           	<li><a href=<%= historia_path %> class="sublink"><%= t('botones.b1.opciones.op3') %></a></li>
           	<li><a href=<%= autoridades_path %> class="sublink"><%= t('botones.b1.opciones.op2') %></a></li>
 		<li><a href="http://intranet.colmex.mx/directorio/" class="sublink" target="_blank"><%= t('botones.b1.opciones.op1') %></a></li>
