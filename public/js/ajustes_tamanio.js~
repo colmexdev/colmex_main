@@ -51,7 +51,7 @@ $(document).scroll(function() {
   } else {
 	$("#div_logo").css("display", "block");
 	$("#div_menu").css("display", "block");
-	$(".navbar-right").css("display","block;");
+	$(".navbar-right").css("display","block");
 	$("#header-links").css("display", "none");
   }
 });

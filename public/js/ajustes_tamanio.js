@@ -43,7 +43,7 @@ $(document).scroll(function() {
 	$("#div_menu").css("display", "none");
 	$(".navbar-right").css("display","none");
 	if(ancho_act > 992){
-	  $("#header-links").css("display", "block");
+	  $("#header-links").css({"display":"block", "background-color":"#E6E6E6", "color": "#7F7F7F" });
 	}
 	else{
 	  $("#header-links").css("display", "none");
