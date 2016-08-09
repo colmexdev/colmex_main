@@ -35,11 +35,35 @@ $(document).ready(function(){
 	ajustarImagenes();
 });
 
-$(window).on("orientationchange", ajustesConstantes());
+$(window).on("orientationchange", function(){
+	var alto_footer = $('#div_footer').height();
+	var alto_header = $('#header').height();
+	var ancho_act = Math.max(document.documentElement.clientWidth, window.innerWidth || document.body.ClientWidth || 0);
 
-window.onresize = ajustesConstantes();
+	$('#resto-cuerpo').css({'padding-bottom': alto_footer+'px', 'padding-top': alto_header+'px'});
 
-function ajustesConstantes(){
+	reescalarDescubre();
+
+	if(ancho_act < 785 && ancho >= 785){
+		document.getElementById("render_eventos").innerHTML = gon.ev_tiny;
+		ancho = ancho_act;
+	}
+	else if(ancho_act < 1150 && (ancho >= 1150 || ancho <= 785)){
+		document.getElementById("render_eventos").innerHTML = gon.ev_small;
+		ancho = ancho_act;
+	} 
+	else if(ancho_act >= 1150 && ancho < 1150){
+		document.getElementById("render_eventos").innerHTML = gon.ev_big;
+		ancho = ancho_act;
+	}
+
+	escalarSlider();
+	partirDescubres();
+	margenAuto();
+	ajustarImagenes();
+});
+
+window.onresize = function(){
 	var alto_footer = $('#div_footer').height();
 	var alto_header = $('#header').height();
 	var ancho_act = Math.max(document.documentElement.clientWidth, window.innerWidth || document.body.ClientWidth || 0);
@@ -102,8 +126,8 @@ function partirDescubres(){
 	var altura_real = alto_d * cantidad_filas;
 	var altura_wrapper = $("#wrapper").height();
 
-	$("#wrapper").css({"height" : ((altura_wrapper >= altura_real) ? "auto" : altura_actual + "px") });
-	if(((json_l > 10 && ancho_v >= 1200 ) || (json_l > 8 && ancho_v >= 992 && ancho_v < 1200) || (json_l > 6 && ancho_v >= 768 && ancho_v < 992) || (json_l >4 && ancho_v >= 480 && ancho_v < 768) || (json_l > 2 && ancho_v < 480)) && /*document.getElementById("wrapper").style.height != "auto"*/ $("#cutter-descubre").css("display") == "block"){
+	$("#wrapper").css({"height" : ((altura_wrapper >= altura_real) ? "auto" : (alto_d * num_filas) + "px") });
+	if(((json_l > 10 && ancho_v >= 1200 ) || (json_l > 8 && ancho_v >= 992 && ancho_v < 1200) || (json_l > 6 && ancho_v >= 768 && ancho_v < 992) || (json_l >4 && ancho_v >= 480 && ancho_v < 768) || (json_l > 2 && ancho_v < 480)) && document.getElementById("wrapper").style.height != "auto"){
 		$("#cutter-descubre").css("display","block");
 	}
 	else{
