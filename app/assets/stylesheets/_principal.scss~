@@ -140,7 +140,8 @@ html, body{ height: 100%; }
 			text-align: center;
 			height: 100%;
 			position: relative;
-			width: 17%;
+			width: auto;
+			padding: 0 25px;
 			-moz-transition: all 0.3s linear;
 			-ms-transition: all 0.3s linear;
 			-webkit-transition: all 0.3s linear;
@@ -159,7 +160,7 @@ html, body{ height: 100%; }
 					width: 100%;
 					font-size: 15px;
 					font-weight: 600;
-					@include centrado;
+					line-height: 60px;
 				}
 			}
 
@@ -234,7 +235,7 @@ html, body{ height: 100%; }
 		display: none;
 		>a{
 			padding: 5px 15px;
-			>img { max-height: 30px; }
+			>img { max-height: 45px; }
 		}
 	}
 

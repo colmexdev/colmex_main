@@ -292,7 +292,8 @@ html, body{ height: 100%; }
 		width: 210px;
 
 		>a {
-			height: inherit; 
+			height: inherit;
+			line-height: 40px;
 
 			img{
 				width: 25px;
@@ -306,6 +307,7 @@ html, body{ height: 100%; }
 
 		>a{
 			height: inherit;
+			line-height: 40px;
 
 			img{
 				width: 20px;
