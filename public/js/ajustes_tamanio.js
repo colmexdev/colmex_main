@@ -11,8 +11,7 @@ $(document).on('page:load', function(){ UIkit.init(); })
 
 $(document).ready(function(){
 	UIkit.init();
-	var alto_footer = $('#div_footer').height();
-	var alto_header = $('#header').height();
+
 	var cw = $('.frame-descubre').width();
 
 	if(gon.ev_tiny == ""){
@@ -23,8 +22,6 @@ $(document).ready(function(){
 		else if(ancho < 1150){ document.getElementById("render_eventos").innerHTML = gon.ev_small; }
 		else{ document.getElementById("render_eventos").innerHTML = gon.ev_big;}
 	}
-
-	$('#resto-cuerpo').css({'padding-bottom': alto_footer+'px', 'padding-top': alto_header+'px'});
 
 	$('.frame-descubre').css({'height':cw+'px'});
 
@@ -67,6 +64,7 @@ $(document).scroll(function() {
 	$(".navbar-right").removeAttr("style");
 	$("#header-links").removeAttr("style");
   }
+  ajustarCuerpo();
 });
 
 $(window).on("orientationchange", function(){
@@ -74,11 +72,8 @@ $(window).on("orientationchange", function(){
 });
 
 window.onresize = function(){
-	var alto_footer = $('#div_footer').height();
-	var alto_header = $('#header').height();
-	var ancho_act = Math.max(document.documentElement.clientWidth, window.innerWidth || document.body.ClientWidth || 0);
 
-	$('#resto-cuerpo').css({'padding-bottom': alto_footer+'px', 'padding-top': alto_header+'px'});
+	var ancho_act = Math.max(document.documentElement.clientWidth, window.innerWidth || document.body.ClientWidth || 0);
 
 	reescalarDescubre();
 
@@ -100,6 +95,12 @@ window.onresize = function(){
 	margenAuto();
 	ajustarImagenes();
 	$(document).trigger("scroll");
+}
+
+function ajustarCuerpo(){
+	var alto_footer = $('#div_footer').height();
+	var alto_header = $('#header').height();
+	$('#resto-cuerpo').css({'padding-bottom': alto_footer+'px', 'padding-top': alto_header+'px'});
 }
 
 function recabarAnchos(){

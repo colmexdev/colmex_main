@@ -74,11 +74,10 @@ $(window).on("orientationchange", function(){
 });
 
 window.onresize = function(){
-	var alto_footer = $('#div_footer').height();
-	var alto_header = $('#header').height();
+
 	var ancho_act = Math.max(document.documentElement.clientWidth, window.innerWidth || document.body.ClientWidth || 0);
 
-	$('#resto-cuerpo').css({'padding-bottom': alto_footer+'px', 'padding-top': alto_header+'px'});
+
 
 	reescalarDescubre();
 
@@ -99,7 +98,13 @@ window.onresize = function(){
 	partirDescubres();
 	margenAuto();
 	ajustarImagenes();
-		$(document).trigger("scroll");
+	$(document).trigger("scroll");
+}
+
+function ajustarCuerpo(){
+	var alto_footer = $('#div_footer').height();
+	var alto_header = $('#header').height();
+	$('#resto-cuerpo').css({'padding-bottom': alto_footer+'px', 'padding-top': alto_header+'px'});
 }
 
 function recabarAnchos(){
