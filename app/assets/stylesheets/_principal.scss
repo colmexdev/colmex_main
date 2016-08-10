@@ -1715,10 +1715,7 @@ ul.ul-nav { display: table; float: left !important;
 .uk-modal-dialog-lightbox{
 	max-height: 731.25px;
 	max-width: 1390px;
-	width: 95%;
+	width: 95% !important;
 }
 
-.uk-modal-dialog-lightbox iframe{
-	width: 100% !important;
-	height: 100% !important;
-}
+

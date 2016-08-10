@@ -1188,11 +1188,11 @@ ul.ul-nav { display: table; float: left !important;
 			position: relative;
 			font-style: normal;
 			opacity: 1;
-			-webkit-transition: opacity 0.5s linear, visibility 0.5s linear, width 0.5s linear, height 0.5s linear;
-			-moz-transition: opacity 0.5s linear, visibility 0.5s linear, width 0.5s linear, height 0.5s linear;
-			-ms-transition: opacity 0.5s linear, visibility 0.5s linear, width 0.5s linear, height 0.5s linear;
-			-o-transition: opacity 0.5s linear, visibility 0.5s linear, width 0.5s linear, height 0.5s linear;
-			transition: opacity 0.5s linear, visibility 0.5s linear, width 0.5s linear, height 0.5s linear;
+			-webkit-transition: opacity 0.5s linear, visibility 0.5s linear, width 0.5s linear;
+			-moz-transition: opacity 0.5s linear, visibility 0.5s linear, width 0.5s linear;
+			-ms-transition: opacity 0.5s linear, visibility 0.5s linear, width 0.5s linear;
+			-o-transition: opacity 0.5s linear, visibility 0.5s linear, width 0.5s linear;
+			transition: opacity 0.5s linear, visibility 0.5s linear, width 0.5s linear;
 
 			.imagen-descubre{
 				@include centrado;
@@ -1715,7 +1715,7 @@ ul.ul-nav { display: table; float: left !important;
 .uk-modal-dialog-lightbox{
 	max-height: 731.25px;
 	max-width: 1390px;
-	width: 95%;
+	width: 95% !important;
 }
 
 .uk-modal-dialog-lightbox iframe{
