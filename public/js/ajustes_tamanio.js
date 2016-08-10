@@ -67,7 +67,6 @@ $(document).scroll(function() {
 	$(".navbar-right").removeAttr("style");
 	$("#header-links").removeAttr("style");
   }
-  $(window).trigger("resize");
 });
 
 $(window).on("orientationchange", function(){
@@ -82,7 +81,6 @@ window.onresize = function(){
 	$('#resto-cuerpo').css({'padding-bottom': alto_footer+'px', 'padding-top': alto_header+'px'});
 
 	reescalarDescubre();
-	$(document).trigger("scroll");
 
 	if(ancho_act < 785 && ancho >= 785){
 		document.getElementById("render_eventos").innerHTML = gon.ev_tiny;
@@ -101,6 +99,7 @@ window.onresize = function(){
 	partirDescubres();
 	margenAuto();
 	ajustarImagenes();
+	$(document).trigger("scroll");
 }
 
 function recabarAnchos(){
