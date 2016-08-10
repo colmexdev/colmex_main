@@ -51,6 +51,7 @@ $(document).scroll(function() {
 	  $("#header-links").css({"display":"inline-block", "background-color":"#fff", "padding-left":"50px","float":"left" });
 	}
 	else{
+	  $("#logo-main").css("padding-left", "10px");
 	  $("#menu").css("line-height","60px");
 	  $("#barra_nav").css("width","100%");
 	  $(".mail").removeAttr("style");
