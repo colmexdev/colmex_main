@@ -1,4 +1,4 @@
-class SobreElColegioController < ApplicationController
+class InformacionGeneralController < ApplicationController
 
   def historia_75_años
   end

@@ -44,7 +44,7 @@ class SobreElColegioController < ApplicationController
     @profesores = Emerito.all
   end
 
-  def informacion_general
+  def sobre_el_colegio
   end
 
   def asamblea
