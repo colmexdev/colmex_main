@@ -42,14 +42,16 @@ $(document).scroll(function() {
   if (y > 300) {
 	$("#div_logo").css("display", "none");
 	$("#div_menu").css("display", "none");
-	$(".mail").css("width","60px");
-	$(".intranet").css("width","60px");	
 	if(ancho_act > 1160){
+	  $(".mail").css("width","60px");
+	  $(".intranet").css("width","60px");	
 	  $(".borrable").css("display","none");
 	  $(".navbar-right").css("display","none");
 	  $("#header-links").css({"display":"block", "background-color":"#E6E6E6", "color": "#7F7F7F", "font-size":"13px" });
 	}
 	else{
+	  $(".mail").removeAttr("style");
+	  $(".intranet").removeAttr("style");
 	  $(".borrable").removeAttr("style");
 	  $(".navbar-right").removeAttr("style");;
 	  $("#header-links").css("display", "none");

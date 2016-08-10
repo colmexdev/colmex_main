@@ -42,6 +42,7 @@ $(document).scroll(function() {
   if (y > 300) {
 	$("#div_logo").css("display", "none");
 	$("#div_menu").css("display", "none");
+	$("#logo-main").css("display", "block");
 	if(ancho_act > 1160){
 	  $(".mail").css("width","60px");
 	  $(".intranet").css("width","60px");	
@@ -50,6 +51,7 @@ $(document).scroll(function() {
 	  $("#header-links").css({"display":"block", "background-color":"#E6E6E6", "color": "#7F7F7F", "font-size":"13px" });
 	}
 	else{
+	  $("#logo-main").removeAttr("style");
 	  $(".mail").removeAttr("style");
 	  $(".intranet").removeAttr("style");
 	  $(".borrable").removeAttr("style");
