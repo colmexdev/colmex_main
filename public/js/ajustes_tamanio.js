@@ -37,7 +37,7 @@ $(document).scroll(function() {
   var y = $(this).scrollTop();
   var ancho_act = Math.max(document.documentElement.clientWidth, window.innerWidth || document.body.ClientWidth || 0);
   if (y > 300) {
-	$("#contenedor_nav").css({"height":"60px","background-color":"#fff","-webkit-box-shadow":"1px 1px 5px 3px rgba(0,0,0,0.3)","-moz-box-shadow":"1px 1px 5px 3px rgba(0,0,0,0.3)","box-shadow":"1px 1px 5px 3px rgba(0,0,0,0.3)"});
+	$("#contenedor_nav").css({"height":"60px","background-color":"#fff","-webkit-box-shadow":"0 6px 12px rgba(0,0,0,0.175)","-moz-box-shadow":"0 6px 12px rgba(0,0,0,0.175)","box-shadow":"0 6px 12px rgba(0,0,0,0.175)"});
 	$("#barra_nav").css({"height":"100%","background-color":"#fff", "width":"85%","margin": "0 auto"});
 	$("#div_logo").css("display", "none");
 	$("#div_menu").css("display", "none");
@@ -48,7 +48,7 @@ $(document).scroll(function() {
 	  $(".intranet").css("display","none");	
 	  $(".borrable").css("display","none");
 	  $(".navbar-right").css("display","none");
-	  $("#header-links").css({"display":"inline-block", "background-color":"#fff", "padding-left":"50px","float":"right" });
+	  $("#header-links").css({"display":"inline-block", "background-color":"#fff", "padding-left":"50px","float":"left" });
 	}
 	else{
 	  $(".mail").removeAttr("style");
@@ -104,9 +104,9 @@ window.onresize = function(){
 }
 
 function ajustarCuerpo(){
-	var alto_footer = $('#div_footer').height();
-	var alto_header = $('#header').height();
-	$('#resto-cuerpo').css({'padding-bottom': alto_footer+'px', 'padding-top': alto_header+'px'});
+	var alto_footer = document.getElementById('div_footer').clientHeight;
+	var alto_header = document.getElementById('header').clientHeight;
+	$('#resto-cuerpo').css({'padding-bottom': (alto_footer+1)+'px', 'padding-top': (alto_header-1.5)+'px'});
 }
 
 function recabarAnchos(){
