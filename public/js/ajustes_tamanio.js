@@ -51,8 +51,9 @@ $(document).scroll(function() {
 	  $("#header-links").css({"display":"inline-block", "background-color":"#fff", "padding-left":"50px","float":"left" });
 	}
 	else{
+	  $(".reajustable").css("width","100%");
 	  $("#logo-main").css("padding-left", "10px");
-	  $(".uk-navbar-toggle").css("line-height","60px");
+	  $(".uk-navbar-toggle").css({"line-height":"60px","padding":"0","float":"right"});
 	  $("#barra_nav").css("width","100%");
 	  $(".mail").removeAttr("style");
 	  $(".intranet").removeAttr("style");
@@ -63,6 +64,7 @@ $(document).scroll(function() {
 	  $("#header-links").css("display", "none");
 	}
   } else {
+	$(".reajustable").removeAttr("style");
 	$(".uk-navbar-toggle").removeAttr("style");
 	$("#contenedor_nav").removeAttr("style");
 	$("#barra_nav").removeAttr("style");
