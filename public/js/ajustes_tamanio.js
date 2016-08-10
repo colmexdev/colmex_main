@@ -41,8 +41,8 @@ $(document).scroll(function() {
 	$("#div_menu").css("display", "none");
 	$("#logo-main").css("display", "block");
 	if(ancho_act > 1160){
-	  $(".mail").css("width","60px");
-	  $(".intranet").css("width","60px");	
+	  $(".mail").css("display","none");
+	  $(".intranet").css("display","none");	
 	  $(".borrable").css("display","none");
 	  $(".navbar-right").css("display","none");
 	  $("#header-links").css({"display":"block", "background-color":"#E6E6E6", "color": "#7F7F7F", "font-size":"13px" });
