@@ -1718,7 +1718,4 @@ ul.ul-nav { display: table; float: left !important;
 	width: 95% !important;
 }
 
-.uk-modal-dialog-lightbox iframe{
-	width: 100% !important;
-	height: 100% !important;
-}
+

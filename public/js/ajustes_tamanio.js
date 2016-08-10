@@ -51,10 +51,11 @@ $(document).scroll(function() {
 	  $("#header-links").css({"display":"inline-block", "background-color":"#fff", "padding-left":"50px","float":"left" });
 	}
 	else{
+	  $("#barra_nav").css("width","100%");
 	  $(".mail").removeAttr("style");
 	  $(".intranet").removeAttr("style");
-	  $(".mail").css("line-height","60px");
-	  $(".intranet").css("line-height","60px");
+	  $(".mail a").css("line-height","60px");
+	  $(".intranet a").css("line-height","60px");
 	  $(".borrable").removeAttr("style");
 	  $(".navbar-right").removeAttr("style");;
 	  $("#header-links").css("display", "none");
