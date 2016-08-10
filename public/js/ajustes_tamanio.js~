@@ -59,6 +59,7 @@ $(document).scroll(function() {
 	  $("#header-links").css("display", "none");
 	}
   } else {
+	$("#logo-main").removeAttr("style");
 	$("#div_logo").removeAttr("style");
 	$("#div_menu").removeAttr("style");
 	$(".borrable").removeAttr("style");
