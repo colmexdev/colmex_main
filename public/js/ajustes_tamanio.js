@@ -59,6 +59,7 @@ $(document).scroll(function() {
 	}
   } else {
 	$("#contenedor_nav").removeAttr("style");
+	$("#barra_nav").removeAttr("style");
 	$(".reajustable").removeAttr("style");
 	$("#logo-main").removeAttr("style");
 	$("#div_logo").removeAttr("style");
