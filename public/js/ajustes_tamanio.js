@@ -82,7 +82,7 @@ $(window).on("orientationchange", function(){
 window.onresize = function(){
 
 	var ancho_act = Math.max(document.documentElement.clientWidth, window.innerWidth || document.body.ClientWidth || 0);
-
+	UIkit.init();
 	reescalarDescubre();
 
 	if(ancho_act < 785 && ancho >= 785){
