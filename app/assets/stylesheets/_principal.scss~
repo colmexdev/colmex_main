@@ -1715,4 +1715,5 @@ ul.ul-nav { display: table; float: left !important;
 .uk-modal-dialog-lightbox, .uk-modal-dialog-lightbox iframe {
 	max-height: 731.25px;
 	max-width: 1390px;
+	width: 95%;
 }
