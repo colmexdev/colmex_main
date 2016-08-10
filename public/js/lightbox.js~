@@ -332,9 +332,9 @@
                 var id, matches, resolve = function(id, width, height) {
 
                     data.meta = {
-                        'content': '<iframe src="//www.youtube.com/embed/'+id+'" width="'+(window.innerWidth*0.95 > 1300 ? 1300 : window.innerWidth * 0.95) /*width*/+'" height="'+/*height*/(width*9/16)+'" style="max-width:100%;"'+(modal.lightbox.options.allowfullscreen?' allowfullscreen':'')+'></iframe>',
+                        'content': '<iframe src="//www.youtube.com/embed/'+id+'" width="'+(window.innerWidth*0.95 > 1300 ? 1300 : window.innerWidth * 0.95) /*width*/+'" height="'+/*height*/(window.innerWidth*0.95 > 1300 ? 1300*9/16 : window.innerWidth * 0.95 * 9 / 16)+'" style="max-width:100%;"'+(modal.lightbox.options.allowfullscreen?' allowfullscreen':'')+'></iframe>',
                         'width': /*width*/(window.innerWidth*0.95 > 1300 ? 1300 : window.innerWidth * 0.95),
-                        'height': /*height*/(width*9/16)
+                        'height': /*height*/(window.innerWidth*0.95 > 1300 ? 1300*9/16 : window.innerWidth * 0.95 * 9 / 16)
                     };
 
                     data.type = 'iframe';
