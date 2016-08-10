@@ -51,7 +51,6 @@ $(document).scroll(function() {
 	  $("#header-links").css({"display":"block", "background-color":"#E6E6E6", "color": "#7F7F7F", "font-size":"13px" });
 	}
 	else{
-	  $("#logo-main").removeAttr("style");
 	  $(".mail").removeAttr("style");
 	  $(".intranet").removeAttr("style");
 	  $(".borrable").removeAttr("style");

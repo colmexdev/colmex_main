@@ -66,38 +66,12 @@ $(document).scroll(function() {
 	$(".intranet").removeAttr("style");
 	$(".navbar-right").removeAttr("style");
 	$("#header-links").removeAttr("style");
-
   }
+  $(window).trigger("resize");
 });
 
 $(window).on("orientationchange", function(){
 	$(window).trigger("resize");
-	/*var alto_footer = $('#div_footer').height();
-	var alto_header = $('#header').height();
-	var ancho_act = Math.max(document.documentElement.clientWidth, window.innerWidth || document.body.ClientWidth || 0);
-
-	$('#resto-cuerpo').css({'padding-bottom': alto_footer+'px', 'padding-top': alto_header+'px'});
-
-	reescalarDescubre();
-	$(document).trigger("scroll");
-
-	if(ancho_act < 785 && ancho >= 785){
-		document.getElementById("render_eventos").innerHTML = gon.ev_tiny;
-		ancho = ancho_act;
-	}
-	else if(ancho_act < 1150 && (ancho >= 1150 || ancho <= 785)){
-		document.getElementById("render_eventos").innerHTML = gon.ev_small;
-		ancho = ancho_act;
-	} 
-	else if(ancho_act >= 1150 && ancho < 1150){
-		document.getElementById("render_eventos").innerHTML = gon.ev_big;
-		ancho = ancho_act;
-	}
-
-	escalarSlider();
-	partirDescubres();
-	margenAuto();
-	ajustarImagenes();*/
 });
 
 window.onresize = function(){
