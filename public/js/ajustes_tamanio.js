@@ -45,7 +45,7 @@ $(document).scroll(function() {
 	  $(".intranet").css("display","none");	
 	  $(".borrable").css("display","none");
 	  $(".navbar-right").css("display","none");
-	  $("#header-links").css({"display":"block", "background-color":"#E6E6E6", "color": "#000", "font-size":"13px" });
+	  $("#header-links").css({"display":"block", "background-color":"#E6E6E6" });
 	}
 	else{
 	  $(".mail").removeAttr("style");
