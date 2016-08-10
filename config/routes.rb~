@@ -48,37 +48,37 @@ Rails.application.routes.draw do
 
   get "programas_academicos/cursos" => "programas_academicos#cursos", :as => :cursos_varios
 
-  get 'sobre_el_colegio/autoridades' => 'sobre_el_colegio#autoridades', :as => :autoridades
+  get 'informacion_general/autoridades' => 'informacion_general#autoridades', :as => :autoridades
 
-  get 'sobre_el_colegio/profesores_emeritos' => 'sobre_el_colegio#profesores_emeritos', :as => :profesores_emeritos
+  get 'informacion_general/profesores_emeritos' => 'informacion_general#profesores_emeritos', :as => :profesores_emeritos
 
-  get 'sobre_el_colegio/historia' => 'sobre_el_colegio#historia', :as => :historia
+  get 'informacion_general/historia' => 'informacion_general#historia', :as => :historia
 
-  get 'sobre_el_colegio/informacion_general' => 'sobre_el_colegio#informacion_general', :as => :informacion_general
+  get 'informacion_general/sobre_el_colegio' => 'informacion_general#sobre_el_colegio', :as => :informacion_general
 
-  get 'sobre_el_colegio/documentacion_institucional' => 'sobre_el_colegio#documentacion_institucional', :as => :documentacion
+  get 'informacion_general/documentacion_institucional' => 'informacion_general#documentacion_institucional', :as => :documentacion
 
-  get 'sobre_el_colegio/actas' => 'sobre_el_colegio#actas', :as => :actas
+  get 'informacion_general/actas' => 'informacion_general#actas', :as => :actas
 
-  get 'sobre_el_colegio/informes' => 'sobre_el_colegio#informes', :as => :informes
+  get 'informacion_general/informes' => 'informacion_general#informes', :as => :informes
 
-  get 'sobre_el_colegio/estatutos' => 'sobre_el_colegio#estatutos', :as => :estatutos
+  get 'informacion_general/estatutos' => 'informacion_general#estatutos', :as => :estatutos
 
-  get 'sobre_el_colegio/asamblea' => 'sobre_el_colegio#asamblea', :as => :asamblea
+  get 'informacion_general/asamblea' => 'informacion_general#asamblea', :as => :asamblea
 
-  get 'sobre_el_colegio/junta' => 'sobre_el_colegio#junta', :as => :junta
+  get 'informacion_general/junta' => 'informacion_general#junta', :as => :junta
 
-  get 'sobre_el_colegio/presidencia' => 'sobre_el_colegio#presidencia', :as => :presidencia
+  get 'informacion_general/presidencia' => 'informacion_general#presidencia', :as => :presidencia
 
-  get 'sobre_el_colegio/centros_de_estudio' => 'sobre_el_colegio#centros_de_estudio', :as => :centros_autoridades
+  get 'informacion_general/centros_de_estudio' => 'informacion_general#centros_de_estudio', :as => :centros_autoridades
 
-  get 'sobre_el_colegio/administracion' => 'sobre_el_colegio#administracion', :as => :administracion
+  get 'informacion_general/administracion' => 'informacion_general#administracion', :as => :administracion
 
-  get 'sobre_el_colegio/operativas' => 'sobre_el_colegio#operativas', :as => :operativas
+  get 'informacion_general/operativas' => 'informacion_general#operativas', :as => :operativas
 
-  get 'sobre_el_colegio/premios_y_distinciones' => 'sobre_el_colegio#premios_y_distinciones', :as => :premios
+  get 'informacion_general/premios_y_distinciones' => 'informacion_general#premios_y_distinciones', :as => :premios
 
-  get 'sobre_el_colegio/historia_75_años' => 'sobre_el_colegio#historia_75_años', :as => :historia75
+  get 'informacion_general/historia_75_años' => 'informacion_general#historia_75_años', :as => :historia75
 
   get 'programas_academicos/presenciales' => 'programas_academicos#presenciales', :as => :presenciales
 

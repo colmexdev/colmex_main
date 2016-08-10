@@ -10,10 +10,9 @@
     <div class="uk-width-large-3-5 uk-text-left">
     <span class="titulo-chico">Licenciaturas</span><br>
     <p>&nbsp;</p>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas rhoncus diam sed leo porttitor consectetur. Proin nec dui sit amet libero mattis suscipit. Etiam ac convallis dui, quis varius velit. Nam at laoreet lorem. Sed fermentum lectus sed scelerisque placerat. Ut pharetra porta justo, id suscipit orci posuere eget. In accumsan ornare dictum.</p>
     <ul class=" uk-list uk-list-space">
 		<% @licenciaturas.each do |lic| %>
-		  <li><a href=<%= lic.liga %> target="_blank" class="uk-margin-large-bottom uk-link">Licenciatura en <%= lic.titulo %></a></li>
+		  <li class="uk-link">Licenciatura en <%= lic.titulo %></li>
 		<% end %>
     </ul>
     </div>
@@ -28,10 +27,9 @@
     <div class="uk-width-large-3-5 uk-text-left">
     <span class="titulo-chico">Maestrías</span><br>
     <p>&nbsp;</p>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas rhoncus diam sed leo porttitor consectetur. Proin nec dui sit amet libero mattis suscipit. Etiam ac convallis dui, quis varius velit. Nam at laoreet lorem. Sed fermentum lectus sed scelerisque placerat. Ut pharetra porta justo, id suscipit orci posuere eget. In accumsan ornare dictum.</p>
     <ul class=" uk-list uk-list-space">
     <% @maestrias.each do |mt| %>
-		  <li><a href=<%= mt.liga %> target="_blank" class="uk-margin-large-bottom uk-link">Maestría en en <%= mt.titulo %></a></li>
+		  <li class="uk-link">Maestría en en <%= mt.titulo %></li>
 		<% end %>
     </ul>
     </div>
@@ -40,10 +38,9 @@
     <div class="uk-width-large-3-5 uk-text-left">
     <span class="titulo-chico">Doctorados</span><br>
     <p>&nbsp;</p>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas rhoncus diam sed leo porttitor consectetur. Proin nec dui sit amet libero mattis suscipit. Etiam ac convallis dui, quis varius velit. Nam at laoreet lorem. Sed fermentum lectus sed scelerisque placerat. Ut pharetra porta justo, id suscipit orci posuere eget. In accumsan ornare dictum.</p>
     <ul class=" uk-list uk-list-space">
     <% @doctorados.each do |doc| %>
-		  <li><a href=<%= doc.liga %> target="_blank" class="uk-margin-large-bottom uk-link">Licenciatura en <%= doc.titulo %></a></li>
+		  <li class="uk-link">Doctorado en en <%= doc.titulo %></li>
 		<% end %>
     </ul>
     </div>

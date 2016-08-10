@@ -13,6 +13,7 @@
 				<li style="list-style-type:none; margin-bottom:5px;"><%= link_to image_tag('bt-flechita.png', :class => "leave_img") + image_tag("bt-flechita-hover.png", :class => "hover_img") + t('sobre.autoridades.presidencia'), presidencia_path, :remote => true, :class => "link-sobre", :id => "presidencia-link" %></li>
 				<li style="list-style-type:none; margin-bottom:5px;"><%= link_to image_tag('bt-flechita.png', :class => "leave_img") + image_tag("bt-flechita-hover.png", :class => "hover_img") + t('sobre.autoridades.centros'), centros_autoridades_path, :remote => true, :class => "link-sobre", :id => "centros-link" %></li>
 				<li style="list-style-type:none; margin-bottom:5px;"><%= link_to image_tag('bt-flechita.png', :class => "leave_img") + image_tag("bt-flechita-hover.png", :class => "hover_img") + t('sobre.autoridades.admin'), administracion_path, :remote => true, :class => "link-sobre", :id => "administracion-link" %></li>
+				<li style="list-style-type:none; margin-bottom:5px;"><%= link_to image_tag('bt-flechita.png', :class => "leave_img") + image_tag("bt-flechita-hover.png", :class => "hover_img") + t('sobre.autoridades.biblioteca'), biblioteca_path, :remote => true, :class => "link-sobre", :id => "biblioteca-link" %></li>
 				<li style="list-style-type:none; margin-bottom:25px;"><%= link_to image_tag('bt-flechita.png', :class => "leave_img") + image_tag("bt-flechita-hover.png", :class => "hover_img") + t('sobre.autoridades.operativas'), operativas_path, :remote => true, :class => "link-sobre", :id => "operativas-link" %></li>
     </ul>
     <!--          Aquí termina el menú pequeño          -->
@@ -20,7 +21,7 @@
     <div class="uk-width-large-3-5">
 			<span class="titulo-grande morado" id="titulo-render"><%= t('sobre.autoridades.asamblea') %></span>
 			<div id="autoridades-render">
-				<%= render "sobre_el_colegio/asamblea" %>
+				<%= render "informacion_general/asamblea" %>
 			</div>
 		</div>
 		</div>
