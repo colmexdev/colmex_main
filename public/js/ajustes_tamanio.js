@@ -37,6 +37,8 @@ $(document).scroll(function() {
   var y = $(this).scrollTop();
   var ancho_act = Math.max(document.documentElement.clientWidth, window.innerWidth || document.body.ClientWidth || 0);
   if (y > 300) {
+	$("#contenedor_nav").css("height", "60px");
+	$("#barra_nav").css({"height":"100%","background-color":"#fff"});
 	$("#div_logo").css("display", "none");
 	$("#div_menu").css("display", "none");
 	$("#logo-main").css("display", "block");
