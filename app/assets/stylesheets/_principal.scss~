@@ -123,7 +123,109 @@ html, body{ height: 100%; }
 	.borrable-500 { display: block; }
 }
 
-#header-links { display: none; }
+#header-links { 
+	display: none;
+
+	.botones{
+		overflow: visible;
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+		height: 100%;
+		background-color: #E6E6E6;
+		z-index: 9999;
+
+		.dropdown, .no-dropdown{
+			float: left;
+			margin: 0 1px;
+			background-color: #E6E6E6;
+			text-align: center;
+			height: 100%;
+			position: relative;
+			width: calc(20% - 2px);
+			width: -moz-calc(20% - 2px);
+			width: -webkit-calc(20% - 2px);
+			-moz-transition: all 0.3s linear;
+			-ms-transition: all 0.3s linear;
+			-webkit-transition: all 0.3s linear;
+			-o-transition: all 0.3s linear;
+			transition: all 0.3s linear;
+			
+			a{
+				display: inline-block;
+				text-decoration: none;
+				color: #7F7F7F;
+				width: 100%;
+				height: 100%;
+				
+				span{
+					width: 100%;
+					@include centrado;
+				}
+			}
+
+			.dropdown-menu{
+				opacity: 0;
+				display:block;
+				height: 0;
+				background-color: #E6E6E6;
+				text-align: left;
+				padding: 0;
+				border-radius: 0px;
+				border: none;
+				margin: 0;
+				min-width: 100%;
+				overflow: hidden;
+				-moz-transition: all 0.5s linear;
+				-ms-transition: all 0.5s linear;
+				-webkit-transition: all 0.5s linear;
+				-o-transition: all 0.5s linear;
+				transition: all 0.5s linear;
+				
+        li{
+					opacity: 1;
+					-moz-transition: all 0.4s linear;
+					-ms-transition: all 0.4s linear;
+					-webkit-transition: all 0.4s linear;
+					-o-transition: all 0.4s linear;
+					transition: all 0.4s linear;
+
+          a{
+						background-color: #E6E6E6;
+						padding: 10px;
+						color: #7F7F7F;
+						font-size: 17px;
+						font-weight: 600;
+						-moz-transition: all 0.4s linear;
+						-ms-transition: all 0.4s linear;
+						-webkit-transition: all 0.4s linear;
+						-o-transition: all 0.4s linear;
+						transition: all 0.4s linear;
+          }
+
+          a:hover{
+        
+            background-color: #470020;
+          }
+        }
+
+				li:hover{ opacity: 1; }
+			}
+		}
+
+		.dropdown:hover, .no-dropdown:hover{
+			background-color: #9E9E9E;
+		}
+
+		.dropdown:hover .dropdown-menu{
+			display: block;
+			opacity: 1;
+			height: auto;
+			overflow: visible;
+		}
+	}
+
+}
 
 #barra_nav{
 	background-color: #E6E6E6;
@@ -410,9 +512,8 @@ ul.ul-nav { display: table; float: left !important;
 }
 
 //Clase para alterar el div donde van los botones del menú
-#div_menu{ height: 54px; }
-
-#div_menu, #barra_nav{
+#div_menu{ 
+	height: 54px;
 
 	.botones{
 		overflow: visible;
