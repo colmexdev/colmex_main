@@ -332,9 +332,9 @@
                 var id, matches, resolve = function(id, width, height) {
 
                     data.meta = {
-                        'content': '<iframe src="//www.youtube.com/embed/'+id+'" width="'+(window.innerWidth*0.95 > 1300 ? 1300 : window.innerWidth * 0.95) /*width*/+'" height="'+/*height*/(window.innerWidth*0.95 > 1300 ? 1300*9/16 : window.innerWidth * 0.95 * 9 / 16)+'" style="max-width:100%;"'+(modal.lightbox.options.allowfullscreen?' allowfullscreen':'')+'></iframe>',
-                        'width': /*width*/(window.innerWidth*0.95 > 1300 ? 1300 : window.innerWidth * 0.95),
-                        'height': /*height*/(window.innerWidth*0.95 > 1300 ? 1300*9/16 : window.innerWidth * 0.95 * 9 / 16)
+                        'content': '<iframe src="//www.youtube.com/embed/'+id+'" width="'+Math.floor((window.innerWidth*0.95 > 1390 ? 1390 : window.innerWidth * 0.95)) /*width*/+'" height="'+/*height*/Math.floor((window.innerWidth*0.95 > 1390 ? 1390*9/16 : window.innerWidth * 0.95 * 9 / 16))+'" style="max-width:100%;"'+(modal.lightbox.options.allowfullscreen?' allowfullscreen':'')+'></iframe>',
+                        'width': /*width*/Math.floor((window.innerWidth*0.95 > 1390 ? 1390 : window.innerWidth * 0.95)),
+                        'height': /*height*/Math.floor((window.innerWidth*0.95 > 1390 ? 1390*9/16 : window.innerWidth * 0.95 * 9 / 16))
                     };
 
                     data.type = 'iframe';
