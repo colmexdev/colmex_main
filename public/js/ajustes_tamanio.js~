@@ -58,7 +58,7 @@ $(document).scroll(function() {
 	  $("#header-links").css("display", "none");
 	}
   } else {
-	$("#contenedor-nav").removeAttr("style");
+	$("#contenedor_nav").removeAttr("style");
 	$(".reajustable").removeAttr("style");
 	$("#logo-main").removeAttr("style");
 	$("#div_logo").removeAttr("style");
