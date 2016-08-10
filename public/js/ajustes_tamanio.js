@@ -157,7 +157,6 @@ function partirDescubres(){
 	else{
 		$("#cutter-descubre").css("display","none");
 	}
-
 }
 
 function desbordarDescubres(){
