@@ -236,7 +236,7 @@ function escalarLightbox(){
 	var ancho_lightbox = $(".uk-modal-dialog-lightbox").width();
 	var alto_lightbox = ancho_lightbox * 9 / 16;
 	$(".uk-modal-dialog-lightbox").css("height",alto_lightbox+"px");
-	$(".uk-modal-dialog-lightbox iframe").attr("height",alto_lightbox+"px").attr("width":ancho_lightbox+"px");
+	$(".uk-modal-dialog-lightbox iframe").attr("height",alto_lightbox+"px").attr("width",ancho_lightbox+"px");
 }
 
 
