@@ -53,6 +53,8 @@ $(document).scroll(function() {
 	else{
 	  $(".mail").removeAttr("style");
 	  $(".intranet").removeAttr("style");
+	  $(".mail").css("line-height","60px");
+	  $(".intranet").css("line-height","60px");
 	  $(".borrable").removeAttr("style");
 	  $(".navbar-right").removeAttr("style");;
 	  $("#header-links").css("display", "none");
@@ -104,9 +106,9 @@ window.onresize = function(){
 }
 
 function ajustarCuerpo(){
-	var alto_footer = $('#div_footer').height();
-	var alto_header = $('#header').height();
-	$('#resto-cuerpo').css({'padding-bottom': alto_footer+'px', 'padding-top': alto_header+'px'});
+	var alto_footer = document.getElementById('div_footer').clientHeight;
+	var alto_header = document.getElementById('header').clientHeight;
+	$('#resto-cuerpo').css({'padding-bottom': (alto_footer+1)+'px', 'padding-top': (alto_header-1.5)+'px'});
 }
 
 function recabarAnchos(){
@@ -229,6 +231,11 @@ function ajustarImagenes(){
 	}
 }
 
+function escalarLightbox(){
+	var ancho_lightbox = $(".uk-modal-dialog-lightbox iframe").width();
+	var alto_lightbox = ancho_lightbox * 9 / 16;
+	$(".uk-modal-dialog-lightbox iframe").css("height",alto_lightbox+"px");
+}
 
 
 function clone(obj) {
