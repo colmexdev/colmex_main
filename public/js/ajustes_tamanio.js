@@ -38,7 +38,7 @@ $(document).scroll(function() {
   var ancho_act = Math.max(document.documentElement.clientWidth, window.innerWidth || document.body.ClientWidth || 0);
   if (y > 300) {
 	$("#contenedor_nav").css({"height":"60px","background-color":"#fff","-webkit-box-shadow":"1px 1px 5px 3px rgba(0,0,0,0.3)","-moz-box-shadow":"1px 1px 5px 3px rgba(0,0,0,0.3)","box-shadow":"1px 1px 5px 3px rgba(0,0,0,0.3)"});
-	$("#barra_nav").css({"height":"100%","background-color":"#fff", "width":"65%","margin": "0 auto"});
+	$("#barra_nav").css({"height":"100%","background-color":"#fff", "width":"85%","margin": "0 auto"});
 	$("#div_logo").css("display", "none");
 	$("#div_menu").css("display", "none");
 	$(".reajustable").css("display","inline-block");
@@ -48,7 +48,7 @@ $(document).scroll(function() {
 	  $(".intranet").css("display","none");	
 	  $(".borrable").css("display","none");
 	  $(".navbar-right").css("display","none");
-	  $("#header-links").css({"display":"inline-block", "background-color":"#fff", "padding-left":"50px" });
+	  $("#header-links").css({"display":"inline-block", "background-color":"#fff", "padding-left":"50px","float":"right" });
 	}
 	else{
 	  $(".mail").removeAttr("style");
