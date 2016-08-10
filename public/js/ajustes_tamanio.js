@@ -51,6 +51,8 @@ $(document).scroll(function() {
 	  $("#header-links").css({"display":"inline-block", "background-color":"#fff", "padding-left":"50px","float":"left" });
 	}
 	else{
+	  $("#logo-main").css("padding-left", "10px");
+	  $("#menu").css("line-height","60px");
 	  $("#barra_nav").css("width","100%");
 	  $(".mail").removeAttr("style");
 	  $(".intranet").removeAttr("style");
@@ -61,6 +63,7 @@ $(document).scroll(function() {
 	  $("#header-links").css("display", "none");
 	}
   } else {
+	$("#menu").removeAttr("style");
 	$("#contenedor_nav").removeAttr("style");
 	$("#barra_nav").removeAttr("style");
 	$(".reajustable").removeAttr("style");
