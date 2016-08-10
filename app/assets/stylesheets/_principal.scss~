@@ -230,6 +230,11 @@ html, body{ height: 100%; }
 #barra_nav{
 	background-color: #E6E6E6;
 	border-radius: 0;
+	-webkit-transition: all 0.3s linear;
+	-moz-transition: all 0.3s linear;
+	-o-transition: all 0.3s linear;
+	-ms-transition: all 0.3s linear;
+	transition: all 0.3s linear;
 
 	#logo-main{ 
 		display: none;
