@@ -8,7 +8,7 @@
     <h4><%= c.depto.upcase %></h4>
     <h3 class="vino"><%= c.nombre %></h3>
       <h4><i><%= c.cargo || "" %></i></h4>
-    <p>Correo electrónico: <%= c.correo %></p>
+    <p>Correo electrónico: <a href="mailto:<%= c.correo %>"><%= c.correo %></a></p>
     <p>Teléfono: <%= c.telefono %> Extensión: <%= c.extension %></p>
     </div>
     </div>
