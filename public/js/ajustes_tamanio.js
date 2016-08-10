@@ -43,6 +43,8 @@ $(document).scroll(function() {
 	$("#div_menu").css("display", "none");
 	$(".navbar-right").css("display","none");
 	$(".borrable").css("display","none");
+	$(".mail").css("width","60px");
+	$(".intranet").css("width","60px");	
 	if(ancho_act > 992){
 	  $("#header-links").css({"display":"block", "background-color":"#E6E6E6", "color": "#7F7F7F", "font-size":"13px" });
 	}
@@ -52,6 +54,9 @@ $(document).scroll(function() {
   } else {
 	$("#div_logo").removeAttr("style");
 	$("#div_menu").removeAttr("style");
+	$(".borrable").removeAttr("style");
+	$(".mail").removeAttr("style");
+	$(".intranet").removeAttr("style");
 	$(".navbar-right").removeAttr("style");
 	$("#header-links").removeAttr("style");
 

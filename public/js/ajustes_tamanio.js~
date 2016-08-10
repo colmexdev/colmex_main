@@ -50,10 +50,11 @@ $(document).scroll(function() {
 	  $("#header-links").css("display", "none");
 	}
   } else {
-	$("#div_logo").css("display", "block");
-	$("#div_menu").css("display", "block");
-	$(".navbar-right").css("display","block");
-	$("#header-links").css("display", "none");
+	$("#div_logo").removeAttr("style");
+	$("#div_menu").removeAttr("style");
+	$(".borrable").removeAttr("style");
+	$(".navbar-right").removeAttr("style");
+	$("#header-links").removeAttr("style");
 
   }
 });
