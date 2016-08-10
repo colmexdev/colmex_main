@@ -9,13 +9,13 @@
     <div class="uk-grid uk-grid-large uk-margin-large-bottom">
     <div class="uk-width-large-3-5 uk-text-left">
     <span class="titulo-chico">Licenciaturas</span><br>
-    <p>&nbsp;</p>
+
     <ul class=" uk-list uk-list-space">
 		<% @licenciaturas.each do |lic| %>
-		  <li class="uk-link">Licenciatura en <%= lic.titulo %></li>
+		  <li class="uk-link sin-pointer">Licenciatura en <%= lic.titulo %></li>
 		<% end %>
     </ul>
-		<a href=<%= licenciaturas_path %> class="ver-mas uk-margin-large-bottom uk-button-small">Conoce más más</a>
+		<a href=<%= licenciaturas_path %> class="ver-mas uk-margin-large-bottom uk-button-small">Conoce más</a>
     </div>
     <div class="uk-width-large-2-5">
     <img src=<%= image_url("licenciaturas-chica.jpg") %> alt="Licenciaturas">
@@ -27,25 +27,25 @@
     </div>
     <div class="uk-width-large-3-5 uk-text-left">
     <span class="titulo-chico">Maestrías</span><br>
-    <p>&nbsp;</p>
+
     <ul class=" uk-list uk-list-space">
     <% @maestrias.each do |mt| %>
-		  <li class="uk-link">Maestría en en <%= mt.titulo %></li>
+		  <li class="uk-link sin-pointer">Maestría en en <%= mt.titulo %></li>
 		<% end %>
     </ul>
-	<a href=<%= maestrias_path %> class="ver-mas uk-margin-large-bottom uk-button-small">Conoce más más</a>
+	<a href=<%= maestrias_path %> class="ver-mas uk-margin-large-bottom uk-button-small">Conoce más</a>
     </div>
     </div>
     <div class="uk-grid uk-grid-large uk-margin-large-bottom">
     <div class="uk-width-large-3-5 uk-text-left">
     <span class="titulo-chico">Doctorados</span><br>
-    <p>&nbsp;</p>
+
     <ul class=" uk-list uk-list-space">
     <% @doctorados.each do |doc| %>
-		  <li class="uk-link">Doctorado en en <%= doc.titulo %></li>
+		  <li class="uk-link sin-pointer">Doctorado en en <%= doc.titulo %></li>
 		<% end %>
     </ul>
-		<a href=<%= doctorados_path %> class="ver-mas uk-margin-large-bottom uk-button-small">Conoce más más</a>
+		<a href=<%= doctorados_path %> class="ver-mas uk-margin-large-bottom uk-button-small">Conoce más</a>
     </div>
     <div class="uk-width-large-2-5">
     <img src=<%= image_url("doctorados-chica.jpg") %> alt="Doctorados">
