@@ -3092,9 +3092,9 @@
 
             element.addClass("uk-active");
 
-            $body.css({"width": window.innerWidth - scrollbarwidth, "height": window.innerHeight}).addClass("uk-offcanvas-page");
+            $body.css({"width": /*window.innerWidth - scrollbarwidth*/ $("body").width(), "height": window.innerHeight}).addClass("uk-offcanvas-page");
             $body.css((rtl ? "margin-right" : "margin-left"), (rtl ? -1 : 1) * (bar.width() * dir)).width(); // .width() - force redraw
-	    console.log("ancho barra: " + bar.width() + "; ancho cuerpo: " + ($body.width() - scrollbarwidth) + "scrollPosY: " + scrollpos.y);
+	    console.log("ancho barra: " + bar.width() + "; ancho cuerpo: " + ($body.width() - scrollbarwidth) + " scrollPosY: " + scrollpos.y + " scrollTop: " + $(document).scrollTop());
             $html.css('margin-top', scrollpos.y * -1);
 
             bar.addClass("uk-offcanvas-bar-show");
