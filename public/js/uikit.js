@@ -3126,6 +3126,7 @@
                     window.scrollTo(scrollpos.x, scrollpos.y);
 
 	    	    barra_render = (((scrollpos.y > 300 && window.innerHeight > 872) || (scrollpos.y > 100 && window.innerHeight <= 872)) ? true : false );
+		    $(document).trigger("scroll");
 
                     bar.trigger('hide.uk.offcanvas', [panel, bar]);
 

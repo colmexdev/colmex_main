@@ -3124,6 +3124,9 @@
                     $html.removeAttr('style');
 		    $("body").removeAttr("style");
                     window.scrollTo(scrollpos.x, scrollpos.y);
+
+	    	    barra_render = (((scrollpos.y > 300 && window.innerHeight > 872) || (scrollpos.y > 100 && window.innerHeight <= 872)) ? true : false );
+
                     bar.trigger('hide.uk.offcanvas', [panel, bar]);
 
                     // Update ARIA
