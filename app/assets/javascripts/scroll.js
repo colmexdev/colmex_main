@@ -1,7 +1,7 @@
-document.onscroll = function(event, value) {
+$(document).scroll(function(event, value) {
   var y = value;
   var ancho_act = Math.max(document.documentElement.clientWidth, window.innerWidth || document.body.ClientWidth || 0);
-  console.log("argumentos: " + arguments[0] + ", " + arguments[1]);
+  console.log(value);
   if ((y > 300 && window.innerHeight > 872) || (y > 150 && window.innerHeight <= 872)) {
 	$(".reajustable").removeAttr("style");
 	$("#contenedor_nav").css({"min-height":"60px","background-color":"#fff","-webkit-box-shadow":"0 6px 12px rgba(0,0,0,0.175)","-moz-box-shadow":"0 6px 12px rgba(0,0,0,0.175)","box-shadow":"0 6px 12px rgba(0,0,0,0.175)"});
@@ -56,7 +56,7 @@ document.onscroll = function(event, value) {
 	$("#header-links").removeAttr("style");
   }
   ajustarCuerpo();
-}
+});
 
 function ajustarCuerpo(){
 	var alto_footer = document.getElementById('div_footer').clientHeight;
