@@ -1712,10 +1712,24 @@ ul.ul-nav { display: table; float: left !important;
 	}
 }
 
-.uk-modal-dialog-lightbox{
+/*.uk-modal-dialog-lightbox{
 	max-height: 731.25px;
 	max-width: 1390px;
 	width: 95% !important;
+}*/
+
+#boton-top{
+	display: none;
+	position: absolute;
+	bottom: 10px;
+	right: 10px;
+	font-size: 13px;
+	color: #fff;
+	-webkit-transition: all 0.5s linear;
+	-moz-transition: all 0.5s linear;
+	-o-transition: all 0.5s linear;
+	-ms-transition: all 0.5s linear;
+	transition: all 0.5s linear;
 }
 
 

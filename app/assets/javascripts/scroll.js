@@ -26,7 +26,7 @@ $(document).scroll(function() {
 	  }
 	  $("#boton-top").css("display","block");
 	  $("#logo-main").css("padding-left", "10px");
-	  $(".uk-navbar-toggle").css({"line-height":"60px","padding":"0","float":"right"});
+	  $(".uk-navbar-toggle").css({"line-height":"60px","padding":"0","float":"right", "margin-top":"0"});
 	  $("#barra_nav").css("width","100%");
 	  $(".mail").removeAttr("style");
 	  $(".intranet").removeAttr("style");
@@ -37,6 +37,8 @@ $(document).scroll(function() {
 	  $("#header-links").css("display", "none");
 	}
   } else {
+	$(".mail a").removeAttr("style");
+	$(".intranet a").removeAttr("style");
 	$("#boton-top").removeAttr("style");
 	$(".reajustable").removeAttr("style");
 	$(".uk-navbar-toggle").removeAttr("style");

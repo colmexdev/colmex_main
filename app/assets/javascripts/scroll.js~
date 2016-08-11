@@ -26,7 +26,7 @@ $(document).scroll(function() {
 	  }
 	  $("#boton-top").css("display","block");
 	  $("#logo-main").css("padding-left", "10px");
-	  $(".uk-navbar-toggle").css({"line-height":"60px","padding":"0","float":"right"});
+	  $(".uk-navbar-toggle").css({"line-height":"60px","padding":"0","float":"right", "margin-top":"0"});
 	  $("#barra_nav").css("width","100%");
 	  $(".mail").removeAttr("style");
 	  $(".intranet").removeAttr("style");
@@ -61,3 +61,7 @@ function ajustarCuerpo(){
 	$('#resto-cuerpo').css({'padding-bottom': (alto_footer+1)+'px', 'padding-top': (alto_header-1.5)+'px'});
 }
 
+function regresarArriba(){
+	$(document).scrollTop(0);
+	$(document).trigger("scroll");
+}
