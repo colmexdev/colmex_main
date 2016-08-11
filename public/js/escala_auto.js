@@ -3,7 +3,6 @@ $(document).ready(function(){
 });
 
 window.onresize = function(){
-	console.log(valor + "Algo");
 	$(document).trigger("scroll", [$(document).scrollTop()]);
 }
 
