@@ -3093,9 +3093,9 @@
             element.addClass("uk-active");
 
             $body.css({"width": window.innerWidth - scrollbarwidth, "height": window.innerHeight}).addClass("uk-offcanvas-page");
-            $body.css((rtl ? "margin-right" : "margin-left"), (rtl ? -1 : 1) * (bar.width() * 0.95 * dir)).width(); // .width() - force redraw
+            $body.css((rtl ? "margin-right" : "margin-left"), (rtl ? -1 : 1) * (bar.width() * 0.9 * dir)).width(); // .width() - force redraw
 
-            $html.css('margin-top', scrollpos.y * -1);
+            $html.css('padding-top', scrollpos.y * -1);
 
 	    console.log("Intentando forzar menú con scrollTop: " + scrollpos.y);
 	    $(document).trigger("scroll",[scrollpos.y]);
