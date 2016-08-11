@@ -1671,14 +1671,14 @@ ul.ul-nav { display: table; float: left !important;
   @media only screen and (min-width: 0px) and (max-width: 1160px){
 		#footer_der, #footer_izq { 
 			.links { 
-				font-size: 13px; 
+				font-size: 11px; 
 			} 
 		}
 	} 
 
-	@media only screen and (max-width: 991px) and (min-width: 0px){
+	@media only screen and (max-width: 991px){
 		#footer_izq { display: none; }
-		#footer_centro { border: none; height: auto; >p { margin: 0 auto; font-size: 11px;} }
+		#footer_centro { border: none; height: auto; >p { margin: 0 auto; font-size: 9px;} }
 		#footer_der { 
 			height: auto;
 			padding-left: 0;
@@ -1711,12 +1711,6 @@ ul.ul-nav { display: table; float: left !important;
 		}	
 	}
 }
-
-/*.uk-modal-dialog-lightbox{
-	max-height: 731.25px;
-	max-width: 1390px;
-	width: 95% !important;
-}*/
 
 #boton-top{
 	display: none;

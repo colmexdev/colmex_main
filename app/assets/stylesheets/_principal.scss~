@@ -1676,9 +1676,9 @@ ul.ul-nav { display: table; float: left !important;
 		}
 	} 
 
-	@media only screen and (max-width: 991px) and (min-width: 0px){
+	@media only screen and (max-width: 991px){
 		#footer_izq { display: none; }
-		#footer_centro { border: none; height: auto; >p { margin: 0 auto; font-size: 11px;} }
+		#footer_centro { border: none; height: auto; >p { margin: 0 auto; font-size: 9px;} }
 		#footer_der { 
 			height: auto;
 			padding-left: 0;
@@ -1712,12 +1712,6 @@ ul.ul-nav { display: table; float: left !important;
 	}
 }
 
-/*.uk-modal-dialog-lightbox{
-	max-height: 731.25px;
-	max-width: 1390px;
-	width: 95% !important;
-}*/
-
 #boton-top{
 	display: none;
 	position: absolute;
@@ -1725,6 +1719,7 @@ ul.ul-nav { display: table; float: left !important;
 	right: 10px;
 	font-size: 13px;
 	color: #fff;
+	cursor: pointer;
 	-webkit-transition: all 0.5s linear;
 	-moz-transition: all 0.5s linear;
 	-o-transition: all 0.5s linear;
