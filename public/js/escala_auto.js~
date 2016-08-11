@@ -1,9 +1,9 @@
 $(document).ready(function(){
-	$(document).trigger("scroll", [$(document).scrollTop()]);
+	$(document).trigger("scroll", $(document).scrollTop());
 });
 
 window.onresize = function(){
-	$(document).trigger("scroll", [$(document).scrollTop()]);
+	$(document).trigger("scroll", $(document).scrollTop());
 }
 
 $(window).on("orientationchange",function(){

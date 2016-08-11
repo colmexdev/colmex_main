@@ -1,9 +1,11 @@
 $(document).ready(function(){
-	$(document).trigger("scroll", $(document).scrollTop());
+	var valor = $(document).scrollTop();
+	$(document).trigger("scroll", [valor]);
 });
 
 window.onresize = function(){
-	$(document).trigger("scroll", $(document).scrollTop());
+	var valor = $(document).scrollTop();
+	$(document).trigger("scroll", [valor]);
 }
 
 $(window).on("orientationchange",function(){
