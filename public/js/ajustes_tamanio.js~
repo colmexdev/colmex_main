@@ -52,7 +52,12 @@ $(document).scroll(function() {
 	  $("#header-links").css({"display":"inline-block", "background-color":"#fff", "padding-left":"50px","float":"left" });
 	}
 	else{
-	  $(".reajustable").css("width","100%");
+	  if(ancho_act < 768){
+	 	 $(".reajustable").css("width","100%");
+	  }
+	  else{
+	  	 $(".reajustable").removeAttr("style");
+	  }
 	  $("#logo-main").css("padding-left", "10px");
 	  $(".uk-navbar-toggle").css({"line-height":"60px","padding":"0","float":"right"});
 	  $("#barra_nav").css("width","100%");

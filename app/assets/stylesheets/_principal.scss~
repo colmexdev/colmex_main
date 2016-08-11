@@ -110,7 +110,7 @@ html, body{ height: 100%; }
 
 #contenedor_nav{
 	padding: 0;
-	height: 40px;
+	min-height: 40px;
 }
 
 .navbar { border-radius: 0; margin-bottom: 0; min-height: 40px; }

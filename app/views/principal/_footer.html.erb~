@@ -3,7 +3,7 @@
 		<!-- <div class="col-md-12" id="div_footer">  <!-- Columnas para footer -->
 			<div class="col-xs-12 col-md-2" id="footer_izq">
 				<ul class="links">
-					<li><a href="<%= informacion_general_path %>"><%= t('botones.b1.texto2') %></a></li>
+					<li><a href="<%= sobre_el_colegio_path %>"><%= t('botones.b1.texto2') %></a></li>
 					<li><a href="<%= centros_de_estudio_path %>"><%= t('botones.b2.texto') %></a></li>
 					<li><a href="<%= programas_academicos_path %>"><%= t('botones.b3.texto') %></a></li>
 					<li><a href="http://biblioteca.colmex.mx/" target="_blank"><%= t('botones.b4') %></a></li>
@@ -42,6 +42,10 @@ https://www.youtube.com/c/elcolegiodemexicociudaddemexico", :target => "_blank" 
 				<%= link_to image_tag("instagram-bco.png", :class => "img_net"), "https://www.instagram.com/elcolmex/", :target => "_blank" %>
 				
 			</ul>
+
+			<div id="boton-top" onclick="regresarArriba()">
+				Regresar arriba
+			</div>
 		</div> <!-- Cierre de columnas para redes sociales en footer -->
 
 	</div> <!-- Cierre de fila para footer -->
