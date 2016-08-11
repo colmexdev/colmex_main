@@ -1663,12 +1663,20 @@ ul.ul-nav { display: table; float: left !important;
 		p{ text-align: center; margin: 15px 15px; font-size: 15px; }
 	}
 
-  @media only screen and (min-width: 0px) and (max-width: 1460px){
+  @media only screen and (max-width: 1460px){
 		#footer_der, #footer_izq, #footer_centro { height: 200px; }
 		#footer_centro { font-size: 13px;}
 	}
 
-  @media only screen and (min-width: 0px) and (max-width: 1160px){
+  @media only screen and (min-width: 982px) and (max-width: 1160px){
+		#footer_der, #footer_izq { 
+			.links { 
+				font-size: 11px; 
+			} 
+		}
+	} 
+
+  @media only screen and (max-width: 982px){
 		#footer_der, #footer_izq { 
 			.links { 
 				font-size: 9px; 

@@ -37,6 +37,8 @@ $(document).scroll(function() {
 	  $("#header-links").css("display", "none");
 	}
   } else {
+	$(".mail a").removeAttr("style");
+	$(".intranet a").removeAttr("style");
 	$("#boton-top").removeAttr("style");
 	$(".reajustable").removeAttr("style");
 	$(".uk-navbar-toggle").removeAttr("style");
