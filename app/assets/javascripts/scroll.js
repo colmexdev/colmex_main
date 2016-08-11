@@ -1,5 +1,5 @@
 $(document).scroll(function(event, value) {
-  var y = value;
+  var y = value || $(this).scrollTop();
   var ancho_act = Math.max(document.documentElement.clientWidth, window.innerWidth || document.body.ClientWidth || 0);
   console.log(value);
   if ((y > 300 && window.innerHeight > 872) || (y > 150 && window.innerHeight <= 872)) {
@@ -66,5 +66,5 @@ function ajustarCuerpo(){
 
 function regresarArriba(){
 	$(document).scrollTop(0);
-	$(document).trigger("scroll");
+	$(document).trigger("scroll", [$(document).scrollTop()]);
 }
