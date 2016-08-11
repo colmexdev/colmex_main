@@ -147,7 +147,7 @@ function desbordarDescubres(){
 	if($("#wrapper").height() >= altura_real){
 		setTimeout(function(){
 			$("#wrapper").css("height","auto");
-		}, 501);
+		}, 601);
 	}
 	$("#cutter-descubre").css("display", $("#wrapper").height() + (alto_d * 2) >= altura_real  ? "none" : "block");
 
