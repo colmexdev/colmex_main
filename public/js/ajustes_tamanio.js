@@ -31,7 +31,7 @@ $(document).ready(function(){
 	partirDescubres();
 	margenAuto();
 	ajustarImagenes();
-	barra_render = (!(($(document).scrollTop() > 300 && window.innerHeight > 872) || ($(document).scrollTop() > 150 && window.innerHeight <= 872)) ? false : true );
+	barra_render = ((($(document).scrollTop() > 300 && window.innerHeight > 872) || ($(document).scrollTop() > 150 && window.innerHeight <= 872)) ? true : false );
 	$(document).trigger("scroll");
 });
 
@@ -65,7 +65,7 @@ window.onresize = function(){
 	if($(".uk-modal").css("display") =="block"){
 		escalarLightbox();
 	}
-	barra_render = (!(($(document).scrollTop() > 300 && window.innerHeight > 872) || ($(document).scrollTop() > 150 && window.innerHeight <= 872)) ? false : true );
+	barra_render = ((($(document).scrollTop() > 300 && window.innerHeight > 872) || ($(document).scrollTop() > 150 && window.innerHeight <= 872)) ? true : false );
 	$(document).trigger("scroll");
 }
 
