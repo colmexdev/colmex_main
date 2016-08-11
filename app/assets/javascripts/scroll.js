@@ -55,6 +55,7 @@ $(document).on("scroll", function(event) {
 	$(".navbar-right").removeAttr("style");
 	$("#header-links").removeAttr("style");
   }
+  barra_render = false;
   ajustarCuerpo();
 });
 
