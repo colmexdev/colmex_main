@@ -1,7 +1,6 @@
 $(document).on("scroll", function(event) {
   var y = $(this).scrollTop();
   var ancho_act = Math.max(document.documentElement.clientWidth, window.innerWidth || document.body.ClientWidth || 0);
-
   if ((y > 300 && window.innerHeight > 872) || (y > 150 && window.innerHeight <= 872) || barra_render) {
 	barra_render = true;
 	$(".reajustable").removeAttr("style");
@@ -39,7 +38,6 @@ $(document).on("scroll", function(event) {
 	  $("#header-links").css("display", "none");
 	}
   } else {
-	barra_render = false;
 	$(".mail a").removeAttr("style");
 	$(".intranet a").removeAttr("style");
 	$("#boton-top").removeAttr("style");
@@ -57,6 +55,7 @@ $(document).on("scroll", function(event) {
 	$(".navbar-right").removeAttr("style");
 	$("#header-links").removeAttr("style");
   }
+  barra_render = false;
   ajustarCuerpo();
 });
 
