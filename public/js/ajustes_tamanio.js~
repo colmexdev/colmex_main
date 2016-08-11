@@ -63,7 +63,7 @@ window.onresize = function(){
 	if($(".uk-modal").css("display") =="block"){
 		escalarLightbox();
 	}
-	$(document).trigger("scroll");
+	$(document).trigger("scroll",[$(document).scrollTop()]);
 }
 
 function recabarAnchos(){
