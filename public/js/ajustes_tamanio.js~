@@ -64,7 +64,7 @@ $(document).scroll(function() {
 	  $("#header-links").css("display", "none");
 	}
   } else {
-	$(".reajustable").removeAttr("css");
+	$(".reajustable").removeAttr("style");
 	$(".uk-navbar-toggle").removeAttr("style");
 	$("#contenedor_nav").removeAttr("style");
 	$("#barra_nav").removeAttr("style");
