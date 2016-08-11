@@ -1,7 +1,7 @@
 $(document).on("scroll", function(event) {
   var y = $(this).scrollTop();
   var ancho_act = Math.max(document.documentElement.clientWidth, window.innerWidth || document.body.ClientWidth || 0);
-  console.log(value);
+
   if ((y > 300 && window.innerHeight > 872) || (y > 150 && window.innerHeight <= 872) || barra_render) {
 	barra_render = true;
 	$(".reajustable").removeAttr("style");
