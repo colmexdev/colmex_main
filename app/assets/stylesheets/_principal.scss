@@ -1668,7 +1668,7 @@ ul.ul-nav { display: table; float: left !important;
 		#footer_centro { font-size: 13px;}
 	}
 
-  @media only screen and (min-width: 982px) and (max-width: 1160px){
+  @media only screen and (min-width: 682px) and (max-width: 1160px){
 		#footer_der, #footer_izq { 
 			.links { 
 				font-size: 11px; 
@@ -1676,7 +1676,7 @@ ul.ul-nav { display: table; float: left !important;
 		}
 	} 
 
-  @media only screen and (max-width: 982px){
+  @media only screen and (max-width: 682px){
 		#footer_der, #footer_izq { 
 			.links { 
 				font-size: 9px; 
