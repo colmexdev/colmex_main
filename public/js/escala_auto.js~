@@ -1,3 +1,5 @@
+barra_render = false;
+
 $(document).ready(function(){
 	$(document).trigger("scroll");
 });
