@@ -1,9 +1,8 @@
 $(document).on("scroll", function(event) {
   var y = $(this).scrollTop();
   var ancho_act = Math.max(document.documentElement.clientWidth, window.innerWidth || document.body.ClientWidth || 0);
-  console.log(barra_render);
+  console.log("Dentro de scroll: " +barra_render);
   if ((y > 300 && window.innerHeight > 872) || (y > 100 && window.innerHeight <= 872) || barra_render) {
-        barra_render = false;
 	$(".reajustable").removeAttr("style");
 	$("#contenedor_nav").css({"min-height":"60px","background-color":"#fff","-webkit-box-shadow":"0 6px 12px rgba(0,0,0,0.175)","-moz-box-shadow":"0 6px 12px rgba(0,0,0,0.175)","box-shadow":"0 6px 12px rgba(0,0,0,0.175)"});
 	$("#barra_nav").css({"height":"100%","background-color":"#fff", "width":"85%","margin": "0 auto"});
@@ -39,6 +38,7 @@ $(document).on("scroll", function(event) {
 	  $("#header-links").css("display", "none");
 	}
   } else {
+        barra_render = false;
 	$(".mail a").removeAttr("style");
 	$(".intranet a").removeAttr("style");
 	$("#boton-top").removeAttr("style");
