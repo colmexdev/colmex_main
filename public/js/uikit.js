@@ -3097,6 +3097,7 @@
 	    console.log("ancho barra: " + bar.width() + "; ancho cuerpo: " + ($body.width() - scrollbarwidth) + " scrollPosY: " + scrollpos.y + " scrollTop: " + $(document).scrollTop());
             $html.css('margin-top', scrollpos.y * -1);
 
+	    console.log("new scrollPosY: " + scrollpos.y + " scrollTop: " + $(document).scrollTop());
             bar.addClass("uk-offcanvas-bar-show");
 
             this._initElement(element);
