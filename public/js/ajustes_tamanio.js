@@ -111,7 +111,9 @@ function partirDescubres(){
 
 	altura_wrapper = document.getElementById("wrapper").clientHeight;
 	if($("#wrapper").height() >= altura_real){
-		$("#wrapper").css("height","auto");
+		setTimeout(function(){
+			$("#wrapper").css("height","auto");
+		}, 501);
 	}
 
 	if(((json_l > 10 && ancho_v >= 1200 ) || (json_l > 8 && ancho_v >= 992 && ancho_v < 1200) || (json_l > 6 && ancho_v >= 768 && ancho_v < 992) || (json_l >4 && ancho_v >= 480 && ancho_v < 768) || (json_l > 2 && ancho_v < 480)) && $("#cutter-descubre").css("display") != "none"){
@@ -143,7 +145,9 @@ function desbordarDescubres(){
 	$("#wrapper").css({"height" : (($("#wrapper").height() + (alto_d * 2) > (alto_d * cantidad_filas) || document.getElementById("wrapper").style.height == "auto" ) ? altura_real + "px" : (alto_d * num_filas) + "px")});
 
 	if($("#wrapper").height() >= altura_real){
-		$("#wrapper").css("height","auto");
+		setTimeout(function(){
+			$("#wrapper").css("height","auto");
+		}, 501);
 	}
 	$("#cutter-descubre").css("display", $("#wrapper").height() + (alto_d * 2) >= altura_real  ? "none" : "block");
 
