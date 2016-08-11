@@ -1,5 +1,5 @@
 $(document).ready(function(){
-	$(document).trigger("scroll");
+	$(document).trigger("scroll", [$(document).scrollTop()]);
 });
 
 window.onresize = function(){
