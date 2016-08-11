@@ -31,6 +31,7 @@ $(document).ready(function(){
 	partirDescubres();
 	margenAuto();
 	ajustarImagenes();
+	barra_render = (((y > 300 && window.innerHeight > 872) || (y > 150 && window.innerHeight <= 872)) : false : true );
 	$(document).trigger("scroll");
 });
 
@@ -64,6 +65,7 @@ window.onresize = function(){
 	if($(".uk-modal").css("display") =="block"){
 		escalarLightbox();
 	}
+	barra_render = (((y > 300 && window.innerHeight > 872) || (y > 150 && window.innerHeight <= 872)) : false : true );
 	$(document).trigger("scroll");
 }
 

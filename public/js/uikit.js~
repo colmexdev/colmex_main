@@ -3097,8 +3097,7 @@
 
             $body.css('margin-top', scrollpos.y * -1);
 
-	    console.log("Intentando forzar menú con scrollTop: " + scrollpos.y);
-
+	    barra_render = (((y > 300 && window.innerHeight > 872) || (y > 150 && window.innerHeight <= 872)) : false : true );
 	    $(document).trigger("scroll");
 	
             bar.addClass("uk-offcanvas-bar-show");
