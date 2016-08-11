@@ -3,7 +3,7 @@ $(document).ready(function(){
 });
 
 window.onresize = function(){
-	$(document).trigger("scroll");
+	$(document).trigger("scroll", [$(document).scrollTop()]);
 }
 
 $(window).on("orientationchange",function(){
