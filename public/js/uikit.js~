@@ -3097,7 +3097,7 @@
 
             $body.css('margin-top', scrollpos.y * -1);
 
-	    barra_render = (((scrollpos.y > 300 && window.innerHeight > 872) || (scrollpos.y > 150 && window.innerHeight <= 872)) ? false : true );
+	    barra_render = (((scrollpos.y > 300 && window.innerHeight > 872) || (scrollpos.y > 100 && window.innerHeight <= 872)) ? false : true );
 	    $(document).trigger("scroll");
 	
             bar.addClass("uk-offcanvas-bar-show");
