@@ -3122,6 +3122,7 @@
 
                     bar.removeClass("uk-offcanvas-bar-show");
                     $html.removeAttr('style');
+		    $("body").removeAttr("style");
                     window.scrollTo(scrollpos.x, scrollpos.y);
                     bar.trigger('hide.uk.offcanvas', [panel, bar]);
 
