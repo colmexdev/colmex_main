@@ -3095,10 +3095,11 @@
             $body.css({"width": window.innerWidth - scrollbarwidth, "height": window.innerHeight}).addClass("uk-offcanvas-page");
             $body.css((rtl ? "margin-right" : "margin-left"), (rtl ? -1 : 1) * (bar.width() * 0.9 * dir)).width(); // .width() - force redraw
 
-            $html.css('padding-top', scrollpos.y * -1);
+            $body.css('margin-top', scrollpos.y * -1);
 
 	    console.log("Intentando forzar menú con scrollTop: " + scrollpos.y);
-	    $(document).trigger("scroll",[scrollpos.y]);
+	    scroll = scrollpos.y;
+	    $(document).trigger("scroll");
 	
             bar.addClass("uk-offcanvas-bar-show");
 

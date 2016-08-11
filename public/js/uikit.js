@@ -3098,7 +3098,8 @@
             $body.css('margin-top', scrollpos.y * -1);
 
 	    console.log("Intentando forzar menú con scrollTop: " + scrollpos.y);
-	    $(document).trigger("scroll",[scrollpos.y]);
+
+	    $(document).trigger("scroll");
 	
             bar.addClass("uk-offcanvas-bar-show");
 

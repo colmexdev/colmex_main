@@ -6,6 +6,7 @@ descubresPorContenido = dataset.dimension(function(d){ return d.contenido; });
 descubresPorTags = dataset.dimension(function(d){ return (d.titulo + " " + d.contenido + " " + d.tags.replace(/ *, */, " ")).replace(/ +/, " ").toLowerCase()});
 num_filas = 2;
 anchos_badges =[];
+barra_render = false;
 
 $(document).on('page:load', function(){ UIkit.init(); })
 
@@ -30,7 +31,7 @@ $(document).ready(function(){
 	partirDescubres();
 	margenAuto();
 	ajustarImagenes();
-	$(document).trigger("scroll", [$(document).scrollTop()]);
+	$(document).trigger("scroll");
 });
 
 $(window).on("orientationchange", function(){
@@ -63,7 +64,7 @@ window.onresize = function(){
 	if($(".uk-modal").css("display") =="block"){
 		escalarLightbox();
 	}
-	$(document).trigger("scroll", [$(document).scrollTop()]);
+	$(document).trigger("scroll");
 }
 
 function recabarAnchos(){

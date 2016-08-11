@@ -1,10 +1,9 @@
 $(document).ready(function(){
-	$(document).trigger("scroll", [$(document).scrollTop()]);
+	$(document).trigger("scroll");
 });
 
 window.onresize = function(){
-	console.log(valor + "Algo");
-	$(document).trigger("scroll", [$(document).scrollTop()]);
+	$(document).trigger("scroll");
 }
 
 $(window).on("orientationchange",function(){
