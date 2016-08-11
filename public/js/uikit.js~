@@ -3097,7 +3097,7 @@
 
             $body.css('margin-top', scrollpos.y * -1);
 
-	    barra_render = (((scrollpos.y > 300 && window.innerHeight > 872) || (scrollpos.y > 150 && window.innerHeight <= 872)) ? true : false );
+	    barra_render = (((scrollpos.y > 300 && window.innerHeight > 872) || (scrollpos.y > 150 && window.innerHeight <= 872)) ? false : true );
 	    $(document).trigger("scroll");
 	
             bar.addClass("uk-offcanvas-bar-show");
@@ -3122,6 +3122,7 @@
 
                     bar.removeClass("uk-offcanvas-bar-show");
                     $html.removeAttr('style');
+		    $("body").removeAttr("style");
                     window.scrollTo(scrollpos.x, scrollpos.y);
                     bar.trigger('hide.uk.offcanvas', [panel, bar]);
 
