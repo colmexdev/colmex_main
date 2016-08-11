@@ -1,4 +1,4 @@
-$(document).scroll(function(event, value) {
+$(document).on("scroll", function(event, value) {
   var y = value || $(this).scrollTop();
   var ancho_act = Math.max(document.documentElement.clientWidth, window.innerWidth || document.body.ClientWidth || 0);
   console.log(value);

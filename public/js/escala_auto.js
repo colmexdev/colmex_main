@@ -1,12 +1,10 @@
 $(document).ready(function(){
-	var valor = $(document).scrollTop();
-	$(document).trigger("scroll", [valor]);
+	$(document).trigger("scroll", [$(document).scrollTop()]);
 });
 
 window.onresize = function(){
-	var valor = $(document).scrollTop();
 	console.log(valor + "Algo");
-	$(document).trigger("scroll", [valor]);
+	$(document).trigger("scroll", [$(document).scrollTop()]);
 }
 
 $(window).on("orientationchange",function(){

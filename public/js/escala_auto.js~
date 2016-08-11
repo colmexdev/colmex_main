@@ -5,6 +5,7 @@ $(document).ready(function(){
 
 window.onresize = function(){
 	var valor = $(document).scrollTop();
+	console.log(valor + "Algo");
 	$(document).trigger("scroll", [valor]);
 }
 

@@ -30,8 +30,7 @@ $(document).ready(function(){
 	partirDescubres();
 	margenAuto();
 	ajustarImagenes();
-	var valor = $(document).scrollTop();
-	$(document).trigger("scroll", [valor]);
+	$(document).trigger("scroll", [$(document).scrollTop()]);
 });
 
 $(window).on("orientationchange", function(){
@@ -64,7 +63,6 @@ window.onresize = function(){
 	if($(".uk-modal").css("display") =="block"){
 		escalarLightbox();
 	}
-	var valor = $(document).scrollTop();
 	$(document).trigger("scroll", [$(document).scrollTop()]);
 }
 
