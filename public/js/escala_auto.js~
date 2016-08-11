@@ -6,6 +6,6 @@ window.onresize = function(){
 	$(document).trigger("scroll");
 }
 
-window.on("orientationchange",function(){
+$(window).on("orientationchange",function(){
 	$(window).trigger("resize");
 });

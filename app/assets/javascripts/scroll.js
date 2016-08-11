@@ -1,5 +1,5 @@
-$(document).scroll(function() {
-  var y = $(this).scrollTop();
+$(document).scroll(function(event, value) {
+  var y = value;
   var ancho_act = Math.max(document.documentElement.clientWidth, window.innerWidth || document.body.ClientWidth || 0);
   if ((y > 300 && window.innerHeight > 872) || (y > 150 && window.innerHeight <= 872)) {
 	$(".reajustable").removeAttr("style");
