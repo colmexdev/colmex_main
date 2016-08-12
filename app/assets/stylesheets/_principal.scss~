@@ -233,16 +233,15 @@ html, body{ height: 100%; }
 
 
 #idioma-small-scroll, #idioma-big-scroll{
-.nav_opciones{
-		display: block;
-		float: left;
-		font-weight: 700;
-		font-size: 15px;
-		text-align: center;
-		color: #7F7F7F;
-		position: relative;
-		height: inherit;
-	}	
+	display: none;
+	float: left;
+	font-weight: 700;
+	font-size: 15px;
+	text-align: center;
+	color: #333;
+	position: relative;
+	height: inherit;
+	
 
 	.idioma{
 		width: 100px;
@@ -258,7 +257,7 @@ html, body{ height: 100%; }
 			transition: color 0.4s linear;
 		}
 
-    >.activo{
+    		>.activo{
 			color: #993366;
 			width: 100px / 2.5;
 			
