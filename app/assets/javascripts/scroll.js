@@ -14,6 +14,7 @@ $(document).on("scroll", function(event) {
 	  $(".mail").css("display","none");
 	  $(".intranet").css("display","none");	
 	  $(".borrable").css("display","none");
+	  $(".idioma a").css({ "color" : "#333", "line-height":"60px","float":"right"});
 	  $(".navbar-right").css("display","none");
 	  $("#header-links").css({"display":"inline-block", "background-color":"#fff", "padding-left":"50px","float":"right" });
 	  $("#boton-top").css("display","block");
@@ -30,15 +31,18 @@ $(document).on("scroll", function(event) {
 	  $(".uk-navbar-toggle").css({"line-height":"60px","padding":"0","float":"right", "margin-top":"0"});
 	  $("#barra_nav").css("width","100%");
 	  $(".mail").removeAttr("style");
+	  $(".idioma").removeAttr("style");
 	  $(".intranet").removeAttr("style");
 	  $(".mail a").css("line-height","60px");
 	  $(".intranet a").css("line-height","60px");
+	  $(".idioma a").css({ "color" : "#333", "line-height":"60px","float":"right"});
 	  $(".borrable").removeAttr("style");
 	  $(".navbar-right").removeAttr("style");;
 	  $("#header-links").css("display", "none");
 	}
   } else {
         barra_render = false;
+	$(".idioma a").removeAttr("style");
 	$(".mail a").removeAttr("style");
 	$(".intranet a").removeAttr("style");
 	$("#boton-top").removeAttr("style");
