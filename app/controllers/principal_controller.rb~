@@ -4,7 +4,7 @@ class PrincipalController < ApplicationController
       cliente = TinyTds::Client.new username: 'agendaPRED', password: '@g3NDa#', host: '172.16.40.214', port: '49767'
       @resultado = cliente.execute("USE Agenda")
       @resultado.do
-      @resultado = cliente.execute("SELECT * from dbo.vw_DatosAgenda where fecha_fin < = ?", Date.current)
+      @resultado = cliente.execute("SELECT * from dbo.vw_DatosAgenda where fecha_fin <= ?", Date.current)
       gon.ev_big, gon.ev_small, gon.ev_tiny = construye_slider_eventos(@resultado)
     rescue
       gon.ev_big, gon.ev_small, gon.ev_tiny = "", "" ,""
