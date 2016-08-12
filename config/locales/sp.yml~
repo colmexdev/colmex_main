@@ -66,6 +66,7 @@ sp:
       presidencia: "Presidencia"
       centros: "Centros de estudio"
       admin: "Administración"
+      biblioteca: "Biblioteca"
       operativas: "Áreas operativas"
     documentacion:
       op1: "Actas de la Junta de Gobierno"

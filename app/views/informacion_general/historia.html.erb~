@@ -9,7 +9,7 @@
     <span class="titulo-chico">La historia de</span><br>
     <span class="titulo-grande">El Colegio de México</span>
     </div>
-    <%= image_tag("historia.jpg") %>
+    <%= image_tag("historia.jpg", :style=> "margin-bottom:25px;") %>
     </div>
     <div class="uk-width-large-3-5">
     <p>Para conocer los orígenes de El Colegio de México es necesario referirse a La Casa de España en México (1938-1940). Germen de El Colegio de México, refugio de intelectuales españoles republicanos, origen y logro de grandes obras académicas, renovadora de la cultura mexicana, por derecho propio ocupa un lugar eminente en el desarrollo científico de México. En marzo de 1939, el presidente Lázaro Cárdenas nombró a Alfonso Reyes presidente de La Casa de España y de su patronato. Este patronato quedó definitivamente formado por Eduardo Villaseñor, subsecretario de Hacienda, en representación del Gobierno; Gustavo Baz, rector de la Universidad Nacional; Enrique Arreguín, en nombre de la Secretaría de Educación Pública, y Daniel Cosío Villegas, como secretario del patronato y de La Casa, y segundo de a bordo.</p>
