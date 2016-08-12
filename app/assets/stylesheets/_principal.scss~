@@ -444,7 +444,7 @@ html, body{ height: 100%; }
 		}
 
 		>.inactivo{
-			color: #909090;
+			color: #333;
 			width: 100px / 2.5;
 		}
 
@@ -459,7 +459,7 @@ html, body{ height: 100%; }
 		}
 
 		>a:hover{ color: #993366; }
-	}
+
 }
 
 
