@@ -1351,6 +1351,7 @@ ul.ul-nav { display: table; float: left !important;
 #wrapper-donacion{
 	margin: 0 auto;
 	text-align: center;
+	overflow: hidden;
 }
 
 
@@ -1512,8 +1513,7 @@ ul.ul-nav { display: table; float: left !important;
 
 @media only screen and (min-width: 767px) and (max-width: 1260px){
 	#fundacion-colmex, #video-colmex { height: 380px; }
-  #fundacion-colmex { padding-left: 0; }
-	#div-img-fundacion { max-width: 233px; }
+  	#fundacion-colmex { padding-left: 0; }
 }
 
 @media only screen and (min-width: 0px) and (max-width: 997px){
