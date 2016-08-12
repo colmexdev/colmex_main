@@ -28,7 +28,7 @@ $(document).on("scroll", function(event) {
 	  	$(".reajustable").removeAttr("style");
 
 	  }
-	  if(ancho_act > 1170){
+	  if(ancho_act > 1305){
 		$("#idioma-big-scroll").css("display","block");
 	  	$("#idioma-small-scroll").removeAttr("style");
 	  }

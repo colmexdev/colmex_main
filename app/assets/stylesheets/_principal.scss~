@@ -275,7 +275,7 @@ html, body{ height: 100%; }
 			transition: color 0.4s linear;
 		}
 
-    >.activo{
+    		>.activo{
 			color: #993366;
 			width: 100px / 2.5;
 			
@@ -331,7 +331,43 @@ html, body{ height: 100%; }
 
 	#idioma-small-scroll{ display: none; >a { line-height: 60px; }}
 
-	#idioma-big-scroll { display: none; color: #333; >a { line-height: 60px; } }
+	#idioma-big-scroll { display: none;
+
+	>a{
+			height: inherit;
+			line-height: 60px;
+			padding: 0 15px;
+			-webkit-transition: color 0.4s linear;
+			-moz-transition: color 0.4s linear;
+			-ms-transition: color 0.4s linear;
+			-o-transition: color 0.4s linear;
+			transition: color 0.4s linear;
+		}
+
+    		>.activo{
+			color: #993366;
+			width: 100px / 2.5;
+			
+		}
+
+		>.inactivo{
+			color: #333;
+			width: 100px / 2.5;
+		}
+
+		>.en{
+			display: inline-block;
+			padding-right: 0;
+		}
+
+		>.sp{
+			display: inline-block;
+			padding-left: 0;
+		}
+
+		>a:hover{ color: #993366; }
+
+ 	}
 
 	.mostrable-chico { display: none; float: right;}
 
@@ -406,7 +442,7 @@ html, body{ height: 100%; }
 			.mostrable, .borrable { margin-top: 5px; }
 		}
 		
-		@media only screen and (min-width: 0px) and (max-width: 1170px){
+		@media only screen and (min-width: 0px) and (max-width: 1305px){
 			.mostrable{ display: inline-block; }
 			.borrable{ display: none; }
 		}

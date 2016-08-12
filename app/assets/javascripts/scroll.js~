@@ -17,7 +17,7 @@ $(document).on("scroll", function(event) {
 	  $(".intranet").css("display","none");	
 	  $(".borrable").css("display","none");
 	  $(".navbar-right").css("display","none");
-	  $("#header-links").css({"display":"inline-block", "background-color":"#fff", "padding-left":"50px","float":"right" });
+	  $("#header-links").css({"display":"inline-block", "background-color":"#fff", "padding-left":"0","float":"right" });
 	  $("#boton-top").css("display","block");
 	}
 	else{
