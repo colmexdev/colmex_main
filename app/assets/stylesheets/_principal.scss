@@ -261,7 +261,7 @@ html, body{ height: 100%; }
 		height: inherit;
 	}	
 
-	.idioma{
+	#idioma-top{
 		width: 100px;
 
 		>a{
@@ -424,10 +424,7 @@ html, body{ height: 100%; }
 	color: #333;
 	position: relative;
 	height: inherit;
-	
-
-	.idioma{
-		width: 100px;
+	width: 100px;
 
 		>a{
 			height: inherit;

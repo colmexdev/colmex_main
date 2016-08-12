@@ -12,7 +12,7 @@ $(document).on("scroll", function(event) {
 	if(ancho_act > 1160){
 	  $("#idioma-big-scroll").css("display","block");
 	  $("#idioma-small-scroll").removeAttr("style");
-	  $(".idioma").css("display","none");
+	  $("#idioma-top").css("display","none");
 	  $(".mail").css("display","none");
 	  $(".intranet").css("display","none");	
 	  $(".borrable").css("display","none");
@@ -31,13 +31,12 @@ $(document).on("scroll", function(event) {
 	  	$("#idioma-big-scroll").css("display","block");
 	  	$("#idioma-small-scroll").removeAttr("style");
 	  }
-	  $(".idioma").css("display","none");
+	  $("#idioma-top").css("display","none");
 	  $("#boton-top").css("display","block");
 	  $("#logo-main").css("padding-left", "10px");
 	  $(".uk-navbar-toggle").css({"line-height":"60px","padding":"0","float":"right", "margin-top":"0"});
 	  $("#barra_nav").css("width","100%");
 	  $(".mail").removeAttr("style");
-	  $(".idioma").removeAttr("style");
 	  $(".intranet").removeAttr("style");
 	  $(".mail a").css("line-height","60px");
 	  $(".intranet a").css("line-height","60px");
@@ -49,7 +48,7 @@ $(document).on("scroll", function(event) {
         barra_render = false;
 	$("#idioma-big-scroll").removeAttr("style");
 	$("#idioma-small-scroll").removeAttr("style");
-	$(".idioma").removeAttr("style");
+	$("#idioma-top").removeAttr("style");
 	$(".mail a").removeAttr("style");
 	$(".intranet a").removeAttr("style");
 	$("#boton-top").removeAttr("style");
