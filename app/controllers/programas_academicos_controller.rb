@@ -1,23 +1,23 @@
 class ProgramasAcademicosController < ApplicationController
   def inicio
-    @licenciaturas = Curso.where(:programa => "Licenciatura")
-    @maestrias = Curso.where(:programa => "Maestría")
-    @doctorados = Curso.where(:programa => "Doctorado")
+    @licenciaturas = Curso.where(:programa => "Licenciatura").order(:titulo)
+    @maestrias = Curso.where(:programa => "Maestría").order(:titulo)
+    @doctorados = Curso.where(:programa => "Doctorado").order(:titulo)
   end
 
   def admisiones
   end
 
   def maestrias
-    @maestrias = Curso.where(:programa => "Maestría")  
+    @maestrias = Curso.where(:programa => "Maestría").order(:titulo)
   end
 
   def licenciaturas
-    @licenciaturas = Curso.where(:programa => "Licenciatura")
+    @licenciaturas = Curso.where(:programa => "Licenciatura").order(:titulo)
   end
 
   def doctorados
-    @doctorados = Curso.where(:programa => "Doctorado")
+    @doctorados = Curso.where(:programa => "Doctorado").order(:titulo)
   end
 
   def cursos
