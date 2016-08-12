@@ -7,7 +7,7 @@ class PrincipalController < ApplicationController
       @resultado = cliente.execute("SELECT * from dbo.vw_DatosAgenda")
       @filtrados = []
 
-      gon.ev_big, gon.ev_small, gon.ev_tiny = construye_slider_eventos(@filtrados)
+      gon.ev_big, gon.ev_small, gon.ev_tiny = construye_slider_eventos(@resultado)
     rescue
       gon.ev_big, gon.ev_small, gon.ev_tiny = "", "" ,""
     end
