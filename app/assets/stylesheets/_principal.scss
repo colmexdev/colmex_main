@@ -128,7 +128,7 @@ html, body{ height: 100%; }
 #header-links { 
 	display: none;
 	height: 100%;
-
+	width: 80%;
 
 	.botones{
 		overflow: visible;
@@ -266,6 +266,8 @@ html, body{ height: 100%; }
 
 		>a{
 			height: inherit;
+			line-height: 40px;
+			padding: 0 15px;
 			-webkit-transition: color 0.4s linear;
 			-moz-transition: color 0.4s linear;
 			-ms-transition: color 0.4s linear;

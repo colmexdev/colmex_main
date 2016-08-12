@@ -128,9 +128,7 @@ html, body{ height: 100%; }
 #header-links { 
 	display: none;
 	height: 100%;
-	width: -webkit-calc(100% - 129px);
-	width: -omz-calc(100% - 129px);
-	width: calc(100% - 129px);
+	width: 80%;
 
 	.botones{
 		overflow: visible;
