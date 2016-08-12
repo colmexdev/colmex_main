@@ -15,7 +15,7 @@ $(document).on("scroll", function(event) {
 	  $(".intranet").css("display","none");	
 	  $(".borrable").css("display","none");
 	  $(".navbar-right").css("display","none");
-	  $("#header-links").css({"display":"inline-block", "background-color":"#fff", "padding-left":"50px","float":"left" });
+	  $("#header-links").css({"display":"inline-block", "background-color":"#fff", "padding-left":"50px","float":"right" });
 	  $("#boton-top").css("display","block");
 	}
 	else{
@@ -38,6 +38,7 @@ $(document).on("scroll", function(event) {
 	  $("#header-links").css("display", "none");
 	}
   } else {
+        barra_render = false;
 	$(".mail a").removeAttr("style");
 	$(".intranet a").removeAttr("style");
 	$("#boton-top").removeAttr("style");
