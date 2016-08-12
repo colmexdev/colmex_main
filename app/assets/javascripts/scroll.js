@@ -22,13 +22,15 @@ $(document).on("scroll", function(event) {
 	}
 	else{
 	  if(ancho_act < 768){
-	 	 $(".reajustable").css("width","100%");
+	 	$(".reajustable").css("width","100%");
+	  	$("#idioma-small-scroll").css("display","block");
+	  	$("#idioma-big-scroll").removeAttr("style");
 	  }
 	  else{
-	  	 $(".reajustable").removeAttr("style");
+	  	$(".reajustable").removeAttr("style");
+	  	$("#idioma-big-scroll").css("display","block");
+	  	$("#idioma-small-scroll").removeAttr("style");
 	  }
-	  $("#idioma-small-scroll").css("display","block");
-	  $("#idioma-big-scroll").removeAttr("style");
 	  $(".idioma").css("display","none");
 	  $("#boton-top").css("display","block");
 	  $("#logo-main").css("padding-left", "10px");
