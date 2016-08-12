@@ -48,7 +48,7 @@ $(document).on("scroll", function(event) {
         barra_render = false;
 	$("#idioma-big-scroll").removeAttr("style");
 	$("#idioma-small-scroll").removeAttr("style");
-	$(".idioma").removeAttr("style");
+	$("#idioma-top").removeAttr("style");
 	$(".mail a").removeAttr("style");
 	$(".intranet a").removeAttr("style");
 	$("#boton-top").removeAttr("style");

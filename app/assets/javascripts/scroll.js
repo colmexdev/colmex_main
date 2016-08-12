@@ -23,13 +23,18 @@ $(document).on("scroll", function(event) {
 	else{
 	  if(ancho_act < 768){
 	 	$(".reajustable").css("width","100%");
-	  	$("#idioma-small-scroll").css("display","block");
-	  	$("#idioma-big-scroll").removeAttr("style");
 	  }
 	  else{
 	  	$(".reajustable").removeAttr("style");
-	  	$("#idioma-big-scroll").css("display","block");
+
+	  }
+	  if(ancho_act > 1160){
+		$("#idioma-big-scroll").css("display","block");
 	  	$("#idioma-small-scroll").removeAttr("style");
+	  }
+	  else{
+	  	$("#idioma-small-scroll").css("display","block");
+	  	$("#idioma-big-scroll").removeAttr("style");
 	  }
 	  $("#idioma-top").css("display","none");
 	  $("#boton-top").css("display","block");
