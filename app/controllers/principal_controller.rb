@@ -7,6 +7,7 @@ class PrincipalController < ApplicationController
       @resultado = cliente.execute("SELECT * FROM dbo.vw_DatosAgenda")
       @resultados_filtrados = []
       @resultado.each do |r|
+        logger.debug "#{r.fechaFin}"
         if r.fechaFin.to_date >= Date.current()
           @resultados_filtrados << r
         end
