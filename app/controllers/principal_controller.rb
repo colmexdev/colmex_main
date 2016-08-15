@@ -5,7 +5,8 @@ class PrincipalController < ApplicationController
       @resultado = cliente.execute("USE Agenda")
       @resultado.do
       @resultado = cliente.execute("SELECT * from dbo.vw_DatosAgenda WHERE PARSE(fechaFin AS DATE USING 'es-ES') >= GETDATE()")
-      gon.ev_big, gon.ev_small, gon.ev_tiny = construye_slider_eventos(@filtrados)
+
+      gon.ev_big, gon.ev_small, gon.ev_tiny = construye_slider_eventos(@resultado)
     rescue
       gon.ev_big, gon.ev_small, gon.ev_tiny = "", "" ,""
     end
