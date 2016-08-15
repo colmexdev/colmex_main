@@ -54,7 +54,7 @@ class InformacionGeneralController < ApplicationController
   end
 
   def operativas
-    operativos, @operativas = Personal.where(:seccion => "Operativas"), []
+    @operativas, @operativos = Personal.where(:seccion => "Operativas"), []
     orden = []
     respond_to do |format|
       format.js
