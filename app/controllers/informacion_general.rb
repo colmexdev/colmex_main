@@ -57,10 +57,10 @@ class InformacionGeneralController < ApplicationController
   end
 
   def operativas
-    operativos, @operativas = Personal.where(:seccion => "Operativas"), []
+    operativos, @operativas = Personal.where(:seccion => "Operativas").each, []
     orden, i, j = ["Gabriela Said Reyes", "Valentina Riquelme Molina", "Laura Valverde González", "Quetzalli Padilla Dulché", "José Luis Arciga Torres", "León Ruiz Chávez", "Ernesto Arturo Hernández Camarillo", "Alejandro Castro González"], 0, 0
     while operativos.size > 0 do
-      if operativos[i]["nombre"] == orden[j]
+      if operativos[i][:nombre] == orden[j]
         @operativas << operativos[i]
         j = j + 1
         i = 0
