@@ -1,7 +1,7 @@
 $(document).on("scroll", function(event) {
   var y = $(this).scrollTop();
   var ancho_act = Math.max(document.documentElement.clientWidth, window.innerWidth || document.body.ClientWidth || 0);
-  if ((y > 300 && document.body.scrollHeight > window.innerHeight * 3 ) || barra_render) {
+  if ((y > 300 && document.body.scrollHeight > window.innerHeight * 0.8 ) || barra_render) {
 	$(".reajustable").removeAttr("style");
 	$("#contenedor_nav").css({"min-height":"60px","background-color":"#fff","-webkit-box-shadow":"0 6px 12px rgba(0,0,0,0.175)","-moz-box-shadow":"0 6px 12px rgba(0,0,0,0.175)","box-shadow":"0 6px 12px rgba(0,0,0,0.175)"});
 	$("#barra_nav").css({"height":"100%","background-color":"#fff", "width":"85%","margin": "0 auto"});

@@ -744,11 +744,13 @@ ul.ul-nav { display: table; float: left !important;
 				
 						.imagen_slider_sobre{
 							position: absolute;
+							z-index: 1000;
 						}
 					}
 
 					.imagen_slider_sobre{
 						position: absolute;
+						z-index: 1000;
 					}
 				}
 			}
@@ -1402,6 +1404,7 @@ ul.ul-nav { display: table; float: left !important;
 	height: 400px;
 	padding: 30px 15px;
 	text-align: center;
+	vertical-align: middle;
 
 	#div-donacion{ 
 		background-color: #F9F9F9;
@@ -1529,6 +1532,7 @@ ul.ul-nav { display: table; float: left !important;
 }
 
 #video-colmex{
+	vertical-align: middle;
 	width: auto;
 	display: inline-block; 
 	height: 400px;
@@ -1552,7 +1556,7 @@ ul.ul-nav { display: table; float: left !important;
 }
 
 @media only screen and (min-width: 767px) and (max-width: 1260px){
-	#fundacion-colmex, #video-colmex { height: 380px; display: block; margin: 0 auto;}
+	#fundacion-colmex, #video-colmex { height: 380px;}
   	#fundacion-colmex { padding-left: 0; }
 	#video-colmex { overflow: visible; width: 465px; }
 }
