@@ -6,7 +6,7 @@
 		<h3 class="uk-accordion-title"><%= construir_encabezado("bt-flechita.png", "bt-flechita-abajo.png", a.anio) %></h3>
 		<div class="uk-accordion-content">
     <table>
-      <% @informes.where(:anio => a).each do |d| %>
+      <% @informes.where(:anio => a.anio).each do |d| %>
       <tr>
 	      <td>
 		      <a href=<%= d.liga.to_s == "" ? d.archivo.url : d.liga %> target="_blank" class="uk-link"><img src=<%= image_url("documento.png") %> alt="documento" class="documento uk-vertical-align-middle"></a>
