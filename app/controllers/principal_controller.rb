@@ -6,8 +6,14 @@ class PrincipalController < ApplicationController
       @resultado.do
       @resultado = cliente.execute("SELECT * from dbo.vw_DatosAgenda")
       @filtrados = []
+      @resultado.each do |r|
+        fecha_f = Date.strptime(r["fechaFin"],"%d/%m/%Y")
+        if not fecha_f.past?
+          @filtrados << r
+        end
+      end
 
-      gon.ev_big, gon.ev_small, gon.ev_tiny = construye_slider_eventos(@resultado)
+      gon.ev_big, gon.ev_small, gon.ev_tiny = construye_slider_eventos(@filtrados)
     rescue
       gon.ev_big, gon.ev_small, gon.ev_tiny = "", "" ,""
     end
