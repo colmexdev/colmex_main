@@ -438,16 +438,16 @@ html, body{ height: 100%; }
 			}	
 		}
 
-		@media only screen and (max-device-width: 1024px){
+		@media only screen and (max-width: 1024px){
 			.mostrable, .borrable { margin-top: 5px; }
 		}
 		
-		@media only screen and (min-width: 0px) and (max-width: 1305px){
+		@media only screen and (max-width: 1310px){
 			.mostrable{ display: inline-block; }
 			.borrable{ display: none; }
 		}
 
-		@media only screen and (min-width: 1306px){
+		@media only screen and (min-width: 1310px){
 			.mostrable{ display: none; }
 		}
 	}
@@ -850,6 +850,7 @@ ul.ul-nav { display: table; float: left !important;
 							font-weight: 600;
 
 							p{
+								line-height: 1.1;
 								position: absolute;
 								bottom: 0;
 								font-size: 16px;
@@ -1115,7 +1116,7 @@ ul.ul-nav { display: table; float: left !important;
 				@include centrado; 
 				max-height: 130px;
 				max-width: 350px;
-				margin: 10px 0;
+				margin: 20px 0 10px 0;
 			} 	
 		}
 
