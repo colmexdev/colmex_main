@@ -1784,6 +1784,14 @@ ul.ul-nav { display: table; float: left !important;
 	-o-transition: all 0.5s linear;
 	-ms-transition: all 0.5s linear;
 	transition: all 0.5s linear;
+
+  	.leave_img { display: inline; margin: 0 10px; }
+		.hover_img { display: none; }
+}
+
+#boton-top:hover{
+  	.hover_img { display: inline; margin: 0 10px; }
+		.leave_img { display: none; }
 }
 
 
