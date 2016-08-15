@@ -9,7 +9,7 @@ $(document).on("scroll", function(event) {
 	$("#div_menu").css("display", "none");
 	$(".reajustable").css("display","inline-block");
 	$("#logo-main").css({"display":"block","padding-left":"50px"});
-	if(ancho_act > 1240){
+	if(ancho_act > 1305){
 	  $("#idioma-big-scroll").css("display","block");
 	  $("#idioma-small-scroll").removeAttr("style");
 	  $("#idioma-top").css("display","none");
