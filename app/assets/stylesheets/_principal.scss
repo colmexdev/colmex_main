@@ -1382,14 +1382,21 @@ ul.ul-nav { display: table; float: left !important;
   }
 
 	#cutter-descubre{
-		width: 85%;
+		/*width: 85%;
 		color: #7E3355;
 		font-size: 25px;
 		display: block;
 		margin: 0 auto 20px auto;
 		padding: 10px 0;
 		text-align: center;
-		cursor: pointer;
+		cursor: pointer;*/
+		font-family: "Gotham SSm A", "Gotham SSm B";
+		font-style: normal;
+		font-weight: 700;
+		font-size: 24px;
+		line-height: normal;
+		color: #7E3355;
+
 	}
 }
 
@@ -1792,6 +1799,10 @@ ul.ul-nav { display: table; float: left !important;
 #boton-top:hover{
   	.hover_img { display: inline; margin: 0 10px; }
 		.leave_img { display: none; }
+}
+
+@media only screen and (max-width: 395px){
+	#boton-top { bottom: 150px; }
 }
 
 
