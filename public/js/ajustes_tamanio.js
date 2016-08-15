@@ -24,6 +24,8 @@ $(document).ready(function(){
 		else{ document.getElementById("render_eventos").innerHTML = gon.ev_big;}
 	}
 
+
+	$("#carouselEventos").carousel("pause");
 	$('.frame-descubre').css({'height':cw+'px'});
 
 	recabarAnchos();
