@@ -12,7 +12,7 @@
 			</div>
 			<div class="col-xs-12 col-md-8" id="footer_centro">
 				<%= image_tag("colmex-pie.png", :id => "img_footer") %><br><br>
-				<p>Copyright © <%= Date.current.year %> El Colegio de México. Todos los derechos reservados.<br>
+				<p>Derechos reservados, El Colegio de México A.C. © <%= Date.current().year %><br>
 	Camino al Ajusco No. 20 Colonia Pedregal de Santa Teresa C.P. 10740 México, Ciudad de México<br>
 	Tel.: +52 55 54493000</p>
 
@@ -44,7 +44,7 @@ https://www.youtube.com/c/elcolegiodemexicociudaddemexico", :target => "_blank" 
 			</ul>
 
 			<div id="boton-top" onclick="regresarArriba()">
-				Regresar arriba
+				<%= link_to image_tag('top.png', :class => "leave_img") + image_tag("top-hover.png", :class => "hover_img"), "#" %>
 			</div>
 		</div> <!-- Cierre de columnas para redes sociales en footer -->
 

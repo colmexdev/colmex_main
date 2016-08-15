@@ -7,12 +7,12 @@
 					<li><a href="<%= centros_de_estudio_path %>"><%= t('botones.b2.texto') %></a></li>
 					<li><a href="<%= programas_academicos_path %>"><%= t('botones.b3.texto') %></a></li>
 					<li><a href="http://biblioteca.colmex.mx/" target="_blank"><%= t('botones.b4') %></a></li>
-					<li><a href="http://agenda.colmex.mx/" target="_blank"><%= t('botones.b5') %></a></li>
+					<li><a href=" http://agenda.colmex.mx/Inicio" target="_blank"><%= t('botones.b5') %></a></li>
 				</ul>
 			</div>
 			<div class="col-xs-12 col-md-8" id="footer_centro">
 				<%= image_tag("colmex-pie.png", :id => "img_footer") %><br><br>
-				<p>Copyright © <%= Date.current.year %> El Colegio de México. Todos los derechos reservados.<br>
+				<p>Derechos reservados, El Colegio de México A.C. © <%= Date.current().year %><br>
 	Camino al Ajusco No. 20 Colonia Pedregal de Santa Teresa C.P. 10740 México, Ciudad de México<br>
 	Tel.: +52 55 54493000</p>
 
