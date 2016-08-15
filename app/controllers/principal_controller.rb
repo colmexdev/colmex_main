@@ -6,6 +6,7 @@ class PrincipalController < ApplicationController
       @resultado.do
       @resultado = cliente.execute("SELECT * from dbo.vw_DatosAgenda")
       @filtrados = []
+      logger.debug @resultado.first
       @resultado.each do |r|
         fecha_f = Date.strptime(r["fechaFin"],"%d/%m/%Y")
         if not fecha_f.past?

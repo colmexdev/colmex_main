@@ -81,6 +81,13 @@ class InformacionGeneralController < ApplicationController
     end
   end
 
+  def biblioteca
+    @bibliotecas = Personal.where(:seccion => "Biblioteca")
+    respond_to do |format|
+      format.js
+    end
+  end
+
   def administracion
     @admins = Personal.where(:seccion => "Administración")
     respond_to do |format|
