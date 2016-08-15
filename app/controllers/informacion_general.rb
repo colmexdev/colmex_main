@@ -47,6 +47,9 @@ class InformacionGeneralController < ApplicationController
   def sobre_el_colegio
   end
 
+  def transparencia
+  end
+
   def asamblea
     respond_to do |format|
       format.js
@@ -54,8 +57,16 @@ class InformacionGeneralController < ApplicationController
   end
 
   def operativas
-    @operativas, @operativos = Personal.where(:seccion => "Operativas"), []
-    orden = []
+    @operativos, @operativas = Personal.where(:seccion => "Operativas"), []
+    orden, i, j = ["Gabriela Said Reyes", "Valentina Riquelme Molina", "Laura Valverde González", "Quetzalli Padilla Dulché", "José Luis Arciga Torres", "León Ruiz Chávez", "Ernesto Arturo Hernández Camarillo", "Alejandro Castro González"], 0, 0
+    while @operativos != [] do
+      if @operativos[i]["nombre"] == orden[j]
+        @operativas << @operativos[i]
+        j = j + 1
+        i = 0
+      end
+      i = i + 1
+    end
     respond_to do |format|
       format.js
     end

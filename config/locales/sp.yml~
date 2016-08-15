@@ -5,7 +5,7 @@ sp:
   botones:
     b1: 
       texto: "Información general"
-      texto2: "Sobre el Colegio"
+      texto2: "Sobre El Colegio"
       opciones:
         op1: "Directorio institucional"
         op2: "Autoridades"
@@ -70,7 +70,7 @@ sp:
       operativas: "Áreas operativas"
     documentacion:
       op1: "Actas de la Junta de Gobierno"
-      op2: "Informes"
+      op2: "Informes de Actividades"
       op3: "Estatutos"
   activerecord:
     errors:

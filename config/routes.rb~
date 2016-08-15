@@ -54,7 +54,7 @@ Rails.application.routes.draw do
 
   get 'informacion_general/historia' => 'informacion_general#historia', :as => :historia
 
-  get 'informacion_general/sobre_el_colegio' => 'informacion_general#sobre_el_colegio', :as => :informacion_general
+  get 'informacion_general/sobre_el_colegio' => 'informacion_general#sobre_el_colegio', :as => :sobre_el_colegio
 
   get 'informacion_general/documentacion_institucional' => 'informacion_general#documentacion_institucional', :as => :documentacion
 

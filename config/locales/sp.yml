@@ -15,6 +15,7 @@ sp:
         op6: "Premios y distinciones"
         op7: "Licitaciones"
         op8: "Relación de bienes muebles e inmuebles"
+        op9: "Transparencia"
     b2:
       texto: "Centros de estudio"
       opciones:
@@ -70,7 +71,7 @@ sp:
       operativas: "Áreas operativas"
     documentacion:
       op1: "Actas de la Junta de Gobierno"
-      op2: "Informes"
+      op2: "Informes de Actividades"
       op3: "Estatutos"
   activerecord:
     errors:
