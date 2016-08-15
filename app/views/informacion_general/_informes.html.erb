@@ -1,8 +1,9 @@
+<div class="acordeon-premios">
 <script type="text/javascript" src="../js/accordion.js"></script>
 
 <div class="uk-accordion" data-uk-accordion>
 	<% @informes.order(anio: :desc).group(:anio).each do |a| %>
-		<h3 class="uk-accordion-title"><%= construir_encabezado("bt-flechita.png", "bt-flechita-abajo.png", a) %></h3>
+		<h3 class="uk-accordion-title"><%= construir_encabezado("bt-flechita.png", "bt-flechita-abajo.png", a.anio) %></h3>
 		<div class="uk-accordion-content">
     <table>
       <% @informes.where(:anio => a).each do |d| %>
@@ -18,5 +19,6 @@
     </table>
 		</div>
 	<% end %>
+</div>
 </div>
 
