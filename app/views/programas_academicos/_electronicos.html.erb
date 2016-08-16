@@ -14,7 +14,7 @@
     </div>
     <div class="uk-width-4-5 uk-vertical-align-middle uk-text-left uk-text-break">
     <h2 class="vino"><%= e.titulo %></h2>
-    <% if t.tipo_curso_linea == "Breve" %>
+    <% if t.tipo_curso_linea != "Breve" %>
     <div class="uk-grid uk-grid-large">
     <div class="uk-width-large-4-6 uk-text-left">
     <% end %>
@@ -70,8 +70,8 @@
     </h4>
     </div>
     </div>
-    </div>
     <% end %>
+    </div>
     </div>
 
             <% end %>

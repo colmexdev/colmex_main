@@ -23,8 +23,8 @@
       <p class="uk-text-left">Impartido por <%= e.imparte %></p>
     <% end %>
     <a href=<%= e.liga || "" %> target="_blank" class="ver-mas uk-margin-large-bottom uk-button-small">Más información</a>
-    </div>
     <% if t.tipo_curso_linea == "MOOC" %>
+    </div>
     <div class="uk-width-large-2-6">
     <h3 class="vino uk-margin-bottom-remove">
     <% if !e.fecha_inicio_clases.nil? %>
