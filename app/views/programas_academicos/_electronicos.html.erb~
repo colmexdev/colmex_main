@@ -17,7 +17,7 @@
     <div class="uk-grid uk-grid-large">
     <div class="uk-width-large-4-6 uk-text-left">
     <p><%= e.descripcion %></p>
-    <% if !e.imparte.nil? %>
+    <% if e.imparte.to_s != "" %>
       <p class="uk-text-left">Impartido por <%= e.imparte %></p>
     <% end %>
     <a href=<%= e.liga || "" %> target="_blank" class="ver-mas uk-margin-large-bottom uk-button-small">Más información</a>

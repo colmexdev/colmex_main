@@ -2,7 +2,7 @@
 <script type="text/javascript" src="../js/accordion.js"></script>
 
 <div class="uk-accordion" data-uk-accordion>
-	<% @electronicos.group(:tipo_curso_linea).each do |t| %>
+	<% @electronicos.group(:tipo_curso_linea).order(tipo_curso_linea: :desc).each do |t| %>
 	  <h3 class="uk-accordion-title"><%= construir_encabezado("bt-flechita.png", "bt-flechita-abajo.png", t.tipo_curso_linea + "s") %></h3>
 	  <div class="uk-accordion-content">
 
@@ -22,6 +22,7 @@
     <% end %>
     <a href=<%= e.liga || "" %> target="_blank" class="ver-mas uk-margin-large-bottom uk-button-small">Más información</a>
     </div>
+    <% if t.tipo_curso_linea == "MOOC" %>
     <div class="uk-width-large-2-6">
     <h3 class="vino uk-margin-bottom-remove">
     <% if !e.fecha_inicio_clases.nil? %>
@@ -66,6 +67,7 @@
       <% end %>
     </h4>
     </div>
+    <% end %>
     </div>
     </div>
     </div>
