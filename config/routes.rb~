@@ -60,7 +60,7 @@ Rails.application.routes.draw do
 
   get 'informacion_general/transp' => 'informacion_general#transp', :as => :transp
 
-  get 'informacion:general/bienes' => 'informacion_general#bienes', :as => :bienes_part
+  get 'informacion_general/bienes' => 'informacion_general#bienes', :as => :bienes_part
 
   get 'informacion_general/documentacion_institucional' => 'informacion_general#documentacion_institucional', :as => :documentacion
 
