@@ -55,6 +55,10 @@
     <%= f.label :tipo_curso %><br>
     <%= f.select(:tipo_curso, options_from_collection_for_select(TipoCurso.all, "tipo", "tipo", @curso.tipo_curso || ""), {}, {}) %>
   </div>
+  <div class="field" id="tipo_c_linea" style="display:none;">
+    <%= f.label :tipo_curso_linea %><br>
+    <%= f.select(:tipo_curso_linea, options_for_select([['MOOC','MOOC'],['Breve','Breve']],  @curso.tipo_curso_linea || ''), {}, {}) %>
+  </div>
   <div class="field">
     <%= f.label :tags %><br>
     <%= f.text_area :tags %>
