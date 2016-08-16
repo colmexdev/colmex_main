@@ -1,15 +1,22 @@
-<p>Los cursos impartidos en los programas acad��micos pueden ser consultados en el siguiente enlace: </p>
+<p>Los cursos impartidos en los programas académicos pueden ser consultados en el siguiente enlace: </p>
     <a href="http://calendariocursos.colmex.mx/" target="_blank" class="ver-mas uk-margin-large-bottom uk-button-small">Calendario cursos</a>
     <p>Además El Colegio de México imparte cursos abiertos para público en general, lo cuáles se enlistan a continuación:</p>
 
 <% @presenciales.each do |p| %>
-<h2 class="vino"><%= p.titulo %></h2>
-    <div class="uk-grid uk-grid-large">
-    <div class="uk-width-large-3-5 uk-text-left">
-    <p><%= p.descripcion %></p>
-    <a href=<%= p.liga || "#" %> target="_blank" class="ver-mas uk-margin-large-bottom uk-button-small">Más información</a>
+
+    <div class="uk-grid uk-grid-medium uk-margin-large-bottom">
+    <div class="uk-width-1-5 uk-text-center">
+    <img src="curso-lead.jpg" class="uk-border-rounded" alt="Foto curso">
     </div>
-    <div class="uk-width-large-2-5">
+    <div class="uk-width-4-5 uk-vertical-align-middle uk-text-left uk-text-break">
+    <h2 class="vino"><%= p.titulo %></h2>
+    <div class="uk-grid uk-grid-large">
+    <div class="uk-width-large-4-6 uk-text-left">
+    <p><%= p.descripcion %></p>
+    <a href=<%= p.liga || "" %> target="_blank" class="ver-mas uk-margin-large-bottom uk-button-small">Más información</a>
+    </div>
+    <div class="uk-width-large-2-6">
+
     <h3 class="vino uk-margin-bottom-remove">
     <% if !p.fecha_inicio_clases.nil? %>
       <% if p.fecha_fin_clases.nil? %>
@@ -19,6 +26,7 @@
       <% end %>
     <% end %>
     </h3>
+
     <h4 class="uk-margin-top-remove">
       <% if !p.fecha_inicio_clases.nil? %>
         <%= (p.fecha_inicio_clases.day.to_s + " de " + num2Month(p.fecha_inicio_clases.month - 1)) || "" %>
@@ -33,11 +41,13 @@
         <% end %>
       <% end %>
     </h4>
+
     <h3 class="vino uk-margin-bottom-remove">
-    <% if !p.fecha_inicio_conv.nil? and !p.fecha_fin_conv.nil? %>
-      <%= "Próxima convocatoria" %>
-    <% end %>
+      <% if !p.fecha_inicio_conv.nil? and !p.fecha_fin_conv.nil? %>
+        <%= "Próxima convocatoria" %>
+      <% end %>
     </h3>
+
     <h4 class="uk-margin-top-remove">
       <% if !p.fecha_inicio_conv.nil? %>
         <%= (p.fecha_inicio_conv.day.to_s + " de " + num2Month(p.fecha_inicio_conv.month - 1)) || "" %>
@@ -52,6 +62,10 @@
         <% end %>
       <% end %>
     </h4>
+
     </div>
     </div>
+    </div>
+    </div>
+
 <% end %>

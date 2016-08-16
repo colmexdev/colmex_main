@@ -1,10 +1,18 @@
 class Curso < ActiveRecord::Base
 
+  has_attached_file :foto,
+                    :url => "/assets/cursos/:basename_:id.:extension",
+                    :path => ":rails_root/public/assets/cursos/:basename_:id.:extension",
+                    :default_url => "/vacio.png"
+
+
   validates_presence_of :titulo
   validates_presence_of :descripcion
   validates_presence_of :programa
   validates_presence_of :traduccion_desc
   validates_presence_of :traduccion_tit
+  validates_presence_of :imparte, if: "tipo_curso_linea == 'Breve'"
   validates_presence_of :tipo_curso, if: "programa == 'Curso'"
   validates_presence_of :tipo_curso_linea, if: "tipo_curso == \"En línea\""
+  validates_attachment_content_type :foto, :content_type => ['image/jpeg', 'image/png', 'image/jpg']
 end

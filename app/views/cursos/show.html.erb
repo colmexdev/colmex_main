@@ -28,6 +28,11 @@
 </p>
 
 <p>
+  <strong>Foto:</strong>
+  <%= image_tag(@curso.foto.url) %>
+</p>
+
+<p>
   <strong>Liga:</strong>
   <%= @curso.liga %>
 </p>
@@ -35,6 +40,11 @@
 <p>
   <strong>Tipo curso:</strong>
   <%= @curso.tipo_curso %>
+</p>
+
+<p>
+  <strong>Tipo curso en línea:</strong>
+  <%= @curso.tipo_curso_linea || '<No es curso en línea>' %>
 </p>
 
 <p>

@@ -1,14 +1,31 @@
-<% @electronicos.each do |p| %>
-<h2 class="vino"><%= p.titulo %></h2>
-    <div class="uk-grid uk-grid-large">
-    <div class="uk-width-large-3-5 uk-text-left">
-    <p><%= p.descripcion %></p>
-    <a href=<%= p.liga || "#" %> target="_blank" class="ver-mas uk-margin-large-bottom uk-button-small">Más información</a>
+<div class="acordeon-premios">
+<script type="text/javascript" src="../js/accordion.js"></script>
+
+<div class="uk-accordion" data-uk-accordion>
+	<% @electronicos.group(:tipo_curso_linea).each do |t| %>
+	  <h3 class="uk-accordion-title"><%= construir_encabezado("bt-flechita.png", "bt-flechita-abajo.png", t.tipo_curso_linea + "s") %></h3>
+	  <div class="uk-accordion-content">
+
+	    <% @electronicos.where(:tipo_curso_linea => t.tipo_curso_linea).each do |e| %>
+
+    <div class="uk-grid uk-grid-medium uk-margin-large-bottom">
+    <div class="uk-width-1-5 uk-text-center">
+    <img src=<%= e.foto.url %> class="uk-border-rounded" alt="Foto curso">
     </div>
-    <div class="uk-width-large-2-5">
+    <div class="uk-width-4-5 uk-vertical-align-middle uk-text-left uk-text-break">
+    <h2 class="vino"><%= e.titulo %></h2>
+    <div class="uk-grid uk-grid-large">
+    <div class="uk-width-large-4-6 uk-text-left">
+    <p><%= e.descripcion %></p>
+    <% if e.tipo_curso_linea == "Breve" %>
+      <p class="uk-text-left">Impartido por <%= e.imparte %></p>
+    <% end %>
+    <a href=<%= e.liga || "" %> target="_blank" class="ver-mas uk-margin-large-bottom uk-button-small">Más información</a>
+    </div>
+    <div class="uk-width-large-2-6">
     <h3 class="vino uk-margin-bottom-remove">
-    <% if !p.fecha_inicio_clases.nil? %>
-      <% if p.fecha_inicio_clases.nil? %>
+    <% if !e.fecha_inicio_clases.nil? %>
+      <% if e.fecha_inicio_clases.nil? %>
         <%= "Inicio de clases:" %>
       <% else %>
         <%= "Duración:" %>
@@ -16,39 +33,48 @@
     <% end %>
     </h3>
     <h4 class="uk-margin-top-remove">
-      <% if !p.fecha_inicio_clases.nil? %>
-        <%= (p.fecha_inicio_clases.day.to_s + " de " + num2Month(p.fecha_inicio_clases.month - 1)) || "" %>
-        <% if p.fecha_fin_clases.nil? %>
-          <%= (" de " + p.fecha_inicio_clases.year.to_s) || "" %>
+      <% if !e.fecha_inicio_clases.nil? %>
+        <%= (e.fecha_inicio_clases.day.to_s + " de " + num2Month(e.fecha_inicio_clases.month - 1)) || "" %>
+        <% if e.fecha_fin_clases.nil? %>
+          <%= (" de " + e.fecha_inicio_clases.year.to_s) || "" %>
         <% else %>
-          <% if p.fecha_fin_clases.year != p.fecha_inicio_clases.year %>
-            <%= (" de " + p.fecha_inicio_clases.year.to_s + " al " + p.fecha_fin_clases.day.to_s + " de " + num2Month(p.fecha_fin_clases.month - 1) + " de " + p.fecha_fin_clases.year.to_s ) || "" %>
+          <% if e.fecha_fin_clases.year != e.fecha_inicio_clases.year %>
+            <%= (" de " + e.fecha_inicio_clases.year.to_s + " al " + e.fecha_fin_clases.day.to_s + " de " + num2Month(e.fecha_fin_clases.month - 1) + " de " + e.fecha_fin_clases.year.to_s ) || "" %>
           <% else %>
-            <%= (" al " + p.fecha_fin_clases.day.to_s + " de " + num2Month(p.fecha_fin_clases.month - 1) + " de " + p.fecha_fin_clases.year.to_s ) || "" %>
+            <%= (" al " + e.fecha_fin_clases.day.to_s + " de " + num2Month(e.fecha_fin_clases.month - 1) + " de " + e.fecha_fin_clases.year.to_s ) || "" %>
           <% end %>
         <% end %>
       <% end %>
     </h4>
     <h3 class="vino uk-margin-bottom-remove">
-    <% if !p.fecha_inicio_conv.nil? and !p.fecha_fin_conv.nil? %>
+    <% if !e.fecha_inicio_conv.nil? and !e.fecha_fin_conv.nil? %>
       <%= "Próxima convocatoria" %>
     <% end %>
     </h3>
     <h4 class="uk-margin-top-remove">
-      <% if !p.fecha_inicio_conv.nil? %>
-        <%= (p.fecha_inicio_conv.day.to_s + " de " + num2Month(p.fecha_inicio_conv.month - 1)) || "" %>
-        <% if p.fecha_fin_conv.nil? %>
-          <%= (" de " + p.fecha_inicio_conv.year.to_s) || "" %>
+      <% if !e.fecha_inicio_conv.nil? %>
+        <%= (e.fecha_inicio_conv.day.to_s + " de " + num2Month(e.fecha_inicio_conv.month - 1)) || "" %>
+        <% if e.fecha_fin_conv.nil? %>
+          <%= (" de " + e.fecha_inicio_conv.year.to_s) || "" %>
         <% else %>
-          <% if p.fecha_fin_conv.year != p.fecha_inicio_conv.year %>
-            <%= (" de " + p.fecha_inicio_conv.year.to_s + " al " + p.fecha_fin_conv.day.to_s + " de " + num2Month(p.fecha_fin_conv.month - 1) + " de " + p.fecha_fin_conv.year.to_s ) || "" %>
+          <% if e.fecha_fin_conv.year != e.fecha_inicio_conv.year %>
+            <%= (" de " + e.fecha_inicio_conv.year.to_s + " al " + e.fecha_fin_conv.day.to_s + " de " + num2Month(e.fecha_fin_conv.month - 1) + " de " + e.fecha_fin_conv.year.to_s ) || "" %>
           <% else %>
-            <%= (" al " + p.fecha_fin_conv.day.to_s + " de " + num2Month(p.fecha_fin_conv.month - 1) + " de " + p.fecha_fin_conv.year.to_s ) || "" %>
+            <%= (" al " + e.fecha_fin_conv.day.to_s + " de " + num2Month(e.fecha_fin_conv.month - 1) + " de " + e.fecha_fin_conv.year.to_s ) || "" %>
           <% end %>
         <% end %>
       <% end %>
     </h4>
     </div>
     </div>
-<% end %>
+    </div>
+    </div>
+
+            <% end %>
+
+          </div>
+	<% end %>
+</div>
+</div>
+
 
