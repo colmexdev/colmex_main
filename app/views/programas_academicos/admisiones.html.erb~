@@ -13,7 +13,7 @@
 		  <ul class="uk-list uk-list-space uk-margin-large-bottom">
 		  <li><a href=<%= asset_path("nuevo-ingreso-licenciatura.pdf") %> target="_blank" class="uk-margin-large-bottom uk-link">Estudiantes de nuevo ingreso Licenciatura</a></li>
 		  <li><a href=<%= asset_path("nuevo-ingreso-posgrados-mexicanos.pdf") %> target="_blank" class="uk-margin-large-bottom uk-link">Estudiantes Mexicanos de nuevo ingreso a Maestrías y Doctorados</a></li>
-		  <li><a href=<%= asset_path("nuevo-ingreso-estudiantes-extranjeros.pdf") %> target="_blank" class="uk-margin-large-bottom uk-link">Estudiantes Extranjeros de nuevo ingreso a Maestrías y Doctorados</a></li>
+		  <li><a href=<%= asset_path("nuevo-ingreso-posgrados-extranjeros.pdf") %> target="_blank" class="uk-margin-large-bottom uk-link">Estudiantes Extranjeros de nuevo ingreso a Maestrías y Doctorados</a></li>
 		  </ul>
 
 		</div>

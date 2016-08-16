@@ -1382,20 +1382,13 @@ ul.ul-nav { display: table; float: left !important;
   }
 
 	#cutter-descubre{
-		/*width: 85%;
-		color: #7E3355;
-		font-size: 25px;
-		display: block;
-		margin: 0 auto 20px auto;
-		padding: 10px 0;
-		text-align: center;
-		cursor: pointer;*/
+
 		font-family: "Gotham SSm A", "Gotham SSm B";
 		font-style: normal;
 		font-weight: 700;
-		font-size: 24px;
+		font-size: 25px;
 		line-height: normal;
-		color: #7E3355;
+		color: #470020;
 		text-align: center;
 		cursor: pointer;
 		margin: 0 auto 20px auto;

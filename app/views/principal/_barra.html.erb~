@@ -42,7 +42,7 @@
 		          <li><a href=<%= documentacion_path %>><%= t('botones.b1.opciones.op4') %></a></li>
 		          <li><a href=<%= profesores_emeritos_path %>><%= t('botones.b1.opciones.op5') %></a></li>
 		          <li><a href=<%= premios_path %>><%= t('botones.b1.opciones.op6') %></a></li>
-							<li><a href="http://sg.colmex.mx/" target="_blank" class="sublink"><%= t('botones.b1.opciones.op7') %></a></li>
+							<li><a href=<%= principios_path %> class="sublink"><%= t('footer.liga1') %></a></li>
 							<li><a href=<%= transparencia_path %> class="sublink"><%= t('botones.b1.opciones.op9') %></a></li>
 		        </ul>
 		    </li>
@@ -129,7 +129,7 @@
 		          <li><a href=<%= documentacion_path %>><%= t('botones.b1.opciones.op4') %></a></li>
 		          <li><a href=<%= profesores_emeritos_path %>><%= t('botones.b1.opciones.op5') %></a></li>
 		          <li><a href=<%= premios_path %>><%= t('botones.b1.opciones.op6') %></a></li>
-							<li><a href="http://sg.colmex.mx/" target="_blank" class="sublink"><%= t('botones.b1.opciones.op7') %></a></li>
+							<li><a href=<%= principios_path %> class="sublink"><%= t('footer.liga1') %></a></li>
 							<li><a href=<%= transparencia_path %> class="sublink"><%= t('botones.b1.opciones.op9') %></a></li>
 		        </ul>
 		    </li>
@@ -153,9 +153,10 @@
 		          <li><a href=<%= licenciaturas_path %>><%= t('botones.b3.opciones.op1') %></a></li>
 		          <li><a href=<%= maestrias_path %>><%= t('botones.b3.opciones.op2') %></a></li>
 		          <li><a href=<%= doctorados_path %>><%= t('botones.b3.opciones.op3') %></a></li>
+		          <li><a href=<%= cursos_varios_path %>><%= t('botones.b3.opciones.op6') %></a></li>
+		          <li><a href="http://agenda.colmex.mx/Convocatorias"><%= t('botones.b3.opciones.op8') %></a></li>
 		          <li><a href=<%= admisiones_path %>><%= t('botones.b3.opciones.op4') %></a></li>
 		          <li><a href="http://oia.colmex.mx/" target="_blank"><%= t('botones.b3.opciones.op5') %></a></li>
-		          <li><a href=<%= cursos_varios_path %>><%= t('botones.b3.opciones.op6') %></a></li>
 		          <li><a href=<%= asset_url("calendarioescolar.pdf") %> target="_blank"><%= t('botones.b3.opciones.op7') %></a></li>
 		        </ul>
 		    </li>
@@ -178,7 +179,7 @@
           	<li><a href=<%= documentacion_path %> class="sublink"><%= t('botones.b1.opciones.op4') %></a></li>
           	<li><a href=<%= profesores_emeritos_path %> class="sublink"><%= t('botones.b1.opciones.op5') %></a></li>
           	<li><a href=<%= premios_path %> class="sublink"><%= t('botones.b1.opciones.op6') %></a></li>
-						<li><a href="http://sg.colmex.mx/" class="sublink" target="_blank"><%= t('botones.b1.opciones.op7') %></a></li>
+						<li><a href=<%= principios_path %> class="sublink"><%= t('footer.liga1') %></a></li>
 						<li><a href=<%= transparencia_path %> class="sublink"><%= t('botones.b1.opciones.op9') %></a></li>
 					</ul>
 				</li>
@@ -200,9 +201,10 @@
 						<li><a href=<%= licenciaturas_path %> class="sublink"><%= t('botones.b3.opciones.op1') %></a></li>
           	<li><a href=<%= maestrias_path %> class="sublink"><%= t('botones.b3.opciones.op2') %></a></li>
           	<li><a href=<%= doctorados_path %> class="sublink"><%= t('botones.b3.opciones.op3') %></a></li>
+          	<li><a href=<%= cursos_varios_path %> class="sublink"><%= t('botones.b3.opciones.op6') %></a></li>
+          	<li><a href="http://agenda.colmex.mx/Convocatorias" class="sublink"><%= t('botones.b3.opciones.op8') %></a></li>
           	<li><a href=<%= admisiones_path %> class="sublink"><%= t('botones.b3.opciones.op4') %></a></li>
           	<li><a href="http://oia.colmex.mx/" class="sublink" target="_blank"><%= t('botones.b3.opciones.op5') %></a></li>
-          	<li><a href=<%= cursos_varios_path %> class="sublink"><%= t('botones.b3.opciones.op6') %></a></li>
           	<li><a href=<%= asset_url("calendarioescolar.pdf") %> target="_blank" class="sublink"><%= t('botones.b3.opciones.op7') %></a></li>
 					</ul>
 				</li>

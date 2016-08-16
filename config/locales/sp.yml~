@@ -15,6 +15,7 @@ sp:
         op6: "Premios y distinciones"
         op7: "Licitaciones"
         op8: "Relación de bienes muebles e inmuebles"
+        op9: "Transparencia"
     b2:
       texto: "Centros de estudio"
       opciones:

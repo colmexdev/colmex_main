@@ -69,6 +69,28 @@
 		</div> <!-- Cierre de columnas para formulario de suscripción -->
 	</div> <!-- Cierre de fila para formulario de suscripción -->
 
+	<div class="row"> <!-- Fila para "Descubre" -->
+		<div class="col-md-12" id="div_descubre"> <!-- Columnas para "Descubre" -->
+			<div class="titulo-descubre">
+				<span class="titulo-grande morado"><%= t('descubre') %></span>
+			</div>
+			<div class="filtros-descubre">
+				<span class="span-filtros">Filtrar por:</span>
+				<%= select_tag("contenido", options_from_collection_for_select(Descubre.group(:contenido).order(:contenido), (:contenido).downcase, :contenido), :include_blank => "Categoría (Todos)", :onchange => "filtrarDescubres();") %>
+				<%= text_field_tag("tags", "", :oninput => "filtrarDescubres();", :placeholder => "Contenido") %>
+			</div>
+			<div class="wrapper-descubre" id="wrapper">
+				<%= construir_descubre(@descubre) %>
+			</div>
+			<div id="cutter-descubre" onclick="desbordarDescubres();">
+				VER MÁS <%= image_tag("mas.png") %>
+			</div>
+
+		</div> <!-- Cierre de columnas para "Descubre" -->
+	</div> <!-- Cierre de fila para "Descubre" -->
+
+
+
 	<div class="row"> <!-- Fila para revistas -->
 		<div class="col-md-12" id="div_revistas"> <!-- Columnas para revistas -->
 			<div class="col-xs-6 col-sm-4 revista" id="col-izq"><%= link_to(image_tag('revistas-der.png', :id => "img-pub"), "
@@ -83,26 +105,6 @@ http://libros.colmex.mx/", :target => "_blank") %></div>
 			</div>
 		</div> <!-- Cierre de columnas para revistas -->
 	</div> <!-- Cierre de fila para revistas -->
-
-	<div class="row"> <!-- Fila para "Descubre" -->
-		<div class="col-md-12" id="div_descubre"> <!-- Columnas para "Descubre" -->
-			<div class="titulo-descubre">
-				<span class="titulo-grande morado"><%= t('descubre') %></span>
-			</div>
-			<div class="filtros-descubre">
-				<span class="span-filtros">Filtrar por:</span>
-				<%= select_tag("contenido", options_from_collection_for_select(Content.all.order(:tipo), (:tipo).downcase, :tipo), :include_blank => "Categoría (Todos)", :onchange => "filtrarDescubres();") %>
-				<%= text_field_tag("tags", "", :oninput => "filtrarDescubres();", :placeholder => "Contenido") %>
-			</div>
-			<div class="wrapper-descubre" id="wrapper">
-				<%= construir_descubre(@descubre) %>
-			</div>
-			<div id="cutter-descubre" onclick="desbordarDescubres();">
-				VER MÁS <%= image_tag("mas.png") %>
-			</div>
-
-		</div> <!-- Cierre de columnas para "Descubre" -->
-	</div> <!-- Cierre de fila para "Descubre" -->
 
 	<div class="row"> <!-- Fila para logos COLMEX -->
 		<div id="wrapper-donacion">
