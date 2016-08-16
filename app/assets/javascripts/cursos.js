@@ -7,6 +7,6 @@ function ocultarTipoCurso(){
 	else
 	{
 		document.getElementById("tipo_curso").style.display = "block";
-		document.getElementById("tipo_c_linea").style.display = "none";
+		document.getElementById("tipo_c_linea").style.display = "block";
 	}
 }
