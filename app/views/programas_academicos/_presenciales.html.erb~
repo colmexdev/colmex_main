@@ -6,7 +6,7 @@
 
     <div class="uk-grid uk-grid-medium uk-margin-large-bottom">
     <div class="uk-width-1-5 uk-text-center">
-    <img src="curso-lead.jpg" class="uk-border-rounded" alt="Foto curso">
+    <img src=<%= p.foto.url %> class="uk-border-rounded" alt="Foto curso">
     </div>
     <div class="uk-width-4-5 uk-vertical-align-middle uk-text-left uk-text-break">
     <h2 class="vino"><%= p.titulo %></h2>

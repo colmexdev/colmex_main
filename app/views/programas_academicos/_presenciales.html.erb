@@ -13,6 +13,9 @@
     <div class="uk-grid uk-grid-large">
     <div class="uk-width-large-4-6 uk-text-left">
     <p><%= p.descripcion %></p>
+    <% if !p.imparte.nil? %>
+      <p class="uk-text-left">Impartido por <%= p.imparte %></p>
+    <% end %>
     <a href=<%= p.liga || "" %> target="_blank" class="ver-mas uk-margin-large-bottom uk-button-small">Más información</a>
     </div>
     <div class="uk-width-large-2-6">
