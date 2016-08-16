@@ -7,7 +7,7 @@ module PrincipalHelper
     sliders.each do |im|
       control_block = control_block + '<li data-target="#myCarousel" data-slide-to="' + i.to_s + '"' + (i == 0 ?  'class="active"' : '') + '></li>'
       html_block = html_block + '<div class="item ' + (i == 0 ?  "active" : "") + '">'
-      html_block = html_block + image_tag(im.imagen.url, :class => "imagen_slider_fondo") + "<div class=\"ghost-slider\">" + (im.liga.to_s != "" ? link_to(image_tag(im.badge.url, {:class => "imagen_slider_sobre " + im.posicion.downcase, :id => "badge-" + i.to_s}),im.liga, :class => "liga_img") : image_tag(im.badge.url, {:class => "imagen_slider_sobre " + im.posicion.downcase, :id => "badge-" + i.to_s}) ) + "</div>"
+      html_block = html_block + image_tag(im.imagen.url, :class => "imagen_slider_fondo") + "<div class=\"ghost-slider\">" + (im.liga.to_s != "" ? link_to(image_tag(im.badge.url, {:class => "imagen_slider_sobre " + im.posicion.mb_chars.downcase, :id => "badge-" + i.to_s}),im.liga, :class => "liga_img") : image_tag(im.badge.url, {:class => "imagen_slider_sobre " + im.posicion.mb_chars.downcase, :id => "badge-" + i.to_s}) ) + "</div>"
       html_block = html_block + '</div>'
       i = i + 1
     end
@@ -57,7 +57,7 @@ module PrincipalHelper
   def construirEvento(fila, chico = false)
     centros = ['ceaa', 'cedua', 'cee', 'ceh', 'cei', 'cell', 'ces', 'colmex', 'bdcv']
     bloque_html = '<div class="img_evento">'
-    bloque_html = bloque_html + ( centros.include?(fila["centroSiglas"].downcase) ? ActionController::Base.helpers.image_tag(fila["centroSiglas"].downcase + ".png", :class => "img_sede") : '') + "</div>"
+    bloque_html = bloque_html + ( centros.include?(fila["centroSiglas"].mb_chars.downcase) ? ActionController::Base.helpers.image_tag(fila["centroSiglas"].mb_chars.downcase + ".png", :class => "img_sede") : '') + "</div>"
 
     bloque_html = bloque_html + '<div class="desc_evento">'
 
@@ -103,11 +103,11 @@ module PrincipalHelper
       if d.imagen.url != "/vacio.jpg"
         bloque_html = bloque_html + ActionController::Base.helpers.image_tag(d.imagen, :class => "imagen-descubre")
       else
-        bloque_html = bloque_html + "<p><span class=\"cont-descubre\">" + d.contenido.upcase + "</span></p>"
+        bloque_html = bloque_html + "<p><span class=\"cont-descubre\">" + d.contenido.mb_chars.upcase + "</span></p>"
         bloque_html = bloque_html + "<p><span class=\"titulo-descubre\">" + d.titulo + "</span></p>"
       end
-      bloque_html = bloque_html + "<a href=\""+ d.liga + "\" " + (d.contenido.downcase == "cápsula temática" ? ("data-uk-lightbox data-lightbox-type=\"iframe\"") : "target=\"_blank\"" ) + "><div class=\"frame-hover\">"
-      bloque_html = bloque_html + "<p><span class=\"cont-descubre\">" + d.contenido.upcase + "</span></p>"
+      bloque_html = bloque_html + "<a href=\""+ d.liga + "\" " + (d.contenido.mb_chars.downcase == "cápsula temática" ? ("data-uk-lightbox data-lightbox-type=\"iframe\"") : "target=\"_blank\"" ) + "><div class=\"frame-hover\">"
+      bloque_html = bloque_html + "<p><span class=\"cont-descubre\">" + d.contenido.mb_chars.upcase + "</span></p>"
       bloque_html = bloque_html + "<p><span class=\"titulo-descubre\">" + d.titulo + "</span></p>"
       bloque_html = bloque_html + ActionController::Base.helpers.image_tag(Content.where(tipo: d.contenido).first.icono.url, :class => "icono-descubre")
       bloque_html = bloque_html + "</div></a></div>"
