@@ -1,0 +1,3 @@
+
+$("#titulo-render").html("<%= t('sobre.autoridades.asamblea') %>");
+$("#autoridades-render").html("<%= j render :partial => 'asamblea' %>");
