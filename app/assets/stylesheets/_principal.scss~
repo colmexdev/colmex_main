@@ -51,6 +51,8 @@ a, a:hover, a:active, a:visited, a:link{  text-decoration: none; }
 }
 p {text-align: justify; font-size: 18px;}
 
+.izq-align { text-align: left; }
+
 @media only screen and (min-width: 768px){
 	.principal-chica {
     max-width: 980px;
