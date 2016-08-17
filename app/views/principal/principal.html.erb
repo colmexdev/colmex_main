@@ -59,7 +59,7 @@
 	<div class="row"> <!-- Fila para formulario de suscripción -->
 		<div class="col-md-12" id="div_suscripcion"> <!-- Columnas para formulario de suscripción -->
 
-			<form class="navbar-form navbar-left" role="search" id="forma_suscripcion">
+			<form class="navbar-form navbar-left" role="search" id="forma_suscripcion" method="post" action="http://listas.colmex.mx/?p=subscribe" name="subscribeform">
 		    <div class="form-group">
 					<label for="text-suscripcion"><%= t('suscripcion.texto') %></label>
 		      <%= '<input type="text" accept-charset="UTF-8" id="text-suscripcion" class="form-control" placeholder='.html_safe + t('suscripcion.placeholder') + ">".html_safe %>
@@ -88,8 +88,6 @@
 
 		</div> <!-- Cierre de columnas para "Descubre" -->
 	</div> <!-- Cierre de fila para "Descubre" -->
-
-
 
 	<div class="row"> <!-- Fila para revistas -->
 		<div class="col-md-12" id="div_revistas"> <!-- Columnas para revistas -->
