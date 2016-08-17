@@ -62,7 +62,7 @@
 			<form class="navbar-form navbar-left" role="search" id="forma_suscripcion" method="post" action="http://listas.colmex.mx/?p=subscribe" name="subscribeform">
 		    <div class="form-group">
 					<input type="hidden" name="list[0]" value="signup">
-					<input type="text" accept-charset="UTF-8" name="emailconfirm">
+					<input type="hidden" accept-charset="UTF-8" name="emailconfirm" value="" id="mailconf">
 					<label for="text-suscripcion"><%= t('suscripcion.texto') %></label>
 		      <%= '<input type="text" accept-charset="UTF-8" id="text-suscripcion" name="email" class="form-control" oninput="llenaConfirmacion(this.value);" placeholder='.html_safe + t('suscripcion.placeholder') + ">".html_safe %>
 		    </div>
