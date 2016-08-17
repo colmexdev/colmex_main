@@ -28,6 +28,7 @@ $(document).ready(function(){
 
 	recabarAnchos();
 	escalarSlider();
+	reajustarBadges();
 	partirDescubres();
 	margenAuto();
 	ajustarImagenes();

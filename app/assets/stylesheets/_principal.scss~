@@ -1142,7 +1142,7 @@ ul.ul-nav { display: table; float: left !important;
 		.revista { a { img { max-height: 130px; max-width: 200px; } } } 
 	}
 
-	.col-xs-12.col-sm-4.revista { margin-bottom: 20px; }
+	.col-xs-6.col-md-3.revista { margin-bottom: 20px; }
 }
 
 //Estilos que afectan la sección del descubre
@@ -1235,11 +1235,11 @@ ul.ul-nav { display: table; float: left !important;
 			position: relative;
 			font-style: normal;
 			opacity: 1;
-			-webkit-transition: opacity 0.5s linear, visibility 0.5s linear, width 0.5s linear 0.5s, height 0s linear 1s;
-			-moz-transition: opacity 0.5s linear, visibility 0.5s linear, width 0.5s linear 0.5s, height 0s linear 1s;
-			-ms-transition: opacity 0.5s linear, visibility 0.5s linear, width 0.5s linear 0.5s, height 0s linear 1s;
-			-o-transition: opacity 0.5s linear, visibility 0.5s linear, width 0.5s linear 0.5s, height 0s linear 1s;
-			transition: opacity 0.5s linear, visibility 0.5s linear, width 0.5s linear 0.5s, height 0s linear 1s;
+			-webkit-transition: opacity 0.5s linear, visibility 0.5s linear, width 0.5s linear;
+			-moz-transition: opacity 0.5s linear, visibility 0.5s linear, width 0.5s linear;
+			-ms-transition: opacity 0.5s linear, visibility 0.5s linear, width 0.5s linear;
+			-o-transition: opacity 0.5s linear, visibility 0.5s linear, width 0.5s linear;
+			transition: opacity 0.5s linear, visibility 0.5s linear, width 0.5s linear;
 
 			.imagen-descubre{
 				@include centrado;
