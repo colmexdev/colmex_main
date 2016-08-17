@@ -28,12 +28,12 @@ function renderFrase(){
 function actualizarVisibleDescubres(visibles){
 	for(var i = 0; i < descubres.length; i++){
 		descubres[i]["visible"] = false;
-		$("#frame-"+i).css({"-webkit-transition": "opacity 0.5s linear 0.2s, visibility 0.5s linear, width 0.2s linear, height 0s linear 0s", "-moz-transition": "opacity 0.5s linear 0.2s, visibility 0.5s linear, width 0.2s linear, height 0s linear 0s", "-ms-transition": "opacity 0.5s linear 0.2s, visibility 0.5s linear, width 0.2s linear, height 0s linear 0s",
-"-o-transition": "opacity 0.5s linear 0.2s, visibility 0.5s linear, width 0.2s linear, height 0s linear 0s","transition": "opacity 0.5s linear 0.2s, visibility 0.5s linear, width 0.2s linear, height 0s linear 0s"});
-		
+		$("#frame-"+i).removeAttr("style");
 	}
 	for(var i = 0; i < visibles.length; i++){
-		$("#frame-"+i).removeAttr("style");
+
+		$("#frame-"+i).css({"-webkit-transition": "opacity 0.5s linear 0.2s, visibility 0.5s linear, width 0.2s linear, height 0s linear 0s", "-moz-transition": "opacity 0.5s linear 0.2s, visibility 0.5s linear, width 0.2s linear, height 0s linear 0s", "-ms-transition": "opacity 0.5s linear 0.2s, visibility 0.5s linear, width 0.2s linear, height 0s linear 0s",
+"-o-transition": "opacity 0.5s linear 0.2s, visibility 0.5s linear, width 0.2s linear, height 0s linear 0s","transition": "opacity 0.5s linear 0.2s, visibility 0.5s linear, width 0.2s linear, height 0s linear 0s"});
 		descubres[visibles[i]["index"]]["visible"] = true;
 		$("#frame-" + visibles[i]["index"]).css("opacity","1");
 
