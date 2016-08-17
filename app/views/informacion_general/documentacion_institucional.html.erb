@@ -5,7 +5,7 @@
 
 <div class="uk-width-1-1">
     <div class="uk-grid uk-grid-medium">
-    <div class="uk-width-large-2-5 uk-text-center-small uk-text-center-medium uk-text-left">
+    <div class="uk-width-large-2-5 uk-text-center-small uk-text-center-medium uk-text-left" style="border-right: 2px solid #EEEEEE">
     <span class="titulo-grande">Documentación Institucional</span><br>
     <!--          Aquí empieza el menú pequeño          -->
     <ul style="text-align:left;">
@@ -17,7 +17,7 @@
     </div>
     <div class="uk-width-large-3-5">
 			<span class="titulo-grande morado" id="titulo-render"><%= t('sobre.documentacion.op1') + " " + @actas.order(anio: :desc).first.anio.to_s %></span>
-			<div id="documentacion-render">
+			<div id="documentacion-render" style="padding-top:20px;">
 				<%= render "informacion_general/actas" %>
 			</div>
 		</div>
