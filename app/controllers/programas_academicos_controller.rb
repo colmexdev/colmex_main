@@ -8,6 +8,9 @@ class ProgramasAcademicosController < ApplicationController
   def admisiones
   end
 
+  def calendario_escolar
+  end
+
   def maestrias
     @maestrias = Curso.where(:programa => "Maestría").order(:titulo)
   end

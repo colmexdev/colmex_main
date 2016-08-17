@@ -94,6 +94,8 @@ Rails.application.routes.draw do
 
   get 'programas_academicos/electronicos' => 'programas_academicos#electronicos', :as => :electronicos
 
+  get 'programas_academicos/calendario_escolar' => 'programas_academicos#calendario_escolar', :as => :calendario
+
   get 'principal/principios_eticos' => 'principal#principios_eticos', :as => :principios
 
   get 'principal/principal'
