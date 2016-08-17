@@ -69,21 +69,6 @@
 		</div> <!-- Cierre de columnas para formulario de suscripción -->
 	</div> <!-- Cierre de fila para formulario de suscripción -->
 
-	<div class="row"> <!-- Fila para revistas -->
-		<div class="col-md-12" id="div_revistas"> <!-- Columnas para revistas -->
-			<div class="col-xs-6 col-sm-4 revista" id="col-izq"><%= link_to(image_tag('revistas-der.png', :id => "img-pub"), "
-http://libros.colmex.mx/", :target => "_blank") %></div>
-			<div class="col-xs-6 col-sm-4 revista" id="col-ct">
-				<%= link_to(image_tag('revistas-centro.png', :class => "rev-sm", :id => "img-pred-sm"), "http://digital.colmex.mx/", :target => "_blank") %>
-				<%= link_to(image_tag('revistas-izq.png', :class => "rev-xs", :id => "img-rev-xs"), "https://revistas.colmex.mx/index.php", :target => "_blank") %>
-			</div>
-			<div class="col-xs-12 col-sm-4 revista" id="col-der">
-				<%= link_to(image_tag('revistas-izq.png', :class => "rev-sm", :id => "img-rev-sm"), "https://revistas.colmex.mx/index.php", :target => "_blank") %>
-				<%= link_to(image_tag('revistas-centro.png', :class => "rev-xs", :id => "img-pred-xs"), "http://digital.colmex.mx/", :target => "_blank") %>
-			</div>
-		</div> <!-- Cierre de columnas para revistas -->
-	</div> <!-- Cierre de fila para revistas -->
-
 	<div class="row"> <!-- Fila para "Descubre" -->
 		<div class="col-md-12" id="div_descubre"> <!-- Columnas para "Descubre" -->
 			<div class="titulo-descubre">
@@ -103,6 +88,23 @@ http://libros.colmex.mx/", :target => "_blank") %></div>
 
 		</div> <!-- Cierre de columnas para "Descubre" -->
 	</div> <!-- Cierre de fila para "Descubre" -->
+
+
+
+	<div class="row"> <!-- Fila para revistas -->
+		<div class="col-md-12" id="div_revistas"> <!-- Columnas para revistas -->
+			<div class="col-xs-6 col-sm-4 revista" id="col-izq"><%= link_to(image_tag('revistas-der.png', :id => "img-pub"), "
+http://libros.colmex.mx/", :target => "_blank") %></div>
+			<div class="col-xs-6 col-sm-4 revista" id="col-ct">
+				<%= link_to(image_tag('revistas-centro.png', :class => "rev-sm", :id => "img-pred-sm"), "http://digital.colmex.mx/", :target => "_blank") %>
+				<%= link_to(image_tag('revistas-izq.png', :class => "rev-xs", :id => "img-rev-xs"), "https://revistas.colmex.mx/index.php", :target => "_blank") %>
+			</div>
+			<div class="col-xs-12 col-sm-4 revista" id="col-der">
+				<%= link_to(image_tag('revistas-izq.png', :class => "rev-sm", :id => "img-rev-sm"), "https://revistas.colmex.mx/index.php", :target => "_blank") %>
+				<%= link_to(image_tag('revistas-centro.png', :class => "rev-xs", :id => "img-pred-xs"), "http://digital.colmex.mx/", :target => "_blank") %>
+			</div>
+		</div> <!-- Cierre de columnas para revistas -->
+	</div> <!-- Cierre de fila para revistas -->
 
 	<div class="row"> <!-- Fila para logos COLMEX -->
 		<div id="wrapper-donacion">
