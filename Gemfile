@@ -5,6 +5,7 @@ source 'https://rubygems.org'
 gem 'rails', '4.2.6'
 # Use mysql as the database for Active Record
 gem 'mysql2', '>= 0.3.13', '< 0.5'
+gem 'active_record_union'
 # Use bootstrap compiled from SASS
 gem 'bootstrap-sass', '~> 3.3.6'
 # UIkit para estilos diversos

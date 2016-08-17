@@ -37,6 +37,9 @@ gem 'activerecord-sqlserver-adapter'
 # Paperclip para manejar la subida de imágenes
 gem 'paperclip'
 
+#crossfilter para el filtrado de datsets
+gem 'crossfilter-rails'
+
 # Devise para autenticación
 gem 'devise'
 

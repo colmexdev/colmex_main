@@ -56,6 +56,12 @@ class InformacionGeneralController < ApplicationController
     end
   end
 
+  def licitaciones
+    respond_to do |format|
+      format.js
+    end
+  end
+
   def bienes
     @transparencias = Documento.where(:tipo => "Transparencia")
     respond_to do |format|

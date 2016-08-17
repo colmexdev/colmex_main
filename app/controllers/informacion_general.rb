@@ -76,7 +76,7 @@ class InformacionGeneralController < ApplicationController
   end
 
   def operativas
-    @operativas, @operativos = Personal.where(:seccion => "Operativas"), []
+    @operativas, @operativos = Personal.where("seccion = ? AND nombre = ?", "Operativas", "Gabriela Said Reyes").union(Personal.where("seccion = ? AND nombre = ?", "Operativas", "Valentina Riquelme Molina")).union(Personal.where("seccion = ? AND nombre = ?", "Operativas", "Laura Valverde González")).union(Personal.where("seccion = ? AND nombre = ?", "Operativas", "Quetzalli Padilla Dulché")).union(Personal.where("seccion = ? AND nombre = ?", "Operativas", "José Luis Arciga Torres")).union(Personal.where("seccion = ? AND nombre = ?", "Operativas", "León Ruiz Chávez")).union(Personal.where("seccion = ? AND nombre = ?", "Operativas", "Ernesto Arturo Hernández Camarillo")).union(Personal.where("seccion = ? AND nombre = ?", "Operativas", "Alejandro Castro González"))
     respond_to do |format|
       format.js
     end
