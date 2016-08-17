@@ -61,10 +61,11 @@
 
 			<form class="navbar-form navbar-left" role="search" id="forma_suscripcion" method="post" action="http://listas.colmex.mx/?p=subscribe" name="subscribeform">
 		    <div class="form-group">
+					<input type="hidden" name="list[0]" value="signup">
 					<label for="text-suscripcion"><%= t('suscripcion.texto') %></label>
-		      <%= '<input type="text" accept-charset="UTF-8" id="text-suscripcion" class="form-control" placeholder='.html_safe + t('suscripcion.placeholder') + ">".html_safe %>
+		      <%= '<input type="text" accept-charset="UTF-8" id="text-suscripcion" name="email" class="form-control" placeholder='.html_safe + t('suscripcion.placeholder') + ">".html_safe %>
 		    </div>
-				<button type="submit" class="btn btn-default"><span><%= t('suscripcion.boton') %></span></button>
+				<button type="submit" name="subscribe" value="Subscribe" class="btn btn-default"><span><%= t('suscripcion.boton') %></span></button>
 			</form>
 		</div> <!-- Cierre de columnas para formulario de suscripción -->
 	</div> <!-- Cierre de fila para formulario de suscripción -->
