@@ -28,7 +28,6 @@ $(document).ready(function(){
 
 	recabarAnchos();
 	escalarSlider();
-	reajustarBadges();
 	partirDescubres();
 	margenAuto();
 	ajustarImagenes();
@@ -75,6 +74,7 @@ function recabarAnchos(){
 			var ancho_img = this.width;
 			$( "#badge-" + i ).css("max-width", ancho_img);
 			anchos_badges.push(ancho_img);
+			reajustarBadges();
 		}
 		image.src = $( "#badge-" + i).attr("src");
 	}	
