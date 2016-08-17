@@ -95,6 +95,10 @@ function reajustarBadges(){
 	}
 }
 
+function llenaConfirmacion(valor){
+	document.getElementById("mailconf").value = valor;
+}
+
 function partirDescubres(){
 	var ancho_v = Math.max(document.documentElement.clientWidth, window.innerWidth || document.body.ClientWidth || 0);
 	var json_l = descubres.length;

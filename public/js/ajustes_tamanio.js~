@@ -91,7 +91,7 @@ function escalarSlider(){
 function reajustarBadges(){
 	for( var i = 0; i < gon.cant_sliders; i++){
 		var ancho_nuevo = ($("#div_slider").width() * anchos_badges[i]) / 1341;
-		$( "#badge-" + i ).css("width", ancho_nuevo);
+		$( "#badge-" + i ).css({"width": ancho_nuevo+"px", "max-width": anchos_badges[i]+"px" });
 	}
 }
 
