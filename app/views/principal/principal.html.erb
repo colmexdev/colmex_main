@@ -59,7 +59,8 @@
 	<div class="row"> <!-- Fila para formulario de suscripción -->
 		<div class="col-md-12" id="div_suscripcion"> <!-- Columnas para formulario de suscripción -->
 
-			<form class="navbar-form navbar-left" role="search" id="forma_suscripcion" method="post" action="http://listas.colmex.mx/?p=subscribe" name="subscribeform">
+			<form class="navbar-form navbar-left" role="search" id="forma_suscripcion" method="post" action="http://listas.colmex.mx/?p=subscribe" name="subscribeform" target="windowName" onsubmit="window.open('', this.target,
+'dialog,modal,scrollbars=no,resizable=no,width=550,height=300,left=0,top=0');">
 		    <div class="form-group">
 					<input type="hidden" name="list[0]" value="signup">
 					<input type="hidden" name="htmlemail" value="1" checked>
