@@ -1,10 +1,10 @@
 <p>&nbsp;</p>
-    <% @admins.each do |a| %>
+    <% @bibliotecas.each do |b| %>
     <div class="uk-margin-large-bottom">
-    <h4><%= a.cargo.upcase %></h4>
-    <h3 class="vino"><%= a.nombre %></h3>
-    <p>Correo electrónico: <a class="uk-link" href="mailto:<%= a.correo %>"><%= a.correo %></a></p>
-    <p>Teléfono: <%= a.telefono %> Extensión: <%= a.extension %></p>
+    <h4><%= b.cargo.upcase %></h4>
+    <h3 class="vino"><%= b.nombre %></h3>
+    <p>Correo electrónico: <a class="uk-link" href="mailto:<%= b.correo %>"><%= b.correo %></a></p>
+    <p>Teléfono: <%= b.telefono %> Extensión: <%= b.extension %></p>
     </div>
     <% end %>
 

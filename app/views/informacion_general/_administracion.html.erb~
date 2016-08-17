@@ -3,7 +3,7 @@
     <div class="uk-margin-large-bottom">
     <h4><%= a.cargo.upcase %></h4>
     <h3 class="vino"><%= a.nombre %></h3>
-    <p>Correo electrónico: <a href="mailto:<%= a.correo %>"><%= a.correo %></a></p>
+    <p>Correo electrónico: <a class="uk-link" href="mailto:<%= a.correo %>"><%= a.correo %></a></p>
     <p>Teléfono: <%= a.telefono %> Extensión: <%= a.extension %></p>
     </div>
     <% end %>
