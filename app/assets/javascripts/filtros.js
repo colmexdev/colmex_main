@@ -33,7 +33,7 @@ function actualizarVisibleDescubres(visibles){
 	for(var i = 0; i < visibles.length; i++){
 		descubres[visibles[i]["index"]]["visible"] = true;
 		$("#frame-"+i).removeAttr("style");
-		$("#frame-" + visibles[i]["index"]).css("opacity","1");
+		//$("#frame-" + visibles[i]["index"]).css("opacity","1");
 	}
 	reescalarDescubre();
 }
