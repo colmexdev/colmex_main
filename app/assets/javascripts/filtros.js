@@ -38,6 +38,13 @@ function actualizarVisibleDescubres(visibles){
 
 function reescalarDescubre(){
 	for(var i = 0; i < descubres.length; i++){
+		if(descubres[i]["visible"]){
+			$("frame-"+i).css({"-webkit-transition": "opacity 0.5s linear 0.2s, visibility 0.5s linear, width 0.2s linear, height 0s linear 0s", "-moz-transition": "opacity 0.5s linear 0.2s, visibility 0.5s linear, width 0.2s linear, height 0s linear 0s", "-ms-transition": "opacity 0.5s linear 0.2s, visibility 0.5s linear, width 0.2s linear, height 0s linear 0s",
+"-o-transition": "opacity 0.5s linear 0.2s, visibility 0.5s linear, width 0.2s linear, height 0s linear 0s","transition": "opacity 0.5s linear 0.2s, visibility 0.5s linear, width 0.2s linear, height 0s linear 0s"});
+		}
+		else{
+			$("frame-"+i).removeAttr("style");
+		}
 		$("#frame-" + i).css({"opacity" : (descubres[i]["visible"] ? "1" : "0"), "visibility" : (descubres[i]["visible"] ? "visible" : "hidden"), "width" : (descubres[i]["visible"] ? "" : "0"), "height" : (descubres[i]["visible"] ? ajustarAlturas() : "0") });
 	}
 }
