@@ -8,7 +8,7 @@ num_filas = 2;
 anchos_badges =[];
 barra_render = false;
 
-$(document).on('page:load', function(){ UIkit.init(); })
+$(document).on('page:load page:change', function(){ UIkit.init(); })
 
 $(document).ready(function(){
 	UIkit.init();
@@ -93,6 +93,10 @@ function reajustarBadges(){
 		var ancho_nuevo = ($("#div_slider").width() * anchos_badges[i]) / 1341;
 		$( "#badge-" + i ).css({"width": ancho_nuevo+"px", "max-width": anchos_badges[i]+"px" });
 	}
+}
+
+function llenaConfirmacion(valor){
+	document.getElementById("mailconf").value = valor;
 }
 
 function partirDescubres(){
