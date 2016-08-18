@@ -63,9 +63,9 @@
   $(document).on('ready page:change', function() {
     console.log('page loaded: ' + window.location.href);
     analytics.page();
-    for(var i = 0; i < descubres.length; i++){
-      analytics.trackLink($("#frame-"+i+"-hov"), function(){console.log("Click al descubre : " + $("#tit-desc-"+ i ).text()); return "Click al Descubre: " + $("#tit-desc-"+i).text()}, {link: $("#frame-"+i+" a").attr("href") });
-    }
+    //for(var i = 0; i < descubres.length; i++){
+      analytics.trackLink($("#frame-0-hov"), function(){console.log("Click al descubre : " + $("#tit-desc-0" ).text()); return "Click al Descubre: " + $("#tit-desc-0").text()}, {link: $("#frame-0 a").attr("href") });
+    //}
     //analytics.trackForm($('#new_visitor'), 'Signed Up');
     //analytics.trackForm($('#new_contact'), 'Contact Request');
   });
