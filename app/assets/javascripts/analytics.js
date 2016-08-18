@@ -60,11 +60,11 @@
 
   // accommodate Turbolinks
   // track page views and links clicked
-  $(document).on('ready page:change', function() {
+  $(document).on('page:change', function() {
     console.log('page loaded: ' + window.location.href);
     analytics.page();
     for(var i = 0; i < descubres.length; i++){
-      analytics.trackLink($("#frame-"+i+"-hov"), function(){console.log("Click al descubre : " + $("#frame-"+ i +" p.titulo-descubre").val()); return "Click al Descubre: " + $("#frame-"+ i +" p.titulo-descubre").val()}, {link: $("#frame-"+i+" a").attr("href") });
+      analytics.trackLink($("#frame-"+i+"-hov"), function(){console.log("Click al descubre : " + $("#frame-"+ i +"-hov p.titulo-descubre").val()); return "Click al Descubre: " + $("#frame-"+ i +"-hov p.titulo-descubre").val()}, {link: $("#frame-"+i+" a").attr("href") });
     }
     //analytics.trackForm($('#new_visitor'), 'Signed Up');
     //analytics.trackForm($('#new_contact'), 'Contact Request');
