@@ -5,6 +5,7 @@ source 'https://rubygems.org'
 gem 'rails', '4.2.6'
 # Use mysql as the database for Active Record
 gem 'mysql2', '>= 0.3.13', '< 0.5'
+gem 'active_record_union'
 # Use bootstrap compiled from SASS
 gem 'bootstrap-sass', '~> 3.3.6'
 # UIkit para estilos diversos
@@ -20,6 +21,9 @@ gem 'coffee-rails', '~> 4.1.0'
 
 # gon para pasar parámetros a Javascript
 gem 'gon'
+
+#analytics-ruby para integrar Segment.io para analíticos
+gem 'analytics-ruby', '~> 2.0.0', :require => "segment/analytics"
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'

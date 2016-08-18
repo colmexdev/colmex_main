@@ -22,6 +22,9 @@ gem 'coffee-rails', '~> 4.1.0'
 # gon para pasar parámetros a Javascript
 gem 'gon'
 
+#analytics-ruby para integrar Segment.io para analíticos
+#gem 'analytics-ruby', '~> 2.0.0', :require => "segment/analytics"
+
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks

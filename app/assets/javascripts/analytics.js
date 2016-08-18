@@ -61,7 +61,7 @@
   // accommodate Turbolinks
   // track page views and form submissions
   $(document).on('ready page:change', function() {
-    console.log('page loaded');
+    console.log('page loaded: ' + window.href.location);
     analytics.page();
     analytics.trackForm($('#new_visitor'), 'Signed Up');
     analytics.trackForm($('#new_contact'), 'Contact Request');
