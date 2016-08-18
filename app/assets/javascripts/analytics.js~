@@ -60,7 +60,7 @@
 
   // accommodate Turbolinks
   // track page views and links clicked
-  $(document).on('page:change', function() {
+  $(document).on('ready page:change', function() {
     console.log('page loaded: ' + window.location.href);
     analytics.page();
     for(var i = 0; i < descubres.length; i++){
