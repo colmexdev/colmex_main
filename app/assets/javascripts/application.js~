@@ -14,8 +14,10 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require bootstrap-sprockets
+//= require scroll
 //= require crossfilter
 //= require filtros
+//= require google_analytics
 //= require principal
 //= require imagens
 //= require cursos

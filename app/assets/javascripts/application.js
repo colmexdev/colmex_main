@@ -17,6 +17,7 @@
 //= require scroll
 //= require crossfilter
 //= require filtros
+//= require analytics
 //= require principal
 //= require imagens
 //= require cursos
