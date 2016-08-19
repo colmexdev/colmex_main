@@ -90,5 +90,15 @@
         analytics.trackLink($("#liga-evento-"+i), titulo, {liga: link});
       }
     }
+    if(document.getElementById("div_slider") != null){
+      console.log("Slider rastreado");
+      var ligas = document.getElementById("inner-slider").getElementsByTagName("a");
+      for(var i = 0; i < ligas.length; i++){
+        var link = ligas[i].getAttribute("href");
+        var titulo = "Consultado el slider: " + link;
+        console.log(titulo);
+        analytics.trackLink(ligas[i], titulo, {liga: link});
+      }
+    }
 
  });

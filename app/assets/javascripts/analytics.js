@@ -95,9 +95,9 @@
       var ligas = document.getElementById("inner-slider").getElementsByTagName("a");
       for(var i = 0; i < ligas.length; i++){
         var link = ligas[i].getAttribute("href");
-        var titulo = "Consultado el evento: " + link;
-        console.log(titulo + " " + link);
-        analytics.trackLink(ligas[i], titulo, {liga: link});
+        var titulo = "Consultado el badge: " + link;
+        console.log(titulo);
+        analytics.trackLink($("#liga_slider-"+i), titulo, {liga: link});
       }
     }
 
