@@ -77,6 +77,28 @@
         analytics.trackLink($("#frame-"+i+"-hov"), titulo, {liga: link});
       }
     }
-    //analytics.trackForm($('#new_visitor'), 'Signed Up');
-    //analytics.trackForm($('#new_contact'), 'Contact Request');
+    if(document.getElementById("forma_suscripcion") != null){
+      console.log("Forma de suscripción a agenda cargada");
+      analytics.trackForm($('#forma_suscripcion'), 'Registro a la Agenda');
+    }
+    if(document.getElementById("div_eventos") != null){
+      console.log("Ligas a eventos rastreadas");
+      for(var i = 0; i < gon.cant_eventos; i++){
+        var link = $("#liga-evento-"+i).attr("href");
+        var titulo = "Evento consultado: " + link;
+        console.log(titulo + " " + link);
+        analytics.trackLink($("#liga-evento-"+i), titulo, {liga: link});
+      }
+    }
+    if(document.getElementById("div_slider") != null){
+      console.log("Slider rastreado");
+      var ligas = document.getElementById("inner-slider").getElementsByTagName("a");
+      for(var i = 0; i < ligas.length; i++){
+        var link = ligas[i].getAttribute("href");
+        var titulo = "Consultado el evento: " + link;
+        console.log(titulo + " " + link);
+        analytics.trackLink(ligas[i], titulo, {liga: link});
+      }
+    }
+
  });

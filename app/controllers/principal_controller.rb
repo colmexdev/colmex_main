@@ -6,15 +6,15 @@ class PrincipalController < ApplicationController
       @resultado.do
       @resultado = cliente.execute("SELECT * FROM dbo.vw_DatosAgenda WHERE PARSE(fechaFin AS DATE USING 'es-ES') >= GETDATE()  ORDER BY PARSE(fechaInicio AS DATE USING 'es-ES') ASC, horaInicio ASC")
       gon.ev_big, gon.ev_small, gon.ev_tiny = construye_slider_eventos(@resultado)
+      gon.cant_eventos = @resultado.size
     rescue
+      gon.cant_eventos = 0
       gon.ev_big, gon.ev_small, gon.ev_tiny = "", "" ,""
     end
     @sliders = Slider.where("fecha_expiracion > ? ", Date.current()).order("RAND()")
     @descubre = Descubre.where("fecha_publicacion <= ? AND fecha_limite_pub > ?", Date.current(), Date.current()).order("RAND()")
     @frase = Frase.order("RAND()").first
     gon.descubres = @descubre.to_json
-    gon.cant_sliders = @sliders.size
-
   end
 
   def resultados_busqueda
