@@ -51,7 +51,7 @@
   };
 
   // Add a version to keep track of what's in the wild.
-  window.analytics.SNIPPET_VERSION = '2.0.9';
+  window.analytics.SNIPPET_VERSION = '3.1.0';
 
   // Load Analytics.js with your key, which will automatically
   // load the tools you've enabled for your account. Boosh!

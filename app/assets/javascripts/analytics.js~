@@ -51,7 +51,7 @@
   };
 
   // Add a version to keep track of what's in the wild.
-  window.analytics.SNIPPET_VERSION = '2.0.9';
+  window.analytics.SNIPPET_VERSION = '3.1.0';
 
   // Load Analytics.js with your key, which will automatically
   // load the tools you've enabled for your account. Boosh!
@@ -62,3 +62,20 @@
   // move this call however you'd like.
   /*  */
   window.analytics.page();
+
+  // accommodate Turbolinks
+  // track page views and Descubre clicks
+  $(document).on('ready page:change', function() {
+    console.log('Página cargada: ' + window.location.href);
+    analytics.page();
+    if(window.location.href == /[http:\/\/]*web.colmex.mx[\/?locale=sp]*/){
+      for(var i = 0; i < descubres.length; i++){
+        var titulo = "Click a Descubre: " + $("#tit-desc-"+i).text();
+        var link = $("#frame-"+i+" a").attr("href");
+        console.log(titulo + " " + link);
+        analytics.trackLink($("#frame-"+i+"-hov"), titulo, {liga: link});
+      }
+    }
+    //analytics.trackForm($('#new_visitor'), 'Signed Up');
+    //analytics.trackForm($('#new_contact'), 'Contact Request');
+ });
