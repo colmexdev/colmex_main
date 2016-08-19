@@ -81,15 +81,6 @@
       console.log("Forma de suscripción a agenda cargada");
       analytics.trackForm($('#forma_suscripcion'), 'Registro a la Agenda');
     }
-    if(document.getElementById("div_eventos") != null){
-      console.log("Ligas a eventos rastreadas");
-      for(var i = 0; i < gon.cant_eventos; i++){
-        var link = $("#liga-evento-"+i).attr("href");
-        var titulo = "Evento consultado: " + link;
-        console.log(titulo + " " + link);
-        analytics.trackLink($("#liga-evento-"+i), titulo, {liga: link});
-      }
-    }
     if(document.getElementById("div_slider") != null){
       console.log("Slider rastreado");
       var ligas = document.getElementById("inner-slider").getElementsByTagName("a");

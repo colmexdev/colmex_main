@@ -81,15 +81,5 @@
       console.log("Forma de suscripción a agenda cargada");
       analytics.trackForm($('#forma_suscripcion'), 'Registro a la Agenda');
     }
-    if(document.getElementById("div_slider") != null){
-      console.log("Slider rastreado");
-      var ligas = document.getElementById("inner-slider").getElementsByTagName("a");
-      for(var i = 0; i < ligas.length; i++){
-        var link = ligas[i].getAttribute("href");
-        var titulo = "Consultado el badge: " + link;
-        console.log(titulo);
-        analytics.trackLink($("#liga_slider-"+i), titulo, {liga: link});
-      }
-    }
 
  });
