@@ -38,7 +38,7 @@
 							<li><a href=<%= sobre_el_colegio_path %>><%= t('botones.b1.texto2') %></a></li>
 							<li><a href=<%= historia_path %>><%= t('botones.b1.opciones.op3') %></a></li>
 		          <li><a href=<%= autoridades_path %>><%= t('botones.b1.opciones.op2') %></a></li>
-							<li><a href="http://intranet.colmex.mx/directorio/" target="_blank"><%= t('botones.b1.opciones.op1') %></a></li>
+							<li><a onclick="ga('send', 'event', 'Ligas del menú', 'Click', 'Directorio institucional');" href="http://intranet.colmex.mx/directorio/" target="_blank"><%= t('botones.b1.opciones.op1') %></a></li>
 		          <li><a href=<%= documentacion_path %>><%= t('botones.b1.opciones.op4') %></a></li>
 		          <li><a href=<%= profesores_emeritos_path %>><%= t('botones.b1.opciones.op5') %></a></li>
 		          <li><a href=<%= premios_path %>><%= t('botones.b1.opciones.op6') %></a></li>
@@ -50,13 +50,13 @@
 				<li class="dropdown" id="dropdown2">
 		      <a href=<%= centros_de_estudio_path %> class="dropdown-toggle" data-hover="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span><%= t('botones.b2.texto') %></span></a>
 		        <ul class="dropdown-menu">
-		          <li><a href="http://ceaa.colmex.mx/" target="_blank">Centro de Estudios de Asia y África</a></li>
-		          <li><a href="http://cedua.colmex.mx/" target="_blank">Centro de Estudios Demográficos, Urbanos y Ambientales</a></li>
-		          <li><a href="http://cee.colmex.mx/" target="_blank">Centro de Estudios Económicos</a></li>
-		          <li><a href="http://ceh.colmex.mx/" target="_blank">Centro de Estudios Históricos</a></li>
-		          <li><a href="http://cei.colmex.mx/" target="_blank">Centro de Estudios Internacionales</a></li>
-		          <li><a href="http://cell.colmex.mx/" target="_blank">Centro de Estudios Lingüísticos y Literarios</a></li>
-		          <li><a href="http://ces.colmex.mx/" target="_blank">Centro de Estudios Sociológicos</a></li>
+		          <li><a onclick="ga('send', 'event', 'Ligas del menú', 'Click', 'CEAA');" href="http://ceaa.colmex.mx/" target="_blank">Centro de Estudios de Asia y África</a></li>
+		          <li><a onclick="ga('send', 'event', 'Ligas del menú', 'Click', 'CEDUA');" href="http://cedua.colmex.mx/" target="_blank">Centro de Estudios Demográficos, Urbanos y Ambientales</a></li>
+		          <li><a onclick="ga('send', 'event', 'Ligas del menú', 'Click', 'CEE');" href="http://cee.colmex.mx/" target="_blank">Centro de Estudios Económicos</a></li>
+		          <li><a onclick="ga('send', 'event', 'Ligas del menú', 'Click', 'CEF');" href="http://ceh.colmex.mx/" target="_blank">Centro de Estudios Históricos</a></li>
+		          <li><a onclick="ga('send', 'event', 'Ligas del menú', 'Click', 'CEI');" href="http://cei.colmex.mx/" target="_blank">Centro de Estudios Internacionales</a></li>
+		          <li><a onclick="ga('send', 'event', 'Ligas del menú', 'Click', 'CELL');" href="http://cell.colmex.mx/" target="_blank">Centro de Estudios Lingüísticos y Literarios</a></li>
+		          <li><a onclick="ga('send', 'event', 'Ligas del menú', 'Click', 'CES');" href="http://ces.colmex.mx/" target="_blank">Centro de Estudios Sociológicos</a></li>
 		        </ul>
 		    </li>
 
@@ -67,14 +67,14 @@
 		          <li><a href=<%= maestrias_path %>><%= t('botones.b3.opciones.op2') %></a></li>
 		          <li><a href=<%= doctorados_path %>><%= t('botones.b3.opciones.op3') %></a></li>
 		          <li><a href=<%= cursos_varios_path %>><%= t('botones.b3.opciones.op6') %></a></li>
-		          <li><a href="http://agenda.colmex.mx/Convocatorias" target="_blank"><%= t('botones.b3.opciones.op8') %></a></li>
+		          <li><a onclick="ga('send', 'event', 'Ligas del menú', 'Click', 'Convocatorias');" href="http://agenda.colmex.mx/Convocatorias" target="_blank"><%= t('botones.b3.opciones.op8') %></a></li>
 		          <li><a href=<%= admisiones_path %>><%= t('botones.b3.opciones.op4') %></a></li>
-		          <li><a href="http://oia.colmex.mx/" target="_blank"><%= t('botones.b3.opciones.op5') %></a></li>
+		          <li><a onclick="ga('send', 'event', 'Ligas del menú', 'Click', 'OIA');" href="http://oia.colmex.mx/" target="_blank"><%= t('botones.b3.opciones.op5') %></a></li>
 		          <li><a href=<%= calendario_path %>><%= t('botones.b3.opciones.op7') %></a></li>
 		        </ul>
 		    </li>
-				<li class="no-dropdown"><a href="http://biblioteca.colmex.mx/" target="_blank"><span><%= t('botones.b4') %></span></a></li>
-				<li class="no-dropdown"><a href=" http://agenda.colmex.mx/Inicio" target="_blank"><span><%= t('botones.b5') %></span></a></li>
+				<li class="no-dropdown"><a onclick="ga('send', 'event', 'Ligas del menú', 'Click', 'Biblioteca');" href="http://biblioteca.colmex.mx/" target="_blank"><span><%= t('botones.b4') %></span></a></li>
+				<li class="no-dropdown"><a onclick="ga('send', 'event', 'Ligas del menú', 'Click', 'Agenda');" href=" http://agenda.colmex.mx/Inicio" target="_blank"><span><%= t('botones.b5') %></span></a></li>
 
 						<li class="nav_opciones idioma" id="idioma-big-scroll"><%= link_to "EN", {:controller => controller_name, :action => action_name, :locale => 'en', :condicion => (params[:condicion] if action_name == "resultados_busqueda")}, :class => clase_en + " en" , :id => 'idioma_en' %> | <%= link_to "ES", {:controller => controller_name, :action => action_name, :locale => 'sp', :condicion => (params[:condicion] if action_name == "resultados_busqueda")}, :class => clase_es + " sp" , :id=> 'idioma_sp' %></li>
 			</ul> <!-- Cierre del menú -->
@@ -95,15 +95,15 @@
 					<% end %>
 			    <ul class="nav navbar-nav navbar-right">
 						<li class="borrable"><%= link_to image_tag("fb-vino.png", :class => "img_net"), "
-	https://www.facebook.com/elcolmex/", :target => "_blank" %></li>
+	https://www.facebook.com/elcolmex/", :target => "_blank", :onclick => "ga('send', 'event', 'Red social', 'Visita', 'Facebook');" %></li>
 						<li class="borrable"><%= link_to image_tag("twitter-vino.png", :class => "img_net"), "
-	https://twitter.com/ELCOLMEX", :target => "_blank" %></li>
+	https://twitter.com/ELCOLMEX", :target => "_blank", :onclick => "ga('send', 'event', 'Red social', 'Visita', 'Twitter');" %></li>
 						<li class="borrable"><%= link_to image_tag("youtube-vino.png", :class => "img_net"), "
-	https://www.youtube.com/c/elcolegiodemexicociudaddemexico", :target => "_blank" %></li>
-						<li class="borrable"><%= link_to image_tag("itunes-vino.png", :class => "img_net"), "https://itunes.apple.com/mx/institution/el-colegio-de-mexico/id443160573", :target => "_blank" %></li>
-						<li class="borrable"><%= link_to image_tag("linkedin-vino.png", :class => "img_net"), "https://www.linkedin.com/edu/el-colegio-de-m%C3%A9xico-14986", :target => "_blank" %></li>
-						<li class="borrable"><%= link_to image_tag("google-vino.png", :class => "img_net"), "https://plus.google.com/+ColmexMx1/posts", :target => "_blank" %></li>
-						<li class="borrable"><%= link_to image_tag("instagram-vino.png", :class => "img_net"), "https://www.instagram.com/elcolmex/", :target => "_blank" %></li>
+	https://www.youtube.com/c/elcolegiodemexicociudaddemexico", :target => "_blank", :onclick => "ga('send', 'event', 'Red social', 'Visita', 'YouTube');" %></li>
+						<li class="borrable"><%= link_to image_tag("itunes-vino.png", :class => "img_net"), "https://itunes.apple.com/mx/institution/el-colegio-de-mexico/id443160573", :target => "_blank", :onclick => "ga('send', 'event', 'Red social', 'Visita', 'iTunes');" %></li>
+						<li class="borrable"><%= link_to image_tag("linkedin-vino.png", :class => "img_net"), "https://www.linkedin.com/edu/el-colegio-de-m%C3%A9xico-14986", :target => "_blank", :onclick => "ga('send', 'event', 'Red social', 'Visita', 'LinkedIn');" %></li>
+						<li class="borrable"><%= link_to image_tag("google-vino.png", :class => "img_net"), "https://plus.google.com/+ColmexMx1/posts", :target => "_blank", :onclick => "ga('send', 'event', 'Red social', 'Visita', 'Google+');" %></li>
+						<li class="borrable"><%= link_to image_tag("instagram-vino.png", :class => "img_net"), "https://www.instagram.com/elcolmex/", :target => "_blank", :onclick => "ga('send', 'event', 'Red social', 'Visita', 'Instagram');" %></li>
 						<li class="mostrable"><a href="#menu" class="uk-navbar-toggle" data-uk-offcanvas></a></li>
 			    </ul>
 			  </div><!-- /.navbar-collapse -->
@@ -126,7 +126,7 @@
 							<li><a href=<%= sobre_el_colegio_path %>><%= t('botones.b1.texto2') %></a></li>
 							<li><a href=<%= historia_path %>><%= t('botones.b1.opciones.op3') %></a></li>
 		          <li><a href=<%= autoridades_path %>><%= t('botones.b1.opciones.op2') %></a></li>
-							<li><a href="http://intranet.colmex.mx/directorio/" target="_blank"><%= t('botones.b1.opciones.op1') %></a></li>
+							<li><a onclick="ga('send', 'event', 'Ligas del menú', 'Click', 'Directorio institucional');" href="http://intranet.colmex.mx/directorio/" target="_blank"><%= t('botones.b1.opciones.op1') %></a></li>
 		          <li><a href=<%= documentacion_path %>><%= t('botones.b1.opciones.op4') %></a></li>
 		          <li><a href=<%= profesores_emeritos_path %>><%= t('botones.b1.opciones.op5') %></a></li>
 		          <li><a href=<%= premios_path %>><%= t('botones.b1.opciones.op6') %></a></li>
@@ -138,13 +138,13 @@
 				<li class="dropdown" id="dropdown2">
 		      <a href=<%= centros_de_estudio_path %> class="dropdown-toggle" data-hover="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span><%= t('botones.b2.texto') %></span></a>
 		        <ul class="dropdown-menu">
-		          <li><a href="http://ceaa.colmex.mx/" target="_blank">Centro de Estudios de Asia y África</a></li>
-		          <li><a href="http://cedua.colmex.mx/" target="_blank">Centro de Estudios Demográficos, Urbanos y Ambientales</a></li>
-		          <li><a href="http://cee.colmex.mx/" target="_blank">Centro de Estudios Económicos</a></li>
-		          <li><a href="http://ceh.colmex.mx/" target="_blank">Centro de Estudios Históricos</a></li>
-		          <li><a href="http://cei.colmex.mx/" target="_blank">Centro de Estudios Internacionales</a></li>
-		          <li><a href="http://cell.colmex.mx/" target="_blank">Centro de Estudios Lingüísticos y Literarios</a></li>
-		          <li><a href="http://ces.colmex.mx/" target="_blank">Centro de Estudios Sociológicos</a></li>
+		          <li><a onclick="ga('send', 'event', 'Ligas del menú', 'Click', 'CEAA');" href="http://ceaa.colmex.mx/" target="_blank">Centro de Estudios de Asia y África</a></li>
+		          <li><a onclick="ga('send', 'event', 'Ligas del menú', 'Click', 'CEDUA');" href="http://cedua.colmex.mx/" target="_blank">Centro de Estudios Demográficos, Urbanos y Ambientales</a></li>
+		          <li><a onclick="ga('send', 'event', 'Ligas del menú', 'Click', 'CEE');" href="http://cee.colmex.mx/" target="_blank">Centro de Estudios Económicos</a></li>
+		          <li><a onclick="ga('send', 'event', 'Ligas del menú', 'Click', 'CEH');" href="http://ceh.colmex.mx/" target="_blank">Centro de Estudios Históricos</a></li>
+		          <li><a onclick="ga('send', 'event', 'Ligas del menú', 'Click', 'CEI');" href="http://cei.colmex.mx/" target="_blank">Centro de Estudios Internacionales</a></li>
+		          <li><a onclick="ga('send', 'event', 'Ligas del menú', 'Click', 'CELL');" href="http://cell.colmex.mx/" target="_blank">Centro de Estudios Lingüísticos y Literarios</a></li>
+		          <li><a onclick="ga('send', 'event', 'Ligas del menú', 'Click', 'CES');" href="http://ces.colmex.mx/" target="_blank">Centro de Estudios Sociológicos</a></li>
 		        </ul>
 		    </li>
 
@@ -155,14 +155,14 @@
 		          <li><a href=<%= maestrias_path %>><%= t('botones.b3.opciones.op2') %></a></li>
 		          <li><a href=<%= doctorados_path %>><%= t('botones.b3.opciones.op3') %></a></li>
 		          <li><a href=<%= cursos_varios_path %>><%= t('botones.b3.opciones.op6') %></a></li>
-		          <li><a href="http://agenda.colmex.mx/Convocatorias" target="_blank"><%= t('botones.b3.opciones.op8') %></a></li>
+		          <li><a onclick="ga('send', 'event', 'Ligas del menú', 'Click', 'Convocatorias');" href="http://agenda.colmex.mx/Convocatorias" target="_blank"><%= t('botones.b3.opciones.op8') %></a></li>
 		          <li><a href=<%= admisiones_path %>><%= t('botones.b3.opciones.op4') %></a></li>
-		          <li><a href="http://oia.colmex.mx/" target="_blank"><%= t('botones.b3.opciones.op5') %></a></li>
+		          <li><a onclick="ga('send', 'event', 'Ligas del menú', 'Click', 'OIA');" href="http://oia.colmex.mx/" target="_blank"><%= t('botones.b3.opciones.op5') %></a></li>
 		          <li><a href=<%= calendario_path %>><%= t('botones.b3.opciones.op7') %></a></li>
 		        </ul>
 		    </li>
-				<li class="no-dropdown"><a href="http://biblioteca.colmex.mx/" target="_blank"><span><%= t('botones.b4') %></span></a></li>
-				<li class="no-dropdown"><a href=" http://agenda.colmex.mx/Inicio" target="_blank"><span><%= t('botones.b5') %></span></a></li>
+				<li class="no-dropdown"><a onclick="ga('send', 'event', 'Ligas del menú', 'Click', 'Biblioteca');" href="http://biblioteca.colmex.mx/" target="_blank"><span><%= t('botones.b4') %></span></a></li>
+				<li class="no-dropdown"><a onclick="ga('send', 'event', 'Ligas del menú', 'Click', 'Agenda');" href=" http://agenda.colmex.mx/Inicio" target="_blank"><span><%= t('botones.b5') %></span></a></li>
 			</ul> <!-- Cierre del menú -->
 		</div> <!-- Cierre de columnas para menú -->
 	</div> <!-- Cierre de div fila para menú -->
@@ -176,7 +176,7 @@
 						<li><a href=<%= sobre_el_colegio_path %> class="sublink"><%= t('botones.b1.texto2') %></a></li>
           	<li><a href=<%= historia_path %> class="sublink"><%= t('botones.b1.opciones.op3') %></a></li>
           	<li><a href=<%= autoridades_path %> class="sublink"><%= t('botones.b1.opciones.op2') %></a></li>
-		<li><a href="http://intranet.colmex.mx/directorio/" class="sublink" target="_blank"><%= t('botones.b1.opciones.op1') %></a></li>
+		<li><a onclick="ga('send', 'event', 'Ligas del menú', 'Click', 'Directorio institucional');" href="http://intranet.colmex.mx/directorio/" class="sublink" target="_blank"><%= t('botones.b1.opciones.op1') %></a></li>
           	<li><a href=<%= documentacion_path %> class="sublink"><%= t('botones.b1.opciones.op4') %></a></li>
           	<li><a href=<%= profesores_emeritos_path %> class="sublink"><%= t('botones.b1.opciones.op5') %></a></li>
           	<li><a href=<%= premios_path %> class="sublink"><%= t('botones.b1.opciones.op6') %></a></li>
@@ -187,13 +187,13 @@
 				<li class="uk-parent">
 					<a href="#"><%= t('botones.b2.texto') %></a>
 					<ul class="uk-nav-sub">
-						<li><a href="http://ceaa.colmex.mx/" target="_blank" class="sublink">Centro de Estudios de Asia y África</a></li>
-          	<li><a href="http://cedua.colmex.mx/" target="_blank" class="sublink">Centro de Estudios Demográficos, Urbanos y Ambientales</a></li>
-          	<li><a href="http://cee.colmex.mx/" target="_blank" class="sublink">Centro de Estudios Económicos</a></li>
-          	<li><a href="http://ceh.colmex.mx/" target="_blank" class="sublink">Centro de Estudios Históricos</a></li>
-          	<li><a href="http://cei.colmex.mx/" target="_blank" class="sublink">Centro de Estudios Internacionales</a></li>
-          	<li><a href="http://cell.colmex.mx/" target="_blank" class="sublink">Centro de Estudios Lingüísticos y Literarios</a></li>
-          	<li><a href="http://ces.colmex.mx/" target="_blank" class="sublink">Centro de Estudios Sociológicos</a></li>
+						<li><a onclick="ga('send', 'event', 'Ligas del menú', 'Click', 'CEAA');" href="http://ceaa.colmex.mx/" target="_blank" class="sublink">Centro de Estudios de Asia y África</a></li>
+          	<li><a onclick="ga('send', 'event', 'Ligas del menú', 'Click', 'CEDUA');" href="http://cedua.colmex.mx/" target="_blank" class="sublink">Centro de Estudios Demográficos, Urbanos y Ambientales</a></li>
+          	<li><a onclick="ga('send', 'event', 'Ligas del menú', 'Click', 'CEE');" href="http://cee.colmex.mx/" target="_blank" class="sublink">Centro de Estudios Económicos</a></li>
+          	<li><a onclick="ga('send', 'event', 'Ligas del menú', 'Click', 'CEH');" href="http://ceh.colmex.mx/" target="_blank" class="sublink">Centro de Estudios Históricos</a></li>
+          	<li><a onclick="ga('send', 'event', 'Ligas del menú', 'Click', 'CEI');" href="http://cei.colmex.mx/" target="_blank" class="sublink">Centro de Estudios Internacionales</a></li>
+          	<li><a onclick="ga('send', 'event', 'Ligas del menú', 'Click', 'CELL');" href="http://cell.colmex.mx/" target="_blank" class="sublink">Centro de Estudios Lingüísticos y Literarios</a></li>
+          	<li><a onclick="ga('send', 'event', 'Ligas del menú', 'Click', 'CES');" href="http://ces.colmex.mx/" target="_blank" class="sublink">Centro de Estudios Sociológicos</a></li>
 					</ul>
 				</li>
 				<li class="uk-parent">
@@ -203,24 +203,24 @@
           	<li><a href=<%= maestrias_path %> class="sublink"><%= t('botones.b3.opciones.op2') %></a></li>
           	<li><a href=<%= doctorados_path %> class="sublink"><%= t('botones.b3.opciones.op3') %></a></li>
           	<li><a href=<%= cursos_varios_path %> class="sublink"><%= t('botones.b3.opciones.op6') %></a></li>
-          	<li><a href="http://agenda.colmex.mx/Convocatorias" target="_blank" class="sublink"><%= t('botones.b3.opciones.op8') %></a></li>
+          	<li><a onclick="ga('send', 'event', 'Ligas del menú', 'Click', 'Convocatorias');" href="http://agenda.colmex.mx/Convocatorias" target="_blank" class="sublink"><%= t('botones.b3.opciones.op8') %></a></li>
           	<li><a href=<%= admisiones_path %> class="sublink"><%= t('botones.b3.opciones.op4') %></a></li>
-          	<li><a href="http://oia.colmex.mx/" class="sublink" target="_blank"><%= t('botones.b3.opciones.op5') %></a></li>
+          	<li><a onclick="ga('send', 'event', 'Ligas del menú', 'Click', 'OIA');" href="http://oia.colmex.mx/" class="sublink" target="_blank"><%= t('botones.b3.opciones.op5') %></a></li>
           	<li><a href=<%= calendario_path %> class="sublink"><%= t('botones.b3.opciones.op7') %></a></li>
 					</ul>
 				</li>
-				<li class="uk-parent"><a href="http://biblioteca.colmex.mx/" target="_blank"><%= t('botones.b4') %></a></li>
-				<li class="uk-parent"><a href=" http://agenda.colmex.mx/Inicio" target="_blank"><%= t('botones.b5') %></a></li>
+				<li class="uk-parent"><a onclick="ga('send', 'event', 'Ligas del menú', 'Click', 'Biblioteca');" href="http://biblioteca.colmex.mx/" target="_blank"><%= t('botones.b4') %></a></li>
+				<li class="uk-parent"><a onclick="ga('send', 'event', 'Ligas del menú', 'Click', 'Agenda');" href=" http://agenda.colmex.mx/Inicio" target="_blank"><%= t('botones.b5') %></a></li>
 				<li class="links-side">
 					<ul class="ul-nav">
-						<li><%= link_to image_tag("fb-bco.png", :class => "img_net"), "https://www.facebook.com/elcolmex/", :target => "_blank" %></li>
+						<li><%= link_to image_tag("fb-bco.png", :class => "img_net"), "https://www.facebook.com/elcolmex/", :target => "_blank", :onclick => "ga('send', 'event', 'Red social', 'Visita', 'Facebook');" %></li>
 						<li><%= link_to image_tag("twitter-bco.png", :class => "img_net"), "
-https://twitter.com/ELCOLMEX", :target => "_blank" %></li>
-						<li><%= link_to image_tag("youtube-bco.png", :class => "img_net"), "https://www.youtube.com/c/elcolegiodemexicociudaddemexico", :target => "_blank" %></li>
-						<li><%= link_to image_tag("itunes-bco.png", :class => "img_net"), "https://itunes.apple.com/mx/institution/el-colegio-de-mexico/id443160573", :target => "_blank" %></li>
-						<li><%= link_to image_tag("linkedin-bco.png", :class => "img_net"), "https://www.linkedin.com/edu/el-colegio-de-m%C3%A9xico-14986", :target => "_blank" %></li>
-						<li><%= link_to image_tag("google-bco.png", :class => "img_net"), "https://plus.google.com/+ColmexMx1/posts", :target => "_blank" %></li>
-						<li><%= link_to image_tag("instagram-bco.png", :class => "img_net"), "https://www.instagram.com/elcolmex/", :target => "_blank" %></li>
+https://twitter.com/ELCOLMEX", :target => "_blank", :onclick => "ga('send', 'event', 'Red social', 'Visita', 'Twitter');" %></li>
+						<li><%= link_to image_tag("youtube-bco.png", :class => "img_net"), "https://www.youtube.com/c/elcolegiodemexicociudaddemexico", :target => "_blank", :onclick => "ga('send', 'event', 'Red social', 'Visita', 'YouTube');" %></li>
+						<li><%= link_to image_tag("itunes-bco.png", :class => "img_net"), "https://itunes.apple.com/mx/institution/el-colegio-de-mexico/id443160573", :target => "_blank", :onclick => "ga('send', 'event', 'Red social', 'Visita', 'iTunes');" %></li>
+						<li><%= link_to image_tag("linkedin-bco.png", :class => "img_net"), "https://www.linkedin.com/edu/el-colegio-de-m%C3%A9xico-14986", :target => "_blank", :onclick => "ga('send', 'event', 'Red social', 'Visita', 'LinkedIn');" %></li>
+						<li><%= link_to image_tag("google-bco.png", :class => "img_net"), "https://plus.google.com/+ColmexMx1/posts", :target => "_blank", :onclick => "ga('send', 'event', 'Red social', 'Visita', 'Google+');" %></li>
+						<li><%= link_to image_tag("instagram-bco.png", :class => "img_net"), "https://www.instagram.com/elcolmex/", :target => "_blank", :onclick => "ga('send', 'event', 'Red social', 'Visita', 'Instagram');" %></li>
 			    </ul>
 				</li>
 			</ul>
