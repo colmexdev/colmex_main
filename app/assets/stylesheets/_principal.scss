@@ -1109,7 +1109,7 @@ ul.ul-nav { display: table; float: left !important;
 #div_revistas{
 	height: 280px;
 	background-color: #E6E6E6;
-  z-index: 5;
+  z-index: 24;
 	box-shadow: rgba(0, 0, 0, 0.172549) 0px 6px 12px;
 
 	.revista{
@@ -1155,7 +1155,7 @@ ul.ul-nav { display: table; float: left !important;
 	height: auto;
 	background-color: #fff;
 	//border: solid 1px #CCCCCC;
-  z-index: 10;
+  z-index: 25;
   box-shadow: rgba(0, 0, 0, 0.172549) 0px 6px 12px;
 
 	.titulo-descubre{
@@ -1413,7 +1413,7 @@ ul.ul-nav { display: table; float: left !important;
 	text-align: center;
 	overflow: hidden;
 	background-color: #F9F9F9;
-	z-index: 4;
+	z-index: 23;
 	box-shadow: rgba(0, 0, 0, 0.172549) 0px 6px 12px;
 }
 
@@ -1598,8 +1598,11 @@ ul.ul-nav { display: table; float: left !important;
 //Estilos que afectan a la sección de la frase
 #div_frase{
 	height: auto;
-	background-color: #FFFFFF;
+	//background-color: #FFFFFF;
+  z-index: 22;
 	text-align: center;
+	box-shadow: rgba(0, 0, 0, 0.172549) 0px 6px 12px;
+
 
 	blockquote {
 			padding: 10px 20px;
@@ -1636,7 +1639,7 @@ ul.ul-nav { display: table; float: left !important;
 //Estilos que afectan a la sección de transparencia
 #div_transparencia{
 	height: auto;
-	background-color: #FFFFFF;
+	//background-color: #FFFFFF;
 	text-align: center;
 
 	a {
