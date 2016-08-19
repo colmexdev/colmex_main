@@ -69,7 +69,7 @@
     console.log('page loaded');
     analytics.page();
     for(var i = 0; i < descubres.length; i++){
-      var titulo = "Click a Descubre" + $("#tit-desc-"+i).text();
+      var titulo = "Click a Descubre: " + $("#tit-desc-"+i).text();
       var link = $("#frame-"+i+" a").attr("href");
       console.log(titulo + " " + link);
       analytics.trackLink($("#frame-"+i+"-hov"), titulo, {liga: link});
