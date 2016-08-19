@@ -749,7 +749,6 @@ ul.ul-nav { display: table; float: left !important;
 				
 						.imagen_slider_sobre{
 							position: absolute;
-							z-index: 1000;
 						}
 					}
 
