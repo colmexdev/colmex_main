@@ -6,7 +6,7 @@ class PrincipalController < ApplicationController
       @resultado.do
       @resultado = cliente.execute("SELECT * FROM dbo.vw_DatosAgenda WHERE PARSE(fechaFin AS DATE USING 'es-ES') >= GETDATE()  ORDER BY PARSE(fechaInicio AS DATE USING 'es-ES') ASC, horaInicio ASC")
       gon.ev_big, gon.ev_small, gon.ev_tiny = construye_slider_eventos(@resultado)
-      gon.cant_eventos = @resultado.size
+      gon.cant_eventos = @resultado.each.size
     rescue
       gon.cant_eventos = 0
       gon.ev_big, gon.ev_small, gon.ev_tiny = "", "" ,""
