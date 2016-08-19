@@ -66,13 +66,15 @@
   // accommodate Turbolinks
   // track page views and Descubre clicks
   $(document).on('ready page:change', function() {
-    console.log('page loaded');
+    console.log('Página cargada: ' + window.location.href);
     analytics.page();
-    for(var i = 0; i < descubres.length; i++){
-      var titulo = "Click a Descubre: " + $("#tit-desc-"+i).text();
-      var link = $("#frame-"+i+" a").attr("href");
-      console.log(titulo + " " + link);
-      analytics.trackLink($("#frame-"+i+"-hov"), titulo, {liga: link});
+    if(window.location.href == /[http:\/\/]*web.colmex.mx[\/?locale=sp]*/){
+      for(var i = 0; i < descubres.length; i++){
+        var titulo = "Click a Descubre: " + $("#tit-desc-"+i).text();
+        var link = $("#frame-"+i+" a").attr("href");
+        console.log(titulo + " " + link);
+        analytics.trackLink($("#frame-"+i+"-hov"), titulo, {liga: link});
+      }
     }
     //analytics.trackForm($('#new_visitor'), 'Signed Up');
     //analytics.trackForm($('#new_contact'), 'Contact Request');
