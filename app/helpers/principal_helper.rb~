@@ -13,7 +13,7 @@ module PrincipalHelper
       j = ( im.liga.to_s != "" ? j + 1 : j )
     end
     control_block = '<ol class="carousel-indicators">'+control_block+'</ol>'
-    html_block = '<div class="carousel-inner" role="listbox">'+html_block+'</div>'
+    html_block = '<div class="carousel-inner" role="listbox" id="inner-slider">'+html_block+'</div>'
     return (control_block+html_block).html_safe
   end
 

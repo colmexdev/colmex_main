@@ -39,9 +39,9 @@ module PrincipalHelper
         primer_item = false;
         if j < sliders.each.length
           fila = sliders.each[j]
-          bloque_html = bloque_html + construirEvento(fila)
-          bloque_opt_html = bloque_opt_html + construirEvento(fila)
-          bloque_tiny_html = bloque_tiny_html + construirEvento(fila, true)
+          bloque_html = bloque_html + construirEvento(fila, i-1)
+          bloque_opt_html = bloque_opt_html + construirEvento(fila, i-1)
+          bloque_tiny_html = bloque_tiny_html + construirEvento(fila, i-1, true)
         end
         bloque_html = bloque_html + '</div>'
         bloque_opt_html = bloque_opt_html + '</div>'
@@ -55,7 +55,7 @@ module PrincipalHelper
     return bloque_html, bloque_opt_html, bloque_tiny_html
   end
 
-  def construirEvento(fila, chico = false)
+  def construirEvento(fila, num, chico = false)
     centros = ['ceaa', 'cedua', 'cee', 'ceh', 'cei', 'cell', 'ces', 'colmex', 'bdcv', 'piem']
     bloque_html = '<div class="img_evento">'
     bloque_html = bloque_html + ( centros.include?(fila["centroSiglas"].mb_chars.downcase) ? ActionController::Base.helpers.image_tag(fila["centroSiglas"].mb_chars.downcase + ".png", :class => "img_sede") : '') + "</div>"
@@ -73,7 +73,7 @@ module PrincipalHelper
     bloque_html = bloque_html + fila["sede"].to_s + ', 
 <br><span>' + fila["institucionSede"].to_s + "</span></p></div></div>"
 
-    bloque_html = bloque_html + '<div class="liga_evento"><a id="liga-evento-' + i.to_s + '" href="'+fila["liga"].to_s+'" class="liga_evento" target="_blank">' + t('eventos.liga') + ' +' + '</a></div>'
+    bloque_html = bloque_html + '<div class="liga_evento"><a id="liga-evento-' + num.to_s + '" href="'+fila["liga"].to_s+'" class="liga_evento" target="_blank">' + t('eventos.liga') + ' +' + '</a></div>'
 
     bloque_html = bloque_html + "</div>"
     return bloque_html
