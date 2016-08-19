@@ -1,7 +1,7 @@
 module PrincipalHelper
 
   def construye_slider(sliders)
-    i, j = 0, 0
+    i, j, n = 0, 0, 0
     html_block = ""
     control_block = ""
     sliders.each do |im|
@@ -39,9 +39,10 @@ module PrincipalHelper
         primer_item = false;
         if j < sliders.each.length
           fila = sliders.each[j]
-          bloque_html = bloque_html + construirEvento(fila, i-1)
-          bloque_opt_html = bloque_opt_html + construirEvento(fila, i-1)
-          bloque_tiny_html = bloque_tiny_html + construirEvento(fila, i-1, true)
+          bloque_html = bloque_html + construirEvento(fila, n)
+          bloque_opt_html = bloque_opt_html + construirEvento(fila, n)
+          bloque_tiny_html = bloque_tiny_html + construirEvento(fila, n, true)
+          n = n + 1
         end
         bloque_html = bloque_html + '</div>'
         bloque_opt_html = bloque_opt_html + '</div>'
