@@ -1,16 +1,15 @@
 module PrincipalHelper
 
   def construye_slider(sliders)
-    i, j = 0, 0
+    i = 0
     html_block = ""
     control_block = ""
     sliders.each do |im|
       control_block = control_block + '<li data-target="#myCarousel" data-slide-to="' + i.to_s + '"' + (i == 0 ?  'class="active"' : '') + '></li>'
       html_block = html_block + '<div class="item ' + (i == 0 ?  "active" : "") + '">'
-      html_block = html_block + image_tag(im.imagen.url, :class => "imagen_slider_fondo") + "<div class=\"ghost-slider\">" + (im.liga.to_s != "" ? link_to(image_tag(im.badge.url, {:class => "imagen_slider_sobre " + im.posicion.mb_chars.downcase, :id => "badge-" + i.to_s}),im.liga, :class => "liga_img", :id => "liga-slider-" + j.to_s) : image_tag(im.badge.url, {:class => "imagen_slider_sobre " + im.posicion.mb_chars.downcase, :id => "badge-" + i.to_s}) ) + "</div>"
+      html_block = html_block + image_tag(im.imagen.url, :class => "imagen_slider_fondo") + "<div class=\"ghost-slider\">" + (im.liga.to_s != "" ? link_to(image_tag(im.badge.url, {:class => "imagen_slider_sobre " + im.posicion.mb_chars.downcase, :id => "badge-" + i.to_s}),im.liga, :class => "liga_img") : image_tag(im.badge.url, {:class => "imagen_slider_sobre " + im.posicion.mb_chars.downcase, :id => "badge-" + i.to_s}) ) + "</div>"
       html_block = html_block + '</div>'
       i = i + 1
-      j = ( im.liga.to_s != "" ? j + 1 : j )
     end
     control_block = '<ol class="carousel-indicators">'+control_block+'</ol>'
     html_block = '<div class="carousel-inner" role="listbox" id="inner-slider">'+html_block+'</div>'
