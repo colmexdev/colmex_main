@@ -7,12 +7,12 @@ module PrincipalHelper
     sliders.each do |im|
       control_block = control_block + '<li data-target="#myCarousel" data-slide-to="' + i.to_s + '"' + (i == 0 ?  'class="active"' : '') + '></li>'
       html_block = html_block + '<div class="item ' + (i == 0 ?  "active" : "") + '">'
-      html_block = html_block + image_tag(im.imagen.url, :class => "imagen_slider_fondo") + "<div class=\"ghost-slider\">" + (im.liga.to_s != "" ? link_to(image_tag(im.badge.url, {:class => "imagen_slider_sobre " + im.posicion.mb_chars.downcase),im.liga, :class => "liga_img") : image_tag(im.badge.url, {:class => "imagen_slider_sobre " + im.posicion.mb_chars.downcase, :id => "badge-" + i.to_s}) ) + "</div>"
+      html_block = html_block + image_tag(im.imagen.url, :class => "imagen_slider_fondo") + "<div class=\"ghost-slider\">" + (im.liga.to_s != "" ? link_to(image_tag(im.badge.url, {:class => "imagen_slider_sobre " + im.posicion.mb_chars.downcase, :id => "badge-" + i.to_s, :onclick => "ga('send', 'event', 'Slider', 'Click', '" + im.liga.to_s + "');"}),im.liga, :class => "liga_img") : image_tag(im.badge.url, {:class => "imagen_slider_sobre " + im.posicion.mb_chars.downcase, :id => "badge-" + i.to_s}) ) + "</div>"
       html_block = html_block + '</div>'
       i = i + 1
     end
     control_block = '<ol class="carousel-indicators">'+control_block+'</ol>'
-    html_block = '<div class="carousel-inner" role="listbox" id="inner-slider">'+html_block+'</div>'
+    html_block = '<div class="carousel-inner" role="listbox">'+html_block+'</div>'
     return (control_block+html_block).html_safe
   end
 
@@ -72,7 +72,7 @@ module PrincipalHelper
     bloque_html = bloque_html + fila["sede"].to_s + ', 
 <br><span>' + fila["institucionSede"].to_s + "</span></p></div></div>"
 
-    bloque_html = bloque_html + '<div class="liga_evento"><a id="liga-evento-' + num.to_s + '" href="'+fila["liga"].to_s+'" class="liga_evento" target="_blank">' + t('eventos.liga') + ' +' + '</a></div>'
+    bloque_html = bloque_html + '<div class="liga_evento"><a href="'+fila["liga"].to_s+'" class="liga_evento" target="_blank">' + t('eventos.liga') + ' +' + '</a></div>'
 
     bloque_html = bloque_html + "</div>"
     return bloque_html
