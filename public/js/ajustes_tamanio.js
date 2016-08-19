@@ -44,17 +44,23 @@ window.onresize = function(){
 	UIkit.init();
 	reescalarDescubre();
 
-	if(ancho_act < 785 && ancho >= 785){
-		document.getElementById("render_eventos").innerHTML = gon.ev_tiny;
-		ancho = ancho_act;
+	if(ancho_act < 785){
+		if(ancho >= 785){
+			document.getElementById("render_eventos").innerHTML = gon.ev_tiny;
+			ancho = ancho_act;
+		}
 	}
-	else if(ancho_act < 1150 && (ancho >= 1150 || ancho <= 785)){
-		document.getElementById("render_eventos").innerHTML = gon.ev_small;
-		ancho = ancho_act;
+	else if(ancho_act < 1150){
+		if(ancho >= 1150 || ancho <= 785){
+			document.getElementById("render_eventos").innerHTML = gon.ev_small;
+			ancho = ancho_act;
+		}
 	} 
-	else if(ancho_act >= 1150 && ancho < 1150){
-		document.getElementById("render_eventos").innerHTML = gon.ev_big;
-		ancho = ancho_act;
+	else if(ancho_act >= 1150){
+		if(ancho < 1150){
+			document.getElementById("render_eventos").innerHTML = gon.ev_big;
+			ancho = ancho_act;
+		}
 	}
 
 	escalarSlider();
