@@ -1109,6 +1109,7 @@ ul.ul-nav { display: table; float: left !important;
 #div_revistas{
 	height: 280px;
 	background-color: #E6E6E6;
+  z-index: 5;
 	box-shadow: rgba(0, 0, 0, 0.172549) 0px 6px 12px;
 
 	.revista{
@@ -1153,7 +1154,8 @@ ul.ul-nav { display: table; float: left !important;
 #div_descubre{
 	height: auto;
 	background-color: #fff;
-	border: solid 1px #CCCCCC;
+	//border: solid 1px #CCCCCC;
+  z-index: 10;
   box-shadow: rgba(0, 0, 0, 0.172549) 0px 6px 12px;
 
 	.titulo-descubre{
@@ -1411,6 +1413,7 @@ ul.ul-nav { display: table; float: left !important;
 	text-align: center;
 	overflow: hidden;
 	background-color: #F9F9F9;
+	z-index: 4;
 	box-shadow: rgba(0, 0, 0, 0.172549) 0px 6px 12px;
 }
 

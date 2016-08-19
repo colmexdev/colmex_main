@@ -1410,6 +1410,8 @@ ul.ul-nav { display: table; float: left !important;
 	margin: 0 auto;
 	text-align: center;
 	overflow: hidden;
+	background-color: #F9F9F9;
+	box-shadow: rgba(0, 0, 0, 0.172549) 0px 6px 12px;
 }
 
 
