@@ -27,10 +27,12 @@ $(document).ready(function(){
 	$('.frame-descubre').css({'height':cw+'px'});
 
 	recabarAnchos();
+        agregarAnaliticos();
 	escalarSlider();
 	partirDescubres();
 	margenAuto();
 	ajustarImagenes();
+
 	$(document).trigger("scroll");
 });
 

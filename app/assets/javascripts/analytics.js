@@ -65,7 +65,11 @@
 
   // accommodate Turbolinks
   // track page views and Descubre clicks
-  $(document).on('ready page:change', function() {
+  $(document).on('page:change', function() {
+    agregarAnaliticos();
+ });
+
+function agregarAnaliticos(){
     console.log('Página cargada: ' + window.location.href);
     analytics.page();
     if(document.getElementById("wrapper") != null){
@@ -81,5 +85,4 @@
       console.log("Forma de suscripción a agenda cargada");
       analytics.trackForm($('#forma_suscripcion'), 'Registro a la Agenda');
     }
-
- });
+}
