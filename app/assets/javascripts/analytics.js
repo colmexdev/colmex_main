@@ -69,6 +69,7 @@
     console.log('Página cargada: ' + window.location.href);
     analytics.page();
     if(window.location.href == /[http:\/\/]*web.colmex.mx[\/?locale=sp]*/){
+      console.log("Tracking de links de Descubre");
       for(var i = 0; i < descubres.length; i++){
         var titulo = "Click a Descubre: " + $("#tit-desc-"+i).text();
         var link = $("#frame-"+i+" a").attr("href");
