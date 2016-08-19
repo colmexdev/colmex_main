@@ -1598,8 +1598,11 @@ ul.ul-nav { display: table; float: left !important;
 //Estilos que afectan a la sección de la frase
 #div_frase{
 	height: auto;
-	background-color: #FFFFFF;
+	//background-color: #FFFFFF;
+  z-index: 22;
 	text-align: center;
+	box-shadow: rgba(0, 0, 0, 0.172549) 0px 6px 12px;
+
 
 	blockquote {
 			padding: 10px 20px;
@@ -1636,7 +1639,7 @@ ul.ul-nav { display: table; float: left !important;
 //Estilos que afectan a la sección de transparencia
 #div_transparencia{
 	height: auto;
-	background-color: #FFFFFF;
+	//background-color: #FFFFFF;
 	text-align: center;
 
 	a {
