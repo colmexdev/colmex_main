@@ -72,22 +72,22 @@ button:focus{
 
 @-webkit-keyframes flip {
 	0% { }
-	100% { -webkit-transform: rotateX(0deg); opacity: 1; }
+	100% { -webkit-transform: rotateX(-80deg); opacity: 1; }
 }
 
 @-moz-keyframes flip {
 	0% { }
-	100% { -moz-transform: rotateX(0deg); opacity: 1; }
+	100% { -moz-transform: rotateX(-80deg); opacity: 1; }
 }
 
 @-o-keyframes flip {
 	0% { }
-	100% { -webkit-transform: rotateX(0deg); opacity: 1; }
+	100% { -webkit-transform: rotateX(-80deg); opacity: 1; }
 }
 
 @keyframes flip {
 	0% { }
-	100% { -webkit-transform: rotateX(0deg); transform: rotateX(0deg); opacity: 1; }
+	100% { -webkit-transform: rotateX(-80deg); transform: rotateX(-80deg); opacity: 1; }
 }
 
 /* Fin de transiciones */
