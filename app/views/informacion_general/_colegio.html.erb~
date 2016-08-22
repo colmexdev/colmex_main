@@ -2,13 +2,11 @@
 <script type="text/javascript" src="../js/accordion.js"></script>
 
 	<div class="uk-accordion" data-uk-accordion>
-		<% @categorias.each do |c| %>
-			<h3 class="uk-accordion-title"><%= construir_encabezado("bt-flechita.png", "bt-flechita-abajo.png", c.nombre) %></h3>
+		<% @premiados.each do |p| %>
+			<h3 class="uk-accordion-title"><%= construir_encabezado("bt-flechita.png", "bt-flechita-abajo.png", p.nombre) %></h3>
 			<div class="uk-accordion-content">
 				<ul class="uk-list uk-list-line">
-				<% @premiados.where("tipo = ?", c.nombre).each do |p| %>
-					<li style="margin-bottom: 20px; font-size: 15px;"><%= p.nombre + ", " + p.descripcion %></li>
-				<% end %>
+					<li style="margin-bottom: 20px; font-size: 15px;"><%=  p.descripcion %></li>
 				</ul>
 			</div>
 		<% end %>
