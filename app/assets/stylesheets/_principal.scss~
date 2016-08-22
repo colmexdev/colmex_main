@@ -1598,7 +1598,6 @@ ul.ul-nav { display: table; float: left !important;
 //Estilos que afectan a la sección de la frase
 #div_frase{
 	height: auto;
-	background-color: #FCFCFC;
   	z-index: -1;
 	text-align: center;
 

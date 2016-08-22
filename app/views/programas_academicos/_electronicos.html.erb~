@@ -14,7 +14,7 @@
     </div>
     <div class="uk-width-4-5 uk-vertical-align-middle uk-text-left uk-text-break">
     <h2 class="vino"><%= e.titulo %></h2>
-    <% if t.tipo_curso_linea == "Breve" %>
+    <% if t.tipo_curso_linea != "Breve" %>
     <div class="uk-grid uk-grid-large">
     <div class="uk-width-large-4-6 uk-text-left">
     <% end %>
@@ -28,7 +28,7 @@
     <div class="uk-width-large-2-6">
     <h3 class="vino uk-margin-bottom-remove">
     <% if !e.fecha_inicio_clases.nil? %>
-      <% if e.fecha_inicio_clases.nil? %>
+      <% if e.fecha_fin_clases.nil? %>
         <%= "Inicio de clases:" %>
       <% else %>
         <%= "Duración:" %>
@@ -68,10 +68,17 @@
         <% end %>
       <% end %>
     </h4>
-    </div>
+    <h3 class="vino uk-margin-top-remove">
+    <% if !e.fecha_fin_clases.nil? && e.fecha_fin_clases < Date.current() %>
+      <%= "Convocatoria abierta" %>
+    <% else %>
+      <%= "Convocatoria cerrada" %>
+    <% end %>
+    </h3>
     </div>
     </div>
     <% end %>
+    </div>
     </div>
 
             <% end %>
