@@ -11,9 +11,6 @@
     <div class="uk-grid uk-grid-medium uk-margin-large-bottom">
     <div class="uk-width-1-5 uk-text-center">
     <img src=<%= e.foto.url %> class="uk-border-rounded" alt="Foto curso">
-    <% if t.tipo_curso_linea == "MOOC" && !e.liga.nil? %>
-      <div class="addthis_inline_share_toolbox" data-url=<%= e.liga %> data-title="<%= e.titulo %>"></div>
-    <% end %>
     </div>
     <div class="uk-width-4-5 uk-vertical-align-middle uk-text-left uk-text-break">
     <h2 class="vino"><%= e.titulo %></h2>
@@ -29,7 +26,7 @@
       <a href=<%= e.liga %> target="_blank" class="ver-mas uk-margin-large-bottom uk-button-small">Más información</a>
     <% end %>
     <% if t.tipo_curso_linea == "Breve" && !e.liga.nil? %>
-      <div class="addthis_inline_share_toolbox" data-url=<%= e.liga %> data-title="<%= e.titulo %>"></div>
+      <div class="addthis_inline_share_toolbox" data-url=<%= e.liga %> data-title="<%= e.titulo %>" style="display:inline-block; float: right;"></div>
     <% end %>
     <% if t.tipo_curso_linea == "MOOC" %>
     </div>
@@ -83,6 +80,9 @@
       <%= "Convocatoria cerrada" %>
     <% end %>
     </h3>
+    <% if t.tipo_curso_linea == "MOOC" && !e.liga.nil? %>
+      <div class="addthis_inline_share_toolbox" data-url=<%= e.liga %> data-title="<%= e.titulo %>"></div>
+    <% end %>
     </div>
     </div>
     <% end %>
