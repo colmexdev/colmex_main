@@ -18,7 +18,7 @@
     UI.component('accordion', {
 
         defaults: {
-            showfirst  : false,
+            showfirst  : true,
             collapse   : true,
             animate    : true,
             easing     : 'swing',
