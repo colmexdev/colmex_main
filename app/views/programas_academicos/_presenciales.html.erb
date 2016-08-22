@@ -7,8 +7,6 @@
     <div class="uk-grid uk-grid-medium uk-margin-large-bottom">
     <div class="uk-width-1-5 uk-text-center">
     <img src=<%= p.foto.url %> class="uk-border-rounded" alt="Foto curso">
-    <!-- Go to www.addthis.com/dashboard to customize your tools -->
-    <div style="margin-top:15px;" class="addthis_inline_share_toolbox" data-url=<%= p.liga %> data-title="<%= p.titulo %>"></div>
     </div>
     <div class="uk-width-4-5 uk-vertical-align-middle uk-text-left uk-text-break">
     <h2 class="vino"><%= p.titulo %></h2>
@@ -20,6 +18,8 @@
     <% end %>
     <% if !p.liga.nil? %>
     <a href=<%= p.liga %> target="_blank" class="ver-mas uk-margin-large-bottom uk-button-small">Más información</a>
+    <!-- Go to www.addthis.com/dashboard to customize your tools -->
+    <div style="display:inline-block;float:right;" class="addthis_inline_share_toolbox" data-url=<%= p.liga %> data-title="<%= p.titulo %>"></div>
     <% end %>
     </div>
     <div class="uk-width-large-2-6">
