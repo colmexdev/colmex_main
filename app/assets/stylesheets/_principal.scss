@@ -94,22 +94,22 @@ button:focus{
 
 @-webkit-keyframes unflip {
 	0% { -webkit-transform: rotateX(0deg); opacity: 1; }
-	100% { -webkit-transform: rotateX(-80deg); opacity: 0; }
+	100% { -webkit-transform: rotateX(-80deg); opacity: 1; }
 }
 
 @-moz-keyframes unflip {
 	0% { -moz-transform: rotateX(0deg); opacity: 1; }
-	100% { -moz-transform: rotateX(-80deg); opacity: 0; }
+	100% { -moz-transform: rotateX(-80deg); opacity: 1; }
 }
 
 @-o-keyframes unflip {
 	0% { -webkit-transform: rotateX(0deg); opacity: 1; }
-	100% { -webkit-transform: rotateX(-80deg); opacity: 0; }
+	100% { -webkit-transform: rotateX(-80deg); opacity: 1; }
 }
 
 @keyframes unflip {
 	0% { -webkit-transform: rotateX(0deg); transform: rotateX(0deg); opacity: 1; }
-	100% { -webkit-transform: rotateX(-80deg); transform: rotateX(-80deg); opacity: 0; }
+	100% { -webkit-transform: rotateX(-80deg); transform: rotateX(-80deg); opacity: 1; }
 }
 
 /* Fin de transiciones */
