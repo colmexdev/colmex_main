@@ -127,4 +127,9 @@ bloque_html = bloque_html + "<a href=\"" + d.liga + "\" " + (d.contenido.mb_char
     meses = ["enero", "febrero", "marzo", "abril", "mayo", "junio", "julio", "agosto", "septiembre", "octubre", "noviembre", "diciembre"]
     return meses[mes_num]
   end
+
+  def pluralize(categoria)
+    cad_plural = {"Artículo de investigación" => "Artículos de investigación", "Curso" => "Cursos", "Video" => "Videos", "Convocatoria" => "Convocatorias", "Premio" => "Premios", "Artículo de opinión" => "Artículos de opinión", "Novedad editorial" => "Novedades editoriales", "Proyecto de investigación" => "Proyectos de investigación", "Anuncio" => "Anuncios", "Podcast" => "Podcasts"}
+    return cad_plural[categoria]
+  end
 end

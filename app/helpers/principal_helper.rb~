@@ -92,6 +92,7 @@ module PrincipalHelper
   end
 
   def construir_encabezado(imagen, imagen_hover, texto)
+
     return (ActionController::Base.helpers.image_tag(imagen, :class => "leave_img") + ActionController::Base.helpers.image_tag(imagen_hover, :class => "hover_img") + raw(texto) ).html_safe
   end
 

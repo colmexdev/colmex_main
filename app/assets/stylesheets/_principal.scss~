@@ -1599,7 +1599,7 @@ ul.ul-nav { display: table; float: left !important;
 #div_frase{
 	height: auto;
 	background-color: #FCFCFC;
-  z-index: -1;
+  	z-index: -1;
 	text-align: center;
 
 	blockquote {
