@@ -20,8 +20,12 @@
     <%= f.text_area :descripcion %>
   </div>
   <div class="field">
+    <%= f.label :tipo_premio %><br>
+    <%= f.select(:tipo_premio, options_for_select([['Otorgados a la comunidad', 'Comunidad'], ['Otorgados por El Colegio', 'Colegio']], @premiado.tipo_premio || 'Otorgados a la comunidad'), {}, {}) %>
+  </div>
+  <div class="field">
     <%= f.label :tipo %><br>
-    <%= f.select(:tipo, options_from_collection_for_select(Categorium.all, "nombre", "nombre"), {}, {}) %>
+    <%= f.select(:tipo, options_from_collection_for_select(Categorium.all, "nombre", "nombre", @premiado.tipo || Categorium.first.nombre), {}, {}) %>
   </div>
   <div class="actions">
     <%= f.submit %>

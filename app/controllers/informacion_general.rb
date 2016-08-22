@@ -5,6 +5,7 @@ class InformacionGeneralController < ApplicationController
 
   def premios_y_distinciones
     @categorias = Categorium.all
+    @premiados = Premiado.where("tipo_premio = ?", "Comunidad")
   end
 
   def documentacion_institucional
@@ -116,4 +117,19 @@ class InformacionGeneralController < ApplicationController
       format.js
     end
   end
+
+  def comunidad
+    @categorias = Categorium.all
+    @premiados = Premiado.where("tipo_premio = ?", "Comunidad")
+    respond_to do |format|
+      format.js
+    end
+  end
+
+  def colegio
+    @premiados = Premiado.where("tipo_premio = ?", "Colegio")
+    respond_to do |format|
+      format.js
+    end
+  end 
 end

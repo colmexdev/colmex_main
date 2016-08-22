@@ -1414,7 +1414,7 @@ ul.ul-nav { display: table; float: left !important;
 	overflow: hidden;
 	background-color: #F9F9F9;
 	z-index: 23;
-	box-shadow: rgba(0, 0, 0, 0.172549) 0px 6px 12px;
+	box-shadow: rgba(0, 0, 0, 0.132549) 0px 6px 8px;
 }
 
 
@@ -1598,11 +1598,9 @@ ul.ul-nav { display: table; float: left !important;
 //Estilos que afectan a la sección de la frase
 #div_frase{
 	height: auto;
-	//background-color: #FFFFFF;
-  z-index: 22;
+	background-color: #FCFCFC;
+  z-index: -1;
 	text-align: center;
-	box-shadow: rgba(0, 0, 0, 0.172549) 0px 6px 12px;
-
 
 	blockquote {
 			padding: 10px 20px;
