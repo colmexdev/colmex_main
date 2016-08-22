@@ -30,6 +30,50 @@ button:focus{
 	padding: 0;
 }
 
+/* Efectos del Descubre */
+
+/* Effect 6: flip (based on http://lab.hakim.se/scroll-effects/ by @hakimel) */
+.grid.effect-6 {
+	-webkit-perspective: 1300px;
+	perspective: 1300px;
+}
+
+.grid.effect-6 li.animate {
+	-webkit-transform-style: preserve-3d;
+	-moz-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+	-webkit-transform-origin: 0% 0%;
+	-moz-transform-origin: 0% 0%;
+	transform-origin: 0% 0%;
+	-webkit-transform: rotateX(-80deg);
+	-moz-transform: rotateX(-80deg);
+	transform: rotateX(-80deg);
+	-webkit-animation: flip .8s ease-in-out forwards;
+	-moz-animation: flip .8s ease-in-out forwards;
+	animation: flip .8s ease-in-out forwards;
+}
+
+@-webkit-keyframes flip {
+	0% { }
+	100% { -webkit-transform: rotateX(0deg); opacity: 1; }
+}
+
+@-moz-keyframes flip {
+	0% { }
+	100% { -moz-transform: rotateX(0deg); opacity: 1; }
+}
+
+@-o-keyframes flip {
+	0% { }
+	100% { -webkit-transform: rotateX(0deg); opacity: 1; }
+}
+
+@keyframes flip {
+	0% { }
+	100% { -webkit-transform: rotateX(0deg); transform: rotateX(0deg); opacity: 1; }
+}
+
+
 @import url(https://fonts.googleapis.com/css?family=Lato:400,400italic,700,700italic);
 
 /* Tipografía */
@@ -1154,7 +1198,6 @@ ul.ul-nav { display: table; float: left !important;
 #div_descubre{
 	height: auto;
 	background-color: #fff;
-	//border: solid 1px #CCCCCC;
   z-index: 25;
   box-shadow: rgba(0, 0, 0, 0.172549) 0px 6px 12px;
 
@@ -1179,6 +1222,7 @@ ul.ul-nav { display: table; float: left !important;
 			font-weight: 600;
 			border-width: 1px;
 			height: 34px;
+			width: 260px;
 			border-radius: 5px;
 			appearance: none;
 			-webkit-appearance: none;

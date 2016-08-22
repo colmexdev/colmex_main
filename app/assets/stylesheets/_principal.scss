@@ -30,6 +30,91 @@ button:focus{
 	padding: 0;
 }
 
+/* Efectos del Descubre */
+
+/* Effect 6: flip (based on http://lab.hakim.se/scroll-effects/ by @hakimel) */
+.grid.effect-6 {
+	-webkit-perspective: 1300px;
+	perspective: 1300px;
+}
+
+.grid.effect-6 div.frame-descubre.animate { /* Mostrar */
+	-webkit-transform-style: preserve-3d;
+	-moz-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+	-webkit-transform-origin: 0% 0%;
+	-moz-transform-origin: 0% 0%;
+	transform-origin: 0% 0%;
+	-webkit-transform: rotateX(-80deg);
+	-moz-transform: rotateX(-80deg);
+	transform: rotateX(-80deg);
+	-webkit-animation: flip .8s ease-in-out forwards;
+	-moz-animation: flip .8s ease-in-out forwards;
+	animation: flip .8s ease-in-out forwards;
+}
+
+.grid.effect-6 div.frame-descubre.revanimate { /* Ocultar */
+	-webkit-transform-style: preserve-3d;
+	-moz-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+	-webkit-transform-origin: 0% 0%;
+	-moz-transform-origin: 0% 0%;
+	transform-origin: 0% 0%;
+	-webkit-transform: rotateX(0deg);
+	-moz-transform: rotateX(0deg);
+	transform: rotateX(0deg);
+	-webkit-animation: unflip .4s ease-in-out forwards;
+	-moz-animation: unflip .4s ease-in-out forwards;
+	animation: unflip .4s ease-in-out forwards;
+}
+
+/* Keyframes para flip (Mostrar) */
+
+@-webkit-keyframes flip {
+	0% { }
+	100% { -webkit-transform: rotateX(0deg); opacity: 1; }
+}
+
+@-moz-keyframes flip {
+	0% { }
+	100% { -moz-transform: rotateX(0deg); opacity: 1; }
+}
+
+@-o-keyframes flip {
+	0% { }
+	100% { -webkit-transform: rotateX(0deg); opacity: 1; }
+}
+
+@keyframes flip {
+	0% { }
+	100% { -webkit-transform: rotateX(0deg); transform: rotateX(0deg); opacity: 1; }
+}
+
+/* Keyframes para unflip (Ocultar) */
+
+@-webkit-keyframes unflip {
+	0% { }
+	100% { -webkit-transform: rotateX(-80deg); opacity: 0; }
+}
+
+@-moz-keyframes unflip {
+	0% { }
+	100% { -moz-transform: rotateX(-80deg); opacity: 0; }
+}
+
+@-o-keyframes unflip {
+	0% { }
+	100% { -webkit-transform: rotateX(-80deg); opacity: 0; }
+}
+
+@keyframes unflip {
+	0% { }
+	100% { -webkit-transform: rotateX(-80deg); transform: rotateX(-80deg); opacity: 0; }
+}
+
+/* Fin de transiciones */
+
+
 @import url(https://fonts.googleapis.com/css?family=Lato:400,400italic,700,700italic);
 
 /* Tipografía */
@@ -1154,7 +1239,6 @@ ul.ul-nav { display: table; float: left !important;
 #div_descubre{
 	height: auto;
 	background-color: #fff;
-	//border: solid 1px #CCCCCC;
   z-index: 25;
   box-shadow: rgba(0, 0, 0, 0.172549) 0px 6px 12px;
 
