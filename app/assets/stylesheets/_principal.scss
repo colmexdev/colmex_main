@@ -48,9 +48,9 @@ button:focus{
 	-webkit-transform: rotateX(-80deg);
 	-moz-transform: rotateX(-80deg);
 	transform: rotateX(-80deg);
-	-webkit-animation: flip .8s ease-in-out forwards;
-	-moz-animation: flip .8s ease-in-out forwards;
-	animation: flip .8s ease-in-out forwards;
+	-webkit-animation: flip .4s ease-in-out forwards;
+	-moz-animation: flip .4s ease-in-out forwards;
+	animation: flip .4s ease-in-out forwards;
 }
 
 .grid.effect-6 div.frame-descubre.revanimate { /* Ocultar */
@@ -93,22 +93,22 @@ button:focus{
 /* Keyframes para unflip (Ocultar) */
 
 @-webkit-keyframes unflip {
-	0% { }
+	0% { -webkit-transform: rotateX(0deg); opacity: 1; }
 	100% { -webkit-transform: rotateX(-80deg); opacity: 0; }
 }
 
 @-moz-keyframes unflip {
-	0% { }
+	0% { -moz-transform: rotateX(0deg); opacity: 1; }
 	100% { -moz-transform: rotateX(-80deg); opacity: 0; }
 }
 
 @-o-keyframes unflip {
-	0% { }
+	0% { -webkit-transform: rotateX(0deg); opacity: 1; }
 	100% { -webkit-transform: rotateX(-80deg); opacity: 0; }
 }
 
 @keyframes unflip {
-	0% { }
+	0% { -webkit-transform: rotateX(0deg); transform: rotateX(0deg); opacity: 1; }
 	100% { -webkit-transform: rotateX(-80deg); transform: rotateX(-80deg); opacity: 0; }
 }
 
