@@ -80,8 +80,18 @@
 				<span class="titulo-grande morado"><%= t('descubre') %></span>
 			</div>
 			<div class="filtros-descubre">
+				<% contenidos = Descubre.group(:contenido).order(:contenido) %>
+				<% cont_plural, cont = [], [] %>
+				<% contenidos.each do |c| %>
+					<% cont_plural << pluralize(c.contenido) %>
+					<% cont << c.contenido.downcase %>
+				<% end %>
+				<% contenidos = [] %>
+				<% for i in 0..cont.length %>
+					<% contenidos << [cont[i], cont_plural[i]] %>
+				<% end %>
 				<span class="span-filtros">Filtrar por:</span>
-				<%= select_tag("contenido", options_from_collection_for_select(Descubre.group(:contenido).order(:contenido), (:contenido).downcase, pluralize(:contenido)), :include_blank => "Categoría (Todos)", :onchange => "filtrarDescubres();") %>
+				<%= select_tag("contenido", options_for_select(contenidos), :include_blank => "Categoría (Todos)", :onchange => "filtrarDescubres();") %>
 				<%= text_field_tag("tags", "", :oninput => "filtrarDescubres();", :placeholder => "Contenido") %>
 			</div>
 			<div class="wrapper-descubre" id="wrapper">
