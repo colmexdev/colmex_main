@@ -41,7 +41,7 @@ function actualizarVisibleDescubres(visibles){
 function reescalarDescubre(){
 	for(var i = 0; i < descubres.length; i++){
 		//$("#frame-" + i).css({"opacity" : (descubres[i]["visible"] ? "1" : "0"), "visibility" : (descubres[i]["visible"] ? "visible" : "hidden"), "width" : (descubres[i]["visible"] ? "" : "0"), "height" : (descubres[i]["visible"] ? ajustarAlturas() : "0") });
-		$("#frame-"+i).removeClass(descubres[i]["visible"] ? "revanimate" : "animate").addClass(!descubres[i]["visible"] ? "revanimate" : "animate");
+		$("#frame-"+i).removeClass(descubres[i]["visible"] ? "revanimate" : "animate").addClass(!descubres[i]["visible"] ? "revanimate" : "animate").css("height", (descubres[i]["visible"] ? ajustarAlturas() : "0"));
 	}
 }
 

@@ -94,7 +94,7 @@
 				<%= select_tag("contenido", options_for_select(contenidos), :include_blank => "Categoría (Todos)", :onchange => "filtrarDescubres();") %>
 				<%= text_field_tag("tags", "", :oninput => "filtrarDescubres();", :placeholder => "Contenido") %>
 			</div>
-			<div class="wrapper-descubre" id="wrapper">
+			<div class="wrapper-descubre grid effect-6" id="wrapper">
 				<%= construir_descubre(@descubre) %>
 			</div>
 			<div id="cutter-descubre" onclick="desbordarDescubres();">
