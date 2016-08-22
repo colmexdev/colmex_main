@@ -84,7 +84,7 @@
 				<% cont_plural, cont = [], [] %>
 				<% contenidos.each do |c| %>
 					<% cont_plural << pluralize(c.contenido) %>
-					<% cont << c.contenido.downcase %>
+					<% cont << c.contenido %>
 				<% end %>
 				<% contenidos = [] %>
 				<% for i in 0..cont.length-1 %>

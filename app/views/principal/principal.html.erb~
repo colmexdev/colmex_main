@@ -87,8 +87,8 @@
 					<% cont << c.contenido.downcase %>
 				<% end %>
 				<% contenidos = [] %>
-				<% for i in 0..cont.length %>
-					<% contenidos << [cont[i], cont_plural[i]] %>
+				<% for i in 0..cont.length-1 %>
+					<% contenidos << [cont_plural[i], cont[i]] %>
 				<% end %>
 				<span class="span-filtros">Filtrar por:</span>
 				<%= select_tag("contenido", options_for_select(contenidos), :include_blank => "Categoría (Todos)", :onchange => "filtrarDescubres();") %>
