@@ -38,7 +38,7 @@ button:focus{
 	perspective: 1300px;
 }
 
-.grid.effect-6 div.frame-descubre.animate { /* Mostrar */
+.grid.effect-6 div.frame-descubre.animate, .grid.effect-6 div.frame-descubre.revanimate { /* Mostrar */
 	-webkit-transform-style: preserve-3d;
 	-moz-transform-style: preserve-3d;
 	transform-style: preserve-3d;
@@ -54,15 +54,6 @@ button:focus{
 }
 
 .grid.effect-6 div.frame-descubre.revanimate { /* Ocultar */
-	-webkit-transform-style: preserve-3d;
-	-moz-transform-style: preserve-3d;
-	transform-style: preserve-3d;
-	-webkit-transform-origin: 0% 0%;
-	-moz-transform-origin: 0% 0%;
-	transform-origin: 0% 0%;
-	-webkit-transform: rotateX(0deg);
-	-moz-transform: rotateX(0deg);
-	transform: rotateX(0deg);
 	-webkit-animation: flip .4s ease-in-out reverse;
 	-moz-animation: flip .4s ease-in-out reverse;
 	animation: flip .4s ease-in-out reverse;
@@ -72,12 +63,12 @@ button:focus{
 
 @-webkit-keyframes flip {
 	0% { }
-	100% { -webkit-transform: rotateX(-80deg); opacity: 1; }
+	100% { -webkit-transform: rotateX(0deg); opacity: 1; }
 }
 
 @-moz-keyframes flip {
 	0% { }
-	100% { -moz-transform: rotateX(-80deg); opacity: 1; }
+	100% { -moz-transform: rotateX(0deg); opacity: 1; }
 }
 
 @-o-keyframes flip {
@@ -87,7 +78,7 @@ button:focus{
 
 @keyframes flip {
 	0% { }
-	100% { -webkit-transform: rotateX(-80deg); transform: rotateX(-80deg); opacity: 1; }
+	100% { -webkit-transform: rotateX(0deg); transform: rotateX(0deg); opacity: 1; }
 }
 
 /* Fin de transiciones */

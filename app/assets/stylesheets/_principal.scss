@@ -38,7 +38,7 @@ button:focus{
 	perspective: 1300px;
 }
 
-.grid.effect-6 div.frame-descubre.animate, .grid.effect-6 div.frame-descubre.revanimate { /* Mostrar */
+.grid.effect-6 div.frame-descubre.animate { /* Mostrar */
 	-webkit-transform-style: preserve-3d;
 	-moz-transform-style: preserve-3d;
 	transform-style: preserve-3d;
@@ -54,9 +54,18 @@ button:focus{
 }
 
 .grid.effect-6 div.frame-descubre.revanimate { /* Ocultar */
-	-webkit-animation: flip .4s ease-in-out reverse;
-	-moz-animation: flip .4s ease-in-out reverse;
-	animation: flip .4s ease-in-out reverse;
+	-webkit-transform-style: preserve-3d;
+	-moz-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+	-webkit-transform-origin: 0% 0%;
+	-moz-transform-origin: 0% 0%;
+	transform-origin: 0% 0%;
+	-webkit-transform: rotateX(0deg);
+	-moz-transform: rotateX(0deg);
+	transform: rotateX(0deg);
+	-webkit-animation: unflip .4s ease-in-out forwards;
+	-moz-animation: unflip .4s ease-in-out forwards;
+	animation: unflip .4s ease-in-out forwards;
 }
 
 /* Keyframes para flip (Mostrar) */
@@ -73,12 +82,34 @@ button:focus{
 
 @-o-keyframes flip {
 	0% { }
-	100% { -webkit-transform: rotateX(-80deg); opacity: 1; }
+	100% { -webkit-transform: rotateX(0deg); opacity: 1; }
 }
 
 @keyframes flip {
 	0% { }
 	100% { -webkit-transform: rotateX(0deg); transform: rotateX(0deg); opacity: 1; }
+}
+
+/* Keyframes para unflip (Ocultar) */
+
+@-webkit-keyframes unflip {
+	0% { -webkit-transform: rotateX(0deg); opacity: 1; }
+	100% { -webkit-transform: rotateX(-80deg); opacity: 0; }
+}
+
+@-moz-keyframes unflip {
+	0% { -moz-transform: rotateX(0deg); opacity: 1; }
+	100% { -moz-transform: rotateX(-80deg); opacity: 0; }
+}
+
+@-o-keyframes unflip {
+	0% { -webkit-transform: rotateX(0deg); opacity: 1; }
+	100% { -webkit-transform: rotateX(-80deg); opacity: 0; }
+}
+
+@keyframes unflip {
+	0% { -webkit-transform: rotateX(-80deg); transform: rotateX(-80deg); opacity: 1; }
+	100% { -webkit-transform: rotateX(-80deg); transform: rotateX(-80deg); opacity: 0; }
 }
 
 /* Fin de transiciones */
