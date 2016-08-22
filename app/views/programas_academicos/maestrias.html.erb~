@@ -4,9 +4,9 @@
 
 		
     <div class="uk-width-1-1">
+    <span class="titulo-grande">Maestrías</span><br>
     <div class="uk-container-center"><img src=<%= image_url("maestrias-grande.jpg") %> alt="Historia de El Colegio de México"></div>
     <p>&nbsp;</p>    
-    <span class="titulo-grande">Maestrías</span><br>
     <% @maestrias.each do |mt| %>
     <h2 class="vino uk-margin-large-top">Maestría en <%= mt.titulo %></h2>
     <div class="uk-grid uk-grid-large">
@@ -19,6 +19,8 @@
     <h4 class="uk-margin-top-remove"><%= l(mt.fecha_inicio_clases, format: :mes_anio).capitalize %></h4>
     <h3 class="vino uk-margin-bottom-remove">Próxima convocatoria</h3>
     <h4 class="uk-margin-top-remove"><%= l(mt.fecha_inicio_conv, format: :mes_anio ).capitalize %></h4>
+    <!-- Go to www.addthis.com/dashboard to customize your tools -->
+    <div class="addthis_inline_share_toolbox" data-url=<%= mt.liga %> data-title="<%= "Maestría en " + mt.titulo %>"></div>
     </div>
     </div>
     <% end %>

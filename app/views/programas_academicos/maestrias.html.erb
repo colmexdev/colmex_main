@@ -19,11 +19,14 @@
     <h4 class="uk-margin-top-remove"><%= l(mt.fecha_inicio_clases, format: :mes_anio).capitalize %></h4>
     <h3 class="vino uk-margin-bottom-remove">Próxima convocatoria</h3>
     <h4 class="uk-margin-top-remove"><%= l(mt.fecha_inicio_conv, format: :mes_anio ).capitalize %></h4>
+    <!-- Go to www.addthis.com/dashboard to customize your tools -->
+    <div class="addthis_inline_share_toolbox" data-url=<%= mt.liga %> data-title="<%= "Maestría en " + mt.titulo %>"></div>
     </div>
     </div>
     <% end %>
     </div>
 
 </div>
-
+<!-- Go to www.addthis.com/dashboard to customize your tools -->
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-57bb682464651c22"></script>
 <%= render 'principal/footer'%>
