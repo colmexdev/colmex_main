@@ -16,7 +16,9 @@
     <% if p.imparte.to_s != "" %>
       <p class="uk-text-left">Impartido por <%= p.imparte %></p>
     <% end %>
-    <a href=<%= p.liga || "" %> target="_blank" class="ver-mas uk-margin-large-bottom uk-button-small">Más información</a>
+    <% if !p.liga.nil? %>
+    <a href=<%= p.liga %> target="_blank" class="ver-mas uk-margin-large-bottom uk-button-small">Más información</a>
+    <% end %>
     </div>
     <div class="uk-width-large-2-6">
 
@@ -66,7 +68,7 @@
       <% end %>
     </h4>
     <!-- Go to www.addthis.com/dashboard to customize your tools -->
-    <div class="addthis_inline_share_toolbox" data-url=<%= mt.liga %> data-title="<%= p.titulo %>"></div>
+    <div class="addthis_inline_share_toolbox" data-url=<%= p.liga %> data-title="<%= p.titulo %>"></div>
     </div>
     </div>
     </div>
