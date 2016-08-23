@@ -7,7 +7,7 @@ function filtrarDescubres(){
 	var descubresFiltradosPorTags = descubresPorTags.filter(function(d){ return (tagsAFiltrar == "" ? true : limpiarPuntuacion(d).indexOf(tagsAFiltrar) != -1)}).top(Infinity);
 	actualizarVisibleDescubres(descubresFiltradosPorTags);
 	renderFrase();
-	$("#wrapper").css({"height" : "auto", "margin-bottom" : "45px" });
+	$("#wrapper").css({"height" : "auto", "padding-bottom" : "45px" });
 	$("#cutter-descubre").css("display","none");
 }
 
