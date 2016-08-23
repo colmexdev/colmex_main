@@ -45,9 +45,9 @@ button:focus{
 	-webkit-transform-origin: 0% 0%;
 	-moz-transform-origin: 0% 0%;
 	transform-origin: 0% 0%;
-	-webkit-transform: rotateX(-90deg);
-	-moz-transform: rotateX(-90deg);
-	transform: rotateX(-90deg);
+	-webkit-transform: rotateX(-100deg);
+	-moz-transform: rotateX(-100deg);
+	transform: rotateX(-100deg);
 	-webkit-transition: width 0.2s linear 0s, height 0s linear 0s;
 	-moz-transition: width 0.2s linear 0s, height 0s linear 0s; 
 	-o-transition: width 0.2s linear 0s, height 0s linear 0s;
@@ -101,23 +101,23 @@ button:focus{
 /* Keyframes para unflip (Ocultar) */
 
 @-webkit-keyframes unflip {
-	0% { -webkit-transform: rotateX(0deg); opacity: 1; }
-	100% { -webkit-transform: rotateX(-90deg); }
+	0% { -webkit-transform: rotateX(0deg); }
+	100% { -webkit-transform: rotateX(-100deg); }
 }
 
 @-moz-keyframes unflip {
-	0% { -moz-transform: rotateX(0deg); opacity: 1; }
-	100% { -moz-transform: rotateX(-90deg); }
+	0% { -moz-transform: rotateX(0deg); }
+	100% { -moz-transform: rotateX(-100deg); }
 }
 
 @-o-keyframes unflip {
-	0% { -webkit-transform: rotateX(0deg); opacity: 1; }
-	100% { -webkit-transform: rotateX(-90deg); }
+	0% { -webkit-transform: rotateX(0deg); }
+	100% { -webkit-transform: rotateX(-100deg); }
 }
 
 @keyframes unflip {
-	0% { -webkit-transform: rotateX(0deg); transform: rotateX(0deg); opacity: 1; }
-	100% { -webkit-transform: rotateX(-90deg); transform: rotateX(-90deg); }
+	0% { -webkit-transform: rotateX(0deg); transform: rotateX(0deg); }
+	100% { -webkit-transform: rotateX(-100deg); transform: rotateX(-100deg); }
 }
 
 /* Fin de transiciones */
