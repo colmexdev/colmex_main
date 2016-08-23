@@ -92,7 +92,7 @@ $(window).on("resize",function(){
 
 $(window).on("orientationchange", function(){
 	 
-	setTimeout(function(){alert("Ancho: " + window.innerWidth + "; alto: " + window.innerHeight); $(window).trigger("resize");}, 900);
+	setTimeout(function(){alert("Ancho: " + window.innerWidth + "; alto: " + window.innerHeight); $(window).trigger("resize"); reescalarDescubre(); }, 900);
 	
 });
 
