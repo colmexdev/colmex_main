@@ -6,14 +6,14 @@ function filtrarDescubres(){
 	var descubresFiltradosPorContenido = descubresPorContenido.filter(function(d){ return ( contAFiltrar == "" ? true : d == contAFiltrar )}).top(Infinity);
 	var descubresFiltradosPorTags = descubresPorTags.filter(function(d){ return (tagsAFiltrar == "" ? true : limpiarPuntuacion(d).indexOf(tagsAFiltrar) != -1)}).top(Infinity);
 	actualizarVisibleDescubres(descubresFiltradosPorTags);
-	renderFrase();
+	renderFrase(descubresFiltradosPorTags);
 	$("#wrapper").css({"height" : "auto", "padding-bottom" : "45px" });
 	$("#cutter-descubre").css("display","none");
 }
 
-function renderFrase(){
+function renderFrase(arreglo){
 	uno_visible = false;
-	var borrar_frase = (document.getElementById("frase-desc") != null && descubresFiltradosPorTags.length > 0);
+	var borrar_frase = (document.getElementById("frase-desc") != null && arreglo.length > 0);
 	for(var i = 0; i < descubres.length; i++){
 		if(descubres[i]["visible"]){
 			uno_visible = true;
