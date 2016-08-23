@@ -1313,17 +1313,16 @@ ul.ul-nav { display: table; float: left !important;
 		width: 85%;
 		height: 0px;
 		margin: 20px auto 0 auto;
-		//overflow: auto;
 		overflow-x: hidden;
 		color: #838383;
 		font-weight: 600;
 		font-style: italic;
 		font-size: 22px;
 		overflow-y: hidden;
-	 	-webkit-transition: height 0.5s linear;
-		-moz-transition: height 0.5s linear; 
-		-o-transition: height 0.5s linear;
-		transition: height 0.5s linear;
+	 	-webkit-transition: height 1.4s linear;
+		-moz-transition: height 1.4s linear; 
+		-o-transition: height 1.4s linear;
+		transition: height 1.4s linear;
 
 		#frase-desc{
 			text-align: center;
