@@ -28,9 +28,7 @@ function renderFrase(){
 		$("#wrapper").append("<div id=\"frase-desc\">Ningún contenido coincide con su búsqueda.</div>");}, 1001);
 	}	
 	else{
-		if(borrar_frase){
-			$("#frase-desc").remove();
-		}
+		$("#frase-desc").remove();
 	}
 }
 
