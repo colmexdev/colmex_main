@@ -48,10 +48,10 @@ button:focus{
 	-webkit-transform: rotateX(-90deg);
 	-moz-transform: rotateX(-90deg);
 	transform: rotateX(-90deg);
-	-webkit-transition: width 0.2s linear 0.4s;
-	-moz-transition: width 0.2s linear 0.4s; 
-	-o-transition: width 0.2s linear 0.4s;
-	transition: width 0.2s linear 0.4s;
+	-webkit-transition: width 0s linear 0.4s;
+	-moz-transition: width 0s linear 0.4s; 
+	-o-transition: width 0s linear 0.4s;
+	transition: width 0s linear 0.4s;
 	-webkit-animation: flip .4s ease-in-out forwards;
 	-moz-animation: flip .4s ease-in-out forwards;
 	animation: flip .4s ease-in-out forwards;
