@@ -48,6 +48,10 @@ button:focus{
 	-webkit-transform: rotateX(-90deg);
 	-moz-transform: rotateX(-90deg);
 	transform: rotateX(-90deg);
+	-webkit-transition: width 0.2s linear 0.4s;
+	-moz-transition: width 0.2s linear 0.4s; 
+	-o-transition: width 0.2s linear 0.4s;
+	transition: width 0.2s linear 0.4s;
 	-webkit-animation: flip .4s ease-in-out forwards;
 	-moz-animation: flip .4s ease-in-out forwards;
 	animation: flip .4s ease-in-out forwards;
@@ -63,6 +67,10 @@ button:focus{
 	-webkit-transform: rotateX(0deg);
 	-moz-transform: rotateX(0deg);
 	transform: rotateX(0deg);
+	-webkit-transition: width 0.2s linear 0s;
+	-moz-transition: width 0.2s linear 0s; 
+	-o-transition: width 0.2s linear 0s;
+	transition: width 0.2s linear 0s;
 	-webkit-animation: unflip .4s ease-in-out forwards;
 	-moz-animation: unflip .4s ease-in-out forwards;
 	animation: unflip .4s ease-in-out forwards;
@@ -1327,10 +1335,6 @@ ul.ul-nav { display: table; float: left !important;
 			position: relative;
 			font-style: normal;
 			opacity: 1;
-	 		-webkit-transition: width 0s linear 0.4s;
-			-moz-transition: width 0s linear 0.4s; 
-			-o-transition: width 0s linear 0.4s;
-			transition: width 0s linear 0.4s;
 
 			.imagen-descubre{
 				@include centrado;

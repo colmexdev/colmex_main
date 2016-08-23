@@ -71,9 +71,9 @@ button:focus{
 	-moz-transition: width 0.2s linear 0s; 
 	-o-transition: width 0.2s linear 0s;
 	transition: width 0.2s linear 0s;
-	-webkit-animation: unflip .4s ease-in-out forwards;
-	-moz-animation: unflip .4s ease-in-out forwards;
-	animation: unflip .4s ease-in-out forwards;
+	-webkit-animation: unflip .4s ease-in-out 0.2s 1 forwards;
+	-moz-animation: unflip .4s ease-in-out 0.2s 1 forwards;
+	animation: unflip .4s ease-in-out 0.2s 1 forwards;
 }
 
 /* Keyframes para flip (Mostrar) */
