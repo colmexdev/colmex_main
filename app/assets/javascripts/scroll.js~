@@ -6,8 +6,8 @@ $(document).on("scroll", function(event) {
 	$(".reajustable").removeAttr("style");
 	$("#contenedor_nav").css({"min-height":"60px","background-color":"#fff","-webkit-box-shadow":"0 6px 12px rgba(0,0,0,0.175)","-moz-box-shadow":"0 6px 12px rgba(0,0,0,0.175)","box-shadow":"0 6px 12px rgba(0,0,0,0.175)"});
 	$("#barra_nav").css({"height":"100%","background-color":"#fff", "width":"85%","margin": "0 auto"});
-	$("#div_logo").css({"height": "111px" });
-	$("#div_menu").css({});
+	$("#div_logo").css({"height": "111px", "visibility" : "hidden" });
+	$("#div_menu").css({"visibility" : "hidden"});
 	$(".reajustable").css("display","inline-block");
 	$("#logo-main").css({"display":"block","padding-left":"50px"});
 	if(ancho_act > 1305){
