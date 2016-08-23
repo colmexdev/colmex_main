@@ -80,9 +80,7 @@ function recabarAnchos(){
 		var image = new Image();
 		image.onload = function(){
 			var ancho_img = this.width;
-			//$( "#badge-" + i ).css("max-width", ancho_img);
 			anchos_badges.push(ancho_img);
-			console.log(ancho_img);
 			reajustarBadges();
 		}
 		image.src = $( "#badge-" + i).attr("src");
@@ -98,7 +96,6 @@ function escalarSlider(){
 }
 
 function reajustarBadges(){
-        console.log("Cantidad de sliders: " + gon.cant_sliders);
 	for( var i = 0; i < gon.cant_sliders; i++){
 		var ancho_nuevo = ($("#div_slider").width() * anchos_badges[i]) / 1341;
 		$( "#badge-" + i ).css({"width": ancho_nuevo+"px", "max-width": anchos_badges[i]+"px" });

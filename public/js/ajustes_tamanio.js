@@ -171,7 +171,7 @@ function desbordarDescubres(){
 
 function margenAuto(){
 	if(document.getElementById("cutter-descubre").style.display == "none"){
-		$("#wrapper").css({"margin-bottom" : "45px", "height" : "auto" });
+		$("#wrapper").css({"padding-bottom" : "45px", "height" : "auto" });
 	}
 }
 
