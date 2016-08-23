@@ -54,8 +54,8 @@ $(document).ready(function(){
 	margenAuto();
 	ajustarImagenes();
 
-$(window).on("orientationchange", function(){
-	alert("Orientación: " + window.orientation);
+$(window).on("orientationchange", function(){ 
+	setTimeout(reescalarDescubre(), 900);
 	$(window).trigger("resize");
 });
 
