@@ -58,7 +58,6 @@ $(window).on("resize",function(){
 
 	var ancho_act = Math.max(document.documentElement.clientWidth, window.innerWidth || document.body.ClientWidth || 0);
 	UIkit.init();
-	reescalarDescubre();
 
 	if(ancho_act < 785){
 		if(ancho >= 785){
@@ -87,6 +86,7 @@ $(window).on("resize",function(){
 		escalarLightbox();
 	}
 	$(document).trigger("scroll");
+	reescalarDescubre();
 });
 
 
