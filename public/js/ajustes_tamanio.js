@@ -91,8 +91,8 @@ $(window).on("resize",function(){
 
 
 $(window).on("orientationchange", function(){
-	 
-	setTimeout(function(){alert("Ancho: " + window.innerWidth + "; alto: " + window.innerHeight); $(window).trigger("resize"); reescalarDescubre(); }, 900);
+	$(window).trigger("resize");
+	setTimeout(function(){ reescalarDescubre(); }, 900);
 	
 });
 
