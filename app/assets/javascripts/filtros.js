@@ -22,10 +22,8 @@ function renderFrase(arreglo){
 	}
 	if(!uno_visible){
 		setTimeout(function(){
-		if(borrar_frase){
 			$("#frase-desc").remove();
-		}
-		$("#wrapper").append("<div id=\"frase-desc\">Ningún contenido coincide con su búsqueda.</div>");}, 1001);
+			$("#wrapper").append("<div id=\"frase-desc\">Ningún contenido coincide con su búsqueda.</div>");}, 1001);
 	}	
 	else{
 		$("#frase-desc").remove();
