@@ -23,7 +23,7 @@ function renderFrase(arreglo){
 	if(!uno_visible){
 		setTimeout(function(){
 			$("#frase-desc").remove();
-			$("#wrapper").append("<div id=\"frase-desc\">Ningún contenido coincide con su búsqueda.</div>");}, 1001);
+			$("#wrapper").append("<div id=\"frase-desc\">Ningún contenido coincide con su búsqueda.</div>");}, 998);
 	}	
 	else{
 		$("#frase-desc").remove();
