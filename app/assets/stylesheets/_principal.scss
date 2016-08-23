@@ -1320,10 +1320,10 @@ ul.ul-nav { display: table; float: left !important;
 		font-style: italic;
 		font-size: 22px;
 		overflow-y: hidden;
-	 	-webkit-transition: height 1s linear;
-		-moz-transition: height 1s linear; 
-		-o-transition: height 1s linear;
-		transition: height 1s linear;
+	 	-webkit-transition: height 0.2s linear 1s;
+		-moz-transition: height 0.2s linear 1s; 
+		-o-transition: height 0.2s linear 1s;
+		transition: height 0.2s linear 1s;
 
 		#frase-desc{
 			text-align: center;

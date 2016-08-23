@@ -1312,6 +1312,7 @@ ul.ul-nav { display: table; float: left !important;
   .wrapper-descubre{
 		width: 85%;
 		height: 0px;
+		position: relative;
 		margin: 20px auto 0 auto;
 		overflow-x: hidden;
 		color: #838383;
