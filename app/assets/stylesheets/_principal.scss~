@@ -1207,7 +1207,7 @@ ul.ul-nav { display: table; float: left !important;
 }
 
 #div_revistas{
-	min-height: 280px;
+	height: 280px;
 
 	.revista{
 		height: 100%;
