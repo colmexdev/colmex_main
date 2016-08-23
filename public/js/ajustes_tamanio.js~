@@ -86,7 +86,7 @@ $(window).on("resize",function(){
 		escalarLightbox();
 	}
 	$(document).trigger("scroll");
-		reescalarDescubre();
+	reescalarDescubre();
 });
 
 

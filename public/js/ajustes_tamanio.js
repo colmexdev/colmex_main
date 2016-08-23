@@ -90,11 +90,11 @@ $(window).on("resize",function(){
 });
 
 
-$(window).on("orientationchange", function(){
+/*$(window).on("orientationchange", function(){
 	$(window).trigger("resize");
 	setTimeout(function(){ reescalarDescubre(); }, 900);
 	
-});
+});*/
 
 	$(document).trigger("scroll");
 });
