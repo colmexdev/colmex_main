@@ -1327,6 +1327,10 @@ ul.ul-nav { display: table; float: left !important;
 			position: relative;
 			font-style: normal;
 			opacity: 1;
+	 		-webkit-transition: width 0s linear 0.4s;
+			-moz-transition: width 0s linear 0.4s; 
+			-o-transition: width 0s linear 0.4s;
+			transition: width 0s linear 0.4s;
 
 			.imagen-descubre{
 				@include centrado;
