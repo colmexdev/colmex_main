@@ -72,13 +72,13 @@ $(document).on("scroll", function(event) {
 	$(".navbar-right").removeAttr("style");
 	$("#header-links").removeAttr("style");
   }
-  ajustarCuerpo();
+  ajustarCuerpo(y);
 });
 
-function ajustarCuerpo(){
+function ajustarCuerpo(scroll){
 	var alto_footer = document.getElementById('div_footer').clientHeight;
 	var alto_header = document.getElementById('header').clientHeight;
-	$('#resto-cuerpo').css({'padding-bottom': (alto_footer+1)+'px', 'padding-top': (alto_header-1.5)+'px'});
+	$('#resto-cuerpo').css({'padding-bottom': (alto_footer+1)+'px', 'padding-top': (alto_header-1.5+(scroll > 200 ? 170 : 0))+'px'});
 }
 
 function regresarArriba(){
