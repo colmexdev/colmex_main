@@ -52,9 +52,9 @@ button:focus{
 	-moz-transition: width 0.2s linear 0s, height 0s linear 0s; 
 	-o-transition: width 0.2s linear 0s, height 0s linear 0s;
 	transition: width 0.2s linear 0s, height 0s linear 0s;
-	-webkit-animation: flip .4s ease-in-out forwards;
-	-moz-animation: flip .4s ease-in-out forwards;
-	animation: flip .4s ease-in-out forwards;
+	-webkit-animation: flip .4s ease-in-out 0.2s 1 forwards;
+	-moz-animation: flip .4s ease-in-out 0.2s 1 forwards;
+	animation: flip .4s ease-in-out 0.2s 1 forwards;
 }
 
 .grid.effect-6 div.frame-descubre.revanimate { /* Ocultar */
@@ -71,9 +71,9 @@ button:focus{
 	-moz-transition: width 0.2s linear 0.4s, height 0s linear 0.4s; 
 	-o-transition: width 0.2s linear 0.4s, height 0s linear 0.4s;
 	transition: width 0.2s linear 0.4s, height 0s linear 0.4s;
-	-webkit-animation: unflip .4s ease-in-out 0.2s 1 forwards;
-	-moz-animation: unflip .4s ease-in-out 0.2s 1 forwards;
-	animation: unflip .4s ease-in-out 0.2s 1 forwards;
+	-webkit-animation: unflip .4s ease-in-out 0s 1 forwards;
+	-moz-animation: unflip .4s ease-in-out 0s 1 forwards;
+	animation: unflip .4s ease-in-out 0s 1 forwards;
 }
 
 /* Keyframes para flip (Mostrar) */
