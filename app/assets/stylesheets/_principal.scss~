@@ -94,22 +94,22 @@ button:focus{
 
 @-webkit-keyframes unflip {
 	0% { -webkit-transform: rotateX(0deg); opacity: 1; }
-	100% { -webkit-transform: rotateX(-90deg); width: 0; }
+	100% { -webkit-transform: rotateX(-90deg); }
 }
 
 @-moz-keyframes unflip {
 	0% { -moz-transform: rotateX(0deg); opacity: 1; }
-	100% { -moz-transform: rotateX(-90deg); width: 0; }
+	100% { -moz-transform: rotateX(-90deg); }
 }
 
 @-o-keyframes unflip {
 	0% { -webkit-transform: rotateX(0deg); opacity: 1; }
-	100% { -webkit-transform: rotateX(-90deg); width: 0; }
+	100% { -webkit-transform: rotateX(-90deg); }
 }
 
 @keyframes unflip {
 	0% { -webkit-transform: rotateX(0deg); transform: rotateX(0deg); opacity: 1; }
-	100% { -webkit-transform: rotateX(-90deg); transform: rotateX(-90deg); width: 0; }
+	100% { -webkit-transform: rotateX(-90deg); transform: rotateX(-90deg); }
 }
 
 /* Fin de transiciones */
@@ -1327,11 +1327,6 @@ ul.ul-nav { display: table; float: left !important;
 			position: relative;
 			font-style: normal;
 			opacity: 1;
-			-webkit-transition: opacity 0.5s linear, visibility 0.5s linear, width 0.5s linear;
-			-moz-transition: opacity 0.5s linear, visibility 0.5s linear, width 0.5s linear;
-			-ms-transition: opacity 0.5s linear, visibility 0.5s linear, width 0.5s linear;
-			-o-transition: opacity 0.5s linear, visibility 0.5s linear, width 0.5s linear;
-			transition: opacity 0.5s linear, visibility 0.5s linear, width 0.5s linear;
 
 			.imagen-descubre{
 				@include centrado;
