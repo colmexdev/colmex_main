@@ -1218,7 +1218,6 @@ ul.ul-nav { display: table; float: left !important;
 				@include centrado; 
 				max-height: 130px;
 				max-width: 350px;
-				//margin: 20px 0 10px 0;
 			} 	
 		}
 
@@ -1675,7 +1674,7 @@ ul.ul-nav { display: table; float: left !important;
 
 @media only screen and (max-width: 992px){
 	#video-colmex { height: 340px; padding-bottom: 30px; width: auto; }
-	#fundacion-colmex { height: 340px; padding-bottom: 0; }
+	#fundacion-colmex { height: 340px; padding-bottom: 30px; }
 }
 
 @media only screen and (min-width: 585px) and (max-width: 767px){
