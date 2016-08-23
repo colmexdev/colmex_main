@@ -13,16 +13,24 @@ function filtrarDescubres(){
 
 function renderFrase(){
 	uno_visible = false;
+	var borrar_frase = (document.getElementById("frase-desc") != null && descubresFiltradosPorTags.length > 0);
 	for(var i = 0; i < descubres.length; i++){
 		if(descubres[i]["visible"]){
 			uno_visible = true;
 			break;
 		}
 	}
-	$("#frase-desc").remove();
 	if(!uno_visible){
 		setTimeout(function(){
-		$("#wrapper").append("<div id=\"frase-desc\">Ningún contenido coincide con su búsqueda.</div>");}, 1500);
+		if(borrar_frase){
+			$("#frase-desc").remove();
+		}
+		$("#wrapper").append("<div id=\"frase-desc\">Ningún contenido coincide con su búsqueda.</div>");}, 1001);
+	}	
+	else{
+		if(borrar_frase){
+			$("#frase-desc").remove();
+		}
 	}
 }
 

@@ -21,7 +21,8 @@ function renderFrase(){
 	}
 	$("#frase-desc").remove();
 	if(!uno_visible){
-		$("#wrapper").delay(1400).append("<div id=\"frase-desc\">Ningún contenido coincide con su búsqueda.</div>");
+		setTimeout(function(){
+		$("#wrapper").append("<div id=\"frase-desc\">Ningún contenido coincide con su búsqueda.</div>");}, 1500);
 	}
 }
 
