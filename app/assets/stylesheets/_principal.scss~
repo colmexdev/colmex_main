@@ -1224,13 +1224,13 @@ ul.ul-nav { display: table; float: left !important;
 		@media only screen and (max-width: 992px){
 			.rev-xs { display: block; }
 			.rev-sm { display: none; }
-			#img-oia, #img-pub, #img-pred-sm, #img-rev-sm { max-width: 220px; max-height: 110px; width: 85%; }
+			#img-oia, #img-pub, #img-pred-sm, #img-rev-sm { max-width: 220px; max-height: 100px; width: 85%; }
 		}
 
 		@media only screen and (min-width: 992px){
 			.rev-xs { display: none; }
 			.rev-sm { display: block;}
-			#img-oia, #img-pub, #img-pred-xs, #img-rev-xs { max-width: 190px; max-height: 95px; width: 90%; }
+			#img-oia, #img-pub, #img-pred-xs, #img-rev-xs { max-width: 190px; max-height: 90px; width: 90%; }
 		}
 	}
 
