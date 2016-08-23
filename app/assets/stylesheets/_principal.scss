@@ -45,9 +45,9 @@ button:focus{
 	-webkit-transform-origin: 0% 0%;
 	-moz-transform-origin: 0% 0%;
 	transform-origin: 0% 0%;
-	-webkit-transform: rotateX(-100deg);
-	-moz-transform: rotateX(-100deg);
-	transform: rotateX(-100deg);
+	-webkit-transform: rotateX(-110deg);
+	-moz-transform: rotateX(-110deg);
+	transform: rotateX(-110deg);
 	-webkit-transition: width 0.2s linear 0s, height 0s linear 0s;
 	-moz-transition: width 0.2s linear 0s, height 0s linear 0s; 
 	-o-transition: width 0.2s linear 0s, height 0s linear 0s;
@@ -102,22 +102,22 @@ button:focus{
 
 @-webkit-keyframes unflip {
 	0% { -webkit-transform: rotateX(0deg); }
-	100% { -webkit-transform: rotateX(-100deg); }
+	100% { -webkit-transform: rotateX(-110deg); }
 }
 
 @-moz-keyframes unflip {
 	0% { -moz-transform: rotateX(0deg); }
-	100% { -moz-transform: rotateX(-100deg); }
+	100% { -moz-transform: rotateX(-110deg); }
 }
 
 @-o-keyframes unflip {
 	0% { -webkit-transform: rotateX(0deg); }
-	100% { -webkit-transform: rotateX(-100deg); }
+	100% { -webkit-transform: rotateX(-110deg); }
 }
 
 @keyframes unflip {
 	0% { -webkit-transform: rotateX(0deg); transform: rotateX(0deg); }
-	100% { -webkit-transform: rotateX(-100deg); transform: rotateX(-100deg); }
+	100% { -webkit-transform: rotateX(-110deg); transform: rotateX(-110deg); }
 }
 
 /* Fin de transiciones */
