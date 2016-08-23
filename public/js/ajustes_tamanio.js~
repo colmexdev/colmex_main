@@ -58,6 +58,7 @@ $(document).ready(function(){
 });
 
 $(window).on("orientationchange", function(){
+	alert("Orientación: " + window.orientation);
 	$(window).trigger("resize");
 });
 

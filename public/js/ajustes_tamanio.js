@@ -54,12 +54,12 @@ $(document).ready(function(){
 	margenAuto();
 	ajustarImagenes();
 
-	$(document).trigger("scroll");
-});
-
 $(window).on("orientationchange", function(){
 	alert("Orientación: " + window.orientation);
 	$(window).trigger("resize");
+});
+
+	$(document).trigger("scroll");
 });
 
 window.onresize = function(){
