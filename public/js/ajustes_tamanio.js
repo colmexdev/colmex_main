@@ -54,16 +54,7 @@ $(document).ready(function(){
 	margenAuto();
 	ajustarImagenes();
 
-$(window).on("orientationchange", function(){
-	alert("Ancho: " + window.innerWidth + "; alto: " + window.innerHeight); 
-	setTimeout(reescalarDescubre(), 900);
-	$(window).trigger("resize");
-});
-
-	$(document).trigger("scroll");
-});
-
-window.onresize = function(){
+$(window).on("resize",function(){
 
 	var ancho_act = Math.max(document.documentElement.clientWidth, window.innerWidth || document.body.ClientWidth || 0);
 	UIkit.init();
@@ -96,7 +87,18 @@ window.onresize = function(){
 		escalarLightbox();
 	}
 	$(document).trigger("scroll");
-}
+});
+
+
+$(window).on("orientationchange", function(){
+	 
+	setTimeout(function(){alert("Ancho: " + window.innerWidth + "; alto: " + window.innerHeight); $(window).trigger("resize");}, 900);
+	
+});
+
+	$(document).trigger("scroll");
+});
+
 
 function recabarAnchos(){
 	for( var i = 0; i < gon.cant_sliders; i++){
