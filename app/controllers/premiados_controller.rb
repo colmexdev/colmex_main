@@ -69,6 +69,6 @@ class PremiadosController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def premiado_params
-      params.require(:premiado).permit(:nombre, :descripcion, :tipo, :tipo_premio)
+      params.require(:premiado).permit(:nombre, :descripcion, :tipo, :tipo_premio, :liga)
     end
 end
