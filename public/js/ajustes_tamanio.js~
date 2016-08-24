@@ -204,26 +204,26 @@ function ajustarImagenes(){
 	var img_rev = $("#img-rev-xs").width();
 	var img_oia = $("#img-oia").width();
 
-	if(ancho_izq - 30 < img_izq){
+	if(ancho_izq - 50 < img_izq){
 		$("#img-pub").css("width","75%");
 	}
 	else{
 		$("#img-pub").removeAttr("style");
 	}
-	if(ancho_oia - 30 < img_oia){
+	if(ancho_oia - 50 < img_oia){
 		$("#img-oia").css("width","75%");
 	}
 	else{
 		$("#img-oia").removeAttr("style");
 	}
 	if(window.innerWidth <= 768){
-		if(ancho_ct - 30 < img_rev){
+		if(ancho_ct - 50 < img_rev){
 			$("#img-rev-xs").css("width","75%");
 		}
 		else{
 			$("#img-rev-xs").removeAttr("style");
 		}
-		if(ancho_der - 30 < img_pred){
+		if(ancho_der - 50 < img_pred){
 			$("#img-pred-xs").css("width","75%");
 		}
 		else{

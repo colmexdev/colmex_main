@@ -205,26 +205,26 @@ function ajustarImagenes(){
 	var img_oia = $("#img-oia").width();
 
 	if(ancho_izq - 50 < img_izq){
-		$("#img-pub").css("width","75%");
+		$("#img-pub").css("max-width","75%");
 	}
 	else{
 		$("#img-pub").removeAttr("style");
 	}
 	if(ancho_oia - 50 < img_oia){
-		$("#img-oia").css("width","75%");
+		$("#img-oia").css("max-width","75%");
 	}
 	else{
 		$("#img-oia").removeAttr("style");
 	}
 	if(window.innerWidth <= 768){
 		if(ancho_ct - 50 < img_rev){
-			$("#img-rev-xs").css("width","75%");
+			$("#img-rev-xs").css("max-width","75%");
 		}
 		else{
 			$("#img-rev-xs").removeAttr("style");
 		}
 		if(ancho_der - 50 < img_pred){
-			$("#img-pred-xs").css("width","75%");
+			$("#img-pred-xs").css("max-width","75%");
 		}
 		else{
 			$("#img-pred-xs").removeAttr("style");
