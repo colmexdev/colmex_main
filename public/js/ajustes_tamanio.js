@@ -135,7 +135,7 @@ function partirDescubres(){
 			break;
 		}
 	}
-	var div_filas = (ancho_v >= 1200 ? 5 : (ancho_v >= 992 ? 4 : (ancho_v >= 768 ? 3 : (ancho_v >= 480 ? 2 : 1))));
+	var div_filas = (ancho_v > 1200 ? 5 : (ancho_v > 992 ? 4 : (ancho_v > 768 ? 3 : (ancho_v > 480 ? 2 : 1))));
 	var cantidad_filas = Math.ceil(descubres.length / div_filas);
 	var altura_actual = alto_d * num_filas;
 	var altura_real = alto_d * cantidad_filas;
@@ -150,7 +150,7 @@ function partirDescubres(){
 		}, 501);
 	}
 
-	if(((json_l > 10 && ancho_v >= 1200 ) || (json_l > 8 && ancho_v >= 992 && ancho_v < 1200) || (json_l > 6 && ancho_v >= 768 && ancho_v < 992) || (json_l >4 && ancho_v >= 480 && ancho_v < 768) || (json_l > 2 && ancho_v < 480)) && $("#cutter-descubre").css("display") != "none"){
+	if(((json_l > 10 && ancho_v > 1200 ) || (json_l > 8 && ancho_v > 992 && ancho_v <= 1200) || (json_l > 6 && ancho_v > 768 && ancho_v <= 992) || (json_l >4 && ancho_v > 480 && ancho_v <= 768) || (json_l > 2 && ancho_v <= 480)) && $("#cutter-descubre").css("display") != "none"){
 		$("#cutter-descubre").css("display","block");
 	}
 	else{
@@ -170,7 +170,7 @@ function desbordarDescubres(){
 			break;
 		}
 	}
-	var div_filas = (ancho_v >= 1200 ? 5 : (ancho_v >= 992 ? 4 : (ancho_v >= 768 ? 3 : (ancho_v >= 480 ? 2 : 1))));
+	var div_filas = (ancho_v > 1200 ? 5 : (ancho_v > 992 ? 4 : (ancho_v > 768 ? 3 : (ancho_v > 480 ? 2 : 1))));
 	var cantidad_filas = Math.ceil(descubres.length / div_filas);
 	var altura_actual = alto_d * num_filas;
 	var altura_real = alto_d * cantidad_filas;
