@@ -48,8 +48,8 @@ function reescalarDescubre(){
 
 function ajustarAlturas(i){
 	var ancho = Math.max(document.documentElement.clientWidth, window.innerWidth || document.body.ClientWidth || 0);
-	var factor = (ancho >= 1200 ? 5 : (ancho >= 992 ? 4 : ( ancho >= 768 ? 3 : ( ancho >= 480 ? 2 : 1))))
-	return $("#frame-"+i).width()/*($("#wrapper").innerWidth()/factor) + "px"*/;
+	var factor = (ancho > 1200 ? 5 : (ancho > 992 ? 4 : ( ancho > 768 ? 3 : ( ancho > 480 ? 2 : 1))))
+	return ($("#wrapper").innerWidth()/factor) + "px";
 }
 
 function limpiarPuntuacion(tags){

@@ -42,14 +42,14 @@ function actualizarVisibleDescubres(visibles){
 
 function reescalarDescubre(){
 	for(var i = 0; i < descubres.length; i++){
-		$("#frame-"+i).removeClass(descubres[i]["visible"] ? "revanimate" : "animate").addClass(!descubres[i]["visible"] ? "revanimate" : "animate").css({"height": (descubres[i]["visible"] ? ajustarAlturas() : "0"), "width" : (descubres[i]["visible"] ? "" : 0)});
+		$("#frame-"+i).removeClass(descubres[i]["visible"] ? "revanimate" : "animate").addClass(!descubres[i]["visible"] ? "revanimate" : "animate").css({"height": (descubres[i]["visible"] ? ajustarAlturas(i) : "0"), "width" : (descubres[i]["visible"] ? "" : 0)});
 	}
 }
 
-function ajustarAlturas(){
+function ajustarAlturas(i){
 	var ancho = Math.max(document.documentElement.clientWidth, window.innerWidth || document.body.ClientWidth || 0);
 	var factor = (ancho >= 1200 ? 5 : (ancho >= 992 ? 4 : ( ancho >= 768 ? 3 : ( ancho >= 480 ? 2 : 1))))
-	return ($("#wrapper").innerWidth()/factor) + "px";
+	return $("#frame-"+i).width()/*($("#wrapper").innerWidth()/factor) + "px"*/;
 }
 
 function limpiarPuntuacion(tags){
