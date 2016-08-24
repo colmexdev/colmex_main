@@ -198,7 +198,7 @@ function ajustarImagenes(){
 	var ancho_izq = $("#col-izq").innerWidth();
 	var ancho_ct = $("#col-ct").innerWidth();
 	var ancho_der = $("#col-der").innerWidth();
-	var ancho_oia = $("#col-oia").innerwidth();
+	var ancho_oia = $("#col-oia").innerWidth();
 	var img_izq = $("#img-pub").width();
 	var img_pred = $("#img-pred-xs").width();
 	var img_rev = $("#img-rev-xs").width();
