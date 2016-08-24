@@ -128,7 +128,7 @@ function llenaConfirmacion(valor){
 function partirDescubres(){
 	var ancho_v = Math.max(document.documentElement.clientWidth, window.innerWidth || document.body.ClientWidth || 0);
 	var json_l = descubres.length;
-	var alto_d; 
+	var alto_d;
 	for( var i = 0; i < descubres.length; i++){
 		if(descubres[i]["visible"]){
 			alto_d = document.getElementById("frame-"+i).clientHeight;
@@ -147,7 +147,7 @@ function partirDescubres(){
 	if($("#wrapper").height() >= altura_real){
 		setTimeout(function(){
 			$("#wrapper").css("height","auto");
-		}, 850);
+		}, 200);
 	}
 
 	if(((json_l > 10 && ancho_v > 1200 ) || (json_l > 8 && ancho_v > 992 && ancho_v <= 1200) || (json_l > 6 && ancho_v > 768 && ancho_v <= 992) || (json_l >4 && ancho_v > 480 && ancho_v <= 768) || (json_l > 2 && ancho_v <= 480)) && $("#cutter-descubre").css("display") != "none"){

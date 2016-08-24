@@ -50,8 +50,9 @@ $(document).ready(function(){
 	recabarAnchos();
         agregarAnaliticos();
 	escalarSlider();
+	setTimeout(function(){
 	partirDescubres();
-	margenAuto();
+	margenAuto();}, 850);
 	ajustarImagenes();
 
 $(window).on("resize",function(){
@@ -79,8 +80,9 @@ $(window).on("resize",function(){
 	}
 
 	escalarSlider();
+	setTimeout(function(){
 	partirDescubres();
-	margenAuto();
+	margenAuto();}, 850);
 	ajustarImagenes();
 	if($(".uk-modal").css("display") =="block"){
 		escalarLightbox();
@@ -128,7 +130,7 @@ function llenaConfirmacion(valor){
 function partirDescubres(){
 	var ancho_v = Math.max(document.documentElement.clientWidth, window.innerWidth || document.body.ClientWidth || 0);
 	var json_l = descubres.length;
-	var alto_d; 
+	var alto_d;
 	for( var i = 0; i < descubres.length; i++){
 		if(descubres[i]["visible"]){
 			alto_d = document.getElementById("frame-"+i).clientHeight;
@@ -141,14 +143,13 @@ function partirDescubres(){
 	var altura_real = alto_d * cantidad_filas;
 	var altura_wrapper = document.getElementById("wrapper").clientHeight;
 
-	setTimeout(function(){
-	$("#wrapper").css({"height" : ((altura_wrapper >= altura_real - 1) ? altura_real + "px" : altura_actual + "px") });}, 850);
+	$("#wrapper").css({"height" : ((altura_wrapper >= altura_real - 1) ? altura_real + "px" : altura_actual + "px") });
 
 	altura_wrapper = document.getElementById("wrapper").clientHeight;
 	if($("#wrapper").height() >= altura_real){
 		setTimeout(function(){
 			$("#wrapper").css("height","auto");
-		}, 855);
+		}, 200);
 	}
 
 	if(((json_l > 10 && ancho_v > 1200 ) || (json_l > 8 && ancho_v > 992 && ancho_v <= 1200) || (json_l > 6 && ancho_v > 768 && ancho_v <= 992) || (json_l >4 && ancho_v > 480 && ancho_v <= 768) || (json_l > 2 && ancho_v <= 480)) && $("#cutter-descubre").css("display") != "none"){
