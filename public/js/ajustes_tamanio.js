@@ -141,13 +141,14 @@ function partirDescubres(){
 	var altura_real = alto_d * cantidad_filas;
 	var altura_wrapper = document.getElementById("wrapper").clientHeight;
 
-	$("#wrapper").css({"height" : ((altura_wrapper >= altura_real - 1) ? altura_real + "px" : altura_actual + "px") });
+	setTimeout(function(){
+	$("#wrapper").css({"height" : ((altura_wrapper >= altura_real - 1) ? altura_real + "px" : altura_actual + "px") });}, 850);
 
 	altura_wrapper = document.getElementById("wrapper").clientHeight;
 	if($("#wrapper").height() >= altura_real){
 		setTimeout(function(){
 			$("#wrapper").css("height","auto");
-		}, 501);
+		}, 855);
 	}
 
 	if(((json_l > 10 && ancho_v > 1200 ) || (json_l > 8 && ancho_v > 992 && ancho_v <= 1200) || (json_l > 6 && ancho_v > 768 && ancho_v <= 992) || (json_l >4 && ancho_v > 480 && ancho_v <= 768) || (json_l > 2 && ancho_v <= 480)) && $("#cutter-descubre").css("display") != "none"){
