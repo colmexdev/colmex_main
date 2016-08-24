@@ -1303,7 +1303,7 @@ ul.ul-nav { display: table; float: left !important;
 		>input::-moz-placeholder { color: #000; }
 		>input:-ms-input-placeholder { color: #000; }
 
-		@media only screen and (max-width: 654px){
+		@media only screen and (max-width:689px){
 			>select { margin: 0; }
 			>input { margin: 5px; }
 		}
