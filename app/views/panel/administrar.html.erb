@@ -1,5 +1,5 @@
 <% if admin_signed_in? %>
-
+<p id="notice"><%= notice %></p>
 <% if current_admin.admin == "Administrador" || current_admin.admin == "Editor" %>
 <%= link_to "Editar profesores eméritos",emeritos_path %><br />
 <%= link_to "Editar tipos de curso", tipo_cursos_path %><br />
