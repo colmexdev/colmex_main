@@ -31,7 +31,7 @@
 
   <div class="field">
     <%= f.label :admin %><br />
-    <%= f.select(:admin, [['Administrador','Administrador'],['Editor','Editor'],['Responsable CEAA', 'Asia y África'], ['Responsable CEDUA', 'Demográficos, Urbanos y Ambientales'], ['Responsable CEE','Económicos'], ['Responsable CEH', 'Históricos'], ['Responsable CEI', 'Internacionales'], ['Responsable CELL', 'Lingüísticos y Literarios'], ['Responsable CES','Sociológicos']], @admin.admin || 'Editor') %>
+    <%= f.select(:admin, [['Administrador','Administrador'],['Editor','Editor'],['Responsable CEAA', 'Asia y África'], ['Responsable CEDUA', 'Demográficos, Urbanos y Ambientales'], ['Responsable CEE','Económicos'], ['Responsable CEH', 'Históricos'], ['Responsable CEI', 'Internacionales'], ['Responsable CELL', 'Lingüísticos y Literarios'], ['Responsable CES','Sociológicos']],:selected => (@admin.admin || 'Editor')) %>
   </div>
 
   <div class="actions">
