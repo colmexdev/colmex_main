@@ -31,7 +31,7 @@
 
   <div class="field">
     <%= f.label :admin %><br />
-    <%= f.select(:admin, options_for_select([['Administrador',true],['Editor',false]])) %>
+    <%= f.select(:admin, [['Administrador','Administrador'],['Editor','Editor'],['Responsable CEAA', 'CEAA'], ['Responsable CEDUA', 'CEDUA'], ['Responsable CEE','CEE'], ['Responsable CEH', 'CEH'], ['Responsable CEI', 'CEI'], ['Responsable CELL', 'CELL'], ['Responsable CES'],'CES']], @admin.admin || 'Editor') %>
   </div>
 
   <div class="actions">
