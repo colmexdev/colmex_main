@@ -5,7 +5,7 @@ class CreateAcademicos < ActiveRecord::Migration
       t.string :adscripcion
       t.text :lineas_investigacion
       t.string :correo
-      t.text :pagina, :default => "-"
+      t.text :pagina
 
       t.timestamps null: false
     end
