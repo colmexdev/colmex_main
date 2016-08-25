@@ -1,6 +1,6 @@
 <% if admin_signed_in? %>
 
-<% if current_admin.admin %>
+<% if current_admin.admin == "Administrador" %>
 
 <p id="notice"><%= notice %></p>
 
@@ -11,7 +11,7 @@
 
 <p>
   <strong>Rol:</strong>
-  <%= @admin.admin ? "Administrador" : "Creador de contenido" %>
+  <%= @admin.admin %>
 </p>
 
 <%= link_to 'Edit', edit_admin_path(@admin) %> |

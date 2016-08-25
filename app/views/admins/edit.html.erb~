@@ -1,5 +1,7 @@
 <% if admin_signed_in? %>
 
+<% if current_admin.admin %>
+
 <h1>Editing Admin</h1>
 
 <%= render 'form' %>
@@ -7,4 +9,5 @@
 <%= link_to 'Show', @admin %> |
 <%= link_to 'Back', admins_path %>
 
+<% end %>
 <% end %>

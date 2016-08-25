@@ -1,17 +1,12 @@
 <% if admin_signed_in? %>
 
-<% if current_admin.admin %>
+<% if current_admin.admin == "Administrador" %>
 
 <p id="notice"><%= notice %></p>
 
 <p>
   <strong>Usuario:</strong>
   <%= @admin.usuario %>
-</p>
-
-<p>
-  <strong>Contraseña:</strong>
-  <%= @admin.password %>
 </p>
 
 <p>
