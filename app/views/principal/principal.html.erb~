@@ -104,7 +104,7 @@
 		</div> <!-- Cierre de columnas para "Descubre" -->
 	</div> <!-- Cierre de fila para "Descubre" -->
 
-	<div class="row"> <!-- Fila para revistas -->
+	<div class="row" id="wrapper-revista"> <!-- Fila para revistas -->
 		<div class="col-md-12" id="div_revistas"> <!-- Columnas para revistas -->
 			<div class="col-xs-6 col-md-3 revista" id="col-izq"><%= link_to(image_tag('revistas-der.png', :id => "img-pub"), "
 http://libros.colmex.mx/", :target => "_blank") %></div>
