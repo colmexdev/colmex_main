@@ -537,7 +537,7 @@ html, body{ height: 100%; }
 		}
 
 		@media only screen and (max-width: 1024px){
-			.mostrable, .borrable { margin-top: 5px; }
+			.mostrable, .borrable { margin-top: 0; }
 		}
 		
 		@media only screen and (max-width: 1305px){
@@ -1320,10 +1320,10 @@ ul.ul-nav { display: table; float: left !important;
 		font-style: italic;
 		font-size: 22px;
 		overflow-y: hidden;
-	 	-webkit-transition: height 0.2s linear 0.2s;
-		-moz-transition: height 0.2s linear 0.2s; 
-		-o-transition: height 0.2s linear 0.2s;
-		transition: height 0.2s linear 0.2s;
+	 	-webkit-transition: height 0.2s linear 0s;
+		-moz-transition: height 0.2s linear 0s; 
+		-o-transition: height 0.2s linear 0s;
+		transition: height 0.2s linear 0s;
 
 		#frase-desc{
 			text-align: center;
