@@ -13,6 +13,7 @@
 <%= link_to "Editar imágenes de galerías", imagens_path %><br />
 <%= link_to "Editar imágenes de slider", sliders_path %><br />
 <%= link_to "Editar frase de la página principal", frases_path %><br />
+<%= link_to "Editar directorio académico", academicos_path %><br />
 <% if current_admin.admin %>
 <%= link_to "Editar usuarios gestores", admins_path %><br />
 <% end %>

@@ -1,5 +1,6 @@
 <% if admin_signed_in? %>
 
+<% if current_admin.admin == "Administrador" || current_admin.admin == "Editor" %>
 <%= link_to "Editar profesores eméritos",emeritos_path %><br />
 <%= link_to "Editar tipos de curso", tipo_cursos_path %><br />
 <%= link_to "Editar cursos", cursos_path %><br />
@@ -13,11 +14,11 @@
 <%= link_to "Editar imágenes de galerías", imagens_path %><br />
 <%= link_to "Editar imágenes de slider", sliders_path %><br />
 <%= link_to "Editar frase de la página principal", frases_path %><br />
+<% end %>
 <%= link_to "Editar directorio académico", academicos_path %><br />
-<% if current_admin.admin %>
+<% if current_admin.admin == "Administrador" %>
 <%= link_to "Editar usuarios gestores", admins_path %><br />
 <% end %>
-
 <br />
 <br />
 <%= link_to "Cerrar sesión", destroy_admin_session_path, :method => "DELETE" %>
