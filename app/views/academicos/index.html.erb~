@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Academicos</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Nombre</th>
+      <th>Adscripcion</th>
+      <th>Lineas investigacion</th>
+      <th>Correo</th>
+      <th>Pagina</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @academicos.each do |academico| %>
+      <tr>
+        <td><%= academico.nombre %></td>
+        <td><%= academico.adscripcion %></td>
+        <td><%= academico.lineas_investigacion %></td>
+        <td><%= academico.correo %></td>
+        <td><%= academico.pagina %></td>
+        <td><%= link_to 'Show', academico %></td>
+        <td><%= link_to 'Edit', edit_academico_path(academico) %></td>
+        <td><%= link_to 'Destroy', academico, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Academico', new_academico_path %>

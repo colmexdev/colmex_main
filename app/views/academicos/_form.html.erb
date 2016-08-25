@@ -1,0 +1,41 @@
+<%= form_for(@academico, :html => { :multipart => true}) do |f| %>
+  <% if @academico.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@academico.errors.count, "error") %> prohibited this academico from being saved:</h2>
+
+      <ul>
+      <% @academico.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :nombre %><br>
+    <%= f.text_field :nombre %>
+  </div>
+  <div class="field">
+    <%= f.label :foto %><br>
+    <%= f.field :foto %>
+  </div>
+  <div class="field">
+    <%= f.label :adscripcion %><br>
+    <%= f.select(:adscripcion, [['Asia y África','CEAA'],['Demográficos, Urbanos y Ambientales','CEDUA'],['Económicos','CEE'],['Históricos','CEH'],['Internacionales','CEI'],['Lingüísticos y Literarios','CELL'],['Sociológicos','CES']], :selected => (@academico.adscripcion || 'CEAA')) %>
+  </div>
+  <div class="field">
+    <%= f.label :lineas_investigacion %><br>
+    <%= f.text_area :lineas_investigacion %>
+  </div>
+  <div class="field">
+    <%= f.label :correo %><br>
+    <%= f.text_field :correo %>
+  </div>
+  <div class="field">
+    <%= f.label :pagina %><br>
+    <%= f.text_field :pagina %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

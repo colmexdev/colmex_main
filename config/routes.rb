@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :academicos
   resources :personals
   resources :premiados
   resources :frases
