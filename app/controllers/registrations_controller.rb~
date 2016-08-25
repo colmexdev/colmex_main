@@ -4,10 +4,10 @@ class RegistrationsController < Devise::RegistrationsController
   end
 
   def create
-    @admin = Admin.new(admin_params)
+    build_resource(sign_up_params)
 
     respond_to do |format|
-      if @admin.save
+      if resource.save
         format.html { redirect_to @admin, notice: 'Admin was successfully created.' }
         format.json { render :show, status: :created, location: @admin }
       else
@@ -15,9 +15,6 @@ class RegistrationsController < Devise::RegistrationsController
         format.json { render json: @admin.errors, status: :unprocessable_entity }
       end
     end
-    #build_resource(sign_up_params)
-
-    #resource.save
     #yield resource if block_given?
     #if resource.persisted?
 			
