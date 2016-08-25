@@ -4,6 +4,7 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
   before_action :set_locale
   before_action :configure_permitted_parameters, if: :devise_controller?
+  prepend_before_filter :require_no_authentication, only: [:cancel ]
   include PrincipalHelper
   include SobreElColegioHelper
 
@@ -17,8 +18,7 @@ class ApplicationController < ActionController::Base
 
   protected
   def after_sign_in_path_for(resource)
-    root_path
-    #panel_path
+    panel_path
   end
 
   def after_sign_out_path_for(resource_or_scope)
