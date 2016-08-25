@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :academicos
   resources :personals
   resources :premiados
   resources :frases
@@ -90,7 +91,7 @@ Rails.application.routes.draw do
 
   get 'informacion_general/historia_75_años' => 'informacion_general#historia_75_años', :as => :historia75
 
-  get 'informacion_general/comunidad' => 'informacion:general#comunidad', :as => :otorgadoscomunidad
+  get 'informacion_general/comunidad' => 'informacion_general#comunidad', :as => :otorgadoscomunidad
 
   get 'informacion_general/colegio' => 'informacion_general#colegio', :as => :otorgadoscolegio
 
