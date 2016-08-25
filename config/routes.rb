@@ -14,8 +14,9 @@ Rails.application.routes.draw do
   resources :imagens
   resources :categoria
   resources :emeritos
-  resources :admins
   devise_for :admins
+  resources :admins
+
 
   get 'bienes/index' => 'bienes#index', :as => :bienes
 
