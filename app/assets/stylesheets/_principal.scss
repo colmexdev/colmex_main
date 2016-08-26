@@ -1218,16 +1218,15 @@ ul.ul-nav { display: table; float: left !important;
 				@include centrado; 
 				max-height: 130px;
 				max-width: 350px;
-			} 	
-		}
+			} 
 
-		#img-oia, #img-pub { width: 110%; }
+			#img-oia, #img-pub { width: 110%; }	
+		}
 
 		@media only screen and (max-width: 992px){
 			.rev-xs { display: block; }
 			.rev-sm { display: none; }
-			#img-pred-sm, #img-rev-sm { max-width: 190px; max-height: 100px; }
-			#img-oia, #img-pub { max-width: 210px; }
+			#img-oia, #img-pub, #img-pred-sm, #img-rev-sm { max-width: 190px; max-height: 100px; }
 		}
 
 		@media only screen and (min-width: 992px){
