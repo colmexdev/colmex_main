@@ -206,6 +206,9 @@ function ajustarImagenes(){
 	var img_rev = $("#img-rev-xs").removeAttr("style").width();
 	var img_oia = $("#img-oia").removeAttr("style").width();
 
+	$("#img-oia").css("height", $("#img-rev-sm").height() + "px");
+	$("#img-pub").css("height", $("#img-rev-sm").height() + "px");
+
 	if(ancho_izq - 90 < img_izq){
 		$("#img-pub").css("width", (ancho_izq - 80) +"px");
 	}
