@@ -36,6 +36,7 @@ sp:
         op5: "Oficina de intercambio académico"
         op6: "Cursos"
         op7: "Calendario escolar"
+        op8: "Convocatorias"
     b4: "Biblioteca"
     b5: "Agenda"
   eventos:

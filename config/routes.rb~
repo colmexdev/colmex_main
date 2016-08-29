@@ -14,7 +14,7 @@ Rails.application.routes.draw do
   resources :imagens
   resources :categoria
   resources :emeritos
-  devise_for :admins
+  devise_for :admins, :controllers => { :registrations => "registrations"}
   resources :admins
 
 

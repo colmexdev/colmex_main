@@ -8,16 +8,15 @@
     <span class="titulo-grande">Transparencia</span><br>
     <!--          Aquí empieza el menú pequeño          -->
     <ul style="text-align:left;">
-    	<li style="list-style-type:none; margin-bottom:5px;"><%= link_to(image_tag('bt-flechita.png', :class => "leave_img") + image_tag("bt-flechita-hover.png", :class => "hover_img") + "Transparencia", transp_path, :remote => true, :class => "link-sobre", :id => "transp-link") %></li>
 				<li style="list-style-type:none; margin-bottom:5px;"><%= link_to image_tag('bt-flechita.png', :class => "leave_img") + image_tag("bt-flechita-hover.png", :class => "hover_img") + "Licitaciones", licitaciones_path , :remote => true, :class => "link-sobre", :id => "licitaciones-link" %></li>
 				<li style="list-style-type:none; margin-bottom:5px;"><%= link_to image_tag('bt-flechita.png', :class => "leave_img") + image_tag("bt-flechita-hover.png", :class => "hover_img") + "Relación de bienes", bienes_part_path, :remote => true, :class => "link-sobre", :id => "presidencia-link" %></li>
     </ul>
     <!--          Aquí termina el menú pequeño          -->
     </div>
     <div class="uk-width-large-3-5">
-			<span class="titulo-grande morado" id="titulo-render"><%= "Transparencia" %></span>
+			<span class="titulo-grande morado" id="titulo-render"><%= "Licitaciones" %></span>
 			<div id="transp-render" style="padding-top: 20px;">
-				<%= render "informacion_general/transp" %>
+				<%= render "informacion_general/licitaciones" %>
 			</div>
 		</div>
 		</div>
