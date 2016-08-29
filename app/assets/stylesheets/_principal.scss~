@@ -1217,7 +1217,7 @@ ul.ul-nav { display: table; float: left !important;
 			img{ 
 				@include centrado; 
 				max-height: 130px;
-				max-width: 350px;
+				max-width: 200px;
 			} 
 
 			#img-oia, #img-pub { width: 110%; }	
@@ -1232,7 +1232,6 @@ ul.ul-nav { display: table; float: left !important;
 		@media only screen and (min-width: 992px){
 			.rev-xs { display: none; }
 			.rev-sm { display: block;}
-			#img-oia, #img-pub, #img-pred-xs, #img-rev-xs { max-width: 150px; max-height: 90px; }
 		}
 	}
 
