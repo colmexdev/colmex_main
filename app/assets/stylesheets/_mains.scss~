@@ -1,3 +1,9 @@
 /* Estilos para las páginas principales */
 
 .documento { margin-right: 10px; width: 30px;}
+
+#menu-lateral { border-right: 2px solid #EEEEEE; }
+
+@media only screen and (max-width: 959px){
+	#menu-lateral { border-right: none; }
+}
