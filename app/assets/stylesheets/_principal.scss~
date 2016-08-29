@@ -1220,7 +1220,7 @@ ul.ul-nav { display: table; float: left !important;
 				max-width: 200px;
 			} 
 
-			#img-oia, #img-pub { width: 110%; }	
+			#img-oia, #img-pub { width: 110%; height: 70px;}	
 		}
 
 		@media only screen and (max-width: 992px){
