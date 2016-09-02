@@ -7,7 +7,7 @@ $(document).on("scroll", function(event) {
 	$("#div_menu").css({"display" : "none"});
 	$(".reajustable").removeAttr("style");
 	$("#contenedor_nav").css({"min-height":"60px","background-color":"#fff","-webkit-box-shadow":"0 6px 12px rgba(0,0,0,0.175)","-moz-box-shadow":"0 6px 12px rgba(0,0,0,0.175)","box-shadow":"0 6px 12px rgba(0,0,0,0.175)"});
-	$("#barra_nav").css({"height":"100%","background-color":"#fff", "width":"85%","margin": "0 auto"});
+	$("#barra_nav").css({"height":"100%","background-color":"#fff", "width":"90%","margin": "0 auto"});
 	$(".reajustable").css("display","inline-block");
 	$("#logo-main").css({"display":"block","padding-left":""});
 	if(ancho_act > 1305){

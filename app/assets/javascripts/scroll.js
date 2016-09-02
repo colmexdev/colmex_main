@@ -10,7 +10,7 @@ $(document).on("scroll", function(event) {
 	$("#barra_nav").css({"height":"100%","background-color":"#fff", "width":"90%","margin": "0 auto"});
 	$(".reajustable").css("display","inline-block");
 	$("#logo-main").css({"display":"block","padding-left":""});
-	if(ancho_act > 1305){
+	if(ancho_act > 1363){
 	  $("#idioma-big-scroll").css("display","block");
 	  $("#idioma-small-scroll").removeAttr("style");
 	  $("#idioma-top").css("display","none");
@@ -29,7 +29,7 @@ $(document).on("scroll", function(event) {
 	  	$(".reajustable").removeAttr("style");
 
 	  }
-	  if(ancho_act > 1305){
+	  if(ancho_act > 1363){
 		$("#idioma-big-scroll").css("display","block");
 	  	$("#idioma-small-scroll").removeAttr("style");
 	  }
