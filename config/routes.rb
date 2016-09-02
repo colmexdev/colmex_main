@@ -42,7 +42,7 @@ Rails.application.routes.draw do
 
   get 'programas_academicos/admisiones' => "programas_academicos#admisiones", :as => :admisiones
 
-  gat 'programas_academicos/programas' => 'programas_academicos#programas', :as => :programas
+  get 'programas_academicos/programas' => 'programas_academicos#programas', :as => :programas
 
   get 'programas_academicos/convocatorias' => 'programas_academicos#convocatorias', :as => :convocatorias
 
