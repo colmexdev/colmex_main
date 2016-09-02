@@ -540,12 +540,12 @@ html, body{ height: 100%; }
 			.mostrable, .borrable { margin-top: 0; }
 		}
 		
-		@media only screen and (max-width: 1500px){
+		@media only screen and (max-width: 1305px){
 			.mostrable{ display: inline-block; }
 			.borrable{ display: none; }
 		}
 
-		@media only screen and (min-width: 1501px){
+		@media only screen and (min-width: 1306px){
 			.mostrable{ display: none; }
 		}
 	}
@@ -778,7 +778,7 @@ ul.ul-nav { display: table; float: left !important;
 	}
 }
 
-@media only screen and (max-width: 1500px){
+@media only screen and (max-width: 1305px){
 	#div_menu{ display: none; height: 0; } 
 }
 
