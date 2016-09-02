@@ -1,79 +1,25 @@
-<p>Los cursos impartidos en los programas académicos pueden ser consultados en el siguiente enlace: </p>
-    <a href="http://calendariocursos.colmex.mx/" target="_blank" class="ver-mas uk-margin-large-bottom uk-button-small">Calendario cursos</a>
-    <p>Además El Colegio de México imparte cursos abiertos para público en general, lo cuáles se enlistan a continuación:</p>
+<span class="titulo-chico">Licenciaturas</span><br>
 
-<% @presenciales.each do |p| %>
+    <ul class=" uk-list uk-list-space">
+		<% @licenciaturas.each do |lic| %>
+		  <li class="uk-link sin-pointer">Licenciatura en <%= lic.titulo %></li>
+		<% end %>
+    </ul>
+		<a href=<%= licenciaturas_path %> class="ver-mas uk-margin-large-bottom uk-button-small">Conoce más</a>
 
-    <div class="uk-grid uk-grid-medium uk-margin-large-bottom">
-    <div class="uk-width-1-5 uk-text-center">
-    <img src=<%= p.foto.url %> class="uk-border-rounded" alt="Foto curso">
-    </div>
-    <div class="uk-width-4-5 uk-vertical-align-middle uk-text-left uk-text-break">
-    <h2 class="vino"><%= p.titulo %></h2>
-    <div class="uk-grid uk-grid-large">
-    <div class="uk-width-large-4-6 uk-text-left">
-    <p><%= p.descripcion %></p>
-    <% if p.imparte.to_s != "" %>
-      <p class="uk-text-left">Impartido por <%= p.imparte %></p>
-    <% end %>
-    <% if !p.liga.nil? %>
-    <a href=<%= p.liga %> target="_blank" class="ver-mas uk-margin-large-bottom uk-button-small">Más información</a>
-    <!-- Go to www.addthis.com/dashboard to customize your tools -->
-    <div style="display:inline-block;float:right;" class="addthis_inline_share_toolbox" data-url=<%= p.liga %> data-title="<%= p.titulo %>"></div>
-    <% end %>
-    </div>
-    <div class="uk-width-large-2-6">
+<span class="titulo-chico">Maestrías</span><br>
 
-    <h3 class="vino uk-margin-bottom-remove">
-    <% if !p.fecha_inicio_clases.nil? %>
-      <% if p.fecha_fin_clases.nil? %>
-        <%= "Inicio de clases:" %>
-      <% else %>
-        <%= "Duración:" %>
-      <% end %>
-    <% end %>
-    </h3>
+    <ul class=" uk-list uk-list-space">
+    <% @maestrias.each do |mt| %>
+		  <li class="uk-link sin-pointer">Maestría en en <%= mt.titulo %></li>
+		<% end %>
+    </ul>
+	<a href=<%= maestrias_path %> class="ver-mas uk-margin-large-bottom uk-button-small">Conoce más</a>
 
-    <h4 class="uk-margin-top-remove">
-      <% if !p.fecha_inicio_clases.nil? %>
-        <%= (p.fecha_inicio_clases.day.to_s + " de " + num2Month(p.fecha_inicio_clases.month - 1)) || "" %>
-        <% if p.fecha_fin_clases.nil? %>
-          <%= (" de " + p.fecha_inicio_clases.year.to_s) || "" %>
-        <% else %>
-          <% if p.fecha_fin_clases.year != p.fecha_inicio_clases.year %>
-            <%= (" de " + p.fecha_inicio_clases.year.to_s + " al " + p.fecha_fin_clases.day.to_s + " de " + num2Month(p.fecha_fin_clases.month - 1) + " de " + p.fecha_fin_clases.year.to_s ) || "" %>
-          <% else %>
-            <%= (" al " + p.fecha_fin_clases.day.to_s + " de " + num2Month(p.fecha_fin_clases.month - 1) + " de " + p.fecha_fin_clases.year.to_s ) || "" %>
-          <% end %>
-        <% end %>
-      <% end %>
-    </h4>
-
-    <h3 class="vino uk-margin-bottom-remove">
-      <% if !p.fecha_inicio_conv.nil? and !p.fecha_fin_conv.nil? %>
-        <%= "Próxima convocatoria" %>
-      <% end %>
-    </h3>
-
-    <h4 class="uk-margin-top-remove">
-      <% if !p.fecha_inicio_conv.nil? %>
-        <%= (p.fecha_inicio_conv.day.to_s + " de " + num2Month(p.fecha_inicio_conv.month - 1)) || "" %>
-        <% if p.fecha_fin_conv.nil? %>
-          <%= (" de " + p.fecha_inicio_conv.year.to_s) || "" %>
-        <% else %>
-          <% if p.fecha_fin_conv.year != p.fecha_inicio_conv.year %>
-            <%= (" de " + p.fecha_inicio_conv.year.to_s + " al " + p.fecha_fin_conv.day.to_s + " de " + num2Month(p.fecha_fin_conv.month - 1) + " de " + p.fecha_fin_conv.year.to_s ) || "" %>
-          <% else %>
-            <%= (" al " + p.fecha_fin_conv.day.to_s + " de " + num2Month(p.fecha_fin_conv.month - 1) + " de " + p.fecha_fin_conv.year.to_s ) || "" %>
-          <% end %>
-        <% end %>
-      <% end %>
-    </h4>
-    </div>
-    </div>
-    </div>
-    </div>
-
-<% end %>
-<!-- Go to www.addthis.com/dashboard to customize your tools -->
-<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-57bb682464651c22"></script>
+<span class="titulo-chico">Doctorados</span><br>
+		<ul class=" uk-list uk-list-space">
+    <% @doctorados.each do |doc| %>
+		  <li class="uk-link sin-pointer">Doctorado en en <%= doc.titulo %></li>
+		<% end %>
+    </ul>
+		<a href=<%= doctorados_path %> class="ver-mas uk-margin-large-bottom uk-button-small">Conoce más</a>
