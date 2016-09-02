@@ -6,6 +6,30 @@ class ProgramasAcademicosController < ApplicationController
   end
 
   def admisiones
+    @licenciaturas = Curso.where(:programa => "Licenciatura").order(:titulo)
+    @maestrias = Curso.where(:programa => "Maestría").order(:titulo)
+    @doctorados = Curso.where(:programa => "Doctorado").order(:titulo)
+  end
+
+  def programas
+    @licenciaturas = Curso.where(:programa => "Licenciatura").order(:titulo)
+    @maestrias = Curso.where(:programa => "Maestría").order(:titulo)
+    @doctorados = Curso.where(:programa => "Doctorado").order(:titulo)
+    respond_to do |format|
+      format.js
+    end
+  end
+
+  def convocatorias
+    respond_to do |format|
+      format.js
+    end
+  end
+
+  def proceso
+    respond_to do |format|
+      format.js
+    end
   end
 
   def calendario_escolar

@@ -1,20 +1,26 @@
 <%= render 'principal/barra' %>
-	<div class="container-fluid" id="resto-cuerpo">
-		<div class="principal-chica uk-block-large" id="cuerpo">
-		<span class="titulo-grande">Admisiones</span><br>
-		  <p>Para ser admitido como estudiante regular en alguno de los programas docentes ofrecidos por El Colegio de México, los aspirantes deben someterse a un proceso de selección,  cuyas características, términos y períodos son establecidos por la Junta de Profesores-Investigadores de cada Centro, órgano colegiado máximo del mismo. El proceso de admisión considera los siguientes aspectos: a) análisis del curriculum académico y antecedentes del candidato, entre los cuales deben encontrarse dos referencias personales (académicas), copia de los certificados de terminación y de titulación del nivel académico anterior; b) exámenes orales o escritos, c) entrevistas personales y, si es el caso, d) aprobar el curso propedéutico que se imparta.</p>
-		  <p>Una vez reunidos los resultados de las evaluaciones, la Junta de Profesores-Investigadores del Centro respectivo decide quiénes son admitidos como estudiantes regulares para cursar el programa; su decisión es inapelable y es comunicada a los candidatos vía el Coordinador Académico o el Director del Centro.</p>
-		  <p>Una vez aceptados, los estudiantes deben entregar en la Dirección de Asuntos Escolares los documentos que se señalen en cada caso, con objeto de integrar su expediente académico y realizar su inscripción.</p>
+<div class="container-fluid" id="resto-cuerpo">
+	<div id="cuerpo" class="principal-chica uk-block-large">
 
-   <a href="http://calendariocursos.colmex.mx/" target="_blank" class="ver-mas uk-margin-large-bottom uk-button-small">Consultar el Calendario de cursos</a>
-
-		  <h2 class="vino">Documentación:</h2>
-		  <ul class="uk-list uk-list-space uk-margin-large-bottom">
-		  <li><a href=<%= asset_path("nuevo-ingreso-licenciatura.pdf") %> target="_blank" class="uk-margin-large-bottom uk-link">Estudiantes de nuevo ingreso Licenciatura</a></li>
-		  <li><a href=<%= asset_path("nuevo-ingreso-posgrados-mexicanos.pdf") %> target="_blank" class="uk-margin-large-bottom uk-link">Estudiantes Mexicanos de nuevo ingreso a Maestrías y Doctorados</a></li>
-		  <li><a href=<%= asset_path("nuevo-ingreso-posgrados-extranjeros.pdf") %> target="_blank" class="uk-margin-large-bottom uk-link">Estudiantes Extranjeros de nuevo ingreso a Maestrías y Doctorados</a></li>
-		  </ul>
-
+	<div class="uk-width-1-1">
+    <div class="uk-grid uk-grid-medium">
+    <div class="uk-width-large-2-5 uk-text-center-small uk-text-center-medium uk-text-left" style="border-right: 2px solid #EEEEEE;">
+    <span class="titulo-grande">Admisiones</span><br>
+    <!--          Aquí empieza el menú pequeño          -->
+    <ul style="text-align:left;">
+    	<li style="list-style-type:none; margin-bottom:5px;"><%= link_to(image_tag('bt-flechita.png', :class => "leave_img") + image_tag("bt-flechita-hover.png", :class => "hover_img") + "Programas académicos", programas_path, :remote => true, :class => "link-sobre", :id => "asamblea-link") %></li>
+				<li style="list-style-type:none; margin-bottom:5px;"><%= link_to image_tag('bt-flechita.png', :class => "leave_img") + image_tag("bt-flechita-hover.png", :class => "hover_img") + "Convocatorias", convocatorias_path, :remote => true, :class => "link-sobre", :id => "junta-link" %></li>
+				<li style="list-style-type:none; margin-bottom:5px;"><%= link_to image_tag('bt-flechita.png', :class => "leave_img") + image_tag("bt-flechita-hover.png", :class => "hover_img") + "Proceso de admisión", proceso_path, :remote => true, :class => "link-sobre", :id => "presidencia-link" %></li>
+    </ul>
+    <!--          Aquí termina el menú pequeño          -->
+    </div>
+    <div class="uk-width-large-3-5">
+			<span class="titulo-grande morado" id="titulo-render"><%= "Programas académicos" %></span>
+			<div id="admisiones-render" style="padding-top: 15px;">
+				<%= render "programas_academicos/programas" %>
+			</div>
 		</div>
-
+		</div>
+	</div>
+	</div>
 <%= render 'principal/footer' %>
