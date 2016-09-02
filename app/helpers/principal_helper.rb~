@@ -28,6 +28,7 @@ module PrincipalHelper
       k = 1
 			if j >= sliders.each.length
 				break
+			end
       bloque_html = bloque_html + '<div class=' + (i==1 ? '"item active"' : '"item"') + '>' 
       bloque_opt_html = bloque_opt_html + '<div class=' + (i==1 ? '"item active"' : '"item"') + '>'
       while k % 5 != 0
