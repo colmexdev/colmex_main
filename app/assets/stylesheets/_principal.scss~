@@ -1687,6 +1687,10 @@ ul.ul-nav { display: table; float: left !important;
 	#video-colmex { padding: 30px 15px; >a img { width: 100%; } }
 }
 
+@media only screen and (max-width: 465px){
+	#video-colmex { height: auto; }
+}
+
 //Estilos que afectan a la sección de la frase
 #div_frase{
 	height: auto;
