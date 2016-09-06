@@ -1,7 +1,8 @@
-<div>
+
 <% @catedras.each do |cat| %>
+	<div>
 	<span class="titulo-chico"><%= cat.titulo %></span><br>
 	<p><%= cat.descripcion %></p>
 	<a href=<%= cat.liga %> class="ver-mas uk-margin-large-bottom uk-button-small">Más información</a>
+	</div>
 <% end %>
-</div>
