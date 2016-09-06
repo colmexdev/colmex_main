@@ -540,12 +540,12 @@ html, body{ height: 100%; }
 			.mostrable, .borrable { margin-top: 0; }
 		}
 		
-		@media only screen and (max-width: 1363px){
+		@media only screen and (max-width: 1375px){
 			.mostrable{ display: inline-block; }
 			.borrable{ display: none; }
 		}
 
-		@media only screen and (min-width: 1364px){
+		@media only screen and (min-width: 1376px){
 			.mostrable{ display: none; }
 		}
 	}
