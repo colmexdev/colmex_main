@@ -1,0 +1,7 @@
+<div>
+<% @seminarios.each do |sem| %>
+	<span class="titulo-chico"><%= sem.titulo %></span><br>
+	<p><%= sem.descripcion %></p>
+	<a href=<%= sem.liga %> class="ver-mas uk-margin-large-bottom uk-button-small">Más información</a>
+<% end %>
+</div>

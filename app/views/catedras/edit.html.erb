@@ -1,0 +1,10 @@
+<% if admin_signed_in? && (current_admin.admin == "Administrador" || current_admin.admin == "Editor") %>
+
+<h1>Editing Catedra</h1>
+
+<%= render 'form' %>
+
+<%= link_to 'Show', @catedra %> |
+<%= link_to 'Back', catedras_path %>
+
+<% end %>

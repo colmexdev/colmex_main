@@ -15,9 +15,9 @@ sp:
         op6: "Premios y distinciones"
         op7: "Licitaciones"
         op8: "Relación de bienes muebles e inmuebles"
-        op9: "Transparencia"
+        op9: "Servicios Generales"
     b2:
-      texto: "Centros de estudio"
+      texto: "Centros de Estudios"
       opciones:
         op1: "CEAA"
         op2: "CEDUA"

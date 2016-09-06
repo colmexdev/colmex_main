@@ -1,0 +1,6 @@
+<h1>Editing Catedra</h1>
+
+<%= render 'form' %>
+
+<%= link_to 'Show', @catedra %> |
+<%= link_to 'Back', catedras_path %>

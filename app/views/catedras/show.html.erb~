@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Titulo:</strong>
+  <%= @catedra.titulo %>
+</p>
+
+<p>
+  <strong>Descripcion:</strong>
+  <%= @catedra.descripcion %>
+</p>
+
+<p>
+  <strong>Liga:</strong>
+  <%= @catedra.liga %>
+</p>
+
+<p>
+  <strong>Tipo:</strong>
+  <%= @catedra.tipo %>
+</p>
+
+<%= link_to 'Edit', edit_catedra_path(@catedra) %> |
+<%= link_to 'Back', catedras_path %>

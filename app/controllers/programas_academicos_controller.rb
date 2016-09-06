@@ -64,4 +64,22 @@ class ProgramasAcademicosController < ApplicationController
       format.js
     end
   end
+
+  def catedras_y_seminarios
+    @catedras = Catedra.where("tipo = ?", "Cátedra")
+  end
+
+  def catedras
+    @catedras = Catedra.where("tipo = ?", "Cátedra")
+    respond_to do |format|
+      format.js
+    end
+  end
+
+  def seminarios
+    @seminarios = Catedra.where("tipo = ?", "Seminario")
+    respond_to do |format|
+      format.js
+    end
+  end
 end

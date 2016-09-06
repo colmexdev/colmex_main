@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :catedras
   resources :academicos
   resources :personals
   resources :premiados
@@ -55,6 +56,12 @@ Rails.application.routes.draw do
   get "programas_academicos/doctorados" => "programas_academicos#doctorados", :as => :doctorados
 
   get "programas_academicos/cursos" => "programas_academicos#cursos", :as => :cursos_varios
+
+  get 'programas_academicos/catedras_y_seminarios' => "programas_academicos#catedras_y_seminarios", :as => :catedras_seminarios
+
+  get "programas_academicos/catedras" => "programas_academicos#catedras", :as => :cats
+
+  get "programas_academicos/seminarios" => "programas_academicos#seminarios", :as => :seminarios
 
   get 'informacion_general/autoridades' => 'informacion_general#autoridades', :as => :autoridades
 
