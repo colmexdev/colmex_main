@@ -3,5 +3,6 @@
 	<span class="titulo-chico vino"><%= sem.titulo %></span><br>
 	<p><%= sem.descripcion %></p>
 	<a href=<%= sem.liga %> class="ver-mas uk-margin-large-bottom uk-button-small">Más información</a>
+	<div class="addthis_inline_share_toolbox" data-url=<%= sem.liga %> data-title="<%= sem.titulo %>" style="display:inline-block; float: right;"></div>
 	</div>
 <% end %>
