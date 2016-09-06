@@ -360,7 +360,7 @@ html, body{ height: 100%; }
 	}	
 
 	#idioma-top, #idioma-small-scroll{
-		width: 100px;
+		width: 120px;
 
 		>a{
 			height: inherit;
@@ -373,7 +373,7 @@ html, body{ height: 100%; }
 			transition: color 0.4s linear;
 		}
 
-    		>.activo{
+    >.activo{
 			color: #993366;
 			width: 100px / 2.5;
 			
@@ -442,7 +442,7 @@ html, body{ height: 100%; }
 			transition: color 0.4s linear;
 		}
 
-    		>.activo{
+    >.activo{
 			color: #993366;
 			width: 100px / 2.5;
 			

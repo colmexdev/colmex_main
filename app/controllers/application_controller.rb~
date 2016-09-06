@@ -9,6 +9,7 @@ class ApplicationController < ActionController::Base
 
   def set_locale
     I18n.locale = params[:locale] || I18n.default_locale
+    headers['Access-Control-Allow-Origin'] = 'http://s7.addthis.com/'
   end
 
   def default_url_options(options={})
