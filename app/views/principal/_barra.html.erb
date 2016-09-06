@@ -25,7 +25,7 @@
 						<li class="nav_opciones" id="logo-main"><a href=<%= root_path %>><%= image_tag("colmex.png") %></a></li>
 						<li class="nav_opciones mail"><a href="http://portal.office.com" target="_blank"><%= image_tag("mail.png") %><span class="borrable"><%= t('navbar.mail') %></span></a></li>
 						<li class="nav_opciones intranet"><a href="http://intranet.colmex.mx/" target="_blank"><%= image_tag("intranet.png") %><span class="borrable"><%= t('navbar.intranet') %></span></a></li>
-						<li class="nav_opciones idioma" id="idioma-small-scroll"><%= link_to "EN", {:controller => controller_name, :action => action_name, :locale => 'en', :condicion => (params[:condicion] if action_name == "resultados_busqueda")}, :class => clase_en + " en" , :id => 'idioma_en' %> | <%= link_to "ES", {:controller => controller_name, :action => action_name, :locale => 'sp', :condicion => (params[:condicion] if action_name == "resultados_busqueda")}, :class => clase_es + " sp" , :id=> 'idioma_sp' %></li>
+						<li class="nav_opciones idioma" id="idioma-small-scroll"><%= link_to "English", {:controller => controller_name, :action => action_name, :locale => 'en', :condicion => (params[:condicion] if action_name == "resultados_busqueda")}, :class => clase_en + " en" , :id => 'idioma_en' %> | <%= link_to "Español", {:controller => controller_name, :action => action_name, :locale => 'sp', :condicion => (params[:condicion] if action_name == "resultados_busqueda")}, :class => clase_es + " sp" , :id=> 'idioma_sp' %></li>
 						<li class="mostrable-chico"><a href="#menu" class="uk-navbar-toggle" data-uk-offcanvas></a></li>
 			    </ul>
 
