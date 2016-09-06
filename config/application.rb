@@ -25,5 +25,10 @@ module Prueba
     config.active_record.raise_in_transactional_callbacks = true
 
     config.assets.paths << "#{Rails.root}/vendor/assets/fonts"
+
+    config.action_dispatch.default_headers = {
+    'Access-Control-Allow-Origin' => 'http://s7.addthis.com/',
+    'Access-Control-Request-Method' => %w{GET POST OPTIONS}.join(",")
+  }
   end
 end
