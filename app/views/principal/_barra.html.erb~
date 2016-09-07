@@ -77,7 +77,7 @@
 				<li class="no-dropdown"><a href="http://libros.colmex.mx/" target="_blank"><span><%= "Publicaciones" %></span></a></li>
 				<li class="no-dropdown"><a href=" http://agenda.colmex.mx/Inicio" target="_blank"><span><%= t('botones.b5') %></span></a></li>
 
-						<li class="no-dropdown" id="dropdown-idioma">
+						<li class="no-dropdown" style="color:#993366;">
 							<%= link_to (params[:locale] == "sp" ? "English" : "Español"), {:controller => controller_name, :action => action_name, :locale => (params[:locale] == "en" ? "sp" : "en" ), :condicion => (params[:condicion] if action_name == "resultados_busqueda")}, :class => "activo" , :id => 'idioma_en' %>
 						</li>
 			</ul> <!-- Cierre del menú -->
