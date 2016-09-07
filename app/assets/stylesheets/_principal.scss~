@@ -550,7 +550,7 @@ html, body{ height: 100%; }
 		}
 	}
 
-	#idioma_en, #idioma_sp { font-size: 10px; }
+	#idioma_en, #idioma_sp { font-size: 15px; }
 
 }
 
