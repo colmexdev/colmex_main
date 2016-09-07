@@ -3,6 +3,7 @@ $(document).on("scroll", function(event) {
   var ancho_act = Math.max(document.documentElement.clientWidth, window.innerWidth || document.body.ClientWidth || 0);
   var alto_logo = document.getElementById("div_logo").clientHeight;
   if (y > 200 || barra_render) {
+		$("#forma-busqueda").css("display" : "none");
 		$("#div_logo").css({"display" : "none"});
 		$("#div_menu").css({"display" : "none"});
 		$(".reajustable").removeAttr("style");
@@ -55,27 +56,29 @@ $(document).on("scroll", function(event) {
 			$(".navbar-right").removeAttr("style");;
 			$("#header-links").css("display", "none");
 		}
-  } else {
-        barra_render = false;
-	$("#idioma-big-scroll").removeAttr("style");
-	$("#idioma-small-scroll").removeAttr("style");
-	$("#idioma-top").removeAttr("style");
-	$(".mail a").removeAttr("style");
-	$(".intranet a").removeAttr("style");
-	$("#boton-top").removeAttr("style");
-	$(".reajustable").removeAttr("style");
-	$(".uk-navbar-toggle").removeAttr("style");
-	$("#contenedor_nav").removeAttr("style");
-	$("#barra_nav").removeAttr("style");
-	$(".reajustable").removeAttr("style");
-	$("#logo-main").removeAttr("style");
-	$("#div_logo").removeAttr("style");
-	$("#div_menu").removeAttr("style");
-	$(".borrable").removeAttr("style");
-	$(".mail").removeAttr("style");
-	$(".intranet").removeAttr("style");
-	$(".navbar-right").removeAttr("style");
-	$("#header-links").removeAttr("style");
+  }
+	else{
+  	barra_render = false;
+		$("#forma-busqueda").removeAttr("style");
+		$("#idioma-big-scroll").removeAttr("style");
+		$("#idioma-small-scroll").removeAttr("style");
+		$("#idioma-top").removeAttr("style");
+		$(".mail a").removeAttr("style");
+		$(".intranet a").removeAttr("style");
+		$("#boton-top").removeAttr("style");
+		$(".reajustable").removeAttr("style");
+		$(".uk-navbar-toggle").removeAttr("style");
+		$("#contenedor_nav").removeAttr("style");
+		$("#barra_nav").removeAttr("style");
+		$(".reajustable").removeAttr("style");
+		$("#logo-main").removeAttr("style");
+		$("#div_logo").removeAttr("style");
+		$("#div_menu").removeAttr("style");
+		$(".borrable").removeAttr("style");
+		$(".mail").removeAttr("style");
+		$(".intranet").removeAttr("style");
+		$(".navbar-right").removeAttr("style");
+		$("#header-links").removeAttr("style");
   }
   ajustarCuerpo(y);
 });

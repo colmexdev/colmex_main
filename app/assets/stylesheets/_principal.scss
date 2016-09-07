@@ -562,6 +562,8 @@ html, body{ height: 100%; }
 	border-color: #909090;
 	color: #909090;
 	height: 24px;
+	position: relative;
+	top: -2px;
 	-webkit-transition: all 0.4s linear;
 	-moz-transition: all 0.4s linear;
 	-ms-transition: all 0.4s linear;
@@ -569,7 +571,7 @@ html, body{ height: 100%; }
 	transition: all 0.4s linear;
 }
 
-@media only screen and (max-device-width: 1024px){
+@media only screen and (max-width: 1024px){
 	#forma-control { margin-top: 13px; }
 }
 
@@ -586,7 +588,7 @@ html, body{ height: 100%; }
 	padding-left: 10px;
 }
 
-@media only screen and (max-device-width: 1024px){
+@media only screen and (max-width: 1024px){
 	.boton-lupa { margin-top: 13px; }
 }
 

@@ -40,7 +40,7 @@ $(document).on("scroll", function(event) {
 				$("#idioma-small-scroll").css("display","none");
 			}
 			else{
-				$("#idioma-small-scroll").removeAttr("style");
+				$("#idioma-small-scroll").css("display", "block");
 			}
 			$("#idioma-top").css("display","none");
 			$("#boton-top").css("display","block");

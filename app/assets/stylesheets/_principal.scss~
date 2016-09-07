@@ -550,7 +550,7 @@ html, body{ height: 100%; }
 		}
 	}
 
-	#idioma_en, #idioma_sp { font-size: 9px; }
+	#idioma_en, #idioma_sp { font-size: 10px; }
 
 }
 
@@ -569,7 +569,7 @@ html, body{ height: 100%; }
 	transition: all 0.4s linear;
 }
 
-@media only screen and (max-device-width: 1024px){
+@media only screen and (max-width: 1024px){
 	#forma-control { margin-top: 13px; }
 }
 
@@ -586,7 +586,7 @@ html, body{ height: 100%; }
 	padding-left: 10px;
 }
 
-@media only screen and (max-device-width: 1024px){
+@media only screen and (max-width: 1024px){
 	.boton-lupa { margin-top: 13px; }
 }
 
