@@ -9,8 +9,7 @@
 			<% clase_es = "activo" %>
 		<% end %>
 	<% else %>
-		<% clase_en = "inactivo" %>
-		<% clase_es = "activo" %>
+		<% params[:locale] = "sp" %>
 	<% end %>
 
 	<div class="row">
@@ -21,11 +20,11 @@
 			  <!-- Collect the nav links, forms, and other content for toggling -->
 			  <div class="navbar-collapse" id="barra_nav">
 			    <ul class="nav navbar-nav reajustable">
-						<li class="nav_opciones idioma" id="idioma-top"><%= link_to "English", {:controller => controller_name, :action => action_name, :locale => 'en', :condicion => (params[:condicion] if action_name == "resultados_busqueda")}, :class => clase_en + " en" , :id => 'idioma_en' %> | <%= link_to "Español", {:controller => controller_name, :action => action_name, :locale => 'sp', :condicion => (params[:condicion] if action_name == "resultados_busqueda")}, :class => clase_es + " sp" , :id=> 'idioma_sp' %></li>
+						<li class="nav_opciones idioma" id="idioma-top"><%= link_to (params[:locale] == "sp" ? "English" : "Español"), {:controller => controller_name, :action => action_name, :locale => (params[:locale == "en" ? "sp" : "en" ), :condicion => (params[:condicion] if action_name == "resultados_busqueda")}, :class => "activo" , :id => 'idioma_en' %></li>
 						<li class="nav_opciones" id="logo-main"><a href=<%= root_path %>><%= image_tag("colmex.png") %></a></li>
 						<li class="nav_opciones mail"><a href="http://portal.office.com" target="_blank"><%= image_tag("mail.png") %><span class="borrable"><%= t('navbar.mail') %></span></a></li>
 						<li class="nav_opciones intranet"><a href="http://intranet.colmex.mx/" target="_blank"><%= image_tag("intranet.png") %><span class="borrable"><%= t('navbar.intranet') %></span></a></li>
-						<li class="nav_opciones idioma" id="idioma-small-scroll"><%= link_to "English", {:controller => controller_name, :action => action_name, :locale => 'en', :condicion => (params[:condicion] if action_name == "resultados_busqueda")}, :class => clase_en + " en" , :id => 'idioma_en' %> | <%= link_to "Español", {:controller => controller_name, :action => action_name, :locale => 'sp', :condicion => (params[:condicion] if action_name == "resultados_busqueda")}, :class => clase_es + " sp" , :id=> 'idioma_sp' %></li>
+						<li class="nav_opciones idioma" id="idioma-small-scroll"><%= link_to (params[:locale] == "sp" ? "English" : "Español"), {:controller => controller_name, :action => action_name, :locale => (params[:locale == "en" ? "sp" : "en" ), :condicion => (params[:condicion] if action_name == "resultados_busqueda")}, :class => "activo" , :id => 'idioma_en' %></li>
 						<li class="mostrable-chico"><a href="#menu" class="uk-navbar-toggle" data-uk-offcanvas></a></li>
 			    </ul>
 
@@ -78,12 +77,8 @@
 				<li class="no-dropdown"><a href="http://libros.colmex.mx/" target="_blank"><span><%= "Publicaciones" %></span></a></li>
 				<li class="no-dropdown"><a href=" http://agenda.colmex.mx/Inicio" target="_blank"><span><%= t('botones.b5') %></span></a></li>
 
-						<li class="dropdown" id="dropdown-idioma">
-		      		<a class="dropdown-toggle" data-hover="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span><%= "Idioma" %></span></a>
-							<ul class="dropdown-menu">
-								<li><%= link_to "English", {:controller => controller_name, :action => action_name, :locale => 'en', :condicion => (params[:condicion] if action_name == "resultados_busqueda")}, :id => 'idioma_en' %></li>
-								<li><%= link_to "Español", {:controller => controller_name, :action => action_name, :locale => 'sp', :condicion => (params[:condicion] if action_name == "resultados_busqueda")}, :id=> 'idioma_sp' %></li>
-							</ul>
+						<li class="no-dropdown" id="dropdown-idioma">
+							<%= link_to (params[:locale] == "sp" ? "English" : "Español"), {:controller => controller_name, :action => action_name, :locale => (params[:locale == "en" ? "sp" : "en" ), :condicion => (params[:condicion] if action_name == "resultados_busqueda")}, :class => "activo" , :id => 'idioma_en' %>
 						</li>
 			</ul> <!-- Cierre del menú -->
 </div>
