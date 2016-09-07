@@ -3,7 +3,7 @@ $(document).on("scroll", function(event) {
   var ancho_act = Math.max(document.documentElement.clientWidth, window.innerWidth || document.body.ClientWidth || 0);
   var alto_logo = document.getElementById("div_logo").clientHeight;
   if (y > 200 || barra_render) {
-		$("#forma-busqueda").css("display" : "none");
+		$("#forma-busqueda").css("display", "none");
 		$("#div_logo").css({"display" : "none"});
 		$("#div_menu").css({"display" : "none"});
 		$(".reajustable").removeAttr("style");
