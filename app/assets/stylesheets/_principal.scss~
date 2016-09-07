@@ -562,6 +562,8 @@ html, body{ height: 100%; }
 	border-color: #909090;
 	color: #909090;
 	height: 24px;
+	position: relative;
+	top: -2px;
 	-webkit-transition: all 0.4s linear;
 	-moz-transition: all 0.4s linear;
 	-ms-transition: all 0.4s linear;
