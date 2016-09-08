@@ -210,7 +210,7 @@ function ajustarImagenes(){
 	var img_pnt = $("#img-pnt").removeAttr("style").width();
 	var img_cont = $("#img-cont").removeAttr("style").width();
 	var ancho_inai = $("#div-inai").innerWidth();
-	var ancho_portal = $("#div-portañ").innerWidth();
+	var ancho_portal = $("#div-portal").innerWidth();
 	var ancho_pnt = $("#div-pnt").innerWidth();
 	var ancho_cont = $("#div-cont").innerWidth();
 

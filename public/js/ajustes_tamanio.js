@@ -214,29 +214,29 @@ function ajustarImagenes(){
 	var ancho_pnt = $("#div-pnt").innerWidth();
 	var ancho_cont = $("#div-cont").innerWidth();
 
-	if(ancho_inai - 90 < img_inai){
-		$("#img-inai").css("width", (ancho_inai - 80) + "px");
+	if(ancho_inai - 10 < img_inai){
+		$("#img-inai").css("width", (ancho_inai - 8) + "px");
 	}
 	else{
 		$("#img-inai").removeAttr("style");
 	}
 
-	if(ancho_portal - 90 < img_transp){
-		$("#img-transp").css("width", (ancho_portal - 80) + "px");
+	if(ancho_portal - 10 < img_transp){
+		$("#img-transp").css("width", (ancho_portal - 8) + "px");
 	}
 	else{
 		$("#img-transp").removeAttr("style");
 	}
 
-	if(ancho_pnt - 90 < img_pnt){
-		$("#img-pnt").css("width", (ancho_pnt - 80) + "px");
+	if(ancho_pnt - 10 < img_pnt){
+		$("#img-pnt").css("width", (ancho_pnt - 8) + "px");
 	}
 	else{
 		$("#img-pnt").removeAttr("style");
 	}
 
-	if(ancho_cont - 90 < img_cont){
-		$("#img-cont").css("width", (ancho_cont - 80) + "px");
+	if(ancho_cont - 10 < img_cont){
+		$("#img-cont").css("width", (ancho_cont - 8) + "px");
 	}
 	else{
 		$("#img-cont").removeAttr("style");
