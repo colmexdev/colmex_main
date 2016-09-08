@@ -1713,9 +1713,9 @@ ul.ul-nav { display: table;
 		line-height: 1.3em;
 		vertical-align: bottom;
 		
-		span { position: relative; top: 15px; }
+		>span { position: relative; top: 15px; }
 	}
-	blockquote::before {
+	/*blockquote::before {
 			/*display: block;
 			content: '\201C';
 			font-family: Georgia, New Times Roman, serif;
@@ -1724,7 +1724,7 @@ ul.ul-nav { display: table;
 			position: relative;
 			text-align: left;
 			top: 40px;
-			right: 75px;*/
+			right: 75px;
 	}
 	blockquote::after {
 			/*display: block;
@@ -1734,8 +1734,8 @@ ul.ul-nav { display: table;
 			position: relative;
 			text-align:right;
 			bottom: 50px;
-			left: 55px;*/
-	}
+			left: 55px;
+	}*/
 }
 
 //Estilos que afectan a la sección de transparencia
