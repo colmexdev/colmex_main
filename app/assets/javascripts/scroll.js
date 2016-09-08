@@ -12,6 +12,7 @@ $(document).on("scroll", function(event) {
 		$(".reajustable").css("display","inline-block");
 		$("#logo-main").css({"display":"block","padding-left":""});
 		if(ancho_act > 1375){
+			$("#search-lat").css("display","none");
 			$("#idioma-big-scroll").css("display","block");
 			$("#idioma-small-scroll").removeAttr("style");
 			$("#idioma-top").css("display","none");
@@ -59,6 +60,12 @@ $(document).on("scroll", function(event) {
   }
 	else{
   	barra_render = false;
+		if(ancho_act >1375){
+			$("#search-lat").css("display","none");
+		}
+		else{
+			$("#search-lat").removeAttr("style");
+		}
 		$("#forma-busqueda").removeAttr("style");
 		$("#idioma-big-scroll").removeAttr("style");
 		$("#idioma-small-scroll").removeAttr("style");

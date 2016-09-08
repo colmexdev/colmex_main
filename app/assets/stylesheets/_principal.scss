@@ -480,9 +480,10 @@ html, body{ height: 100%; }
 		.navbar-nav.navbar-right { display: none; }
 
 		.navbar-form.navbar-left { margin: 0; display: inline-block; }
+	}
 
-		.form-group { display: none; }
-
+	@media only screen and (max-width: 900px){
+		#forma-busqueda { display: none; }
 		.boton_lupa { display: none; }
 	}
 
@@ -543,7 +544,6 @@ html, body{ height: 100%; }
 		@media only screen and (max-width: 1375px){
 			.mostrable{ display: inline-block; }
 			.borrable{ display: none; }
-			#forma-busqueda { display: none; }
 		}
 
 		@media only screen and (min-width: 1376px){
@@ -1188,7 +1188,7 @@ ul.ul-nav { display: table;
 }
 
 
-@media only screen and (min-width: 0px) and (max-width: 767px){
+@media only screen and (max-width: 767px){
 	#div_suscripcion{
 		height: 130px;
 		#forma_suscripcion{
