@@ -1737,7 +1737,8 @@ ul.ul-nav { display: table;
 //Estilos que afectan a la sección de transparencia
 #div_transparencia{
 	height: auto;
-	//background-color: #FFFFFF;
+	max-width: 1010px;
+	width: 100%;
 	text-align: center;
 
 	a {
