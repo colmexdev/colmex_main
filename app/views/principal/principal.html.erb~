@@ -165,17 +165,17 @@ https://youtu.be/8V1zBV2ABmg" data-uk-lightbox data-lightbox-type="video">
 
 	<div class="row"> <!-- Fila para transparencia -->
 		<div id="div_transparencia"> <!-- Columnas para transparencia-->
-				<div style="display:inline-block;width:30%;">
-				<%= link_to(image_tag('transp-izq.png'), "http://inicio.ifai.org.mx/SitePages/ifai.aspx", :target => "_blank") %>
+				<div style="display:inline-block;width:20%;float:left;">
+				<%= link_to(image_tag('transp-izq.png', :id => "img-inai"), "http://inicio.ifai.org.mx/SitePages/ifai.aspx", :target => "_blank") %>
 				</div>
-				<div style="display:inline-block;width:30%;">
-				<%= link_to(image_tag('pnt-logo.jpg'), "https://www.infomex.org.mx/gobiernofederal/home.action", :target => "_blank") %>
-				</div>
-				<div style="display:inline-block;width:30%;">
-				<%= link_to(image_tag('contraloria-social.png'), "http://www.sct.gob.mx/pet-sct/acerca-del-programa/contraloria-social/", :target => "_blank") %>
-				</div>
-				<div style="display:inline-block;width:100%;">
+				<div style="display:inline-block;width:40%;float:left;">
 				<%= link_to(image_tag('portal-obligaciones-transparencia.jpg', :id => "img-transp"), "http://portaltransparencia.gob.mx/buscador/search/search.do?method=begin&searchBy=0&idDependenciaZoom=11120", :target => "_blank") %>
+				</div>
+				<div style="display:inline-block;width:20%;float:left;">
+				<%= link_to(image_tag('pnt-logo.jpg', :id => "img-pnt"), "https://www.infomex.org.mx/gobiernofederal/home.action", :target => "_blank") %>
+				</div>
+				<div style="display:inline-block;width:20%;float:left;">
+				<%= link_to(image_tag('contraloria-social.png', :id => "img-cont"), "http://www.sct.gob.mx/pet-sct/acerca-del-programa/contraloria-social/", :target => "_blank") %>
 				</div>
 		</div> <!-- Cierre de columnas para transparencia -->
 	</div> <!-- Cierre de fila para transparencia -->

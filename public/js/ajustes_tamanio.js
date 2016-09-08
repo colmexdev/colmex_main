@@ -205,6 +205,42 @@ function ajustarImagenes(){
 	var img_pred = $("#img-pred-xs").removeAttr("style").width();
 	var img_rev = $("#img-rev-xs").removeAttr("style").width();
 	var img_oia = $("#img-oia").removeAttr("style").width();
+	var img_inai = $("#img-inai").removeAttr("style").width();
+	var img_transp = $("#img-transp").removeAttr("style").width();
+	var img_pnt = $("#img-pnt").removeAttr("style").width();
+	var img_cont = $("#img-cont").removeAttr("style").width();
+	var ancho_inai = $("#div-inai").innerWidth();
+	var ancho_portal = $("#div-portañ").innerWidth();
+	var ancho_pnt = $("#div-pnt").innerWidth();
+	var ancho_cont = $("#div-cont").innerWidth();
+
+	if(ancho_inai - 90 < img_inai){
+		$("#img-inai").css("width", (ancho_inai - 80) + "px");
+	}
+	else{
+		$("#img-inai").removeAttr("style");
+	}
+
+	if(ancho_portal - 90 < img_transp){
+		$("#img-transp").css("width", (ancho_portal - 80) + "px");
+	}
+	else{
+		$("#img-transp").removeAttr("style");
+	}
+
+	if(ancho_pnt - 90 < img_pnt){
+		$("#img-pnt").css("width", (ancho_pnt - 80) + "px");
+	}
+	else{
+		$("#img-pnt").removeAttr("style");
+	}
+
+	if(ancho_cont - 90 < img_cont){
+		$("#img-cont").css("width", (ancho_cont - 80) + "px");
+	}
+	else{
+		$("#img-cont").removeAttr("style");
+	}
 
 	if(ancho_izq - 90 < img_izq){
 		$("#img-pub").css("width", (ancho_izq - 80) +"px");
