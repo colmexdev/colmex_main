@@ -1704,14 +1704,16 @@ ul.ul-nav { display: table;
 	margin-top: 25px;
 
 	blockquote {
-				padding: 10px 20px;
-				margin: 35px auto 0 auto;
-				font-size: 25px;
-				border-left: none;
-				color: #717272;
-				width: 75%;
-				line-height: 1.3em;
-				vertical-align: bottom;
+		padding: 10px 20px;
+		margin: 35px auto 0 auto;
+		font-size: 25px;
+		border-left: none;
+		color: #717272;
+		width: 75%;
+		line-height: 1.3em;
+		vertical-align: bottom;
+		
+		span { position: relative; top: 15px; }
 	}
 	blockquote::before {
 			/*display: block;
@@ -1751,7 +1753,6 @@ ul.ul-nav { display: table;
 			display: inline-block; 
 			max-height: 100px;
 			max-width: 180px;
-			width:100%;
 			margin: 10px 20px 35px 20px;
 			-webkit-transition: all 0.4s linear;
 			-moz-transition: all 0.4s linear;
@@ -1771,11 +1772,11 @@ ul.ul-nav { display: table;
 
 @media only screen and (max-width: 768px){
 	#div_transparencia{
-		a>img { max-height: 100px; max-width: 130px; }
+		a>img { max-height: 100px; max-width: 130px;}
 	}
 }
 
-@media only screen and (min-width: 0px) and (max-width: 417px){
+@media only screen and (max-width: 417px){
 	#div_transparencia { line-height: 150px; }
 }
 
