@@ -1704,16 +1704,14 @@ ul.ul-nav { display: table;
 	margin-top: 25px;
 
 	blockquote {
-			span, strong{
 				padding: 10px 20px;
 				margin: 35px auto 0 auto;
 				font-size: 25px;
 				border-left: none;
 				color: #717272;
 				width: 75%;
-				line-height: 3.3em;
-				vertical-align: top;
-			}
+				line-height: 1.3em;
+				vertical-align: bottom;
 	}
 	blockquote::before {
 			/*display: block;
