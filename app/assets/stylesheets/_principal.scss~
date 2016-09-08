@@ -1761,6 +1761,11 @@ ul.ul-nav { display: table;
 			transition: all 0.4s linear;
 		}
 
+		#img-transp{
+			max-height: auto;
+			max-width: auto;
+		}
+
 		>img:hover { opacity: 0.7; } 
 	}
 }

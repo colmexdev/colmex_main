@@ -1762,8 +1762,8 @@ ul.ul-nav { display: table;
 		}
 
 		#img-transp{
-			max-height: auto;
-			max-width: auto;
+			max-height: none;
+			max-width: none;
 		}
 
 		>img:hover { opacity: 0.7; } 
