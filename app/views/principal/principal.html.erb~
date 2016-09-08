@@ -112,15 +112,15 @@
 http://libros.colmex.mx/", :target => "_blank") %></div>
 			<% end %>
 
-			<div class="col-xs-6 col-md-4 revista" id="col-ct">
+			<div class="col-xs-6 col-sm-4 revista" id="col-ct">
 				<%= link_to(image_tag('revistas-izq.png', :class => "rev-sm", :id => "img-rev-sm"), "http://revistas.colmex.mx/index.php", :target => "_blank") %>
 				<%= link_to(image_tag('revistas-izq.png', :class => "rev-xs", :id => "img-rev-xs"), "http://revistas.colmex.mx/index.php", :target => "_blank") %>
 			</div>
-			<div class="col-xs-6 col-md-4 revista" id="col-der">
+			<div class="col-xs-6 col-sm-4 revista" id="col-der">
 				<%= link_to(image_tag('revistas-centro.png', :class => "rev-sm", :id => "img-pred-sm"), "http://digital.colmex.mx/", :target => "_blank") %>
 				<%= link_to(image_tag('oia.png', :class => "rev-xs", :id => "img-pred-xs"), "http://digital.colmex.mx/", :target => "_blank") %>
 			</div>
-			<div class="col-xs-12 col-md-4 revista" id="col-oia">
+			<div class="col-xs-12 col-sm-4 revista" id="col-oia">
 				<%= link_to(image_tag('oia.png', :class => "rev-sm", :id => "img-oia"), "http://oia.colmex.mx/", :target => "_blank") %>				
 				<%= link_to(image_tag('revistas-centro.png', :class => "rev-xs", :id => "img-pred-xs"), "http://digital.colmex.mx/", :target => "_blank") %></div>
 		</div> <!-- Cierre de columnas para revistas -->
@@ -165,13 +165,13 @@ https://youtu.be/8V1zBV2ABmg" data-uk-lightbox data-lightbox-type="video">
 
 	<div class="row"> <!-- Fila para transparencia -->
 		<div id="div_transparencia"> <!-- Columnas para transparencia-->
-				<div style="display:inline-block;width:33.33%;">
+				<div style="display:inline-block;width:30%;">
 				<%= link_to(image_tag('transp-izq.png'), "http://inicio.ifai.org.mx/SitePages/ifai.aspx", :target => "_blank") %>
 				</div>
-				<div style="display:inline-block;width:33.33%;">
+				<div style="display:inline-block;width:30%;">
 				<%= link_to(image_tag('pnt-logo.jpg'), "https://www.infomex.org.mx/gobiernofederal/home.action", :target => "_blank") %>
 				</div>
-				<div style="display:inline-block;width:33.33%;">
+				<div style="display:inline-block;width:30%;">
 				<%= link_to(image_tag('contraloria-social.png'), "http://www.sct.gob.mx/pet-sct/acerca-del-programa/contraloria-social/", :target => "_blank") %>
 				</div>
 				<div style="display:inline-block;width:100%;">
