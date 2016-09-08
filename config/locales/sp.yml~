@@ -37,6 +37,7 @@ sp:
         op6: "Cursos"
         op7: "Calendario escolar"
         op8: "Convocatorias"
+        op9: "Cátedras y seminarios"
     b4: "Biblioteca"
     b5: "Agenda"
   eventos:

@@ -47,6 +47,8 @@ class PrincipalController < ApplicationController
   end
 
   def principios_eticos
- 
+  end
+
+  def sitemap
   end
 end
