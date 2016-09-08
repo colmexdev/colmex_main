@@ -106,17 +106,23 @@
 
 	<div class="row" id="wrapper-revista"> <!-- Fila para revistas -->
 		<div class="col-md-12" id="div_revistas"> <!-- Columnas para revistas -->
+
+			<% if false %>
 			<div class="col-xs-6 col-md-3 revista" id="col-izq"><%= link_to(image_tag('revistas-der.png', :id => "img-pub"), "
 http://libros.colmex.mx/", :target => "_blank") %></div>
-			<div class="col-xs-6 col-md-3 revista" id="col-ct">
+			<% end %>
+
+			<div class="col-xs-6 col-md-4 revista" id="col-ct">
 				<%= link_to(image_tag('revistas-izq.png', :class => "rev-sm", :id => "img-rev-sm"), "http://revistas.colmex.mx/index.php", :target => "_blank") %>
 				<%= link_to(image_tag('revistas-izq.png', :class => "rev-xs", :id => "img-rev-xs"), "http://revistas.colmex.mx/index.php", :target => "_blank") %>
 			</div>
-			<div class="col-xs-6 col-md-3 revista" id="col-der">
+			<div class="col-xs-6 col-md-4 revista" id="col-der">
 				<%= link_to(image_tag('revistas-centro.png', :class => "rev-sm", :id => "img-pred-sm"), "http://digital.colmex.mx/", :target => "_blank") %>
-				<%= link_to(image_tag('revistas-centro.png', :class => "rev-xs", :id => "img-pred-xs"), "http://digital.colmex.mx/", :target => "_blank") %>
+				<%= link_to(image_tag('oia.png', :class => "rev-xs", :id => "img-pred-xs"), "http://digital.colmex.mx/", :target => "_blank") %>
 			</div>
-			<div class="col-xs-6 col-md-3 revista" id="col-oia"><%= link_to(image_tag('oia.png', :id => "img-oia"), "http://oia.colmex.mx/", :target => "_blank") %></div>
+			<div class="col-xs-12 col-md-4 revista" id="col-oia">
+				<%= link_to(image_tag('oia.png', :class => "rev-sm", :id => "img-oia"), "http://oia.colmex.mx/", :target => "_blank") %>				
+				<%= link_to(image_tag('revistas-centro.png', :class => "rev-xs", :id => "img-pred-xs"), "http://digital.colmex.mx/", :target => "_blank") %></div>
 		</div> <!-- Cierre de columnas para revistas -->
 	</div> <!-- Cierre de fila para revistas -->
 
@@ -152,13 +158,13 @@ https://youtu.be/8V1zBV2ABmg" data-uk-lightbox data-lightbox-type="video">
 	<div class="row"> <!-- Fila para frase -->
 		<div class="col-md-12" id="div_frase"> <!-- Columnas para frase -->
 			<% if @frase.try(:cita) != nil %>
-					<blockquote><%=  @frase.try(:cita) %><br /><br/><strong><%= @frase.try(:autor) %></strong></blockquote>
+					<blockquote><%= image_tag('comilla-ini.png') %><%=  @frase.try(:cita) %><%= image_tag('comilla-fin.png') %><br /><br/><strong><%= @frase.try(:autor) %></strong></blockquote>
 			<% end %>
 		</div> <!-- Cierre de columnas para frase -->
 	</div> <!-- Cierre de fila para frase -->
 
 	<div class="row"> <!-- Fila para transparencia -->
-		<div class="col-xs-12" id="div_transparencia"> <!-- Columnas para transparencia-->
+		<div id="div_transparencia"> <!-- Columnas para transparencia-->
 				<%= link_to(image_tag('transp-izq.png'), "http://inicio.ifai.org.mx/SitePages/ifai.aspx", :target => "_blank") %>
 				<%= link_to(image_tag('pnt-logo.jpg'), "https://www.infomex.org.mx/gobiernofederal/home.action", :target => "_blank") %>
 				<%= link_to(image_tag('contraloria-social.png'), "http://www.sct.gob.mx/pet-sct/acerca-del-programa/contraloria-social/", :target => "_blank") %>

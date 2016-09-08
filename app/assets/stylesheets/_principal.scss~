@@ -1712,7 +1712,7 @@ ul.ul-nav { display: table;
 			line-height: 1.3em;
 	}
 	blockquote::before {
-			display: block;
+			/*display: block;
 			content: '\201C';
 			font-family: Georgia, New Times Roman, serif;
 			font-size: 120px;
@@ -1720,17 +1720,17 @@ ul.ul-nav { display: table;
 			position: relative;
 			text-align: left;
 			top: 40px;
-			right: 75px;
+			right: 75px;*/
 	}
 	blockquote::after {
-			display: block;
+			/*display: block;
 			content: '\201D';
 			font-family: Georgia, New Times Roman, serif;
 			font-size: 120px;
 			position: relative;
 			text-align:right;
 			bottom: 50px;
-			left: 55px;
+			left: 55px;*/
 	}
 }
 
@@ -1830,7 +1830,7 @@ ul.ul-nav { display: table;
 			max-width: 300px;
 		}
 
-		p{ text-align: center; margin: 15px 15px; font-size: 15px; }
+		p{ text-align: center; margin: 15px 15px; font-size: 14px; }
 	}
 
   @media only screen and (max-width: 1460px){

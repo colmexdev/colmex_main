@@ -1712,7 +1712,7 @@ ul.ul-nav { display: table;
 			line-height: 1.3em;
 	}
 	blockquote::before {
-			display: block;
+			/*display: block;
 			content: '\201C';
 			font-family: Georgia, New Times Roman, serif;
 			font-size: 120px;
@@ -1720,24 +1720,25 @@ ul.ul-nav { display: table;
 			position: relative;
 			text-align: left;
 			top: 40px;
-			right: 75px;
+			right: 75px;*/
 	}
 	blockquote::after {
-			display: block;
+			/*display: block;
 			content: '\201D';
 			font-family: Georgia, New Times Roman, serif;
 			font-size: 120px;
 			position: relative;
 			text-align:right;
 			bottom: 50px;
-			left: 55px;
+			left: 55px;*/
 	}
 }
 
 //Estilos que afectan a la sección de transparencia
 #div_transparencia{
 	height: auto;
-	//background-color: #FFFFFF;
+	max-width: 1010px;
+	width: 100%;
 	text-align: center;
 
 	a {
