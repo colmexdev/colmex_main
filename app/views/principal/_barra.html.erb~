@@ -217,7 +217,7 @@
 				<li class="uk-parent"><a href="http://libros.colmex.mx/" target="_blank"><%= "Publicaciones" %></a></li>
 				<li class="uk-parent"><a href=" http://agenda.colmex.mx/Inicio" target="_blank"><%= t('botones.b5') %></a></li>
 
-				<li class="links-side">
+				<li class="links-side" id="search-lat">
 						<form class="navbar-form navbar-left" id="forma-busqueda" method="get" action="/principal/resultados_busqueda">
 						<div role="search">
 						<%= hidden_field_tag :locale, I18n.locale || default_locale %>

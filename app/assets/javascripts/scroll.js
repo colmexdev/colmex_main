@@ -60,7 +60,7 @@ $(document).on("scroll", function(event) {
   }
 	else{
   	barra_render = false;
-		if(ancho_act >1375){
+		if(ancho_act <= 900){
 			$("#search-lat").css("display","none");
 		}
 		else{
