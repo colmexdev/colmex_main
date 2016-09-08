@@ -657,7 +657,7 @@ html, body{ height: 100%; }
 
 .nav>li { float: left; >a>img{ margin: 2px;} }
 
-ul.ul-nav { display: table; float: left !important;
+ul.ul-nav { display: table;
 
 	>li { display: table-cell; }
 }

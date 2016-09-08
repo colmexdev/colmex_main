@@ -216,7 +216,8 @@
 				<li class="uk-parent"><a href="http://biblioteca.colmex.mx/" target="_blank"><%= t('botones.b4') %></a></li>
 				<li class="uk-parent"><a href="http://libros.colmex.mx/" target="_blank"><%= "Publicaciones" %></a></li>
 				<li class="uk-parent"><a href=" http://agenda.colmex.mx/Inicio" target="_blank"><%= t('botones.b5') %></a></li>
-				<li class="links-side">
+
+				<li class="links-side" id="search-lat">
 						<form class="navbar-form navbar-left" id="forma-busqueda" method="get" action="/principal/resultados_busqueda">
 						<div role="search">
 						<%= hidden_field_tag :locale, I18n.locale || default_locale %>
@@ -229,7 +230,7 @@
 				</li>
 
 				<li class="links-side">
-					<ul class="ul-nav">
+					<ul class="ul-nav" style="width:183px;">
 						<li><%= link_to image_tag("fb-bco.png", :class => "img_net"), "https://www.facebook.com/elcolmex/", :target => "_blank" %></li>
 						<li><%= link_to image_tag("twitter-bco.png", :class => "img_net"), "
 https://twitter.com/ELCOLMEX", :target => "_blank" %></li>

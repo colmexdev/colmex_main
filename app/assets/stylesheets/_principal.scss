@@ -543,6 +543,7 @@ html, body{ height: 100%; }
 		@media only screen and (max-width: 1375px){
 			.mostrable{ display: inline-block; }
 			.borrable{ display: none; }
+			#forma-busqueda { display: none; }
 		}
 
 		@media only screen and (min-width: 1376px){

@@ -32,7 +32,7 @@ class PrincipalController < ApplicationController
   end
 
   def quitar_acentos(cadena)
-    if cadena.to_s== ""
+    if cadena.to_s == ""
       return ""
     end
     nueva_cad = cadena.gsub(/[áÁ]/, "a")
