@@ -1713,7 +1713,7 @@ ul.ul-nav { display: table;
 		line-height: 1.3em;
 		vertical-align: bottom;
 		
-		span { position: relative; top: 15px; }
+		>span { position: relative; top: 15px; }
 	}
 	/*blockquote::before {
 			/*display: block;
