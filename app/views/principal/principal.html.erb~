@@ -158,7 +158,7 @@ https://youtu.be/8V1zBV2ABmg" data-uk-lightbox data-lightbox-type="video">
 	<div class="row"> <!-- Fila para frase -->
 		<div class="col-md-12" id="div_frase"> <!-- Columnas para frase -->
 			<% if @frase.try(:cita) != nil %>
-					<blockquote><%= image_tag('comilla-ini.png') %><%=  @frase.try(:cita) %><%= image_tag('comilla-fin.png') %><br /><br/><strong><%= @frase.try(:autor) %></strong></blockquote>
+					<blockquote><%= image_tag('comilla-ini.png') %><span><%=  @frase.try(:cita) %></span><%= image_tag('comilla-fin.png') %><br/><br/><strong><%= @frase.try(:autor) %></strong></blockquote>
 			<% end %>
 		</div> <!-- Cierre de columnas para frase -->
 	</div> <!-- Cierre de fila para frase -->
