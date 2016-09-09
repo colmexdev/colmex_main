@@ -8,27 +8,6 @@ num_filas = 2;
 anchos_badges =[];
 barra_render = false;
 
-(function(doc) {
-
-	var addEvent = 'addEventListener',
-	    type = 'gesturestart',
-	    qsa = 'querySelectorAll',
-	    scales = [1, 1],
-	    meta = qsa in doc ? doc[qsa]('meta[name=viewport]') : [];
-
-	function fix() {
-		meta.content = 'width=device-width,minimum-scale=' + scales[0] + ',maximum-scale=' + scales[1];
-		doc.removeEventListener(type, fix, true);
-	}
-
-	if ((meta = meta[meta.length - 1]) && addEvent in doc) {
-		fix();
-		scales = [.25, 1.6];
-		doc[addEvent](type, fix, true);
-	}
-
-}(document));
-
 $(document).on('page:load', function(){ UIkit.init(); })
 
 $(document).ready(function(){
@@ -48,7 +27,7 @@ $(document).ready(function(){
 	$('.frame-descubre').css({'height':cw+'px'});
 
 	recabarAnchos();
-        agregarAnaliticos();
+  agregarAnaliticos();
 	escalarSlider();
 	setTimeout(function(){
 	partirDescubres();
@@ -218,35 +197,35 @@ function ajustarImagenes(){
 	var alto_pnt = $("#div-pnt").innerHeight();
 	var alto_cont = $("#div-cont").innerHeight();
 
-	var maximo_alt = Math.max(alto_inai, alto_portal, alto_pnt, alto_cont);
+	var maximo_alt = Math.ceil(Math.max(alto_inai, alto_portal, alto_pnt, alto_cont));
 	$("#div-inai").css({"height": maximo_alt + "px", "line-height": maximo_alt + "px"});
 	$("#div-portal").css({"height": maximo_alt + "px", "line-height": maximo_alt + "px"});
 	$("#div-pnt").css({"height": maximo_alt + "px", "line-height": maximo_alt + "px"});
 	$("#div-cont").css({"height": maximo_alt + "px", "line-height": maximo_alt + "px"});
 
 	if(ancho_inai - 30 < img_inai){
-		$("#img-inai").css("width", (ancho_inai - 28) + "px");
+		$("#img-inai").css("width", (ancho_inai - 25) + "px");
 	}
 	else{
 		$("#img-inai").removeAttr("style");
 	}
 
 	if(ancho_portal - 30 < img_transp){
-		$("#img-transp").css("width", (ancho_portal - 28) + "px");
+		$("#img-transp").css("width", (ancho_portal - 25) + "px");
 	}
 	else{
 		$("#img-transp").removeAttr("style");
 	}
 
 	if(ancho_pnt - 30 < img_pnt){
-		$("#img-pnt").css("width", (ancho_pnt - 28) + "px");
+		$("#img-pnt").css("width", (ancho_pnt - 25) + "px");
 	}
 	else{
 		$("#img-pnt").removeAttr("style");
 	}
 
 	if(ancho_cont - 30 < img_cont){
-		$("#img-cont").css("width", (ancho_cont - 28) + "px");
+		$("#img-cont").css("width", (ancho_cont - 25) + "px");
 	}
 	else{
 		$("#img-cont").removeAttr("style");
