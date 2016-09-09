@@ -213,6 +213,15 @@ function ajustarImagenes(){
 	var ancho_portal = $("#div-portal").innerWidth();
 	var ancho_pnt = $("#div-pnt").innerWidth();
 	var ancho_cont = $("#div-cont").innerWidth();
+	var alto_inai = $("#div-inai").innerHeight();
+	var alto_portal = $("#div-portal").innerHeight();
+	var alto_pnt = $("#div-pnt").innerHeight();
+	var alto_cont = $("#div-cont").innerHeight();
+
+	$("div-inai").css("height", Math.max(alto_inai, alto_portal, alto_pnt, alto_cont) + "px");
+	$("div-protal").css("height", Math.max(alto_inai, alto_portal, alto_pnt, alto_cont) + "px");
+	$("div-pnt").css("height", Math.max(alto_inai, alto_portal, alto_pnt, alto_cont) + "px");
+	$("div-cont").css("height", Math.max(alto_inai, alto_portal, alto_pnt, alto_cont) + "px");
 
 	if(ancho_inai - 30 < img_inai){
 		$("#img-inai").css("width", (ancho_inai - 28) + "px");

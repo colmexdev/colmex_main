@@ -1710,7 +1710,7 @@ ul.ul-nav { display: table;
 		border-left: none;
 		color: #717272;
 		width: 75%;
-		line-height: 1.3em;
+		line-height: 1.7em;
 		vertical-align: bottom;
 		
 		>span { position: relative; top: 15px; }
@@ -1745,6 +1745,7 @@ ul.ul-nav { display: table;
 	width: 100%;
 	text-align: center;
 	margin: 0 auto;
+	margin-top: 25px;
 
 	a {
 
