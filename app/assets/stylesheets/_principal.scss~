@@ -541,12 +541,12 @@ html, body{ height: 100%; }
 			.mostrable, .borrable { margin-top: 0; }
 		}
 		
-		@media only screen and (max-width: 1375px){
+		@media only screen and (max-width: 1275px){
 			.mostrable{ display: inline-block; }
 			.borrable{ display: none; }
 		}
 
-		@media only screen and (min-width: 1376px){
+		@media only screen and (min-width: 1276px){
 			.mostrable{ display: none; }
 		}
 	}
