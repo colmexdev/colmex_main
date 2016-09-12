@@ -20,4 +20,4 @@
 	#titular-cat { margin-right: auto; }
 }
 
-.submenu { list-style-type: none; }
+.submenu { list-style-type: none; margin-bottom: 45px; }

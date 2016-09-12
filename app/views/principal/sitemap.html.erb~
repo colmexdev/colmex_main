@@ -6,9 +6,9 @@
 	
 	<span class="titulo-grande"><%= t('footer.liga6') %></span>
 	<p>&nbsp;</p>
-			<ul class="botones"> <!-- Opciones del menú -->
+			<ul style="list-style-type:none;"> <!-- Opciones del menú -->
 				<li>
-		      <a class="uk-link"><span><%= t('botones.b1.texto') %></span></a>
+		      <a class="uk-link" style="color:#000;cursor:auto;"><span><%= t('botones.b1.texto') %></span></a>
 		        <ul class="submenu">
 							<li><a class="uk-link" href=<%= sobre_el_colegio_path %>><%= t('botones.b1.texto2') %></a></li>
 							<li><a class="uk-link" href=<%= historia_path %>><%= t('botones.b1.opciones.op3') %></a></li>
