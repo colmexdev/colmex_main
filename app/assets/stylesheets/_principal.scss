@@ -226,7 +226,7 @@ html, body{ height: 100%; }
 #header-links { 
 	display: none;
 	height: 100%;
-	width: 840px;
+	width: 830px;
 
 	.botones{
 		overflow: visible;
@@ -541,12 +541,12 @@ html, body{ height: 100%; }
 			.mostrable, .borrable { margin-top: 0; }
 		}
 		
-		@media only screen and (max-width: 1275px){
+		@media only screen and (max-width: 1205px){
 			.mostrable{ display: inline-block; }
 			.borrable{ display: none; }
 		}
 
-		@media only screen and (min-width: 1276px){
+		@media only screen and (min-width: 1206px){
 			.mostrable{ display: none; }
 		}
 	}

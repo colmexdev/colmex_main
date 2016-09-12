@@ -11,7 +11,7 @@ $(document).on("scroll", function(event) {
 		$("#barra_nav").css({"height":"100%","background-color":"#fff", "width":"90%","margin": "0 auto"});
 		$(".reajustable").css("display","inline-block");
 		$("#logo-main").css({"display":"block","padding-left":""});
-		if(ancho_act > 1375){
+		if(ancho_act > 1275){
 			$("#search-lat").css("display","none");
 			$("#idioma-big-scroll").css("display","block");
 			$("#idioma-small-scroll").removeAttr("style");
@@ -30,7 +30,7 @@ $(document).on("scroll", function(event) {
 			else{
 				$(".reajustable").removeAttr("style");
 			}
-			if(ancho_act > 1375){
+			if(ancho_act > 1275){
 			$("#idioma-big-scroll").css("display","block");
 				$("#idioma-small-scroll").removeAttr("style");
 			}
