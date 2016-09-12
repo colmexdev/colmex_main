@@ -52,6 +52,12 @@
 				<li><a class="uk-link" href="http://biblioteca.colmex.mx/" target="_blank"><span><%= t('botones.b4') %></span></a></li>
 				<li><a class="uk-link" href="http://libros.colmex.mx/" target="_blank"><span><%= "Publicaciones" %></span></a></li>
 				<li><a class="uk-link" href=" http://agenda.colmex.mx/Inicio" target="_blank"><span><%= t('botones.b5') %></span></a></li>
+
+
+					<li><a class="uk-link" href="http://portal.office.com" target="_blank"><%= t('footer.liga4') %></a></li>
+					<li><a class="uk-link" href="http://intranet.colmex.mx/" target="_blank">Intranet</a></li>
+					<li><a class="uk-link" href=<%= ubicacion_path %>><%= t('footer.liga5') %></a></li>
+					<li><a class="uk-link" href="#"><%= t('footer.liga2') %></a></li>
 			</ul> <!-- Cierre del menú -->
 	</div>
 
