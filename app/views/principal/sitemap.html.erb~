@@ -49,9 +49,9 @@
 		          <li><a class="uk-link" href=<%= calendario_path %>><%= t('botones.b3.opciones.op7') %></a></li>
 		        </ul>
 		    </li>
-				<li><a style="margin-bottom:45px;" class="uk-link" href="http://biblioteca.colmex.mx/" target="_blank"><span><%= t('botones.b4') %></span></a></li>
-				<li><a style="margin-bottom:45px;" class="uk-link" href="http://libros.colmex.mx/" target="_blank"><span><%= "Publicaciones" %></span></a></li>
-				<li><a style="margin-bottom:45px;" class="uk-link" href=" http://agenda.colmex.mx/Inicio" target="_blank"><span><%= t('botones.b5') %></span></a></li>
+				<li><a class="uk-link" href="http://biblioteca.colmex.mx/" target="_blank"><span><%= t('botones.b4') %></span></a></li>
+				<li><a class="uk-link" href="http://libros.colmex.mx/" target="_blank"><span><%= "Publicaciones" %></span></a></li>
+				<li><a class="uk-link" href=" http://agenda.colmex.mx/Inicio" target="_blank"><span><%= t('botones.b5') %></span></a></li>
 			</ul> <!-- Cierre del menú -->
 	</div>
 
