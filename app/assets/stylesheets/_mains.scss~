@@ -12,9 +12,12 @@
 	#titular-transp { margin-right: 155px; }
 }
 
-#col-menu { border-right: 2px solid #EEEEEE; margin-right: 50px; }
+#col-menu { border-right: 2px solid #EEEEEE;}
+#titular-cat { margin-right: 50px; }
 
 @media only screen and (max-width: 960px){
-	#col-menu { border-right: none; margin-right: auto; }
+	#col-menu { border-right: none; }
+	#titular-cat { margin-right: auto; }
 }
 
+.submenu { list-style-type: none; }
