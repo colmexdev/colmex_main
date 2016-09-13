@@ -119,8 +119,8 @@ http://libros.colmex.mx/", :target => "_blank") %></div>
 				<%= link_to(image_tag('revistas-centro.png', :class => "rev-xs", :id => "img-pred-xs"), "http://digital.colmex.mx/", :target => "_blank") %>
 			</div>
 			<div class="col-xs-6 col-md-3 revista" id="col-oia">
-				<%= link_to(image_tag('oia.png', :class => "rev-sm", :id => "img-oia"), "http://oia.colmex.mx/", :target => "_blank") %>				
-				<%= link_to(image_tag('oia.png', :class => "rev-xs", :id => "img-oia"), "http://digital.colmex.mx/", :target => "_blank") %></div>
+				<%= link_to(image_tag('oia.png' :id => "img-oia"), "http://oia.colmex.mx/", :target => "_blank") %>				
+			</div>
 		</div> <!-- Cierre de columnas para revistas -->
 	</div> <!-- Cierre de fila para revistas -->
 
