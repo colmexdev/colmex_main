@@ -72,7 +72,6 @@ $(window).on("resize",function(){
 
 
 	$(document).trigger("scroll");
-	ajustarCuerpo($(document).scrollTop());
 });
 
 
@@ -185,6 +184,12 @@ function ajustarImagenes(){
 	var img_pred = $("#img-pred-xs").removeAttr("style").width();
 	var img_rev = $("#img-rev-xs").removeAttr("style").width();
 	var img_oia = $("#img-oia").removeAttr("style").width();
+
+	var img_inai = $("#img-inai").height();
+	var img_transp = $("#img-transp").height();
+	var img_pnt = $("#img-pnt").height();
+	var img_cont = $("#img-cont").height();
+
 	var img_inai = $("#img-inai").removeAttr("style").width();
 	var img_transp = $("#img-transp").removeAttr("style").width();
 	var img_pnt = $("#img-pnt").removeAttr("style").width();

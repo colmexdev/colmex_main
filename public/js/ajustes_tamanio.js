@@ -184,6 +184,12 @@ function ajustarImagenes(){
 	var img_pred = $("#img-pred-xs").removeAttr("style").width();
 	var img_rev = $("#img-rev-xs").removeAttr("style").width();
 	var img_oia = $("#img-oia").removeAttr("style").width();
+
+	var alto_inai = $("#img-inai").height();
+	var alto_transp = $("#img-transp").height();
+	var alto_pnt = $("#img-pnt").height();
+	var alto_cont = $("#img-cont").height();
+
 	var img_inai = $("#img-inai").removeAttr("style").width();
 	var img_transp = $("#img-transp").removeAttr("style").width();
 	var img_pnt = $("#img-pnt").removeAttr("style").width();
@@ -192,10 +198,10 @@ function ajustarImagenes(){
 	var ancho_portal = $("#div-portal").innerWidth();
 	var ancho_pnt = $("#div-pnt").innerWidth();
 	var ancho_cont = $("#div-cont").innerWidth();
-	var alto_inai = $("#div-inai").innerHeight();
+/*	var alto_inai = $("#div-inai").innerHeight();
 	var alto_portal = $("#div-portal").innerHeight();
 	var alto_pnt = $("#div-pnt").innerHeight();
-	var alto_cont = $("#div-cont").innerHeight();
+	var alto_cont = $("#div-cont").innerHeight();*/
 
 	var maximo_alt = Math.ceil(Math.max(alto_inai, alto_portal, alto_pnt, alto_cont));
 	$("#div-inai").css({"height": maximo_alt + "px", "line-height": maximo_alt + "px"});
