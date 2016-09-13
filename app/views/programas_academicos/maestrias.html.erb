@@ -24,7 +24,7 @@
 			<% if mt.fecha_inicio_conv == mt.fecha_fin_conv %>
 				<%= l(mt.fecha_inicio_conv, format: :mes_anio ).capitalize %>
 			<% else %>
-				<%= "Abierta hasta " + l(mt.fecha_fin_conv, format: :long) %>
+				<%= "Abierta hasta " + l(mt.fecha_fin_conv, format: :normal) %>
 			<% end %>
 		</h4>
     <!-- Go to www.addthis.com/dashboard to customize your tools -->
