@@ -13,7 +13,9 @@
     <div class="uk-grid uk-grid-large">
     <div class="uk-width-large-3-5 uk-text-left">
     <p><%= doc.descripcion %></p>
-    <a href=<%= doc.liga %> target="_blank" class="ver-mas uk-margin-large-bottom uk-button-small">Más información</a>
+    <% if !doc.liga.nil? %>
+      <a href=<%= doc.liga %> target="_blank" class="ver-mas uk-margin-large-bottom uk-button-small">Más información</a>
+    <% end %>
     </div>
     <div class="uk-width-large-2-5">
     <h3 class="vino uk-margin-bottom-remove">Inicio de la promoción</h3>

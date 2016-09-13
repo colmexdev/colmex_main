@@ -21,7 +21,13 @@
     <h3 class="vino uk-margin-bottom-remove">Inicio de la promoción</h3>
     <h4 class="uk-margin-top-remove"><%= l(doc.fecha_inicio_clases, format: :mes_anio ).capitalize %></h4>
     <h3 class="vino uk-margin-bottom-remove">Próxima convocatoria</h3>
-    <h4 class="uk-margin-top-remove"><%= l(doc.fecha_inicio_conv, format: :mes_anio ).capitalize %></h4>
+    <h4 class="uk-margin-top-remove">
+			<% if doc.fecha_inicio_conv == doc.fecha_fin_conv %>
+				<%= l(doc.fecha_inicio_conv, format: :mes_anio ).capitalize %>
+			<% else %>
+				<%= "Abierta hasta " + l(doc.fecha_fin_conv, format: :long) %>
+			<% end %>
+		</h4>
     <!-- Go to www.addthis.com/dashboard to customize your tools -->
     <div class="addthis_inline_share_toolbox" data-url=<%= doc.liga %> data-title="<%= "Doctorado en " + doc.titulo %>"></div>
     </div>

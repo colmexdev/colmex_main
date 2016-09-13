@@ -12,7 +12,9 @@
     <div class="uk-grid uk-grid-large">
     <div class="uk-width-large-3-5 uk-text-left">
     <p><%= mt.descripcion %></p>
-    <a href=<%= mt.liga %> target="_blank" class="ver-mas uk-margin-large-bottom uk-button-small">Más información</a>
+    <% if !mt.liga.nil? %>
+      <a href=<%= mt.liga %> target="_blank" class="ver-mas uk-margin-large-bottom uk-button-small">Más información</a>
+    <% end %>
     </div>
     <div class="uk-width-large-2-5">
     <h3 class="vino uk-margin-bottom-remove">Inicio de la promoción</h3>
