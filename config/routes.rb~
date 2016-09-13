@@ -126,6 +126,8 @@ Rails.application.routes.draw do
     get "/acceder" => "devise/sessions#new"
   end
 
+  get "principal/sitemap" => "principal#sitemap", :as => :sitemap
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

@@ -52,4 +52,7 @@ class PrincipalController < ApplicationController
 
   def sitemap
   end
+
+  def aviso_de_privacidad
+  end
 end

@@ -128,6 +128,8 @@ Rails.application.routes.draw do
 
   get "principal/sitemap" => "principal#sitemap", :as => :sitemap
 
+  get 'principal/aviso_de_privacidad' => 'principal#aviso_de_privacidad', :as => :aviso
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
