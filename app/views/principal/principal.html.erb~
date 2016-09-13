@@ -107,22 +107,20 @@
 	<div class="row" id="wrapper-revista"> <!-- Fila para revistas -->
 		<div class="col-md-12" id="div_revistas"> <!-- Columnas para revistas -->
 
-			<% if false %>
 			<div class="col-xs-6 col-md-3 revista" id="col-izq"><%= link_to(image_tag('revistas-der.png', :id => "img-pub"), "
 http://libros.colmex.mx/", :target => "_blank") %></div>
-			<% end %>
 
-			<div class="col-xs-6 col-sm-4 revista" id="col-ct">
+			<div class="col-xs-6 col-md-3 revista" id="col-ct">
 				<%= link_to(image_tag('revistas-izq.png', :class => "rev-sm", :id => "img-rev-sm"), "http://revistas.colmex.mx/index.php", :target => "_blank") %>
 				<%= link_to(image_tag('revistas-izq.png', :class => "rev-xs", :id => "img-rev-xs"), "http://revistas.colmex.mx/index.php", :target => "_blank") %>
 			</div>
-			<div class="col-xs-6 col-sm-4 revista" id="col-der">
+			<div class="col-xs-6 col-md-3 revista" id="col-der">
 				<%= link_to(image_tag('revistas-centro.png', :class => "rev-sm", :id => "img-pred-sm"), "http://digital.colmex.mx/", :target => "_blank") %>
-				<%= link_to(image_tag('oia.png', :class => "rev-xs", :id => "img-pred-xs"), "http://digital.colmex.mx/", :target => "_blank") %>
+				<%= link_to(image_tag('revistas-centro.png', :class => "rev-xs", :id => "img-pred-xs"), "http://digital.colmex.mx/", :target => "_blank") %>
 			</div>
-			<div class="col-xs-12 col-sm-4 revista" id="col-oia">
+			<div class="col-xs-6 col-md-3 revista" id="col-oia">
 				<%= link_to(image_tag('oia.png', :class => "rev-sm", :id => "img-oia"), "http://oia.colmex.mx/", :target => "_blank") %>				
-				<%= link_to(image_tag('revistas-centro.png', :class => "rev-xs", :id => "img-pred-xs"), "http://digital.colmex.mx/", :target => "_blank") %></div>
+				<%= link_to(image_tag('oia.png', :class => "rev-xs", :id => "img-pred-xs"), "http://digital.colmex.mx/", :target => "_blank") %></div>
 		</div> <!-- Cierre de columnas para revistas -->
 	</div> <!-- Cierre de fila para revistas -->
 
@@ -136,7 +134,7 @@ http://libros.colmex.mx/", :target => "_blank") %></div>
 							<a href="http://www.fondocolmex.org.mx/" target="_blank" class="boton-donar"><span><%= t('donacion.boton_conoce') %></span></a>
 						</div>
 						<div class="boton" id="donar">
-							<a href="http://www.fondocolmex.org.mx/2009-2010.php" target="_blank" class="boton-donar"><span><%= t('donacion.boton_donar') %></span></a>
+							<a href="http://fundacioncolmex.org.mx/apoya" target="_blank" class="boton-donar"><span><%= t('donacion.boton_donar') %></span></a>
 						</div>
 					</div>
 				</div>
