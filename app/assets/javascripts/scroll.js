@@ -94,6 +94,10 @@ function ajustarCuerpo(scroll){
 	var alto_footer = document.getElementById('div_footer').clientHeight;
 	var alto_header = document.getElementById('header').clientHeight;
 	$('#resto-cuerpo').css({'padding-bottom': (alto_footer+1)+'px', 'padding-top': (alto_header-1.5+(scroll > 200 ? 170 : 0))+'px'});
+	setTimeout(function(){
+		var alto_f = document.getElementById('div_footer').clientHeight;
+		var alto_h = document.getElementById('header').clientHeight;
+	$('#resto-cuerpo').css({'padding-bottom': (alto_f+1)+'px', 'padding-top': (alto_h-1.5+(scroll > 200 ? 170 : 0))+'px'});}, 500);
 }
 
 function regresarArriba(){
