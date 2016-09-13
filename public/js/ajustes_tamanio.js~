@@ -186,7 +186,7 @@ function ajustarImagenes(){
 	var img_oia = $("#img-oia").removeAttr("style").width();
 
 	var alto_inai = $("#img-inai").height();
-	var alto_transp = $("#img-transp").height();
+	var alto_portal = $("#img-transp").height();
 	var alto_pnt = $("#img-pnt").height();
 	var alto_cont = $("#img-cont").height();
 

@@ -208,7 +208,7 @@ function ajustarImagenes(){
 	$("#div-portal").css({"height": maximo_alt + "px", "line-height": maximo_alt + "px"});
 	$("#div-pnt").css({"height": maximo_alt + "px", "line-height": maximo_alt + "px"});
 	$("#div-cont").css({"height": maximo_alt + "px", "line-height": maximo_alt + "px"});
-	$("#div_transparencia").css("height", "155px");
+	$("#div_transparencia").css("height", (maximo_alt + 10) + "px");
 
 	if(ancho_inai - 30 < img_inai){
 		$("#img-inai").css("width", Math.ceil(ancho_inai - 25) + "px");
