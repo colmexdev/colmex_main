@@ -72,7 +72,6 @@ $(window).on("resize",function(){
 
 
 	$(document).trigger("scroll");
-	ajustarCuerpo($(document).scrollTop());
 });
 
 
