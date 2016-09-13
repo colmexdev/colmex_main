@@ -783,7 +783,7 @@ ul.ul-nav { display: table;
 	}
 }
 
-@media only screen and (max-width: 1305px){
+@media only screen and (max-width: 1165px){
 	#div_menu{ display: none; height: 0; } 
 }
 
