@@ -21,6 +21,7 @@ class ProgramasAcademicosController < ApplicationController
   end
 
   def convocatorias
+		@convocatorias = Curso.where(:programa => "Convocatoria").order(:titulo)
     respond_to do |format|
       format.js
     end
