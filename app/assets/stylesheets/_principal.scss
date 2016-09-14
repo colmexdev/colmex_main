@@ -1339,7 +1339,9 @@ ul.ul-nav { display: table;
 		.frame-descubre{
 			float: left;
 			display: inline-block;
-			width: 20%;
+			width: -webkit-calc(20% - 8px);
+			width: -moz-calc(20% - 8px);
+			width: calc(20% - 8px);
 			background-color: #fff;
 			position: relative;
 			font-style: normal;

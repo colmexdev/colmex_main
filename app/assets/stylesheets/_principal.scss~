@@ -1840,7 +1840,7 @@ ul.ul-nav { display: table;
 		font-size: 13px;
 
 		#img_footer{
-			width: 30%;
+			width: 25%;
 			max-width: 300px;
 		}
 		
