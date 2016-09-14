@@ -8,8 +8,8 @@
     <div class="uk-container-center uk-block"><%= image_tag("75-encabezado.jpg") %></div>
     <div class="uk-grid uk-grid-medium">
     <div class="uk-width-large-3-10 uk-width-medium-3-10 uk-width-small-2-5 uk-text-left">
-    <%= image_tag("75aniversario-2.png") %><br>
-    <h6 class="uk-text-break">Edificio de El Colegio de México en la Plaza Río de Janeiro, Colonia Roma</h6>
+    <%= image_tag("daniel-cosio-villegas.jpg") %><br>
+    <h6 class="uk-text-break">Daniel Cosío Villegas</h6>
     </div>
     <div class="uk-width-large-7-10 uk-width-medium-7-10 uk-width-small-3-5">
     <p>El 8 de octubre de 1940, el patronato de La Casa de España se reunió para elaborar "las bases constitutivas y estatutos" que darían nacimiento legal a El Colegio de México. Ocho días después, el 16 de octubre, después de ser leída se firmaba formalmente el acta constitutiva que regiría la vida jurídica de la nueva institución, cuando su antecesora La Casa de España, creada en 1938 por iniciativa del Presidente Lázaro Cárdenas para acoger temporalmente a destacados científicos, académicos y artistas amenazados por la Guerra Civil y luego por el franquismo, se transformó en una institución de altos estudios. Desde entonces, durante siete decenios y medio, con el apoyo presupuestario del Estado y proyectos con fundaciones mexicanas e internacionales, el Colegio ha mantenido ininterrumpidamente sus labores, convirtiéndose en uno de los centros de investigación y docencia más destacadas en el mundo hispánico, por lo cual ha recibido numerosos reconocimientos. En 2001, el Colegio fue galardonado con el Premio Príncipe de Asturias en Ciencias Sociales, por la excelencia y prestigio adquiridos a lo largo de los años.</p>
@@ -24,8 +24,8 @@
 <p>&nbsp;</p>
     </div>
     <div class="uk-width-large-2-10 uk-width-medium-2-10 uk-width-small-2-6  uk-text-left">
-    <%= image_tag("75aniversario-3.png") %><br>
-    <h6 class="uk-text-break">Edificio de El Colegio de México en la Plaza Río de Janeiro, Colonia Roma</h6>
+    <%= image_tag("alfonso-reyes.jpg") %><br>
+    <h6 class="uk-text-break">Alfonso Reyes</h6>
     </div>
     <div class="uk-width-large-3-10 uk-width-medium-3-10 uk-width-small-2-5  uk-text-left">
     <%= image_tag("75aniversario-4.png") %><br>
