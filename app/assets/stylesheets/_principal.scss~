@@ -1844,7 +1844,7 @@ ul.ul-nav { display: table;
 		}
 		
 		#img_cc{
-			width: 10%;
+			width: 12%;
 			max-width: 200px;
 		}
 
