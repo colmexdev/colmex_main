@@ -64,6 +64,10 @@
     <%= f.select(:tipo_curso_linea, options_for_select([['MOOC','MOOC'],['Breve','Breve']],  @curso.tipo_curso_linea || ''), {}, {}) %>
   </div>
   <div class="field">
+    <%= f.label :imparte %><br>
+    <%= f.text_field :imparte %>
+  </div>
+  <div class="field">
     <%= f.label :tags %><br>
     <%= f.text_area :tags %>
   </div>
