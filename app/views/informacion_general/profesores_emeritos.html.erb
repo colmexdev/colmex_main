@@ -12,7 +12,7 @@
     <h3 class="vino"><%= prof.nombre %></h3>
     <h4><%= convierteCentros(prof.centro) %></h4>
     <p><strong>Fecha de nombramiento: </strong><%= l(prof.fecha_anexion, :format => :normal) %></p>
-    <p><%= prof.semblanza.to_s == "" ? "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sit amet vestibulum lectus. Phasellus non interdum leo. Proin scelerisque sed lorem a tempor. Donec varius turpis pulvinar blandit lobortis. Sed congue placerat augue, at aliquam lectus semper ac. Pellentesque lectus justo, tristique nec feugiat nec, tincidunt sed neque. In suscipit nulla ac enim porta venenatis." : prof.semblanza  %></p>
+    <p><%= prof.semblanza.to_s == "" ? "" : prof.semblanza.html_safe  %></p>
     </div>
     </div>
 	<% end %>

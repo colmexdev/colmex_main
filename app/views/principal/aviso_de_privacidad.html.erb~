@@ -55,8 +55,8 @@ El presente Aviso de Privacidad, así como el manejo en general de la Ley que ha
 <p>La fecha de la última actualización al presente aviso de privacidad: 14/09/2016 </p>
 
 <div>
-	<ul>
-		<li><a class=uk-link" href=<%= root_path %>>Página principal</a></li>
+	<ul style="list-style-type:none;">
+		<li><a class="uk-link" href=<%= root_path %>>Página principal</a></li>
 		<li><a class="uk-link" href="http://agenda.colmex.mx" target="_blank">Agenda de eventos</a></li>
 	</ul>
 </div>
