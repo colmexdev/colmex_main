@@ -15,7 +15,7 @@
 			</div>
 			<div class="col-xs-12 col-md-8" id="footer_centro">
 				<%= image_tag("colmex-pie.png", :id => "img_footer") %><br>
-				<%= image_tag("creative-commons.png", :id => "img_cc") %><br>
+				<%= link_to(image_tag("creative-commons.png", :id => "img_cc"), "https://creativecommons.org/licenses/by-nc-nd/4.0/") %><br>
 				<p>Derechos reservados, El Colegio de México A.C. © <%= Date.current().year %><br>
 	Camino al Ajusco No. 20 Colonia Pedregal de Santa Teresa C.P. 10740 México, Ciudad de México<br>
 	Tel.: +52 55 54493000</p>
