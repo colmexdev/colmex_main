@@ -79,7 +79,7 @@
 				<% end %>
 				<li class="no-dropdown"><a href=" http://agenda.colmex.mx/Inicio" target="_blank"><span><%= t('botones.b5') %></span></a></li>
 
-						<li class="no-dropdown" style="border-left:2px solid #CCCCCC;"><a href="http://web.colmex.mx/<%= controller_name %>/<%= action_name %>?locale=<%= (params[:locale] == 'en' ? 'sp' : 'en') + (action_name == 'resultados_busqueda' ? 'condicion=' + params[:condicion] : '' ) %>"><span style="color:#993366;"><%= (params[:locale] == "sp" ? "English" : "Español") %></span></a></li>
+						<li class="no-dropdown"><a href="http://web.colmex.mx/<%= controller_name %>/<%= action_name %>?locale=<%= (params[:locale] == 'en' ? 'sp' : 'en') + (action_name == 'resultados_busqueda' ? 'condicion=' + params[:condicion] : '' ) %>"><span style="color:#993366;"><%= (params[:locale] == "sp" ? "English" : "Español") %></span></a></li>
 			</ul> <!-- Cierre del menú -->
 </div>
 

@@ -128,6 +128,8 @@ Rails.application.routes.draw do
 
   get "principal/sitemap" => "principal#sitemap", :as => :sitemap
 
+  get 'principal/proximamente' => 'principal#proximamente', :as => :soon
+
   get 'principal/aviso_de_privacidad' => 'principal#aviso_de_privacidad', :as => :aviso
 
 

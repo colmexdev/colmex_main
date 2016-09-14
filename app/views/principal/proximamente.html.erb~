@@ -1,0 +1,10 @@
+<%= render 'principal/barra' %>
+	<div id="resto-cuerpo" class="container-fluid">
+
+		<div id="cuerpo" class="uk-block-large principal-chica">
+			<div style="margin:0 auto;margin-top:55px;">
+				<%= image_tag("coming-soon.png") %>
+			</div>
+		</div>
+
+<%= render 'principal/footer' %>

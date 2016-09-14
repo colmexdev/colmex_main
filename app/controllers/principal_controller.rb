@@ -55,4 +55,7 @@ class PrincipalController < ApplicationController
 
   def aviso_de_privacidad
   end
+
+  def proximamente
+  end
 end
