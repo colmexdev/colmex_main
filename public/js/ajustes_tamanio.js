@@ -13,7 +13,7 @@ $(document).on('page:load', function(){ UIkit.init(); })
 $(document).ready(function(){
 	UIkit.init();
 
-	var cw = $('.frame-descubre').width();
+	var cw = $('.frame-descubre').width() - 8;
 
 	if(gon.ev_tiny == ""){
 		$("#div_eventos").css("height","0");
@@ -112,7 +112,7 @@ function partirDescubres(){
 	var alto_d;
 	for( var i = 0; i < descubres.length; i++){
 		if(descubres[i]["visible"]){
-			alto_d = document.getElementById("frame-"+i).clientHeight;
+			alto_d = document.getElementById("frame-"+i).innerHeight;
 			break;
 		}
 	}
@@ -147,7 +147,7 @@ function desbordarDescubres(){
 	var alto_d; 
 	for( var i = 0; i < descubres.length; i++){
 		if(descubres[i]["visible"]){
-			alto_d = document.getElementById("frame-"+i).clientHeight;
+			alto_d = document.getElementById("frame-"+i).innerHeight;
 			break;
 		}
 	}
