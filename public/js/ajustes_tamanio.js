@@ -31,7 +31,7 @@ $(document).ready(function(){
 	escalarSlider();
 	setTimeout(function(){
 	partirDescubres();
-	margenAuto();}, 850);
+	margenAuto();}, 1050);
 	ajustarImagenes();
 
 $(window).on("resize",function(){
@@ -61,7 +61,7 @@ $(window).on("resize",function(){
 	escalarSlider();
 	setTimeout(function(){
 	partirDescubres();
-	margenAuto();}, 850);
+	margenAuto();}, 1050);
 	ajustarImagenes();
 	if($(".uk-modal").css("display") =="block"){
 		escalarLightbox();

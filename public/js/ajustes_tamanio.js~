@@ -199,7 +199,7 @@ function ajustarImagenes(){
 	var ancho_pnt = $("#div-pnt").innerWidth();
 	var ancho_cont = $("#div-cont").innerWidth();
 
-	var maximo_alt = Math.ceil(Math.max(alto_inai, alto_portal, alto_pnt, alto_cont));
+	var maximo_alt = Math.ceil(Math.max(alto_inai, alto_portal, alto_pnt, alto_cont, 145));
 	$("#div-inai").css({"height": maximo_alt + "px", "line-height": maximo_alt + "px"});
 	$("#div-portal").css({"height": maximo_alt + "px", "line-height": maximo_alt + "px"});
 	$("#div-pnt").css({"height": maximo_alt + "px", "line-height": maximo_alt + "px"});
