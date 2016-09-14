@@ -48,5 +48,18 @@
 <p>Como titular de datos personales, usted podrá ejercer los Derechos ARCO (acceso, cancelación, rectificación y oposición al tratamiento de datos personales), o bien, revocar el consentimiento que usted haya otorgado a El Colegio de México y Agenda Colmex para el tratamiento de sus datos personales, enviando su solicitud, directamente a la oficina de Comunicación Digital de la Secretaría Académica, a través de la cuenta de correo electrónico <a class="uk-link" href="mailto:comunicacion@colmex.mx">comunicacion@colmex.mx</a>; acudiendo directamente a la oficina de Comunicación Digital de la Secretaría Académica; o bien, solicitándolo por escrito, enviando al domicilio ubicado en: Camino al Ajusco No. 20, Colonia Pedregal de Santa Teresa, Delegación Tlalpan, C.P. 10740, Ciudad de México.</p>
 
 <p>Dicha solicitud deberá contener, por lo menos, su nombre, domicilio completo y documentos que acrediten su identidad, especificando en forma clara y precisa los datos personales de los que solicita su acceso, rectificación, actualización o cancelación, indicando las razones por las cuales desea acceder a sus datos personales o las razones por las que considera que sus datos deben ser actualizados, rectificados o cancelados.</p>
+
+<p>
+El presente Aviso de Privacidad, así como el manejo en general de la Ley que haga El Colegio de México, se rige por la legislación vigente y aplicable en los Estados Unidos Mexicanos, cualquier controversia que se suscite con motivo de su aplicación deberá ventilarse ante los Órganos Jurisdiccionales competentes en la Ciudad de México.</p>
+ 
+<p>La fecha de la última actualización al presente aviso de privacidad: 14/09/2016 </p>
+
+<div>
+	<ul>
+		<li><a class=uk-link" href=<%= root_path %>>Página principal</a></li>
+		<li><a class="uk-link" href="http://agenda.colmex.mx" target="_blank">Agenda de eventos</a></li>
+	</ul>
+</div>
+
 	</div>
 <%= render 'principal/footer' %>
