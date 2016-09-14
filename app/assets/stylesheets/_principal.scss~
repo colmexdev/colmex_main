@@ -1740,7 +1740,7 @@ ul.ul-nav { display: table;
 
 //Estilos que afectan a la sección de transparencia
 #div_transparencia{
-	height: 170px;
+	height: auto;
 	max-width: 1010px;
 	width: 100%;
 	overflow: hidden;
@@ -1838,8 +1838,13 @@ ul.ul-nav { display: table;
 		color: #fff;
 		font-size: 13px;
 
-		img{
-			width: 40%;
+		#img_footer{
+			width: 35%;
+			max-width: 300px;
+		}
+		
+		#img_cc{
+			width: 50%;
 			max-width: 300px;
 		}
 
