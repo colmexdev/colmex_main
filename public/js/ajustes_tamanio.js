@@ -198,17 +198,13 @@ function ajustarImagenes(){
 	var ancho_portal = $("#div-portal").innerWidth();
 	var ancho_pnt = $("#div-pnt").innerWidth();
 	var ancho_cont = $("#div-cont").innerWidth();
-/*	var alto_inai = $("#div-inai").innerHeight();
-	var alto_portal = $("#div-portal").innerHeight();
-	var alto_pnt = $("#div-pnt").innerHeight();
-	var alto_cont = $("#div-cont").innerHeight();*/
 
 	var maximo_alt = Math.ceil(Math.max(alto_inai, alto_portal, alto_pnt, alto_cont));
 	$("#div-inai").css({"height": maximo_alt + "px", "line-height": maximo_alt + "px"});
 	$("#div-portal").css({"height": maximo_alt + "px", "line-height": maximo_alt + "px"});
 	$("#div-pnt").css({"height": maximo_alt + "px", "line-height": maximo_alt + "px"});
 	$("#div-cont").css({"height": maximo_alt + "px", "line-height": maximo_alt + "px"});
-	$("#div_transparencia").css("height", (maximo_alt + 10) + "px");
+	$("#div_transparencia").css("height", (maximo_alt + 40) + "px");
 
 	if(ancho_inai - 30 < img_inai){
 		$("#img-inai").css("width", Math.ceil(ancho_inai - 25) + "px");
