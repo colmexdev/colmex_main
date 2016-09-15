@@ -653,7 +653,7 @@ html, body{ height: 100%; }
  	.uk-parent:hover, .uk-parent:focus{
 		background-color: #CCCCCC;
 
-		>li >a { color: #fff; }
+		>a { color: #fff; }
 	}
 
 
