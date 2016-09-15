@@ -49,7 +49,7 @@ class ProgramasAcademicosController < ApplicationController
   end
 
   def cursos
-    @presenciales = Curso.where("programa = ? AND tipo_curso = ?", "Curso", "Presencial")
+    @electornicos = Curso.where("programa = ? AND tipo_curso = ?", "Curso", "En línea")
   end
 
   def presenciales
