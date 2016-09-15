@@ -51,12 +51,6 @@ class InformacionGeneralController < ApplicationController
   def transparencia
   end
 
-  def transp
-    respond_to do |format|
-      format.js
-    end
-  end
-
   def licitaciones
     respond_to do |format|
       format.js
