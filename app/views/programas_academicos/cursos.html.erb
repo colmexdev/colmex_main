@@ -10,13 +10,13 @@
     <div class="uk-width-large-1-5 uk-text-center-small uk-text-center-medium uk-text-left" style="border-right:2px solid #EEEEEE;">
     <!--          Aquí empieza el menú pequeño          -->
     <ul style="text-align:left;">
-      <li style="list-style-type:none; margin-bottom:5px;"><%= link_to(image_tag('bt-flechita.png', :class => "leave_img") + image_tag("bt-flechita-hover.png", :class => "hover_img") + "Presenciales", presenciales_path, :remote => true, :class => "link-sobre", :id => "presencial-link") %></li>
       <li style="list-style-type:none; margin-bottom:5px;"><%= link_to image_tag('bt-flechita.png', :class => "leave_img") + image_tag("bt-flechita-hover.png", :class => "hover_img") + "En línea", electronicos_path, :remote => true, :class => "link-sobre", :id => "electronico-link" %></li>
+      <li style="list-style-type:none; margin-bottom:5px;"><%= link_to(image_tag('bt-flechita.png', :class => "leave_img") + image_tag("bt-flechita-hover.png", :class => "hover_img") + "Públicos", presenciales_path, :remote => true, :class => "link-sobre", :id => "presencial-link") %></li>
     </ul>
     </div>
 
     <div class="uk-width-large-4-5">
-    <span class="titulo-chico morado" id="titulo-render">Cursos Presenciales</span><br>
+    <span class="titulo-chico morado" id="titulo-render">Cursos en línea</span><br>
 
     <div id="cursos-render">
     	<%= render 'programas_academicos/presenciales' %>
