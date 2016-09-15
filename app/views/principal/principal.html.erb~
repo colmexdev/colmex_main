@@ -58,98 +58,11 @@
 
 	<div class="row"> <!-- Fila para formulario de suscripción -->
 		<div class="col-md-12" id="div_suscripcion"> <!-- Columnas para formulario de suscripción -->
-			<script language="Javascript" type="text/javascript">
 
-
-function checkform()
-{
-  for (i=0;i<fieldstocheck.length;i++) {
-    if (eval("document.subscribeform.elements['"+fieldstocheck[i]+"'].type") == "checkbox") {
-      if (document.subscribeform.elements[fieldstocheck[i]].checked) {
-      } else {
-        alert("Por favor, ingrese su "+fieldnames[i]);
-        eval("document.subscribeform.elements['"+fieldstocheck[i]+"'].focus()");
-
-        return false;
-      }
-    } else {
-      if (eval("document.subscribeform.elements['"+fieldstocheck[i]+"'].value") == "") {
-        alert("Por favor, ingrese su "+fieldnames[i]);
-        eval("document.subscribeform.elements['"+fieldstocheck[i]+"'].focus()");
-
-        return false;
-      }
-    }
-  }
-  for (i=0;i<groupstocheck.length;i++) {
-    if (!checkGroup(groupstocheck[i],groupnames[i])) {
-      return false;
-    }
-  }
-  
-  if (! compareEmail()) {
-    alert("Email addresses you entered do not match");
-
-    return false;
-  }
-  if (! checkEmail()) {
-    alert("Email address is not valid");
-
-    return false;
-  }
-
-  return true;
-}
-
-var fieldstocheck = new Array();
-var fieldnames = new Array();
-function addFieldToCheck(value,name)
-{
-  fieldstocheck[fieldstocheck.length] = value;
-  fieldnames[fieldnames.length] = name;
-}
-var groupstocheck = new Array();
-var groupnames = new Array();
-function addGroupToCheck(value,name)
-{
-  groupstocheck[groupstocheck.length] = value;
-  groupnames[groupnames.length] = name;
-}
-
-function compareEmail()
-{
-  return (document.subscribeform.elements["email"].value == document.subscribeform.elements["emailconfirm"].value);
-}
-
-function checkEmail()
-{
-  var re = /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    return re.test(document.subscribeform.elements["email"].value);
-}
-
-function checkGroup(name,value)
-{
-  option = -1;
-  for (i=0;i<document.subscribeform.elements[name].length;i++) {
-    if (document.subscribeform.elements[name][i].checked) {
-      option = i;
-    }
-  }
-  if (option == -1) {
-    alert ("Por favor, ingrese su "+value);
-
-    return false;
-  }
-
-  return true;
-}
-
-
-			</script>
 			<form class="navbar-form navbar-left" id="forma_suscripcion" method="post" action="http://listas.colmex.mx/?p=subscribe" name="subscribeform" target="windowName" onsubmit="window.open('', this.target,
 'dialog,modal,scrollbars=no,resizable=no,width=550,height=300,left=0,top=0');">
 		    <div class="form-group">
-					<input type="hidden" name="list[2]" value="signup">
+					<input type="hidden" name="list[2]" value="signup" checked>
 					<input type="hidden" name="listname[2]" value="Agenda Colmex">
 					<div style="display:none;">
 					<input type="checkbox" name="textemail" value="1">
@@ -159,7 +72,7 @@ function checkGroup(name,value)
 					<label for="text-suscripcion"><%= t('suscripcion.texto') %></label>
 		      <%= '<input type="text" accept-charset="UTF-8" id="text-suscripcion" name="email" class="form-control" oninput="llenaConfirmacion(this.value);" placeholder='.html_safe + t('suscripcion.placeholder') + ">".html_safe %>
 		    </div>
-				<button type="submit" name="subscribe" value="Subscribe to the selected newsletters" class="btn btn-default" onclick="><span><%= t('suscripcion.boton') %></span></button>
+				<button type="submit" name="subscribe" value="Subscribe to the selected newsletters" class="btn btn-default"><span><%= t('suscripcion.boton') %></span></button>
 			</form>
 		</div> <!-- Cierre de columnas para formulario de suscripción -->
 	</div> <!-- Cierre de fila para formulario de suscripción -->
