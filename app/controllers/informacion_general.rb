@@ -10,6 +10,7 @@ class InformacionGeneralController < ApplicationController
 
   def documentacion_institucional
     @actas = Documento.where(:tipo => "Junta")
+ 		@estatutos = Documento.where(:tipo => "Estatuto").first
   end
 
   def actas
