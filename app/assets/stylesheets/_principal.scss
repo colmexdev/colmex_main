@@ -606,9 +606,14 @@ html, body{ height: 100%; }
 		margin-bottom: 5px;
 		
 		>a{
-			color: #f0f0f0;
+			color: #4E4E4E;
 			font-size: 18px;
 			font-weight: bold;
+			-webkit-transition: all 0.5s linear;
+			-moz-transition: all 0.5s linear;
+			-ms-transition: all 0.5s linear;
+			-o-transition: all 0.5s linear;
+			transition: all 0.5s linear;
 		}
 
 		.uk-nav-sub{
