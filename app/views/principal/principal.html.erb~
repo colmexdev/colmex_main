@@ -59,16 +59,16 @@
 	<div class="row"> <!-- Fila para formulario de suscripción -->
 		<div class="col-md-12" id="div_suscripcion"> <!-- Columnas para formulario de suscripción -->
 
-			<form class="navbar-form navbar-left" id="forma_suscripcion" method="post" action="http://listas.colmex.mx/?p=subscribe" name="subscribeform" target="windowName" onsubmit="window.open('', this.target,
+			<form class="navbar-form navbar-left" id="forma_suscripcion" method="post" action="http://listas.colmex.mx/?p=subscribe&id=2" name="subscribeform" target="windowName" onsubmit="window.open('', this.target,
 'dialog,modal,scrollbars=no,resizable=no,width=550,height=300,left=0,top=0');">
 		    <div class="form-group">
 					<div style="display:none;">
 					<input type="checkbox" name="textemail" value="1">
 					<input type="text" name="VerificationCodeX" value size="20">
 					</div>
-					<input type="hidden" accept-charset="UTF-8" name="emailconfirm" value="" id="mailconf">
+					<input type="hidden" name="emailconfirm" value="" id="mailconf">
 					<label for="text-suscripcion"><%= t('suscripcion.texto') %></label>
-		      <%= '<input type="text" accept-charset="UTF-8" id="text-suscripcion" name="email" class="form-control" oninput="llenaConfirmacion(this.value);" placeholder='.html_safe + t('suscripcion.placeholder') + ">".html_safe %>
+		      <%= '<input type="text" id="text-suscripcion" name="email" class="form-control" oninput="llenaConfirmacion(this.value);" placeholder='.html_safe + t('suscripcion.placeholder') + ">".html_safe %>
 		    </div>
 					<input type="hidden" name="list[2]" value="signup">
 					<input type="hidden" name="listname[2]" value="Agenda Colmex">
