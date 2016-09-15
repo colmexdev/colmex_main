@@ -1,79 +1,12 @@
-<p>Los cursos impartidos en los programas académicos pueden ser consultados en el siguiente enlace: </p>
-    <a href="http://calendariocursos.colmex.mx/" target="_blank" class="ver-mas uk-margin-large-bottom uk-button-small">Calendario cursos</a>
-    <p>Además El Colegio de México imparte cursos abiertos para público en general, lo cuáles se enlistan a continuación:</p>
+<p>Para ser admitido como estudiante regular en alguno de los programas docentes ofrecidos por El Colegio de México, los aspirantes deben someterse a un proceso de selección,  cuyas características, términos y períodos son establecidos por la Junta de Profesores-Investigadores de cada Centro, órgano colegiado máximo del mismo. El proceso de admisión considera los siguientes aspectos: a) análisis del curriculum académico y antecedentes del candidato, entre los cuales deben encontrarse dos referencias personales (académicas), copia de los certificados de terminación y de titulación del nivel académico anterior; b) exámenes orales o escritos, c) entrevistas personales y, si es el caso, d) aprobar el curso propedéutico que se imparta.</p>
+		  <p>Una vez reunidos los resultados de las evaluaciones, la Junta de Profesores-Investigadores del Centro respectivo decide quiénes son admitidos como estudiantes regulares para cursar el programa; su decisión es inapelable y es comunicada a los candidatos vía el Coordinador Académico o el Director del Centro.</p>
+		  <p>Una vez aceptados, los estudiantes deben entregar en la Dirección de Asuntos Escolares los documentos que se señalen en cada caso, con objeto de integrar su expediente académico y realizar su inscripción.</p>
 
-<% @presenciales.each do |p| %>
+   <a href="http://calendariocursos.colmex.mx/" target="_blank" class="ver-mas uk-margin-small-bottom uk-button-small">Consultar el Calendario de cursos</a>
 
-    <div class="uk-grid uk-grid-medium uk-margin-large-bottom">
-    <div class="uk-width-1-5 uk-text-center">
-    <img src=<%= p.foto.url %> class="uk-border-rounded" alt="Foto curso">
-    </div>
-    <div class="uk-width-4-5 uk-vertical-align-middle uk-text-left uk-text-break">
-    <h2 class="vino"><%= p.titulo %></h2>
-    <div class="uk-grid uk-grid-large">
-    <div class="uk-width-large-4-6 uk-text-left">
-    <p><%= p.descripcion %></p>
-    <% if p.imparte.to_s != "" %>
-      <p class="uk-text-left">Impartido por <%= p.imparte %></p>
-    <% end %>
-    <% if !p.liga.nil? %>
-    <a href=<%= p.liga %> target="_blank" class="ver-mas uk-margin-large-bottom uk-button-small">Más información</a>
-    <!-- Go to www.addthis.com/dashboard to customize your tools -->
-    <div style="display:inline-block;float:right;" class="addthis_inline_share_toolbox" data-url=<%= p.liga %> data-title="<%= p.titulo %>"></div>
-    <% end %>
-    </div>
-    <div class="uk-width-large-2-6">
-
-    <h3 class="vino uk-margin-bottom-remove">
-    <% if !p.fecha_inicio_clases.nil? %>
-      <% if p.fecha_fin_clases.nil? %>
-        <%= "Inicio de clases:" %>
-      <% else %>
-        <%= "Duración:" %>
-      <% end %>
-    <% end %>
-    </h3>
-
-    <h4 class="uk-margin-top-remove">
-      <% if !p.fecha_inicio_clases.nil? %>
-        <%= (p.fecha_inicio_clases.day.to_s + " de " + num2Month(p.fecha_inicio_clases.month - 1)) || "" %>
-        <% if p.fecha_fin_clases.nil? %>
-          <%= (" de " + p.fecha_inicio_clases.year.to_s) || "" %>
-        <% else %>
-          <% if p.fecha_fin_clases.year != p.fecha_inicio_clases.year %>
-            <%= (" de " + p.fecha_inicio_clases.year.to_s + " al " + p.fecha_fin_clases.day.to_s + " de " + num2Month(p.fecha_fin_clases.month - 1) + " de " + p.fecha_fin_clases.year.to_s ) || "" %>
-          <% else %>
-            <%= (" al " + p.fecha_fin_clases.day.to_s + " de " + num2Month(p.fecha_fin_clases.month - 1) + " de " + p.fecha_fin_clases.year.to_s ) || "" %>
-          <% end %>
-        <% end %>
-      <% end %>
-    </h4>
-
-    <h3 class="vino uk-margin-bottom-remove">
-      <% if !p.fecha_inicio_conv.nil? and !p.fecha_fin_conv.nil? %>
-        <%= "Próxima convocatoria" %>
-      <% end %>
-    </h3>
-
-    <h4 class="uk-margin-top-remove">
-      <% if !p.fecha_inicio_conv.nil? %>
-        <%= (p.fecha_inicio_conv.day.to_s + " de " + num2Month(p.fecha_inicio_conv.month - 1)) || "" %>
-        <% if p.fecha_fin_conv.nil? %>
-          <%= (" de " + p.fecha_inicio_conv.year.to_s) || "" %>
-        <% else %>
-          <% if p.fecha_fin_conv.year != p.fecha_inicio_conv.year %>
-            <%= (" de " + p.fecha_inicio_conv.year.to_s + " al " + p.fecha_fin_conv.day.to_s + " de " + num2Month(p.fecha_fin_conv.month - 1) + " de " + p.fecha_fin_conv.year.to_s ) || "" %>
-          <% else %>
-            <%= (" al " + p.fecha_fin_conv.day.to_s + " de " + num2Month(p.fecha_fin_conv.month - 1) + " de " + p.fecha_fin_conv.year.to_s ) || "" %>
-          <% end %>
-        <% end %>
-      <% end %>
-    </h4>
-    </div>
-    </div>
-    </div>
-    </div>
-
-<% end %>
-<!-- Go to www.addthis.com/dashboard to customize your tools -->
-<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-57bb682464651c22"></script>
+		  <h2 class="vino">Documentación:</h2>
+		  <ul class="uk-list uk-list-space uk-margin-large-bottom">
+		  <li><a href=<%= asset_path("nuevo-ingreso-licenciatura.pdf") %> target="_blank" class="uk-margin-large-bottom uk-link">Estudiantes de nuevo ingreso Licenciatura</a></li>
+		  <li><a href=<%= asset_path("nuevo-ingreso-posgrados-mexicanos.pdf") %> target="_blank" class="uk-margin-large-bottom uk-link">Estudiantes Mexicanos de nuevo ingreso a Maestrías y Doctorados</a></li>
+		  <li><a href=<%= asset_path("nuevo-ingreso-posgrados-extranjeros.pdf") %> target="_blank" class="uk-margin-large-bottom uk-link">Estudiantes Extranjeros de nuevo ingreso a Maestrías y Doctorados</a></li>
+		  </ul>
