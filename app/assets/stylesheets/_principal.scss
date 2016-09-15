@@ -626,10 +626,18 @@ html, body{ height: 100%; }
 				-o-transition: all 0.3s linear;
 				transition: all 0.3s linear;
 
-				>a { padding: 0 30px; color: #EEEEEE; }
+				>a { 
+					padding: 0 30px; 
+					color: #EEEEEE; 
+					-webkit-transition: all 0.3s linear;
+					-moz-transition: all 0.3s linear;
+					-ms-transition: all 0.3s linear;
+					-o-transition: all 0.3s linear;
+					transition: all 0.3s linear;
+				}
 			}
 
-			>li:hover { 
+			>li:hover, >li:focus { 
 				background-color: #4E4E4E;
 				>a { color: #fff; }
 

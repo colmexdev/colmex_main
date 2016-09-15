@@ -1870,9 +1870,9 @@ ul.ul-nav { display: table;
 		}
 
 		@media only screen and (min-width: 992px){
-			#img_footer { width: 200px; }
+			#img_footer { width: 250px; }
 
-			#img_cc { width: 100px; }
+			#img_cc { width: 120px; }
 		}
 
 		p{ text-align: center; margin: 15px 15px; font-size: 13px; margin-top: 5px; }
