@@ -3,7 +3,7 @@
 <div id="resto-cuerpo" class="container-fluid">
 	<div id="cuerpo" class="uk-block-large principal-chica">
 
-<span class="titulo-grande">Política de privacidad</span>
+<span class="titulo-grande">Aviso de privacidad</span>
 <p>&nbsp;</p>
 <p>El Colegio de México con domicilio ubicado en: Camino al Ajusco No. 20, Colonia Pedregal de Santa Teresa, Delegación Tlalpan, C.P. 10740, Ciudad de México, en cumplimiento a la Ley Federal de Protección de Datos Personales en Posesión de Particulares y su reglamento, hacen de su conocimiento que:</p>
 
@@ -11,7 +11,7 @@
 <p>&nbsp;</p>
 <p><span class="titulo-chico vino">¿Qué información recopilamos?</span></p>
 
-<p>Los datos personales que usted proporcione a El Colegio de México, a través de este sitio web (<a class="uk-link" href=<%= root_path %>>www.colmex.mx</a>), y Agenda Colmex a través de (<a class="uk-link" href="http://agenda.colmex.mx">agenda.colmex.mx</a>), es a partir de la suscripción al sistema de envío masivos de correo electrónico, envío de sugerencias, comentarios y dudas vía Agenda Colmex, los cuales pueden incluir sus datos personales y de localización.</p>
+<p>Los datos personales que usted proporcione a El Colegio de México, a través de este sitio web (<a class="uk-link" href=<%= root_path %>>www.colmex.mx</a>), y Agenda Colmex a través de (<a class="uk-link" href="http://agenda.colmex.mx" target="_blank">agenda.colmex.mx</a>), es a partir de la suscripción al sistema de envío masivos de correo electrónico, envío de sugerencias, comentarios y dudas vía Agenda Colmex, los cuales pueden incluir sus datos personales y de localización.</p>
 
 <p>Usted manifiesta su consentimiento para el tratamiento de sus datos personales de acuerdo a los términos y condiciones de este Aviso de Privacidad.</p>
 <p>&nbsp;</p>
