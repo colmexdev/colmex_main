@@ -3,7 +3,7 @@
 	<div>
 	<span class="titulo-chico vino"><%= cat.titulo %></span><br>
 	<p><%= cat.descripcion.html_safe %></p>
-	<a href=<%= cat.liga %> class="ver-mas uk-margin-large-bottom uk-button-small">Más información</a>
+	<a href=<%= cat.liga %> target="_blank" class="ver-mas uk-margin-large-bottom uk-button-small">Más información</a>
 	<div class="addthis_inline_share_toolbox" data-url=<%= cat.liga %> data-title="<%= cat.titulo %>" style="display:inline-block; float: right;"></div>
 	</div>
 <% end %>
