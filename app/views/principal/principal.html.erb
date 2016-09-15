@@ -159,7 +159,7 @@ function checkGroup(name,value)
 					<label for="text-suscripcion"><%= t('suscripcion.texto') %></label>
 		      <%= '<input type="text" accept-charset="UTF-8" id="text-suscripcion" name="email" class="form-control" oninput="llenaConfirmacion(this.value);" placeholder='.html_safe + t('suscripcion.placeholder') + ">".html_safe %>
 		    </div>
-				<button type="submit" name="subscribe" value="Subscribe to the selected newsletters" class="btn btn-default" onclick="><span><%= t('suscripcion.boton') %></span></button>
+				<button type="submit" name="subscribe" value="Subscribe to the selected newsletters" class="btn btn-default" onclick="return checkform();"><span><%= t('suscripcion.boton') %></span></button>
 			</form>
 		</div> <!-- Cierre de columnas para formulario de suscripción -->
 	</div> <!-- Cierre de fila para formulario de suscripción -->
