@@ -57,7 +57,7 @@
 					<li><a class="uk-link" href="http://portal.office.com" target="_blank"><%= t('footer.liga4') %></a></li>
 					<li><a class="uk-link" href="http://intranet.colmex.mx/" target="_blank">Intranet</a></li>
 					<li><a class="uk-link" href=<%= ubicacion_path %>><%= t('footer.liga5') %></a></li>
-					<li><a class="uk-link" href="#"><%= t('footer.liga2') %></a></li>
+					<li><a class="uk-link" href=<%= aviso_path %>><%= t('footer.liga2') %></a></li>
 			</ul> <!-- Cierre del menú -->
 	</div>
 
