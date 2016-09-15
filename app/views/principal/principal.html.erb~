@@ -63,7 +63,7 @@
 'dialog,modal,scrollbars=no,resizable=no,width=550,height=300,left=0,top=0');">
 		    <div class="form-group">
 					<input type="hidden" name="list[2]" value="signup">
-					<input type="hidden" name="listname[2]" value="newsletter">
+					<input type="hidden" name="listname[2]" value="Agenda Colmex">
 					<input type="hidden" name="htmlemail" value="1" checked>
 					<input type="hidden" accept-charset="UTF-8" name="emailconfirm" value="" id="mailconf">
 					<label for="text-suscripcion"><%= t('suscripcion.texto') %></label>
@@ -119,7 +119,7 @@ http://libros.colmex.mx/", :target => "_blank") %></div>
 				<%= link_to(image_tag('revistas-centro.png', :class => "rev-xs", :id => "img-pred-xs"), "http://digital.colmex.mx/", :target => "_blank") %>
 			</div>
 			<div class="col-xs-6 col-md-3 revista" id="col-oia">
-				<%= link_to(image_tag('oia.png' :id => "img-oia"), "http://oia.colmex.mx/", :target => "_blank") %>				
+				<%= link_to(image_tag('oia.png', :id => "img-oia"), "http://oia.colmex.mx/", :target => "_blank") %>				
 			</div>
 		</div> <!-- Cierre de columnas para revistas -->
 	</div> <!-- Cierre de fila para revistas -->
