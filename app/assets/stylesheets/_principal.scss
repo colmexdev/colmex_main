@@ -1863,10 +1863,16 @@ ul.ul-nav { display: table;
 		}
 		
 		#img_cc{
-			margin-top: 5px;
+			margin-top: 10px;
 			width: 12%;
 			max-width: 200px;
 			margin-bottom: 10px;
+		}
+
+		@media only screen and (min-width: 992px){
+			#img_footer { width: 300px; }
+
+			#img_cc { width: 200px; }
 		}
 
 		p{ text-align: center; margin: 15px 15px; font-size: 13px; margin-top: 5px; }
