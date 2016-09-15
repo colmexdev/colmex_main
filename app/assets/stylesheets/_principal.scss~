@@ -1872,7 +1872,7 @@ ul.ul-nav { display: table;
 		@media only screen and (min-width: 992px){
 			#img_footer { width: 300px; }
 
-			#img_cc { width: 200px; }
+			#img_cc { width: 100px; }
 		}
 
 		p{ text-align: center; margin: 15px 15px; font-size: 13px; margin-top: 5px; }
