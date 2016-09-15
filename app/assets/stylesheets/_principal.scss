@@ -645,7 +645,7 @@ html, body{ height: 100%; }
 		}
 	}
 
- 	.uk-parent:hover{
+ 	.uk-parent:hover, .uk-parent:focus{
 		background-color: #4E4E4E;
 
 		>li >a { color: #fff; }
