@@ -5,51 +5,43 @@
 
 <span class="titulo-grande">Aviso de privacidad</span>
 <p>&nbsp;</p>
-<p>El Colegio de México con domicilio ubicado en: Camino al Ajusco No. 20, Colonia Pedregal de Santa Teresa, Delegación Tlalpan, C.P. 10740, Ciudad de México, en cumplimiento a la Ley Federal de Protección de Datos Personales en Posesión de Particulares y su reglamento, hacen de su conocimiento que:</p>
+<p>El Colegio de México, con domicilio en Camino al Ajusco número 20, Colonia Pedregal de Santa Teresa, Tlalpan, C.P. 10740, Ciudad de México, en cumplimiento de la Ley Federal de Protección de Datos Personales en Posesión de Particulares y su reglamento, hacen de su conocimiento que:</p>
 
-<p>El Colegio de México, protege y salvaguarda sus datos personales para evitar el daño, pérdida, destrucción, robo, extravío, alteración, así como el tratamiento no autorizado.</p>
+<p>El Colegio de México protege y salvaguarda sus datos personales para evitar el daño, pérdida, destrucción, robo, extravío, alteración, así como el tratamiento no autorizado de los mismos.</p>
 <p>&nbsp;</p>
 <p><span class="titulo-chico vino">¿Qué información recopilamos?</span></p>
 
-<p>Los datos personales que usted proporcione a El Colegio de México, a través de este sitio web (<a class="uk-link" href=<%= root_path %>>www.colmex.mx</a>), y Agenda Colmex a través de (<a class="uk-link" href="http://agenda.colmex.mx" target="_blank">agenda.colmex.mx</a>), es a partir de la suscripción al sistema de envío masivos de correo electrónico, envío de sugerencias, comentarios y dudas vía Agenda Colmex, los cuales pueden incluir sus datos personales y de localización. Dicha información deberá ser veraz y completa, por lo que usted responderá en 
-todo momento por la veracidad de los datos proporcionados y en ningún caso El Colegio de 
-México será responsable a este respecto.</p>
+<p>Los datos personales que usted proporcione a El Colegio de México, a través de este sitio web (<a href=<%= root_path %> class="uk-link">www.colmex.mx</a>), y de Agenda Colmex a través de <a class="uk-link" href="http://agenda.colmex.mx" target="_blank">agenda.colmex.mx</a>, se hará a partir de la suscripción al sistema de envío masivo de correo electrónico, envío de sugerencias, comentarios y dudas vía Agenda Colmex, los cuales pueden incluir sus datos personales y de localización. Dicha información deberá ser veraz y completa, por lo que usted responderá en todo momento por la veracidad de los datos proporcionados y en ningún caso El Colegio de México será responsable a este respecto.</p>
 
 <p>Usted manifiesta su consentimiento para el tratamiento de sus datos personales de acuerdo a los términos y condiciones de este Aviso de Privacidad.</p>
 <p>&nbsp;</p>
 <p><span class="titulo-chico morado">¿Para qué utilizamos su información?</p>
 
-<p>Los datos personales que recopilamos son destinados para fines de contacto y comunicación de nuestras actividades de difusión y transmisión vía diversas plataformas digitales, así como para fines estadísticos y de seguimiento de audiencias. Se le recomienda no revelar su 
-información personal a nadie. El Colegio de México no solicitará su información en ninguna
-llamada telefónica o mensaje de correo no solicitados.</p>
+<p>Los datos personales que recopilamos son destinados para fines de contacto y comunicación de nuestras actividades de difusión y transmisión vía diversas plataformas digitales, así como para fines estadísticos y de seguimiento de audiencias. Se le recomienda no revelar su información personal a nadie. El Colegio de México no solicitará su información a través de llamadas telefónicas o mensajes de correo electrónico.</p>
 
-<p>En la recopilación y tratamiento de datos personales, cumplimos con todos los principios de estipulados en la Ley Federal de Protección de Datos Personales en Posesión de Particulares y su Reglamento: licitud, calidad, consentimiento, información, finalidad, lealtad, proporcionalidad y responsabilidad.</p>
+<p>En la recopilación y tratamiento de datos personales cumplimos con todos los principios estipulados en la Ley Federal de Protección de Datos Personales en Posesión de Particulares y su Reglamento: licitud, calidad, consentimiento, información, finalidad, lealtad, proporcionalidad y responsabilidad.</p>
 <p>&nbsp;</p>
 <p><span class="titulo-chico morado">¿Con quién compartimos su información?</span></p>
 
-<p>Los datos proporcionados a El Colegio de México son utilizados únicamente por esta institución académica para los fines ya enunciados y no son compartidos a ningún tercero, ya 
-sea persona física o moral, pública o privada.</p>
+<p>Los datos proporcionados a El Colegio de México son utilizados únicamente por esta institución académica para los fines ya enunciados y no son compartidos con ningún tercero, ya sea persona física o moral, pública o privada.</p>
 
-<p>En tal sentido, El Colegio de México tendrá el manejo y administración de los datos personales que se recaban.</p>
+<p>En tal sentido, El Colegio de México tendrá el manejo y administración de los datos personales que se recaben.</p>
 
-<p>Los datos personales que usted proporciona, pueden compilarse y fijarse en una base de datos propiedad exclusiva de El Colegio de México.</p>
+<p>Los datos personales que usted proporciona pueden compilarse y fijarse en una base de datos propiedad exclusiva de El Colegio de México.</p>
 
 <p>El Colegio de México no le solicitará datos personales sensibles.</p>
 
-<p>El Colegio de México únicamente podrá difundir su información personal a solicitud expresa 
-de alguna autoridad competente; que exista alguna situación de emergencia o de estado de
-salud grave; se deba cumplir alguna obligación derivada de una relación jurídica entre usted y 
-El Colegio de México, o bien, que la información figure en fuentes de acceso público.</p>
+<p>El Colegio de México únicamente podrá difundir su información personal a solicitud expresa de alguna autoridad competente en caso de que exista alguna situación de emergencia o de estado de salud grave; se deba cumplir alguna obligación derivada de una relación jurídica entre usted y El Colegio de México, o bien, que la información figure en fuentes de acceso público.</p>
 <p>&nbsp;</p>
 <p><span class="titulo-chico morado">¿Qué medidas de seguridad y control utilizamos para la protección de sus datos personales?</span></p>
  
 <p>El Colegio de México implementa medidas de seguridad administrativas, técnicas y físicas para proteger sus datos personales.</p>
 
-<p>Toda la información y datos personales que usted nos proporcione mediante la utilización de esta página web de El Colegio de México y Agenda Colmex vía correo electrónico, constituirá una base de datos y la información se almacena con fines de protección, para evitar pérdida, uso indebido o alteración.</p>
+<p>Toda la información y datos personales que usted nos proporcione mediante la utilización de esta página web de El Colegio de México y de Agenda Colmex, vía correo electrónico, constituirá una base de datos, y la información se almacena con fines de protección, para evitar pérdida, uso indebido o alteración.</p>
 <p>&nbsp;</p>
 <p><span class="titulo-chico morado">¿Cuál es el área responsable del manejo y administración de los datos personales?</span></p>
 
-<p>El área responsable del manejo y la administración de los datos personales es: la oficina de Comunicación Digital de la Secretaría Académica, a quien puede contactar mediante el correo electrónico <a class="uk-link" href="mailto:comunicacion@colmex.mx">comunicacion@colmex.mx</a> o directamente en nuestras oficinas ubicadas en Camino al Ajusco No. 20, Colonia Pedregal de Santa Teresa, Delegación Tlalpan, C.P. 10740, Ciudad de México.</p>
+<p>El área responsable del manejo y la administración de los datos personales es la oficina de Comunicación Digital de la Secretaría Académica, a la que puede contactar mediante el correo electrónico <a class="uk-link" href="mailto:comunicacion@colmex.mx">comunicacion@colmex.mx</a> o directamente en nuestras oficinas ubicadas en Camino al Ajusco número 20, Colonia Pedregal de Santa Teresa, Tlalpan, C.P. 10740, Ciudad de México.</p>
 <p>&nbsp;</p>
 <p><span class="titulo-chico morado">¿Cómo pude usted limitar el uso o divulgación de sus datos personales?</span></p>
 
@@ -57,7 +49,7 @@ El Colegio de México, o bien, que la información figure en fuentes de acceso p
 <p>&nbsp;</p>
 <p><span class="titulo-chico morado">¿Cómo puede usted ejercer sus derechos ARCO y revocar el consentimiento otorgado?</span></p> 
 
-<p>Como titular de datos personales, usted podrá ejercer los Derechos ARCO (acceso, cancelación, rectificación y oposición al tratamiento de datos personales), o bien, revocar el consentimiento que usted haya otorgado a El Colegio de México y Agenda Colmex para el tratamiento de sus datos personales, enviando su solicitud, directamente a la oficina de Comunicación Digital de la Secretaría Académica, a través de la cuenta de correo electrónico <a class="uk-link" href="mailto:comunicacion@colmex.mx">comunicacion@colmex.mx</a>; acudiendo directamente a la oficina de Comunicación Digital de la Secretaría Académica; o bien, solicitándolo por escrito, enviando al domicilio ubicado en: Camino al Ajusco No. 20, Colonia Pedregal de Santa Teresa, Delegación Tlalpan, C.P. 10740, Ciudad de México.</p>
+<p>Como titular de datos personales, usted podrá ejercer los Derechos ARCO (acceso, cancelación, rectificación y oposición al tratamiento de datos personales), o bien, revocar el consentimiento que usted haya otorgado a El Colegio de México y Agenda Colmex para el tratamiento de sus datos personales, enviando su solicitud directamente a la oficina de Comunicación Digital de la Secretaría Académica, a través de la cuenta de correo electrónico <a class="uk-link" href="mailto:comunicacion@colmex.mx">comunicacion@colmex.mx</a>; acudiendo directamente a la oficina de Comunicación Digital de la Secretaría Académica; o bien, solicitándolo por escrito, en cuyo caso deberá hacer llegar su comunicación al domicilio ubicado en Camino al Ajusco número 20, Colonia Pedregal de Santa Teresa, Tlalpan, C.P. 10740, Ciudad de México.</p>
 
 <p>Dicha solicitud deberá contener, por lo menos, su nombre, domicilio completo y documentos que acrediten su identidad, especificando en forma clara y precisa los datos personales de los que solicita su acceso, rectificación, actualización o cancelación, indicando las razones por las cuales desea acceder a sus datos personales o las razones por las que considera que sus datos deben ser actualizados, rectificados o cancelados.</p>
 <p>&nbsp;</p>
@@ -65,11 +57,9 @@ El Colegio de México, o bien, que la información figure en fuentes de acceso p
 
 <p>Si usted utiliza los servicios de este sitio, significa que ha leído, entendido y acordado los términos antes expuestos. Si no está de acuerdo con ellos, usted no deberá proporcionar ninguna información personal.</p>
 
-<p>Este aviso puede tener cambios en el futuro, de ser así se le avisará oportunamente en la sección de Aviso de Privacidad de este sitio web.</p>
-
-<p>El presente Aviso de Privacidad, así como el manejo en general de la Ley que haga El Colegio de México, se rige por la legislación vigente y aplicable en los Estados Unidos Mexicanos, cualquier controversia que se suscite con motivo de su aplicación deberá ventilarse ante los Órganos Jurisdiccionales competentes en la Ciudad de México.</p>
+<p>Este aviso puede tener cambios en el futuro; de ser así se le avisará oportunamente en la sección de Aviso de Privacidad de este sitio web.</p>
  
-<p>La fecha de la última actualización al presente aviso de privacidad: 14/09/2016 </p>
+<p>Fecha de actualización: 19/09/2016 </p>
 
 
 	</div>
