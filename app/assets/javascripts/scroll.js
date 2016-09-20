@@ -6,6 +6,10 @@ $(document).on("scroll", function(event) {
 		$("#forma-busqueda").css("display", "none");
 		$("#div_logo").css({"height" : "0"});
 		$("#div_menu").css({"height" : "0"});
+		setTimeout(function(){
+			$("#div_logo").css({"display" : "none"});
+			$("#div_menu").css({"display" : "none"});
+		}, 200);
 		$(".reajustable").removeAttr("style");
 		$("#contenedor_nav").css({"min-height":"60px","background-color":"#fff","-webkit-box-shadow":"0 6px 12px rgba(0,0,0,0.175)","-moz-box-shadow":"0 6px 12px rgba(0,0,0,0.175)","box-shadow":"0 6px 12px rgba(0,0,0,0.175)"});
 		$("#barra_nav").css({"height":"100%","background-color":"#fff", "width":"90%","margin": "0 auto"});
@@ -87,7 +91,8 @@ $(document).on("scroll", function(event) {
 		$(".navbar-right").removeAttr("style");
 		$("#header-links").removeAttr("style");
   }
-  ajustarCuerpo(y);
+	setTimeout(function(){
+  	ajustarCuerpo(y);}, 201);
 });
 
 function ajustarCuerpo(scroll){
