@@ -83,6 +83,10 @@ $(document).on("scroll", function(event) {
 		$("#barra_nav").removeAttr("style");
 		$(".reajustable").removeAttr("style");
 		$("#logo-main").removeAttr("style");
+		setTimeout(function(){
+			$("#div_logo").css({"height" : $("#img_logo").outerHeight() + "px"});
+			$("#div_menu").css({"height" : "54px"});
+		);
 		$("#div_logo").removeAttr("style");
 		$("#div_menu").removeAttr("style");
 		$(".borrable").removeAttr("style");
@@ -91,8 +95,7 @@ $(document).on("scroll", function(event) {
 		$(".navbar-right").removeAttr("style");
 		$("#header-links").removeAttr("style");
   }
-	setTimeout(function(){
-  	ajustarCuerpo(y);}, 201);
+  	ajustarCuerpo(y);}
 });
 
 function ajustarCuerpo(scroll){
