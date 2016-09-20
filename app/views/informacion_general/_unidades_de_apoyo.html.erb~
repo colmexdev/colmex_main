@@ -1,6 +1,6 @@
     <% @bibliotecas.each do |b| %>
     <div class="uk-margin-large-bottom">
-    <h4><%= b.cargo.mb_chars.upcase || b.depto.mb_chars.upcase %></h4>
+    <h4><%= b.cargo.mb_chars.upcase %></h4>
     <h3 class="vino"><%= b.nombre %></h3>
     <p class="izq-align">Correo electrónico: <a class="uk-link" href="mailto:<%= b.correo %>"><%= b.correo %></a></p>
     <p class="izq-align">Teléfono: <%= b.telefono %></p>
