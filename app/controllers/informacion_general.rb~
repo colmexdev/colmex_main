@@ -10,7 +10,7 @@ class InformacionGeneralController < ApplicationController
 
   def documentacion_institucional
     @actas = Documento.where(:tipo => "Junta")
- 		@estatutos = Documento.where(:tipo => "Estatuto")
+ 		@estatutos = Documento.where(:tipo => "Estatuto").first
   end
 
   def actas
@@ -72,7 +72,7 @@ class InformacionGeneralController < ApplicationController
   end
 
   def operativas
-    @operativas = Personal.where("seccion = ? AND nombre = ?", "Operativas", "Gabriela Said Reyes").union(Personal.where("seccion = ? AND nombre = ?", "Operativas", "Valentina Riquelme Molina")).union(Personal.where("seccion = ? AND nombre = ?", "Operativas", "Laura Valverde González")).union(Personal.where("seccion = ? AND nombre = ?", "Operativas", "Quetzalli Padilla Dulché")).union(Personal.where("seccion = ? AND nombre = ?", "Operativas", "José Luis Arciga Torres")).union(Personal.where("seccion = ? AND nombre = ?", "Operativas", "León Ruiz Chávez")).union(Personal.where("seccion = ? AND nombre = ?", "Operativas", "Ernesto Arturo Hernández Camarillo")).union(Personal.where("seccion = ? AND nombre = ?", "Operativas", "Alejandro Castro González"))
+    @operativas = Personal.where("seccion = ? AND nombre = ?", "Operativas", "Valentina Riquelme Molina").union(Personal.where("seccion = ? AND nombre = ?", "Operativas", "Quetzalli Padilla Dulché")).union(Personal.where("seccion = ? AND nombre = ?", "Operativas", "León Ruiz Chávez"))
     respond_to do |format|
       format.js
     end
@@ -99,8 +99,8 @@ class InformacionGeneralController < ApplicationController
     end
   end
 
-  def biblioteca
-    @bibliotecas = Personal.where(:seccion => "Biblioteca")
+  def unidades_de_apoyo
+    @bibliotecas = Personal.where(:seccion => "Unidades de apoyo")
     respond_to do |format|
       format.js
     end

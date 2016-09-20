@@ -95,7 +95,7 @@ Rails.application.routes.draw do
 
   get 'informacion_general/administracion' => 'informacion_general#administracion', :as => :administracion
 
-  get 'informacion_general/biblioteca' => 'informacion_general#biblioteca', :as => :biblioteca
+  get 'informacion_general/unidades_de_apoyo' => 'informacion_general#unidades_de_apoyo', :as => :unidades_de_apoyo
 
   get 'informacion_general/operativas' => 'informacion_general#operativas', :as => :operativas
 

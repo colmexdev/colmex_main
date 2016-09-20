@@ -55,7 +55,7 @@ en:
     liga3: "Institutional directory"
     liga4: "E-mail"
     liga5: "Location"
-    liga6: "Mapsite"
+    liga6: "Sitemap"
   date:
     formats:
       long: "%A, %B %d"

@@ -72,7 +72,7 @@ class InformacionGeneralController < ApplicationController
   end
 
   def operativas
-    @operativas = Personal.where("seccion = ? AND nombre = ?", "Operativas", "Gabriela Said Reyes").union(Personal.where("seccion = ? AND nombre = ?", "Operativas", "Valentina Riquelme Molina")).union(Personal.where("seccion = ? AND nombre = ?", "Operativas", "Laura Valverde González")).union(Personal.where("seccion = ? AND nombre = ?", "Operativas", "Quetzalli Padilla Dulché")).union(Personal.where("seccion = ? AND nombre = ?", "Operativas", "José Luis Arciga Torres")).union(Personal.where("seccion = ? AND nombre = ?", "Operativas", "León Ruiz Chávez")).union(Personal.where("seccion = ? AND nombre = ?", "Operativas", "Ernesto Arturo Hernández Camarillo")).union(Personal.where("seccion = ? AND nombre = ?", "Operativas", "Alejandro Castro González"))
+    @operativas = Personal.where("seccion = ? AND nombre = ?", "Operativas", "Valentina Riquelme Molina").union(Personal.where("seccion = ? AND nombre = ?", "Operativas", "Quetzalli Padilla Dulché")).union(Personal.where("seccion = ? AND nombre = ?", "Operativas", "León Ruiz Chávez"))
     respond_to do |format|
       format.js
     end
@@ -99,15 +99,15 @@ class InformacionGeneralController < ApplicationController
     end
   end
 
-  def biblioteca
-    @bibliotecas = Personal.where(:seccion => "Biblioteca")
+  def unidades_de_apoyo
+    @bibliotecas = Personal.where("seccion = ? AND nombre = ?","Unidades de apoyo", "Micaela Chávez Villa").union(Personal.where("seccion = ? AND nombre = ?","Unidades de apoyo", "Gabriela Said Reyes")).union(Personal.where("seccion = ? AND nombre = ?","Unidades de apoyo", "José Luis Arciga Torres"))
     respond_to do |format|
       format.js
     end
   end
 
   def administracion
-    @admins = Personal.where(:seccion => "Administración")
+    @admins = Personal.where("seccion = ? AND nombre = ?", "Administración", "Álvaro Baillet Gallardo").union(Personal.where("seccion = ? AND nombre = ?", "Administración", "Laura Valverde González")).union(Personal.where("seccion = ? AND nombre = ?", "Administración", "Víctor Fernando Ruiz Aguilar")).union(Personal.where("seccion = ? AND nombre = ?", "Administración", "Gerardo Gutiérrez Cortez")).union(Personal.where("seccion = ? AND nombre = ?", "Administración", "Adrián Rubio Rangel")).union(Personal.where("seccion = ? AND nombre = ?", "Administración", "Raúl Cabrera Soto")).union(Personal.where("seccion = ? AND nombre = ?", "Administración", "Luis Manuel Olivares Estrada")).union(Personal.where("seccion = ? AND nombre = ?", "Administración", "Felipe Alejandro Castro González"))
     respond_to do |format|
       format.js
     end
