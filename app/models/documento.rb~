@@ -11,7 +11,7 @@ class Documento < ActiveRecord::Base
   validates_attachment_content_type :archivo, :content_type => ['application/pdf']
 
   Paperclip.interpolates :tipo do |attachment, style|
-    if attachment.instance.tipo == "Transparencia"
+    if attachment.instance.tipo != "Transparencia"
       "assets/pdfs/:basename_:id.:extension"
     else
       "bienes/:basename.:extension"

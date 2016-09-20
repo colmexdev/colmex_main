@@ -14,7 +14,7 @@ class Documento < ActiveRecord::Base
     if attachment.instance.tipo != "Transparencia"
       "assets/pdfs/:basename_:id.:extension"
     else
-      "bienes/:basename.:extension"
+      "assets/bienes/:basename.:extension"
     end
   end
 end
