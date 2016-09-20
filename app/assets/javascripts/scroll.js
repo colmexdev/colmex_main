@@ -84,7 +84,7 @@ $(document).on("scroll", function(event) {
 		$(".reajustable").removeAttr("style");
 		$("#logo-main").removeAttr("style");
 		setTimeout(function(){
-			$("#div_logo").css({"height" : $("#img_logo").outerHeight() + "px"});
+			$("#div_logo").css({"height" : ($("#img_logo").outerHeight() + "px")});
 			$("#div_menu").css({"height" : "54px"});}, 50);
 		$("#div_logo").removeAttr("style");
 		$("#div_menu").removeAttr("style");
