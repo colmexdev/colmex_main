@@ -1,7 +1,7 @@
 http://www.colmex.mx
 http://www.colmex.mx/informacion_general/sobre_el_colegio
 http://www.colmex.mx/informacion_general/historia
-http://www.colmex.mx/informacion:general/historia_75_años
+http://www.colmex.mx/informacion_general/historia_75_años
 http://www.colmex.mx/informacion_general/autoridades
 http://www.colmex.mx/informacion_general/documentacion_institucional
 http://www.colmex.mx/informacion_general/profesores_emeritos
