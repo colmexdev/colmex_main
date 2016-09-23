@@ -231,7 +231,7 @@ html, body{ height: 100%; }
 #header-links { 
 	display: none;
 	height: 100%;
-	width: 830px;
+	width: 860px;
 
 	.botones{
 		overflow: visible;
@@ -245,15 +245,16 @@ html, body{ height: 100%; }
 		.dropdown, .no-dropdown{
 			float: left;
 			text-align: center;
-			height: 100%;
+			height: 60px;
 			position: relative;
-			width: auto;
+			width: 100%;
 			padding: 0 2%;
 			-moz-transition: all 0.3s linear;
 			-ms-transition: all 0.3s linear;
 			-webkit-transition: all 0.3s linear;
 			-o-transition: all 0.3s linear;
 			transition: all 0.3s linear;
+			max-width: 110px;
 			
 			a{
 				display: inline-block;
@@ -262,12 +263,14 @@ html, body{ height: 100%; }
 				width: 100%;
 				height: 100%;
 				font-size: 16px;
+				position: relative;
 				
 				span{
 					width: 100%;
-					font-size: 14px;
+					font-size: 13px;
 					font-weight: 600;
-					line-height: 60px;
+					line-height: normal;
+					@include centrado;
 				}
 			}
 
@@ -487,8 +490,8 @@ html, body{ height: 100%; }
 		.navbar-form.navbar-left { margin: 0; display: inline-block; }
 	}
 
-	@media only screen and (max-width: 900px){
-		#forma-busqueda { display: none; }
+	@media only screen and (max-width: 1165px){
+		#forma-search { display: none; }
 		.boton_lupa { display: none; }
 	}
 
@@ -578,7 +581,7 @@ html, body{ height: 100%; }
 }
 
 @media only screen and (max-width: 1024px){
-	#forma-control { margin-top: 13px; }
+	//#forma-control { margin-top: 13px; }
 }
 
 #forma-control:focus{
@@ -727,9 +730,9 @@ ul.ul-nav { display: table;
 			text-align: center;
 			height: 100%;
 			position: relative;
-			width: calc(20% - 2px);
-			width: -moz-calc(20% - 2px);
-			width: -webkit-calc(20% - 2px);
+			width: calc(16.66% - 2px);
+			width: -moz-calc(16.66% - 2px);
+			width: -webkit-calc(16.66% - 2px);
 			-moz-transition: all 0.3s linear;
 			-ms-transition: all 0.3s linear;
 			-webkit-transition: all 0.3s linear;
@@ -745,6 +748,7 @@ ul.ul-nav { display: table;
 				
 				span{
 					width: 100%;
+					font-size: 16px;
 					font-weight: 600;
 					@include centrado;
 				}
@@ -1939,7 +1943,8 @@ ul.ul-nav { display: table;
 				margin: 0 auto;
 				width: auto;
 				padding-top: 10px;
-				li { float: left; padding: 0 5px; } 
+				li { float: left; padding: 0 5px; border-right: solid 1px #fff; }
+				.no-border { border-right: none; } 
 			}
 		}
 	}
