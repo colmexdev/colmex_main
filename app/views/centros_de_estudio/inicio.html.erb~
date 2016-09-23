@@ -11,7 +11,7 @@
     <img src=<%= image_url("centro-ceaa.png") %> alt="Centro de estudios de Asia y África">
     </div>
     <div class="uk-width-large-3-5 uk-width-medium-3-5 uk-width-small-3-5 uk-text-left">
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ultricies posuere lectus. Aliquam diam nisl, semper vel lectus sit amet, lobortis interdum dui. Etiam placerat elit at bibendum efficitur. Etiam consequat cursus turpis et congue. Cras at luctus sapien. Nulla mollis nec arcu rhoncus lacinia. Vivamus eget justo in purus lacinia tincidunt id sollicitudin augue.</p>
+    <p>Creado en 1964, busca transmitir el conocimiento sobre los países de Asia y África a la sociedad mexicana y latinoamericana, así como el interés por entender la historia de cada país, la cultura, la sociedad, la política, la economía y sus lenguas. Este gran proyecto nació de la necesidad de acercarse de manera profunda a estas regiones del mundo y por concretar puentes de unión.</p>
     <a href="http://ceaa.colmex.mx/" target="_blank" class="ver-mas uk-margin-large-bottom uk-button-small">Más información</a>
     </div>
     </div>
@@ -21,7 +21,7 @@
     <img src=<%= image_url("centro-cedua.png") %> alt="Centro de estudios lingüísticos y literarios">
     </div>
     <div class="uk-width-large-3-5 uk-width-medium-3-5 uk-width-small-3-5 uk-text-left">
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ultricies posuere lectus. Aliquam diam nisl, semper vel lectus sit amet, lobortis interdum dui. Etiam placerat elit at bibendum efficitur. Etiam consequat cursus turpis et congue. Cras at luctus sapien. Nulla mollis nec arcu rhoncus lacinia. Vivamus eget justo in purus lacinia tincidunt id sollicitudin augue.</p>
+    <p>El Centro de Estudios Demográficos, Urbanos y Ambientales inició sus actividades en 1964 con el propósito de realizar y promover investigación y docencia en estudios relacionados con la población y la urbanización en México y América Latina. A partir de los años ochenta se inició el estudio de los aspectos ambientales vinculados con la población y el desarrollo urbano.</p>
     <a href="http://cedua.colmex.mx/" target="_blank" class="ver-mas uk-margin-large-bottom uk-button-small ">Más información</a>
     </div>
     <div class="uk-width-large-2-5 uk-width-medium-2-5 uk-width-small-2-5 centro-borrar">
@@ -34,7 +34,7 @@
     <img src=<%= image_url("centro-cee.png") %> alt="Centro de estudios económicos">
     </div>
     <div class="uk-width-large-3-5 uk-width-medium-3-5 uk-width-small-3-5 uk-text-left">
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ultricies posuere lectus. Aliquam diam nisl, semper vel lectus sit amet, lobortis interdum dui. Etiam placerat elit at bibendum efficitur. Etiam consequat cursus turpis et congue. Cras at luctus sapien. Nulla mollis nec arcu rhoncus lacinia. Vivamus eget justo in purus lacinia tincidunt id sollicitudin augue.</p>
+    <p>Fundado en 1964, surgió impulsado por la necesidad de promover la investigación y la docencia en estudios sobre economía, fue el primer recinto académico de México que ofreció un posgrado en Economía. Edita la revista Estudios Económicos que aparece dos veces al año desde 1986, es una de las revistas especializadas en economía más prestigiadas de México y América Latina.</p>
     <a href="http://cee.colmex.mx/" target="_blank" class="ver-mas uk-margin-large-bottom uk-button-small">Más información</a>
     </div>
     </div>
@@ -44,7 +44,7 @@
     <img src=<%= image_url("centro-ceh.png") %> alt="Centro de estudios lingüísticos y literarios">
     </div>
     <div class="uk-width-large-3-5 uk-width-medium-3-5 uk-width-small-3-5 uk-text-left">
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ultricies posuere lectus. Aliquam diam nisl, semper vel lectus sit amet, lobortis interdum dui. Etiam placerat elit at bibendum efficitur. Etiam consequat cursus turpis et congue. Cras at luctus sapien. Nulla mollis nec arcu rhoncus lacinia. Vivamus eget justo in purus lacinia tincidunt id sollicitudin augue.</p>
+    <p>Fundado en 1941, posee una larga experiencia en las tareas de investigación y docencia. El CEH ofrece un programa de Doctorado en Historia con énfasis en la historia de México y América Latina; el centro publica la revista Historia Mexicana desde julio de 1951.</p>
     <a href="http://ceh.colmex.mx/" target="_blank" class="ver-mas uk-margin-large-bottom uk-button-small">Más información</a>
     </div>
     <div class="uk-width-large-2-5 uk-width-medium-2-5 uk-width-small-2-5 centro-borrar">
@@ -57,7 +57,7 @@
     <img src=<%= image_url("centro-cei.png") %> alt="Centro de estudios internacionales">
     </div>
     <div class="uk-width-large-3-5 uk-width-medium-3-5 uk-width-small-3-5 uk-text-left">
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ultricies posuere lectus. Aliquam diam nisl, semper vel lectus sit amet, lobortis interdum dui. Etiam placerat elit at bibendum efficitur. Etiam consequat cursus turpis et congue. Cras at luctus sapien. Nulla mollis nec arcu rhoncus lacinia. Vivamus eget justo in purus lacinia tincidunt id sollicitudin augue.</p>
+    <p>En 1960 se creó con la idea de formar estudiosos de las relaciones internacionales capaces de entender la situación de México en el mundo y de conducir la diplomacia mexicana con el mayor profesionalismo. Sus tareas principales son la investigación y la docencia. Edita la revista Estudios Internacionales.</p>
     <a href="http://cei.colmex.mx/" target="_blank" class="ver-mas uk-margin-large-bottom uk-button-small">Más información</a>
     </div>
     </div>
@@ -67,7 +67,7 @@
     <img src=<%= image_url("centro-cell.png") %> alt="Centro de estudios lingüísticos y literarios">
     </div>
     <div class="uk-width-large-3-5 uk-width-medium-3-5 uk-width-small-3-5 uk-text-left">
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ultricies posuere lectus. Aliquam diam nisl, semper vel lectus sit amet, lobortis interdum dui. Etiam placerat elit at bibendum efficitur. Etiam consequat cursus turpis et congue. Cras at luctus sapien. Nulla mollis nec arcu rhoncus lacinia. Vivamus eget justo in purus lacinia tincidunt id sollicitudin augue.</p>
+    <p>Fundado en 1947, está especializado en estudios de literatura hispánica y de lingüística, particularmente hispánica y de las lenguas amerindias de México, y recientemente ha incorporado en su interés los estudios de traducción. Publica la Nueva Revista de Filología Hispánica.</p>
     <a href="http://cell.colmex.mx/" target="_blank" class="ver-mas uk-margin-large-bottom uk-button-small">Más información</a>
     </div>
     <div class="uk-width-large-2-5 uk-width-medium-2-5 uk-width-small-2-5 centro-borrar">
@@ -80,7 +80,7 @@
     <img src=<%= image_url("centro-ces.png") %> alt="Centro de estudios sociológicos">
     </div>
     <div class="uk-width-large-3-5 uk-width-medium-3-5 uk-width-small-3-5 uk-text-left">
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ultricies posuere lectus. Aliquam diam nisl, semper vel lectus sit amet, lobortis interdum dui. Etiam placerat elit at bibendum efficitur. Etiam consequat cursus turpis et congue. Cras at luctus sapien. Nulla mollis nec arcu rhoncus lacinia. Vivamus eget justo in purus lacinia tincidunt id sollicitudin augue.</p>
+    <p>Desde su fundación, el CES adoptó, como objetivo principal, desarrollar nuevos conocimientos relacionados con los problemas sociales, políticos y económicos de México y América Latina, vinculando a esta tarea la conformación de un sólido Programa de Doctorado en Ciencia Social con Especialidad en Sociología. Edita la revista Estudios Sociológicos.</p>
     <a href="http://ces.colmex.mx/" target="_blank" class="ver-mas uk-margin-large-bottom uk-button-small">Más información</a>
     </div>
     </div>
