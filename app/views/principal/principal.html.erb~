@@ -1,5 +1,6 @@
 <%= render 'principal/barra' %>
 <%= include_gon %>
+
 <div class="container-fluid" id="resto-cuerpo">
   <div id="cuerpo">
 		<div class="row"> <!-- Fila para slider -->
@@ -59,6 +60,7 @@
 	<div class="row"> <!-- Fila para formulario de suscripción -->
 		<div class="col-md-12" id="div_suscripcion"> <!-- Columnas para formulario de suscripción -->
 
+			<% if false %>
 			<form class="navbar-form navbar-left" role="search" id="forma_suscripcion" method="post" action="http://listas.colmex.mx/?p=subscribe" name="subscribeform" target="windowName" onsubmit="window.open('', this.target,
 'dialog,modal,scrollbars=no,resizable=no,width=550,height=300,left=0,top=0');">
 		    <div class="form-group">
@@ -75,6 +77,7 @@
 		    </div>
 				<button type="submit" name="subscribe" value="Subscríbase a nuestra lista de correo Agenda Colmex" class="btn btn-default"><span><%= t('suscripcion.boton') %></span></button>
 			</form>
+			<% end %>
 		</div> <!-- Cierre de columnas para formulario de suscripción -->
 	</div> <!-- Cierre de fila para formulario de suscripción -->
 
@@ -187,7 +190,9 @@ https://youtu.be/8V1zBV2ABmg" data-uk-lightbox data-lightbox-type="video">
 <%= render 'principal/footer' %>
 
 <% content_for :meta_tags do %>
-<meta property="og:url"                content="http://www.colmex.mx" >
+<meta property="og:url"                content="http://www.colmex.mx/" >
+<meta property="og:url"                content="http://www.colmex.mx/?locale=sp" >
+<meta property="og:url"                content="http://www.colmex.mx/?locale=en" >
 <meta property="og:title"              content="El Colegio de México, A.C." />
 <meta property="og:description"        content="El Colegio de México es una institución pública, de carácter universitario, dedicada a la investigación y a la enseñanza superior." />
 <meta property="og:image"              content="http://www.colmex.mx/assets/slider/slide-4_original_5.png?1471284244" />
