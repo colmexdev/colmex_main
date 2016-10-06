@@ -106,7 +106,7 @@ function ajustarCuerpo(scroll){
 }
 
 function regresarArriba(){
-	$("html, body").animate({ scrollTop: 0 }, 1100);
+	$("html, body").animate({ scrollTop: 0 }, 1800);
 	$(document).trigger("scroll", [$(document).scrollTop()]);
   return false;
 }
