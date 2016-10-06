@@ -72,7 +72,7 @@ class InformacionGeneralController < ApplicationController
   end
 
   def operativas
-    @operativas = Personal.where("seccion = ? AND nombre = ?", "Operativas", "Valentina Riquelme Molina").union(Personal.where("seccion = ? AND nombre = ?", "Operativas", "Quetzalli Padilla Dulché")).union(Personal.where("seccion = ? AND nombre = ?", "Operativas", "León Ruiz Chávez"))
+    @operativas = Personal.where("seccion = ? AND nombre = ?", "Operativas", "Valentina Riquelme Molina").union(Personal.where("seccion = ? AND nombre = ?", "Operativas", "Quetzalli Padilla Dulché")).union(Personal.where("seccion = ? AND nombre = ?", "Operativas", "León Ruiz Chávez")).union(Personal.where("seccion = ? AND nombre = ?", "Operativas", "Alejandra Tapia Silva")).union(Personal.where("seccion = ? AND nombre = ?", "Operativas", "Lizeth Mora Castillo"))
     respond_to do |format|
       format.js
     end
