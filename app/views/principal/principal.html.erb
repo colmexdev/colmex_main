@@ -86,7 +86,7 @@
 				<span class="titulo-grande morado"><%= t('descubre') %></span>
 			</div>
 			<div class="filtros-descubre">
-				<% contenidos = Descubre.group(:contenido).order(:contenido) %>
+				<% contenidos = Descubre.where("fecha_publicacion <= ? AND fecha_limite_pub > ?", Date.current(), Date.current()).group(:contenido).order(:contenido) %>
 				<% cont_plural, cont = [], [] %>
 				<% contenidos.each do |c| %>
 					<% cont_plural << pluralizar(c.contenido) %>
