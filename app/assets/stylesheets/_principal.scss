@@ -690,11 +690,19 @@ ul.ul-nav { display: table;
 	height: auto;
 	text-align: center;
 	background-color: #fff;
-	-webkit-transition: height 0.2s linear;
-	-moz-transition: height 0.2s linear;
-	-o-transition: height 0.2s linear;
-	-ms-transition: height 0.2s linear;
-	transition: height 0.2s linear;
+	-webkit-transition: all 0.2s linear;
+	-moz-transition: all 0.2s linear;
+	-o-transition: all 0.2s linear;
+	-ms-transition: all 0.2s linear;
+	transition: all 0.2s linear;
+
+	a{
+		-webkit-transition: all 0.2s linear;
+		-moz-transition: all 0.2s linear;
+		-o-transition: all 0.2s linear;
+		-ms-transition: all 0.2s linear;
+		transition: all 0.2s linear;
+	}	
 
 	#img_logo{
 		width: 85%;
@@ -702,6 +710,11 @@ ul.ul-nav { display: table;
 		min-width: 150px;
 		display: inline-block;
 		margin: 40px auto;
+		-webkit-transition: all 0.2s linear;
+		-moz-transition: all 0.2s linear;
+		-o-transition: all 0.2s linear;
+		-ms-transition: all 0.2s linear;
+		transition: all 0.2s linear;
 	}
 }
 
@@ -751,6 +764,11 @@ ul.ul-nav { display: table;
 					font-size: 16px;
 					font-weight: 600;
 					@include centrado;
+					-webkit-transition: font-size 0.2s linear;
+					-moz-transition: font-size 0.2s linear;
+					-o-transition: font-size 0.2s linear;
+					-ms-transition: font-size 0.2s linear;
+					transition: font-size 0.2s linear;
 				}
 			}
 
@@ -1588,40 +1606,56 @@ ul.ul-nav { display: table;
 			padding: 0 25px;
 			padding-top: 35px;
 			display: block;
-			height: 80%;
+			height: 70%;
 			font-size: 16px;
 			text-align: left;
 		}
 
-		@media only screen and (min-width: 0px) and (max-width: 360px){
-			p { padding-top: 27px; font-size: 11px; }
+		@media only screen and (max-width: 585px){
+			p { height: 65%; }
+		}
+
+		@media only screen and (max-width: 250px){
+			p { padding-top: 27px; font-size: 7px; }
+		}
+
+		@media only screen and (min-width: 250px) and (max-width: 330px){
+			p { padding-top: 27px; font-size: 9px; }
+		}
+
+		@media only screen and (min-width: 330px) and (max-width: 360px){
+			p { padding-top: 27px; font-size: 10px; }
 		}
 
 		@media only screen and (min-width: 360px) and (max-width: 390px){
-			p { padding-top: 27px; font-size: 12px; }
+			p { padding-top: 27px; font-size: 11px; }
 		}
 		
-		@media only screen and (min-width: 390px) and (max-width: 450px){
+		@media only screen and (min-width: 390px) and (max-width: 425px){
+			p { padding-top: 27px; font-size: 12px; }
+		}
+
+		@media only screen and (min-width: 425px) and (max-width: 485px){
 			p { padding-top: 27px; font-size: 13px; }
 		}
 
-		@media only screen and (min-width: 450px) and (max-width: 670px){
+		@media only screen and (min-width: 485px) and (max-width: 670px){
 			p { padding-top: 27px; font-size: 15px; }
 		}
 
-		@media only screen and (min-width: 670px) and (max-width: 767px){
+		@media only screen and (min-width: 670px) and (max-width: 931px){
+			p { padding-top: 27px; font-size: 15px; }
+		}
+
+		@media only screen and (min-width: 931px) and (max-width: 1260px){
 			p { padding-top: 27px; font-size: 16px; }
 		}
 
-		@media only screen and (min-width: 767px) and (max-width: 1260px){
-			p { padding-top: 27px; font-size: 16px; }
-		}
-
-		#contenedor-botones{
+		.contenedor-botones{
 			display: table;
 			width: 100%;
 			border-collapse: separate;
-			border-spacing: 10px 0;
+			border-spacing: 10px 7px;
 			padding: 0 5px;
 
 			.boton{
@@ -1631,14 +1665,14 @@ ul.ul-nav { display: table;
 				border-color: #470020;
 				border-width: 2px;
 				border-style: solid;
-				height: 50px;
+				height: 40px;
 				width: 110px;
 				text-align: center;
 	
 
 				.boton-donar{
 					color: #fff;
-					line-height: 46px;
+					line-height: 36px;
 					display: block;
 
 					span{
@@ -1647,10 +1681,26 @@ ul.ul-nav { display: table;
 						line-height: normal;
 					}
 
-					@media only screen and (min-width: 0px) and (max-width: 1070px){
+					@media only screen and (max-width: 1070px){
 						span { font-size: 11px; } 
 					}
 				}
+			}
+
+			#actualizar{
+				background-color: #470020;
+				border: solid 1px #9E6680;
+				-webkit-transition: all 0.4s linear;
+				-moz-transition: all 0.4s linear;
+				-ms-transition: all 0.4s linear;			
+				-o-transition: all 0.4s linear;
+				transition: all 0.4s linear;
+			}
+
+			#actualizar:hover, #actualizar:focus{
+				background-color: #9E6680;
+				border-color: #470020;
+				color: #CCCCCC;
 			}
 
 			#conocer{
@@ -1684,6 +1734,10 @@ ul.ul-nav { display: table;
 				background-color: #9E6680;
 				color: #CCCCCC;
 			}
+		}
+
+		@media only screen and (max-width: 1260px){
+			.contenedor-botones { border-spacing: 10px 3px; }
 		}
 	}
 
@@ -1735,7 +1789,7 @@ ul.ul-nav { display: table;
 	#fundacion-colmex { height: 340px; padding-bottom: 30px; }
 }
 
-@media only screen and (min-width: 585px) and (max-width: 947px){
+@media only screen and (min-width: 585px) and (max-width: 930px){
 	#fundacion-colmex{ padding: 30px 30px 0 30px; }
 }
 
@@ -1767,27 +1821,6 @@ ul.ul-nav { display: table;
 		
 		>span { position: relative; top: 15px; }
 	}
-	/*blockquote::before {
-			/*display: block;
-			content: '\201C';
-			font-family: Georgia, New Times Roman, serif;
-			font-size: 120px;
-			line-height: 20px;
-			position: relative;
-			text-align: left;
-			top: 40px;
-			right: 75px;
-	}
-	blockquote::after {
-			/*display: block;
-			content: '\201D';
-			font-family: Georgia, New Times Roman, serif;
-			font-size: 120px;
-			position: relative;
-			text-align:right;
-			bottom: 50px;
-			left: 55px;
-	}*/
 }
 
 //Estilos que afectan a la sección de transparencia

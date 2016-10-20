@@ -4,11 +4,14 @@ $(document).on("scroll", function(event) {
   var alto_logo = document.getElementById("div_logo").clientHeight;
   if (y > 200 || barra_render) {
 		$("#forma-search").css("display", "none");
-		//$("#div_logo").css({"height" : "0"});
-		//$("#div_menu").css({"height" : "0"});
+
+		$("#img_logo").stop().css({"height" : "0", "margin": "0"});
+		$("#div_logo").stop().css({"height": "0", "min-height": "0", "margin": "0"});
+		$("#div_logo a").stop().css({"font-size": "0px"});
+		$("#div_menu ul li a span").stop().css({"font-size" : "0"});
+		$("#div_menu").stop().css({"height": 0, "min-height": "0"});
+
 		$("#search-lat").removeAttr("style");
-		$("#div_logo").css({"display" : "none"});
-		$("#div_menu").css({"display" : "none"});
 		$(".reajustable").removeAttr("style");
 		$("#contenedor_nav").css({"min-height":"60px","background-color":"#fff","-webkit-box-shadow":"0 6px 12px rgba(0,0,0,0.175)","-moz-box-shadow":"0 6px 12px rgba(0,0,0,0.175)","box-shadow":"0 6px 12px rgba(0,0,0,0.175)"});
 		$("#barra_nav").css({"height":"100%","background-color":"#fff", "width":"90%","margin": "0 auto"});
@@ -84,12 +87,13 @@ $(document).on("scroll", function(event) {
 		$("#barra_nav").removeAttr("style");
 		$(".reajustable").removeAttr("style");
 		$("#logo-main").removeAttr("style");
-		/*setTimeout(function(){
-			$("#div_logo").css({"height" : ($("#img_logo").outerHeight() + "px")});
-			$("#div_menu").css({"height" : "54px"});
-		}, 50);*/
-		$("#div_logo").removeAttr("style");
-		$("#div_menu").removeAttr("style");
+
+		$("#img_logo").stop().removeAttr("style");
+		$("#div_logo").stop().removeAttr("style");
+		$("#div_logo a").stop().removeAttr("style");
+		$("#div_menu").stop().removeAttr("style");
+		$("#div_menu ul li a span").stop().removeAttr("style");
+
 		$(".borrable").removeAttr("style");
 		$(".mail").removeAttr("style");
 		$(".intranet").removeAttr("style");
@@ -100,13 +104,13 @@ $(document).on("scroll", function(event) {
 });
 
 function ajustarCuerpo(scroll){
+  var ancho_act = Math.max(document.documentElement.clientWidth, window.innerWidth || document.body.ClientWidth || 0);
 	var alto_footer = document.getElementById('div_footer').clientHeight;
 	var alto_header = document.getElementById('header').clientHeight;
-	$('#resto-cuerpo').css({'padding-bottom': (alto_footer+1)+'px', 'padding-top': (alto_header-1.5+(scroll > 200 ? 170 : 0))+'px'});
+	$('#resto-cuerpo').css({'padding-bottom': (alto_footer+1)+'px', 'padding-top': (ancho_act <= 1165 ? alto_header : '230') + 'px'});
 }
 
 function regresarArriba(){
 	$("html, body").animate({ scrollTop: 0 }, 1800);
-	$(document).trigger("scroll", [$(document).scrollTop()]);
   return false;
 }
