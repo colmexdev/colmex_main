@@ -11,7 +11,7 @@ class PrincipalController < ApplicationController
       gon.ev_big, gon.ev_small, gon.ev_tiny = "", "" ,""
     end
     @sliders = Slider.where.not("liga LIKE ? ", "%youtu%").order("RAND()")
-    @descubre = Descubre.where("fecha_publicacion <= ? AND fecha_limite_pub > ?", Date.current(), Date.current()).order("RAND()")
+    @descubre = Descubre.where("fecha_publicacion <= ? AND fecha_limite_pub >= ?", Date.current(), Date.current()).order("RAND()")
     @frase = Frase.order("RAND()").first
     gon.descubres = @descubre.to_json
     gon.cant_sliders = @sliders.size

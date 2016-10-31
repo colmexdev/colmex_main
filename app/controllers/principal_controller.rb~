@@ -20,7 +20,7 @@ class PrincipalController < ApplicationController
   def resultados_busqueda
     @resultados = []
     condicion_limpia = quitar_acentos(params[:condicion]).downcase
-    Descubre.where("fecha_publicacion <= ? AND fecha_limite_pub > ?", Date.current(), Date.current()).each do |d|
+    Descubre.where("fecha_publicacion <= ? AND fecha_limite_pub >= ?", Date.current(), Date.current()).each do |d|
       if (quitar_acentos(d.titulo.to_s.downcase).include?(condicion_limpia) or quitar_acentos(d.contenido.to_s.downcase).include?(condicion_limpia) or quitar_acentos(d.tags.to_s.downcase).gsub(/ *, */, " ").include?(condicion_limpia)) and not @resultados.include?(d)
         @resultados << d
       end
