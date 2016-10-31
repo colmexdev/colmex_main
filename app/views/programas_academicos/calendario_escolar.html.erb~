@@ -105,7 +105,7 @@
     </div>
     </div>
 
-		<a href=<%= asset_url("calendarioescolar.pdf") %> target="_blank" %> class="ver-mas uk-margin-large-bottom uk-button-small">Descargar en PDF</a>
+		<a href=<%= asset_url("calendarioescolar.pdf") %> target="_blank" class="ver-mas uk-margin-large-bottom uk-button-small">Descargar en PDF</a>
 
 	</div>
 
