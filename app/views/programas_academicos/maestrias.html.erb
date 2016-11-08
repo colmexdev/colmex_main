@@ -17,8 +17,10 @@
     <% end %>
     </div>
     <div class="uk-width-large-2-5">
+		<% if mt.fecha_inicio_clases.present? %>
     <h3 class="vino uk-margin-bottom-remove">Inicio de la promoción</h3>
     <h4 class="uk-margin-top-remove"><%= l(mt.fecha_inicio_clases, format: :mes_anio).capitalize %></h4>
+    <% end %>
     <h3 class="vino uk-margin-bottom-remove">Próxima convocatoria</h3>
     <h4 class="uk-margin-top-remove">
 			<% if mt.fecha_inicio_conv == mt.fecha_fin_conv %>
