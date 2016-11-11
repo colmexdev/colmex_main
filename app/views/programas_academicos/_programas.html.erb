@@ -3,7 +3,7 @@
 
     <ul class=" uk-list uk-list-space">
 		<% @licenciaturas.each do |lic| %>
-		  <li class="uk-link sin-pointer">Licenciatura en <%= lic.titulo %></li>
+		  <li class="uk-link sin-pointer"><%= lic.titulo %></li>
 		<% end %>
     </ul>
 		<a href=<%= licenciaturas_path %> class="ver-mas uk-margin-large-bottom uk-button-small">Conoce más</a>
@@ -14,7 +14,7 @@
 
     <ul class=" uk-list uk-list-space">
     <% @maestrias.each do |mt| %>
-		  <li class="uk-link sin-pointer">Maestría en en <%= mt.titulo %></li>
+		  <li class="uk-link sin-pointer"><%= mt.titulo %></li>
 		<% end %>
     </ul>
 	<a href=<%= maestrias_path %> class="ver-mas uk-margin-large-bottom uk-button-small">Conoce más</a>
@@ -24,7 +24,7 @@
 <span class="titulo-chico">Doctorados</span><br>
 		<ul class=" uk-list uk-list-space">
     <% @doctorados.each do |doc| %>
-		  <li class="uk-link sin-pointer">Doctorado en en <%= doc.titulo %></li>
+		  <li class="uk-link sin-pointer"><%= doc.titulo %></li>
 		<% end %>
     </ul>
 		<a href=<%= doctorados_path %> class="ver-mas uk-margin-large-bottom uk-button-small">Conoce más</a>
