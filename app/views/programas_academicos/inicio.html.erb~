@@ -30,7 +30,7 @@
 
     <ul class=" uk-list uk-list-space">
     <% @maestrias.each do |mt| %>
-		  <li class="uk-link sin-pointer">Maestría en en <%= mt.titulo %></li>
+		  <li class="uk-link sin-pointer">Maestría en <%= mt.titulo %></li>
 		<% end %>
     </ul>
 	<a href=<%= maestrias_path %> class="ver-mas uk-margin-large-bottom uk-button-small">Conoce más</a>
@@ -45,7 +45,7 @@
 
     <ul class=" uk-list uk-list-space">
     <% @doctorados.each do |doc| %>
-		  <li class="uk-link sin-pointer">Doctorado en en <%= doc.titulo %></li>
+		  <li class="uk-link sin-pointer">Doctorado en <%= doc.titulo %></li>
 		<% end %>
     </ul>
 		<a href=<%= doctorados_path %> class="ver-mas uk-margin-large-bottom uk-button-small">Conoce más</a>
