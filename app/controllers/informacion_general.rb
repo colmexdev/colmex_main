@@ -11,7 +11,14 @@ class InformacionGeneralController < ApplicationController
   def documentacion_institucional
     @actas = Documento.where(:tipo => "Junta")
  		@estatutos = Documento.where(:tipo => "Estatuto").first
-		@reglamento = Documento.where(:tipo => "Reglamento").first
+
+  end
+
+  def informacion_para_estudiantes
+    @reglamento = Documento.where(:tipo => "Reglamento")
+    respond_to do |format|
+      format.js
+    end
   end
 
   def actas
