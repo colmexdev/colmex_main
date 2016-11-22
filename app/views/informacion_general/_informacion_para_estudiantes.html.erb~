@@ -1,6 +1,6 @@
 <% @reglamento.each do |d| %>
 
-<div class="wrapper-links-doc"style="margin-left:<%= ('50px' if d.nombre.downcase.include?("Preguntas frecuentes")) || '0px' %>">
+<div class="wrapper-links-doc">
 	<div class="img-link-doc">
 		<a href=<%= d.liga.to_s == "" ? d.archivo.url : d.liga %> target="_blank" class="uk-link"><img src=<%= image_url("documento.png") %> alt="documento" class="documento uk-vertical-align-middle"></a>
 	</div>
