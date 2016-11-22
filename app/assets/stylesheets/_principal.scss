@@ -85,7 +85,7 @@ button:focus{
 
 @-moz-keyframes flip {
 	0% { }
-	100% { -moz-transform: rotateX(0deg); opacity: 1; }
+	100% { -moz-transform: rotateX(0deg); -moz-opacity: 1; }
 }
 
 @-o-keyframes flip {
@@ -1398,6 +1398,7 @@ ul.ul-nav { display: table;
 			font-style: normal;
 			border: solid 4px #fff;
 			opacity: 1;
+			z-index: 2;
 
 			.imagen-descubre{
 				@include centrado;
