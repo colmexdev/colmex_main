@@ -1501,11 +1501,11 @@ ul.ul-nav { display: table;
 							content: "";
 							text-align: right;
 							position: absolute;
-							bottom: 0;
-							right: 0;
-							width: 30%;
+							bottom: 4px;
+							right: 4px;
+							width: 40%;
 							height: 26px;
-							background: linear-gradient(to right, rgba(153,51,102, 0), rgba(153,51,102, 1) 40%);
+							background: linear-gradient(to right, rgba(153,51,102, 0), rgba(153,51,102, 1) 50%);
 						}
 					}
 
