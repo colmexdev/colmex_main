@@ -80,12 +80,12 @@ button:focus{
 
 @-webkit-keyframes flip {
 	0% { }
-	100% { -webkit-transform: rotateX(0deg); opacity: 1; }
+	100% { -webkit-transform: rotateX(0deg); -moz-transform: rotateX(0deg); opacity: 1; }
 }
 
 @-moz-keyframes flip {
 	0% { }
-	100% { -moz-transform: rotateX(0deg); -moz-opacity: 1; }
+	100% { -moz-transform: rotateX(0deg); opacity: 1; }
 }
 
 @-o-keyframes flip {
@@ -95,7 +95,7 @@ button:focus{
 
 @keyframes flip {
 	0% { }
-	100% { -webkit-transform: rotateX(0deg); transform: rotateX(0deg); opacity: 1; }
+	100% { -webkit-transform: rotateX(0deg); -moz-transform: rotateX(0deg); transform: rotateX(0deg); opacity: 1; }
 }
 
 /* Keyframes para unflip (Ocultar) */
