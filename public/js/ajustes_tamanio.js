@@ -28,6 +28,8 @@ $(document).ready(function(){
 
 	recabarAnchos();
   agregarAnaliticos();
+	document.getElementById("tags").value ="x";
+	document.getElementById("tags").value ="";
 	escalarSlider();
 	setTimeout(function(){
 	partirDescubres();
