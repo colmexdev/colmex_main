@@ -28,7 +28,7 @@ $(document).ready(function(){
 
 	recabarAnchos();
   agregarAnaliticos();
-	document.getElementById("tags").onInput();
+	document.getElementById("tags").oninput();
 	escalarSlider();
 	setTimeout(function(){
 	partirDescubres();
