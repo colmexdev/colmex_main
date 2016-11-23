@@ -31,11 +31,7 @@ $(document).ready(function(){
 	escalarSlider();
 	setTimeout(function(){
 	partirDescubres();
-	document.getElementById("tags").value ="1#-s";
-	document.getElementById("tags").oninput();
-	document.getElementById("tags").value ="";
-	document.getElementById("tags").oninput();
-	partirDescubres();
+	$(window).trigger("resize");
 	margenAuto();}, 850);
 	ajustarImagenes();
 
