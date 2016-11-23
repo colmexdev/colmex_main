@@ -28,10 +28,7 @@ $(document).ready(function(){
 
 	recabarAnchos();
   agregarAnaliticos();
-	document.getElementById("tags").value ="x";
-	console.log(document.getElementById("tags").value);
-	document.getElementById("tags").value = "";
-	console.log(document.getElementById("tags").value);
+	document.getElementById("tags").oninput();
 	escalarSlider();
 	setTimeout(function(){
 	partirDescubres();

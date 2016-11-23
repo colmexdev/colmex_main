@@ -98,7 +98,7 @@
 				<% end %>
 				<span class="span-filtros">Filtrar por:</span>
 				<%= select_tag("contenido", options_for_select(contenidos), :include_blank => "Categoría (Todos)", :onchange => "filtrarDescubres();") %>
-				<%= text_field_tag("tags", "", :oninput => "filtrarDescubres();", :placeholder => "Contenido") %>
+				<%= text_field_tag("tags", "", :oninput => "filtrarDescubres();", :onchange => "filtrarDescubres();", :placeholder => "Contenido") %>
 			</div>
 			<div class="wrapper-descubre grid effect-6" id="wrapper">
 				<%= construir_descubre(@descubre) %>
