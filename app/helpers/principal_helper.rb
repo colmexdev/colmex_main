@@ -106,7 +106,7 @@ module PrincipalHelper
     bloque_html = ""
     i = 0;
     descubres.each do |d|
-      bloque_html = bloque_html + "<div class=\"frame-descubre\" id=\"frame-" + i.to_s + "\">"
+      bloque_html = bloque_html + "<div class=\"frame-descubre animate\" id=\"frame-" + i.to_s + "\">"
       if d.imagen.url != "/vacio.jpg"
         bloque_html = bloque_html + ActionController::Base.helpers.image_tag(d.imagen, :class => "imagen-descubre")
       else
