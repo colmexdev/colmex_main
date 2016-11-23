@@ -10,7 +10,7 @@
     </div>
     <div class="uk-width-large-4-6 uk-width-medium-2-5 uk-width-small-3-5 uk-text-left uk-text-break">
     <h3 class="vino"><%= prof.nombre %></h3>
-    <h4><%= convierteCentros(prof.centro) %></h4>
+    <h4><%= (("Centro de Estudios Económicos y " if prof.nombre.include?("Urquidi"))||"") + convierteCentros(prof.centro) %></h4>
     <p><strong>Fecha de nombramiento: </strong><%= l(prof.fecha_anexion, :format => :normal) %></p>
     <p><%= prof.semblanza.to_s == "" ? "" : prof.semblanza.html_safe  %></p>
     </div>
