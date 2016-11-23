@@ -44,7 +44,7 @@
     </div>
     <div class="uk-width-large-2-10 uk-width-medium-2-10 uk-width-small-2-6  uk-text-left">
     <%= image_tag("75aniversario-5.png") %><br>
-    <h6 class="uk-text-break">Edificio de El Colegio de México en la Plaza Río de Janeiro, Colonia Roma</h6>
+    <h6 class="uk-text-break">Edificio de El Colegio de México en Guanajuato 125, Colonia Roma</h6>
     </div>
     </div>
     <hr style="border: 1px solid #7E3355">

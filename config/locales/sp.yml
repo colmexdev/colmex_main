@@ -14,7 +14,7 @@ sp:
         op5: "Profesores eméritos"
         op6: "Premios y distinciones"
         op7: "Licitaciones"
-        op8: "Relación de bienes muebles e inmuebles"
+        op8: "Relación de bienes"
         op9: "Servicios Generales"
     b2:
       texto: "Centros de Estudios"
@@ -27,7 +27,7 @@ sp:
         op6: "CELL"
         op7: "CES"
     b3:
-      texto: "Programas académicos"
+      texto: "Programas docentes"
       opciones:
         op1: "Licenciaturas"
         op2: "Maestrías"
@@ -50,7 +50,7 @@ sp:
     placeholder: "tucorreo@dominio.com"
   descubre: "DESCUBRE"
   footer:
-    liga1: "Principios Éticos"
+    liga1: "Principios éticos"
     liga2: "Aviso de Privacidad"
     liga3: "Directorio Institucional"
     liga4: "Correo electrónico"
