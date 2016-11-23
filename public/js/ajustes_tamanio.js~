@@ -28,10 +28,10 @@ $(document).ready(function(){
 
 	recabarAnchos();
   agregarAnaliticos();
-	document.getElementById("tags").oninput();
 	escalarSlider();
 	setTimeout(function(){
 	partirDescubres();
+	document.getElementById("tags").oninput();
 	margenAuto();}, 850);
 	ajustarImagenes();
 
