@@ -26,7 +26,7 @@
 					<li><a href="http://portal.office.com" target="_blank"><%= t('footer.liga4') %></a></li>
 					<li><a href="http://intranet.colmex.mx/" target="_blank">Intranet</a></li>
 					<% if false %>
-					<li><a href="http://intranet.colmex.mx/directorio/" target="_blank"><%= t('footer.liga3') %></a></li>
+					<li><a href="http://directorio.colmex.mx/" target="_blank"><%= t('footer.liga3') %></a></li>
 					<% end %>
 					<li><a href=<%= sitemap_path %>><%= t('footer.liga6') %></a></li>
 					<li><a href=<%= ubicacion_path %>><%= t('footer.liga5') %></a></li>
