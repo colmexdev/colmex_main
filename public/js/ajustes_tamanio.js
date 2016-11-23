@@ -35,6 +35,7 @@ $(document).ready(function(){
 	document.getElementById("tags").oninput();
 	document.getElementById("tags").value ="";
 	document.getElementById("tags").oninput();
+	partirDescubres();
 	margenAuto();}, 850);
 	ajustarImagenes();
 
