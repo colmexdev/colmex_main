@@ -14,7 +14,7 @@
 			appearance: none;
 			-webkit-appearance: none;
 			-moz-appearance: none;
-			margin: 15px0 10px;
+			margin: 15px 10px;
 			background: image-url("select.png") no-repeat 100% 50%;
 
 			>option{
@@ -31,6 +31,7 @@
 			font-weight: 600;
 			font-size: 15px;
 			padding: 1px 5px;
+			margin: 15px 0;
 		}
 
 		>input::-webkit-input-placeholder { color: #000; }
@@ -41,4 +42,5 @@
 
 #filtro-nombre { text-align: right; }
 #filtro-linea { text-align: left; }
+#filtro-centro { text-align: left; }
 
