@@ -3,7 +3,25 @@
 <%= include_gon %>
 
 <div class="container-fluid" id="resto-cuerpo">
-	<div id="cuerpo" class="principal-chica uk-block-large">
+	<div id="cuerpo">
+
+		<div class="row" id="filtros-dir">
+			<div class="col-md-4" id="filtro-nombre">
+				<%= text_field_tag("nombre", "", :oninput => "filtrarDirectorio();", :placeholder => "Nombre") %>
+			</div>
+			<div class="col-md-4" id="filtro-mail">
+				<%= text_field_tag("correo", "", :oninput => "filtrarDirectorio();", :placeholder => "Correo") %>
+			</div>
+			<div class="col-md-4" id="filtro-linea">
+				<%= text_field_tag("linea", "", :oninput => "filtrarDirectorio();", :placeholder => "Línea de investigación") %>
+			</div>
+
+			<div class="col-xs-12" id="filtro-centro">
+				<%= select_tag("centro", options_for_select([["CEAA", "CEAA"], ["CEDUA","CEDUA"], ["CEE", "CEE"], ["CEH","CEH"], ["CEI","CEI"], ["CELL", "CELL"], ["CES","CES"]]), :include_blank => "Centro de Estudios", :onchange => "filtrarDirectorio();") %>
+			</div>
+		</div>
+
+		<div class="row" 
 
 	</div>
 
