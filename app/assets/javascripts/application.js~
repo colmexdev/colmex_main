@@ -23,3 +23,4 @@
 //= require cursos
 //= require documentos
 //= require sobre_el_colegio
+//= require filtro_directorio
