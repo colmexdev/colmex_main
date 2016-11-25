@@ -139,6 +139,6 @@ class InformacionGeneralController < ApplicationController
   def directorio_academico
     @academicos = Academico.all
 		gon.academicos = @academicos.to_json
-		gon.academicos = @academicos.size
+		gon.academicos_size = @academicos.size
   end 
 end
