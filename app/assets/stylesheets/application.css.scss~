@@ -16,6 +16,7 @@
 @import "bootstrap";
 @import "uikit";
 @import "accordion";
+@import "form-select";
 @import "datepicker";
 @import "principal";
 @import "sobre";

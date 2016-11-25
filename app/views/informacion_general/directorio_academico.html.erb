@@ -6,18 +6,18 @@
 	<div id="cuerpo">
 
 		<div class="row" id="filtros-dir">
-			<div class="col-md-4" id="filtro-nombre">
+			<div class="col-md-4" class="filtro center" id="filtro-nombre">
 				<%= text_field_tag("nombre", "", :oninput => "filtrarDirectorio();", :placeholder => "Nombre") %>
 			</div>
-			<div class="col-md-4" id="filtro-mail">
+			<div class="col-md-4" class="filtro center" id="filtro-mail">
 				<%= text_field_tag("correo", "", :oninput => "filtrarDirectorio();", :placeholder => "Correo") %>
 			</div>
-			<div class="col-md-4" id="filtro-linea">
+			<div class="col-md-4" class="filtro center" id="filtro-linea">
 				<%= text_field_tag("linea", "", :oninput => "filtrarDirectorio();", :placeholder => "Línea de investigación") %>
 			</div>
 
 			<div class="col-xs-12" id="filtro-centro">
-				<%= select_tag("centro", options_for_select([["CEAA", "CEAA"], ["CEDUA","CEDUA"], ["CEE", "CEE"], ["CEH","CEH"], ["CEI","CEI"], ["CELL", "CELL"], ["CES","CES"]]), :include_blank => "Centro de Estudios", :onchange => "filtrarDirectorio();") %>
+				<%= select_tag("contenido", options_for_select([["CEAA", "CEAA"], ["CEDUA","CEDUA"], ["CEE", "CEE"], ["CEH","CEH"], ["CEI","CEI"], ["CELL", "CELL"], ["CES","CES"]]), :include_blank => "Centro de Estudios", :onchange => "filtrarDirectorio();") %>
 			</div>
 		</div>
 
