@@ -137,6 +137,6 @@ class InformacionGeneralController < ApplicationController
   end
 
   def directorio_academico
-    
+    @academicos = Academico.all.to_json
   end 
 end
