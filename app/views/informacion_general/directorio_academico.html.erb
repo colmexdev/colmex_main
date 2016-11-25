@@ -15,7 +15,8 @@
 			<div class="col-md-4 center" id="filtro-linea">
 				<%= text_field_tag("linea", "", :oninput => "filtrarDirectorio();", :placeholder => "Línea de investigación") %>
 			</div>
-
+		</div>
+		<div class="row" style="width:70%;margin:0 auto;">
 			<div class="col-xs-12 center" id="filtro-centro">
 				<%= select_tag("contenido", options_for_select([["CEAA", "CEAA"], ["CEDUA","CEDUA"], ["CEE", "CEE"], ["CEH","CEH"], ["CEI","CEI"], ["CELL", "CELL"], ["CES","CES"]]), :include_blank => "Centro de Estudios", :onchange => "filtrarDirectorio();") %>
 			</div>
