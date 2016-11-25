@@ -31,6 +31,7 @@ $(document).ready(function(){
 	escalarSlider();
 	setTimeout(function(){
 	partirDescubres();
+	$(window).trigger("resize");
 	margenAuto();}, 850);
 	ajustarImagenes();
 
