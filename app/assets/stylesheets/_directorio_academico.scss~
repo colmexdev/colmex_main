@@ -1,5 +1,5 @@
 /* Estilos para el directorio academico */
-.filtro.center { 
+.center { 
 	text-align: center;
  
 		>select{
@@ -14,7 +14,7 @@
 			appearance: none;
 			-webkit-appearance: none;
 			-moz-appearance: none;
-			margin: 0 10px;
+			margin: 15px0 10px;
 			background: image-url("select.png") no-repeat 100% 50%;
 
 			>option{
@@ -38,4 +38,7 @@
 		>input::-moz-placeholder { color: #000; }
 		>input:-ms-input-placeholder { color: #000; }
 }
+
+#filtro-nombre { text-align: right; }
+#filtro-linea { text-align: left; }
 
