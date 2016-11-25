@@ -97,6 +97,8 @@ Rails.application.routes.draw do
 
   get 'informacion_general/unidades_de_apoyo' => 'informacion_general#unidades_de_apoyo', :as => :unidades_de_apoyo
 
+  get 'informacion_general/informacion_para_estudiantes' => 'informacion_general#informacion_para_estudiantes', :as => :info_estudiantes
+
   get 'informacion_general/operativas' => 'informacion_general#operativas', :as => :operativas
 
   get 'informacion_general/premios_y_distinciones' => 'informacion_general#premios_y_distinciones', :as => :premios
