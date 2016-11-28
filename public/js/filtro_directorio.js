@@ -29,8 +29,8 @@ function filtrarDirectorio(){
 function renderFrase(arreglo){
 	uno_visible = false;
 	var borrar_frase = (document.getElementById("frase-desc") != null && arreglo.length > 0);
-	for(var i = 0; i < descubres.length; i++){
-		if(descubres[i]["visible"]){
+	for(var i = 0; i < docentes.length; i++){
+		if(docentes[i]["visible"]){
 			uno_visible = true;
 			break;
 		}
