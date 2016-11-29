@@ -154,7 +154,7 @@ bloque_html = bloque_html + "<a href=\"" + d.liga + "\" " + (d.contenido.mb_char
 
       bloque_html = bloque_html + "<div class=\"uk-width-large-4-6 uk-width-medium-2-5 uk-width-small-3-5 uk-text-left uk-text-break\">"
     	bloque_html = bloque_html + "<h3 class=\"vino\">" + d.nombre + "</h3>"
-    	bloque_html = bloque_html + "<h4>" +" Centro de Estudios " + (d.adscripcion.include?("Asia") ? "de " : "") + d.adscripcion + "</h4>"
+    	bloque_html = bloque_html + "<h4>" +" Centro de Estudios " + (d.adscripcion.include?("Asia") ? "de " : (d.adscripcion.include?("Lingüistico") ? "Lingüísticos y Literarios" : d.adscripcion)) + "</h4>"
 
 
       bloque_html = bloque_html + "</div>"

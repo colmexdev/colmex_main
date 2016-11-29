@@ -18,14 +18,16 @@
 		</div>
 		<div class="row" style="width:70%;margin:0 auto;">
 			<div class="col-xs-12 center" id="filtro-centro">
-				<%= select_tag("contenido", options_for_select([["CEAA", "Asia y África"], ["CEDUA","Demográficos, Urbanos y Ambientales"], ["CEE", "Económicos"], ["CEH","Históricos"], ["CEI","Internacionales"], ["CELL", "Lingüísticos y Literarios"], ["CES","Sociológicos"]]), :include_blank => "Centro de Estudios", :onchange => "filtrarDirectorio();") %>
+				<%= select_tag("contenido", options_for_select([["CEAA", "Asia y África"], ["CEDUA","Demográficos, Urbanos y Ambientales"], ["CEE", "Económicos"], ["CEH","Históricos"], ["CEI","Internacionales"], ["CELL", "Lingüisticos y Literarios"], ["CES","Sociológicos"]]), :include_blank => "Centro de Estudios", :onchange => "filtrarDirectorio();") %>
 			</div>
 		</div>
 
 		<div class="row">
 			<script type="text/javascript" src="../js/accordion.js"></script>
-			<div class="col-xs-12 uk-accordion" id="busqueda" data-uk-accordion>
+			<div class="col-xs-12" id="busqueda">
+				<div class="uk-accordion" data-uk-accordion>
 				<%= construir_docentes(@academicos) %>
+				</div>
 			</div>
 		</div>
 	</div>

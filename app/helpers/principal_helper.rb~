@@ -142,7 +142,7 @@ bloque_html = bloque_html + "<a href=\"" + d.liga + "\" " + (d.contenido.mb_char
   def construir_docentes(docs)
 		bloque_html, i = "", 0
 		docs.each do |d|
-      bloque_html = bloque_html + "<h3 class=\"uk-accordion-title\" id=\"doc-" + i.to_s + "\">" +  construir_encabezado("bt-flechita.png", "bt-flechita-abajo.png", d.nombre) + "</h3>"
+      bloque_html = bloque_html + "<h3 class=\"uk-accordion-title\" id=\"doc-" + i.to_s + "\">" +  raw(construir_encabezado("bt-flechita.png", "bt-flechita-abajo.png", d.nombre)) + "</h3>"
       bloque_html = bloque_html + "<div class=\"uk-accordion-content\">"
 
 
