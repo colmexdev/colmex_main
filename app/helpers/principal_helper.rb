@@ -142,7 +142,28 @@ bloque_html = bloque_html + "<a href=\"" + d.liga + "\" " + (d.contenido.mb_char
   def construir_docentes(docs)
 		bloque_html, i = "", 0
 		docs.each do |d|
-      bloque_html = bloque_html + "<div class=\"acordeon\" id=\"doc-" + i.to_s + "\">" + d.correo + "</div>"
+      bloque_html = bloque_html + "<h3 class=\"uk-accordion-title\" id=\"doc-" + i.to_s + ">" +  construir_encabezado("bt-flechita.png", "bt-flechita-abajo.png", d.nombre) + "</h3>"
+      bloque_html = bloque_html + "<div class=\"uk-accordion-content\">"
+
+
+			bloque_html = bloque_html + "<div class=\"uk-grid uk-grid-medium uk-margin-large-bottom\">"
+
+      bloque_html = bloque_html + "<div class=\"uk-width-large-2-6 uk-width-medium-2-5 uk-width-small-2-5 uk-text-center\">"
+      bloque_html = bloque_html + "<img src=" + image_url(d.foto.url) + " class=\"uk-border-rounded\" alt=\"Foto Académico\">"
+      bloque_html = bloque_html + "</div>"
+
+      bloque_html = bloque_html + "<div class=\"uk-width-large-4-6 uk-width-medium-2-5 uk-width-small-3-5 uk-text-left uk-text-break\">"
+    	bloque_html = bloque_html + "<h3 class=\"vino\">" + d.nombre + "</h3>"
+    	bloque_html = bloque_html + "<h4>" +" Centro de Estudios" + (d.adscripcion.include?("Asia") ? "de " : "") + d.adscripcion + "</h4>"
+
+      bloque_html = bloque_html + "</div>"
+      bloque_html = bloque_html + "</div>"
+			
+				#<ul class="uk-list uk-list-line">
+				#	<li style="margin-bottom: 20px; font-size: 15px;"><%=  p.descripcion %></li>
+				#</ul>
+				#<a href=<%= p.liga %> target="_blank" class="ver-mas uk-margin-large-bottom uk-button-small">Más información</a>
+			bloque_html = bloque_html + "</div>"
       i = i + 1
     end
     return bloque_html.html_safe
