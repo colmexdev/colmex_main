@@ -14,18 +14,8 @@ function partirDirectorio(visibles){
 	var i;
 
 	for(i=0; i<view; i++){
-		$("#separadores").append("<div style=\"margin:0 2px;display:inline-block;\" id=\"sep-" + i + "\">" + i + "</div>");
+		$("#separadores").append("<div style=\"margin:0 2px;display:inline-block;\" id=\"sep-" + i + "\" onclick=\"muestra("+i+")\">" + (i+1) + "</div>");
 	}	
-
-	for(i=0; i<docentes.length; i++){
-		docentes[visibles[i]["index"]]["vista"] = -1;
-		$("#doc-"+visibles[i]["index"]).attr("class","uk-accordion-title");
-	}	
-
-	for(i=0; i<visibles.length; i++){
-		docentes[visibles[i]["index"]]["vista"] = Math.floor(i/15);
-		$("#doc-"+visibles[i]["index"]).attr("class","uk-accordion-title view-"+visibles[i]["index"]);
-	}
 }
 
 
@@ -44,6 +34,7 @@ function filtrarDirectorio(){
 	var academicosFiltradosPorLinea = academicosPorLinea.filter(function(d){ return ( lineasAFiltrar == "" ? true : limpiarPuntuacion(d.toLowerCase()).indexOf(lineasAFiltrar.toLowerCase()) != -1)}).top(Infinity);
 	actualizarVisibleDirectorio(academicosFiltradosPorLinea);
 	renderFrase(academicosFiltradosPorLinea);
+	console.log(academicosFiltradosPorLinea);
 	partirDirectorio(academicosFiltradosPorLinea);
 }
 
@@ -70,12 +61,23 @@ function actualizarVisibleDirectorio(visibles){
 	total = 0;
 	for(var i = 0; i < docentes.length; i++){
 		docentes[i]["visible"] = false;
+		docentes[i]["vista"] = -1;
+		$("#doc-"+i).attr("class","uk-accordion-title");
 	}
 	for(var i = 0; i < visibles.length; i++){
 		docentes[visibles[i]["index"]]["visible"] = true;
+		docentes[visibles[i]["index"]]["vista"] = Math.floor(i/15);
+		$("#doc-"+visibles[i]["index"]).attr("class","uk-accordion-title view-"+visibles[i]["index"]);
 		total = total + 1;
 	}
 	reescalarDirectorio();
+}
+
+function muestra(pag){
+	var i;
+	for(i=0;i<docentes.length;i++){
+		$("#doc-"+i).css({"display": (docentes[i]["vista"] == pag ? "block" : "none")
+	}
 }
 
 function reescalarDirectorio(){
