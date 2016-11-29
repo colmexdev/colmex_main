@@ -21,7 +21,7 @@ function filtrarDirectorio(){
 	var academicosFiltradosPorCorreo = academicosPorCorreo.filter(function(d){ return (correosAFiltrar == "" ? true : limpiarPuntuacion(d.toLowerCase()).indexOf(correosAFiltrar.toLowerCase()) != -1)}).top(Infinity);
 	var academicosFiltradosPorLinea = academicosPorLinea.filter(function(d){ return ( lineasAFiltrar == "" ? true : limpiarPuntuacion(d.toLowerCase()).indexOf(lineasAFiltrar.toLowerCase()) != -1)}).top(Infinity);
 	actualizarVisibleDirectorio(academicosFiltradosPorLinea);
-	//renderFrase(academicosFiltradosPorLinea);
+	renderFrase(academicosFiltradosPorLinea);
 	//$("#wrapper").css({"height" : "auto", "padding-bottom" : "45px" });
 	//$("#cutter-descubre").css("display","none");
 }

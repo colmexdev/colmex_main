@@ -154,15 +154,13 @@ bloque_html = bloque_html + "<a href=\"" + d.liga + "\" " + (d.contenido.mb_char
 
       bloque_html = bloque_html + "<div class=\"uk-width-large-4-6 uk-width-medium-2-5 uk-width-small-3-5 uk-text-left uk-text-break\">"
     	bloque_html = bloque_html + "<h3 class=\"vino\">" + d.nombre + "</h3>"
-    	bloque_html = bloque_html + "<h4>" +" Centro de Estudios" + (d.adscripcion.include?("Asia") ? "de " : "") + d.adscripcion + "</h4>"
+    	bloque_html = bloque_html + "<h4>" +" Centro de Estudios " + (d.adscripcion.include?("Asia") ? "de " : "") + d.adscripcion + "</h4>"
+
 
       bloque_html = bloque_html + "</div>"
       bloque_html = bloque_html + "</div>"
 			
-				#<ul class="uk-list uk-list-line">
-				#	<li style="margin-bottom: 20px; font-size: 15px;"><%=  p.descripcion %></li>
-				#</ul>
-				#<a href=<%= p.liga %> target="_blank" class="ver-mas uk-margin-large-bottom uk-button-small">Más información</a>
+
 			bloque_html = bloque_html + "</div>"
       i = i + 1
     end
