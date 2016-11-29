@@ -57,7 +57,7 @@ function actualizarVisibleDirectorio(visibles){
 
 function reescalarDirectorio(){
 	for(var i = 0; i < docentes.length; i++){
-		$("#frame-"+i).css({"height": (docentes[i]["visible"] ? ajustarAlturas(i) : "0")/*, "width" : (descubres[i]["visible"] ? "" : 0), "border" : (descubres[i]["visible"] ? "solid 4px #fff" : "none") */});
+		$("#doc-"+i).css({"height": (docentes[i]["visible"] ? ajustarAlturas(i) : "0")/*, "width" : (descubres[i]["visible"] ? "" : 0), "border" : (descubres[i]["visible"] ? "solid 4px #fff" : "none") */});
 	}
 }
 
