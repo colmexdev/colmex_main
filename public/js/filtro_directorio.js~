@@ -5,6 +5,21 @@ academicosPorNombre = data.dimension(function(d){ return d["nombre"]});
 academicosPorCorreo = data.dimension(function(d){return d["correo"]});
 academicosPorLinea = data.dimension(function(d){ return d["lineas_investigacion"]});
 academicosPorCentro = data.dimension(function(d){ return d["adscripcion"]});
+vista = 0;
+total = 0;
+
+function partirDirectorio(visibles){
+	var apartados;
+	var i = Math.floor(visibles.length/15);
+	for(i=0; i<docentes.length; i++){
+		docentes[visibles[i]["index"]]["vista"] = -1;
+		$("#doc-"+i).attr("class","uk-accordion-title ");
+	}	
+	for(i=0; i<visibles.length; i++){
+		docentes[visibles[i]["index"]]["vista"] = Math.floor(i/15);
+		$("#separadores").append("<div style=\"margin:0 2px;display:inline-block;\" id=\"sep-" + i + "\">" + i + "</div>");
+	}
+}
 
 
 function filtrarDirectorio(){
@@ -21,7 +36,7 @@ function filtrarDirectorio(){
 	var academicosFiltradosPorCorreo = academicosPorCorreo.filter(function(d){ return (correosAFiltrar == "" ? true : limpiarPuntuacion(d.toLowerCase()).indexOf(correosAFiltrar.toLowerCase()) != -1)}).top(Infinity);
 	var academicosFiltradosPorLinea = academicosPorLinea.filter(function(d){ return ( lineasAFiltrar == "" ? true : limpiarPuntuacion(d.toLowerCase()).indexOf(lineasAFiltrar.toLowerCase()) != -1)}).top(Infinity);
 	actualizarVisibleDirectorio(academicosFiltradosPorLinea);
-	//renderFrase(academicosFiltradosPorLinea);
+	renderFrase(academicosFiltradosPorLinea);
 	//$("#wrapper").css({"height" : "auto", "padding-bottom" : "45px" });
 	//$("#cutter-descubre").css("display","none");
 }
@@ -46,11 +61,13 @@ function renderFrase(arreglo){
 }
 
 function actualizarVisibleDirectorio(visibles){
+	total = 0;
 	for(var i = 0; i < docentes.length; i++){
 		docentes[i]["visible"] = false;
 	}
 	for(var i = 0; i < visibles.length; i++){
 		docentes[visibles[i]["index"]]["visible"] = true;
+		total = total + 1;
 	}
 	reescalarDirectorio();
 }
@@ -74,6 +91,7 @@ function agregarVisible(doc){
 	for(var i = 0; i < doc.length; i++){
 		doc[i]["visible"] = true;
 		doc[i]["index"] = i;
+		doc[i]["vista"] = -1;
 	}
 }
 

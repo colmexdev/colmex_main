@@ -5,6 +5,28 @@ academicosPorNombre = data.dimension(function(d){ return d["nombre"]});
 academicosPorCorreo = data.dimension(function(d){return d["correo"]});
 academicosPorLinea = data.dimension(function(d){ return d["lineas_investigacion"]});
 academicosPorCentro = data.dimension(function(d){ return d["adscripcion"]});
+vista = 0;
+total = 0;
+
+function partirDirectorio(visibles){
+	var apartados;
+	var view = Math.floor(visibles.length/15);
+	var i;
+
+	for(i=0; i<view; i++){
+		$("#separadores").append("<div style=\"margin:0 2px;display:inline-block;\" id=\"sep-" + i + "\">" + i + "</div>");
+	}	
+
+	for(i=0; i<docentes.length; i++){
+		docentes[visibles[i]["index"]]["vista"] = -1;
+		$("#doc-"+visibles[i]["index"]).attr("class","uk-accordion-title");
+	}	
+
+	for(i=0; i<visibles.length; i++){
+		docentes[visibles[i]["index"]]["vista"] = Math.floor(i/15);
+		$("#doc-"+visibles[i]["index"]).attr("class","uk-accordion-title view-"+visibles[i]["index"]);
+	}
+}
 
 
 function filtrarDirectorio(){
@@ -46,11 +68,13 @@ function renderFrase(arreglo){
 }
 
 function actualizarVisibleDirectorio(visibles){
+	total = 0;
 	for(var i = 0; i < docentes.length; i++){
 		docentes[i]["visible"] = false;
 	}
 	for(var i = 0; i < visibles.length; i++){
 		docentes[visibles[i]["index"]]["visible"] = true;
+		total = total + 1;
 	}
 	reescalarDirectorio();
 }
@@ -74,6 +98,7 @@ function agregarVisible(doc){
 	for(var i = 0; i < doc.length; i++){
 		doc[i]["visible"] = true;
 		doc[i]["index"] = i;
+		doc[i]["vista"] = -1;
 	}
 }
 
