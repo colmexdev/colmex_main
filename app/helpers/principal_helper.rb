@@ -138,4 +138,13 @@ bloque_html = bloque_html + "<a href=\"" + d.liga + "\" " + (d.contenido.mb_char
     cad_plural = {"Artículo de investigación" => "Artículos de investigación", "Curso" => "Cursos", "Video" => "Videos", "Convocatoria" => "Convocatorias", "Premio" => "Premios", "Artículo de opinión" => "Artículos de opinión", "Novedad editorial" => "Novedades editoriales", "Proyecto de investigación" => "Proyectos de investigación", "Anuncio" => "Anuncios", "Podcast" => "Podcasts", "iTunes U" => "iTunes U"}
     return cad_plural[categoria]
   end
+
+  def construir_docentes(docs)
+		bloque_html, i = "", 0
+		docs.each do |d|
+      bloque_html = bloque_html + "<div class=\"acordeon\" id=\"doc-" + i.to_s + "\">" + d.correo + "</div>"
+      i = i + 1
+    end
+    return bloque_html.html_safe
+  end
 end
