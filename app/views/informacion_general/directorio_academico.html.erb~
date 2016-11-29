@@ -24,7 +24,7 @@
 
 		<div class="row">
 			<div class="col-xs-12" id="busqueda">
-				<%= construir_docentes(docentes) %>
+				<%= construir_docentes(@academicos) %>
 			</div>
 		</div>
 	</div>
