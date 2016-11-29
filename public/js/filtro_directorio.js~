@@ -44,8 +44,7 @@ function filtrarDirectorio(){
 	var academicosFiltradosPorLinea = academicosPorLinea.filter(function(d){ return ( lineasAFiltrar == "" ? true : limpiarPuntuacion(d.toLowerCase()).indexOf(lineasAFiltrar.toLowerCase()) != -1)}).top(Infinity);
 	actualizarVisibleDirectorio(academicosFiltradosPorLinea);
 	renderFrase(academicosFiltradosPorLinea);
-	//$("#wrapper").css({"height" : "auto", "padding-bottom" : "45px" });
-	//$("#cutter-descubre").css("display","none");
+	partirDescubre(academicosFiltradosPorLinea);
 }
 
 function renderFrase(arreglo){
