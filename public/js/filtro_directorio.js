@@ -12,7 +12,7 @@ function partirDirectorio(visibles){
 	var apartados;
 	var view = Math.floor(visibles.length/15);
 	var i;
-
+	$("#separadores").html("");
 	for(i=0; i<view; i++){
 		$("#separadores").append("<div style=\"margin:0 2px;display:inline-block;\" id=\"sep-" + i + "\" onclick=\"muestra("+i+")\">" + (i+1) + "</div>");
 	}	
