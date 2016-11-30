@@ -95,12 +95,10 @@ function muestra(pag){
 		}
 		pag = vista_act;
 	}
-	else{
-		for(i=0; i<=vistas; i++){
-			$("#sep-"+i).css({"color":"#909090"});
-		}
-		vista_act = pag;
+	for(i=0; i<=vistas; i++){
+		$("#sep-"+i).css({"color":"#909090"});
 	}
+	vista_act = pag;
 
 	for(i=0;i<docentes.length;i++){
 		$("#doc-"+i).css({"display": (docentes[i]["vista"] == pag ? "block" : "none")});
