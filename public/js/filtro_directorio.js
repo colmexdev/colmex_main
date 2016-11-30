@@ -14,7 +14,7 @@ function partirDirectorio(visibles){
 	var i;
 	$("#separadores").html("");
 	for(i=0; i<view; i++){
-		$("#separadores").append("<div style=\"margin:0 2px;display:inline-block;cursor:pointer;\" id=\"sep-" + i + "\" onclick=\"muestra("+i+")\">" + (i+1) + "</div>");
+		$("#separadores").append("<div style=\"margin:0 2px;display:inline-block;cursor:pointer;font-size:24px;color:#909090; \" id=\"sep-" + i + "\" onclick=\"muestra("+i+")\">" + (i+1) + "</div>");
 	}
 	muestra(0);
 }
@@ -76,8 +76,9 @@ function actualizarVisibleDirectorio(visibles){
 function muestra(pag){
 	var i;
 	for(i=0;i<docentes.length;i++){
-		$("#doc-"+i).css({"display": (docentes[i]["vista"] == pag ? "block" : "none"), "font-size": "24px", "color": (i == pag ? "#993366" : "909090" )});
+		$("#doc-"+i).css({"display": (docentes[i]["vista"] == pag ? "block" : "none")});
 	}
+	$("#sep-"+pag).css({"color": "#993366"});
 }
 
 function reescalarDirectorio(){
