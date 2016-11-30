@@ -10,7 +10,7 @@ total = 0;
 
 function partirDirectorio(visibles){
 	var apartados;
-	vistas = Math.floor(visibles.length/15);
+	vistas = Math.floor(visibles.length/16);
 	var i;
 	$("#separadores").html("");
 	for(i=0; i<vistas; i++){
@@ -79,7 +79,7 @@ function muestra(pag){
 		$("#doc-"+i).css({"display": (docentes[i]["vista"] == pag ? "block" : "none")});
 	}
 	for(i=0;i<vistas;i++){
-		S("#sep-"+i).css({"color":"#909090"});
+		$("#sep-"+i).css({"color":"#909090"});
 	}
 	$("#sep-"+pag).css({"color": "#993366"});
 }
