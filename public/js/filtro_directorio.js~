@@ -81,8 +81,27 @@ function muestra(pag){
 		$("#doc-"+i).css({"display": (docentes[i]["vista"] == pag ? "block" : "none")});
 	}
 	
-	for(i=0;i<=vistas;i++){
-		$("#sep-"+i).css({"color":"#909090"});
+	if(pag == "ant"){
+		vista_act = vista_act - 1;
+		if(vista_act < 0){
+			vista_act = 0;
+			$("#sep-ant").css({"cursor": "auto"});
+		}
+		pag = vista_act;
+	}
+	else if(pag == "sig"){
+		vista_act = vista_act + 1;
+		if(vista_act > vistas){
+			vista_act = vistas;
+			$("#sep-sig").css({"cursor": "auto"});
+		}
+		pag = vista_act;
+	}
+	else{
+		for(i=0; i<=vistas; i++){
+			$("#sep-"+i).css({"color":"#909090"});
+		}
+		vista_act = pag;
 	}
 	$("#sep-"+pag).css({"color": "#993366"});
 }
