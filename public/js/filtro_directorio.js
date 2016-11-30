@@ -79,7 +79,7 @@ function muestra(pag){
 		$("#doc-"+i).css({"display": (docentes[i]["vista"] == pag ? "block" : "none")});
 	}
 	for(i=0;i<vistas;i++){
-		S("#sep-"+i).css({"color":"#909090"});
+		$("#sep-"+i).css({"color":"#909090"});
 	}
 	$("#sep-"+pag).css({"color": "#993366"});
 }

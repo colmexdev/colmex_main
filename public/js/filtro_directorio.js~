@@ -5,15 +5,15 @@ academicosPorNombre = data.dimension(function(d){ return d["nombre"]});
 academicosPorCorreo = data.dimension(function(d){return d["correo"]});
 academicosPorLinea = data.dimension(function(d){ return d["lineas_investigacion"]});
 academicosPorCentro = data.dimension(function(d){ return d["adscripcion"]});
-vista = 0;
+vistas = 0;
 total = 0;
 
 function partirDirectorio(visibles){
 	var apartados;
-	var view = Math.floor(visibles.length/15);
+	vistas = Math.floor(visibles.length/15);
 	var i;
 	$("#separadores").html("");
-	for(i=0; i<view; i++){
+	for(i=0; i<vistas; i++){
 		$("#separadores").append("<div style=\"margin:0 2px;display:inline-block;cursor:pointer;font-size:24px;color:#909090; \" id=\"sep-" + i + "\" onclick=\"muestra("+i+")\">" + (i+1) + "</div>");
 	}
 	muestra(0);
@@ -77,6 +77,9 @@ function muestra(pag){
 	var i;
 	for(i=0;i<docentes.length;i++){
 		$("#doc-"+i).css({"display": (docentes[i]["vista"] == pag ? "block" : "none")});
+	}
+	for(i=0;i<vistas;i++){
+		S("#sep-"+i).css({"color":"#909090"});
 	}
 	$("#sep-"+pag).css({"color": "#993366"});
 }
