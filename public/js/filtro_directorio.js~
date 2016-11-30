@@ -12,10 +12,11 @@ function partirDirectorio(visibles){
 	var apartados;
 	var view = Math.floor(visibles.length/15);
 	var i;
-
+	$("#separadores").html("");
 	for(i=0; i<view; i++){
 		$("#separadores").append("<div style=\"margin:0 2px;display:inline-block;\" id=\"sep-" + i + "\" onclick=\"muestra("+i+")\">" + (i+1) + "</div>");
-	}	
+	}
+	muestra(0);
 }
 
 
@@ -34,7 +35,6 @@ function filtrarDirectorio(){
 	var academicosFiltradosPorLinea = academicosPorLinea.filter(function(d){ return ( lineasAFiltrar == "" ? true : limpiarPuntuacion(d.toLowerCase()).indexOf(lineasAFiltrar.toLowerCase()) != -1)}).top(Infinity);
 	actualizarVisibleDirectorio(academicosFiltradosPorLinea);
 	renderFrase(academicosFiltradosPorLinea);
-	console.log(academicosFiltradosPorLinea);
 	partirDirectorio(academicosFiltradosPorLinea);
 }
 
