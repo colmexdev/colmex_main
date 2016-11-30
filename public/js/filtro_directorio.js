@@ -97,7 +97,7 @@ function limpiarPuntuacion(tags){
 
 function agregarVisible(doc){
 	for(var i = 0; i < doc.length; i++){
-		doc[i]["visible"] = true;
+		doc[i]["visible"] = false;
 		doc[i]["index"] = i;
 		doc[i]["vista"] = -1;
 	}

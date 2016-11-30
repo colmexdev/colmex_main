@@ -14,7 +14,7 @@ function partirDirectorio(visibles){
 	var i;
 	$("#separadores").html("");
 	for(i=0; i<view; i++){
-		$("#separadores").append("<div style=\"margin:0 2px;display:inline-block;\" id=\"sep-" + i + "\" onclick=\"muestra("+i+")\">" + (i+1) + "</div>");
+		$("#separadores").append("<div style=\"margin:0 2px;display:inline-block;cursor:pointer;\" id=\"sep-" + i + "\" onclick=\"muestra("+i+")\">" + (i+1) + "</div>");
 	}
 	muestra(0);
 }
@@ -65,7 +65,7 @@ function actualizarVisibleDirectorio(visibles){
 		$("#doc-"+i).attr("class","uk-accordion-title");
 	}
 	for(var i = 0; i < visibles.length; i++){
-		docentes[visibles[i]["index"]]["visible"] = true;
+		docentes[visibles[i]["index"]]["visible"] = false;
 		docentes[visibles[i]["index"]]["vista"] = Math.floor(i/15);
 		$("#doc-"+visibles[i]["index"]).attr("class","uk-accordion-title view-"+visibles[i]["index"]);
 		total = total + 1;
