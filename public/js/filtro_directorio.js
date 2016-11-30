@@ -7,15 +7,17 @@ academicosPorLinea = data.dimension(function(d){ return d["lineas_investigacion"
 academicosPorCentro = data.dimension(function(d){ return d["adscripcion"]});
 vistas = 0;
 total = 0;
+vista_act = 0;
 
 function partirDirectorio(visibles){
 	var apartados;
 	vistas = Math.floor(visibles.length/15);
 	var i;
-	$("#separadores").html("");
+	$("#separadores").html("<div style=\"margin:0 2px;display:inline-block;cursor:pointer;font-size:24px;color:#909090; \" id=\"sep-ant\" onclick=\"muestra("+"ant"+")\">" + "<" + "</div>"");
 	for(i=0; i<=vistas; i++){
 		$("#separadores").append("<div style=\"margin:0 2px;display:inline-block;cursor:pointer;font-size:24px;color:#909090; \" id=\"sep-" + i + "\" onclick=\"muestra("+i+")\">" + (i+1) + "</div>");
 	}
+	$("#separadores").html("<div style=\"margin:0 2px;display:inline-block;cursor:pointer;font-size:24px;color:#909090; \" id=\"sep-sig\" onclick=\"muestra("+"sig"+")\">" + ">" + "</div>"");
 	muestra(0);
 }
 
@@ -78,8 +80,28 @@ function muestra(pag){
 	for(i=0;i<docentes.length;i++){
 		$("#doc-"+i).css({"display": (docentes[i]["vista"] == pag ? "block" : "none")});
 	}
-	for(i=0;i<=vistas;i++){
-		$("#sep-"+i).css({"color":"#909090"});
+	
+	if(pag == "ant"){
+		vista_act = vista_act - 1;
+		if(vista_act < 0){
+			vista_act = 0;
+			$("#sep-ant").css({"cursor": "auto"});
+		}
+		pag = vista_act;
+	}
+	else if(pag == "sig"){
+		vista_act = vista_act + 1;
+		if(vista_act > vistas){
+			vista_act = vistas;
+			$("#sep-sig").css({"cursor": "auto"});
+		}
+		pag = vista_act;
+	}
+	else{
+		for(i=0; i<=vistas; i++){
+			$("#sep-"+i).css({"color":"#909090"});
+		}
+		vista_act = pag;
 	}
 	$("#sep-"+pag).css({"color": "#993366"});
 }
