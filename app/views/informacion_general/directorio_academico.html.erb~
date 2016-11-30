@@ -30,6 +30,8 @@
 				</div>
 			</div>
 		</div>
+		<div id="separadores" style="text-align:center;margin:10px auto;">
+		</div>
 	</div>
 
 <script type="text/javascript" src="../js/filtro_directorio.js"></script>

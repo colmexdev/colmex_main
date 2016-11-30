@@ -76,7 +76,7 @@ function actualizarVisibleDirectorio(visibles){
 function muestra(pag){
 	var i;
 	for(i=0;i<docentes.length;i++){
-		$("#doc-"+i).css({"display": (docentes[i]["vista"] == pag ? "block" : "none")});
+		$("#doc-"+i).css({"display": (docentes[i]["vista"] == pag ? "block" : "none"), "font-size": "24px", "color": (i == pag ? "#993366" : "909090" )});
 	}
 }
 

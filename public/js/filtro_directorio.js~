@@ -65,7 +65,7 @@ function actualizarVisibleDirectorio(visibles){
 		$("#doc-"+i).attr("class","uk-accordion-title");
 	}
 	for(var i = 0; i < visibles.length; i++){
-		docentes[visibles[i]["index"]]["visible"] = false;
+		docentes[visibles[i]["index"]]["visible"] = true;
 		docentes[visibles[i]["index"]]["vista"] = Math.floor(i/15);
 		$("#doc-"+visibles[i]["index"]).attr("class","uk-accordion-title view-"+visibles[i]["index"]);
 		total = total + 1;
@@ -76,8 +76,9 @@ function actualizarVisibleDirectorio(visibles){
 function muestra(pag){
 	var i;
 	for(i=0;i<docentes.length;i++){
-		$("#doc-"+i).css({"display": (docentes[i]["vista"] == pag ? "block" : "none")});
+		$("#doc-"+i).css({"display": (docentes[i]["vista"] == pag ? "block" : "none"), "font-size": "24px"});
 	}
+	$("#doc-"+pag).css({"color": "#993366"});
 }
 
 function reescalarDirectorio(){
@@ -97,7 +98,7 @@ function limpiarPuntuacion(tags){
 
 function agregarVisible(doc){
 	for(var i = 0; i < doc.length; i++){
-		doc[i]["visible"] = true;
+		doc[i]["visible"] = false;
 		doc[i]["index"] = i;
 		doc[i]["vista"] = -1;
 	}
