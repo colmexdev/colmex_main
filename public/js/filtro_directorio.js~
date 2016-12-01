@@ -53,7 +53,7 @@ function renderFrase(arreglo){
 	if(!uno_visible){
 		setTimeout(function(){
 			$("#frase-desc").remove();
-			$("#busqueda").append("<div id=\"frase-desc\">Ningún contenido coincide con su búsqueda.</div>");}, 850);
+			$("#busqueda").append("<div id=\"frase-desc\">Ningún contenido coincide con su búsqueda.</div>");}, 50);
 	}	
 	else{
 		$("#frase-desc").remove();
@@ -95,12 +95,10 @@ function muestra(pag){
 		}
 		pag = vista_act;
 	}
-	else{
-		for(i=0; i<=vistas; i++){
-			$("#sep-"+i).css({"color":"#909090"});
-		}
-		vista_act = pag;
+	for(i=0; i<=vistas; i++){
+		$("#sep-"+i).css({"color":"#909090"});
 	}
+	vista_act = pag;
 
 	for(i=0;i<docentes.length;i++){
 		$("#doc-"+i).css({"display": (docentes[i]["vista"] == pag ? "block" : "none")});

@@ -53,7 +53,7 @@ function renderFrase(arreglo){
 	if(!uno_visible){
 		setTimeout(function(){
 			$("#frase-desc").remove();
-			$("#busqueda").append("<div id=\"frase-desc\">Ningún contenido coincide con su búsqueda.</div>");}, 850);
+			$("#busqueda").append("<div id=\"frase-desc\">Ningún contenido coincide con su búsqueda.</div>");}, 50);
 	}	
 	else{
 		$("#frase-desc").remove();
@@ -83,6 +83,7 @@ function muestra(pag){
 		if(vista_act < 0){
 			vista_act = 0;
 			$("#sep-ant").css({"cursor": "auto"});
+			$("#sep-sig").css({"cursor": "pointer"});	
 		}
 		pag = vista_act;
 	}
@@ -91,10 +92,16 @@ function muestra(pag){
 
 		if(vista_act > vistas){
 			vista_act = vistas;
+			$("#sep-ant").css({"cursor": "pointer"});
 			$("#sep-sig").css({"cursor": "auto"});
 		}
 		pag = vista_act;
 	}
+	else{
+			$("#sep-ant").css({"cursor": "pointer"});
+			$("#sep-sig").css({"cursor": "pointer"});
+	}
+
 	for(i=0; i<=vistas; i++){
 		$("#sep-"+i).css({"color":"#909090"});
 	}
