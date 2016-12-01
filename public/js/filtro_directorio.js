@@ -78,28 +78,49 @@ function actualizarVisibleDirectorio(visibles){
 
 function muestra(pag){
 	var i;
-	if(pag == "ant"){
+
+	if(vistas == 0){
+		$("#sep-ant").css({"cursor": "default"});
+		$("#sep-sig").css({"cursor": "default"});
+	}
+
+	else if(pag == "ant"){
 		vista_act = vista_act - 1;
+
+		$("#sep-ant").css({"cursor": "pointer"});
+		$("#sep-sig").css({"cursor": "pointer"});
 		if(vista_act < 0){
 			vista_act = 0;
-			$("#sep-ant").css({"cursor": "auto"});
-			$("#sep-sig").css({"cursor": "pointer"});	
+			$("#sep-ant").css({"cursor": "default"});
 		}
 		pag = vista_act;
 	}
+
 	else if(pag == "sig"){
 		vista_act = vista_act + 1;
 
+		$("#sep-ant").css({"cursor": "pointer"});
+		$("#sep-sig").css({"cursor": "pointer"});
 		if(vista_act > vistas){
 			vista_act = vistas;
-			$("#sep-ant").css({"cursor": "pointer"});
-			$("#sep-sig").css({"cursor": "auto"});
+			$("#sep-sig").css({"cursor": "default"});
 		}
 		pag = vista_act;
 	}
+
 	else{
+		if(pag == 0){
+			$("#sep-ant").css({"cursor": "default"});
+			$("#sep-sig").css({"cursor": "pointer"});
+		}
+		else if(pag == vistas){
+			$("#sep-ant").css({"cursor": "pointer"});
+			$("#sep-sig").css({"cursor": "default"});
+		}
+		else{
 			$("#sep-ant").css({"cursor": "pointer"});
 			$("#sep-sig").css({"cursor": "pointer"});
+		}
 	}
 
 	for(i=0; i<=vistas; i++){
