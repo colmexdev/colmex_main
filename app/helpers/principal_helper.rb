@@ -18,6 +18,9 @@ module PrincipalHelper
 
   def construye_slider_eventos(sliders)
     bloque_html, bloque_opt_html, bloque_tiny_html = "", "", ""
+    if sliders == 0
+      return bloque_html, bloque_opt_html, bloque_tiny_html
+    end
     slides = (sliders.each.length / 4).ceil
     if slides == 0
       slides = 1 
@@ -143,7 +146,7 @@ bloque_html = bloque_html + "<a href=\"" + d.liga + "\" " + (d.contenido.mb_char
 		bloque_html, i = "", 0
 		docs.each do |d|
       bloque_html = bloque_html + "<h3 class=\"uk-accordion-title\" id=\"doc-" + i.to_s + "\">" +  raw(construir_encabezado("bt-flechita.png", "bt-flechita-abajo.png", d.nombre)) + "</h3>"
-      bloque_html = bloque_html + "<div class=\"uk-accordion-content\">"
+      bloque_html = bloque_html + "<div id=\"cont-" + i.to_s + "\" class=\"uk-accordion-content\">"
 
 
 			bloque_html = bloque_html + "<div class=\"uk-grid uk-grid-medium uk-margin-large-bottom\">"
@@ -154,7 +157,7 @@ bloque_html = bloque_html + "<a href=\"" + d.liga + "\" " + (d.contenido.mb_char
 
       bloque_html = bloque_html + "<div class=\"uk-width-large-5-6 uk-width-medium-4-5 uk-width-small-4-5 uk-text-left uk-text-break\">"
     	bloque_html = bloque_html + "<h3 class=\"vino\">" + d.nombre + "</h3>"
-    	bloque_html = bloque_html + "<h4>" +" Centro de Estudios " + (d.adscripcion.include?("Asia") ? "de " : (d.adscripcion.include?("Lingüistico") ? "Lingüísticos y Literarios" : d.adscripcion)) + "</h4>"
+    	bloque_html = bloque_html + "<h4>" +" Centro de Estudios " + (d.adscripcion.include?("Asia") ? "de " + d.adscripcion : (d.adscripcion.include?("Lingüistico") ? "Lingüísticos y Literarios" : d.adscripcion)) + "</h4>"
 			bloque_html = bloque_html + "<h5>" + "Temas de investigación: " + d.lineas_investigacion + "</h5>"
 
 
