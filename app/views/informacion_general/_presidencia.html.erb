@@ -23,8 +23,8 @@
 					<% @asociados.each do |a| %>
 					<div class="uk-grid uk-grid-medium uk-margin-large-bottom">
 						<div class="uk-width-1-1 uk-vertical-align-middle uk-text-left uk-text-break">
-							<h4><%= p.nombre %></h4>
-							<h3 class="vino"><%= p.cargo.html_safe %></h3>
+							<h4><%= a.nombre %></h4>
+							<h3 class="vino"><%= a.cargo.html_safe %></h3>
 						</div>
 					</div>
 					<% end %>
