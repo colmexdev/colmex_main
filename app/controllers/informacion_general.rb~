@@ -137,7 +137,7 @@ class InformacionGeneralController < ApplicationController
   end
 
   def directorio_academico
-    @academicos = Academico.all
+    @academicos = Academico.order(nombre: :desc).all
 		gon.academicos = @academicos.to_json
 		gon.academicos_size = @academicos.size
   end 
