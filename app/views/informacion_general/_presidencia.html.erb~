@@ -1,23 +1,21 @@
+<% @presidencias.each do |p| %>
+<div class="uk-grid uk-grid-medium uk-margin-large-bottom">
+	<div class="uk-width-2-6 uk-text-center">
+		<img src=<%= p.foto.url %> class="uk-border-rounded" alt="Foto miembro Presidencia">
+	</div>
+	<div class="uk-width-4-6 uk-vertical-align-middle uk-text-left uk-text-break">
+		<h4><%= p.cargo.mb_chars.upcase %></h4>
+		<h3 class="vino"><%= p.nombre %></h3>
+		<p class="izq-align">Correo electrónico: <a class="uk-link" href="mailto:<%= p.correo %>"><%= p.correo %></a></p>
+		<p class="izq-align">Teléfono: <%= p.telefono %></p>
+		<p class="izq-align">Extensión: <%= p.extension %></p>
+	</div>
+</div>
+<% end %>
+
 <script type="text/javascript" src="../js/accordion.js"></script>
 		<div class="acordeon-premios">
 			<div class="uk-accordion" data-uk-accordion>
-				<h3 class="uk-accordion-title"><%= construir_encabezado("bt-flechita.png", "bt-flechita-abajo.png", "Presidencia") %></h3>
-				<div class="uk-accordion-content">
-					<% @presidencias.each do |p| %>
-					<div class="uk-grid uk-grid-medium uk-margin-large-bottom">
-						<div class="uk-width-2-6 uk-text-center">
-							<img src=<%= p.foto.url %> class="uk-border-rounded" alt="Foto miembro Presidencia">
-						</div>
-						<div class="uk-width-4-6 uk-vertical-align-middle uk-text-left uk-text-break">
-							<h4><%= p.cargo.mb_chars.upcase %></h4>
-							<h3 class="vino"><%= p.nombre %></h3>
-							<p class="izq-align">Correo electrónico: <a class="uk-link" href="mailto:<%= p.correo %>"><%= p.correo %></a></p>
-							<p class="izq-align">Teléfono: <%= p.telefono %></p>
-							<p class="izq-align">Extensión: <%= p.extension %></p>
-						</div>
-					</div>
-					<% end %>
-				</div>
 				<h3 class="uk-accordion-title"><%= construir_encabezado("bt-flechita.png", "bt-flechita-abajo.png", "Profesores e Investigadores Asociados a Presidencia") %></h3>
 				<div class="uk-accordion-content">
 					<% @asociados.each do |a| %>
