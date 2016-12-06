@@ -12,7 +12,7 @@ class Personal < ActiveRecord::Base
   validates :extension, presence: true, if: "seccion != 'Junta'"
   validates_attachment_presence :foto, if: "seccion == 'Presidencia' or seccion == 'Centros'"
   validates :depto, presence: true, if: "seccion == 'Centros' or (seccion == 'Operativas' and cargo.blank?)"
-  validates :cargo, presence: true, if: "(seccion == 'Operativas' and depto.blank? ) or seccion == 'Administracion' or seccion == 'Presidencia'"
+  validates :cargo, presence: true, if: "(seccion == 'Operativas' and depto.blank? ) or seccion == 'Administración' or seccion == 'Presidencia'"
  
 
   validates_attachment_content_type :foto, :content_type => ['image/jpeg', 'image/png', 'image/jpg']
