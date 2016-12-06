@@ -18,7 +18,7 @@
 					</div>
 					<% end %>
 				</div>
-				<h3 class="uk-accordion-title"><%= contruir_encabezado("bt-flechita.png", "bt-flechita-abajo.png", "Profesores e Investigadores Asociados a Presidencia") %></h3>
+				<h3 class="uk-accordion-title"><%= construir_encabezado("bt-flechita.png", "bt-flechita-abajo.png", "Profesores e Investigadores Asociados a Presidencia") %></h3>
 				<div class="uk-accordion-content">
 					<% @asociados.each do |a| %>
 					<div class="uk-grid uk-grid-medium uk-margin-large-bottom">

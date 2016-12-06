@@ -24,7 +24,7 @@
 					<div class="uk-grid uk-grid-medium uk-margin-large-bottom">
 						<div class="uk-width-1-1 uk-vertical-align-middle uk-text-left uk-text-break">
 							<h4><%= p.nombre %></h4>
-							<h3 class="vino"><%= p.cargo %></h3>
+							<h3 class="vino"><%= p.cargo.html_safe %></h3>
 						</div>
 					</div>
 					<% end %>
