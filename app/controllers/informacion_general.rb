@@ -95,7 +95,7 @@ class InformacionGeneralController < ApplicationController
 
   def presidencia
     @presidencias = Personal.where(:seccion => "Presidencia")
-		@asociados = Personal.where(:seccion => "Asociado").order(seccion: :desc)
+		@asociados = Personal.where(:seccion => "Asociado").order(nombre: :desc)
     respond_to do |format|
       format.js
     end
