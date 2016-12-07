@@ -18,6 +18,16 @@
 			<div class="uk-accordion" data-uk-accordion>
 				<h3 class="uk-accordion-title"><%= construir_encabezado("bt-flechita.png", "bt-flechita-abajo.png", "Profesores e Investigadores Asociados a Presidencia (desde el 1° de enero de 2017)") %></h3>
 				<div class="uk-accordion-content">
+					<h2 class="vino">Asociados a los Centros de Estudios</h2>
+					<% @profs_centros.each do |a| %>
+					<div class="uk-grid uk-grid-medium uk-margin-large-bottom">
+						<div class="uk-width-1-1 uk-vertical-align-middle uk-text-left uk-text-break">
+							<h3 style="margin-bottom:0;"><%= a.nombre %></h3>
+							<h5 class="vino" style="margin-top:0;"><%= a.cargo.html_safe %></h5>
+						</div>
+					</div>
+					<% end %>
+					<h2 class="vino">Investigadores en proyectos específicos</h2>
 					<% @asociados.each do |a| %>
 					<div class="uk-grid uk-grid-medium uk-margin-large-bottom">
 						<div class="uk-width-1-1 uk-vertical-align-middle uk-text-left uk-text-break">
