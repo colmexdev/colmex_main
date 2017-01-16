@@ -43,7 +43,7 @@
 
 .ver-mas:visited, .ver-mas:active { color: #fff; }
 
-.vino {color:#7e3355;}
+.vino {color:#7e3355; border-bottom: none;}
 
 #img-menus-sobre{
 	display:inline-block;

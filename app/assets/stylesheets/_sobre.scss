@@ -26,7 +26,7 @@
 	transition: all 0.5s linear;
 }
 
-.ver-mas:hover {
+.ver-mas:hover, .ver-mas:focus {
 	font-family: "Gotham SSm A", "Gotham SSm B", 'Lato', sans-serif; 
 	font-style: normal; 
 	font-weight: 700; 
