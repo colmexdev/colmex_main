@@ -1,4 +1,4 @@
   <% @deptos.each do |d| %>
-    <h3><%= d %></h3>
+    <h3><%= d.depto.upcase %></h3>
   <% end %>
 
