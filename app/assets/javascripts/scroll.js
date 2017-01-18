@@ -110,6 +110,8 @@ function reescalarFrames(){
 		if(frames[i].clientWidth < 560){
 			frames[i].height = frames[i].clientWidth*315/560;
 		}
+		else
+			frames[i].height = 315;
 	}
 }
 
