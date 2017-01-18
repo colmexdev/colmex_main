@@ -73,6 +73,8 @@ sp:
       admin: "Administración"
       apoyo: "Unidades de apoyo"
       operativas: "Áreas operativas"
+      consejo: "Consejo Académico"
+      comision: "Comisión Dictaminadora"
     documentacion:
       op1: "Actas de la Junta de Gobierno"
       op2: "Informes de Actividades"

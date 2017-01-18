@@ -80,7 +80,7 @@ class InformacionGeneralController < ApplicationController
   end
 
   def operativas
-    @operativas = Personal.where("seccion = ? AND nombre = ?", "Operativas", "Elizabeth Serratos Armendariz").union(Personal.where("seccion = ? AND nombre = ?", "Operativas", "Quetzalli Padilla Dulché")).union(Personal.where("seccion = ? AND nombre = ?", "Operativas", "León Ruiz Chávez")).union(Personal.where("seccion = ? AND nombre = ?", "Operativas", "Alejandra Tapia Silva")).union(Personal.where("seccion = ? AND nombre = ?", "Operativas", "Lizeth Mora Castillo"))
+    @operativas = Personal.where("seccion = ? AND nombre = ?", "Operativas", "Elizabeth Serratos Armendariz").union(Personal.where("seccion = ? AND nombre = ?", "Operativas", "Quetzalli Padilla Dulché")).union(Personal.where("seccion = ? AND nombre = ?", "Operativas", "León Ruiz Chávez")).union(Personal.where("seccion = ? AND nombre = ?", "Operativas", "Alejandra Tapia Silva")).union(Personal.where("seccion = ? AND nombre = ?", "Operativas", "Jenny Izbeth Flores"))
     respond_to do |format|
       format.js
     end
@@ -121,6 +121,14 @@ class InformacionGeneralController < ApplicationController
     respond_to do |format|
       format.js
     end
+  end
+
+  def consejo
+    @consejos = Personal.where("seccion = ?","Consejo")
+  end
+
+  def comision
+    @coms = Personal.where("seccion = ?", "Comision")
   end
 
   def comunidad
