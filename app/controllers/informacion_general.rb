@@ -125,7 +125,7 @@ class InformacionGeneralController < ApplicationController
 
   def consejo
     @consejo = Personal.where("seccion = ?","Consejo")
-    @deptos = Personal.where("seccion = ?","Consejo").group(:depto)
+    @deptos = ["Centro de Estudios de Asia y África","Centro de Estudios Demográficos, Urbanos y Ambientales","Centro de Estudios Económicos","Centro de Estudios Históricos","Centro de Estudios Internacionales","Centro de Estudios Lingüísticos y Literarios","Centro de Estudios Sociológicos","Biblioteca Daniel Cosío Villegas","Coordinación de Servicios de Cómputo","Publicaciones","Presidencia"]
   end
 
   def comision

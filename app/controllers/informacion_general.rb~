@@ -124,7 +124,8 @@ class InformacionGeneralController < ApplicationController
   end
 
   def consejo
-    @consejos = Personal.where("seccion = ?","Consejo")
+    @consejo = Personal.where("seccion = ?","Consejo")
+    @deptos = Personal.where("seccion = ?","Consejo").group(:depto)
   end
 
   def comision

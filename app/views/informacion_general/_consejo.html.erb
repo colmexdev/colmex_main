@@ -1,7 +1,7 @@
   <% @deptos.each do |d| %>
-    <h3><%= d.depto.mb_chars.upcase %></h3>
+    <h3 style="margin-top:25px;margin-bottom:15px;"><%= d.depto.mb_chars.upcase %></h3>
 		<% @consejo.where("depto = ?",d.depto).each do |c| %>
-			<h5><%= c.nombre.mb_chars %></h5>
+			<h5 style="margin-top:10px;margin-bottom:0px;"><%= c.nombre.mb_chars %></h5>
 		<% end %>
   <% end %>
 
