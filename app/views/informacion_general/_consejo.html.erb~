@@ -1,4 +1,4 @@
-  <% @juntas.each do |j| %>
+  <% @consejos.each do |c| %>
     <h3><%= j.nombre %></h3>
   <% end %>
 
