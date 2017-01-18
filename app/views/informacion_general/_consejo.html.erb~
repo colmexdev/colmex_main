@@ -1,4 +1,7 @@
   <% @deptos.each do |d| %>
     <h3><%= d.depto.upcase %></h3>
+		<% @consejo.where("depto = ?",d.depto).each do |c| %>
+			<h4><%= c.nombre %></h4>
+		<% end %>
   <% end %>
 
