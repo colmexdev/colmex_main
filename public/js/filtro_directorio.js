@@ -24,19 +24,20 @@ function partirDirectorio(visibles){
 }
 
 
-function filtrarDirectorio(){
+function filtrarDirectorio(b = '0'){
 	academicosPorNombre.filterAll();
 	academicosPorCorreo.filterAll();
 	academicosPorLinea.filterAll();
 	academicosPorCentro.filterAll();
+
 	var centrosAFiltrar = $("#contenido").val();
 	var nombresAFiltrar = limpiarPuntuacion($("#nombre").val().toLowerCase()).split(/[ ]+/);
 	var correosAFiltrar = $("#correo").val();
 	var lineasAFiltrar = limpiarPuntuacion($("#linea").val().toLowerCase()).split(/[ ]+/);
-	var academicosFiltradosPorCentro = academicosPorCentro.filter(function(d){ return ( centrosAFiltrar == "" ? true : d == centrosAFiltrar )}).top(Infinity);
+	var academicosFiltradosPorCentro = academicosPorCentro.filter(function(d){ return ( (b == '0' || centrosAFiltrar == "") ? true : d == centrosAFiltrar )}).top(Infinity);
 
 	var academicosFiltradosPorNombre = academicosPorNombre.filter(function(d){
-		if(nombresAFiltrar == []) return true;
+		if(b == '0' || nombresAFiltrar == []) return true;
 		var nombre = limpiarPuntuacion(d.toLowerCase()); 
 		for(var j = 0; j < nombresAFiltrar.length; j++){
 			if(nombre.indexOf(nombresAFiltrar[j]) == -1) return false;
@@ -45,9 +46,9 @@ function filtrarDirectorio(){
 	//return (nombresAFiltrar == "" ? true :limpiarPuntuacion(d.toLowerCase()).indexOf(nombresAFiltrar.toLowerCase()) != -1)
 	}).top(Infinity);
 
-	var academicosFiltradosPorCorreo = academicosPorCorreo.filter(function(d){ return (correosAFiltrar == "" ? true : limpiarPuntuacion(d.toLowerCase()).indexOf(correosAFiltrar.toLowerCase()) != -1)}).top(Infinity);
+	var academicosFiltradosPorCorreo = academicosPorCorreo.filter(function(d){ return ((b == '0' ||correosAFiltrar == "") ? true : limpiarPuntuacion(d.toLowerCase()).indexOf(correosAFiltrar.toLowerCase()) != -1)}).top(Infinity);
 	var academicosFiltradosPorLinea = academicosPorLinea.filter(function(d){ 
-		if(lineasAFiltrar == []) return true;
+		if(b == '0' || lineasAFiltrar == []) return true;
 		var linea = limpiarPuntuacion(d.toLowerCase()); 
 		for(var j = 0; j < lineasAFiltrar.length; j++){
 			if(linea.indexOf(lineasAFiltrar[j]) == -1) return false;
@@ -56,6 +57,10 @@ function filtrarDirectorio(){
 		//return ( lineasAFiltrar == "" ? true : limpiarPuntuacion(d.toLowerCase()).indexOf(lineasAFiltrar.toLowerCase()) != -1)
 	}).top(Infinity);
 	vista_act = 0;
+	$(".inics").css({"color" : "#909090"});
+	if(b != '0'){
+		$("#inic_"+b).css({"color" : "#993366"});
+	}
 	actualizarVisibleDirectorio(academicosFiltradosPorLinea);
 	renderFrase(academicosFiltradosPorLinea);
 	partirDirectorio(academicosFiltradosPorLinea);
