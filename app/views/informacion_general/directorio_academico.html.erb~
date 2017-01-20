@@ -8,7 +8,7 @@
 		<div class="row" id="filtros-dir">
 			<div class="col-xs-12" id="filtro-inic" style="text-align:center;">
 			<% for i in 65..90 %>
-				<span id=<%= "inic_" + i.chr %> style="cursor:pointer margin:0 3px;font-size:24px;color:#909090;" onclick=<%= "filtrarDirectorio('" + i.chr + "')" %>><%= i.chr %></span>
+				<span class="inics" id=<%= "inic_" + i.chr %> style="cursor:pointer margin:0 3px;font-size:24px;color:#909090;" onclick=<%= "filtrarDirectorio('" + i.chr + "')" %>><%= i.chr %></span>
 			<% end %>
 			</div>
 			<div class="col-md-4 col-xs-12 filtro center" id="filtro-nombre">
