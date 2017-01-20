@@ -12,6 +12,8 @@ vista_act = 0;
 function partirDirectorio(visibles){
 	var apartados;
 	vistas = Math.floor(visibles.length/15);
+	if(visibles.length%15 == 0)
+		vistas = vistas - 1;
 	var i;
 	$("#separadores").html("<div style=\"margin:0 2px;display:inline-block;cursor:pointer;font-size:24px;color:#909090; \" id=\"sep-ant\" onclick=\"muestra("+"'ant'"+")\">" + "<" + "</div>");
 	for(i=0; i<=vistas; i++){
@@ -28,11 +30,20 @@ function filtrarDirectorio(){
 	academicosPorLinea.filterAll();
 	academicosPorCentro.filterAll();
 	var centrosAFiltrar = $("#contenido").val();
-	var nombresAFiltrar = $("#nombre").val();
+	var nombresAFiltrar = limpiarPuntuacion($("#nombre").val().toLowerCase()).split(/[ ]+/);
 	var correosAFiltrar = $("#correo").val();
 	var lineasAFiltrar = $("#linea").val();
 	var academicosFiltradosPorCentro = academicosPorCentro.filter(function(d){ return ( centrosAFiltrar == "" ? true : d == centrosAFiltrar )}).top(Infinity);
-	var academicosFiltradosPorNombre = academicosPorNombre.filter(function(d){ return (nombresAFiltrar == "" ? true : limpiarPuntuacion(d.toLowerCase()).indexOf(nombresAFiltrar.toLowerCase()) != -1)}).top(Infinity);
+
+	var academicosFiltradosPorNombre = academicosPorNombre.filter(function(d){
+		if(nombresAFiltrar == []) return true;
+		var nombre = limpiarPuntuacion(d.toLowerCase()); 
+		for(var j = 0; j < nombresAFiltrar.length; j++){
+			if(nombre.indexOf(nombresAFiltrar[j]) == -1) return false;
+		}
+	//return (nombresAFiltrar == "" ? true :limpiarPuntuacion(d.toLowerCase()).indexOf(nombresAFiltrar.toLowerCase()) != -1)
+	}).top(Infinity);
+
 	var academicosFiltradosPorCorreo = academicosPorCorreo.filter(function(d){ return (correosAFiltrar == "" ? true : limpiarPuntuacion(d.toLowerCase()).indexOf(correosAFiltrar.toLowerCase()) != -1)}).top(Infinity);
 	var academicosFiltradosPorLinea = academicosPorLinea.filter(function(d){ return ( lineasAFiltrar == "" ? true : limpiarPuntuacion(d.toLowerCase()).indexOf(lineasAFiltrar.toLowerCase()) != -1)}).top(Infinity);
 	vista_act = 0;
