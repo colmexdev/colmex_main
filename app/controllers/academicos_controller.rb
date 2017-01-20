@@ -69,6 +69,6 @@ class AcademicosController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def academico_params
-      params.require(:academico).permit(:nombre, :adscripcion, :lineas_investigacion, :correo, :pagina, :foto)
+      params.require(:academico).permit(:nombre, :adscripcion, :lineas_investigacion, :correo, :pagina, :foto, :inicial)
     end
 end
