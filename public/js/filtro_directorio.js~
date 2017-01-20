@@ -35,8 +35,12 @@ function filtrarDirectorio(){
 	var lineasAFiltrar = $("#linea").val();
 	var academicosFiltradosPorCentro = academicosPorCentro.filter(function(d){ return ( centrosAFiltrar == "" ? true : d == centrosAFiltrar )}).top(Infinity);
 
-	var academicosFiltradosPorNombre = academicosPorNombre.filter(function(d){ 
-		for(var j = 0; j < nombresAFiltrar
+	var academicosFiltradosPorNombre = academicosPorNombre.filter(function(d){
+		if(nombresAFiltrar == []) return true;
+		var nombre = limpiarPuntuacion(d.toLowerCase()); 
+		for(var j = 0; j < nombresAFiltrar.length; j++){
+			if(nombre.indexOf(nombresAFiltrar[j]) == -1) return false;
+		}
 	//return (nombresAFiltrar == "" ? true :limpiarPuntuacion(d.toLowerCase()).indexOf(nombresAFiltrar.toLowerCase()) != -1)
 	}).top(Infinity);
 

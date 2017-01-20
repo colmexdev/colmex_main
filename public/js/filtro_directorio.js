@@ -41,6 +41,7 @@ function filtrarDirectorio(){
 		for(var j = 0; j < nombresAFiltrar.length; j++){
 			if(nombre.indexOf(nombresAFiltrar[j]) == -1) return false;
 		}
+		return true;
 	//return (nombresAFiltrar == "" ? true :limpiarPuntuacion(d.toLowerCase()).indexOf(nombresAFiltrar.toLowerCase()) != -1)
 	}).top(Infinity);
 
