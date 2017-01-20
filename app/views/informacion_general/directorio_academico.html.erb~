@@ -6,13 +6,14 @@
 	<div id="cuerpo">
 
 		<div class="row" id="filtros-dir">
-			<div class="col-md-4 filtro center" id="filtro-nombre">
+			<div class="col-xs-12 separadores" id="filtro-inic"></div>
+			<div class="col-md-4 col-xs-12 filtro center" id="filtro-nombre">
 				<%= text_field_tag("nombre", "", :oninput => "filtrarDirectorio();", :placeholder => "Nombre") %>
 			</div>
-			<div class="col-md-4 center" id="filtro-mail">
+			<div class="col-md-4 col-xs-12 center" id="filtro-mail">
 				<%= text_field_tag("correo", "", :oninput => "filtrarDirectorio();", :placeholder => "Correo") %>
 			</div>
-			<div class="col-md-4 center" id="filtro-linea">
+			<div class="col-md-4 col-xs-12 center" id="filtro-linea">
 				<%= text_field_tag("linea", "", :oninput => "filtrarDirectorio();", :placeholder => "Línea de investigación") %>
 			</div>
 		</div>
@@ -35,4 +36,7 @@
 	</div>
 
 <script type="text/javascript" src="../js/filtro_directorio.js"></script>
+<script type="text/javascript">
+	actualizarVisibleDirectorio([]);
+</script>
 <%= render 'principal/footer' %>
