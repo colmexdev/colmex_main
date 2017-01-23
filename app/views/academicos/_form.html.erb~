@@ -16,6 +16,10 @@
     <%= f.text_field :nombre %>
   </div>
   <div class="field">
+    <%= f.label :inicial %><br>
+    <%= f.text_field :inicial, :maxlength => 1 %>
+  </div>
+  <div class="field">
     <%= f.label :foto %><br>
     <%= f.file_field :foto %>
   </div>
