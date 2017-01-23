@@ -47,7 +47,7 @@ function filtrarDirectorio(b = '0'){
 		return true;
 	//return (nombresAFiltrar == "" ? true :limpiarPuntuacion(d.toLowerCase()).indexOf(nombresAFiltrar.toLowerCase()) != -1)
 	}).top(Infinity);
-	var academicosFiltradosPorInicial = academicosPorInicial.filter(function(d){ return (b != '0' ? true : d.inicial == b)}).top(Infinity);
+	var academicosFiltradosPorInicial = academicosPorInicial.filter(function(d){ return (b != '0' ? true : d == b)}).top(Infinity);
 	var academicosFiltradosPorCorreo = academicosPorCorreo.filter(function(d){ return ((b == '0' ||correosAFiltrar == "") ? true : limpiarPuntuacion(d.toLowerCase()).indexOf(correosAFiltrar.toLowerCase()) != -1)}).top(Infinity);
 	var academicosFiltradosPorLinea = academicosPorLinea.filter(function(d){ 
 		if(b == '0' || lineasAFiltrar == []) return true;
