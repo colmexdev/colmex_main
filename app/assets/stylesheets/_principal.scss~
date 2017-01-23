@@ -85,7 +85,7 @@ button:focus{
 
 @-moz-keyframes flip {
 	0% { }
-	100% { -moz-transform: rotateX(0deg); opacity: 1; }
+	100% { transform: rotateX(0deg); opacity: 1; }
 }
 
 @-o-keyframes flip {
@@ -106,8 +106,8 @@ button:focus{
 }
 
 @-moz-keyframes unflip {
-	0% { -moz-transform: rotateX(0deg); }
-	100% { -moz-transform: rotateX(-110deg); }
+	0% { transform: rotateX(0deg); }
+	100% { transform: rotateX(-110deg); }
 }
 
 @-o-keyframes unflip {
