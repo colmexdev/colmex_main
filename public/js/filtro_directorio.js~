@@ -57,6 +57,10 @@ function filtrarDirectorio(b = '0'){
 		//return ( lineasAFiltrar == "" ? true : limpiarPuntuacion(d.toLowerCase()).indexOf(lineasAFiltrar.toLowerCase()) != -1)
 	}).top(Infinity);
 	vista_act = 0;
+	$(".inics").css({"color" : "#909090"});
+	if(b != '0'){
+		$("#inic_"+b).css({"color" : "#993366"});
+	}
 	actualizarVisibleDirectorio(academicosFiltradosPorLinea);
 	renderFrase(academicosFiltradosPorLinea);
 	partirDirectorio(academicosFiltradosPorLinea);
