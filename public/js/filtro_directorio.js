@@ -27,8 +27,9 @@ function partirDirectorio(visibles){
 
 function filtrarDirectorio(b = '0'){
 	for(var n = 0; n < docentes.length; n++){
-		console.log(UIkit.$("#cont_"+n));
-		UIkit.$("#cont_"+n).toggle();
+		if(UIkit.$("#cont-"+n)[0].className.indexOf("uk-active") != -1){
+			UIkit.$("#cont-"+n).toggle();
+		}
 	}
 	academicosPorNombre.filterAll();
 	academicosPorCorreo.filterAll();
