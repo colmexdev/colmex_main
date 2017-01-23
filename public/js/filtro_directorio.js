@@ -26,7 +26,9 @@ function partirDirectorio(visibles){
 
 
 function filtrarDirectorio(b = '0'){
-	console.log(b);
+	for(var n = 0; n < docentes.length; n++){
+		UIkit.$("#cont"+n).toggle();
+	}
 	academicosPorNombre.filterAll();
 	academicosPorCorreo.filterAll();
 	academicosPorLinea.filterAll();
