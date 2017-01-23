@@ -28,7 +28,7 @@ function partirDirectorio(visibles){
 function filtrarDirectorio(b = '0'){
 	for(var n = 0; n < docentes.length; n++){
 		if(UIkit.$("#cont-"+n)[0].className.indexOf("uk-active") != -1){
-			UIkit.$("#cont-"+n).toggle();
+			UIkit.$("#cont-"+n).collapse();
 			//UIkit.$("#cont-"+n)[0].className = "uk-accordion-content";
 		}
 	}
