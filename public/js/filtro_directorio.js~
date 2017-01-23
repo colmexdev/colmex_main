@@ -26,6 +26,7 @@ function partirDirectorio(visibles){
 
 
 function filtrarDirectorio(b = '0'){
+	console.log(b);
 	academicosPorNombre.filterAll();
 	academicosPorCorreo.filterAll();
 	academicosPorLinea.filterAll();
