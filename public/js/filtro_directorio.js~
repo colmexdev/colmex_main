@@ -127,7 +127,7 @@ function muestra(pag){
 
 		$("#sep-ant").css({"cursor": "pointer"});
 		$("#sep-sig").css({"cursor": "pointer"});
-		if(vista_act < 1 || vistas <= 1){
+		if(vista_act < 1 || vistas == 0){
 			vista_act = 0;
 			$("#sep-ant").css({"cursor": "default"});
 		}
@@ -139,7 +139,7 @@ function muestra(pag){
 
 		$("#sep-ant").css({"cursor": "pointer"});
 		$("#sep-sig").css({"cursor": "pointer"});
-		if(vista_act > vistas - 1 || vistas <= 1){
+		if(vista_act > vistas - 1 || vistas == 0){
 			vista_act = vistas;
 			$("#sep-sig").css({"cursor": "default"});
 		}
