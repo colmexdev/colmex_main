@@ -117,10 +117,11 @@ function actualizarVisibleDirectorio(visibles){
 function muestra(pag){
 	var i;
 
-	if(vistas <= 1){
+	if(vistas == 0){
 		$("#sep-ant").css({"cursor": "default"});
 		$("#sep-sig").css({"cursor": "default"});
-		return false;
+		$("#sep-0").css({"color": "#993366"});
+		//return false;
 	}
 
 	else if(pag == "ant"){
@@ -128,7 +129,7 @@ function muestra(pag){
 
 		$("#sep-ant").css({"cursor": "pointer"});
 		$("#sep-sig").css({"cursor": "pointer"});
-		if(vista_act < 1 || vistas == 0){
+		if(vista_act < 1){
 			vista_act = 0;
 			$("#sep-ant").css({"cursor": "default"});
 		}
@@ -140,7 +141,7 @@ function muestra(pag){
 
 		$("#sep-ant").css({"cursor": "pointer"});
 		$("#sep-sig").css({"cursor": "pointer"});
-		if(vista_act > vistas - 1 || vistas == 0){
+		if(vista_act > vistas - 1){
 			vista_act = vistas;
 			$("#sep-sig").css({"cursor": "default"});
 		}
