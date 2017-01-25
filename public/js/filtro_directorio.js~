@@ -37,7 +37,12 @@ function filtrarDirectorio(b = '0'){
 	academicosPorLinea.filterAll();
 	academicosPorCentro.filterAll();
 	academicosPorInicial.filterAll();
-
+	if(b != '0'){
+		$("#nombre").val("");
+		$("#correo").val("");
+		$("#linea").val("");
+		$("#contenido").val("");
+	}
 	var centrosAFiltrar = $("#contenido").val();
 	var nombresAFiltrar = limpiarPuntuacion($("#nombre").val().toLowerCase()).split(/[ ]+/);
 	var correosAFiltrar = $("#correo").val();
@@ -112,7 +117,7 @@ function actualizarVisibleDirectorio(visibles){
 function muestra(pag){
 	var i;
 
-	if(vistas == 0){
+	if(vistas <= 1){
 		$("#sep-ant").css({"cursor": "default"});
 		$("#sep-sig").css({"cursor": "default"});
 	}
