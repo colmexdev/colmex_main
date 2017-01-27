@@ -120,7 +120,8 @@ function muestra(pag){
 	if(vistas == 0){
 		$("#sep-ant").css({"cursor": "default"});
 		$("#sep-sig").css({"cursor": "default"});
-		return false;
+		$("#sep-0").css({"color": "#993366"});
+		//return false;
 	}
 
 	else if(pag == "ant"){
