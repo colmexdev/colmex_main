@@ -172,7 +172,7 @@ bloque_html = bloque_html + "<a href=\"" + d.liga + "\" " + (d.contenido.mb_char
   end
 
 	def llenarLineas(dir)
-		profs = []
+		profes = []
 		arch = File.open(dir,'r')
 		i = 0
 		#j = 0
@@ -205,7 +205,7 @@ bloque_html = bloque_html + "<a href=\"" + d.liga + "\" " + (d.contenido.mb_char
 		        academico = Academico.where("nombre like ?",nom).first.as_json
 		        academico.store(:libres,arr_libres)
 		        academico.store(:conts, arr_conts.to_a)
-		        profs << academico
+		        profes << academico
 		        #j = j + 1
 		      rescue
 		        #puts "No se encontró: " + nom
@@ -215,7 +215,7 @@ bloque_html = bloque_html + "<a href=\"" + d.liga + "\" " + (d.contenido.mb_char
 		end
 		#puts j
 		arch.close
-		return profs
+		return profes
 	end
 
 end
