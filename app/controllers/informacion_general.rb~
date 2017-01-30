@@ -148,7 +148,8 @@ class InformacionGeneralController < ApplicationController
   end
 
   def directorio_academico
-    @academicos = Academico.order(nombre: :desc).all
+    #@academicos = Academico.order(nombre: :desc).all
+		@academicos = llenarLineas('/home/webuser/xml-autori-ene2017.xml')
 		gon.academicos = @academicos.to_json
 		gon.academicos_size = @academicos.size
   end 
