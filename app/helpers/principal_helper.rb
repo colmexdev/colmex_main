@@ -170,4 +170,52 @@ bloque_html = bloque_html + "<a href=\"" + d.liga + "\" " + (d.contenido.mb_char
     end
     return bloque_html.html_safe
   end
+
+	def llenarLineas(dir)
+		profs = []
+		arch = File.open(dir,'r')
+		i = 0
+		#j = 0
+		arch.each do |l|
+		  i = i + 1
+		  if i == 1
+		    next
+		  else
+		    profs = l.scan(/[<]record[>].*?[<]\/record[>]/)
+		    profs.each do |p|
+		      arr_libres, arr_conts = [], [].to_set
+		      nombre = p.match(/[<]datafield tag="100"(.)*?[>][<]subfield code="a"[>](.)*?[<]\/subfield[>](.)*?[<]\/datafield[>]/).to_s.split("</subfield>")[0].split("<subfield code=\"a\">")[1].split(", ")
+		      nom = '%' + nombre[1].split(/[ ]+/).join("%") + "%" + nombre[0].split(/[ ]+/).join("%") + "%"
+		      controladas = p.scan(/<datafield tag="372" ind1=" " ind2=" ">(.*?)<\/datafield>/)
+		      controladas.each do |co|
+		        year_lab =  co[0].scan(/[<]subfield code="s"[>](.+?)[<]\/subfield[>]/)
+		        begin
+		          co[0].scan(/[<]subfield code="a"[>](.+?)[<]\/subfield[>]/)[0][0].split(" -- ").each do |c|
+		            arr_conts << c
+		          end
+		        rescue
+		          #nada
+		        end
+		      end
+		      libres = p.scan(/[<]datafield tag="972" ind1=" " ind2=" "[>](.*?)[<]\/datafield[>]/)
+		      libres.each do |li|
+		        arr_libres << li[0].scan(/[<]subfield code="a"[>].*?[<]\/subfield[>]/)[0].split("</subfield>")[0].split("<subfield code=\"a\">")[1]
+		      end
+		      begin
+		        academico = Academico.where("nombre like ?",nom).first.as_json
+		        academico.store(:libres,arr_libres)
+		        academico.store(:conts, arr_conts.to_a)
+		        profs << academico
+		        #j = j + 1
+		      rescue
+		        #puts "No se encontró: " + nom
+		      end
+		    end
+		  end
+		end
+		#puts j
+		arch.close
+		return profs
+	end
+
 end
