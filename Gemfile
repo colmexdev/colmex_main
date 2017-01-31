@@ -44,6 +44,9 @@ gem 'paperclip'
 #crossfilter para el filtrado de datsets
 gem 'crossfilter-rails'
 
+#active_directory para extraer los datos de contacto de académicos
+gem 'active_directory'
+
 # Devise para autenticación
 gem 'devise'
 

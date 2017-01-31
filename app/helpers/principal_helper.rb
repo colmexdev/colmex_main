@@ -145,7 +145,7 @@ bloque_html = bloque_html + "<a href=\"" + d.liga + "\" " + (d.contenido.mb_char
   def construir_docentes(docs)
 		bloque_html, i = "", 0
 		docs.each do |d|
-			acad = Academico.where("nombre like ?", d["nombre"])
+			acad = Academico.where("nombre = ?", d["nombre"]).first
       bloque_html = bloque_html + "<h3 class=\"uk-accordion-title\" id=\"doc-" + i.to_s + "\">" +  raw(construir_encabezado("bt-flechita.png", "bt-flechita-abajo.png", d["nombre"])) + "</h3>"
       bloque_html = bloque_html + "<div id=\"cont-" + i.to_s + "\" class=\"uk-accordion-content\">"
 
@@ -153,7 +153,7 @@ bloque_html = bloque_html + "<a href=\"" + d.liga + "\" " + (d.contenido.mb_char
 			bloque_html = bloque_html + "<div class=\"uk-grid uk-grid-medium uk-margin-large-bottom\">"
 
       bloque_html = bloque_html + "<div class=\"uk-width-large-1-6 uk-width-medium-1-5 uk-width-small-1-5 uk-text-center\">"
-      #bloque_html = bloque_html + "<img src=" + image_url(acad.foto.url) + " class=\"uk-border-rounded\" alt=\"Foto Académico\">"
+      bloque_html = bloque_html + "<img src=" + image_url(acad.foto.url) + " class=\"uk-border-rounded\" alt=\"Foto Académico\">"
 			
       bloque_html = bloque_html + "</div>"
 
@@ -161,7 +161,7 @@ bloque_html = bloque_html + "<a href=\"" + d.liga + "\" " + (d.contenido.mb_char
     	bloque_html = bloque_html + "<h3 class=\"vino\">" + d["nombre"] + "</h3>"
     	bloque_html = bloque_html + "<h4>" +" Centro de Estudios " + (d["adscripcion"].include?("Asia") ? "de " + d["adscripcion"] : (d["adscripcion"].include?("Lingüistico") ? "Lingüísticos y Literarios" : d["adscripcion"])) + "</h4>"
 			bloque_html = bloque_html + "<h5>" + "Temas de investigación: " + d[:libres].join(", ") + "</h5>"
-
+      bloque_html = bloque_html + "<h5>" + "líneas de investigación: " + d[:conts].join(", ") + "</h5>"
 
       bloque_html = bloque_html + "</div>"
       bloque_html = bloque_html + "</div>"

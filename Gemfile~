@@ -23,7 +23,7 @@ gem 'coffee-rails', '~> 4.1.0'
 gem 'gon'
 
 #analytics-ruby para integrar Segment.io para analíticos
-gem 'analytics-ruby', '~> 2.0.0', :require => "segment/analytics"
+#gem 'analytics-ruby', '~> 2.0.0', :require => "segment/analytics"
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
