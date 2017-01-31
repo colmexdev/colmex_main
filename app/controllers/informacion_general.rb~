@@ -151,6 +151,6 @@ class InformacionGeneralController < ApplicationController
     @academicos = Academico.order(nombre: :desc).all
 		@ac_json = llenarLineas('/home/webuser/xml-autori-ene2017.xml')
 		gon.academicos = @ac_json.to_json
-		gon.academicos_size = @ac_json.size
+		gon.academicos_size = @academicossize
   end 
 end
