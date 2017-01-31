@@ -26,7 +26,7 @@ function partirDirectorio(visibles){
 
 
 function filtrarDirectorio(b = '0'){
-	console.log(b);
+	console.log(typeof b);
 	var accordion = UIkit.accordion(UIkit.$('#acordeon'));
 	accordion.find('[data-wrapper]').each(function(){
 		if(UIkit.$(this)[0].firstElementChild.className.indexOf("uk-active") != -1){

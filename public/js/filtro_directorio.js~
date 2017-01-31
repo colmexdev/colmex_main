@@ -26,6 +26,7 @@ function partirDirectorio(visibles){
 
 
 function filtrarDirectorio(b = '0'){
+	console.log(b);
 	var accordion = UIkit.accordion(UIkit.$('#acordeon'));
 	accordion.find('[data-wrapper]').each(function(){
 		if(UIkit.$(this)[0].firstElementChild.className.indexOf("uk-active") != -1){
@@ -59,8 +60,8 @@ function filtrarDirectorio(b = '0'){
 	//return (nombresAFiltrar == "" ? true :limpiarPuntuacion(d.toLowerCase()).indexOf(nombresAFiltrar.toLowerCase()) != -1)
 	}).top(Infinity);
 	var academicosFiltradosPorInicial = academicosPorInicial.filter(function(d){ return (b == '0' ? true : d == b)}).top(Infinity);
-	var academicosFiltradosPorTema = academicosPorCorreo.filter(function(d){ 
-		if(b != '0' || temasAFiltrar == []) return true;
+	var academicosFiltradosPorTema = academicosPorTema.filter(function(d){ 
+		if(temasAFiltrar == []) return true;
 		var linea = limpiarPuntuacion(d.toLowerCase()); 
 		for(var j = 0; j < temasAFiltrar.length; j++){
 			if(linea.indexOf(temasAFiltrar[j]) == -1) return false;
