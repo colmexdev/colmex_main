@@ -153,12 +153,13 @@ bloque_html = bloque_html + "<a href=\"" + d.liga + "\" " + (d.contenido.mb_char
 			bloque_html = bloque_html + "<div class=\"uk-grid uk-grid-medium uk-margin-large-bottom\">"
 
       bloque_html = bloque_html + "<div class=\"uk-width-large-1-6 uk-width-medium-1-5 uk-width-small-1-5 uk-text-center\">"
-      bloque_html = bloque_html + "<img src=" + image_url(acad.foto.url) + " class=\"uk-border-rounded\" alt=\"Foto Académico\">"
+      #bloque_html = bloque_html + "<img src=" + image_url(acad.foto.url) + " class=\"uk-border-rounded\" alt=\"Foto Académico\">"
+			
       bloque_html = bloque_html + "</div>"
 
       bloque_html = bloque_html + "<div class=\"uk-width-large-5-6 uk-width-medium-4-5 uk-width-small-4-5 uk-text-left uk-text-break\">"
     	bloque_html = bloque_html + "<h3 class=\"vino\">" + d["nombre"] + "</h3>"
-    	bloque_html = bloque_html + "<h4>" +" Centro de Estudios " + (acad.adscripcion.include?("Asia") ? "de " + acad.adscripcion : (acad.adscripcion.include?("Lingüistico") ? "Lingüísticos y Literarios" : d.adscripcion)) + "</h4>"
+    	bloque_html = bloque_html + "<h4>" +" Centro de Estudios " + (d["adscripcion"].include?("Asia") ? "de " + d["adscripcion"] : (d["adscripcion"].include?("Lingüistico") ? "Lingüísticos y Literarios" : d["adscripcion"])) + "</h4>"
 			bloque_html = bloque_html + "<h5>" + "Temas de investigación: " + d["libres"].join(", ") + "</h5>"
 
 
