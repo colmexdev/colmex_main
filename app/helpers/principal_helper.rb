@@ -162,7 +162,13 @@ bloque_html = bloque_html + "<a href=\"" + d.liga + "\" " + (d.contenido.mb_char
       bloque_html = bloque_html + "<h4 class=\"vino\">" + d["correo"] + "</h3>"
     	bloque_html = bloque_html + "<h4>" +" Centro de Estudios " + (d["adscripcion"].include?("Asia") ? "de " + d["adscripcion"] : (d["adscripcion"].include?("Lingüistico") ? "Lingüísticos y Literarios" : d["adscripcion"])) + "</h4>"
 			bloque_html = bloque_html + "<h5>" + "Temas de investigación: " + d[:libres].join(", ") + "</h5>"
-      bloque_html = bloque_html + "<h5>" + "Líneas de investigación: " + d[:conts].join(", ") + "</h5>"
+      bloque_html = bloque_html + "<h5>" + "Líneas de investigación: "
+
+      d[:conts].each_with_index do |c, ind|
+        bloque_html = bloque_html + "<span class=\"uk-link\" onclick=\"filtrarDirectorio(this)\">" + c + "</span>" + (ind < d[:conts].size -1 ? ", " : "") 
+      end 
+
+			bloque_html = bloque_html + "</h5>"
 
       bloque_html = bloque_html + "</div>"
       bloque_html = bloque_html + "</div>"

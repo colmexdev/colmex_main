@@ -2,8 +2,8 @@ docentes = clone(JSON.parse(gon.academicos));
 agregarVisible(docentes);
 data = crossfilter(docentes);
 academicosPorNombre = data.dimension(function(d){ return d["nombre"]});
-academicosPorCorreo = data.dimension(function(d){return d["correo"]});
-academicosPorLinea = data.dimension(function(d){ return d["lineas_investigacion"]});
+academicosPorTema = data.dimension(function(d){return d["libres"].join(" ")});
+academicosPorLinea = data.dimension(function(d){ return d["conts"].join(" ")});
 academicosPorCentro = data.dimension(function(d){ return d["adscripcion"]});
 academicosPorInicial = data.dimension(function(d){ return d["inicial"]});
 vistas = 0;
@@ -33,7 +33,7 @@ function filtrarDirectorio(b = '0'){
 		}
 	});
 	academicosPorNombre.filterAll();
-	academicosPorCorreo.filterAll();
+	academicosPorTema.filterAll();
 	academicosPorLinea.filterAll();
 	academicosPorCentro.filterAll();
 	academicosPorInicial.filterAll();
@@ -45,7 +45,7 @@ function filtrarDirectorio(b = '0'){
 	}
 	var centrosAFiltrar = $("#contenido").val();
 	var nombresAFiltrar = limpiarPuntuacion($("#nombre").val().toLowerCase()).split(/[ ]+/);
-	var correosAFiltrar = $("#correo").val();
+	var temasAFiltrar = $("#correo").val();
 	var lineasAFiltrar = limpiarPuntuacion($("#linea").val().toLowerCase()).split(/[ ]+/);
 	var academicosFiltradosPorCentro = academicosPorCentro.filter(function(d){ return ( (b != '0' || centrosAFiltrar == "") ? true : d == centrosAFiltrar )}).top(Infinity);
 
@@ -59,7 +59,15 @@ function filtrarDirectorio(b = '0'){
 	//return (nombresAFiltrar == "" ? true :limpiarPuntuacion(d.toLowerCase()).indexOf(nombresAFiltrar.toLowerCase()) != -1)
 	}).top(Infinity);
 	var academicosFiltradosPorInicial = academicosPorInicial.filter(function(d){ return (b == '0' ? true : d == b)}).top(Infinity);
-	var academicosFiltradosPorCorreo = academicosPorCorreo.filter(function(d){ return ((b != '0' ||correosAFiltrar == "") ? true : limpiarPuntuacion(d.toLowerCase()).indexOf(correosAFiltrar.toLowerCase()) != -1)}).top(Infinity);
+	var academicosFiltradosPorTema = academicosPorCorreo.filter(function(d){ 
+		if(b != '0' || temasAFiltrar == []) return true;
+		var linea = limpiarPuntuacion(d.toLowerCase()); 
+		for(var j = 0; j < temasAFiltrar.length; j++){
+			if(linea.indexOf(temasAFiltrar[j]) == -1) return false;
+		}
+		return true;
+		//return ((b != '0' ||correosAFiltrar == "") ? true : limpiarPuntuacion(d.toLowerCase()).indexOf(correosAFiltrar.toLowerCase()) != -1)
+	}).top(Infinity);
 	var academicosFiltradosPorLinea = academicosPorLinea.filter(function(d){ 
 		if(b != '0' || lineasAFiltrar == []) return true;
 		var linea = limpiarPuntuacion(d.toLowerCase()); 
@@ -117,7 +125,7 @@ function actualizarVisibleDirectorio(visibles){
 function muestra(pag){
 	var i;
 
-	if(vistas == 0){
+	if(vistas <= 1){
 		$("#sep-ant").css({"cursor": "default"});
 		$("#sep-sig").css({"cursor": "default"});
 		$("#sep-0").css({"color": "#993366"});
