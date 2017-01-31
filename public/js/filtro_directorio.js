@@ -83,7 +83,7 @@ function filtrarDirectorio(b = '0'){
 	}).top(Infinity);
 	vista_act = 0;
 	$(".inics").css({"color" : "#909090"});
-	if(b != '0'){
+	if(typeof b !== 'object' && b != '0'){
 		$("#inic_"+b).css({"color" : "#993366"});
 	}
 	actualizarVisibleDirectorio(academicosFiltradosPorLinea);
