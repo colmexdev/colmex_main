@@ -2,8 +2,8 @@ docentes = clone(JSON.parse(gon.academicos));
 agregarVisible(docentes);
 data = crossfilter(docentes);
 academicosPorNombre = data.dimension(function(d){ return d["nombre"]});
-academicosPorTema = data.dimension(function(d){return d["libres"].join(" ")});
-academicosPorLinea = data.dimension(function(d){ return d["conts"].join(" ")});
+academicosPorTema = data.dimension(function(d){console.log("Temas: " + limpiarPuntuacion(d["libres"].join(" ").toLowerCase())); return limpiarPuntuacion(d["libres"].join(" ").toLowerCase())});
+academicosPorLinea = data.dimension(function(d){ console.log("Líneas: " + d["libres"].join(" "));return limpiarPuntuacion(d["conts"].join(" ").toLowerCase())});
 academicosPorCentro = data.dimension(function(d){ return d["adscripcion"]});
 academicosPorInicial = data.dimension(function(d){ return d["inicial"]});
 vistas = 0;
@@ -64,7 +64,7 @@ function filtrarDirectorio(b = '0'){
 	var academicosFiltradosPorTema = academicosPorTema.filter(function(d){ 
 		if(typeof b !== 'object' || temasAFiltrar == []) return true;
 		var linea = limpiarPuntuacion(d.toLowerCase());
-		if(typeof b === 'object') return linea.indexOf(b.innerHTML.toLowerCase) != -1
+		if(typeof b === 'object') return linea.indexOf(limpiarPuntuacion(b.innerHTML.toLowerCase())) != -1
 		else{
 			for(var j = 0; j < temasAFiltrar.length; j++){
 				if(linea.indexOf(temasAFiltrar[j]) == -1) return false;
