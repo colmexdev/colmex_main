@@ -15,10 +15,10 @@
 				<%= text_field_tag("nombre", "", :oninput => "filtrarDirectorio();", :placeholder => "Nombre") %>
 			</div>
 			<div class="col-md-4 col-xs-12 center" id="filtro-mail">
-				<%= text_field_tag("correo", "", :oninput => "filtrarDirectorio();", :placeholder => "Tema de investigación") %>
+				<%= text_field_tag("correo", "", :oninput => "filtrarDirectorio();", :placeholder => "Línea de investigación") %>
 			</div>
 			<div class="col-md-4 col-xs-12 center" id="filtro-linea">
-				<%= text_field_tag("linea", "", :oninput => "filtrarDirectorio();", :placeholder => "Línea de investigación") %>
+				<%= text_field_tag("linea", "", :oninput => "filtrarDirectorio();", :placeholder => "Tema de investigación") %>
 			</div>
 		</div>
 		<div class="row" style="width:70%;margin:0 auto;">
