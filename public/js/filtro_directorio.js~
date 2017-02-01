@@ -64,8 +64,9 @@ function filtrarDirectorio(b = '0'){
 	var academicosFiltradosPorTema = academicosPorTema.filter(function(d){ 
 		if( b == '0' && temasAFiltrar == []) return true;
 		var linea = limpiarPuntuacion(d.toLowerCase());
-		if(typeof b === 'object')
-			return linea.indexOf(limpiarPuntuacion(b.innerHTML.toLowerCase())) != -1;
+		if(typeof b === 'object'){
+			console.log(linea + " " + b.innerHTML.toLowerCase());
+			return linea.indexOf(limpiarPuntuacion(b.innerHTML.toLowerCase())) != -1;}
 		else{
 			for(var j = 0; j < temasAFiltrar.length; j++){
 				if(linea.indexOf(temasAFiltrar[j]) == -1) return false;
