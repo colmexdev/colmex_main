@@ -61,11 +61,12 @@ function filtrarDirectorio(b = '0'){
 	//return (nombresAFiltrar == "" ? true :limpiarPuntuacion(d.toLowerCase()).indexOf(nombresAFiltrar.toLowerCase()) != -1)
 	}).top(Infinity);
 	var academicosFiltradosPorInicial = academicosPorInicial.filter(function(d){ return (b == '0' ? true : d == b)}).top(Infinity);
+
 	var academicosFiltradosPorTema = academicosPorTema.filter(function(d){ 
-		if( b == '0' && temasAFiltrar == []) return true;
+		if( (typeof b !== 'object' || b == '0') && temasAFiltrar == []) return true;
 		var linea = limpiarPuntuacion(d.toLowerCase());
 		if(typeof b === 'object'){
-			console.log(linea + " " + b.innerHTML.toLowerCase());
+			if(linea.indexOf(limpiarPuntuacion(b.innerHTML.toLowerCase()))) console.log(linea);
 			return linea.indexOf(limpiarPuntuacion(b.innerHTML.toLowerCase())) != -1;}
 		else{
 			for(var j = 0; j < temasAFiltrar.length; j++){
