@@ -63,7 +63,7 @@ function filtrarDirectorio(b = '0'){
 	var academicosFiltradosPorInicial = academicosPorInicial.filter(function(d){ return (b == '0' ? true : d == b)}).top(Infinity);
 
 	var academicosFiltradosPorTema = academicosPorTema.filter(function(d){ 
-		if( (typeof b !== 'object' || b != '0') && temasAFiltrar == []) return true;
+		if( (typeof b !== 'object' || b != '0') || temasAFiltrar == []) return true;
 		var linea = limpiarPuntuacion(d.toLowerCase());
 		if(typeof b === 'object'){
 			//if(linea.indexOf(limpiarPuntuacion(b.innerHTML.toLowerCase())) != -1) console.log(linea);
@@ -77,6 +77,7 @@ function filtrarDirectorio(b = '0'){
 		//return ((b != '0' ||correosAFiltrar == "") ? true : limpiarPuntuacion(d.toLowerCase()).indexOf(correosAFiltrar.toLowerCase()) != -1)
 	}).top(Infinity);
 	var academicosFiltradosPorLinea = academicosPorLinea.filter(function(d){ 
+		console.log(b);
 		if(b != '0' || lineasAFiltrar == []) return true;
 		var linea = limpiarPuntuacion(d.toLowerCase()); 
 		for(var j = 0; j < lineasAFiltrar.length; j++){

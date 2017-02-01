@@ -63,7 +63,7 @@ function filtrarDirectorio(b = '0'){
 	var academicosFiltradosPorInicial = academicosPorInicial.filter(function(d){ return (b == '0' ? true : d == b)}).top(Infinity);
 
 	var academicosFiltradosPorTema = academicosPorTema.filter(function(d){ 
-		if( (typeof b !== 'object' || b == '0') && temasAFiltrar == []) return true;
+		if( (typeof b !== 'object' || b != '0') && temasAFiltrar == []) return true;
 		var linea = limpiarPuntuacion(d.toLowerCase());
 		if(typeof b === 'object'){
 			//if(linea.indexOf(limpiarPuntuacion(b.innerHTML.toLowerCase())) != -1) console.log(linea);
