@@ -150,7 +150,7 @@ class InformacionGeneralController < ApplicationController
   def directorio_academico
 		settings = {
 				:host => 'dc1colmex.colmex.mx',
-				:base => 'OU=ACADEMICOS,DC=colmex,DC=mx',
+				:base => 'DC=colmex,DC=mx',
 				:port => 636,
 				:encryption => :simple_tls,
 				:auth => {
