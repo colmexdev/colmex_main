@@ -161,7 +161,7 @@ class InformacionGeneralController < ApplicationController
 		}
 
 		ActiveDirectory::Base.setup(settings)
-		@us = ActiveDirectory::User.find(:all, :dn => "*OU=ACADEMICOS*").as_json
+		@us = ActiveDirectory::User.find(:all, :cn => "Francisco Alba Hernandez").as_json
 		@ac_json = llenarLineas('/home/webuser/xml-autori-ene2017.xml')
 		gon.academicos = @ac_json.to_json
 		gon.academicos_size = @ac_json.size
