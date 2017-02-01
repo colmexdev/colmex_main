@@ -60,7 +60,7 @@ function filtrarDirectorio(b = '0'){
 		return true;
 	//return (nombresAFiltrar == "" ? true :limpiarPuntuacion(d.toLowerCase()).indexOf(nombresAFiltrar.toLowerCase()) != -1)
 	}).top(Infinity);
-	var academicosFiltradosPorInicial = academicosPorInicial.filter(function(d){ return ((typeof b !== 'object' || b == '0') ? true : d == b)}).top(Infinity);
+	var academicosFiltradosPorInicial = academicosPorInicial.filter(function(d){ return ((typeof b !== 'object' && b == '0') ? true : d == b)}).top(Infinity);
 
 	var academicosFiltradosPorTema = academicosPorTema.filter(function(d){ 
 		if( typeof b !== 'object' || (typeof b === 'object' && b != '0') || temasAFiltrar == []) return true;
