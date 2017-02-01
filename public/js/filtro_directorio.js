@@ -66,7 +66,7 @@ function filtrarDirectorio(b = '0'){
 		if( (typeof b !== 'object' || b == '0') && temasAFiltrar == []) return true;
 		var linea = limpiarPuntuacion(d.toLowerCase());
 		if(typeof b === 'object'){
-			if(linea.indexOf(limpiarPuntuacion(b.innerHTML.toLowerCase()))) console.log(linea);
+			if(linea.indexOf(limpiarPuntuacion(b.innerHTML.toLowerCase())) != -1) console.log(linea);
 			return linea.indexOf(limpiarPuntuacion(b.innerHTML.toLowerCase())) != -1;}
 		else{
 			for(var j = 0; j < temasAFiltrar.length; j++){
