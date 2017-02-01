@@ -220,7 +220,7 @@ bloque_html = bloque_html + "<a href=\"" + d.liga + "\" " + (d.contenido.mb_char
 		        profes << academico
 		        #j = j + 1
 		      rescue
-		        logger.debug d["nombre"]
+		        #logger.debug d["nombre"]
 		      end
 		    end
 		  end
