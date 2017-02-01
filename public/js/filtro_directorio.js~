@@ -65,7 +65,6 @@ function filtrarDirectorio(b = '0'){
 		if( b == '0' || temasAFiltrar == []) return true;
 		var linea = limpiarPuntuacion(d.toLowerCase());
 		if(typeof b === 'object'){ 
-			console.log(
 			return linea.indexOf(limpiarPuntuacion(b.innerHTML.toLowerCase())) != -1;
 		else{
 			for(var j = 0; j < temasAFiltrar.length; j++){
