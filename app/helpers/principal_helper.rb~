@@ -142,10 +142,15 @@ bloque_html = bloque_html + "<a href=\"" + d.liga + "\" " + (d.contenido.mb_char
     return cad_plural[categoria]
   end
 
+  def quitarEspeciales(cad)
+    return cad.gsub(/[íïîì]/,"i").gsub(/[ÍÏÎÌ]/,"I").gsub(/[áäâà]/,"a").gsub(/[ÁÄÂÀ]/,"A").gsub(/[éëêè]/,"e").gsub(/[ÉËÊÈ]/,"E").gsub(/[óöôò]/,"o").gsub(/[ÓÖÔÒ]/,"O").gsub(/[úüûù]/,"u").gsub(/[ÚÜÛÙ]/,"U")
+  end
+
   def construir_docentes(docs)
 		bloque_html, i = "", 0
 		docs.each do |d|
 			acad = Academico.where("nombre = ?", d["nombre"]).first
+			cont = ActiveDirectory::User.find(:first, :cn => quitarEspeciales(d["nombre"]))
       bloque_html = bloque_html + "<h3 class=\"uk-accordion-title\" id=\"doc-" + i.to_s + "\">" +  raw(construir_encabezado("bt-flechita.png", "bt-flechita-abajo.png", d["nombre"])) + "</h3>"
       bloque_html = bloque_html + "<div id=\"cont-" + i.to_s + "\" class=\"uk-accordion-content\">"
 

@@ -142,6 +142,10 @@ bloque_html = bloque_html + "<a href=\"" + d.liga + "\" " + (d.contenido.mb_char
     return cad_plural[categoria]
   end
 
+  def quitarEspeciales(cad)
+    return cad.gsub(/[íïîì]/,"i").gsub(/[ÍÏÎÌ]/,"I").gsub(/[áäâà]/,"a").gsub(/[ÁÄÂÀ]/,"A").gsub(/[éëêè]/,"e").gsub(/[ÉËÊÈ]/,"E").gsub(/[óöôò]/,"o").gsub(/[ÓÖÔÒ]/,"O").gsub(/[úüûù]/,"u").gsub(/[ÚÜÛÙ]/,"U")
+  end
+
   def construir_docentes(docs)
 		bloque_html, i = "", 0
 		docs.each do |d|
@@ -212,8 +216,11 @@ bloque_html = bloque_html + "<a href=\"" + d.liga + "\" " + (d.contenido.mb_char
 		      end
 		      begin
 		        academico = Academico.where("nombre like ?",nom).first.as_json
+						cont = ActiveDirectory::User.find(:first, :cn => quitarEspeciales(d["nombre"])).as_json
 		        academico.store(:libres,arr_libres)
 		        academico.store(:conts, arr_conts.to_a)
+						academico.store(:mail, cont["entry"]["myhash"]["mail"])
+            academico.store(:ext, cont["entry"]["myhash"]["telephonenumber"])
 		        profes << academico
 		        #j = j + 1
 		      rescue
