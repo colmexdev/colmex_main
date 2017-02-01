@@ -49,10 +49,10 @@ function filtrarDirectorio(b = '0'){
 	var nombresAFiltrar = limpiarPuntuacion($("#nombre").val().toLowerCase()).split(/[ ]+/);
 	var temasAFiltrar = limpiarPuntuacion($("#correo").val().toLowerCase()).split(/[ ]+/);
 	var lineasAFiltrar = limpiarPuntuacion($("#linea").val().toLowerCase()).split(/[ ]+/);
-	var academicosFiltradosPorCentro = academicosPorCentro.filter(function(d){ return ( (typeof b === 'object' || b != '0' || centrosAFiltrar == "") ? true : d == centrosAFiltrar )}).top(Infinity);
+	var academicosFiltradosPorCentro = academicosPorCentro.filter(function(d){ return ( (b != '0' || centrosAFiltrar == "") ? true : d == centrosAFiltrar )}).top(Infinity);
 
 	var academicosFiltradosPorNombre = academicosPorNombre.filter(function(d){
-		if(typeof b === 'object' || b != '0' || nombresAFiltrar == []) return true;
+		if(b != '0' || nombresAFiltrar == []) return true;
 		var nombre = limpiarPuntuacion(d.toLowerCase()); 
 		for(var j = 0; j < nombresAFiltrar.length; j++){
 			if(nombre.indexOf(nombresAFiltrar[j]) == -1) return false;
@@ -60,10 +60,10 @@ function filtrarDirectorio(b = '0'){
 		return true;
 	//return (nombresAFiltrar == "" ? true :limpiarPuntuacion(d.toLowerCase()).indexOf(nombresAFiltrar.toLowerCase()) != -1)
 	}).top(Infinity);
-	var academicosFiltradosPorInicial = academicosPorInicial.filter(function(d){ return ((typeof b !== 'object' && b == '0') ? true : d == b)}).top(Infinity);
+	var academicosFiltradosPorInicial = academicosPorInicial.filter(function(d){ return (b == '0' ? true : d == b)}).top(Infinity);
 
 	var academicosFiltradosPorTema = academicosPorTema.filter(function(d){ 
-		if( typeof b !== 'object' || (typeof b === 'object' && b != '0') || temasAFiltrar == []) return true;
+		if( (typeof b !== 'object' || b != '0') || temasAFiltrar == []) return true;
 		var linea = limpiarPuntuacion(d.toLowerCase());
 		if(typeof b === 'object'){
 			//if(linea.indexOf(limpiarPuntuacion(b.innerHTML.toLowerCase())) != -1) console.log(linea);
@@ -77,8 +77,8 @@ function filtrarDirectorio(b = '0'){
 		//return ((b != '0' ||correosAFiltrar == "") ? true : limpiarPuntuacion(d.toLowerCase()).indexOf(correosAFiltrar.toLowerCase()) != -1)
 	}).top(Infinity);
 	var academicosFiltradosPorLinea = academicosPorLinea.filter(function(d){ 
-
-		if(typeof b === 'object' || b != '0' || lineasAFiltrar == []) return true;
+		console.log(b);
+		if(b != '0' || lineasAFiltrar == []) return true;
 		var linea = limpiarPuntuacion(d.toLowerCase()); 
 		for(var j = 0; j < lineasAFiltrar.length; j++){
 			if(linea.indexOf(lineasAFiltrar[j]) == -1) return false;
