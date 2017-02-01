@@ -215,12 +215,12 @@ bloque_html = bloque_html + "<a href=\"" + d.liga + "\" " + (d.contenido.mb_char
 						cont = ActiveDirectory::User.find(:first, :cn => d["nombre"]).as_json
 		        academico.store(:libres,arr_libres)
 		        academico.store(:conts, arr_conts.to_a)
-						#academico.store(:mail, cont["entry"]["myhash"]["mail"])
-            #academico.store(:ext, cont["entry"]["myhash"]["telephonenumber"])
+						academico.store(:mail, cont["entry"]["myhash"]["mail"])
+            academico.store(:ext, cont["entry"]["myhash"]["telephonenumber"])
 		        profes << academico
 		        #j = j + 1
 		      rescue
-		        #puts "No se encontró: " + nom
+		        logger.debug d["nombre"]
 		      end
 		    end
 		  end
