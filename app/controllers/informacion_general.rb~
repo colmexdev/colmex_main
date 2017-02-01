@@ -163,7 +163,7 @@ class InformacionGeneralController < ApplicationController
 		# Basic usage
 		ActiveDirectory::Base.setup(settings)
 
-		@us = ActiveDirectory::User.exists?( :sn => "*")
+		@us = ActiveDirectory::User.exists?( :givenName => "*")
     #@academicos = Academico.order(nombre: :desc).all
 		@ac_json = llenarLineas('/home/webuser/xml-autori-ene2017.xml')
 		gon.academicos = @ac_json.to_json
