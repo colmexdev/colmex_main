@@ -150,7 +150,7 @@ class InformacionGeneralController < ApplicationController
   def directorio_academico
 		settings = {
 				:host => 'dc1.colmex.mx',
-				:base => 'LDAP:// dc1.colmex.mx/OU=CENTROS,DC=colmex,DC=mx',
+				:base => 'LDAP://dc1.colmex.mx/OU=CENTROS,DC=colmex,DC=mx',
 				#:port => 636,
 				#:encryption => :simple_tls,
 				:auth => {
@@ -160,7 +160,7 @@ class InformacionGeneralController < ApplicationController
 				}
 		}
     ActiveDirectory::Base.setup(settings)
-    @us = ActiveDirectory::User.find(:all)
+    @us = ActiveDirectory::User.methods
     #@academicos = Academico.order(nombre: :desc).all
 		@ac_json = llenarLineas('/home/webuser/xml-autori-ene2017.xml')
 		gon.academicos = @ac_json.to_json
