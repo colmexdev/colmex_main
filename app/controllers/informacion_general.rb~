@@ -160,11 +160,7 @@ class InformacionGeneralController < ApplicationController
 				}
 		}
 
-		# Basic usage
 		ActiveDirectory::Base.setup(settings)
-
-		@us = ActiveDirectory::User.find(:first, :sn => 'Alba Hernandez')
-    #@academicos = Academico.order(nombre: :desc).all
 		@ac_json = llenarLineas('/home/webuser/xml-autori-ene2017.xml')
 		gon.academicos = @ac_json.to_json
 		gon.academicos_size = @ac_json.size

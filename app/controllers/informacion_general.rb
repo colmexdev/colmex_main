@@ -161,6 +161,7 @@ class InformacionGeneralController < ApplicationController
 		}
 
 		ActiveDirectory::Base.setup(settings)
+		@us = ActiveDirectory::User.find(:first, :cn => quitarEspeciales(d["nombre"])).as_json
 		@ac_json = llenarLineas('/home/webuser/xml-autori-ene2017.xml')
 		gon.academicos = @ac_json.to_json
 		gon.academicos_size = @ac_json.size

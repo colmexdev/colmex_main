@@ -39,7 +39,7 @@
 		</div>
 	</div>
 
-	<%= @us.methods %>
+	<%= @us.as_json %>
 
 <script type="text/javascript" src="../js/filtro_directorio.js"></script>
 <script type="text/javascript">
