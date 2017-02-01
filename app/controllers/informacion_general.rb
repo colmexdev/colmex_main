@@ -148,19 +148,16 @@ class InformacionGeneralController < ApplicationController
   end
 
   def directorio_academico
-		settings = {
-				:host => 'dc1.colmex.mx',
-				:base => 'LDAP://dc1.colmex.mx/OU=CENTROS,DC=colmex,DC=mx',
-				:port => 636
-				#:encryption => :simple_tls,
-				#:auth => {
-				#  :method => :simple,
-				#  :username => "etenorio@colmex.mx",
-				#  :password => "RickStarrx1"
-				#}
-		}
-    ActiveDirectory::Base.setup(settings)
-    @us = ActiveDirectory::User.find(:all)
+    @us = ""
+    ldap = Net::LDAP.new
+    ldap.host = "dc1.colmex.mx"
+    ldap.port = 636
+    ldap.auth "etenorio@colmex.mx", "RickStarrx1"
+    if ldap.bind
+      @us = "Éxito"
+    else
+      @us = "Fracaso"
+    end
     #@academicos = Academico.order(nombre: :desc).all
 		@ac_json = llenarLineas('/home/webuser/xml-autori-ene2017.xml')
 		gon.academicos = @ac_json.to_json
