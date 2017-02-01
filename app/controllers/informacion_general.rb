@@ -161,13 +161,13 @@ class InformacionGeneralController < ApplicationController
 		settings = {
 				:host => 'dc1colmex.colmex.mx',
 				:base => 'LDAP://dc1colmex.colmex.mx/OU=CENTROS,DC=colmex,DC=mx',
-				:port => 636#,
-				#:encryption => :simple_tls,
-				#:auth => {
-				#  :method => :simple,
-				#  :username => "username",
-				#  :password => "password"
-				#}
+				:port => 636,
+				:encryption => :simple_tls,
+				:auth => {
+				  :method => :simple,
+				  :username => "etenorio@colmex.mx",
+				  :password => "RickStarrx1"
+				}
 		}
 
 		# Basic usage
