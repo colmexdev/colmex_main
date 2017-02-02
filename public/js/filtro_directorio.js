@@ -131,7 +131,7 @@ function actualizarVisibleDirectorio(visibles){
 function muestra(pag){
 	var i;
 
-	if(vistas <= 1){
+	if(vistas <= 0){
 		$("#sep-ant").css({"cursor": "default"});
 		$("#sep-sig").css({"cursor": "default"});
 		$("#sep-0").css({"color": "#993366"});
