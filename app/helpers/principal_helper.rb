@@ -220,7 +220,9 @@ bloque_html = bloque_html + "<a href=\"" + d.liga + "\" " + (d.contenido.mb_char
 		        profes << academico
 		        #j = j + 1
 		      rescue
-		        logger.debug nom
+		        File.open("/home/webuser/principal_colmex/current/profs_faltantes.txt","w") do |f|
+							f.puts(nom+"\n")
+            end
 		      end
 		    end
 		  end

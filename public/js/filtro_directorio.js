@@ -64,7 +64,6 @@ function filtrarDirectorio(b = '0'){
 		if( (typeof b !== 'object') && temasAFiltrar == []) return true;
 		var linea = limpiarPuntuacion(d.toLowerCase());
 		if(typeof b === 'object'){
-			//if(linea.indexOf(limpiarPuntuacion(b.innerHTML.toLowerCase())) != -1) console.log(linea);
 			return linea.indexOf(limpiarPuntuacion(b.innerHTML.toLowerCase())) != -1;}
 		else{
 			for(var j = 0; j < temasAFiltrar.length; j++){
@@ -88,6 +87,7 @@ function filtrarDirectorio(b = '0'){
 	if(typeof b !== 'object' && b != '0'){
 		$("#inic_"+b).css({"color" : "#993366"});
 	}
+	document.getElementById("frase-linea").innerHTML = (typeof b === 'object' ? ("Resultados de: " + b.innerHTML) : ""); 
 	actualizarVisibleDirectorio(academicosFiltradosPorLinea);
 	renderFrase(academicosFiltradosPorLinea);
 	partirDirectorio(academicosFiltradosPorLinea);
@@ -178,7 +178,7 @@ function muestra(pag){
 		}
 		vista_act = +pag;
 	}
-	console.log(vista_act + " pag: " + pag);
+
 	for(i=0; i<=vistas; i++){
 		$("#sep-"+i).css({"color":"#909090"});
 	}
