@@ -177,7 +177,7 @@ function muestra(pag){
 			$("#sep-ant").css({"cursor": "pointer"});
 			$("#sep-sig").css({"cursor": "pointer"});
 		}
-		vista_act = pag;
+		vista_act = +pag;
 	}
 
 	for(i=0; i<=vistas; i++){

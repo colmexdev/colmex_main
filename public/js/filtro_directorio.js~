@@ -185,10 +185,10 @@ function muestra(pag){
 	}
 
 	for(i=0;i<docentes.length;i++){
-		$("#doc-"+i).css({"display": (docentes[i]["vista"] == pag ? "block" : "none")});
+		$("#doc-"+i).css({"display": (docentes[i]["vista"] == vista_act ? "block" : "none")});
 	}
 	
-	$("#sep-"+pag).css({"color": "#993366"});
+	$("#sep-"+vista_act).css({"color": "#993366"});
 }
 
 function reescalarDirectorio(){
