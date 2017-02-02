@@ -136,6 +136,7 @@ function muestra(pag){
 		$("#sep-ant").css({"cursor": "default"});
 		$("#sep-sig").css({"cursor": "default"});
 		$("#sep-0").css({"color": "#993366"});
+		vista_act = 0;
 		//return false;
 	}
 
