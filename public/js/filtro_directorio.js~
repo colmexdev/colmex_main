@@ -149,7 +149,7 @@ function muestra(pag){
 			vista_act = 0;
 			$("#sep-ant").css({"cursor": "default"});
 		}
-		pag = vista_act;
+		//pag = vista_act;
 	}
 
 	else if(pag == "sig"){
@@ -161,7 +161,7 @@ function muestra(pag){
 			vista_act = vistas;
 			$("#sep-sig").css({"cursor": "default"});
 		}
-		pag = vista_act;
+		//pag = vista_act;
 	}
 
 	else{
@@ -177,12 +177,12 @@ function muestra(pag){
 			$("#sep-ant").css({"cursor": "pointer"});
 			$("#sep-sig").css({"cursor": "pointer"});
 		}
+		vista_act = pag;
 	}
 
 	for(i=0; i<=vistas; i++){
 		$("#sep-"+i).css({"color":"#909090"});
 	}
-	vista_act = pag;
 
 	for(i=0;i<docentes.length;i++){
 		$("#doc-"+i).css({"display": (docentes[i]["vista"] == pag ? "block" : "none")});
