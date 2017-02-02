@@ -75,7 +75,6 @@ function filtrarDirectorio(b = '0'){
 		//return ((b != '0' ||correosAFiltrar == "") ? true : limpiarPuntuacion(d.toLowerCase()).indexOf(correosAFiltrar.toLowerCase()) != -1)
 	}).top(Infinity);
 	var academicosFiltradosPorLinea = academicosPorLinea.filter(function(d){ 
-		console.log(b);
 		if(b != '0' || lineasAFiltrar == []) return true;
 		var linea = limpiarPuntuacion(d.toLowerCase()); 
 		for(var j = 0; j < lineasAFiltrar.length; j++){
@@ -165,11 +164,11 @@ function muestra(pag){
 	}
 
 	else{
-		if(pag == 0){
+		if(+pag == 0){
 			$("#sep-ant").css({"cursor": "default"});
 			$("#sep-sig").css({"cursor": "pointer"});
 		}
-		else if(pag == vistas){
+		else if(+pag == vistas){
 			$("#sep-ant").css({"cursor": "pointer"});
 			$("#sep-sig").css({"cursor": "default"});
 		}
@@ -179,7 +178,7 @@ function muestra(pag){
 		}
 		vista_act = +pag;
 	}
-
+	console.log(vista_act + " pag: " + pag);
 	for(i=0; i<=vistas; i++){
 		$("#sep-"+i).css({"color":"#909090"});
 	}
