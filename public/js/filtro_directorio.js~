@@ -39,7 +39,7 @@ function filtrarDirectorio(b = '0'){
 	academicosPorInicial.filterAll();
 	if(b != '0'){
 		$("#nombre").val("");
-		$("#correo").val("");
+		$("#correo").val((typeof b === 'object' ? b.innerHTML : ""));
 		$("#linea").val("");
 		$("#contenido").val("");
 	}
