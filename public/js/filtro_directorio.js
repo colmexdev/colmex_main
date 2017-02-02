@@ -130,10 +130,12 @@ function actualizarVisibleDirectorio(visibles){
 
 function muestra(pag){
 	var i;
+	$("#sep-ant").css({"display": "inline-block"});
+	$("#sep-sig").css({"display": "inline-block"});
 
 	if(vistas <= 0){
-		$("#sep-ant").css({"cursor": "default"});
-		$("#sep-sig").css({"cursor": "default"});
+		$("#sep-ant").css({"cursor": "default", "display": "none"});
+		$("#sep-sig").css({"cursor": "default", "display": "none"});
 		$("#sep-0").css({"color": "#993366"});
 		vista_act = 0;
 		//return false;
