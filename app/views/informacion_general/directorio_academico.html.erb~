@@ -15,10 +15,10 @@
 		</div>
 
 		<div class="row" id="filtros-dir">
-			<div class="col-xs-12">
+			<div class="col-xs-12" style="padding-left:0;">
 				<h3>Buscar por orden alfabético.</h3>
 			</div>
-			<div class="col-xs-12" id="filtro-inic" style="text-align:center;">
+			<div class="col-xs-12" id="filtro-inic" style="text-align:center;padding-left:0;">
 			<% for i in 65..90 %>
 				<span class="inics letra" id=<%= "inic_" + i.chr %> style="cursor:pointer; margin:0 3px;font-size:24px;color:#909090;" onclick=<%= "filtrarDirectorio('" + i.chr + "')" %>><%= i.chr %></span>
 			<% end %>

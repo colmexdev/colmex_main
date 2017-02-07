@@ -16,11 +16,11 @@ function partirDirectorio(visibles){
 	if(visibles.length%15 == 0)
 		vistas = vistas - 1;
 	var i;
-	$("#separadores").html("<div style=\"margin:0 2px;display:inline-block;cursor:pointer;font-size:24px;color:#909090; \" id=\"sep-ant\" onclick=\"muestra("+"'ant'"+")\">" + "<" + "</div>");
+	$("#separadores").html("<div class=\"numeros\" style=\"margin:0 2px;display:inline-block;cursor:pointer;\" id=\"sep-ant\" onclick=\"muestra("+"'ant'"+")\">" + "<" + "</div>");
 	for(i=0; i<=vistas; i++){
-		$("#separadores").append("<div style=\"margin:0 2px;display:inline-block;cursor:pointer;font-size:24px;color:#909090; \" id=\"sep-" + i + "\" onclick=\"muestra("+i+")\">" + (i+1) + "</div>");
+		$("#separadores").append("<div class=\"numeros\" style=\"margin:0 2px;display:inline-block;cursor:pointer;\" id=\"sep-" + i + "\" onclick=\"muestra("+i+")\">" + (i+1) + "</div>");
 	}
-	$("#separadores").append("<div style=\"margin:0 2px;display:inline-block;cursor:pointer;font-size:24px;color:#909090; \" id=\"sep-sig\" onclick=\"muestra("+"'sig'"+")\">" + ">" + "</div>");
+	$("#separadores").append("<div class=\"numeros\" style=\"margin:0 2px;display:inline-block;cursor:pointer;\" id=\"sep-sig\" onclick=\"muestra("+"'sig'"+")\">" + ">" + "</div>");
 	muestra(0);
 }
 
@@ -87,7 +87,7 @@ function filtrarDirectorio(b = '0'){
 	if(typeof b !== 'object' && b != '0'){
 		$("#inic_"+b).css({"color" : "#993366"});
 	}
-	document.getElementById("frase-linea").innerHTML = (typeof b === 'object' ? ("Resultados de: " + b.innerHTML) : ""); 
+	document.getElementById("frase-linea").innerHTML = (typeof b === 'object' ? ("Resultados de búsqueda: <span class=\"vino\">" + b.innerHTML + "</span>") : ""); 
 	actualizarVisibleDirectorio(academicosFiltradosPorLinea);
 	renderFrase(academicosFiltradosPorLinea);
 	partirDirectorio(academicosFiltradosPorLinea);
