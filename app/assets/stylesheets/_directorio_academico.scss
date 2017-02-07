@@ -51,5 +51,9 @@
 #filtro-nombre { text-align: left; }
 #filtro-mail { text-align: left; }
 #filtro-linea { text-align: left; }
-#filtro-centro { text-align: left; margin: 0 auto; }
+#filtro-centro { text-align: left; }
+
+#correo, #linea{
+	width: 260px;
+}
 

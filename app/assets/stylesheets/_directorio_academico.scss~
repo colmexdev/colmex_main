@@ -1,6 +1,6 @@
 /* Estilos para el directorio academico */
 .center { 
-	text-align: center;
+
  
 		>select{
 			font-weight: 600;
@@ -48,7 +48,12 @@
 }
 
 
-#filtro-nombre { text-align: right; }
+#filtro-nombre { text-align: left; }
 #filtro-mail { text-align: left; }
-#filtro-centro { text-align: left; width: 70%; margin: 0 auto; }
+#filtro-linea { text-align: left; }
+#filtro-centro { text-align: left; margin: 0 auto; }
+
+#correo, #linea{
+	width: 260px;
+}
 
