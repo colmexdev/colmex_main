@@ -3,9 +3,21 @@
 <%= include_gon %>
 
 <div class="container-fluid" id="resto-cuerpo">
-	<div id="cuerpo">
+	<div id="cuerpo" class="principal-chica uk-block-large">
+
+		<div class="row">
+			<div class="col-xs-12">
+				<span class="titulo-grande">Directorio académico</span><br>
+			</div>
+			<div class="col-xs-12">
+				<p>Aquí podrás encontrar información general sobre la planta académica de El Colegio de México.</p>
+			</div>
+		</div>
 
 		<div class="row" id="filtros-dir">
+			<div class="col-xs-12">
+				<h3>Buscar por orden alfabético.</h3>
+			</div>
 			<div class="col-xs-12" id="filtro-inic" style="text-align:center;">
 			<% for i in 65..90 %>
 				<span class="inics" id=<%= "inic_" + i.chr %> style="cursor:pointer; margin:0 3px;font-size:24px;color:#909090;" onclick=<%= "filtrarDirectorio('" + i.chr + "')" %>><%= i.chr %></span>
@@ -29,7 +41,7 @@
 
 		<div class="row">
 			<script type="text/javascript" src="../js/accordion.js"></script>
-			<div class="col-xs-12" id="frase-linea" style="text-align:center;"></div>
+			<div class="col-xs-12 vino" id="frase-linea" style="text-align:center;"></div>
 			<div class="col-xs-12 acordeon-premios" id="busqueda">
 				<div class="uk-accordion" id="acordeon" data-uk-accordion>
 				<%= construir_docentes(@ac_json) %>

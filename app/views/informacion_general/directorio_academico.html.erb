@@ -3,16 +3,28 @@
 <%= include_gon %>
 
 <div class="container-fluid" id="resto-cuerpo">
-	<div id="cuerpo">
+	<div id="cuerpo" class="principal-chica uk-block-large">
+
+		<div class="row">
+			<div class="col-xs-12">
+				<span class="titulo-grande">Directorio académico</span><br>
+			</div>
+			<div class="col-xs-12">
+				<p>Aquí podrás encontrar información general sobre la planta académica de El Colegio de México.</p>
+			</div>
+		</div>
 
 		<div class="row" id="filtros-dir">
+			<div class="col-xs-12">
+				<h3>Buscar por orden alfabético.</h3>
+			</div>
 			<div class="col-xs-12" id="filtro-inic" style="text-align:center;">
 			<% for i in 65..90 %>
-				<span class="inics" id=<%= "inic_" + i.chr %> style="cursor:pointer; margin:0 3px;font-size:24px;color:#909090;" onclick=<%= "filtrarDirectorio('" + i.chr + "')" %>><%= i.chr %></span>
+				<span class="inics letra" id=<%= "inic_" + i.chr %> style="cursor:pointer; margin:0 3px;font-size:24px;color:#909090;" onclick=<%= "filtrarDirectorio('" + i.chr + "')" %>><%= i.chr %></span>
 			<% end %>
 			</div>
 			<div class="col-md-4 col-xs-12 filtro center" id="filtro-nombre">
-				<%= text_field_tag("nombre", "", :oninput => "filtrarDirectorio();", :placeholder => "Nombre") %>
+				<h3>Buscar por:</h3><%= text_field_tag("nombre", "", :oninput => "filtrarDirectorio();", :placeholder => "Nombre") %>
 			</div>
 			<div class="col-md-4 col-xs-12 center" id="filtro-mail">
 				<%= text_field_tag("correo", "", :oninput => "filtrarDirectorio();", :placeholder => "Línea de investigación") %>
