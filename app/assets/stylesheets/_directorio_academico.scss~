@@ -40,6 +40,14 @@
 		>input:-ms-input-placeholder { color: #000; }
 }
 
+.letra {
+	font-family: "Gotham SSm A", "Gotham SSm B", Lato, sans-serif;
+	font-size: 30px;
+	letter-spacing: 8px;
+	color: #909090;
+}
+
+
 #filtro-nombre { text-align: right; }
 #filtro-linea { text-align: left; }
 #filtro-centro { text-align: center; width: 70%; margin: 0 auto; }
