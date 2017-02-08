@@ -6,11 +6,11 @@
 	<div id="cuerpo" class="principal-chica uk-block-large">
 
 		<div class="row">
-			<div class="col-xs-12">
+			<div class="col-xs-12" style="padding-left:0;">
 				<span class="titulo-grande">Directorio académico</span><br>
 			</div>
-			<div class="col-xs-12">
-				<p>Aquí podrás encontrar información general sobre la planta académica de El Colegio de México.</p>
+			<div class="col-xs-12" style="padding-left:0;">
+				<p style="margin-top:25px;margin-bottom:25px;">Aquí podrás encontrar información general sobre la planta académica de El Colegio de México.</p>
 			</div>
 		</div>
 
@@ -27,12 +27,12 @@
 				<h3 style="display:inline-block;margin-right:8px;">Buscar por:</h3><%= text_field_tag("nombre", "", :oninput => "filtrarDirectorio();", :placeholder => "Nombre") %>
 			</div>
 			<div class="col-md-4 col-xs-12 center" id="filtro-linea">
-				<%= text_field_tag("linea", "", :oninput => "filtrarDirectorio();", :placeholder => "Tema de investigación*") %><br>
-				<p style="font-size:12px;margin-top:0;">*Los temas de investigación utilizan lenguaje libre.</p>
+				<%= text_field_tag("linea", "", :oninput => "filtrarDirectorio();", :placeholder => "Tema de investigación") %><br>
+				<p style="font-size:12px;margin-top:0;">Los temas de investigación utilizan lenguaje libre.</p>
 			</div>
 			<div class="col-md-4 col-xs-12 center" id="filtro-mail">
-				<%= text_field_tag("correo", "", :oninput => "filtrarDirectorio();", :placeholder => "Línea de investigación*") %><br>
-				<p style="font-size:12px;margin-top:0;">*Las líneas de investigación utilizan lenguaje conttrolado.</p>
+				<%= text_field_tag("correo", "", :oninput => "filtrarDirectorio();", :placeholder => "Línea de investigación") %><br>
+				<p style="font-size:12px;margin-top:0;">Las líneas de investigación utilizan lenguaje conttrolado.</p>
 			</div>
 		</div>
 		<div class="row">
