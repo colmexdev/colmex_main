@@ -44,15 +44,14 @@ function filtrarDirectorio(b = '0'){
 		$("#linea").val("");
 		$("#contenido").val("");
 		busqueda = (typeof b === 'object' ? b.innerHTML : (b != '0' ? b : []));
-		console.log(busqueda)
 	}
 	var centrosAFiltrar = $("#contenido").val();
 	var nombresAFiltrar = limpiarPuntuacion($("#nombre").val().toLowerCase()).split(/[ ]+/);
 	var temasAFiltrar = limpiarPuntuacion($("#correo").val().toLowerCase()).split(/[ ]+/);
 	var lineasAFiltrar = limpiarPuntuacion($("#linea").val().toLowerCase()).split(/[ ]+/);
 
+	console.log(busqueda);
 	if(busqueda == []){
-		console.log("Algo");
 		if($("#contenido").val() != ""){
 			console.log("Centro");
 			busqueda.push("(Centro: " + $("#contenido").val() + ")");
@@ -119,7 +118,6 @@ function filtrarDirectorio(b = '0'){
 
 function mostrarBusqueda(params){
 	var pars = "";
-	console.log(params);
 	if(typeof params === 'object') pars = params.join(", ");
 	else pars = params;
 	document.getElementById("frase-linea").innerHTML = "Resultados de búsqueda: <span class='vino'>" + pars + "</span>";

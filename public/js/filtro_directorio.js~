@@ -52,6 +52,7 @@ function filtrarDirectorio(b = '0'){
 	var lineasAFiltrar = limpiarPuntuacion($("#linea").val().toLowerCase()).split(/[ ]+/);
 
 	if(busqueda == []){
+		console.log("Algo");
 		if($("#contenido").val() != ""){
 			console.log("Centro");
 			busqueda.push("(Centro: " + $("#contenido").val() + ")");
