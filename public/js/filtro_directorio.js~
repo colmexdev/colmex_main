@@ -87,7 +87,7 @@ function filtrarDirectorio(b = '0'){
 	if(typeof b !== 'object' && b != '0'){
 		$("#inic_"+b).css({"color" : "#993366"});
 	}
-	document.getElementById("frase-linea").innerHTML = (typeof b === 'object' ? ("Resultados de búsqueda: <span class=\"vino\">" + b.innerHTML + "</span>") : ""); 
+	document.getElementById("frase-linea").innerHTML = (typeof b === 'object' ? ("Resultados de búsqueda: <span class='vino'>" + b.innerHTML + "</span>") : ""); 
 	actualizarVisibleDirectorio(academicosFiltradosPorLinea);
 	renderFrase(academicosFiltradosPorLinea);
 	partirDirectorio(academicosFiltradosPorLinea);

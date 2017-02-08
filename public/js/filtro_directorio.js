@@ -16,11 +16,11 @@ function partirDirectorio(visibles){
 	if(visibles.length%15 == 0)
 		vistas = vistas - 1;
 	var i;
-	$("#separadores").html("<div class=\"numeros\" style=\"margin:0 2px;display:inline-block;cursor:pointer;\" id=\"sep-ant\" onclick=\"muestra("+"'ant'"+")\">" + "<" + "</div>");
+	$("#separadores").html("<div class=\"numeros\" style=\"margin:0 2px;display:inline-block;cursor:pointer;\" id=\"sep-ant\" onclick=\"muestra("+"'ant'"+")\">" + "</div>");
 	for(i=0; i<=vistas; i++){
 		$("#separadores").append("<div class=\"numeros\" style=\"margin:0 2px;display:inline-block;cursor:pointer;\" id=\"sep-" + i + "\" onclick=\"muestra("+i+")\">" + (i+1) + "</div>");
 	}
-	$("#separadores").append("<div class=\"numeros\" style=\"margin:0 2px;display:inline-block;cursor:pointer;\" id=\"sep-sig\" onclick=\"muestra("+"'sig'"+")\">" + ">" + "</div>");
+	$("#separadores").append("<div class=\"numeros\" style=\"margin:0 2px;display:inline-block;cursor:pointer;\" id=\"sep-sig\" onclick=\"muestra("+"'sig'"+")\">" +  "</div>");
 	muestra(0);
 }
 
