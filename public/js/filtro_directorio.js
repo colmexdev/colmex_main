@@ -50,24 +50,11 @@ function filtrarDirectorio(b = '0'){
 	var temasAFiltrar = limpiarPuntuacion($("#correo").val().toLowerCase()).split(/[ ]+/);
 	var lineasAFiltrar = limpiarPuntuacion($("#linea").val().toLowerCase()).split(/[ ]+/);
 
-	console.log(busqueda);
-	if(busqueda == []){
-		if($("#contenido").val() != ""){
-			console.log("Centro");
-			busqueda.push("(Centro: " + $("#contenido").val() + ")");
-		}
-		if($("#nombre").val() != ""){
-			console.log("Nombre");
-			busqueda.push("(Nombre: " + $("#nombre").val() + ")");
-		}
-		if($("#correo").val() != ""){
-			console.log("Líneas");
-			busqueda.push("(Línea(s): " + $("#correo").val() + ")");
-		}
-		if($("#linea").val() != ""){
-			console.log("Temas");
-			busqueda.push("(Tema(s): " + $("#linea").val() + ")");
-		}
+	if(typeof busqueda === 'object'){
+		if($("#contenido").val() != "") busqueda.push("(Centro: " + $("#contenido").val() + ")");
+		if($("#nombre").val() != "") busqueda.push("(Nombre: " + $("#nombre").val() + ")");
+		if($("#correo").val() != "") busqueda.push("(Línea(s): " + $("#correo").val() + ")");
+		if($("#linea").val() != "") busqueda.push("(Tema(s): " + $("#linea").val() + ")");
 	}
 
 	var academicosFiltradosPorCentro = academicosPorCentro.filter(function(d){ return ( (b != '0' || centrosAFiltrar == "") ? true : d == centrosAFiltrar )}).top(Infinity);
