@@ -158,9 +158,12 @@ bloque_html = bloque_html + "<a href=\"" + d.liga + "\" " + (d.contenido.mb_char
       bloque_html = bloque_html + "</div>"
 
       bloque_html = bloque_html + "<div class=\"uk-width-large-5-6 uk-width-medium-4-5 uk-width-small-4-5 uk-text-left uk-text-break\">"
+
+			bloque_html = bloque_html + "<p style='font-family:\"Gotham SSm A\", \"Gotham SSm B\", Lato, sans-serif; font-size: 16px; font-weight: 700; color: #444444;' >" + " CENTRO DE ESTUDIOS " + (d["adscripcion"].include?("Asia") ? "DE " + d["adscripcion"].mb_chars.upcase : (d["adscripcion"].include?("Lingüistico") ? "LINGÜÍSTICOS Y LITERARIOS" : d["adscripcion"].mb_chars.upcase)) + "</p>"
+
     	bloque_html = bloque_html + "<h3 class=\"vino\">" + d["nombre"] + "</h3>"
       bloque_html = bloque_html + "<h4 class=\"vino\">Correo: " + (d[:email].nil? ? acad.correo : d[:email]) + " Extensión: " + (d[:ext].nil? ? "" : d[:ext]) +  "</h3>"
-    	bloque_html = bloque_html + "<h4>" +" Centro de Estudios " + (d["adscripcion"].include?("Asia") ? "de " + d["adscripcion"] : (d["adscripcion"].include?("Lingüistico") ? "Lingüísticos y Literarios" : d["adscripcion"])) + "</h4>"
+    	
 			bloque_html = bloque_html + "<h5>" + "Temas de investigación: " + d[:libres].join(", ") + "</h5>"
       bloque_html = bloque_html + "<h5>" + "Líneas de investigación: "
 
