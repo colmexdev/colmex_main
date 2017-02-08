@@ -1196,14 +1196,15 @@ ul.ul-nav { display: table;
 	display: block;
 
 	#boton_susc{
-		background-color: #9E6680;
+		background-color: #7E3355;
 		font-size: 18px;
 		display: inline-block;
-		border-color: #7E3355;
+		border-color: #470020;
 		border-width: 1.5px;
 		border-style: solid;
-		height: 50px;
-		width: 25%;
+		border: none;
+		height: 100%;
+		width: 100%;
 		text-align: center;
 		-webkit-transition: all 0.5s linear;
 		-moz-transition: all 0.5s linear;

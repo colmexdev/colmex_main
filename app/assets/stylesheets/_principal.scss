@@ -1202,8 +1202,9 @@ ul.ul-nav { display: table;
 		border-color: #470020;
 		border-width: 1.5px;
 		border-style: solid;
-		height: 50px;
-		width: 24.5%;
+		border: none;
+		height: 100%;
+		width: 100%;
 		text-align: center;
 		-webkit-transition: all 0.5s linear;
 		-moz-transition: all 0.5s linear;
@@ -1216,11 +1217,12 @@ ul.ul-nav { display: table;
 			color: #fff;
 			line-height: 46px;
 			display: block;
+			height: 100%;
 
 			span{
 				display: inline-block;
 				vertical-align: middle;
-				line-height: normal;
+				line-height: 3.5;
 			}
 
 			@media only screen and (min-width: 0px) and (max-width: 840px){
