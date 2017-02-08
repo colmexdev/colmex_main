@@ -152,12 +152,12 @@ bloque_html = bloque_html + "<a href=\"" + d.liga + "\" " + (d.contenido.mb_char
 
 			bloque_html = bloque_html + "<div class=\"uk-grid uk-grid-medium uk-margin-large-bottom\">"
 
-      bloque_html = bloque_html + "<div class=\"uk-width-large-1-6 uk-width-medium-1-5 uk-width-small-1-5 uk-text-center\">"
+      bloque_html = bloque_html + "<div class=\"uk-width-large-1-5 uk-width-medium-1-5 uk-width-small-1-5 uk-text-center\">"
       bloque_html = bloque_html + "<img src=" + image_url(acad.foto.url) + " class=\"uk-border-rounded\" alt=\"Foto Académico\">"
 			
       bloque_html = bloque_html + "</div>"
 
-      bloque_html = bloque_html + "<div class=\"uk-width-large-5-6 uk-width-medium-4-5 uk-width-small-4-5 uk-text-left uk-text-break\">"
+      bloque_html = bloque_html + "<div class=\"uk-width-large-4-5 uk-width-medium-4-5 uk-width-small-4-5 uk-text-left uk-text-break\">"
 
 			bloque_html = bloque_html + "<p style='font-family:\"Gotham SSm A\", \"Gotham SSm B\", Lato, sans-serif; font-size: 16px; font-weight: 700; color: #444444;margin-bottom:3px;' >" + " CENTRO DE ESTUDIOS " + (d["adscripcion"].include?("Asia") ? "DE " + d["adscripcion"].mb_chars.upcase : (d["adscripcion"].include?("Lingüistico") ? "LINGÜÍSTICOS Y LITERARIOS" : d["adscripcion"].mb_chars.upcase)) + "</p>"
 		
