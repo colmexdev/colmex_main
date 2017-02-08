@@ -103,11 +103,12 @@ function filtrarDirectorio(b = '0'){
 
 function mostrarBusqueda(params){
 	var pars = "";
+	console.log(params);
 	if(typeof params === 'object') pars = params.join(", ");
 	else pars = params;
 	document.getElementById("frase-linea").innerHTML = "Resultados de búsqueda: <span class='vino'>" + pars + "</span>";
 	document.getElementById("filete-top").style.borderTopColor = "#7E3355";
-	document.getElementById("filete-top").style.borderTopWidth = "4px";
+	document.getElementById("filete-top").style.borderTopWidth = "3px";
 	document.getElementById("filete-top").style.borderTopStyle = "solid";
 }
 
