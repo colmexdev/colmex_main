@@ -159,21 +159,23 @@ bloque_html = bloque_html + "<a href=\"" + d.liga + "\" " + (d.contenido.mb_char
 
       bloque_html = bloque_html + "<div class=\"uk-width-large-5-6 uk-width-medium-4-5 uk-width-small-4-5 uk-text-left uk-text-break\">"
 
-			bloque_html = bloque_html + "<p style='font-family:\"Gotham SSm A\", \"Gotham SSm B\", Lato, sans-serif; font-size: 16px; font-weight: 700; color: #444444;' >" + " CENTRO DE ESTUDIOS " + (d["adscripcion"].include?("Asia") ? "DE " + d["adscripcion"].mb_chars.upcase : (d["adscripcion"].include?("Lingüistico") ? "LINGÜÍSTICOS Y LITERARIOS" : d["adscripcion"].mb_chars.upcase)) + "</p>"
+			bloque_html = bloque_html + "<p style='font-family:\"Gotham SSm A\", \"Gotham SSm B\", Lato, sans-serif; font-size: 16px; font-weight: 700; color: #444444;margin-bottom:3px;' >" + " CENTRO DE ESTUDIOS " + (d["adscripcion"].include?("Asia") ? "DE " + d["adscripcion"].mb_chars.upcase : (d["adscripcion"].include?("Lingüistico") ? "LINGÜÍSTICOS Y LITERARIOS" : d["adscripcion"].mb_chars.upcase)) + "</p>"
 		
-    	bloque_html = bloque_html + "<p class=\"titulo-chico vino\" style=\"margin-top:0;margin-bottom:0;\">" + d["nombre"] + "</p>"
+    	bloque_html = bloque_html + "<p><span class=\"titulo-chico vino\" style=\"font-size:22px;margin-top:0;margin-bottom:0;\">" + d["nombre"] + "</span></p>"
 
-			bloque_html = bloque_html + "<div clas=\"uk-grid uk-grid-medium uk-margin-large-bottom\">"
+			bloque_html = bloque_html + "<div class=\"uk-grid uk-grid-medium uk-margin-large-bottom\">"
 			bloque_html = bloque_html + "<div class=\"uk-width-1-2\">"
-      bloque_html = bloque_html + "<p><span style=\"font-weight:700;\">Correo:</span> " + (d[:email].nil? ? acad.correo : ("<a class=\"uk-link\" href=\"mailto:"+d[:email] +"\">" +d[:email] + "</a>")) + "</p>"
-			bloque_html = bloque_html + "<p><span style=\"font-weight:700;\">Teléfono:</span> <span>+(52) 55 5449 3000</span></p>"
-			bloque_html = bloque_html + "<p><span style=\"font-weight:700;\">Extensión:</span> <span>" + (d[:ext].nil? ? "" : d[:ext]) + "</span></p>"
+      bloque_html = bloque_html + "<p style=\"font-size:19px;margin-bottom:3px;\"><span style=\"font-weight:700;\">Correo:</span> " + (d[:email].nil? ? acad.correo : ("<a class=\"uk-link\" href=\"mailto:"+d[:email] +"\">" +d[:email] + "</a>")) + "</p>"
+			bloque_html = bloque_html + "<p style=\"font-size:19px;margin-top:0;margin-bottom:0;\"><span style=\"font-weight:700;\">Teléfono:</span> <span>+(52) 55 5449 3000</span></p>"
+			bloque_html = bloque_html + "<p style=\"font-size:19px;margin-top:3px;\"><span style=\"font-weight:700;\">Extensión:</span> <span>" + (d[:ext].nil? ? "" : d[:ext]) + "</span></p>"
 
 			bloque_html = bloque_html + "</div>"
 
 			bloque_html = bloque_html + "<div class=\"uk-width-1-2\">"
-			bloque_html = bloque_html + "<p><span style=\"font-weight:700;\">Sitio web:</span> " + (acad.pagina.nil? ? acad.pagina : ("<a class=\"uk-link\" href=\"" + acad.pagina + "\">" +acad.pagina + "</a>")) + "</a></p>"
-    	
+			bloque_html = bloque_html + "<p style=\"font-size:19px;margin-bottom:3px\"><span style=\"font-weight:700;\">Sitio web:</span> " + (acad.pagina.nil? ? acad.pagina : ("<a class=\"uk-link\" href=\"" + acad.pagina + "\">" +acad.pagina + "</a>")) + "</a></p>"
+			bloque_html = bloque_html + "<p style=\"font-size:19px;margin-top:0;margin-bottom:0;\"><span style=\"font-weight:700;\">ORCID:</span> <span></span></p>"
+			bloque_html = bloque_html + "<p style=\"font-size:19px;margin-top:3px;\"><span style=\"font-weight:700;\">ISNI:</span> <span>" + "" + "</span></p>"
+
 			bloque_html = bloque_html + "</div></div>"
 
 			bloque_html = bloque_html + "<h5>" + "Temas de investigación: " + d[:libres].join(", ") + "</h5>"
