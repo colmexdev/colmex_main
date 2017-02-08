@@ -37,18 +37,25 @@ function filtrarDirectorio(b = '0'){
 	academicosPorLinea.filterAll();
 	academicosPorCentro.filterAll();
 	academicosPorInicial.filterAll();
+	var busqueda = [];
 	if(b != '0'){
 		$("#nombre").val("");
 		$("#correo").val((typeof b === 'object' ? b.innerHTML : ""));
 		$("#linea").val("");
 		$("#contenido").val("");
+		busqueda = (typeof b === 'object' ? b.innerHTML : b);
 	}
 	var centrosAFiltrar = $("#contenido").val();
 	var nombresAFiltrar = limpiarPuntuacion($("#nombre").val().toLowerCase()).split(/[ ]+/);
 	var temasAFiltrar = limpiarPuntuacion($("#correo").val().toLowerCase()).split(/[ ]+/);
 	var lineasAFiltrar = limpiarPuntuacion($("#linea").val().toLowerCase()).split(/[ ]+/);
 	var academicosFiltradosPorCentro = academicosPorCentro.filter(function(d){ return ( (b != '0' || centrosAFiltrar == "") ? true : d == centrosAFiltrar )}).top(Infinity);
-
+	if(busqueda == []){
+		if($("#contenido").val() != "") busqueda.push("(Centro: " + $("#contenido").val() + ")");
+		if($("#nombre").val() != "") busqueda.push("(Nombre: " + $("#nombre").val() + ")");
+		if($("#correo").val() != "") busqueda.push("(Línea(s): " + $("#correo").val() + ")");
+		if($("#linea").val() != "") busqueda.push("(Tema(s): " + $("#linea").val() + ")");
+	}
 	var academicosFiltradosPorNombre = academicosPorNombre.filter(function(d){
 		if(b != '0' || nombresAFiltrar == []) return true;
 		var nombre = limpiarPuntuacion(d.toLowerCase()); 
@@ -87,10 +94,21 @@ function filtrarDirectorio(b = '0'){
 	if(typeof b !== 'object' && b != '0'){
 		$("#inic_"+b).css({"color" : "#993366"});
 	}
-	document.getElementById("frase-linea").innerHTML = (typeof b === 'object' ? ("Resultados de búsqueda: <span class='vino'>" + b.innerHTML + "</span>") : ""); 
+
+	mostrarBusqueda(busqueda);
 	actualizarVisibleDirectorio(academicosFiltradosPorLinea);
 	renderFrase(academicosFiltradosPorLinea);
 	partirDirectorio(academicosFiltradosPorLinea);
+}
+
+function mostrarBusqueda(params){
+	var pars = "";
+	if(typeof params === 'object') pars = params.join(", ");
+	else pars = params;
+	document.getElementById("frase-linea").innerHTML = "Resultados de búsqueda: <span class='vino'>" + pars + "</span>";
+	document.getElementById("filete-top").style.borderTopColor = "#7E3355";
+	document.getElementById("filete-top").style.borderTopWidth = "8px";
+	document.getElementById("filete-top").style.borderTopStyle = "solid";
 }
 
 function renderFrase(arreglo){
