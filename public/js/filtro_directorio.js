@@ -43,7 +43,7 @@ function filtrarDirectorio(b = '0'){
 		$("#correo").val((typeof b === 'object' ? b.innerHTML : ""));
 		$("#linea").val("");
 		$("#contenido").val("");
-		busqueda = (typeof b === 'object' ? b.innerHTML : b);
+		busqueda = (typeof b === 'object' ? b.innerHTML : (b != '0' ? b : []));
 	}
 	var centrosAFiltrar = $("#contenido").val();
 	var nombresAFiltrar = limpiarPuntuacion($("#nombre").val().toLowerCase()).split(/[ ]+/);
@@ -107,7 +107,7 @@ function mostrarBusqueda(params){
 	else pars = params;
 	document.getElementById("frase-linea").innerHTML = "Resultados de búsqueda: <span class='vino'>" + pars + "</span>";
 	document.getElementById("filete-top").style.borderTopColor = "#7E3355";
-	document.getElementById("filete-top").style.borderTopWidth = "8px";
+	document.getElementById("filete-top").style.borderTopWidth = "4px";
 	document.getElementById("filete-top").style.borderTopStyle = "solid";
 }
 
