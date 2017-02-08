@@ -165,16 +165,16 @@ bloque_html = bloque_html + "<a href=\"" + d.liga + "\" " + (d.contenido.mb_char
 
 			bloque_html = bloque_html + "<div class=\"uk-grid uk-grid-medium uk-margin-large-bottom\">"
 			bloque_html = bloque_html + "<div class=\"uk-width-1-2\">"
-      bloque_html = bloque_html + "<p style=\"font-size:17px;margin-bottom:3px;\"><span style=\"font-weight:700;\">Correo:</span> " + (d[:email].nil? ? acad.correo : ("<a class=\"uk-link\" href=\"mailto:"+d[:email] +"\">" +d[:email] + "</a>")) + "</p>"
-			bloque_html = bloque_html + "<p style=\"font-size:17px;margin-top:0;margin-bottom:0;\"><span style=\"font-weight:700;\">Teléfono:</span> <span>+(52) 55 5449 3000</span></p>"
-			bloque_html = bloque_html + "<p style=\"font-size:17px;margin-top:3px;\"><span style=\"font-weight:700;\">Extensión:</span> <span>" + (d[:ext].nil? ? "" : d[:ext]) + "</span></p>"
+      bloque_html = bloque_html + "<p style=\"font-size:17px;margin-bottom:3px;text-align:left;\"><span style=\"font-weight:700;\">Correo:</span> " + (d[:email].nil? ? acad.correo : ("<a class=\"uk-link\" href=\"mailto:"+d[:email] +"\">" +d[:email] + "</a>")) + "</p>"
+			bloque_html = bloque_html + "<p style=\"font-size:17px;margin-top:0;margin-bottom:0;text-align:left;\"><span style=\"font-weight:700;\">Teléfono:</span> <span>+(52) 55 5449 3000</span></p>"
+			bloque_html = bloque_html + "<p style=\"font-size:17px;margin-top:3px;text-align:left;\"><span style=\"font-weight:700;\">Extensión:</span> <span>" + (d[:ext].nil? ? "" : d[:ext]) + "</span></p>"
 
 			bloque_html = bloque_html + "</div>"
 
 			bloque_html = bloque_html + "<div class=\"uk-width-1-2\">"
-			bloque_html = bloque_html + "<p style=\"font-size:17px;margin-bottom:3px\"><span style=\"font-weight:700;\">Sitio web:</span> " + (acad.pagina.nil? ? acad.pagina : ("<a class=\"uk-link\" href=\"" + acad.pagina + "\">" +acad.pagina + "</a>")) + "</a></p>"
-			bloque_html = bloque_html + "<p style=\"font-size:17px;margin-top:0;margin-bottom:0;\"><span style=\"font-weight:700;\">ORCID:</span> <span></span></p>"
-			bloque_html = bloque_html + "<p style=\"font-size:17px;margin-top:3px;\"><span style=\"font-weight:700;\">ISNI:</span> <span>" + "" + "</span></p>"
+			bloque_html = bloque_html + "<p style=\"font-size:17px;margin-bottom:3px;text-align:left;\"><span style=\"font-weight:700;\">Sitio web:</span> " + (acad.pagina.nil? ? acad.pagina : ("<a class=\"uk-link\" href=\"" + acad.pagina + "\">" +acad.pagina + "</a>")) + "</a></p>"
+			bloque_html = bloque_html + "<p style=\"font-size:17px;margin-top:0;margin-bottom:0;text-align:left;\"><span style=\"font-weight:700;\">ORCID:</span> <span></span></p>"
+			bloque_html = bloque_html + "<p style=\"font-size:17px;margin-top:3px;text-align:left;\"><span style=\"font-weight:700;\">ISNI:</span> <span>" + "" + "</span></p>"
 
 			bloque_html = bloque_html + "</div></div>"
 
