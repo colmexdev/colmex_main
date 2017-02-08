@@ -1195,6 +1195,48 @@ ul.ul-nav { display: table;
 	text-align: center;
 	display: block;
 
+	#boton_susc{
+		background-color: #9E6680;
+		font-size: 18px;
+		display: inline-block;
+		border-color: #470020;
+		border-width: 1.5px;
+		border-style: solid;
+		height: 50px;
+		width: 33.33%;
+		text-align: center;
+		-webkit-transition: all 0.5s linear;
+		-moz-transition: all 0.5s linear;
+		-ms-transition: all 0.5s linear;
+		-o-transition: all 0.5s linear;
+		transition: all 0.5s linear;
+		@include centrado;
+
+		a{
+			color: #fff;
+			line-height: 46px;
+			display: block;
+
+			span{
+				display: inline-block;
+				vertical-align: middle;
+				line-height: normal;
+			}
+
+			@media only screen and (min-width: 0px) and (max-width: 840px){
+				span { font-size: 11px; } 
+			}
+			@media only screen and (min-width: 840px) and (max-width: 994px){
+				span { font-size: 15px; } 
+			}
+		}
+	}
+
+	#boton_susc:hover{
+		background-color: #5E002B;
+	}
+
+
 	#forma_suscripcion{
 		margin: 14.8px auto;
 		width: 100%;
