@@ -43,7 +43,7 @@
 
 		<div class="row">
 			<script type="text/javascript" src="../js/accordion.js"></script>
-			<div class="col-xs-12" style="text-align:left;padding-top:10px;" id="filete-top">
+			<div class="col-xs-12" style="text-align:left;padding-top:20px;" id="filete-top">
 				<h2 id="frase-linea"></h2>
 			</div>
 			<div class="col-xs-12 acordeon-premios" id="busqueda">
