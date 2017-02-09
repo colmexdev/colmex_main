@@ -76,7 +76,7 @@
 	display: inline-block;
 	border-radius: 50px;
 	margin-left:15px;
-	margin-top:15px;
+	margin-top:20px;
 	margin-bottom:30px;
 	height: 30px;
 	width: 190px;
@@ -106,6 +106,10 @@
 			span { font-size: 15px; } 
 		}
 	}
+}
+
+@media only screen and (max-width: 991px){
+	#boton_limpiar { margin-top: 0; margin-bottom: 40px; }
 }
 
 #boton_limpiar:hover{

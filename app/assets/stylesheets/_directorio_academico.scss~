@@ -75,8 +75,8 @@
 	font-size: 18px;
 	display: inline-block;
 	border-radius: 50px;
-	padding-left:15px;
-	margin-top:15px;
+	margin-left:15px;
+	margin-top:20px;
 	margin-bottom:30px;
 	height: 30px;
 	width: 190px;
@@ -106,6 +106,10 @@
 			span { font-size: 15px; } 
 		}
 	}
+}
+
+@media only screen and (max-width: 991px){
+	#boton_limpiar { margin-top: 0; }
 }
 
 #boton_limpiar:hover{
