@@ -14,7 +14,8 @@
 			appearance: none;
 			-webkit-appearance: none;
 			-moz-appearance: none;
-			margin: 15px 0;
+			margin: 15px 10px;
+			margin-left: 0;
 			background: image-url("select.png") no-repeat 100% 50%;
 
 			>option{
