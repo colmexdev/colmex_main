@@ -232,7 +232,7 @@ bloque_html = bloque_html + "<a href=\"" + d.liga + "\" " + (d.contenido.mb_char
           codigos.each do |co|
             isni_t = co[0].scan(/[<]subfield code="a"[>](.*?)[<]\/subfield[>][<]subfield code="2"[>]i((sn)|(ns))i[<]\/subfield[>]/)[0]
             if !isni_t.nil?
-              isni = isni[0].split(/ +/).join("").rjust(16,"0")
+              isni = isni_t[0].split(/ +/).join("").rjust(16,"0")
             end
           end
 		      begin
