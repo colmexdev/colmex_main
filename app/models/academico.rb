@@ -2,7 +2,7 @@ class Academico < ActiveRecord::Base
   has_attached_file :foto, :styles => {},
                     :url => "/assets/academicos/:style/:basename_:id.:extension",
                     :path => ":rails_root/public/assets/academicos/:style/:basename_:id.:extension",
-                    :default_url => "/vacio.png"
+                    :default_url => "/persona.jpg"
   validates_presence_of :nombre
   validates_presence_of :adscripcion
   validates_presence_of :correo

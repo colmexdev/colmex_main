@@ -8,7 +8,7 @@
 			padding: 2px 10px;
 			font-weight: 600;
 			border-width: 1px;
-			height: 24px;
+			height: 35px;
 			width: 200px;
 			border-radius: 5px;
 			appearance: none;
@@ -26,7 +26,7 @@
 		>input{
 			border-radius: 5px;
 			border: solid 1px #909090;
-			height: 24px;
+			height: 35px;
 			position: relative;
 			font-weight: 600;
 			font-size: 15px;
@@ -58,7 +58,7 @@
 #filtro-nombre { text-align: left; }
 #filtro-mail { text-align: left; }
 #filtro-linea { text-align: left; }
-#filtro-centro { text-align: left; }
+#filtro-centro { text-align: left; margin-bottom: 20px;}
 
 #correo, #linea{
 	width: 260px;
