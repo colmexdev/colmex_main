@@ -220,6 +220,9 @@ function borrarDocentes(){
 	for(var i = 0; i < docentes.length; i++){
 		$("#doc-"+i).css({"display": "none"});
 	}
+	$("#separadores").html("");
+	$(".inics.letra").css({"color" : "#909090"});
+
 }
 
 function reescalarDirectorio(){
