@@ -212,6 +212,16 @@ function muestra(pag){
 	$("#sep-"+vista_act).css({"color": "#993366"});
 }
 
+function borrarDocentes(){
+	$("#nombre").val("");
+	$("#correo").val("");
+	$("#linea").val("");
+	$("#contenido").val("");
+	for(var i = 0; i < docentes.length; i++){
+		$("#doc-"+i).css({"display": "none"});
+	}
+}
+
 function reescalarDirectorio(){
 	for(var i = 0; i < docentes.length; i++){
 		$("#doc-"+i).css({"display": (docentes[i]["visible"] ? "block" : "none")/*, "width" : (descubres[i]["visible"] ? "" : 0), "border" : (descubres[i]["visible"] ? "solid 4px #fff" : "none") */});
