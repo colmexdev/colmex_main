@@ -222,6 +222,9 @@ function borrarDocentes(){
 	}
 	$("#separadores").html("");
 	$(".inics.letra").css({"color" : "#909090"});
+	$("#frase-desc").remove();
+	$("#frase-linea").html("");
+	$("#filete-top").css({"border":"none"});
 	event.preventDefault();
 }
 

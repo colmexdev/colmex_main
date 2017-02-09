@@ -158,7 +158,6 @@ function muestra(pag){
 		$("#sep-sig").css({"cursor": "default", "display": "none"});
 		$("#sep-0").css({"color": "#993366"});
 		vista_act = 0;
-		//return false;
 	}
 
 	else if(pag == "ant"){
@@ -170,7 +169,6 @@ function muestra(pag){
 			vista_act = 0;
 			$("#sep-ant").css({"cursor": "default"});
 		}
-		//pag = vista_act;
 	}
 
 	else if(pag == "sig"){
@@ -182,7 +180,6 @@ function muestra(pag){
 			vista_act = vistas;
 			$("#sep-sig").css({"cursor": "default"});
 		}
-		//pag = vista_act;
 	}
 
 	else{
@@ -213,6 +210,12 @@ function muestra(pag){
 }
 
 function borrarDocentes(){
+	var accordion = UIkit.accordion(UIkit.$('#acordeon'));
+	accordion.find('[data-wrapper]').each(function(){
+		if(UIkit.$(this)[0].firstElementChild.className.indexOf("uk-active") != -1){
+			accordion.toggleItem(UIkit.$(this), true, true); 
+		}
+	});
 	$("#nombre").val("");
 	$("#correo").val("");
 	$("#linea").val("");
