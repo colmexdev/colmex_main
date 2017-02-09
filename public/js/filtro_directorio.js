@@ -222,7 +222,7 @@ function borrarDocentes(){
 	}
 	$("#separadores").html("");
 	$(".inics.letra").css({"color" : "#909090"});
-
+	event.preventDefault();
 }
 
 function reescalarDirectorio(){
