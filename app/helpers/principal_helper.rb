@@ -174,7 +174,7 @@ bloque_html = bloque_html + "<a href=\"" + d.liga + "\" " + (d.contenido.mb_char
 			bloque_html = bloque_html + "<div class=\"uk-width-1-2\">"
 			bloque_html = bloque_html + "<p style=\"font-size:15px;margin-bottom:3px;text-align:left;\"><span style=\"font-weight:700;\">Sitio web:</span> " + (acad.pagina.nil? ? "-" : ("<a class=\"uk-link\" href=\"" + acad.pagina + "\" target=\"_blank\">" +acad.pagina + "</a>")) + "</a></p>"
 			bloque_html = bloque_html + "<p style=\"font-size:15px;margin-top:0;margin-bottom:0;text-align:left;\"><span style=\"font-weight:700;\">ORCID:</span> <span></span></p>"
-			bloque_html = bloque_html + "<p style=\"font-size:15px;margin-top:3px;text-align:left;\"><span style=\"font-weight:700;\">ISNI:</span> <span>" + "" + "</span></p>"
+			bloque_html = bloque_html + "<p style=\"font-size:15px;margin-top:3px;text-align:left;\"><span style=\"font-weight:700;\">ISNI:</span> <span>" + d[:isni] + "</span></p>"
 
 			bloque_html = bloque_html + "</div></div>"
 
@@ -210,6 +210,7 @@ bloque_html = bloque_html + "<a href=\"" + d.liga + "\" " + (d.contenido.mb_char
 		    profs = l.scan(/[<]record[>].*?[<]\/record[>]/)
 		    profs.each do |p|
 		      arr_libres, arr_conts = [], [].to_set
+					isni = ""
 		      nombre = p.match(/[<]datafield tag="100"(.)*?[>][<]subfield code="a"[>](.)*?[<]\/subfield[>](.)*?[<]\/datafield[>]/).to_s.split("</subfield>")[0].split("<subfield code=\"a\">")[1].split(", ")
 		      nom = '%' + nombre[1].split(/[ ]+/).join("%") + "%" + nombre[0].split(/[ ]+/).join("%") + "%"
 		      controladas = p.scan(/<datafield tag="372" ind1=" " ind2=" ">(.*?)<\/datafield>/)
@@ -227,6 +228,13 @@ bloque_html = bloque_html + "<a href=\"" + d.liga + "\" " + (d.contenido.mb_char
 		      libres.each do |li|
 		        arr_libres << li[0].scan(/[<]subfield code="a"[>].*?[<]\/subfield[>]/)[0].split("</subfield>")[0].split("<subfield code=\"a\">")[1]
 		      end
+          codigos = p.scan(/[<]datafield tag="024" ind1="7" ind2=" "[>](.*?)[<]\/datafield[>]/)
+          codigos.each do |co|
+            isni_t = co[0].scan(/[<]subfield code="a"[>](.*?)[<]\/subfield[>][<]subfield code="2"[>]i((sn)|(ns))i[<]\/subfield[>]/)[0]
+            if !isni_t.nil?
+              isni = isni[0].split(/ +/).join("").rjust(16,"0")
+            end
+          end
 		      begin
 		        academico = Academico.where("nombre like ?",nom).first.as_json
 						cont = ActiveDirectory::User.find(:first, :mail => academico["correo"]).as_json
@@ -234,6 +242,7 @@ bloque_html = bloque_html + "<a href=\"" + d.liga + "\" " + (d.contenido.mb_char
 		        academico.store(:conts, arr_conts.to_a)
 						academico.store(:email, cont["entry"]["myhash"]["mail"][0])
             academico.store(:ext, cont["entry"]["myhash"]["telephonenumber"][0])
+            academico.store(:isni,isni)
 		        profes << academico
 		        #j = j + 1
 		      rescue
