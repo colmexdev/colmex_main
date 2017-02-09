@@ -14,7 +14,7 @@
 			appearance: none;
 			-webkit-appearance: none;
 			-moz-appearance: none;
-			margin: 15px 10px;
+			margin: 15px 0;
 			background: image-url("select.png") no-repeat 100% 50%;
 
 			>option{
@@ -73,10 +73,10 @@
 	background-color: #7E3355;
 	font-size: 18px;
 	display: inline-block;
-	border-color: #470020;
-	border-width: 1.5px;
-	border-style: solid;
-	border: none;
+	border-radius: 50px;
+	padding-left:15px;
+	margin-top:15px;
+	margin-bottom:30px;
 	height: 30px;
 	width: 190px;
 	text-align: center;
@@ -94,8 +94,8 @@
 
 		span{
 			display: inline-block;
-			vertical-align: middle;
-			line-height: 3.5;
+			vertical-align: super;
+			line-height: normal;
 		}
 
 		@media only screen and (min-width: 0px) and (max-width: 840px){
