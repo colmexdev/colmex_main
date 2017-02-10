@@ -190,7 +190,7 @@ class InformacionGeneralController < ApplicationController
 			  @miembros << {:nombre => u.get_attr(:cn), :correo => u.get_attr(:mail), :centro => centro, :ext => (u.get_attr(:telephoneNumber) || ""), :roles => rol}
       end
     end
-    @centros = @centros.to_a
-		@roles = @roles.to_a
+    @centros = @centros.to_a.sort { |a,b| a[0] <=> b[0] }
+		@roles = @roles.to_a.sort { |a,b| a[0] <=> b[0] }
   end
 end
