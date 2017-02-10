@@ -261,4 +261,19 @@ bloque_html = bloque_html + "<a href=\"" + d.liga + "\" " + (d.contenido.mb_char
   def asignarRol(cad)
     return (cad.include?("PRESIDENCIA") ? "Presidencia" : (cad.include?("ADMINISTRACION") ? "Administración" : (cad.include?("ACADEMICOS") ? "Académico" : (cad.include?("APOYO") ? "Apoyo" : (cad.include?("ALUMNOS") && cad.include?("Regulares") ? "Alumno regular" : "Otro")))))
   end
+
+  def construirMiembro(miembros)
+    bloque_html = ""
+		miembros.each_with_index do |m,ind|
+      bloque_html = bloque_html + "<div id=\"mem-" + ind.to_s +"\">"
+			bloque_html = bloque_html + "<div style=\"width:25%;display:inline-block;\">" + m[:nombre] + "</div>"
+      bloque_html = bloque_html + "<div style=\"width:25%;display:inline-block;\">" + m[:correo] + "</div>"
+      bloque_html = bloque_html + "<div style=\"width:25%;display:inline-block;\">" + m[:ext] + "</div>"
+      bloque_html = bloque_html + "<div style=\"width:25%;display:inline-block;\">" + m[:centro] + "</div>"
+      
+      bloque_html = bloque_html + "</div>"
+    end
+
+   return bloque_html.html_safe
+  end
 end

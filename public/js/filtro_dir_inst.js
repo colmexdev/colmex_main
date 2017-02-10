@@ -1,11 +1,10 @@
-docentes = clone(JSON.parse(gon.academicos));
-agregarVisible(docentes);
-data = crossfilter(docentes);
-academicosPorNombre = data.dimension(function(d){ return d["nombre"]});
-academicosPorLinea = data.dimension(function(d){return limpiarPuntuacion(d["libres"].join(" ").toLowerCase())});
-academicosPorTema = data.dimension(function(d){return limpiarPuntuacion(d["conts"].join(" ").toLowerCase())});
-academicosPorCentro = data.dimension(function(d){ return d["adscripcion"]});
-academicosPorInicial = data.dimension(function(d){ return d["inicial"]});
+members = clone(JSON.parse(gon.miembros));
+agregarVisible(miembros);
+data = crossfilter(miembros);
+miembrosPorNombre = data.dimension(function(d){ return d["nombre"]});
+miembrosPorCentro = data.dimension(function(d){ return d["centro"]});
+miembrosPorRol = data.dimension(function(d){ return d["rol"]});
+miembrosPorInicial = data.dimension(function(d){ return d["inicial"]});
 vistas = 0;
 total = 0;
 vista_act = 0;
@@ -26,39 +25,35 @@ function partirDirectorio(visibles){
 
 
 function filtrarDirectorio(b = '0'){
-	var accordion = UIkit.accordion(UIkit.$('#acordeon'));
+	/*var accordion = UIkit.accordion(UIkit.$('#acordeon'));
 	accordion.find('[data-wrapper]').each(function(){
 		if(UIkit.$(this)[0].firstElementChild.className.indexOf("uk-active") != -1){
 			accordion.toggleItem(UIkit.$(this), true, true); 
 		}
-	});
-	academicosPorNombre.filterAll();
-	academicosPorTema.filterAll();
-	academicosPorLinea.filterAll();
-	academicosPorCentro.filterAll();
-	academicosPorInicial.filterAll();
+	});*/
+	miembrosPorNombre.filterAll();
+	miembrosPorCentro.filterAll();
+	miembrosPorRol.filterAll();
+	miembrosPorInicial.filterAll();
 	var busqueda = [];
 	if(b != '0'){
 		$("#nombre").val("");
-		$("#correo").val((typeof b === 'object' ? b.innerHTML : ""));
-		$("#linea").val("");
-		$("#contenido").val("");
-		busqueda = (typeof b === 'object' ? b.innerHTML : (b != '0' ? b : []));
+		$("#rol").val("");
+		$("#centro").val("");
+		busqueda = b;
 	}
-	var centrosAFiltrar = $("#contenido").val();
+	var centrosAFiltrar = $("#centro").val();
 	var nombresAFiltrar = limpiarPuntuacion($("#nombre").val().toLowerCase()).split(/[ ]+/);
-	var temasAFiltrar = limpiarPuntuacion($("#correo").val().toLowerCase()).split(/[ ]+/);
-	var lineasAFiltrar = limpiarPuntuacion($("#linea").val().toLowerCase()).split(/[ ]+/);
+	var rolesAFiltrar = $("#rol").val()
 
-	if(typeof busqueda === 'object'){
-		if($("#contenido").val() != "") busqueda.push("(Centro: " + $("#contenido").val() + ")");
+	if(b == '0'){
+		if($("#centro").val() != "") busqueda.push("(Centro: " + $("#centro").val() + ")");
 		if($("#nombre").val() != "") busqueda.push("(Nombre: " + $("#nombre").val() + ")");
-		if($("#correo").val() != "") busqueda.push("(Línea(s): " + $("#correo").val() + ")");
-		if($("#linea").val() != "") busqueda.push("(Tema(s): " + $("#linea").val() + ")");
+		if($("#rol").val() != "") busqueda.push("(Tipo: " + $("#rol").val() + ")");
 	}
 
-	var academicosFiltradosPorCentro = academicosPorCentro.filter(function(d){ return ( (b != '0' || centrosAFiltrar == "") ? true : d == centrosAFiltrar )}).top(Infinity);
-	var academicosFiltradosPorNombre = academicosPorNombre.filter(function(d){
+	var miembrosFiltradosPorCentro = miembrosPorCentro.filter(function(d){ return ( (b != '0' || centrosAFiltrar == "") ? true : d == centrosAFiltrar )}).top(Infinity);
+	var miembrosFiltradosPorNombre = miembrosPorNombre.filter(function(d){
 		if(b != '0' || nombresAFiltrar == []) return true;
 		var nombre = limpiarPuntuacion(d.toLowerCase()); 
 		for(var j = 0; j < nombresAFiltrar.length; j++){
@@ -67,9 +62,9 @@ function filtrarDirectorio(b = '0'){
 		return true;
 	//return (nombresAFiltrar == "" ? true :limpiarPuntuacion(d.toLowerCase()).indexOf(nombresAFiltrar.toLowerCase()) != -1)
 	}).top(Infinity);
-	var academicosFiltradosPorInicial = academicosPorInicial.filter(function(d){ return ((typeof b === 'object' ||  b == '0') ? true : d == b)}).top(Infinity);
+	var miembrosFiltradosPorInicial = miembrosPorInicial.filter(function(d){ return (b == '0' ? true : d == b)}).top(Infinity);
 
-	var academicosFiltradosPorTema = academicosPorTema.filter(function(d){ 
+	/*var miembrosFiltradosPorRol = miembrosPorRol.filter(function(d){ 
 		if( (typeof b !== 'object') && temasAFiltrar == []) return true;
 		var linea = limpiarPuntuacion(d.toLowerCase());
 		if(typeof b === 'object'){
@@ -81,16 +76,8 @@ function filtrarDirectorio(b = '0'){
 			return true;
 		}
 		//return ((b != '0' ||correosAFiltrar == "") ? true : limpiarPuntuacion(d.toLowerCase()).indexOf(correosAFiltrar.toLowerCase()) != -1)
-	}).top(Infinity);
-	var academicosFiltradosPorLinea = academicosPorLinea.filter(function(d){ 
-		if(b != '0' || lineasAFiltrar == []) return true;
-		var linea = limpiarPuntuacion(d.toLowerCase()); 
-		for(var j = 0; j < lineasAFiltrar.length; j++){
-			if(linea.indexOf(lineasAFiltrar[j]) == -1) return false;
-		}
-		return true;
-		//return ( lineasAFiltrar == "" ? true : limpiarPuntuacion(d.toLowerCase()).indexOf(lineasAFiltrar.toLowerCase()) != -1)
-	}).top(Infinity);
+	}).top(Infinity);*/
+	var miembrosFiltradosPorRol = miembrosPorRol.filter(function(d){ return ( (b != '0' || rolesAFiltrar == "") ? true : d == rolesAFiltrar )}).top(Infinity);
 	vista_act = 0;
 	$(".inics").css({"color" : "#909090"});
 	if(typeof b !== 'object' && b != '0'){
@@ -98,9 +85,9 @@ function filtrarDirectorio(b = '0'){
 	}
 
 	mostrarBusqueda(busqueda);
-	actualizarVisibleDirectorio(academicosFiltradosPorLinea);
-	renderFrase(academicosFiltradosPorLinea);
-	partirDirectorio(academicosFiltradosPorLinea);
+	actualizarVisibleDirectorio(miembrosFiltradosPorRol);
+	renderFrase(miembrosFiltradosPorRol);
+	partirDirectorio(miembrosFiltradosPorRol);
 }
 
 function mostrarBusqueda(params){
@@ -116,8 +103,8 @@ function mostrarBusqueda(params){
 function renderFrase(arreglo){
 	uno_visible = false;
 	var borrar_frase = (document.getElementById("frase-desc") != null && arreglo.length > 0);
-	for(var i = 0; i < docentes.length; i++){
-		if(docentes[i]["visible"]){
+	for(var i = 0; i < members.length; i++){
+		if(members[i]["visible"]){
 			uno_visible = true;
 			break;
 		}
@@ -134,15 +121,15 @@ function renderFrase(arreglo){
 
 function actualizarVisibleDirectorio(visibles){
 	total = 0;
-	for(var i = 0; i < docentes.length; i++){
-		docentes[i]["visible"] = false;
-		docentes[i]["vista"] = -1;
-		$("#doc-"+i).attr("class","uk-accordion-title");
+	for(var i = 0; i < members.length; i++){
+		members[i]["visible"] = false;
+		members[i]["vista"] = -1;
+		$("#mem-"+i).attr("class","uk-accordion-title");
 	}
 	for(var i = 0; i < visibles.length; i++){
-		docentes[visibles[i]["index"]]["visible"] = true;
-		docentes[visibles[i]["index"]]["vista"] = Math.floor(i/15);
-		$("#doc-"+visibles[i]["index"]).attr("class","uk-accordion-title view-"+visibles[i]["index"]);
+		members[visibles[i]["index"]]["visible"] = true;
+		members[visibles[i]["index"]]["vista"] = Math.floor(i/15);
+		$("#mem-"+visibles[i]["index"]).attr("class","uk-accordion-title view-"+visibles[i]["index"]);
 		total = total + 1;
 	}
 	reescalarDirectorio();
@@ -202,26 +189,25 @@ function muestra(pag){
 		$("#sep-"+i).css({"color":"#909090"});
 	}
 
-	for(i=0;i<docentes.length;i++){
-		$("#doc-"+i).css({"display": (docentes[i]["vista"] == vista_act ? "block" : "none")});
+	for(i=0;i<members.length;i++){
+		$("#mem-"+i).css({"display": (members[i]["vista"] == vista_act ? "block" : "none")});
 	}
 	
 	$("#sep-"+vista_act).css({"color": "#993366"});
 }
 
 function borrarDocentes(){
-	var accordion = UIkit.accordion(UIkit.$('#acordeon'));
+	/*var accordion = UIkit.accordion(UIkit.$('#acordeon'));
 	accordion.find('[data-wrapper]').each(function(){
 		if(UIkit.$(this)[0].firstElementChild.className.indexOf("uk-active") != -1){
 			accordion.toggleItem(UIkit.$(this), true, true); 
 		}
-	});
+	});*/
 	$("#nombre").val("");
-	$("#correo").val("");
-	$("#linea").val("");
-	$("#contenido").val("");
-	for(var i = 0; i < docentes.length; i++){
-		$("#doc-"+i).css({"display": "none"});
+	$("#centro").val("");
+	$("#rol").val("");
+	for(var i = 0; i < members.length; i++){
+		$("#mem-"+i).css({"display": "none"});
 	}
 	$("#separadores").html("");
 	$(".inics.letra").css({"color" : "#909090"});
@@ -232,8 +218,8 @@ function borrarDocentes(){
 }
 
 function reescalarDirectorio(){
-	for(var i = 0; i < docentes.length; i++){
-		$("#doc-"+i).css({"display": (docentes[i]["visible"] ? "block" : "none")/*, "width" : (descubres[i]["visible"] ? "" : 0), "border" : (descubres[i]["visible"] ? "solid 4px #fff" : "none") */});
+	for(var i = 0; i < members.length; i++){
+		$("#mem-"+i).css({"display": (members[i]["visible"] ? "block" : "none")/*, "width" : (descubres[i]["visible"] ? "" : 0), "border" : (descubres[i]["visible"] ? "solid 4px #fff" : "none") */});
 	}
 }
 

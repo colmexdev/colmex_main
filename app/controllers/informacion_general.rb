@@ -187,10 +187,11 @@ class InformacionGeneralController < ApplicationController
         rol = asignarRol(u.get_attr(:dn).scan(/OU=(.*?),/).join(" "))
 			  @centros <<  [centro, centro]
 				@roles << [rol, rol]
-			  @miembros << {:nombre => u.get_attr(:cn), :correo => u.get_attr(:mail), :centro => centro, :ext => (u.get_attr(:telephoneNumber) || ""), :roles => rol}
+			  @miembros << {:nombre => u.get_attr(:cn), :inicial => u.get_attr(:sn)[0], :correo => u.get_attr(:mail), :centro => centro, :ext => (u.get_attr(:telephoneNumber) || ""), :roles => rol}
       end
     end
     @centros = @centros.to_a.sort { |a,b| a[0] <=> b[0] }
 		@roles = @roles.to_a.sort { |a,b| a[0] <=> b[0] }
+		gon.miembros = @miembros.to_json
   end
 end
