@@ -266,10 +266,10 @@ bloque_html = bloque_html + "<a href=\"" + d.liga + "\" " + (d.contenido.mb_char
     bloque_html = ""
 		miembros.each_with_index do |m,ind|
       bloque_html = bloque_html + "<div id=\"mem-" + ind.to_s + "\">"
-			bloque_html = bloque_html + "<div style=\"width:25%;display:inline-block;\">" + m[:nombre] + "</div>"
-      bloque_html = bloque_html + "<div style=\"width:25%;display:inline-block;\">" + m[:correo] + "</div>"
-      bloque_html = bloque_html + "<div style=\"width:25%;display:inline-block;\">" + m[:ext] + "</div>"
-      bloque_html = bloque_html + "<div style=\"width:25%;display:inline-block;\">" + m[:centro] + "</div>"
+			bloque_html = bloque_html + "<div style=\"width:25%;display:inline-block;\">" + m[:nombre].to_s + "</div>"
+      bloque_html = bloque_html + "<div style=\"width:25%;display:inline-block;\">" + m[:correo].to_s + "</div>"
+      bloque_html = bloque_html + "<div style=\"width:25%;display:inline-block;\">" + m[:ext].to_s + "</div>"
+      bloque_html = bloque_html + "<div style=\"width:25%;display:inline-block;\">" + m[:centro].to_s + "</div>"
       
       bloque_html = bloque_html + "</div>"
     end
