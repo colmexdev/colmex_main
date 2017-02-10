@@ -1,6 +1,6 @@
 members = clone(JSON.parse(gon.miembros));
-agregarVisible(miembros);
-data = crossfilter(miembros);
+agregarVisible(members);
+data = crossfilter(members);
 miembrosPorNombre = data.dimension(function(d){ return d["nombre"]});
 miembrosPorCentro = data.dimension(function(d){ return d["centro"]});
 miembrosPorRol = data.dimension(function(d){ return d["rol"]});
@@ -103,7 +103,7 @@ function mostrarBusqueda(params){
 function renderFrase(arreglo){
 	uno_visible = false;
 	var borrar_frase = (document.getElementById("frase-desc") != null && arreglo.length > 0);
-	for(var i = 0; i < members.length; i++){
+	for(var i = 0; i < miembros.length; i++){
 		if(members[i]["visible"]){
 			uno_visible = true;
 			break;
@@ -121,14 +121,14 @@ function renderFrase(arreglo){
 
 function actualizarVisibleDirectorio(visibles){
 	total = 0;
-	for(var i = 0; i < members.length; i++){
-		members[i]["visible"] = false;
-		members[i]["vista"] = -1;
+	for(var i = 0; i < miembros.length; i++){
+		miembros[i]["visible"] = false;
+		miembros[i]["vista"] = -1;
 		$("#mem-"+i).attr("class","uk-accordion-title");
 	}
 	for(var i = 0; i < visibles.length; i++){
-		members[visibles[i]["index"]]["visible"] = true;
-		members[visibles[i]["index"]]["vista"] = Math.floor(i/15);
+		miembros[visibles[i]["index"]]["visible"] = true;
+		miembros[visibles[i]["index"]]["vista"] = Math.floor(i/15);
 		$("#mem-"+visibles[i]["index"]).attr("class","uk-accordion-title view-"+visibles[i]["index"]);
 		total = total + 1;
 	}
@@ -189,8 +189,8 @@ function muestra(pag){
 		$("#sep-"+i).css({"color":"#909090"});
 	}
 
-	for(i=0;i<members.length;i++){
-		$("#mem-"+i).css({"display": (members[i]["vista"] == vista_act ? "block" : "none")});
+	for(i=0;i<miembros.length;i++){
+		$("#mem-"+i).css({"display": (miembros[i]["vista"] == vista_act ? "block" : "none")});
 	}
 	
 	$("#sep-"+vista_act).css({"color": "#993366"});
@@ -206,7 +206,7 @@ function borrarDocentes(){
 	$("#nombre").val("");
 	$("#centro").val("");
 	$("#rol").val("");
-	for(var i = 0; i < members.length; i++){
+	for(var i = 0; i < miembros.length; i++){
 		$("#mem-"+i).css({"display": "none"});
 	}
 	$("#separadores").html("");
@@ -218,8 +218,8 @@ function borrarDocentes(){
 }
 
 function reescalarDirectorio(){
-	for(var i = 0; i < members.length; i++){
-		$("#mem-"+i).css({"display": (members[i]["visible"] ? "block" : "none")/*, "width" : (descubres[i]["visible"] ? "" : 0), "border" : (descubres[i]["visible"] ? "solid 4px #fff" : "none") */});
+	for(var i = 0; i < miembros.length; i++){
+		$("#mem-"+i).css({"display": (miembros[i]["visible"] ? "block" : "none")/*, "width" : (descubres[i]["visible"] ? "" : 0), "border" : (descubres[i]["visible"] ? "solid 4px #fff" : "none") */});
 	}
 }
 
