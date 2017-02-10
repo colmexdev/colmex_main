@@ -182,9 +182,9 @@ class InformacionGeneralController < ApplicationController
 		ActiveDirectory::Base.setup(settings)
 		@miembros, @centros = [], [].to_set
 		ActiveDirectory::User.find(:all, :cn => '*').collect.each do |u|
-			centro = u.get_attr(:department)
+			centro = u.get_attr(:department).split(" ")[0].gsub(/([.-]|\/)+/," ").split(" ")[0].upcase.gsub(/JUBILAD((O|A)S?)/,"JUBILADO").gsub(/[Íí]/,"I").gsub(/[óÓ]/,"O").gsub(/^C$/,"").gsub(/^BIB$/,"BIBLIOTECA").gsub(/^PRES$/,"PRESIDENCIA").join(" ").split(" ")
 			if !centro.nil? && u.get_attr(:dn).scan(/OU=(.*?),/).join(" ") != ""
-			  @centros <<  [centro.split(" ")[0], centro.split[0]]
+			  @centros <<  [centro, centro]
 			  @miembros << {:nombre => u.get_attr(:cn), :correo => u.get_attr(:mail), :centro => centro, :ext => (u.get_attr(:telephoneNumber) || ""), :roles => u.get_attr(:dn).scan(/OU=(.*?),/).join(" ")}
       end
     end
