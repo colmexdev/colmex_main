@@ -184,7 +184,7 @@ class InformacionGeneralController < ApplicationController
 		ActiveDirectory::User.find(:all, :cn => '*').collect.each do |u|
 			if !u.get_attr(:department).nil? && u.get_attr(:dn).scan(/OU=(.*?),/).join(" ") != ""
         centro = u.get_attr(:department).split(" ")[0].gsub(/([.-]|\/)+/," ").split(" ")[0].upcase.gsub(/JUBILAD((O|A)S?)/,"JUBILADO").gsub(/[Íí]/,"I").gsub(/[óÓ]/,"O").gsub(/^C$/,"CSC").gsub(/^BIB$/,"BIBLIOTECA").gsub(/^PRES$/,"PRESIDENCIA")
-        rol = asginarRol(u.get_attr(:dn).scan(/OU=(.*?),/).join(" "))
+        rol = asignarRol(u.get_attr(:dn).scan(/OU=(.*?),/).join(" "))
 			  @centros <<  [centro, centro]
 				@roles = [rol, rol]
 			  @miembros << {:nombre => u.get_attr(:cn), :correo => u.get_attr(:mail), :centro => centro, :ext => (u.get_attr(:telephoneNumber) || ""), :roles => rol}

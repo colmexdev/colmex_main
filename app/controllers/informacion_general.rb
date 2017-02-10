@@ -186,10 +186,11 @@ class InformacionGeneralController < ApplicationController
         centro = u.get_attr(:department).split(" ")[0].gsub(/([.-]|\/)+/," ").split(" ")[0].upcase.gsub(/JUBILAD((O|A)S?)/,"JUBILADO").gsub(/[Íí]/,"I").gsub(/[óÓ]/,"O").gsub(/^C$/,"CSC").gsub(/^BIB$/,"BIBLIOTECA").gsub(/^PRES$/,"PRESIDENCIA")
         rol = asignarRol(u.get_attr(:dn).scan(/OU=(.*?),/).join(" "))
 			  @centros <<  [centro, centro]
-				@roles = [rol, rol]
+				@roles << [rol, rol]
 			  @miembros << {:nombre => u.get_attr(:cn), :correo => u.get_attr(:mail), :centro => centro, :ext => (u.get_attr(:telephoneNumber) || ""), :roles => rol}
       end
     end
     @centros = @centros.to_a
+		@roles = @roles.to_a
   end
 end
