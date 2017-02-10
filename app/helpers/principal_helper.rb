@@ -262,7 +262,7 @@ bloque_html = bloque_html + "<a href=\"" + d.liga + "\" " + (d.contenido.mb_char
     return (cad.include?("PRESIDENCIA") ? "Presidencia" : (cad.include?("ADMINISTRACION") ? "Administración" : (cad.include?("ACADEMICOS") ? "Académico" : (cad.include?("APOYO") ? "Apoyo" : (cad.include?("ALUMNOS") && cad.include?("Regulares") ? "Alumno regular" : "Otro")))))
   end
 
-  def construirMiembro(miembros)
+  def construirMiembros(miembros)
     bloque_html = ""
 		miembros.each_with_index do |m,ind|
       bloque_html = bloque_html + "<div id=\"mem-" + ind.to_s + "\">"
