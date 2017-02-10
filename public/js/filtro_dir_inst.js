@@ -3,7 +3,7 @@ agregarVisible(miembros);
 data = crossfilter(miembros);
 miembrosPorNombre = data.dimension(function(d){ return d["nombre"]});
 miembrosPorCentro = data.dimension(function(d){ return d["centro"]});
-miembrosPorRol = data.dimension(function(d){ return d["rol"]});
+miembrosPorRol = data.dimension(function(d){ return d["roles"]});
 miembrosPorInicial = data.dimension(function(d){ return d["inicial"]});
 vistas = 0;
 total = 0;
@@ -104,7 +104,7 @@ function renderFrase(arreglo){
 	uno_visible = false;
 	var borrar_frase = (document.getElementById("frase-desc") != null && arreglo.length > 0);
 	for(var i = 0; i < miembros.length; i++){
-		if(members[i]["visible"]){
+		if(miembros[i]["visible"]){
 			uno_visible = true;
 			break;
 		}
