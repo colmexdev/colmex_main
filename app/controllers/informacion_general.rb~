@@ -161,9 +161,30 @@ class InformacionGeneralController < ApplicationController
 		}
 
 		ActiveDirectory::Base.setup(settings)
-		@us = ActiveDirectory::User.find(:all, :cn => "*Jaime*Sobrino*").as_json
 		@ac_json = llenarLineas('/home/webuser/xml-autori-ene2017.xml')
 		gon.academicos = @ac_json.to_json
 		gon.academicos_size = @ac_json.size
-  end 
+  end
+
+  def directorio_institucional
+		settings = {
+				:host => 'dc1colmex.colmex.mx',
+				:base => 'DC=colmex,DC=mx',
+				:port => 636,
+				:encryption => :simple_tls,
+				:auth => {
+				  :method => :simple,
+				  :username => "etenorio@colmex.mx",
+				  :password => "RickStarrx1"
+				}
+		}
+
+		ActiveDirectory::Base.setup(settings)
+		@miembros, @centros = [], [].to_set
+		ActiveDirectory::User.find(:all, :cn => '*').collect.each do |u|
+			centro = u.get_attr(:department)
+			@centros <<  [centro.split(" ")[0], centro.split[0]]
+			@miembros << {:nombre => u.get_attr(:givenName), :correo => u.get_attr(:mail), :centro => centro, :ext => (u.get_attr(:telephoneNumber) || ""), :roles => u.get_attr(:dn).scan(/OU=(.*?),/).join(" ")}
+    end
+  end
 end

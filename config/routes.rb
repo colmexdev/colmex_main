@@ -79,6 +79,8 @@ Rails.application.routes.draw do
 
   get 'informacion_general/documentacion_institucional' => 'informacion_general#documentacion_institucional', :as => :documentacion
 
+  get 'informacion_general/directorio_institucional' => 'informacion_general#directorio_institucional', :as => :dir_inst
+
   get 'informacion_general/actas' => 'informacion_general#actas', :as => :actas
 
   get 'informacion_general/informes' => 'informacion_general#informes', :as => :informes
