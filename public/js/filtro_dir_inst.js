@@ -124,12 +124,12 @@ function actualizarVisibleDirectorio(visibles){
 	for(var i = 0; i < miembros.length; i++){
 		miembros[i]["visible"] = false;
 		miembros[i]["vista"] = -1;
-		$("#mem-"+i).attr("class","uk-accordion-title");
+		$("#mem-"+i).attr("class","miembro");
 	}
 	for(var i = 0; i < visibles.length; i++){
 		miembros[visibles[i]["index"]]["visible"] = true;
 		miembros[visibles[i]["index"]]["vista"] = Math.floor(i/15);
-		$("#mem-"+visibles[i]["index"]).attr("class","uk-accordion-title view-"+visibles[i]["index"]);
+		$("#mem-"+visibles[i]["index"]).attr("class","miembro view-"+visibles[i]["index"]);
 		total = total + 1;
 	}
 	reescalarDirectorio();
