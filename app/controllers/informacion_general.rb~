@@ -186,5 +186,6 @@ class InformacionGeneralController < ApplicationController
 			@centros <<  [centro.split(" ")[0], centro.split[0]]
 			@miembros << {:nombre => u.get_attr(:givenName), :correo => u.get_attr(:mail), :centro => centro, :ext => (u.get_attr(:telephoneNumber) || ""), :roles => u.get_attr(:dn).scan(/OU=(.*?),/).join(" ")}
     end
+    @centros = @centros.to_a
   end
 end
