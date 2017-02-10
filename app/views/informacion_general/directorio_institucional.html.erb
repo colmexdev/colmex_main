@@ -27,17 +27,18 @@
 				<h3 style="display:inline-block;margin-right:8px;">Buscar por:</h3><%= text_field_tag("nombre", "", :oninput => "filtrarDirectorio();", :placeholder => "Nombre") %>
 			</div>
 			<div class="col-md-4 col-xs-12 center" id="filtro-linea" style="padding-left:15px;">
-				<%= text_field_tag("linea", "", :oninput => "filtrarDirectorio();", :placeholder => "Tema de investigación") %><br>
-				<p style="font-size:12px;margin-top:0;text-align:left;">Los temas de investigación utilizan lenguaje libre.</p>
+				<%= select_tag("centro", options_for_select(@centros), :include_blank => "Centro", :onchange => "filtrarDirectorio();") %><br>
+
 			</div>
 			<div class="col-md-4 col-xs-12 center" id="filtro-mail" style="padding-left:15px;">
-				<%= text_field_tag("correo", "", :oninput => "filtrarDirectorio();", :placeholder => "Línea de investigación") %><br>
-				<p style="font-size:12px;margin-top:0;text-align:left;">Las líneas de investigación utilizan lenguaje controlado.</p>
+				<%= select_tag("rol", options_for_select(@roles), :include_blank => "Todos", :onchange => "filtrarDirectorio();") %><br>
 			</div>
 		</div>
 		<div class="row">
 			<div class="col-xs-12 col-md-4 center" id="filtro-centro">
+				<% if false %>
 				<h3 style="display:inline-block;margin-right:8px;">Filtrar por:</h3><%= select_tag("contenido", options_for_select(@centros), :include_blank => "Centro", :onchange => "filtrarDirectorio();") %>
+				<% end %>
 			</div>
 			<div class="col-xs-12 col-md-4 center" id="filtro-limpiar" style="text-align:left;">
 				<div id="boton_limpiar">

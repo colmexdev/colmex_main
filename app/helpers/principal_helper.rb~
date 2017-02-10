@@ -217,7 +217,7 @@ bloque_html = bloque_html + "<a href=\"" + d.liga + "\" " + (d.contenido.mb_char
 		      controladas.each do |co|
 		        year_lab =  co[0].scan(/[<]subfield code="s"[>](.+?)[<]\/subfield[>]/)
 		        begin
-		          co[0].scan(/[<]subfield code="a"[>](.+?)[<]\/subfield[>]/)[0][0].split(" -- ").each do |c|
+		          co[0].scan(/[<]subfield code="a"[>](.+?)[<]\/subfield[>]/)[0][0].split(/ *-- */).each do |c|
 		            arr_conts << c
 		          end
 		        rescue

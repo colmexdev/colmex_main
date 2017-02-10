@@ -180,12 +180,14 @@ class InformacionGeneralController < ApplicationController
 		}
 
 		ActiveDirectory::Base.setup(settings)
-		@miembros, @centros = [], [].to_set
+		@miembros, @centros, @roles = [], [].to_set, [].to_set
 		ActiveDirectory::User.find(:all, :cn => '*').collect.each do |u|
 			if !u.get_attr(:department).nil? && u.get_attr(:dn).scan(/OU=(.*?),/).join(" ") != ""
         centro = u.get_attr(:department).split(" ")[0].gsub(/([.-]|\/)+/," ").split(" ")[0].upcase.gsub(/JUBILAD((O|A)S?)/,"JUBILADO").gsub(/[Íí]/,"I").gsub(/[óÓ]/,"O").gsub(/^C$/,"CSC").gsub(/^BIB$/,"BIBLIOTECA").gsub(/^PRES$/,"PRESIDENCIA")
+        rol = asginarRol(u.get_attr(:dn).scan(/OU=(.*?),/).join(" "))
 			  @centros <<  [centro, centro]
-			  @miembros << {:nombre => u.get_attr(:cn), :correo => u.get_attr(:mail), :centro => centro, :ext => (u.get_attr(:telephoneNumber) || ""), :roles => u.get_attr(:dn).scan(/OU=(.*?),/).join(" ")}
+				@roles = [rol, rol]
+			  @miembros << {:nombre => u.get_attr(:cn), :correo => u.get_attr(:mail), :centro => centro, :ext => (u.get_attr(:telephoneNumber) || ""), :roles => rol}
       end
     end
     @centros = @centros.to_a

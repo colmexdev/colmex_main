@@ -37,7 +37,7 @@
 		</div>
 		<div class="row">
 			<div class="col-xs-12 col-md-4 center" id="filtro-centro">
-				<h3 style="display:inline-block;margin-right:8px;">Filtrar por:</h3><%= select_tag("contenido", options_for_select([["CEAA", "Asia y África"], ["CEDUA","Demográficos, Urbanos y Ambientales"], ["CEE", "Económicos"], ["CEH","Históricos"], ["CEI","Internacionales"], ["CELL", "Lingüisticos y Literarios"], ["CES","Sociológicos"]]), :include_blank => "Centro", :onchange => "filtrarDirectorio();") %>
+				<h3 style="display:inline-block;margin-right:8px;">Filtrar por:</h3><%= select_tag("contenido", options_for_select(@centros), :include_blank => "Centro", :onchange => "filtrarDirectorio();") %>
 			</div>
 			<div class="col-xs-12 col-md-4 center" id="filtro-limpiar" style="text-align:left;">
 				<div id="boton_limpiar">
@@ -53,7 +53,7 @@
 			</div>
 			<div class="col-xs-12 acordeon-premios" id="busqueda">
 				<div class="uk-accordion" id="acordeon" data-uk-accordion>
-				<%= #construir_docentes(@ac_json) %>
+				<%= @miembros %>
 				</div>
 			</div>
 		</div>
