@@ -1,6 +1,6 @@
-members = clone(JSON.parse(gon.miembros));
-agregarVisible(members);
-data = crossfilter(members);
+miembros = clone(JSON.parse(gon.miembros));
+agregarVisible(miembros);
+data = crossfilter(miembros);
 miembrosPorNombre = data.dimension(function(d){ return d["nombre"]});
 miembrosPorCentro = data.dimension(function(d){ return d["centro"]});
 miembrosPorRol = data.dimension(function(d){ return d["rol"]});
