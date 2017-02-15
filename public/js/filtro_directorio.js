@@ -86,6 +86,7 @@ function filtrarDirectorio(b = '0'){
 		if(lineasAFiltrar == []) return true;
 		var linea = limpiarPuntuacion(d.toLowerCase());
 		if(typeof b === 'object'){
+			console.log(linea);
 			return linea.indexOf(limpiarPuntuacion(b.innerHTML.toLowerCase())) != -1;
 		}
 		else{ 
