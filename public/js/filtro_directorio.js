@@ -85,16 +85,16 @@ function filtrarDirectorio(b = '0'){
 	var academicosFiltradosPorLinea = academicosPorLinea.filter(function(d){ 
 		if(lineasAFiltrar == []) return true;
 		var linea = limpiarPuntuacion(d.toLowerCase());
-		if(typeof b === 'object'){
-			console.log(limpiarPuntuacion(b.innerHTML.toLowerCase()));
-			return linea.indexOf(limpiarPuntuacion(b.innerHTML.toLowerCase())) != -1;
+		//if(typeof b === 'object'){
+		//	console.log(limpiarPuntuacion(b.innerHTML));
+		//	return linea.indexOf(limpiarPuntuacion(b.innerHTML.toLowerCase())) != -1;
+		//}
+		//else{ 
+		for(var j = 0; j < lineasAFiltrar.length; j++){
+			if(linea.indexOf(lineasAFiltrar[j]) == -1) return false;
 		}
-		else{ 
-			for(var j = 0; j < lineasAFiltrar.length; j++){
-				if(linea.indexOf(lineasAFiltrar[j]) == -1) return false;
-			}
 		return true;
-	}}).top(Infinity);
+	}/*}*/).top(Infinity);
 	vista_act = 0;
 	$(".inics").css({"color" : "#909090"});
 	if(typeof b !== 'object' && b != '0'){
