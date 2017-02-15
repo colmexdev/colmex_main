@@ -40,21 +40,21 @@ function filtrarDirectorio(b = '0'){
 	var busqueda = [];
 	if(b != '0'){
 		$("#nombre").val("");
-		$("#correo").val((typeof b === 'object' ? b.innerHTML : ""));
+		//$("#correo").val((typeof b === 'object' ? b.innerHTML : ""));
 		$("#linea").val("");
 		$("#contenido").val("");
 		busqueda = (typeof b === 'object' ? b.innerHTML : (b != '0' ? b : []));
 	}
 	var centrosAFiltrar = $("#contenido").val();
 	var nombresAFiltrar = limpiarPuntuacion($("#nombre").val().toLowerCase()).split(/[ ]+/);
-	var temasAFiltrar = limpiarPuntuacion($("#correo").val().toLowerCase()).split(/[ ]+/);
+	var temasAFiltrar = limpiarPuntuacion($("#linea").val().toLowerCase()).split(/[ ]+/);
 	var lineasAFiltrar = limpiarPuntuacion($("#linea").val().toLowerCase()).split(/[ ]+/);
 
 	if(typeof busqueda === 'object'){
 		if($("#contenido").val() != "") busqueda.push("(Centro: " + $("#contenido").val() + ")");
 		if($("#nombre").val() != "") busqueda.push("(Nombre: " + $("#nombre").val() + ")");
 		if($("#correo").val() != "") busqueda.push("(Línea(s): " + $("#correo").val() + ")");
-		if($("#linea").val() != "") busqueda.push("(Tema(s): " + $("#linea").val() + ")");
+		//if($("#linea").val() != "") busqueda.push("(Tema(s): " + $("#linea").val() + ")");
 	}
 
 	var academicosFiltradosPorCentro = academicosPorCentro.filter(function(d){ return ( (b != '0' || centrosAFiltrar == "") ? true : d == centrosAFiltrar )}).top(Infinity);
@@ -217,7 +217,7 @@ function borrarDocentes(){
 		}
 	});
 	$("#nombre").val("");
-	$("#correo").val("");
+	//$("#correo").val("");
 	$("#linea").val("");
 	$("#contenido").val("");
 	for(var i = 0; i < docentes.length; i++){

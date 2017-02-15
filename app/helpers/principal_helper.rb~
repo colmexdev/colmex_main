@@ -265,7 +265,7 @@ bloque_html = bloque_html + "<a href=\"" + d.liga + "\" " + (d.contenido.mb_char
   def construirMiembros(miembros)
     bloque_html = ""
 		miembros.each_with_index do |m,ind|
-      bloque_html = bloque_html + "<div style=\"margin:4px 0;\" id=\"mem-" + ind.to_s + "\">"
+      bloque_html = bloque_html + "<div style=\"margin:4px auto;\" id=\"mem-" + ind.to_s + "\">"
 			bloque_html = bloque_html + "<div style=\"width:25%;display:inline-block;\">" + m[:nombre].to_s + "</div>"
       bloque_html = bloque_html + "<div style=\"width:25%;display:inline-block;\"><a class=\"uk-link\" href=\"mailto:" + m[:correo].to_s + "\">" + m[:correo].to_s + "</a></div>"
       bloque_html = bloque_html + "<div style=\"width:25%;display:inline-block;\">" + m[:ext].to_s + "</div>"

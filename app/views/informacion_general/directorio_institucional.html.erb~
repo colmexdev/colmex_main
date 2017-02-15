@@ -7,10 +7,10 @@
 
 		<div class="row">
 			<div class="col-xs-12" style="padding-left:0;">
-				<span class="titulo-grande">Directorio académico</span><br>
+				<span class="titulo-grande">Directorio institucional</span><br>
 			</div>
 			<div class="col-xs-12" style="padding-left:0;">
-				<p style="margin-top:25px;margin-bottom:25px">Aquí podrás encontrar información general sobre la planta académica de El Colegio de México.</p>
+				<p style="margin-top:25px;margin-bottom:25px">Aquí podrás encontrar información de contacto de los integrantes de El Colegio de México.</p>
 			</div>
 		</div>
 
@@ -36,9 +36,7 @@
 		</div>
 		<div class="row">
 			<div class="col-xs-12 col-md-4 center" id="filtro-centro">
-				<% if false %>
 				<h3 style="display:inline-block;margin-right:8px;">Filtrar por:</h3><%= select_tag("contenido", options_for_select(@centros), :include_blank => "Centro", :onchange => "filtrarDirectorio();") %>
-				<% end %>
 			</div>
 			<div class="col-xs-12 col-md-4 center" id="filtro-limpiar" style="text-align:left;">
 				<div id="boton_limpiar">

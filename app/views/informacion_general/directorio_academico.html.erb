@@ -28,12 +28,16 @@
 			</div>
 			<div class="col-md-4 col-xs-12 center" id="filtro-linea" style="padding-left:15px;">
 				<%= text_field_tag("linea", "", :oninput => "filtrarDirectorio();", :placeholder => "Tema de investigación") %><br>
+				<% if false %>
 				<p style="font-size:12px;margin-top:0;text-align:left;">Los temas de investigación utilizan lenguaje libre.</p>
+				<% end %>
 			</div>
+			<% if false %>
 			<div class="col-md-4 col-xs-12 center" id="filtro-mail" style="padding-left:15px;">
 				<%= text_field_tag("correo", "", :oninput => "filtrarDirectorio();", :placeholder => "Línea de investigación") %><br>
 				<p style="font-size:12px;margin-top:0;text-align:left;">Las líneas de investigación utilizan lenguaje controlado.</p>
 			</div>
+			<% end %>
 		</div>
 		<div class="row">
 			<div class="col-xs-12 col-md-4 center" id="filtro-centro">
