@@ -153,6 +153,12 @@ function actualizarVisibleDirectorio(visibles){
 
 function muestra(pag){
 	var i;
+	var accordion = UIkit.accordion(UIkit.$('#acordeon'));
+	accordion.find('[data-wrapper]').each(function(){
+		if(UIkit.$(this)[0].firstElementChild.className.indexOf("uk-active") != -1){
+			accordion.toggleItem(UIkit.$(this), true, true); 
+		}
+	});
 	$("#sep-ant").css({"display": "inline-block"});
 	$("#sep-sig").css({"display": "inline-block"});
 
