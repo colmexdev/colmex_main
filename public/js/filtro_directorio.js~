@@ -40,15 +40,15 @@ function filtrarDirectorio(b = '0'){
 	var busqueda = [];
 	if(b != '0'){
 		$("#nombre").val("");
-		$("#correo").val((typeof b === 'object' ? b.innerHTML : ""));
-		//$("#linea").val("");
+		//$("#correo").val((typeof b === 'object' ? b.innerHTML : ""));
+		$("#linea").val("");
 		$("#contenido").val("");
 		busqueda = (typeof b === 'object' ? b.innerHTML : (b != '0' ? b : []));
 	}
 	var centrosAFiltrar = $("#contenido").val();
 	var nombresAFiltrar = limpiarPuntuacion($("#nombre").val().toLowerCase()).split(/[ ]+/);
-	var temasAFiltrar = limpiarPuntuacion($("#correo").val().toLowerCase()).split(/[ ]+/);
-	var lineasAFiltrar = limpiarPuntuacion($("#correo").val().toLowerCase()).split(/[ ]+/);
+	var temasAFiltrar = limpiarPuntuacion($("#linea").val().toLowerCase()).split(/[ ]+/);
+	var lineasAFiltrar = limpiarPuntuacion($("#linea").val().toLowerCase()).split(/[ ]+/);
 
 	if(typeof busqueda === 'object'){
 		if($("#contenido").val() != "") busqueda.push("(Centro: " + $("#contenido").val() + ")");
@@ -217,8 +217,8 @@ function borrarDocentes(){
 		}
 	});
 	$("#nombre").val("");
-	$("#correo").val("");
-	//$("#linea").val("");
+	//$("#correo").val("");
+	$("#linea").val("");
 	$("#contenido").val("");
 	for(var i = 0; i < docentes.length; i++){
 		$("#doc-"+i).css({"display": "none"});

@@ -53,8 +53,8 @@ function filtrarDirectorio(b = '0'){
 	if(typeof busqueda === 'object'){
 		if($("#contenido").val() != "") busqueda.push("(Centro: " + $("#contenido").val() + ")");
 		if($("#nombre").val() != "") busqueda.push("(Nombre: " + $("#nombre").val() + ")");
-		if($("#correo").val() != "") busqueda.push("(Línea(s): " + $("#correo").val() + ")");
-		//if($("#linea").val() != "") busqueda.push("(Tema(s): " + $("#linea").val() + ")");
+		//if($("#correo").val() != "") busqueda.push("(Línea(s): " + $("#correo").val() + ")");
+		if($("#linea").val() != "") busqueda.push("(Tema(s): " + $("#linea").val() + ")");
 	}
 
 	var academicosFiltradosPorCentro = academicosPorCentro.filter(function(d){ return ( (b != '0' || centrosAFiltrar == "") ? true : d == centrosAFiltrar )}).top(Infinity);
