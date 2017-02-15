@@ -2,8 +2,8 @@ docentes = clone(JSON.parse(gon.academicos));
 agregarVisible(docentes);
 data = crossfilter(docentes);
 academicosPorNombre = data.dimension(function(d){ return d["nombre"]});
-academicosPorLinea = data.dimension(function(d){return limpiarPuntuacion(d["libres"].join(" ").toLowerCase())});
-academicosPorTema = data.dimension(function(d){return limpiarPuntuacion(d["conts"].join(" ").toLowerCase())});
+academicosPorLinea = data.dimension(function(d){return limpiarPuntuacion(d["libres"].join(" ").toLowerCase() + " " + d["conts"].join(" ").toLowerCase())});
+academicosPorTema = data.dimension(function(d){return limpiarPuntuacion(d["conts"].join(" ").toLowerCase() + " " + d["libres"].join(" ").toLowerCase())});
 academicosPorCentro = data.dimension(function(d){ return d["adscripcion"]});
 academicosPorInicial = data.dimension(function(d){ return d["inicial"]});
 vistas = 0;
@@ -238,11 +238,11 @@ function reescalarDirectorio(){
 }
 
 function limpiarPuntuacion(tags){
-	var new_tags = tags.replace(/[íïîì]/i,"i");
-	new_tags = new_tags.replace(/[áäâà]/i,"a");
-	new_tags = new_tags.replace(/[éëêè]/i,"e");
-	new_tags = new_tags.replace(/[óöôò]/i,"o");
-	new_tags = new_tags.replace(/[úüûù]/i,"u");
+	var new_tags = tags.replace(/[íïîìÍÏÎÌ]/i,"i");
+	new_tags = new_tags.replace(/[áäâàÁÄÂÀ]/i,"a");
+	new_tags = new_tags.replace(/[éëêèÉËÊÈ]/i,"e");
+	new_tags = new_tags.replace(/[óöôòÓÖÔÒ]/i,"o");
+	new_tags = new_tags.replace(/[úüûùÚÜÛÙ]/i,"u");
 	return new_tags;
 }
 
