@@ -40,8 +40,8 @@ function filtrarDirectorio(b = '0'){
 	var busqueda = [];
 	if(b != '0'){
 		$("#nombre").val("");
-		//$("#correo").val((typeof b === 'object' ? b.innerHTML : ""));
-		$("#linea").val("");
+		$("#linea").val((typeof b === 'object' ? b.innerHTML : ""));
+		//$("#linea").val("");
 		$("#contenido").val("");
 		busqueda = (typeof b === 'object' ? b.innerHTML : (b != '0' ? b : []));
 	}

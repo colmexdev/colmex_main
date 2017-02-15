@@ -86,14 +86,14 @@ function filtrarDirectorio(b = '0'){
 		if(lineasAFiltrar == []) return true;
 		var linea = limpiarPuntuacion(d.toLowerCase());
 		if(typeof b === 'object'){
-			return linea.indexOf(limpiarPuntuacion(b.innerHTML.toLowerCase())) != -1;}
-		else{ 
-		for(var j = 0; j < lineasAFiltrar.length; j++){
-			if(linea.indexOf(lineasAFiltrar[j]) == -1) return false;
+			return linea.indexOf(limpiarPuntuacion(b.innerHTML.toLowerCase())) != -1;
 		}
+		else{ 
+			for(var j = 0; j < lineasAFiltrar.length; j++){
+				if(linea.indexOf(lineasAFiltrar[j]) == -1) return false;
+			}
 		return true;
-		//return ( lineasAFiltrar == "" ? true : limpiarPuntuacion(d.toLowerCase()).indexOf(lineasAFiltrar.toLowerCase()) != -1)
-	}).top(Infinity);
+	}}).top(Infinity);
 	vista_act = 0;
 	$(".inics").css({"color" : "#909090"});
 	if(typeof b !== 'object' && b != '0'){
