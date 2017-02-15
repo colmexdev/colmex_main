@@ -3,7 +3,7 @@ agregarVisible(docentes);
 data = crossfilter(docentes);
 academicosPorNombre = data.dimension(function(d){ return d["nombre"]});
 academicosPorLinea = data.dimension(function(d){return limpiarPuntuacion(d["libres"].join(" ").toLowerCase() + " " + d["conts"].join(" ").toLowerCase())});
-academicosPorTema = data.dimension(function(d){return limpiarPuntuacion(d["conts"].join(" ").toLowerCase() + " " + d["libres"].join(" ").toLowerCase())});
+//academicosPorTema = data.dimension(function(d){return limpiarPuntuacion(d["conts"].join(" ").toLowerCase() + " " + d["libres"].join(" ").toLowerCase())});
 academicosPorCentro = data.dimension(function(d){ return d["adscripcion"]});
 academicosPorInicial = data.dimension(function(d){ return d["inicial"]});
 vistas = 0;
@@ -33,7 +33,7 @@ function filtrarDirectorio(b = '0'){
 		}
 	});
 	academicosPorNombre.filterAll();
-	academicosPorTema.filterAll();
+//	academicosPorTema.filterAll();
 	academicosPorLinea.filterAll();
 	academicosPorCentro.filterAll();
 	academicosPorInicial.filterAll();
@@ -47,7 +47,7 @@ function filtrarDirectorio(b = '0'){
 	}
 	var centrosAFiltrar = $("#contenido").val();
 	var nombresAFiltrar = limpiarPuntuacion($("#nombre").val().toLowerCase()).split(/[ ]+/);
-	var temasAFiltrar = limpiarPuntuacion($("#linea").val().toLowerCase()).split(/[ ]+/);
+//	var temasAFiltrar = limpiarPuntuacion($("#linea").val().toLowerCase()).split(/[ ]+/);
 	var lineasAFiltrar = limpiarPuntuacion($("#linea").val().toLowerCase()).split(/[ ]+/);
 
 	if(typeof busqueda === 'object'){
@@ -69,7 +69,7 @@ function filtrarDirectorio(b = '0'){
 	}).top(Infinity);
 	var academicosFiltradosPorInicial = academicosPorInicial.filter(function(d){ return ((typeof b === 'object' ||  b == '0') ? true : d == b)}).top(Infinity);
 
-	var academicosFiltradosPorTema = academicosPorTema.filter(function(d){ 
+/*	var academicosFiltradosPorTema = academicosPorTema.filter(function(d){ 
 		if( (typeof b !== 'object') && temasAFiltrar == []) return true;
 		var linea = limpiarPuntuacion(d.toLowerCase());
 		if(typeof b === 'object'){
@@ -81,10 +81,13 @@ function filtrarDirectorio(b = '0'){
 			return true;
 		}
 		//return ((b != '0' ||correosAFiltrar == "") ? true : limpiarPuntuacion(d.toLowerCase()).indexOf(correosAFiltrar.toLowerCase()) != -1)
-	}).top(Infinity);
+	}).top(Infinity); */
 	var academicosFiltradosPorLinea = academicosPorLinea.filter(function(d){ 
-		if(b != '0' || lineasAFiltrar == []) return true;
-		var linea = limpiarPuntuacion(d.toLowerCase()); 
+		if(lineasAFiltrar == []) return true;
+		var linea = limpiarPuntuacion(d.toLowerCase());
+		if(typeof b === 'object'){
+			return linea.indexOf(limpiarPuntuacion(b.innerHTML.toLowerCase())) != -1;}
+		else{ 
 		for(var j = 0; j < lineasAFiltrar.length; j++){
 			if(linea.indexOf(lineasAFiltrar[j]) == -1) return false;
 		}

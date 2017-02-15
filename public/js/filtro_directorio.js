@@ -83,8 +83,11 @@ function filtrarDirectorio(b = '0'){
 		//return ((b != '0' ||correosAFiltrar == "") ? true : limpiarPuntuacion(d.toLowerCase()).indexOf(correosAFiltrar.toLowerCase()) != -1)
 	}).top(Infinity); */
 	var academicosFiltradosPorLinea = academicosPorLinea.filter(function(d){ 
-		if(b != '0' || lineasAFiltrar == []) return true;
-		var linea = limpiarPuntuacion(d.toLowerCase()); 
+		if(lineasAFiltrar == []) return true;
+		var linea = limpiarPuntuacion(d.toLowerCase());
+		if(typeof b === 'object'){
+			return linea.indexOf(limpiarPuntuacion(b.innerHTML.toLowerCase())) != -1;}
+		else{ 
 		for(var j = 0; j < lineasAFiltrar.length; j++){
 			if(linea.indexOf(lineasAFiltrar[j]) == -1) return false;
 		}
@@ -150,6 +153,12 @@ function actualizarVisibleDirectorio(visibles){
 
 function muestra(pag){
 	var i;
+	var accordion = UIkit.accordion(UIkit.$('#acordeon'));
+	accordion.find('[data-wrapper]').each(function(){
+		if(UIkit.$(this)[0].firstElementChild.className.indexOf("uk-active") != -1){
+			accordion.toggleItem(UIkit.$(this), true, true); 
+		}
+	});
 	$("#sep-ant").css({"display": "inline-block"});
 	$("#sep-sig").css({"display": "inline-block"});
 
