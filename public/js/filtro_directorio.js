@@ -2,7 +2,7 @@ docentes = clone(JSON.parse(gon.academicos));
 agregarVisible(docentes);
 data = crossfilter(docentes);
 academicosPorNombre = data.dimension(function(d){ return d["nombre"]});
-academicosPorLinea = data.dimension(function(d){console.log(limpiarPuntuacion(d["libres"].join(" ").toLowerCase() + " " + d["conts"].join(" ").toLowerCase())); return limpiarPuntuacion(d["libres"].join(" ").toLowerCase() + " " + d["conts"].join(" ").toLowerCase())});
+academicosPorLinea = data.dimension(function(d){ return limpiarPuntuacion(d["libres"].join(" ").toLowerCase() + " " + d["conts"].join(" ").toLowerCase())});
 //academicosPorTema = data.dimension(function(d){return limpiarPuntuacion(d["conts"].join(" ").toLowerCase() + " " + d["libres"].join(" ").toLowerCase())});
 academicosPorCentro = data.dimension(function(d){ return d["adscripcion"]});
 academicosPorInicial = data.dimension(function(d){ return d["inicial"]});
@@ -59,12 +59,12 @@ function filtrarDirectorio(b = '0'){
 	var academicosFiltradosPorCentro = academicosPorCentro.filter(function(d){ return ( (b != '0' || centrosAFiltrar == "") ? true : d == centrosAFiltrar )}).top(Infinity);
 	var academicosFiltradosPorNombre = academicosPorNombre.filter(function(d){
 		if(b != '0' || nombresAFiltrar.join("").split("").length == 0) return true;
-		var nombre = limpiarPuntuacion(d.toLowerCase()); 
+		//var nombre = limpiarPuntuacion(d.toLowerCase()); 
 		for(var j = 0; j < nombresAFiltrar.length; j++){
-			if(nombre.indexOf(nombresAFiltrar[j]) == -1) return false;
+			if(d.indexOf(nombresAFiltrar[j]) == -1) return false;
 		}
 		return true;
-	//return (nombresAFiltrar == "" ? true :limpiarPuntuacion(d.toLowerCase()).indexOf(nombresAFiltrar.toLowerCase()) != -1)
+
 	}).top(Infinity);
 	var academicosFiltradosPorInicial = academicosPorInicial.filter(function(d){ return ((typeof b === 'object' ||  b == '0') ? true : d == b)}).top(Infinity);
 
@@ -89,6 +89,7 @@ function filtrarDirectorio(b = '0'){
 		}
 		else{ 
 		for(var j = 0; j < lineasAFiltrar.length; j++){
+			console.log(lineasAFiltrar + " " + d.indexOf(lineasAFiltrar[j]));
 			if(d.indexOf(lineasAFiltrar[j]) == -1) return false;
 		}
 		return true;
