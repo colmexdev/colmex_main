@@ -89,6 +89,7 @@ function filtrarDirectorio(b = '0'){
 		//	return linea.indexOf(limpiarPuntuacion(b.innerHTML.toLowerCase())) != -1;
 		//}
 		//else{ 
+		console.log(d);
 		for(var j = 0; j < lineasAFiltrar.length; j++){
 			if(d.indexOf(lineasAFiltrar[j]) == -1) return false;
 		}
