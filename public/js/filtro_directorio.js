@@ -249,11 +249,11 @@ function reescalarDirectorio(){
 }
 
 function limpiarPuntuacion(tags){
-	var new_tags = tags.replace(/[íïîìÍÏÎÌ]/i,"i");
-	new_tags = new_tags.replace(/[áäâàÁÄÂÀ]/i,"a");
-	new_tags = new_tags.replace(/[éëêèÉËÊÈ]/i,"e");
-	new_tags = new_tags.replace(/[óöôòÓÖÔÒ]/i,"o");
-	new_tags = new_tags.replace(/[úüûùÚÜÛÙ]/i,"u");
+	var new_tags = tags.replace(/[íïîìÍÏÎÌ]/gi,"i");
+	new_tags = new_tags.replace(/[áäâàÁÄÂÀ]/gi,"a");
+	new_tags = new_tags.replace(/[éëêèÉËÊÈ]/gi,"e");
+	new_tags = new_tags.replace(/[óöôòÓÖÔÒ]/gi,"o");
+	new_tags = new_tags.replace(/[úüûùÚÜÛÙ]/gi,"u");
 	return new_tags;
 }
 
