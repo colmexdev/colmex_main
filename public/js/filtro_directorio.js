@@ -88,10 +88,11 @@ function filtrarDirectorio(b = '0'){
 		//	return d.indexOf(limpiarPuntuacion($("#linea").val().toLowerCase())) != -1;
 		//}
 		//else{ 
+		console.log(lineasAFiltrar.length);
 		for(var j = 0; j < lineasAFiltrar.length; j++){
 			var regex = new RegExp(lineasAFiltrar[j]);
-			if(!regex.test(d)/*d.indexOf(lineasAFiltrar[j]) == -1*/) return false;
-			else console.log(regex + " " + regex.test(d));
+			if(!regex.test(d)) return false;
+			//else console.log(regex + " " + regex.test(d));
 		}
 		return true;
 	}/*}*/).top(Infinity);
