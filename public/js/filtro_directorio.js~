@@ -44,6 +44,7 @@ function filtrarDirectorio(b = '0'){
 		//$("#linea").val("");
 		$("#contenido").val("");
 		busqueda = (typeof b === 'object' ? b.innerHTML : b);
+		console.log(b);
 	}
 	var centrosAFiltrar = $("#contenido").val();
 	var nombresAFiltrar = limpiarPuntuacion($("#nombre").val().toLowerCase()).split(/[ ]+/);
