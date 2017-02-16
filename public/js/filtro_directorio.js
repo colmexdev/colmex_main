@@ -84,6 +84,7 @@ function filtrarDirectorio(b = '0'){
 	var academicosFiltradosPorLinea = academicosPorLinea.filter(function(d){ 
 		if(lineasAFiltrar.join("").split("").length == 0) return true;
 		//var linea = limpiarPuntuacion(d.toLowerCase());
+		console.log(d);
 		if(typeof b === 'object'){
 			return d.indexOf(limpiarPuntuacion(b.innerHTML.toLowerCase())) != -1;
 		}
