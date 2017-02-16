@@ -90,8 +90,8 @@ function filtrarDirectorio(b = '0'){
 		//else{ 
 		for(var j = 0; j < lineasAFiltrar.length; j++){
 			if(d.indexOf(lineasAFiltrar[j]) == -1) return false;
+			else console.log(lineasAFiltrar[j] + " " + d.indexOf(lineasAFiltrar[j]));
 		}
-		console.log(lineasAFiltrar[j] + " " + d.indexOf(lineasAFiltrar[j]));
 		return true;
 	}/*}*/).top(Infinity);
 	vista_act = 0;

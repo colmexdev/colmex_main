@@ -89,8 +89,9 @@ function filtrarDirectorio(b = '0'){
 		//}
 		//else{ 
 		for(var j = 0; j < lineasAFiltrar.length; j++){
-			if(d.indexOf(lineasAFiltrar[j]) == -1) return false;
-			else console.log(lineasAFiltrar[j] + " " + d.indexOf(lineasAFiltrar[j]));
+			var regex = new RegExp(lineasAFiltrar[j]);
+			if(!regex.test(d)/*d.indexOf(lineasAFiltrar[j]) == -1*/) return false;
+			else console.log(regex + " " + regex.test(d));
 		}
 		return true;
 	}/*}*/).top(Infinity);
