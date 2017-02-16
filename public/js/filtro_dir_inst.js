@@ -224,14 +224,13 @@ function reescalarDirectorio(){
 }
 
 function limpiarPuntuacion(tags){
-	var new_tags = tags.replace(/[íïîì]/i,"i");
-	new_tags = new_tags.replace(/[áäâà]/i,"a");
-	new_tags = new_tags.replace(/[éëêè]/i,"e");
-	new_tags = new_tags.replace(/[óöôò]/i,"o");
-	new_tags = new_tags.replace(/[úüûù]/i,"u");
+	var new_tags = tags.replace(/[íïîìÍÏÎÌ]/gi,"i");
+	new_tags = new_tags.replace(/[áäâàÁÄÂÀ]/gi,"a");
+	new_tags = new_tags.replace(/[éëêèÉËÊÈ]/gi,"e");
+	new_tags = new_tags.replace(/[óöôòÓÖÔÒ]/gi,"o");
+	new_tags = new_tags.replace(/[úüûùÚÜÛÙ]/gi,"u");
 	return new_tags;
 }
-
 function agregarVisible(doc){
 	for(var i = 0; i < doc.length; i++){
 		doc[i]["visible"] = false;
