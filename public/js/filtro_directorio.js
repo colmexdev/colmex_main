@@ -46,9 +46,9 @@ function filtrarDirectorio(b = '0'){
 		busqueda = (typeof b === 'object' ? b.innerHTML : b);
 	}
 	var centrosAFiltrar = $("#contenido").val();
-	var nombresAFiltrar = limpiarPuntuacion($("#nombre").val().toLowerCase()).split(/[ ]+/);
+	var nombresAFiltrar = limpiarPuntuacion($("#nombre").val().toLowerCase()).split(/ +/);
 //	var temasAFiltrar = limpiarPuntuacion($("#linea").val().toLowerCase()).split(/[ ]+/);
-	var lineasAFiltrar = limpiarPuntuacion($("#linea").val().toLowerCase()).split(/[ ]+/);
+	var lineasAFiltrar = limpiarPuntuacion($("#linea").val().toLowerCase()).split(/ +/);
 	if(typeof busqueda === 'object'){
 		if($("#contenido").val() != "") busqueda.push("(Centro: " + $("#contenido").val() + ")");
 		if($("#nombre").val() != "") busqueda.push("(Nombre: " + $("#nombre").val() + ")");
@@ -88,11 +88,11 @@ function filtrarDirectorio(b = '0'){
 		//	return d.indexOf(limpiarPuntuacion($("#linea").val().toLowerCase())) != -1;
 		//}
 		//else{ 
-		console.log(lineasAFiltrar.length);
+		console.log(d.length);
 		for(var j = 0; j < lineasAFiltrar.length; j++){
 			var regex = new RegExp(lineasAFiltrar[j]);
 			if(!regex.test(d)) return false;
-			//else console.log(regex + " " + regex.test(d));
+			else console.log(d + " --- " + regex.test(d));
 		}
 		return true;
 	}/*}*/).top(Infinity);
