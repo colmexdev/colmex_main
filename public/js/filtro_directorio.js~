@@ -43,7 +43,7 @@ function filtrarDirectorio(b = '0'){
 		$("#linea").val((typeof b === 'object' ? b.innerHTML : ""));
 		//$("#linea").val("");
 		$("#contenido").val("");
-		busqueda = (typeof b === 'object' ? b.innerHTML : (b != '0' ? b : []));
+		busqueda = (typeof b === 'object' ? b.innerHTML : b);
 	}
 	var centrosAFiltrar = $("#contenido").val();
 	var nombresAFiltrar = limpiarPuntuacion($("#nombre").val().toLowerCase()).split(/[ ]+/);
@@ -84,14 +84,14 @@ function filtrarDirectorio(b = '0'){
 	}).top(Infinity); */
 	var academicosFiltradosPorLinea = academicosPorLinea.filter(function(d){ 
 		if(lineasAFiltrar == []) return true;
-		var linea = limpiarPuntuacion(d.toLowerCase());
+		//var linea = limpiarPuntuacion(d.toLowerCase());
 		//if(typeof b === 'object'){
 		//	console.log(limpiarPuntuacion(b.innerHTML));
 		//	return linea.indexOf(limpiarPuntuacion(b.innerHTML.toLowerCase())) != -1;
 		//}
 		//else{ 
 		for(var j = 0; j < lineasAFiltrar.length; j++){
-			if(linea.indexOf(lineasAFiltrar[j]) == -1) return false;
+			if(d.indexOf(lineasAFiltrar[j]) == -1) return false;
 		}
 		return true;
 	}/*}*/).top(Infinity);
