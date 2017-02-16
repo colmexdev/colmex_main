@@ -45,12 +45,11 @@ function filtrarDirectorio(b = '0'){
 		$("#contenido").val("");
 		busqueda = (typeof b === 'object' ? b.innerHTML : b);
 	}
-	console.log(busqueda);
 	var centrosAFiltrar = $("#contenido").val();
 	var nombresAFiltrar = limpiarPuntuacion($("#nombre").val().toLowerCase()).split(/[ ]+/);
 //	var temasAFiltrar = limpiarPuntuacion($("#linea").val().toLowerCase()).split(/[ ]+/);
 	var lineasAFiltrar = limpiarPuntuacion($("#linea").val().toLowerCase()).split(/[ ]+/);
-
+	console.log(lineasAFiltrar);
 	if(typeof busqueda === 'object'){
 		if($("#contenido").val() != "") busqueda.push("(Centro: " + $("#contenido").val() + ")");
 		if($("#nombre").val() != "") busqueda.push("(Nombre: " + $("#nombre").val() + ")");
