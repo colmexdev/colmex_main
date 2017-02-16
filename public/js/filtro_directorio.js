@@ -83,19 +83,13 @@ function filtrarDirectorio(b = '0'){
 	}).top(Infinity); */
 	var academicosFiltradosPorLinea = academicosPorLinea.filter(function(d){ 
 		if(lineasAFiltrar.join("").split("").length == 0) return true;
-		//var linea = limpiarPuntuacion(d.toLowerCase());
-		//if(typeof b === 'object'){
-		//	return d.indexOf(limpiarPuntuacion($("#linea").val().toLowerCase())) != -1;
-		//}
-		//else{ 
-		console.log(d.length);
+
 		for(var j = 0; j < lineasAFiltrar.length; j++){
 			var regex = new RegExp(lineasAFiltrar[j]);
 			if(!regex.test(d)) return false;
-			else console.log(d + " --- " + regex.test(d));
 		}
 		return true;
-	}/*}*/).top(Infinity);
+	}).top(Infinity);
 	vista_act = 0;
 	$(".inics").css({"color" : "#909090"});
 	if(typeof b !== 'object' && b != '0'){
