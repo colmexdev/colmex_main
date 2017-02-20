@@ -71,14 +71,14 @@ class ProgramasAcademicosController < ApplicationController
   end
 
   def catedras
-    @catedras = Catedra.where("tipo = ?", "Cátedra")
+    @catedras = Catedra.where("tipo = ? AND titulo LIKE ?", "Cátedra", "%México-España%").union(Catedra.where("tipo = ? AND titulo LIKE ?", "Cátedra", "%Humboldt%")).union(Catedra.where("tipo = ? AND titulo LIKE ?", "Cátedra", "%Bourgeois-Pichat%"))
     respond_to do |format|
       format.js
     end
   end
 
   def seminarios
-    @seminarios = Catedra.where("tipo = ?", "Seminario")
+    @seminarios = Catedra.where("tipo = ? AND titulo LIKE ?", "Seminario", "%Violencia y Paz%").union(Catedra.where("tipo = ? AND titulo LIKE ?", "Seminario", "%México-España%")).union(Catedra.where("tipo = ? AND titulo LIKE ?", "Seminario", "%Diálogos%")).union(Catedra.where("tipo = ? AND titulo LIKE ?", "Seminario", "%Intelectual%")).union(Catedra.where("tipo = ? AND titulo LIKE ?", "Seminario", "%Historiografía%")).union(Catedra.where("tipo = ? AND titulo LIKE ?", "Seminario", "%Historia Económica%")).union(Catedra.where("tipo = ? AND titulo LIKE ?", "Seminario", "%7 Tesis%")).union(Catedra.where("tipo = ? AND titulo LIKE ?", "Seminario", "%Historia Social%")).union(Catedra.where("tipo = ? AND titulo LIKE ?", "Seminario", "%Historia Internacional%")).union(Catedra.where("tipo = ? AND titulo LIKE ?", "Seminario", "%Formación Política%")).union(Catedra.where("tipo = ? AND titulo LIKE ?", "Seminario", "%Migración Internacional%"))
     respond_to do |format|
       format.js
     end

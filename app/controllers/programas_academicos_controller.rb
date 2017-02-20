@@ -21,7 +21,7 @@ class ProgramasAcademicosController < ApplicationController
   end
 
   def convocatorias
-		@convocatorias = Curso.where(:programa => "Convocatoria").order(:titulo)
+		@convocatorias = Curso.where("programa = ? AND fecha_fin_conv > ?", "Convocatoria", Date.current()).order(:titulo)
     respond_to do |format|
       format.js
     end
