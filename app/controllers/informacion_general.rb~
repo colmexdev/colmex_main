@@ -182,7 +182,7 @@ class InformacionGeneralController < ApplicationController
 		ActiveDirectory::Base.setup(settings)
 		@miembros, @centros, @roles = [], [].to_set, [].to_set
 		ActiveDirectory::User.find(:all, :cn => '*').collect.each do |u|
-			if !u.get_attr(:department).nil? && u.get_attr(:dn).scan(/OU=(.*?),/).join(" ") != ""
+			if !u.get_attr(:department).nil? && u.get_attr(:dn).scan(/OU=(.*?),/).join(" ") != "" && !u.get_attr(:sn).nil? && !u.get_attr(:mail).nil?
         centro = u.get_attr(:department).split(" ")[0].gsub(/([.-]|\/)+/," ").split(" ")[0].upcase.gsub(/JUBILAD((O|A)S?)/,"JUBILADO").gsub(/[Íí]/,"I").gsub(/[óÓ]/,"O").gsub(/^C$/,"CSC").gsub(/^BIB$/,"BIBLIOTECA").gsub(/^PRES$/,"PRESIDENCIA")
         rol = asignarRol(u.get_attr(:dn).scan(/OU=(.*?),/).join(" "))
 			  @centros <<  [centro, centro]
