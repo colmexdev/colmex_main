@@ -85,8 +85,7 @@ function filtrarDirectorio(b = '0'){
 		if(lineasAFiltrar.join("").split("").length == 0) return true;
 
 		for(var j = 0; j < lineasAFiltrar.length; j++){
-			var regex = new RegExp(lineasAFiltrar[j]);
-			if(!regex.test(d)) return false;
+			if(d.indexOf(lineasAFiltrar[j]) == -1) return false;
 		}
 		return true;
 	}).top(Infinity);
