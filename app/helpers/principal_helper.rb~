@@ -226,7 +226,7 @@ bloque_html = bloque_html + "<a href=\"" + d.liga + "\" " + (d.contenido.mb_char
 		      end
 		      libres = p.scan(/[<]datafield tag="972" ind1=" " ind2=" "[>](.*?)[<]\/datafield[>]/)
 		      libres.each do |li|
-		        arr_libres << li[0].scan(/[<]subfield code="a"[>].*?[<]\/subfield[>]/)[0].split("</subfield>")[0].split("<subfield code=\"a\">")[1].split(/ *$$/)[0]
+		        arr_libres << li[0].scan(/[<]subfield code="a"[>].*?[<]\/subfield[>]/)[0].split("</subfield>")[0].split("<subfield code=\"a\">")[1].split(/ *\$\$/)[0]
 		      end
           codigos = p.scan(/[<]datafield tag="024" ind1="7" ind2=" "[>](.*?)[<]\/datafield[>]/)
           codigos.each do |co|
