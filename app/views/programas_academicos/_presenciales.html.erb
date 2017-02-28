@@ -47,7 +47,7 @@
     </h4>
 
     <h3 class="vino uk-margin-bottom-remove">
-      <% if !p.fecha_inicio_conv.nil? and !p.fecha_fin_conv.nil? %>
+      <% if  !p.fecha_fin_conv.nil? %>
         <%= "Próxima convocatoria" %>
       <% end %>
     </h3>
@@ -64,6 +64,8 @@
             <%= (" al " + p.fecha_fin_conv.day.to_s + " de " + num2Month(p.fecha_fin_conv.month - 1) + " de " + p.fecha_fin_conv.year.to_s ) || "" %>
           <% end %>
         <% end %>
+			<% else %>
+				<%= "Abierta hasta " + (p.fecha_fin_conv.day.to_s + " de " + num2Month(p.fecha_fin_conv.month - 1) + " de " + p.fecha_fin_conv.year.to_s) %>
       <% end %>
     </h4>
     </div>
