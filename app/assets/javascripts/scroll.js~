@@ -119,10 +119,23 @@ function ajustarCuerpo(scroll){
   var ancho_act = Math.max(document.documentElement.clientWidth, window.innerWidth || document.body.ClientWidth || 0);
 	var alto_footer = (document.getElementById("div_footer") != null ? document.getElementById('div_footer').clientHeight : 265);
 	var alto_header = (document.getElementById("header") != null ? document.getElementById('header').clientHeight : 225);
-	$('#resto-cuerpo').css({'padding-bottom': (alto_footer+1)+'px', 'padding-top': (ancho_act <= 1165 ? alto_header : '225') + 'px'});
+	$('#resto-cuerpo').css({'padding-bottom': (alto_footer+1)+'px', 'padding-top': (ancho_act <= 1165 ? '225' : '225') + 'px'});
 }
 
 function regresarArriba(){
 	$("html, body").animate({ scrollTop: 0 }, 1800);
   return false;
+}
+
+function initAddThis(){
+    // Remove all global properties set by addthis, otherwise it won't reinitialize
+    for (var i in window) {
+        if (/^addthis/.test(i) || /^_at/.test(i)) {
+            delete window[i];
+        }
+    }
+    window.addthis_share = null;
+
+    // Finally, load addthis
+    $.getScript("http://s7.addthis.com/js/300/addthis_widget.js#pubid=ra-57bb682464651c22");
 }
