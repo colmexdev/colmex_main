@@ -12,7 +12,6 @@ $(document).on('page:load', function(){ UIkit.init(); })
 
 $(document).on("ready page:change", function(){
 	UIkit.init();
-	initAddThis();
 	var cw = $('.frame-descubre').width() - 8;
 
 	if(gon.ev_tiny == ""){

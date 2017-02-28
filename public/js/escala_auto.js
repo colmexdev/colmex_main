@@ -1,7 +1,7 @@
 barra_render = false;
 
-$(document).on("ready page:change",function(){
-
+$(document).on("ready page:change page:load",function(){
+	initAddThis();
 	$(document).trigger("scroll");
 });
 

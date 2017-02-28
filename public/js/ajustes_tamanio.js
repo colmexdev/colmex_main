@@ -8,12 +8,12 @@ num_filas = 2;
 anchos_badges =[];
 barra_render = false;
 
-$(document).on('page:load', function(){ UIkit.init(); })
+$(document).on('page:load', function(){ UIkit.init(); initAddThis(); })
 
 $(document).on("ready page:change", function(){
 	UIkit.init();
 	var cw = $('.frame-descubre').width() - 8;
-
+	initAddThis();
 	if(gon.ev_tiny == ""){
 		$("#div_eventos").css("height","0");
 	}
