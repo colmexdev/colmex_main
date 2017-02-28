@@ -1,6 +1,8 @@
 <div class="acordeon-premios">
 <script type="text/javascript" src="../js/accordion.js"></script>
 
+<script type="text/javascript">initAddThis();</script>
+
 <div class="uk-accordion" data-uk-accordion>
 	<% @electronicos.group(:tipo_curso_linea).order(tipo_curso_linea: :asc).each do |t| %>
 	  <h3 class="uk-accordion-title"><%= construir_encabezado("bt-flechita.png", "bt-flechita-abajo.png", t.tipo_curso_linea + "s") %></h3>
