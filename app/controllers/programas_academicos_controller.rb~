@@ -53,7 +53,7 @@ class ProgramasAcademicosController < ApplicationController
   end
 
   def presenciales
-    @presenciales = Curso.where("programa = ? AND tipo_curso = ? and fecha_fin_conv <= ?", "Curso", "Presencial", Date.current())
+    @presenciales = Curso.where("programa = ? AND tipo_curso = ? and fecha_fin_conv >= ?", "Curso", "Presencial", Date.current())
     respond_to do |format|
       format.js
     end
