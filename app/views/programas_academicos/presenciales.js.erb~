@@ -1,3 +1,3 @@
 
-$("#titulo-render").html("<%= "públicos" %>");
+$("#titulo-render").html("<%= "Públicos" %>");
 $("#cursos-render").html("<%= j render :partial => 'presenciales' %>");
