@@ -31,9 +31,12 @@
 
 		<%= e.tags.html_safe %>
 
+		<% if false %>
     <% if t.tipo_curso_linea == "Breve" && !e.liga.nil? %>
       <div class="addthis_inline_share_toolbox" data-url=<%= e.liga %> data-title="<%= e.titulo %>" style="display:inline-block; float: right;margin-top:15px;"></div>
     <% end %>
+		<% end %>
+
     <% if t.tipo_curso_linea == "MOOC" %>
     </div>
     <div class="uk-width-large-2-6">

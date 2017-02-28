@@ -137,5 +137,5 @@ function initAddThis(){
     window.addthis_share = null;
 
     // Finally, load addthis
-    $.getScript("http://s7.addthis.com/js/300/addthis_widget.js#pubid=ra-57bb682464651c22");
+    $.getScript("https://s7.addthis.com/js/300/addthis_widget.js#pubid=ra-57bb682464651c22");
 }
