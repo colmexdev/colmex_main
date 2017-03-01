@@ -1,15 +1,16 @@
 ancho = Math.max(document.documentElement.clientWidth, window.innerWidth || document.body.ClientWidth || 0);
 descubres = [];
+num_filas = 2;
+anchos_badges =[];
 try{
 	descubres = clone(JSON.parse(gon.descubres));
 	agregarVisible(descubres);
 	dataset = crossfilter(descubres);
 	descubresPorContenido = dataset.dimension(function(d){ return d.contenido; });
 	descubresPorTags = dataset.dimension(function(d){ return (d.titulo + " " + d.contenido + " " + d.tags.replace(/ *, */, " ")).replace(/ +/, " ").toLowerCase()});
-	num_filas = 2;
-	anchos_badges =[];
 }
 catch(err){
+	console.log(err);
 	descubres = [];
 }
 
