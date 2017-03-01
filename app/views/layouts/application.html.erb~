@@ -50,7 +50,7 @@
 });
             }
         </script>
-
+<%= include_gon %>
 </head>
 
 <body>
