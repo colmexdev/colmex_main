@@ -63,7 +63,5 @@
   <%= yield %>
 
 </body>
-<% if (controller_name+"/"+action_name) != "principal/principal" %>
-  <script type="text/javascript" src="/js/escala_auto.js"></script>
-<% end %>
+  <script type="text/javascript" src="/js/ajustes_tamanio.js"></script>
 </html>

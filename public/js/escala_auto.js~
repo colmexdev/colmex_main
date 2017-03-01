@@ -1,5 +1,5 @@
 ancho = Math.max(document.documentElement.clientWidth, window.innerWidth || document.body.ClientWidth || 0);
-descubres = clone(JSON.parse(gon.descubres));
+descubres = clone(JSON.parse(gon.descubres)) || [];
 agregarVisible(descubres);
 dataset = crossfilter(descubres);
 descubresPorContenido = dataset.dimension(function(d){ return d.contenido; });

@@ -1,5 +1,5 @@
 ancho = Math.max(document.documentElement.clientWidth, window.innerWidth || document.body.ClientWidth || 0);
-descubres = clone(JSON.parse(gon.descubres));
+descubres = clone(JSON.parse(gon.descubres)) || [];
 agregarVisible(descubres);
 dataset = crossfilter(descubres);
 descubresPorContenido = dataset.dimension(function(d){ return d.contenido; });
@@ -10,7 +10,7 @@ barra_render = false;
 
 $(document).on('page:load', function(){ UIkit.init(); $(document).trigger("scroll"); /*initAddThis();*/ })
 
-$(document).on("ready", function(){
+$(document).on("ready page:change", function(){
 	UIkit.init();
 	var cw = $('.frame-descubre').width() - 8;
 	//initAddThis();
