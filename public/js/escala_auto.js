@@ -1,7 +1,7 @@
 barra_render = false;
 
 $(document).on("ready",function(){
-	initAddThis();
+	//initAddThis();
 	$(document).trigger("scroll");
 });
 

@@ -13,7 +13,7 @@ $(document).on('page:load', function(){ UIkit.init(); initAddThis(); })
 $(document).on("ready", function(){
 	UIkit.init();
 	var cw = $('.frame-descubre').width() - 8;
-	initAddThis();
+	//initAddThis();
 	if(gon.ev_tiny == ""){
 		$("#div_eventos").css("height","0");
 	}
