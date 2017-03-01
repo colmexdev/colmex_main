@@ -10,7 +10,7 @@ barra_render = false;
 
 $(document).on('page:load', function(){ UIkit.init(); initAddThis(); })
 
-$(document).on("ready page:change", function(){
+$(document).on("ready", function(){
 	UIkit.init();
 	var cw = $('.frame-descubre').width() - 8;
 	initAddThis();
