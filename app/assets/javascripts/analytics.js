@@ -70,19 +70,16 @@
  });
 
 function agregarAnaliticos(){
-    console.log('Página cargada: ' + window.location.href);
     analytics.page();
-    if(document.getElementById("wrapper") != null){
-      console.log("Tracking de links de Descubre");
+    if(document.getElementById("wrapper") != null && descubres != null){
       for(var i = 0; i < descubres.length; i++){
         var titulo = "Click a Descubre: " + $("#tit-desc-"+i).text();
         var link = $("#frame-"+i+" a").attr("href");
-        console.log(titulo + " " + link);
         analytics.trackLink($("#frame-"+i+"-hov"), titulo, {liga: link});
       }
     }
-    if(document.getElementById("forma_suscripcion") != null){
+    /*if(document.getElementById("forma_suscripcion") != null){
       console.log("Forma de suscripción a agenda cargada");
       analytics.trackForm($('#forma_suscripcion'), 'Registro a la Agenda');
-    }
+    }*/
 }
