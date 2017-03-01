@@ -10,13 +10,12 @@ try{
 	descubresPorTags = dataset.dimension(function(d){ return (d.titulo + " " + d.contenido + " " + d.tags.replace(/ *, */, " ")).replace(/ +/, " ").toLowerCase()});
 }
 catch(err){
-	console.log(err);
 	descubres = [];
 }
 
 barra_render = false;
 
-$(document).on('page:load', function(){ UIkit.init(); $(document).trigger("scroll"); /*initAddThis();*/ })
+$(document).on('page:load', function(){ UIkit.init(); $(document).trigger("scroll");  })
 
 $(document).on("ready page:change", function(){
 	UIkit.init();
@@ -32,7 +31,6 @@ $(document).on("ready page:change", function(){
 		}
 	}
 	catch(err){
-		console.log(err);
 	}
 
 	$('.frame-descubre').css({'height':cw+'px'});
@@ -48,7 +46,7 @@ $(document).on("ready page:change", function(){
 		ajustarImagenes();
 	}
 	catch(err){
-		console.log(err);
+
 	}
 
 $(window).on("resize",function(){
