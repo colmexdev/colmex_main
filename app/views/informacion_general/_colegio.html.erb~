@@ -8,6 +8,7 @@
 				<ul class="uk-list uk-list-line">
 					<li style="margin-bottom: 20px; font-size: 15px;"><%=  p.descripcion %></li>
 				</ul>
+				<a href=<%= p.liga %> target="_blank" class="ver-mas uk-margin-large-bottom uk-button-small">Más información</a>
 			</div>
 		<% end %>
 	</div>
