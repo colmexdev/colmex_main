@@ -16,7 +16,6 @@
 //= require bootstrap-sprockets
 //= require scroll
 //= require crossfilter
-//= require filtros
 //= require analytics
 //= require principal
 //= require imagens

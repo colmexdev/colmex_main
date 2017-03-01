@@ -14,7 +14,6 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require bootstrap-sprockets
-//= require ajustes_tamanio
 //= require scroll
 //= require crossfilter
 //= require filtros
