@@ -2,6 +2,9 @@ ancho = Math.max(document.documentElement.clientWidth, window.innerWidth || docu
 descubres = [];
 num_filas = 2;
 anchos_badges =[];
+dataset = [];
+descubresPorContenido = [];
+descubresPorTags = [];
 try{
 	descubres = clone(JSON.parse(gon.descubres));
 	agregarVisible(descubres);
@@ -33,6 +36,19 @@ $(document).on("ready page:change", function(){
 		}
 	}
 	catch(err){
+	}
+
+	try{
+		descubres = clone(JSON.parse(gon.descubres));
+		agregarVisible(descubres);
+		dataset = crossfilter(descubres);
+		console.log("Algo");
+		descubresPorContenido = dataset.dimension(function(d){ return d.contenido; });
+		descubresPorTags = dataset.dimension(function(d){ return (d.titulo + " " + d.contenido + " " + d.tags.replace(/ *, */, " ")).replace(/ +/, " ").toLowerCase()});
+		console.log("Success");
+	}
+	catch(err){
+		descubres = [];
 	}
 
 	$('.frame-descubre').css({'height':cw+'px'});
