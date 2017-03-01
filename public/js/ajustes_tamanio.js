@@ -58,9 +58,12 @@ $(document).on("ready page:change", function(){
 		recabarAnchos();
 		escalarSlider();
 		setTimeout(function(){
-		partirDescubres();
-		$(window).trigger("resize");
-		margenAuto();}, 850);
+		try{
+			partirDescubres();
+			$(window).trigger("resize");
+			margenAuto();
+		}
+		catch(err){}}, 850);
 		ajustarImagenes();
 	}
 	catch(err){

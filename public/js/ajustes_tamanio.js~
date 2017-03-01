@@ -71,36 +71,46 @@ $(window).on("resize",function(){
 
 	var ancho_act = Math.max(document.documentElement.clientWidth, window.innerWidth || document.body.ClientWidth || 0);
 	UIkit.init();
-
-	if(ancho_act < 785){
-		if(ancho >= 785){
-			document.getElementById("render_eventos").innerHTML = gon.ev_tiny;
-			ancho = ancho_act;
+	try{
+		if(ancho_act < 785){
+			if(ancho >= 785){
+				document.getElementById("render_eventos").innerHTML = gon.ev_tiny;
+				ancho = ancho_act;
+			}
+		}
+		else if(ancho_act < 1150){
+			if(ancho >= 1150 || ancho <= 785){
+				document.getElementById("render_eventos").innerHTML = gon.ev_small;
+				ancho = ancho_act;
+			}
+		} 
+		else if(ancho_act >= 1150){
+			if(ancho < 1150){
+				document.getElementById("render_eventos").innerHTML = gon.ev_big;
+				ancho = ancho_act;
+			}
 		}
 	}
-	else if(ancho_act < 1150){
-		if(ancho >= 1150 || ancho <= 785){
-			document.getElementById("render_eventos").innerHTML = gon.ev_small;
-			ancho = ancho_act;
-		}
-	} 
-	else if(ancho_act >= 1150){
-		if(ancho < 1150){
-			document.getElementById("render_eventos").innerHTML = gon.ev_big;
-			ancho = ancho_act;
-		}
+	catch(err){
 	}
 
-	escalarSlider();
-	setTimeout(function(){
-	partirDescubres();
-	margenAuto();}, 850);
-	ajustarImagenes();
-	if($(".uk-modal").css("display") =="block"){
-		escalarLightbox();
+	try{
+		escalarSlider();
+		setTimeout(function(){
+		partirDescubres();
+		margenAuto();}, 850);
+		ajustarImagenes();
+		if($(".uk-modal").css("display") =="block"){
+			escalarLightbox();
+		}
+	}
+	catch(err){
 	}
 	$(document).trigger("scroll");
-	reescalarDescubre();
+	try{
+		reescalarDescubre();
+	}
+	catch(err){}
 });
 
 
