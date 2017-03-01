@@ -37,14 +37,19 @@ $(document).on("ready page:change", function(){
 
 	$('.frame-descubre').css({'height':cw+'px'});
 
-	recabarAnchos();
   agregarAnaliticos();
-	escalarSlider();
-	setTimeout(function(){
-	partirDescubres();
-	$(window).trigger("resize");
-	margenAuto();}, 850);
-	ajustarImagenes();
+	try{
+		recabarAnchos();
+		escalarSlider();
+		setTimeout(function(){
+		partirDescubres();
+		$(window).trigger("resize");
+		margenAuto();}, 850);
+		ajustarImagenes();
+	}
+	catch(err){
+		console.log(err);
+	}
 
 $(window).on("resize",function(){
 

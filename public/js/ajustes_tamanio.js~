@@ -21,13 +21,18 @@ $(document).on('page:load', function(){ UIkit.init(); $(document).trigger("scrol
 $(document).on("ready page:change", function(){
 	UIkit.init();
 	var cw = $('.frame-descubre').width() - 8;
-	if(gon.ev_tiny == ""){
-		$("#div_eventos").css("height","0");
+	try{
+		if(gon.ev_tiny == ""){
+			$("#div_eventos").css("height","0");
+		}
+		else{
+			if(ancho < 785){ document.getElementById("render_eventos").innerHTML = gon.ev_tiny; }
+			else if(ancho < 1150){ document.getElementById("render_eventos").innerHTML = gon.ev_small; }
+			else{ document.getElementById("render_eventos").innerHTML = gon.ev_big;}
+		}
 	}
-	else{
-		if(ancho < 785){ document.getElementById("render_eventos").innerHTML = gon.ev_tiny; }
-		else if(ancho < 1150){ document.getElementById("render_eventos").innerHTML = gon.ev_small; }
-		else{ document.getElementById("render_eventos").innerHTML = gon.ev_big;}
+	catch(err){
+		console.log(err);
 	}
 
 	$('.frame-descubre').css({'height':cw+'px'});
