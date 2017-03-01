@@ -7,7 +7,7 @@
 			<div class="uk-accordion-content">
 				<ul class="uk-list uk-list-line">
 				<% @premiados.where("tipo = ?", c.nombre).each do |p| %>
-					<li style="margin-bottom: 20px; font-size: 15px;"><%= p.nombre + ", " + p.descripcion.html_safe %></li>
+					<li style="margin-bottom: 20px; font-size: 15px;"><p><%= p.nombre + ", " + p.descripcion.html_safe %></p></li>
 				<% end %>
 				</ul>
 			</div>
