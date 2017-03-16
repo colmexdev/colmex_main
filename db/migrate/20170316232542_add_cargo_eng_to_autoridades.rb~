@@ -1,0 +1,5 @@
+class AddCargoEngToAutoridades < ActiveRecord::Migration
+  def change
+    add_column :autoridades, :cargo, :text
+  end
+end

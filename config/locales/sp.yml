@@ -98,6 +98,9 @@ sp:
       operativas: "Áreas operativas"
       consejo: "Consejo Académico"
       comision: "Comisión Dictaminadora"
+      correo: "Correo electrónico"
+      tel: "Teléfono"
+      ext: "Extensión"
     documentacion:
       op1: "Actas de la Junta de Gobierno"
       op2: "Informes de Actividades"
