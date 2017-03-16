@@ -50,7 +50,7 @@ en:
     boton: "Sign up"
     placeholder: "mail@domain.com"
   descubre: "DISCOVER"
-  sobre:
+  sobre_col:
     sobre: "About"
     revistas: "Magazines"
     colegio: "El Colegio de México"

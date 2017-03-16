@@ -50,7 +50,7 @@ sp:
     boton: "Suscribirse"
     placeholder: "tucorreo@dominio.com"
   descubre: "DESCUBRE"
-  sobre:
+  sobre_col:
     sobre: "Sobre"
     revistas: "Revistas"
     colegio: "El Colegio de México"
