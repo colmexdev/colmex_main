@@ -1,3 +1,5 @@
+<% if admin_signed_in? %>
+
 <p id="notice"><%= notice %></p>
 
 <h1>Listing Personals</h1>
@@ -37,3 +39,5 @@
 <br>
 
 <%= link_to 'New Personal', new_personal_path %>
+
+<% end %>
