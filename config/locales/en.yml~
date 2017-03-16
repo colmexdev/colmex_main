@@ -102,6 +102,10 @@ Thousands of graduates have graduated from the classrooms of El Colegio who have
       operativas: "Operative areas"
       consejo: "Academic Council"
       comision: "Judgment Board"
+      correo: "E-mail"
+      tel: "Phone number"
+      ext: "Extension"
+      encabezado_pres: "Investigators related to Presidency (since January 1st, 2017)"
     documentacion:
       op1: "Records from Government Joint"
       op2: "Activities' Reports"

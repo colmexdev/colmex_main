@@ -4,11 +4,11 @@
 		<img src=<%= p.foto.url %> class="uk-border-rounded" alt="Foto miembro Presidencia">
 	</div>
 	<div class="uk-width-4-6 uk-vertical-align-middle uk-text-left uk-text-break">
-		<h4><%= p.cargo.mb_chars.upcase %></h4>
+		<h4><%= (params[:locale] == "sp" ? p.cargo.mb_chars.upcase : p.cargo_eng.mb_chars.upcase ) %></h4>
 		<h3 class="vino"><%= p.nombre %></h3>
-		<p class="izq-align">Correo electrónico: <a class="uk-link" href="mailto:<%= p.correo %>"><%= p.correo %></a></p>
-		<p class="izq-align">Teléfono: <%= p.telefono %></p>
-		<p class="izq-align">Extensión: <%= p.extension %></p>
+		<p class="izq-align"><%= t('sobre.autoridades.correo') %>: <a class="uk-link" href="mailto:<%= p.correo %>"><%= p.correo %></a></p>
+		<p class="izq-align"><%= t('sobre.autoridades.tel') %>: <%= p.telefono %></p>
+		<p class="izq-align"><%= t('sobre.autoridades.ext') %>: <%= p.extension %></p>
 	</div>
 </div>
 <% end %>
@@ -16,9 +16,9 @@
 <script type="text/javascript" src="../js/accordion.js"></script>
 		<div class="acordeon-premios">
 			<div class="uk-accordion" data-uk-accordion>
-				<h3 class="uk-accordion-title"><%= construir_encabezado("bt-flechita.png", "bt-flechita-abajo.png", "Investigadores Asociados a Presidencia (desde el 1° de enero de 2017)") %></h3>
+				<h3 class="uk-accordion-title"><%= construir_encabezado("bt-flechita.png", "bt-flechita-abajo.png", t('sobre.autoridades.encabezado_pres')) %></h3>
 				<div class="uk-accordion-content">
-					<h2 class="vino">Asociados a los Centros de Estudios</h2>
+					<h2 class="vino"><%= t('sobre.autoridades.sub_ce') %></h2>
 					<% @profs_centros.each do |a| %>
 					<div class="uk-grid uk-grid-medium uk-margin-large-bottom">
 						<div class="uk-width-1-1 uk-vertical-align-middle uk-text-left uk-text-break">
@@ -27,12 +27,12 @@
 						</div>
 					</div>
 					<% end %>
-					<h2 class="vino" style="margin-top:15px;">Investigadores en proyectos específicos</h2>
+					<h2 class="vino" style="margin-top:15px;"><%= t('sobre.autoridades.sub_inv') %></h2>
 					<% @asociados.each do |a| %>
 					<div class="uk-grid uk-grid-medium uk-margin-large-bottom">
 						<div class="uk-width-1-1 uk-vertical-align-middle uk-text-left uk-text-break">
 							<h3 style="margin-bottom:0;"><%= a.nombre %></h3>
-							<h5 class="vino" style="margin-top:0;"><%= a.cargo.html_safe %></h5>
+							<h5 class="vino" style="margin-top:0;"><%= (params[:locale] == "sp" ? a.cargo.html_safe : a.cargo_eng.html_safe ) %></h5>
 						</div>
 					</div>
 					<% end %>

@@ -98,6 +98,11 @@ sp:
       operativas: "Áreas operativas"
       consejo: "Consejo Académico"
       comision: "Comisión Dictaminadora"
+      correo: "Correo electrónico"
+      tel: "Teléfono"
+      ext: "Extensión"
+      encabezado_pres: "Investigadores Asociados a Presidencia (desde el 1° de enero de 2017)"
+      sub_ce: "Asociados a los Centros de Estudios"
     documentacion:
       op1: "Actas de la Junta de Gobierno"
       op2: "Informes de Actividades"

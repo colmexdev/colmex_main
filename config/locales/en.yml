@@ -105,6 +105,9 @@ Thousands of graduates have graduated from the classrooms of El Colegio who have
       correo: "E-mail"
       tel: "Phone number"
       ext: "Extension"
+      encabezado_pres: "Investigators related to Presidency (since January 1st, 2017)"
+      sub_ce: "Related to Academic Centers"
+      sub_inv: "Investigators on specific projects"
     documentacion:
       op1: "Records from Government Joint"
       op2: "Activities' Reports"
