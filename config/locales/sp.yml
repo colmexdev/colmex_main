@@ -19,13 +19,13 @@ sp:
     b2:
       texto: "Centros de Estudios"
       opciones:
-        op1: "CEAA"
-        op2: "CEDUA"
-        op3: "CEE"
-        op4: "CEH"
-        op5: "CEI"
-        op6: "CELL"
-        op7: "CES"
+        op1: "Centro de Estudios de Asia y África"
+        op2: "Centro de Estudios Demográficos, Urbanos y Ambientales"
+        op3: "Centro de Estudios Económicos"
+        op4: "Centro de Estudios Históricos"
+        op5: "Centro de Estudios Internacionales"
+        op6: "Centro de Estudios Lingüísticos y Literarios"
+        op7: "Centro de Estudios Sociológicos"
     b3:
       texto: "Programas docentes"
       opciones:
