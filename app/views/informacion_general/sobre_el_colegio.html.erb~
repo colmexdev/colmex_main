@@ -11,8 +11,8 @@
     <div class="uk-hidden-medium uk-hidden-small">
     <ul class="lista-links" style="text-align:left;">
 <li><%= construir_link("bt-flechita.png", "bt-flechita-hover.png", "Centros de Estudios",centros_de_estudio_url,"link-sobre",false) %></li>
-					<li><%= construir_link("bt-flechita.png", "bt-flechita-hover.png","Publicaciones","http://libros.colmex.mx/","link-sobre") %></li>
-					<li><%= construir_link("bt-flechita.png", "bt-flechita-hover.png","Revistas","http://revistas.colmex.mx/","link-sobre") %></li>
+					<li><%= construir_link("bt-flechita.png", "bt-flechita-hover.png",t('botones.b6'),"http://libros.colmex.mx/","link-sobre") %></li>
+					<li><%= construir_link("bt-flechita.png", "bt-flechita-hover.png",t('sobre.revistas'),"http://revistas.colmex.mx/","link-sobre") %></li>
 					<li><%= construir_link("bt-flechita.png", "bt-flechita-hover.png","Programa de Educación Digital","http://digital.colmex.mx/","link-sobre") %></li>
     </ul>
     </div>
