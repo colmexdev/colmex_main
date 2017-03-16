@@ -10,21 +10,23 @@
     <!--          Aquí empieza el menú pequeño          -->
     <div class="uk-hidden-medium uk-hidden-small">
     <ul class="lista-links" style="text-align:left;">
-<li><%= construir_link("bt-flechita.png", "bt-flechita-hover.png", "Centros de Estudio",centros_de_estudio_url,"link-sobre",false) %></li>
-					<li><%= construir_link("bt-flechita.png", "bt-flechita-hover.png","Publicaciones","http://libros.colmex.mx/","link-sobre") %></li>
-					<li><%= construir_link("bt-flechita.png", "bt-flechita-hover.png","Revistas","http://revistas.colmex.mx/","link-sobre") %></li>
+<li><%= construir_link("bt-flechita.png", "bt-flechita-hover.png", "Centros de Estudios",centros_de_estudio_url,"link-sobre",false) %></li>
+					<li><%= construir_link("bt-flechita.png", "bt-flechita-hover.png",t('botones.b6'),"http://libros.colmex.mx/","link-sobre") %></li>
+					<li><%= construir_link("bt-flechita.png", "bt-flechita-hover.png",t('sobre.revistas'),"http://revistas.colmex.mx/","link-sobre") %></li>
 					<li><%= construir_link("bt-flechita.png", "bt-flechita-hover.png","Programa de Educación Digital","http://digital.colmex.mx/","link-sobre") %></li>
     </ul>
     </div>
     <!--          Aquí termina el menú pequeño          -->
     </div>
     <div class="uk-width-large-2-5">
-    <span class="titulo-chico">Sobre</span><br>
-    <span class="titulo-grande">El Colegio de México</span><br>
-    <p>El Colegio de México es una institución pública, de carácter universitario, dedicada a la investigación y a la enseñanza superior en ciencias sociales y humanidades, y es una de las más destacadas en el mundo hispánico, por lo cual ha recibido numerosos reconocimientos desde su fundación en 1940 hasta el presente.</p>
-    <p>Para cumplir con sus fines, El Colegio de México lleva a cabo investigaciones y docencia en las áreas de la especialidad de los Centros de Estudios que lo integran: Históricos, Lingüísticos y Literarios, Internacionales, de Asia y África, Económicos, Demográficos Urbanos y Ambientales, y Sociológicos, además del Programa de Estudios de Género. Ofrece licenciaturas, maestrías y doctorados por especialidad, así como cursos de especialización y de verano.</p>
-    <p>El Colegio cuenta con una gran biblioteca, abierta al público, especializada en ciencias sociales y humanidades. Su acervo está constituido por más de 700,000 volúmenes y cuenta con una enorme cantidad de recursos electrónicos y digitales. Asimismo, la institución cuenta con las siguientes unidades de apoyo y servicio: Dirección de Publicaciones, Programa de Educación Digital y Coordinación de Servicios de Cómputo.</p>
-    <p>De las aulas de El Colegio han salido varios millares de egresados que se han destacado en la investigación, la docencia, la función pública y otros campos de actividad profesional en México y en numerosos países del mundo.</p>
+    <span class="titulo-chico"><%= t('sobre.sobre') %></span><br>
+    <span class="titulo-grande"><%= t('sobre.colegio') %></span><br>
+    <p><%= t('sobre.p1') %></p>
+    <p><%= t('sobre.p2') %></p>
+    <p><%= t('sobre.p3') %></p>
+    <p><%= t('sobre.p4') %></p>
+		<p><%= t('sobre.p5') %></p>
+		<p><%= t('sobre.p6').html_safe %></p>
     <p>&nbsp;</p>
     </div>
     </div>
