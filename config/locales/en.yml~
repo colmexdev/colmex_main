@@ -50,7 +50,7 @@ en:
     boton: "Sign up"
     placeholder: "mail@domain.com"
   descubre: "DISCOVER"
-  sobre:
+  sobre_col:
     sobre: "About"
     revistas: "Magazines"
     colegio: "El Colegio de México"
@@ -61,6 +61,10 @@ en:
     p5: "The Department of Publications of El Colegio de México is in charge of publishing of books and journals. To date and over a period of 75 years, the institution has published over 4,400 academic books and seven journals, several of which are the leading publications in their fields in the Spanish-speaking world."
     p6: "Other departments of El Colegio de México include the Coordination of Computer Services and the Digital Education Program. The latter has produced hundreds of academic interviews, short courses, several <i>Moocs</i> and many academic videos on timely subjects. 
 Thousands of graduates have graduated from the classrooms of El Colegio who have excelled in research, teaching, public functions and other fields of professional activity both in Mexico and in many countries of the world, particularly throughout Latin America."
+  historia:
+    historia: "Brief history of"
+    p1: "The origins of El  Colegio de México are linked to the arrival of a large number of Spanish republican intellectuals who came to Mexico as a result of the Spanish Civil War (1936-1939). In March 1939, the President of Mexico, Lázaro Cárdenas, appointed the distinguished Mexican diplomat and intellectual, Alfonso Reyes,  as director of what was then known as <i>La Casa de España</i> which received many of the most distinguished exiles, all formerly university professors and rectors in Spain.  The institution was placed under the patronage of important Mexican functionaries, including Eduardo Villaseñor, undersecretary of Finance, in representation of the Government; Gustavo Baz, rector of the National University of Mexico; Enrique Arreguín, of the Ministry of Public Education, and Daniel Cosío Villegas, who served as secretary of the board of trustees."
+    p2: "Shortly thereafter, in October 1940, El Colegio de México was established and began work  on these already important foundations. The first President of the institution was Alfonso Reyes, who, for almost twenty years, until his death on December 27, 1959, devoted his uninterrupted energies to the cultural and academic tasks involved in supervising its early academic centers in history, literature, philology and sociology as well its already very active department of publications.  Also decisive was the intelligent and energetic support of Daniel Cosío Villegas, who was Secretary General of El Colegio de México during its early years and later as second president in the years 1960 to 1963, and during his tenure the Center of International Studies was founded."
   footer:
     liga1: "Ethical Principles"
     liga2: "Privacy advice"
