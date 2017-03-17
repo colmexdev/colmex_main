@@ -12,21 +12,21 @@
     <ul class="lista-links" style="text-align:left;">
 <li><%= construir_link("bt-flechita.png", "bt-flechita-hover.png", "Centros de Estudios",centros_de_estudio_url,"link-sobre",false) %></li>
 					<li><%= construir_link("bt-flechita.png", "bt-flechita-hover.png",t('botones.b6'),"http://libros.colmex.mx/","link-sobre") %></li>
-					<li><%= construir_link("bt-flechita.png", "bt-flechita-hover.png",t('sobre.revistas'),"http://revistas.colmex.mx/","link-sobre") %></li>
+					<li><%= construir_link("bt-flechita.png", "bt-flechita-hover.png",t('sobre_col.revistas'),"http://revistas.colmex.mx/","link-sobre") %></li>
 					<li><%= construir_link("bt-flechita.png", "bt-flechita-hover.png","Programa de Educación Digital","http://digital.colmex.mx/","link-sobre") %></li>
     </ul>
     </div>
     <!--          Aquí termina el menú pequeño          -->
     </div>
     <div class="uk-width-large-2-5">
-    <span class="titulo-chico"><%= t('sobre.sobre') %></span><br>
-    <span class="titulo-grande"><%= t('sobre.colegio') %></span><br>
-    <p><%= t('sobre.p1') %></p>
-    <p><%= t('sobre.p2') %></p>
-    <p><%= t('sobre.p3') %></p>
-    <p><%= t('sobre.p4') %></p>
-		<p><%= t('sobre.p5') %></p>
-		<p><%= t('sobre.p6').html_safe %></p>
+    <span class="titulo-chico"><%= t('sobre_col.sobre') %></span><br>
+    <span class="titulo-grande"><%= t('sobre_col.colegio') %></span><br>
+    <p><%= t('sobre_col.p1') %></p>
+    <p><%= t('sobre_col.p2') %></p>
+    <p><%= t('sobre_col.p3') %></p>
+    <p><%= t('sobre_col.p4') %></p>
+		<p><%= t('sobre_col.p5') %></p>
+		<p><%= t('sobre_col.p6').html_safe %></p>
     <p>&nbsp;</p>
     </div>
     </div>

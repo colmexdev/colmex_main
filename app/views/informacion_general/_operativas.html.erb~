@@ -1,9 +1,9 @@
     <% @operativas.each do |o| %>
     <div class="uk-margin-large-bottom">
-    <h4><%= o.depto.mb_chars.upcase || o.cargo.mb_chars.upcase %></h4>
+    <h4><%= o.depto.to_s != "" ? o.depto.mb_chars.upcase : o.cargo.mb_chars.upcase %></h4>
     <h3 class="vino"><%= o.nombre %></h3>
-    <p class="izq-align">Correo electrónico: <a class="uk-link" href="mailto:<%= o.correo %>"><%= o.correo %></a></p>
-    <p class="izq-align">Teléfono: <%= o.telefono %></p>
-    <p class="izq-align">Extensión: <%= o.extension %></p>
+    <p class="izq-align"><%= t('sobre.autoridades.correo') %>: <a class="uk-link" href="mailto:<%= o.correo %>"><%= o.correo %></a></p>
+    <p class="izq-align"><%= t('sobre.autoridades.tel') %>: <%= o.telefono %></p>
+    <p class="izq-align"><%= t('sobre.autoridades.ext') %>: <%= o.extension %></p>
     </div>
     <% end %>

@@ -1,10 +1,11 @@
 <p>&nbsp;</p>
     <% @admins.each do |a| %>
     <div class="uk-margin-large-bottom">
-    <h4><%= a.cargo.upcase %></h4>
+    <h4><%= a.cargo.mb_chars.upcase %></h4>
     <h3 class="vino"><%= a.nombre %></h3>
-    <p>Correo electrónico: <a class="uk-link" href="mailto:<%= a.correo %>"><%= a.correo %></a></p>
-    <p>Teléfono: <%= a.telefono %> Extensión: <%= a.extension %></p>
+    <p class="izq-align">Correo electrónico: <a class="uk-link" href="mailto:<%= a.correo %>"><%= a.correo %></a></p>
+    <p class="izq-align">Teléfono: <%= a.telefono %></p>
+    <p class="izq-align"> Extensión: <%= a.extension %></p>
     </div>
     <% end %>
 

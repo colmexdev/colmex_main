@@ -1,15 +1,15 @@
-<p>&nbsp;</p>
     <% @centros.each do |c| %>
     <div class="uk-grid uk-grid-medium uk-margin-large-bottom">
     <div class="uk-width-2-6 uk-text-center">
     <img src=<%= c.foto.url %> class="uk-border-rounded" alt="Foto miembro Presidencia">
     </div>
     <div class="uk-width-4-6 uk-vertical-align-middle uk-text-left uk-text-break">
-    <h4><%= c.depto.upcase %></h4>
+    <h4><%= c.depto.mb_chars.upcase %></h4>
     <h3 class="vino"><%= c.nombre %></h3>
       <h4><i><%= c.cargo || "" %></i></h4>
-    <p>Correo electrónico: <a class="uk-link" href="mailto:<%= c.correo %>"><%= c.correo %></a></p>
-    <p>Teléfono: <%= c.telefono %> Extensión: <%= c.extension %></p>
+    <p class="izq-align">Correo electrónico: <a class="uk-link" href="mailto:<%= c.correo %>"><%= c.correo %></a></p>
+    <p class="izq-align">Teléfono: <%= c.telefono %></p>
+    <p class="izq-align">Extensión: <%= c.extension %></p>
     </div>
     </div>
     <% end %>

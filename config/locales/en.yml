@@ -51,6 +51,7 @@ en:
     placeholder: "mail@domain.com"
   descubre: "DISCOVER"
   sobre_col:
+    pred: "Office of Digital Education"
     sobre: "About"
     revistas: "Magazines"
     colegio: "El Colegio de México"
@@ -100,7 +101,7 @@ Thousands of graduates have graduated from the classrooms of El Colegio who have
       admin: "Administration"
       apoyo: "Other academic units"
       operativas: "Operative areas"
-      consejo: "Academic Council"
+      consejo: "Academic Council of"
       comision: "Judgment Board"
       correo: "E-mail"
       tel: "Phone number"
