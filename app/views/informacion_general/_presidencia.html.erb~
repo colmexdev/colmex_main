@@ -27,7 +27,7 @@
 						</div>
 					</div>
 					<% end %>
-					<h2 class="vino" style="margin-top:15px;">Investigadores en proyectos específicos</h2>
+					<h2 class="vino" style="margin-top:15px;"><%= t('sobre.autoridades.sub_inv') %></h2>
 					<% @asociados.each do |a| %>
 					<div class="uk-grid uk-grid-medium uk-margin-large-bottom">
 						<div class="uk-width-1-1 uk-vertical-align-middle uk-text-left uk-text-break">
