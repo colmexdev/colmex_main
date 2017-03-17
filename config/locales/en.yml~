@@ -81,9 +81,6 @@ Thousands of graduates have graduated from the classrooms of El Colegio who have
     liga4: "E-mail"
     liga5: "Location"
     liga6: "Sitemap"
-  date:
-    formats:
-      long: "%A, %B %d"
   donacion:
     texto: "El Fondo Patrimonial en Beneficio de El Colegio de México, A.C. was created in 1986 with the only purpose of contributing to the growth and development of El Colegio de México."
     boton_conoce: "Learn more"
@@ -117,3 +114,13 @@ Thousands of graduates have graduated from the classrooms of El Colegio who have
     emeritos: 
       titulo: "Former and present Emeritus Professors"
       fecha: "Date of appointment"
+    principios:
+      intro: "Introduction"
+      p1: "El Colegio de México expresses its commitment to ensure respect for the integrity of all the members of its community, as well as the products of its work and the public goods that it owns and safeguards. Due to the above, El Colegio de México issues the following pronouncements:"
+      pron: "Principles:"
+      p2: "1.	El Colegio de México is committed to the preservation of a sound and healthy environment of work, research, teaching and study. Sexual harassment is intolerable, discriminatory and illegal, as it involves disturbing, disturbing or creating difficulties for another person, by making direct or indirect suggestions, invitations or propositions related to sexual activities, considered offensive. It is a denial of the rights and dignity of the other, as it contradicts the policies of equality and equal treatment and opportunities of members of the academic community. This institution considers that this behavior is in violation of the norms that govern the community. Consequently, El Colegio de México feels aggrieved by such practices and strictly prohibits sexual harassment. The institution commits itself to adopt the actions that are necessary to prevent and correct the behaviors that violate this institutional policy."
+  date:
+    formats:
+      long: "%A, %B %d"
+      normal: "%d %B %Y"
+      mes_anio: "%B %Y" 

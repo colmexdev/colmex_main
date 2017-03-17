@@ -110,7 +110,14 @@ sp:
       op2: "Informes de Actividades"
       op3: "Estatuto Orgánico"
       op4: "Información para Estudiantes"
-    emeritos: "Profesores Eméritos"
+    emeritos: 
+      titulo: "Profesores Eméritos"
+      fecha: "Fecha de nombramiento"
+    principios:
+      intro: "Introducción"
+      p1: "El Colegio de México expresa su compromiso para asegurar el respeto a la integridad de todas las personas que conforman su comunidad, así como a los productos de su trabajo y los bienes públicos que tiene en propiedad y resguardo. En razón de lo anterior, El Colegio de México emite los siguientes pronunciamientos:"
+      pron: "Pronunciamientos:"
+      p2: "El Colegio de México está comprometido con la preservación de un ambiente de trabajo, investigación, docencia y estudio sano. El hostigamiento sexual es intolerable, discriminatorio e ilegal, ya que consiste en molestar, perturbar o crear dificultades a otra persona, al hacerle, de manera directa o indirecta, sugerencias, invitaciones o proposiciones íntimas, relacionadas con actividades sexuales, consideradas ofensivas. Es una negación de los derechos y de la dignidad del otro, en tanto contradice las políticas de equidad e igualdad de trato y oportunidades de los miembros de la comunidad académica. Esta institución considera que ese comportamiento es violatorio de las normas que rigen a la comunidad. Por consiguiente, El Colegio de México se siente agraviado ante tales prácticas y prohíbe estrictamente el hostigamiento sexual. La institución se compromete a adoptar las acciones que sean necesarias para prevenir y corregir los comportamientos que violen esta política institucional."
   activerecord:
     errors:
       messages:
