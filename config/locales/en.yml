@@ -49,7 +49,11 @@ en:
     texto: "Sign up to our Agenda"
     boton: "Sign up"
     placeholder: "mail@domain.com"
-  descubre: "DISCOVER"
+  descubre: "DESCUBRE"
+  mas: "See more"
+  filtro: "Filter by"
+  cat: "Type (All)"
+  cont: "Content"
   sobre_col:
     pred: "Office of Digital Education"
     sobre: "About"

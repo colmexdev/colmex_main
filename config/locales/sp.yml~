@@ -50,6 +50,7 @@ sp:
     boton: "Suscribirse"
     placeholder: "tucorreo@dominio.com"
   descubre: "DESCUBRE"
+  mas: "VER MÁS"
   sobre_col:
     pred: "Programa de Educación Digital"
     sobre: "Sobre"
@@ -127,6 +128,7 @@ sp:
     mas: "Conoce más"
     info: "Más información"
     prox_conv: "Próxima convocatoria"
+    promo: "Inicio de la promoción"
   activerecord:
     errors:
       messages:

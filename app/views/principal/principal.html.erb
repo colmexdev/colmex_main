@@ -101,15 +101,15 @@
 				<% for i in 0..cont.length-1 %>
 					<% contenidos << [cont_plural[i], cont[i]] %>
 				<% end %>
-				<span class="span-filtros">Filtrar por:</span>
-				<%= select_tag("contenido", options_for_select(contenidos), :include_blank => "Categoría (Todos)", :onchange => "filtrarDescubres();") %>
-				<%= text_field_tag("tags", "", :oninput => "filtrarDescubres();", :placeholder => "Contenido") %>
+				<span class="span-filtros"><%= t('filtro') %></span>
+				<%= select_tag("contenido", options_for_select(contenidos), :include_blank => t('cat'), :onchange => "filtrarDescubres();") %>
+				<%= text_field_tag("tags", "", :oninput => "filtrarDescubres();", :placeholder => t('cont')) %>
 			</div>
 			<div class="wrapper-descubre grid effect-6" id="wrapper">
 				<%= construir_descubre(@descubre) %>
 			</div>
 			<div id="cutter-descubre" onclick="desbordarDescubres();">
-				VER MÁS <%= image_tag("mas.png") %>
+				<%= t('mas') %> <%= image_tag("mas.png") %>
 			</div>
 
 		</div> <!-- Cierre de columnas para "Descubre" -->
