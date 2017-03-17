@@ -1,7 +1,4 @@
-
-<% anio = @actas.order(anio: :desc).first.anio %>
-
-<% @actas.where(:anio => anio).each do |d| %>
+<% @actas.order(:anio).each do |d| %>
 
 <div class="wrapper-links-doc">
 	<div class="img-link-doc">

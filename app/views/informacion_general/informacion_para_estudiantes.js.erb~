@@ -1,3 +1,3 @@
 
 $("#titulo-render").html("<%= 'Información para Estudiantes' %>");
-$("#documentacion-render").html("<%= j render :partial => 'info_estudiantes' %>");
+$("#documentacion-render").html("<%= j render :partial => 'informacion_para_estudiantes' %>");
