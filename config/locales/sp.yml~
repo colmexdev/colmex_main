@@ -51,6 +51,7 @@ sp:
     placeholder: "tucorreo@dominio.com"
   descubre: "DESCUBRE"
   sobre_col:
+    pred: "Programa de Educación Digital"
     sobre: "Sobre"
     revistas: "Revistas"
     colegio: "El Colegio de México"

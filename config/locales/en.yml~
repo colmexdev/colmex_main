@@ -51,6 +51,7 @@ en:
     placeholder: "mail@domain.com"
   descubre: "DISCOVER"
   sobre_col:
+    pred: "Office of Digital Education"
     sobre: "About"
     revistas: "Magazines"
     colegio: "El Colegio de México"

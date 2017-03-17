@@ -125,7 +125,7 @@ class InformacionGeneralController < ApplicationController
 
   def consejo
     @consejo = Personal.where("seccion = ?","Consejo")
-    @deptos = ["Centro de Estudios de Asia y África","Centro de Estudios Demográficos, Urbanos y Ambientales","Centro de Estudios Económicos","Centro de Estudios Históricos","Centro de Estudios Internacionales","Centro de Estudios Lingüísticos y Literarios","Centro de Estudios Sociológicos","Biblioteca Daniel Cosío Villegas","Coordinación de Servicios de Cómputo","Publicaciones","Presidencia"]
+    @deptos = (params[:locale] == "sp" ? ["Centro de Estudios de Asia y África","Centro de Estudios Demográficos, Urbanos y Ambientales","Centro de Estudios Económicos","Centro de Estudios Históricos","Centro de Estudios Internacionales","Centro de Estudios Lingüísticos y Literarios","Centro de Estudios Sociológicos","Biblioteca “Daniel Cosío Villegas”","Coordinación de Servicios de Cómputo","Publicaciones","Presidencia"] : ["Centro de Estudios de Asia y África","Centro de Estudios Demográficos, Urbanos y Ambientales","Centro de Estudios Económicos","Centro de Estudios Históricos","Centro de Estudios Internacionales","Centro de Estudios Lingüísticos y Literarios","Centro de Estudios Sociológicos","Library “Daniel Cosío Villegas”","Coordination of Computer Services","Department of Publications","Presidency"])
   end
 
   def comision
