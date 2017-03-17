@@ -22,9 +22,14 @@
 <p>
   <strong>Semblanza:</strong>
   <%= @emerito.semblanza %>
-
-<% end %>
 </p>
+
+<p>
+  <strong>Semblanza inglés:</strong>
+  <%= @emerito.semblanza_eng %>
+</p>
+<% end %>
+
 
 <%= link_to 'Edit', edit_emerito_path(@emerito) %> |
 <%= link_to 'Back', emeritos_path %>

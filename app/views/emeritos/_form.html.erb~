@@ -1,4 +1,4 @@
-<%= @emerito.centro %>
+
 
 <%= form_for(@emerito, :html => { :multipart => true }) do |f| %>
   <% if @emerito.errors.any? %>

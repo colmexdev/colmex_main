@@ -1,3 +1,5 @@
+<% if admin_signed_in? %>
+
 <p id="notice"><%= notice %></p>
 
 <%= image_tag @emerito.foto.url %>
@@ -20,6 +22,8 @@
 <p>
   <strong>Semblanza:</strong>
   <%= @emerito.semblanza %>
+
+<% end %>
 </p>
 
 <%= link_to 'Edit', edit_emerito_path(@emerito) %> |

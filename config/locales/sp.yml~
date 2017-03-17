@@ -108,8 +108,9 @@ sp:
     documentacion:
       op1: "Actas de la Junta de Gobierno"
       op2: "Informes de Actividades"
-      op3: "Estatutos"
+      op3: "Estatuto Orgánico"
       op4: "Información para Estudiantes"
+    emeritos: "Profesores Eméritos"
   activerecord:
     errors:
       messages:

@@ -1,7 +1,7 @@
 <%= render 'principal/barra' %>
 <div class="container-fluid" id="resto-cuerpo">
 	<div id="cuerpo" class="principal-chica uk-block-large">
-	<span class="titulo-grande">Profesores eméritos</span><br>
+	<span class="titulo-grande"><%= t('sobre.emeritos.titulo') %></span><br>
         <p>&nbsp;</p>
 	<% @profesores.each do |prof| %>
 	<div class="uk-grid uk-grid-medium uk-margin-large-bottom">
@@ -9,12 +9,12 @@
     <img src=<%= image_url(prof.foto.url) %> class="uk-border-rounded" alt="Foto Profesor Emérito">
     </div>
     <div class="uk-width-large-4-6 uk-width-medium-2-5 uk-width-small-3-5 uk-text-left uk-text-break">
-    <h3 class="vino"><%= prof.nombre %></h3>
-    <h4><%= (("Centro de Estudios Económicos y " if prof.nombre.include?("Urquidi"))||"") + convierteCentros(prof.centro) %></h4>
-    <p><strong>Fecha de nombramiento: </strong><%= l(prof.fecha_anexion, :format => :normal) %></p>
-    <p><%= prof.semblanza.to_s == "" ? "" : prof.semblanza.html_safe  %></p>
+    	<h3 class="vino"><%= prof.nombre %></h3>
+    	<h4><%= (("Centro de Estudios Económicos y " if prof.nombre.include?("Urquidi"))||"") + convierteCentros(prof.centro) %></h4>
+    	<p><strong><%= t('sobre.emeritos.fecha') %>: </strong><%= l(prof.fecha_anexion, :format => :normal) %></p>
+    	<p><%= prof.semblanza.to_s == "" ? "" : prof.semblanza.html_safe  %></p>
     </div>
-    </div>
+  </div>
 	<% end %>
 	</div>
 

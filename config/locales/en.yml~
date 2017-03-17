@@ -112,5 +112,8 @@ Thousands of graduates have graduated from the classrooms of El Colegio who have
     documentacion:
       op1: "Proceedings and reports of the Board of Governors"
       op2: "Annual reports"
-      op3: "Statutes"
+      op3: "Organic Statute"
       op4: "Information for Students"
+    emeritos: 
+      titulo: "Former and present Emeritus Professors"
+      fecha: "Date of appointment"

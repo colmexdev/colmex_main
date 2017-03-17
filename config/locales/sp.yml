@@ -110,6 +110,9 @@ sp:
       op2: "Informes de Actividades"
       op3: "Estatuto Orgánico"
       op4: "Información para Estudiantes"
+    emeritos: 
+      titulo: "Profesores Eméritos"
+      fecha: "Fecha de nombramiento"
   activerecord:
     errors:
       messages:

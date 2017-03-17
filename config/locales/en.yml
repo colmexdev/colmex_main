@@ -114,3 +114,10 @@ Thousands of graduates have graduated from the classrooms of El Colegio who have
       op2: "Annual reports"
       op3: "Organic Statute"
       op4: "Information for Students"
+    emeritos: 
+      titulo: "Former and present Emeritus Professors"
+      fecha: "Date of appointment"
+  date:
+    formats:
+      normal: "%d %B %Y"
+      mes_anio: "%B %Y" 
