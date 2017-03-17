@@ -51,6 +51,9 @@ sp:
     placeholder: "tucorreo@dominio.com"
   descubre: "DESCUBRE"
   mas: "VER MÁS"
+  filtro: "Filtrar por:"
+  cat: "Categoría (Todos)"
+  cont: "Contenido"
   sobre_col:
     pred: "Programa de Educación Digital"
     sobre: "Sobre"
