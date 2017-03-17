@@ -2,31 +2,32 @@
 <div class="container-fluid" id="resto-cuerpo">
 	<div id="cuerpo" class="principal-chica uk-block-large">
 
+<script type="text/javascript">initAddThis();</script>
 		
     <div class="uk-width-1-1">
-    <span class="titulo-grande">Maestrías</span><br>
+    <span class="titulo-grande"><%= t('programas.maestrias') %></span><br>
     <div class="uk-container-center"><img src=<%= image_url("maestrias-grande.jpg") %> alt="Historia de El Colegio de México"></div>
     <p>&nbsp;</p>    
     <% @maestrias.each do |mt| %>
-    <h2 class="vino uk-margin-large-top">Maestría en <%= mt.titulo %></h2>
+    <h2 class="vino uk-margin-large-top"><%= (params[:locale] == "sp" ? ("Maestría en " + mt.titulo) : ("Master in " + mt.traduccion_tit)) %></h2>
     <div class="uk-grid uk-grid-large">
     <div class="uk-width-large-3-5 uk-text-left">
-    <p><%= mt.descripcion %></p>
+    <p><%= (params[:locale] == "sp" ? mt.descripcion : mt.traduccion_desc) %></p>
     <% if !mt.liga.nil? %>
-      <a href=<%= mt.liga %> target="_blank" class="ver-mas uk-margin-large-bottom uk-button-small">Más información</a>
+      <a href=<%= mt.liga %> target="_blank" class="ver-mas uk-margin-large-bottom uk-button-small"><%= t('programas.info') %></a>
     <% end %>
     </div>
     <div class="uk-width-large-2-5">
 		<% if mt.fecha_inicio_clases.present? %>
-    <h3 class="vino uk-margin-bottom-remove">Inicio de la promoción</h3>
+    <h3 class="vino uk-margin-bottom-remove"><%= t('programas.promo') %></h3>
     <h4 class="uk-margin-top-remove"><%= l(mt.fecha_inicio_clases, format: :mes_anio).capitalize %></h4>
     <% end %>
-    <h3 class="vino uk-margin-bottom-remove">Próxima convocatoria</h3>
+    <h3 class="vino uk-margin-bottom-remove"><%= t('programas.prox_conv') %></h3>
     <h4 class="uk-margin-top-remove">
 			<% if mt.fecha_inicio_conv == mt.fecha_fin_conv %>
 				<%= l(mt.fecha_inicio_conv, format: :mes_anio ).capitalize %>
 			<% else %>
-				<%= "Abierta hasta " + l(mt.fecha_fin_conv, format: :normal) %>
+				<%= (params[:locale] == "sp" ? "Abierta hasta " : "Open until ") + l(mt.fecha_fin_conv, format: :normal) %>
 			<% end %>
 		</h4>
     <!-- Go to www.addthis.com/dashboard to customize your tools -->

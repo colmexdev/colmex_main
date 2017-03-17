@@ -16,10 +16,6 @@
     <%= f.text_area :cita %>
   </div>
   <div class="field">
-    <%= f.label :cita_eng %><br>
-    <%= f.text_area :cita_eng %>
-  </div>
-  <div class="field">
     <%= f.label :autor %><br>
     <%= f.text_field :autor %>
   </div>

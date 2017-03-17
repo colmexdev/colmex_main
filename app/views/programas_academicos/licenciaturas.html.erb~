@@ -1,15 +1,17 @@
 <%= render 'principal/barra' %>
 <div class="container-fluid" id="resto-cuerpo">
 	<div id="cuerpo" class="principal-chica uk-block-large">
+
+<script type="text/javascript">initAddThis();</script>
 		
 <div class="uk-width-1-1">
-    <span class="titulo-grande">Licenciaturas</span><br>
+    <span class="titulo-grande"><%= t('programas.licenciaturas') %></span><br>
     <div class="uk-container-center"><img src=<%= image_url("licenciaturas-grande.jpg") %> alt="Historia de El Colegio de México"></div>
     <p>&nbsp;</p>
 
     <!--          Aquí empiezan las licenciaturas          -->
     <% @licenciaturas.each do |lic| %>
-    <h2 class="vino">Licenciatura en <%= lic.titulo %></h2>
+    <h2 class="vino"><%= params[:locale] == "sp" ? ("Licenciatura en " + lic.titulo) : ("B.A. in " + lic.traduccion_tit) %></h2>
     <div class="uk-grid uk-grid-large">
     <div class="uk-width-large-3-5 uk-text-left">
     <p><%= lic.descripcion %></p>
