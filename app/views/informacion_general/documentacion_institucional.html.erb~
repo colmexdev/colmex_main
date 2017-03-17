@@ -18,7 +18,7 @@
 
 				<li style="list-style-type:none;margin-bottom:5px;"><%= link_to image_tag('bt-flechita.png', :class => "leave_img") + image_tag("bt-flechita-hover.png", :class => "hover_img") + t('Estatuto Orgánico'), @estatutos.archivo.url, :target => "_blank", :class => "link-sobre", :id => "estatutos-link" %></li>
 
-				<li style="list-style-type:none;margin-bottom:25px;"><%= link_to image_tag('bt-flechita.png', :class => "leave_img") + image_tag("bt-flechita-hover.png", :class => "hover_img") + 'Información para Estudiantes', @reglamento.archivo.url, :target => "_blank", :class => "link-sobre", :id => "estatutos-link" %></li>
+				<li style="list-style-type:none;margin-bottom:25px;"><%= link_to image_tag('bt-flechita.png', :class => "leave_img") + image_tag("bt-flechita-hover.png", :class => "hover_img") + 'Información para Estudiantes', info_estudiantes_path, :remote => true, :class => "link-sobre", :id => "estatutos-link" %></li>
     </ul>
     <!--          Aquí termina el menú pequeño          -->
     </div>
