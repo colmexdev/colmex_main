@@ -11,14 +11,14 @@
     <img src=<%= image_url("licenciaturas-chica.jpg") %> alt="Licenciaturas">
     </div>
     <div class="uk-width-large-2-5 uk-text-left">
-    <span class="titulo-chico">Licenciaturas</span><br>
+    <span class="titulo-chico"><%= t('programas.licenciaturas') %></span><br>
 
     <ul class=" uk-list uk-list-space">
 		<% @licenciaturas.each do |lic| %>
-		  <li class="uk-link sin-pointer"><%= lic.titulo %></li>
+		  <li class="uk-link sin-pointer"><%= (params[:locale] == "sp" ? lic.titulo : lic.traduccion_tit)%></li>
 		<% end %>
     </ul>
-		<a href=<%= licenciaturas_path %> class="ver-mas uk-margin-large-bottom uk-button-small">Conoce más</a>
+		<a href=<%= licenciaturas_path %> class="ver-mas uk-margin-large-bottom uk-button-small"><%= t('programas.mas') %></a>
     </div>
     </div>
     <div class="uk-grid uk-grid-large uk-margin-large-bottom">
@@ -26,14 +26,14 @@
     <img src=<%= image_url("maestrias-chica.jpg") %> alt="Maestrías">
     </div>
     <div class="uk-width-large-2-5 uk-text-left">
-    <span class="titulo-chico">Maestrías</span><br>
+    <span class="titulo-chico"><%= t('programas.maestrias') %></span><br>
 
     <ul class=" uk-list uk-list-space">
     <% @maestrias.each do |mt| %>
-		  <li class="uk-link sin-pointer"><%= mt.titulo %></li>
+		  <li class="uk-link sin-pointer"><%= (params[:locale] == "sp" ? mt.titulo : mt.traduccion_titulo) %></li>
 		<% end %>
     </ul>
-	<a href=<%= maestrias_path %> class="ver-mas uk-margin-large-bottom uk-button-small">Conoce más</a>
+	<a href=<%= maestrias_path %> class="ver-mas uk-margin-large-bottom uk-button-small"><%= t('programas.mas') %></a>
     </div>
     </div>
     <div class="uk-grid uk-grid-large uk-margin-large-bottom">
@@ -41,14 +41,14 @@
     <img src=<%= image_url("doctorados-chica.jpg") %> alt="Doctorados">
     </div>
     <div class="uk-width-large-2-5 uk-text-left">
-    <span class="titulo-chico">Doctorados</span><br>
+    <span class="titulo-chico"><%= t('programas.doctorados') %></span><br>
 
     <ul class=" uk-list uk-list-space">
     <% @doctorados.each do |doc| %>
-		  <li class="uk-link sin-pointer"><%= doc.titulo %></li>
+		  <li class="uk-link sin-pointer"><%= (params[:locale] == "sp" ? doc.titulo : doc.traduccion_titulo) %></li>
 		<% end %>
     </ul>
-		<a href=<%= doctorados_path %> class="ver-mas uk-margin-large-bottom uk-button-small">Conoce más</a>
+		<a href=<%= doctorados_path %> class="ver-mas uk-margin-large-bottom uk-button-small"><%= t('programas.mas') %></a>
     </div>
     </div>
     </div>

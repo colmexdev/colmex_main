@@ -30,7 +30,7 @@
 
     <ul class=" uk-list uk-list-space">
     <% @maestrias.each do |mt| %>
-		  <li class="uk-link sin-pointer"><%= (params[:locale] == "sp" ? mt.titulo : mt.traduccion_titulo) %></li>
+		  <li class="uk-link sin-pointer"><%= (params[:locale] == "sp" ? mt.titulo : mt.traduccion_tit) %></li>
 		<% end %>
     </ul>
 	<a href=<%= maestrias_path %> class="ver-mas uk-margin-large-bottom uk-button-small"><%= t('programas.mas') %></a>
@@ -45,7 +45,7 @@
 
     <ul class=" uk-list uk-list-space">
     <% @doctorados.each do |doc| %>
-		  <li class="uk-link sin-pointer"><%= (params[:locale] == "sp" ? doc.titulo : doc.traduccion_titulo) %></li>
+		  <li class="uk-link sin-pointer"><%= (params[:locale] == "sp" ? doc.titulo : doc.traduccion_tit) %></li>
 		<% end %>
     </ul>
 		<a href=<%= doctorados_path %> class="ver-mas uk-margin-large-bottom uk-button-small"><%= t('programas.mas') %></a>
