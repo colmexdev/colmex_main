@@ -50,8 +50,8 @@ en:
     boton: "Sign up"
     placeholder: "mail@domain.com"
   descubre: "DESCUBRE"
-  mas: "See more"
-  filtro: "Filter by"
+  mas: "SEE MORE"
+  filtro: "Filter by:"
   cat: "Type (All)"
   cont: "Content"
   sobre_col:
