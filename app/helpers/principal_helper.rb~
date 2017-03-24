@@ -179,13 +179,17 @@ bloque_html = bloque_html + "<a href=\"" + d.liga + "\" " + (d.contenido.mb_char
 			bloque_html = bloque_html + "</div></div>"
 
 			bloque_html = bloque_html + "<h5>" + "Temas de investigación: <span style=\"font-weight:300;\">" + d[:libres].join(", ") + "</span></h5>"
-      bloque_html = bloque_html + "<h5>" + "Líneas de investigación: "
 
-      d[:conts].each_with_index do |c, ind|
-        bloque_html = bloque_html + "<span class=\"uk-link\" onclick=\"filtrarDirectorio(this)\">" + c + "</span>" + (ind < (d[:conts].size - 1) ? ", " : "") 
-      end 
+			#Quitar if/end para mostrar líneas de investigación
+			if false
+        bloque_html = bloque_html + "<h5>" + "Líneas de investigación: "
 
-			bloque_html = bloque_html + "</h5>"
+        d[:conts].each_with_index do |c, ind|
+          bloque_html = bloque_html + "<span class=\"uk-link\" onclick=\"filtrarDirectorio(this)\">" + c + "</span>" + (ind < (d[:conts].size - 1) ? ", " : "") 
+        end 
+
+			  bloque_html = bloque_html + "</h5>"
+      end
 
       bloque_html = bloque_html + "</div>"
       bloque_html = bloque_html + "</div>"
