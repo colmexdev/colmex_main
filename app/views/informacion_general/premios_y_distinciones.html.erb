@@ -4,20 +4,20 @@
 	<div id="cuerpo" class="principal uk-block-large">
 
     <div class="uk-width-1-1">
-        <span class="titulo-grande">Premios y Distinciones</span><br>
+        <span class="titulo-grande"><%= t('botones.b1.opciones.op6') %></span><br>
     <div class="uk-container-center uk-block"><img src=<%= image_url("premios-nueva.jpg") %> alt="Cursos"></div>
     <p>&nbsp;</p>
     <div class="uk-grid uk-grid-medium">
     <div class="uk-width-large-1-5 uk-text-center-small uk-text-center-medium uk-text-left" style="border-right:2px solid #EEEEEE;">
     <!--          Aquí empieza el menú pequeño          -->
     <ul style="text-align:left;">
-      <li style="list-style-type:none; margin-bottom:5px;"><%= link_to(image_tag('bt-flechita.png', :class => "leave_img") + image_tag("bt-flechita-hover.png", :class => "hover_img") + "Otorgados a la comunidad", otorgadoscomunidad_path, :remote => true, :class => "link-sobre", :id => "presencial-link") %></li>
-      <li style="list-style-type:none; margin-bottom:5px;"><%= link_to image_tag('bt-flechita.png', :class => "leave_img") + image_tag("bt-flechita-hover.png", :class => "hover_img") + "Otorgados por El Colegio", otorgadoscolegio_path, :remote => true, :class => "link-sobre", :id => "electronico-link" %></li>
+      <li style="list-style-type:none; margin-bottom:5px;"><%= link_to(image_tag('bt-flechita.png', :class => "leave_img") + image_tag("bt-flechita-hover.png", :class => "hover_img") + (params[:locale] == "en" ? "Awarded to the community" : "Otorgados a la comunidad"), otorgadoscomunidad_path, :remote => true, :class => "link-sobre", :id => "presencial-link") %></li>
+      <li style="list-style-type:none; margin-bottom:5px;"><%= link_to image_tag('bt-flechita.png', :class => "leave_img") + image_tag("bt-flechita-hover.png", :class => "hover_img") + (params[:locale] == "en" ? "Given by El Colegio" : "Otorgados por El Colegio"), otorgadoscolegio_path, :remote => true, :class => "link-sobre", :id => "electronico-link" %></li>
     </ul>
     </div>
 
     <div class="uk-width-large-4-5">
-    <span class="titulo-chico morado" id="titulo-render">Premios otorgados a la comunidad</span><br>
+    <span class="titulo-chico morado" id="titulo-render"><%= params[:locale] == "en" ? "Prizes awarded to the community and members of El Colegio de México" : "Premios otorgados a la comunidad" %></span><br>
 
     <div id="premios-render">
     	<%= render 'informacion_general/comunidad' %>
