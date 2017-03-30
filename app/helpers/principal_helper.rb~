@@ -13,7 +13,7 @@ module PrincipalHelper
     end
     control_block = '<ol class="carousel-indicators">'+control_block+'</ol>'
     html_block = '<div class="carousel-inner" role="listbox">'+html_block+'</div>'
-    return (control_block+html_block+params[:locale].to_s+I18n.locale.to_s).html_safe
+    return (control_block+html_block).html_safe
   end
 
   def construye_slider_eventos(sliders)
