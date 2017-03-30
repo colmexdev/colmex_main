@@ -8,8 +8,7 @@ class Slider < ActiveRecord::Base
                     :url => "/assets/slider/:basename_:style_:id.:extension",
                     :path => ":rails_root/public/assets/slider/:basename_:style_:id.:extension"
 
-  validates_presence_of :pos_x
-  validates_presence_of :pos_y
+  validates_presence_of :posicion
   validates_presence_of :fecha_expiracion
   validates_attachment_presence :imagen
   validates_attachment_content_type :imagen, :content_type => ['image/jpeg', 'image/png', 'image/jpg']
