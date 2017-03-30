@@ -24,12 +24,8 @@
     <%= f.file_field :badge %>
   </div>
   <div class="field">
-    <%= f.label :pos_x %><br>
-    <%= f.number_field :pos_x %>
-  </div>
-  <div class="field">
-    <%= f.label :pos_y %><br>
-    <%= f.number_field :pos_y %>
+    <%= f.label :posicion %><br>
+    <%= f.select(:posicion, [['Superior izquierda','SI'],['Superior derecha','SD'],['Inferior derecha','ID'],['Inferior izquierda','II']], :selected => (@slider.posicion || 'SI')) %>
   </div>
   <div class="field">
     <%= f.label :fecha_expiracion %><br>

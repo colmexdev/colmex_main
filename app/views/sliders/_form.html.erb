@@ -24,6 +24,10 @@
     <%= f.file_field :badge %>
   </div>
   <div class="field">
+    <%= f.label :badge_eng %><br>
+    <%= f.file_field :badge_eng %>
+  </div>
+  <div class="field">
     <%= f.label :posicion %><br>
     <%= f.select(:posicion, [['Superior izquierda','SI'],['Superior derecha','SD'],['Inferior derecha','ID'],['Inferior izquierda','II']], :selected => (@slider.posicion || 'SI')) %>
   </div>
