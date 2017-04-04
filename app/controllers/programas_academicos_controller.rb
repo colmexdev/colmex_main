@@ -68,7 +68,7 @@ class ProgramasAcademicosController < ApplicationController
   end
 
   def catedras_y_seminarios
-		@centros = Catedra.select('distinct tipo')
+		@centros = Catedra.pluck(:tipo).distinct
     @catedras = Catedra.where("tipo = ? AND titulo LIKE ?", "Cátedra", "%México-España%").union(Catedra.where("tipo = ? AND titulo LIKE ?", "Cátedra", "%Humboldt%")).union(Catedra.where("tipo = ? AND titulo LIKE ?", "Cátedra", "%Bourgeois-Pichat%"))
   end
 
