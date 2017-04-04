@@ -69,11 +69,11 @@ class ProgramasAcademicosController < ApplicationController
 
   def catedras_y_seminarios
 		@centros = Catedra.distinct.pluck(:tipo)
-    @catedras = Catedra.where("tipo = ? AND titulo LIKE ?", "Cátedra", "%México-España%").union(Catedra.where("tipo = ? AND titulo LIKE ?", "Cátedra", "%Humboldt%")).union(Catedra.where("tipo = ? AND titulo LIKE ?", "Cátedra", "%Bourgeois-Pichat%"))
+    @catedras = Catedra.where("tipo = ?", "Institucionales")
   end
 
   def catedras
-    @catedras = Catedra.where("tipo = ? AND titulo LIKE ?", "Cátedra", "%México-España%").union(Catedra.where("tipo = ? AND titulo LIKE ?", "Cátedra", "%Humboldt%")).union(Catedra.where("tipo = ? AND titulo LIKE ?", "Cátedra", "%Bourgeois-Pichat%"))
+    @catedras = Catedra.where("tipo = ?", params[:grupo])
     respond_to do |format|
       format.js
     end
