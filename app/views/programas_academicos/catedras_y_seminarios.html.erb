@@ -11,18 +11,12 @@
 			<% @centros.each do |c| %>
     	<li style="list-style-type:none; margin-bottom:<%= @centros[-1] == c ? '35px' : '5px' %>;"><%= link_to(image_tag('bt-flechita.png', :class => "leave_img") + image_tag("bt-flechita-hover.png", :class => "hover_img") + c, cats_path+(cats_path.include?('?') ? "&" : "?") +"grupo="+c, :remote => true, :class => "link-sobre", :id => "catedras-link") %></li>
 			<% end %>
-			<% if false %>
-				<li style="list-style-type:none; margin-bottom:35px;"><%= link_to image_tag('bt-flechita.png', :class => "leave_img") + image_tag("bt-flechita-hover.png", :class => "hover_img") + "Seminarios", seminarios_path, :remote => true, :class => "link-sobre", :id => "seminarios-link" %></li>
-			<% end %>
     </ul>
     <!--          Aquí termina el menú pequeño          -->
     </div>
     <div class="uk-width-large-7-10">
 			<span class="titulo-grande morado" id="titulo-render"><%= "Cátedras" %></span>
 			<div id="cats-render" style="padding-top: 15px;">
-				<% @centros.each do |c| %>
-					<%= c %>
-				<% end %>
 				<%= render "programas_academicos/catedras" %>
 			</div>
 		</div>
