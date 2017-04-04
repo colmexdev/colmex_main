@@ -8,8 +8,12 @@
     <span class="titulo-grande" id="titular-cat">Cátedras y seminarios</span><br>
     <!--          Aquí empieza el menú pequeño          -->
     <ul style="text-align:left;">
-    	<li style="list-style-type:none; margin-bottom:5px;"><%= link_to(image_tag('bt-flechita.png', :class => "leave_img") + image_tag("bt-flechita-hover.png", :class => "hover_img") + "Cátedras", cats_path, :remote => true, :class => "link-sobre", :id => "catedras-link") %></li>
+			<% @centros.each do |c| %>
+    	<li style="list-style-type:none; margin-bottom:<%= @centros[-1] == c ? '35px' : '5px' %>;"><%= link_to(image_tag('bt-flechita.png', :class => "leave_img") + image_tag("bt-flechita-hover.png", :class => "hover_img") + c, cats_path+"?grupo="+c, :remote => true, :class => "link-sobre", :id => "catedras-link") %></li>
+			<% end %>
+			<% if false %>
 				<li style="list-style-type:none; margin-bottom:35px;"><%= link_to image_tag('bt-flechita.png', :class => "leave_img") + image_tag("bt-flechita-hover.png", :class => "hover_img") + "Seminarios", seminarios_path, :remote => true, :class => "link-sobre", :id => "seminarios-link" %></li>
+			<% end %>
     </ul>
     <!--          Aquí termina el menú pequeño          -->
     </div>
