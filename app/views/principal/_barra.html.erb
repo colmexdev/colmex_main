@@ -51,9 +51,10 @@
 		          <li><a href=<%= premios_path %>><%= t('botones.b1.opciones.op6') %></a></li>
 		          <li><a href="http://agenda.colmex.mx/Convocatorias" target="_blank"><%= t('botones.b3.opciones.op8') %></a></li>
 							<li><a href=<%= principios_path %> class="sublink"><%= t('footer.liga1') %></a></li>
+							<% if params[:loacle] != "en" %>
 							<li><a href="http://sg.colmex.mx/index.php/procedimientos2010/licitaciones-publicas-nacionales" target="_blank" class="sublink"><%= t('botones.b1.opciones.op7') %></a></li>
 							<li><a href=<%= bienes_part_path %> class="sublink"><%= t('botones.b1.opciones.op8') %></a></li>
-
+							<% end %>
 							<% if false %>
 							<li><a href=<%= transparencia_path %> class="sublink"><%= t('botones.b1.opciones.op9') %></a></li>
 							<% end %>
@@ -82,7 +83,7 @@
 		          <li><a href=<%= cursos_varios_path %>><%= t('botones.b3.opciones.op6') %></a></li>
 		          <li><a href=<%= catedras_seminarios_path %>><%= t('botones.b3.opciones.op9') %></a></li>
 		          <li><a href=<%= admisiones_path %>><%= t('botones.b3.opciones.op4') %></a></li>
-		          <li><a href="http://oia.colmex.mx/" target="_blank"><%= t('botones.b3.opciones.op5') %></a></li>
+		          <li><a href="<%= (params[:locale] != 'en' ? 'http://oia.colmex.mx/' : 'http://oia.colmex.mx/index.php/home' ) %>" target="_blank"><%= t('botones.b3.opciones.op5') %></a></li>
 		          <li><a href=<%= calendario_path %>><%= t('botones.b3.opciones.op7') %></a></li>
 		        </ul>
 		    </li>
@@ -150,9 +151,10 @@
 		          <li><a href=<%= premios_path %>><%= t('botones.b1.opciones.op6') %></a></li>
 		          <li><a href="http://agenda.colmex.mx/Convocatorias" target="_blank"><%= t('botones.b3.opciones.op8') %></a></li>
 							<li><a href=<%= principios_path %>><%= t('footer.liga1') %></a></li>
+							<% if params[:locale] != "en" %>
 							<li><a href="http://sg.colmex.mx/index.php/procedimientos2010/licitaciones-publicas-nacionales" target="_blank"><%= t('botones.b1.opciones.op7') %></a></li>
 							<li><a href=<%= bienes_part_path %>><%= t('botones.b1.opciones.op8') %></a></li>
-							
+							<% end %>
 							<% if false %>
 							<li><a href=<%= transparencia_path %> class="sublink"><%= t('botones.b1.opciones.op9') %></a></li>
 							<% end %>
@@ -181,7 +183,7 @@
 		          <li><a href=<%= cursos_varios_path %>><%= t('botones.b3.opciones.op6') %></a></li>
 		          <li><a href=<%= catedras_seminarios_path %>><%= t('botones.b3.opciones.op9') %></a></li>
 		          <li><a href=<%= admisiones_path %>><%= t('botones.b3.opciones.op4') %></a></li>
-		          <li><a href="http://oia.colmex.mx/" target="_blank"><%= t('botones.b3.opciones.op5') %></a></li>
+		          <li><a href="<%= (params[:locale] != 'en' ? 'http://oia.colmex.mx/' : 'http://oia.colmex.mx/index.php/home' ) %>" target="_blank"><%= t('botones.b3.opciones.op5') %></a></li>
 		          <li><a href=<%= calendario_path %>><%= t('botones.b3.opciones.op7') %></a></li>
 		        </ul>
 		    </li>
@@ -210,8 +212,10 @@
           	<li><a href=<%= premios_path %> class="sublink"><%= t('botones.b1.opciones.op6') %></a></li>
           	<li><a href="http://agenda.colmex.mx/Convocatorias" target="_blank" class="sublink"><%= t('botones.b3.opciones.op8') %></a></li>
 						<li><a href=<%= principios_path %> class="sublink"><%= t('footer.liga1') %></a></li>
+						<% if params[:locale] != "en" %>
 						<li><a href="http://sg.colmex.mx/index.php/procedimientos2010/licitaciones-publicas-nacionales" target="_blank" class="sublink"><%= t('botones.b1.opciones.op7') %></a></li>
 						<li><a href=<%= bienes_part_path %> class="sublink"><%= t('botones.b1.opciones.op8') %></a></li>
+						<% end %>
 
 						<% if false %>
 						<li><a href=<%= transparencia_path %> class="sublink"><%= t('botones.b1.opciones.op9') %></a></li>
@@ -239,7 +243,7 @@
           	<li><a href=<%= cursos_varios_path %> class="sublink"><%= t('botones.b3.opciones.op6') %></a></li>
           	<li><a href=<%= catedras_seminarios_path %> class="sublink"><%= t('botones.b3.opciones.op9') %></a></li>
           	<li><a href=<%= admisiones_path %> class="sublink"><%= t('botones.b3.opciones.op4') %></a></li>
-          	<li><a href="http://oia.colmex.mx/" class="sublink" target="_blank"><%= t('botones.b3.opciones.op5') %></a></li>
+          	<li><a href="<%= (params[:locale] != 'en' ? 'http://oia.colmex.mx/' : 'http://oia.colmex.mx/index.php/home' ) %>" class="sublink" target="_blank"><%= t('botones.b3.opciones.op5') %></a></li>
           	<li><a href=<%= calendario_path %> class="sublink"><%= t('botones.b3.opciones.op7') %></a></li>
 					</ul>
 				</li>
