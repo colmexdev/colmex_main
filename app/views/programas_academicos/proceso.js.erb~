@@ -1,3 +1,3 @@
 
-$("#titulo-render").html("<%= "Programas académicos" %>");
-$("#admisiones-render").html("<%= j render :partial => 'programas' %>");
+$("#titulo-render").html("<%= "Proceso de admisión" %>");
+$("#admisiones-render").html("<%= j render :partial => 'proceso' %>");

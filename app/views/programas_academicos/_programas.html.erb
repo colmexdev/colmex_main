@@ -1,31 +1,31 @@
 <div>
-<span class="titulo-chico">Licenciaturas</span><br>
+<span class="titulo-chico"><%= params[:locale] == "en" ? "B.A. Programs" : "Licenciaturas" %></span><br>
 
     <ul class=" uk-list uk-list-space">
 		<% @licenciaturas.each do |lic| %>
-		  <li class="uk-link sin-pointer"><%= lic.titulo %></li>
+		  <li class="uk-link sin-pointer"><%= params[:locale] == "en" ? lic.traduccion_tit : lic.titulo %></li>
 		<% end %>
     </ul>
-		<a href=<%= licenciaturas_path %> class="ver-mas uk-margin-large-bottom uk-button-small">Conoce más</a>
+		<a href=<%= licenciaturas_path %> class="ver-mas uk-margin-large-bottom uk-button-small"><%= params[:locale] == "en" ? "More information" : "Conoce más" %></a>
 </div>
 
 <div>
-<span class="titulo-chico">Maestrías</span><br>
+<span class="titulo-chico"><%= params[:locale] == "en" ? "Master's programs" : "Maestrías" %></span><br>
 
     <ul class=" uk-list uk-list-space">
     <% @maestrias.each do |mt| %>
-		  <li class="uk-link sin-pointer"><%= mt.titulo %></li>
+		  <li class="uk-link sin-pointer"><%= params[:locale] == "en" ? mt.traduccion_tit : mt.titulo %></li>
 		<% end %>
     </ul>
-	<a href=<%= maestrias_path %> class="ver-mas uk-margin-large-bottom uk-button-small">Conoce más</a>
+	<a href=<%= maestrias_path %> class="ver-mas uk-margin-large-bottom uk-button-small"><%= params[:locale] == "en" ? "More information" : "Conoce más" %></a>
 </div>
 
 <div>
-<span class="titulo-chico">Doctorados</span><br>
+<span class="titulo-chico"><%= params[:locale] == "en" ? "Doctoral programs" : "Doctorados" %></span><br>
 		<ul class=" uk-list uk-list-space">
     <% @doctorados.each do |doc| %>
-		  <li class="uk-link sin-pointer"><%= doc.titulo %></li>
+		  <li class="uk-link sin-pointer"><%= params[:locale] == "en" ? doc.traduccion_tit : doc.titulo %></li>
 		<% end %>
     </ul>
-		<a href=<%= doctorados_path %> class="ver-mas uk-margin-large-bottom uk-button-small">Conoce más</a>
+		<a href=<%= doctorados_path %> class="ver-mas uk-margin-large-bottom uk-button-small"><%= params[:locale] == "en" ? "More information" : "Conoce más" %></a>
 </div>

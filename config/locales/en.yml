@@ -29,7 +29,7 @@ en:
     b3:
       texto: "Academic programs"
       opciones:
-        op1: "Undergratuate programs"
+        op1: "Undergraduate programs"
         op2: "Masters programs"
         op3: "Doctoral programs"
         op4: "Admissions"
