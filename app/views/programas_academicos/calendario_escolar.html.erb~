@@ -31,7 +31,7 @@
     <h2 class="uk-margin-remove vino">21</h2>
     <h3 class="uk-margin-remove"><%= params[:locale] == "en" ? "Official holiday" : "Asueto oficial" %></h3>
     <h2 class="uk-margin-remove vino">25</h2>
-    <h3 class="uk-margin-remove"><%= params[:locale} == "en" ? " End of courses" : "Fin de cursos" %></h3>
+    <h3 class="uk-margin-remove"><%= params[:locale] == "en" ? " End of courses" : "Fin de cursos" %></h3>
     <h2 class="uk-margin-remove vino">28, 29, 30</h2>
     <h3 class="uk-margin-remove"><%= params[:locale] == "en" ? "Preparation for exams" : "Periodo de preparación de exámenes" %></h3>
     </div>

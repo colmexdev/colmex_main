@@ -25,7 +25,7 @@
   </div>
   <div class="field">
     <%= f.label :tipo %><br>
-		<%= f.select(:tipo, [["Institucional", "Institucional"], ["CEAA", "CEAA"],["CEDUA","CEDUA"],["CEE","CEE"],["CEH","CEH"],["CEI","CEI"],["CELL","CELL"],["CES","CES"]], :selected => (@catedra.tipo || 'Institucional')) %>
+		<%= f.select(:tipo, [["Institucionales", "Institucionales"], ["CEAA", "CEAA"],["CEDUA","CEDUA"],["CEE","CEE"],["CEH","CEH"],["CEI","CEI"],["CELL","CELL"],["CES","CES"]], :selected => (@catedra.tipo || 'Institucionales')) %>
   </div>
   <div class="actions">
     <%= f.submit %>
