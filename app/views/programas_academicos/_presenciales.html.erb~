@@ -6,21 +6,22 @@
     <img src=<%= p.foto.url %> class="uk-border-rounded" alt="Foto curso">
     </div>
     <div class="uk-width-4-5 uk-vertical-align-middle uk-text-left uk-text-break">
-    <h2 class="vino"><%= p.titulo %></h2>
+    <h2 class="vino"><%= params[:locale] == "en" ? p.traduccion_tit : p.titulo %></h2>
     <div class="uk-grid uk-grid-large">
     <div class="uk-width-large-4-6 uk-text-left">
-    <p><%= p.descripcion %></p>
+    <p><%= params[:locale] == "en" ? p.traduccion_desc : p.descripcion %></p>
     <% if p.imparte.to_s != "" %>
       <p class="uk-text-left">Impartido por <%= p.imparte %></p>
     <% end %>
     <% if !p.liga.nil? %>
-    <a href=<%= p.liga %> target="_blank" class="ver-mas uk-margin-large-bottom uk-button-small">Más información</a>
+    <a href=<%= p.liga %> target="_blank" class="ver-mas uk-margin-large-bottom uk-button-small"<%= params[:locale] == "en" ? "More information" ? "Más información" %></a>
     <!-- Go to www.addthis.com/dashboard to customize your tools -->
-    <div style="display:inline-block;float:right;" class="addthis_inline_share_toolbox" data-url=<%= p.liga %> data-title="<%= p.titulo %>"></div>
+    <div style="display:inline-block;float:right;" class="addthis_inline_share_toolbox" data-url=<%= p.liga %> data-title="<%= params[:locale] == "en" ? p.traduccion_tit : p.titulo %>"></div>
     <% end %>
     </div>
     <div class="uk-width-large-2-6">
 
+		<% if params[:locale] != "en" %>
     <h3 class="vino uk-margin-bottom-remove">
     <% if !p.fecha_inicio_clases.nil? %>
       <% if p.fecha_fin_clases.nil? %>
@@ -68,6 +69,7 @@
 				<%= "Abierta hasta " + (p.titulo != "Entendiendo a China: Curso especial para funcionarios del sector público y privado" ? (p.fecha_fin_conv.day.to_s + " de " + num2Month(p.fecha_fin_conv.month - 1) + " de " + p.fecha_fin_conv.year.to_s) : "agotar cupo") %>
       <% end %>
     </h4>
+<% end %>
     </div>
     </div>
     </div>
