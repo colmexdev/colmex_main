@@ -3,7 +3,7 @@
 	<div id="cuerpo" class="principal uk-block-large">
 
     <div class="uk-width-1-1">
-        <span class="titulo-grande">Cursos</span><br>
+        <span class="titulo-grande"><%= t('botones.b3.opciones.op6') %></span><br>
     <div class="uk-container-center uk-block"><img src=<%= image_url("cursos.jpg") %> alt="Cursos"></div>
     <p>&nbsp;</p>
     <div class="uk-grid uk-grid-medium">
@@ -11,15 +11,15 @@
     <!--          Aquí empieza el menú pequeño          -->
     <ul style="text-align:left;">
 
-      <li style="list-style-type:none; margin-bottom:5px;"><%= link_to(image_tag('bt-flechita.png', :class => "leave_img") + image_tag("bt-flechita-hover.png", :class => "hover_img") + "Presenciales", presenciales_path, :remote => true, :class => "link-sobre", :id => "presencial-link") %></li>
-
-      <li style="list-style-type:none; margin-bottom:5px;"><%= link_to image_tag('bt-flechita.png', :class => "leave_img") + image_tag("bt-flechita-hover.png", :class => "hover_img") + "En línea", electronicos_path, :remote => true, :class => "link-sobre", :id => "electronico-link" %></li>
-
+      <li style="list-style-type:none; margin-bottom:5px;"><%= link_to(image_tag('bt-flechita.png', :class => "leave_img") + image_tag("bt-flechita-hover.png", :class => "hover_img") + (params[:locale] == "en" ? "Short courses" : "Presenciales"), presenciales_path, :remote => true, :class => "link-sobre", :id => "presencial-link") %></li>
+			<% if params[:locale] != "en" %>
+      <li style="list-style-type:none; margin-bottom:5px;"><%= link_to image_tag('bt-flechita.png', :class => "leave_img") + image_tag("bt-flechita-hover.png", :class => "hover_img") + (params[:locale] == "en" ? "Massive online courses" : "En línea"), electronicos_path, :remote => true, :class => "link-sobre", :id => "electronico-link" %></li>
+			<% end %>
     </ul>
     </div>
 
     <div class="uk-width-large-4-5">
-    <span class="titulo-chico morado" id="titulo-render">Cursos presenciales</span><br>
+    <span class="titulo-chico morado" id="titulo-render"><%= params[:locale] == "en" ? "Short courses" : "Cursos presenciales" %></span><br>
 
     <div id="cursos-render">
     	<%= render 'programas_academicos/presenciales' %>
