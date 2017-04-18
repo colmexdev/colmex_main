@@ -21,7 +21,6 @@
     </div>
     <div class="uk-width-large-2-6">
 
-		<% if params[:locale] != "en" %>
     <h3 class="vino uk-margin-bottom-remove">
     <% if !p.fecha_inicio_clases.nil? %>
       <% if p.fecha_fin_clases.nil? %>
@@ -69,7 +68,6 @@
 				<%= "Abierta hasta " + (p.titulo != "Entendiendo a China: Curso especial para funcionarios del sector público y privado" ? (p.fecha_fin_conv.day.to_s + " de " + num2Month(p.fecha_fin_conv.month - 1) + " de " + p.fecha_fin_conv.year.to_s) : "agotar cupo") %>
       <% end %>
     </h4>
-<% end %>
     </div>
     </div>
     </div>
