@@ -14,7 +14,7 @@
       <p class="uk-text-left">Impartido por <%= p.imparte %></p>
     <% end %>
     <% if !p.liga.nil? %>
-    <a href=<%= p.liga %> target="_blank" class="ver-mas uk-margin-large-bottom uk-button-small"<%= params[:locale] == "en" ? "More information" : "Más información" %></a>
+    <a href=<%= p.liga %> target="_blank" class="ver-mas uk-margin-large-bottom uk-button-small"><%= params[:locale] == "en" ? "More information" : "Más información" %></a>
     <!-- Go to www.addthis.com/dashboard to customize your tools -->
     <div style="display:inline-block;float:right;" class="addthis_inline_share_toolbox" data-url=<%= p.liga %> data-title="<%= params[:locale] == "en" ? p.traduccion_tit : p.titulo %>"></div>
     <% end %>
