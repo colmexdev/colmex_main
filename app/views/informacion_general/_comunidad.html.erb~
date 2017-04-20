@@ -4,7 +4,7 @@
 
 	<div class="uk-accordion" data-uk-accordion>
 		<% @categorias.each do |c| %>
-			<h3 class="uk-accordion-title"><%= construir_encabezado("bt-flechita.png", "bt-flechita-abajo.png", (params[:locale] == "sp" ? c.nombre : c.nombre_eng)) %></h3>
+			<h3 class="uk-accordion-title"><%= construir_encabezado("bt-flechita.png", "bt-flechita-abajo.png", (params[:locale] != "en" ? c.nombre : c.nombre_eng)) %></h3>
 			<div class="uk-accordion-content">
 				<ul class="uk-list uk-list-line">
 				<% @premiados.where("tipo = ?", c.nombre).each do |p| %>
