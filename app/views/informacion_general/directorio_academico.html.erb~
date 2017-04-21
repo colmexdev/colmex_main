@@ -45,7 +45,7 @@
 			</div>
 			<div class="col-xs-12 col-md-4 center" id="filtro-limpiar" style="text-align:left;">
 				<div id="boton_limpiar">
-					<a href="#" onclick="borrarDocentes();" class="boton-donar"><span><%= "Limpiar búsqueda" %></span></a>
+					<a href="#" onclick="borrarDocentes(event);" class="boton-donar"><span><%= "Limpiar búsqueda" %></span></a>
 				</div>
 			</div>
 		</div>
