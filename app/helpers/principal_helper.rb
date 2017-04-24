@@ -249,9 +249,9 @@ bloque_html = bloque_html + "<a href=\"" + d.liga + "\" " + (d.contenido.mb_char
             academico.store(:isni,isni)
 		        profes << academico
 		        #j = j + 1
-		      rescue
+		      rescue Exception => e
 		        File.open("/home/webuser/principal_colmex/current/profs_faltantes.txt","w") do |f|
-							f.puts(nom+"\n")
+							f.puts(nom+ " :: " + e.message + "\n")
             end
 		      end
 		    end
