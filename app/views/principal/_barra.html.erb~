@@ -51,10 +51,13 @@
 		          <li><a href="<%= premios_path %>"><%= t('botones.b1.opciones.op6') %></a></li>
 		          <li><a href="http://agenda.colmex.mx/Convocatorias" target="_blank"><%= t('botones.b3.opciones.op8') %></a></li>
 							<li><a href="<%= principios_path %>" class="sublink"><%= t('footer.liga1') %></a></li>
-							<% if params[:loacle] != "en" %>
+
+							<% if params[:locale] != "en" %>
 							<li><a href="http://sg.colmex.mx/index.php/procedimientos2010/licitaciones-publicas-nacionales" target="_blank" class="sublink"><%= t('botones.b1.opciones.op7') %></a></li>
 							<li><a href="<%= bienes_part_path %>" class="sublink"><%= t('botones.b1.opciones.op8') %></a></li>
+							<li><a href="<%= marco_path %>" class="sublink"><%= 'Marco Normativo' %></a></li>
 							<% end %>
+
 							<% if false %>
 							<li><a href="<%= transparencia_path %>" class="sublink"><%= t('botones.b1.opciones.op9') %></a></li>
 							<% end %>
@@ -95,7 +98,7 @@
 				<% if false %>
 				<li class="no-dropdown"><a href="http://web.colmex.mx/<%= controller_name %>/<%= action_name %>?locale=<%= (params[:locale] == 'sp' ? 'en' : 'sp') + (action_name == 'resultados_busqueda' ? '&condicion=' + params[:condicion] : '' ) %>"><span style="color:#993366;"><%= (params[:locale] == "sp" ? "English" : "Español") %></span></a></li>
 				<% end %>
-				<li class="no-dropdown"><a href=<%= soon_path %>><span style="color:#993366;"><%= (params[:locale] == "sp" ? "English" : "Español") %></span></a></li>
+				<li class="no-dropdown"><a href="<%= soon_path %>"><span style="color:#993366;"><%= (params[:locale] == "sp" ? "English" : "Español") %></span></a></li>
 			</ul> <!-- Cierre del menú -->
 </div>
 
@@ -151,10 +154,13 @@
 		          <li><a href="<%= premios_path %>"><%= t('botones.b1.opciones.op6') %></a></li>
 		          <li><a href="http://agenda.colmex.mx/Convocatorias" target="_blank"><%= t('botones.b3.opciones.op8') %></a></li>
 							<li><a href="<%= principios_path %>"><%= t('footer.liga1') %></a></li>
+
 							<% if params[:locale] != "en" %>
 							<li><a href="http://sg.colmex.mx/index.php/procedimientos2010/licitaciones-publicas-nacionales" target="_blank"><%= t('botones.b1.opciones.op7') %></a></li>
 							<li><a href="<%= bienes_part_path %>"><%= t('botones.b1.opciones.op8') %></a></li>
+							<li><a href="<%= marco_path %>"><%= 'Marco Normativo' %></a></li>
 							<% end %>
+
 							<% if false %>
 							<li><a href="<%= transparencia_path %>" class="sublink"><%= t('botones.b1.opciones.op9') %></a></li>
 							<% end %>
