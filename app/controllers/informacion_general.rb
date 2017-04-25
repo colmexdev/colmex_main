@@ -147,18 +147,12 @@ class InformacionGeneralController < ApplicationController
     end
   end
 
+  def marco_normativo
+
+  end
+
   def directorio_academico
-		settings = {
-				:host => 'dc1colmex.colmex.mx',
-				:base => 'DC=colmex,DC=mx',
-				:port => 636,
-				:encryption => :simple_tls,
-				:auth => {
-				  :method => :simple,
-				  :username => "etenorio@colmex.mx",
-				  :password => "RickStarrx1"
-				}
-		}
+		settings = { :host => 'dc1colmex.colmex.mx', :base => 'DC=colmex,DC=mx', :port => 636, :encryption => :simple_tls, :auth => { :method => :simple, :username => "etenorio@colmex.mx", :password => "RickStarrx1" } }
 
 		ActiveDirectory::Base.setup(settings)
 		@ac_json = llenarLineas('/home/webuser/xml-autori-ene2017.xml')

@@ -117,6 +117,8 @@ Rails.application.routes.draw do
 
   get 'informacion_general/directorio_academico' => 'informacion_general#directorio_academico', :as => :directorio
 
+  get 'informacion_general/marco_normativo' => 'informacion_general#marco_normatiov', :as => :marco
+
   get 'programas_academicos/presenciales' => 'programas_academicos#presenciales', :as => :presenciales
 
   get 'programas_academicos/electronicos' => 'programas_academicos#electronicos', :as => :electronicos

@@ -125,7 +125,7 @@ class InformacionGeneralController < ApplicationController
 
   def consejo
     @consejo = Personal.where("seccion = ?","Consejo")
-    @deptos = (params[:locale] == "sp" ? ["Centro de Estudios de Asia y África","Centro de Estudios Demográficos, Urbanos y Ambientales","Centro de Estudios Económicos","Centro de Estudios Históricos","Centro de Estudios Internacionales","Centro de Estudios Lingüísticos y Literarios","Centro de Estudios Sociológicos","Biblioteca “Daniel Cosío Villegas”","Coordinación de Servicios de Cómputo","Publicaciones","Presidencia"] : ["Centro de Estudios de Asia y África","Centro de Estudios Demográficos, Urbanos y Ambientales","Centro de Estudios Económicos","Centro de Estudios Históricos","Centro de Estudios Internacionales","Centro de Estudios Lingüísticos y Literarios","Centro de Estudios Sociológicos","Library “Daniel Cosío Villegas”","Coordination of Computer Services","Department of Publications","Presidency"])
+    @deptos = (params[:locale] == "sp" ? ["Centro de Estudios de Asia y África","Centro de Estudios Demográficos, Urbanos y Ambientales","Centro de Estudios Económicos","Centro de Estudios Históricos","Centro de Estudios Internacionales","Centro de Estudios Lingüísticos y Literarios","Centro de Estudios Sociológicos","Biblioteca “Daniel Cosío Villegas”","Coordinación de Servicios de Cómputo","Publicaciones","Presidencia"] : ["Centro de Estudios de Asia y África","Centro de Estudios Demográficos, Urbanos y Ambientales","Centro de Estudios Económicos","Centro de Estudios Históricos","Centro de Estudios Internacionales","Centro de Estudios Lingüísticos y Literarios","Centro de Estudios Sociológicos","Library “Daniel Cosío Villegas”","Office of Computer Services","Department of Publications","Presidency"])
   end
 
   def comision
@@ -148,17 +148,7 @@ class InformacionGeneralController < ApplicationController
   end
 
   def directorio_academico
-		settings = {
-				:host => 'dc1colmex.colmex.mx',
-				:base => 'DC=colmex,DC=mx',
-				:port => 636,
-				:encryption => :simple_tls,
-				:auth => {
-				  :method => :simple,
-				  :username => "etenorio@colmex.mx",
-				  :password => "RickStarrx1"
-				}
-		}
+		settings = { :host => 'dc1colmex.colmex.mx', :base => 'DC=colmex,DC=mx', :port => 636, :encryption => :simple_tls, :auth => { :method => :simple, :username => "etenorio@colmex.mx", :password => "RickStarrx1" } }
 
 		ActiveDirectory::Base.setup(settings)
 		@ac_json = llenarLineas('/home/webuser/xml-autori-ene2017.xml')
