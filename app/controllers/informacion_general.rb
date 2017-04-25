@@ -148,7 +148,7 @@ class InformacionGeneralController < ApplicationController
   end
 
   def marco_normativo
-
+    @docs = Documento.where("tipo = ?", "Marco normativo")
   end
 
   def directorio_academico

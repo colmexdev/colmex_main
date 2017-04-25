@@ -1,0 +1,8 @@
+<%= render 'principal/barra' %>
+
+<div class="container-fluid" id="resto-cuerpo">
+	<div id="cuerpo" class="principal-chica uk-block-large">
+
+	</div>
+
+<%= render 'principal/footer' %>
