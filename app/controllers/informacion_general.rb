@@ -58,6 +58,7 @@ class InformacionGeneralController < ApplicationController
   end
 
   def transparencia
+    @docs = Documento.where('tipo = ?','Unidad de Transparencia')
   end
 
   def licitaciones
