@@ -113,7 +113,7 @@ module PrincipalHelper
       if d.imagen.url != "/vacio.jpg"
         bloque_html = bloque_html + ActionController::Base.helpers.image_tag(d.imagen, :class => "imagen-descubre")
       else
-        bloque_html = bloque_html + "<p><span class=\"cont-descubre\">" + d.contenido.mb_chars.upcase + "</span></p>"
+        bloque_html = bloque_html + "<p><span class=\"cont-descubre\">" + (params[:locale] == "en" ? Content.where("tipo = ?",d.contenido).first.tipo_eng.mb_chars.upcase : d.contenido.mb_chars.upcase) + "</span></p>"
         bloque_html = bloque_html + "<p><span class=\"titulo-descubre\">" + d.titulo + "</span></p>"
       end
 bloque_html = bloque_html + "<a href=\"" + d.liga + "\" " + (d.contenido.mb_chars.downcase == "video" ? ("data-uk-lightbox data-lightbox-type=\"iframe\"") : "target=\"_blank\"" ) + "><div class=\"frame-hover\" id=\"frame-" + i.to_s + "-hov\">"
