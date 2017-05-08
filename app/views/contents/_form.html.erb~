@@ -15,6 +15,10 @@
     <%= f.label :tipo %><br>
     <%= f.text_field :tipo %>
   </div>
+  <div class="field">
+    <%= f.label :icono %><br>
+    <%= f.file_field :icono %>
+  </div>
   <div class="actions">
     <%= f.submit %>
   </div>
