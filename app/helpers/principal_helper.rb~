@@ -217,6 +217,9 @@ bloque_html = bloque_html + "<a href=\"" + d.liga + "\" " + (d.contenido.mb_char
 					isni = ""
 		      nombre = p.match(/[<]datafield tag="100"(.)*?[>][<]subfield code="a"[>](.)*?[<]\/subfield[>](.)*?[<]\/datafield[>]/).to_s.split("</subfield>")[0].split("<subfield code=\"a\">")[1].split(", ")
 		      nom = '%' + nombre[1].split(/[ ]+/).join("%") + "%" + nombre[0].split(/[ ]+/).join("%") + "%"
+          if nom == '%Marie%Eugénie%Z.%de%Cosio%' 
+            nom = '%María%Eugenia%Zavala%de%Cosío%'
+          end
 		      controladas = p.scan(/<datafield tag="372" ind1=" " ind2=" ">(.*?)<\/datafield>/)
 		      controladas.each do |co|
 		        year_lab =  co[0].scan(/[<]subfield code="s"[>](.+?)[<]\/subfield[>]/)

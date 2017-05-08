@@ -137,9 +137,9 @@ bloque_html = bloque_html + "<a href=\"" + d.liga + "\" " + (d.contenido.mb_char
     return meses[mes_num]
   end
 
-  def pluralizar(categoria)
-    cad_plural = {"Artículo de investigación" => "Artículos de investigación", "Curso" => "Cursos", "Video" => "Videos", "Convocatoria" => "Convocatorias", "Premio" => "Premios", "Artículo de opinión" => "Artículos de opinión", "Novedad editorial" => "Novedades editoriales", "Proyecto de investigación" => "Proyectos de investigación", "Anuncio" => "Anuncios", "Podcast" => "Podcasts", "iTunes U" => "iTunes U"}
-    return cad_plural[categoria]
+  def pluralizar(categoria,indice)
+    cad_plural = {"Artículo de investigación" => ["Artículos de investigación", "Research papers"], "Curso" => ["Cursos", "Courses"], "Video" => ["Videos", "Videos"], "Convocatoria" => ["Convocatorias", "Calls"], "Premio" => ["Premios", "Prizes"], "Artículo de opinión" => ["Artículos de opinión", "Opinion papers"], "Novedad editorial" => ["Novedades editoriales", "Editorial novelties"], "Proyecto de investigación" => ["Proyectos de investigación", "Research projects"], "Anuncio" => ["Anuncios", "Announcements"], "Podcast" => ["Podcasts", "Podcasts"], "iTunes U" => ["iTunes U", "iTunes U"]}
+    return cad_plural[categoria][indice]
   end
 
   def construir_docentes(docs)
