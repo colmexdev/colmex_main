@@ -1,0 +1,5 @@
+class AddEngToTipoCursos < ActiveRecord::Migration
+  def change
+    add_column :tipo_cursos, :tipo_eng, :text
+  end
+end
