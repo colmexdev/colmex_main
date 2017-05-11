@@ -45,6 +45,7 @@
 							<li><a href="<%= sobre_el_colegio_path %>"><%= t('botones.b1.texto2') %></a></li>
 							<li><a href="<%= historia_path %>"><%= t('botones.b1.opciones.op3') %></a></li>
 		          <li><a href="<%= autoridades_path %>"><%= t('botones.b1.opciones.op2') %></a></li>
+		          <li><a href="<%= directorio_path %>"><%= params[:locale] == "en" ? "Academic staff" : "Directorio académico" %></a></li>
 							<li><a href="http://directorio.colmex.mx/" target="_blank"><%= t('botones.b1.opciones.op1') %></a></li>
 		          <li><a href="<%= documentacion_path %>"><%= t('botones.b1.opciones.op4') %></a></li>
 		          <li><a href="<%= profesores_emeritos_path %>"><%= t('botones.b1.opciones.op5') %></a></li>
@@ -149,6 +150,7 @@
 							<li><a href="<%= sobre_el_colegio_path %>"><%= t('botones.b1.texto2') %></a></li>
 							<li><a href="<%= historia_path %>"><%= t('botones.b1.opciones.op3') %></a></li>
 		          <li><a href="<%= autoridades_path %>"><%= t('botones.b1.opciones.op2') %></a></li>
+		          <li><a href="<%= directorio_path %>"><%= params[:locale] == "en" ? "Academic staff" : "Directorio académico" %></a></li>
 							<li><a href="http://directorio.colmex.mx/" target="_blank"><%= t('botones.b1.opciones.op1') %></a></li>
 		          <li><a href="<%= documentacion_path %>"><%= t('botones.b1.opciones.op4') %></a></li>
 		          <li><a href="<%= profesores_emeritos_path %>"><%= t('botones.b1.opciones.op5') %></a></li>
@@ -214,6 +216,7 @@
 						<li><a href="<%= sobre_el_colegio_path %>" class="sublink"><%= t('botones.b1.texto2') %></a></li>
           	<li><a href="<%= historia_path %>" class="sublink"><%= t('botones.b1.opciones.op3') %></a></li>
           	<li><a href="<%= autoridades_path %>" class="sublink"><%= t('botones.b1.opciones.op2') %></a></li>
+		        <li><a href="<%= directorio_path %>" class="sublink"><%= params[:locale] == "en" ? "Academic staff" : "Directorio académico" %></a></li>
 		<li><a href="http://directorio.colmex.mx" class="sublink" target="_blank"><%= t('botones.b1.opciones.op1') %></a></li>
           	<li><a href="<%= documentacion_path %>" class="sublink"><%= t('botones.b1.opciones.op4') %></a></li>
           	<li><a href="<%= profesores_emeritos_path %>" class="sublink"><%= t('botones.b1.opciones.op5') %></a></li>

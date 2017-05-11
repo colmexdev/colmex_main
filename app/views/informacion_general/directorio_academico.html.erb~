@@ -1,8 +1,8 @@
 <%= render 'principal/barra' %>
 
-
-
 <%= include_gon %>
+
+<script type="text/javascript" src="../js/filtro_directorio.js"></script>
 
 <div class="container-fluid" id="resto-cuerpo">
 	<div id="cuerpo" class="principal-chica uk-block-large">
