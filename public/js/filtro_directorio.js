@@ -1,4 +1,4 @@
-docentes = clone(JSON.parse(gon.academicos));
+docentes = if(typeof gon.academicos !== 'undefined' ? clone(JSON.parse(gon.academicos)) : "");
 agregarVisible(docentes);
 data = crossfilter(docentes);
 academicosPorNombre = data.dimension(function(d){ return limpiarPuntuacion(d["nombre"].toLowerCase())});
