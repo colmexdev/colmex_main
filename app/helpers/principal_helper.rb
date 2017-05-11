@@ -146,7 +146,7 @@ bloque_html = bloque_html + "<a href=\"" + d.liga + "\" " + (d.contenido.mb_char
 		bloque_html, i = "", 0
 		docs.each do |d|
 			acad = Academico.where("nombre = ?", d["nombre"]).first
-      bloque_html = bloque_html + "<h3 class=\"uk-accordion-title\" id=\"doc-" + i.to_s + "\">" +  raw(construir_encabezado("bt-flechita.png", "bt-flechita-abajo.png", d["nombre"])) + "</h3>"
+      bloque_html = bloque_html + "<h3 style=\"display:none\" class=\"uk-accordion-title\" id=\"doc-" + i.to_s + "\">" +  raw(construir_encabezado("bt-flechita.png", "bt-flechita-abajo.png", d["nombre"])) + "</h3>"
       bloque_html = bloque_html + "<div id=\"cont-" + i.to_s + "\" class=\"uk-accordion-content\">"
 
 
