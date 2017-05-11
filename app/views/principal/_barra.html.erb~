@@ -56,6 +56,7 @@
 							<li><a href="http://sg.colmex.mx/index.php/procedimientos2010/licitaciones-publicas-nacionales" target="_blank" class="sublink"><%= t('botones.b1.opciones.op7') %></a></li>
 							<li><a href="<%= bienes_part_path %>" class="sublink"><%= t('botones.b1.opciones.op8') %></a></li>
 							<li><a href="<%= marco_path %>" class="sublink"><%= 'Marco Normativo' %></a></li>
+							<li><a href="<%= transparencia_path %>" class="sublink"><%= t('botones.b1.opciones.op9') %></a></li>
 							<% end %>
 
 							<% if false %>
@@ -159,6 +160,7 @@
 							<li><a href="http://sg.colmex.mx/index.php/procedimientos2010/licitaciones-publicas-nacionales" target="_blank"><%= t('botones.b1.opciones.op7') %></a></li>
 							<li><a href="<%= bienes_part_path %>"><%= t('botones.b1.opciones.op8') %></a></li>
 							<li><a href="<%= marco_path %>"><%= 'Marco Normativo' %></a></li>
+							<li><a href="<%= transparencia_path %>"><%= t('botones.b1.opciones.op9') %></a></li>
 							<% end %>
 
 							<% if false %>
@@ -222,6 +224,7 @@
 						<li><a href="http://sg.colmex.mx/index.php/procedimientos2010/licitaciones-publicas-nacionales" target="_blank" class="sublink"><%= t('botones.b1.opciones.op7') %></a></li>
 						<li><a href="<%= bienes_part_path %>" class="sublink"><%= t('botones.b1.opciones.op8') %></a></li>
 						<li><a href="<%= marco_path %>" class="sublink"><%= 'Marco Normativo' %></a></li>
+							<li><a href="<%= transparencia_path %>" class="sublink"><%= t('botones.b1.opciones.op9') %></a></li>
 						<% end %>
 
 						<% if false %>
