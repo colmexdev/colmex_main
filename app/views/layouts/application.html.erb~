@@ -60,7 +60,7 @@
 
 <%= include_gon %>
 
-
+<script type="text/javascript" src="/js/filtro_directorio.js"></script>
   <%= yield %>
 
 </body>
