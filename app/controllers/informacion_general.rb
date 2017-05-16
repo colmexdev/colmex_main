@@ -158,7 +158,11 @@ class InformacionGeneralController < ApplicationController
 		ActiveDirectory::Base.setup(settings)
 		@ac_json = llenarLineas('/home/webuser/xml-autori-ene2017.xml')
 		gon.academicos = @ac_json.to_json
-		gon.academicos_size = @ac_json.size
+		#gon.academicos_size = @ac_json.size
+		respond_to do |format|
+      format.html
+      format.json {render json: @ac_json}
+    end
   end
 
   def directorio_institucional
@@ -189,4 +193,16 @@ class InformacionGeneralController < ApplicationController
 		@roles = @roles.to_a.sort { |a,b| a[0] <=> b[0] }
 		gon.miembros = @miembros.to_json
   end
+
+  #def recuperar_academicos
+	#	settings = { :host => 'dc1colmex.colmex.mx', :base => 'DC=colmex,DC=mx', :port => 636, :encryption => :simple_tls, :auth => { :method => :simple, :username => "etenorio@colmex.mx", :password => "RickStarrx1" } }
+
+	#	ActiveDirectory::Base.setup(settings)
+	#	@ac_json = llenarLineas('/home/webuser/xml-autori-ene2017.xml')
+	#	gon.academicos = @ac_json.to_json
+	#	gon.academicos_size = @ac_json.size
+  #  respond_to do |format|
+  #    format.json {render json: @ac_json}
+  #  end
+  #end
 end
