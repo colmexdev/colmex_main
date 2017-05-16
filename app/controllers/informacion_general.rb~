@@ -152,6 +152,8 @@ class InformacionGeneralController < ApplicationController
     @docs = Documento.where("tipo = ?", "Marco normativo")
   end
 
+  include ActionView::Helpers::OutputSafetyHelper
+
   def directorio_academico
 		settings = { :host => 'dc1colmex.colmex.mx', :base => 'DC=colmex,DC=mx', :port => 636, :encryption => :simple_tls, :auth => { :method => :simple, :username => "etenorio@colmex.mx", :password => "RickStarrx1" } }
 
