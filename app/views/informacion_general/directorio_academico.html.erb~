@@ -8,7 +8,7 @@ $.ajax({
 	dataType: "json",
 	success: function(data){
 		console.log(data);
-		$("#acordeon").html(<%= construir_docentes(@ac_json) %>);
+		$("#acordeon").html(<%= construir_docentes(data) %>);
 	}
 });
 </script>
