@@ -8,7 +8,7 @@ $.ajax({
 	dataType: "json",
 	success: function(data){
 		console.log(data);
-		var docentes = (typeof data !== 'undefined' ? clone(JSON.parse(data)) : "");
+		var docentes = clone(JSON.parse(data["acs"]));
 		agregarVisible(docentes);
 		var datum = crossfilter(docentes);
 		var academicosPorNombre = datum.dimension(function(d){ return limpiarPuntuacion(d["nombre"].toLowerCase())});
@@ -17,7 +17,7 @@ $.ajax({
 		var academicosPorCentro = datum.dimension(function(d){ return d["adscripcion"]});
 		var academicosPorInicial = datum.dimension(function(d){ return d["inicial"]});
 		console.log(datum);
-		$("#acordeon").html(datum);
+		$("#acordeon").html(data["html"]);
 	}
 });
 </script>
