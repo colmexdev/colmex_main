@@ -1,0 +1,48 @@
+<%= render 'principal/barra' %>
+
+<%= include_gon %>
+<script type="text/javascript">
+$.ajax({
+	url: "<%= directorio_path %>",
+	type: "GET",
+	dataType: "json",
+	success: function(data){
+		console.log(data);
+		docentes = clone(JSON.parse(data["acs"]));
+		agregarVisible(docentes);
+		datum = crossfilter(docentes);
+		academicosPorNombre = datum.dimension(function(d){ return limpiarPuntuacion(d["nombre"].toLowerCase())});
+		academicosPorLinea = datum.dimension(function(d){ return limpiarPuntuacion(d["libres"].join(" ").toLowerCase()/* + " " + d["conts"].join(" ").toLowerCase()*/)});
+//academicosPorTema = data.dimension(function(d){return limpiarPuntuacion(d["conts"].join(" ").toLowerCase() + " " + d["libres"].join(" ").toLowerCase())});
+		academicosPorCentro = datum.dimension(function(d){ return d["adscripcion"]});
+		academicosPorInicial = datum.dimension(function(d){ return d["inicial"]});
+		console.log(datum);
+		$("#acordeon").html(data["html"]);
+	}
+});
+</script>
+<script type="text/javascript" src="/js/filtro_directorio.js"></script>
+
+
+<div class="container-fluid" id="resto-cuerpo">
+	<div id="cuerpo" class="principal-chica uk-block-large">
+
+		<div class="row">
+			<div class="col-xs-12" style="padding-left:0;">
+				<span class="titulo-grande">Directorio académico</span><br>
+			</div>
+			<div class="col-xs-12" style="padding-left:0;">
+				<p style="margin-top:25px;margin-bottom:25px">Aquí podrás encontrar información general sobre la planta académica de El Colegio de México.</p>
+			</div>
+		</div>
+
+		<div id="cont-ac">
+
+		</div>
+
+<% if false %>
+<script type="text/javascript">
+	actualizarVisibleDirectorio([]);
+</script>
+<% end %>
+<%= render 'principal/footer' %>

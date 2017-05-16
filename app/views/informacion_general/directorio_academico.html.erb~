@@ -8,14 +8,14 @@ $.ajax({
 	dataType: "json",
 	success: function(data){
 		console.log(data);
-		var docentes = clone(JSON.parse(data["acs"]));
+		docentes = clone(JSON.parse(data["acs"]));
 		agregarVisible(docentes);
-		var datum = crossfilter(docentes);
-		var academicosPorNombre = datum.dimension(function(d){ return limpiarPuntuacion(d["nombre"].toLowerCase())});
-		var academicosPorLinea = datum.dimension(function(d){ return limpiarPuntuacion(d["libres"].join(" ").toLowerCase()/* + " " + d["conts"].join(" ").toLowerCase()*/)});
+		datum = crossfilter(docentes);
+		academicosPorNombre = datum.dimension(function(d){ return limpiarPuntuacion(d["nombre"].toLowerCase())});
+		academicosPorLinea = datum.dimension(function(d){ return limpiarPuntuacion(d["libres"].join(" ").toLowerCase()/* + " " + d["conts"].join(" ").toLowerCase()*/)});
 //academicosPorTema = data.dimension(function(d){return limpiarPuntuacion(d["conts"].join(" ").toLowerCase() + " " + d["libres"].join(" ").toLowerCase())});
-		var academicosPorCentro = datum.dimension(function(d){ return d["adscripcion"]});
-		var academicosPorInicial = datum.dimension(function(d){ return d["inicial"]});
+		academicosPorCentro = datum.dimension(function(d){ return d["adscripcion"]});
+		academicosPorInicial = datum.dimension(function(d){ return d["inicial"]});
 		console.log(datum);
 		$("#acordeon").html(data["html"]);
 	}
