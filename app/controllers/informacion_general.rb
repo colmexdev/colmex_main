@@ -155,6 +155,16 @@ class InformacionGeneralController < ApplicationController
   include ActionView::Helpers::OutputSafetyHelper
 
   def directorio_academico
+		settings = { :host => 'dc1colmex.colmex.mx', :base => 'DC=colmex,DC=mx', :port => 636, :encryption => :simple_tls, :auth => { :method => :simple, :username => "etenorio@colmex.mx", :password => "RickStarrx1" } }
+
+		ActiveDirectory::Base.setup(settings)
+		@ac_json = llenarLineas('/home/webuser/xml-autori-ene2017.xml')
+		gon.academicos = @ac_json.to_json
+		#gon.academicos_size = @ac_json.size
+		respond_to do |format|
+      format.html
+      format.json {render json: {html: construir_docentes(@ac_json)}}
+    end
   end
 
   def recuperar_docentes
