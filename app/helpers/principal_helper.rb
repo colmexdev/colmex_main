@@ -153,7 +153,7 @@ bloque_html = bloque_html + "<a href=\"" + d.liga + "\" " + (d.contenido.mb_char
 			bloque_html = bloque_html + "<div class=\"uk-grid uk-grid-medium uk-margin-large-bottom\">"
 
       bloque_html = bloque_html + "<div class=\"uk-width-large-1-5 uk-width-medium-1-5 uk-width-small-1-5 uk-text-center\">"
-      bloque_html = bloque_html + "<img src=" + image_url(acad.foto.url) + " class=\"uk-border-rounded\" alt=\"Foto Académico\">"
+      bloque_html = bloque_html + "<img src=" + ActionController::Base.helpers.image_url(acad.foto.url) + " class=\"uk-border-rounded\" alt=\"Foto Académico\">"
 			
       bloque_html = bloque_html + "</div>"
 
