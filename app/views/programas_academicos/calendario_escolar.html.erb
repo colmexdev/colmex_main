@@ -104,7 +104,13 @@
 	  </div>
 		</div>
 <br>
-<span class="titulo-chico"><%= params[:locale] == "en" ? "2017-2018" : "Año Académico 2017-2018" %></span><br>
+		<% if params[:locale] != "en" %>
+		<a href=<%= asset_url("calendarioescolar.pdf") %> target="_blank" class="ver-mas uk-margin-large-bottom uk-button-small">Descargar en PDF (2017)</a>
+		<% end %>
+<br>
+<br>
+<br>
+<span class="titulo-chico"><%= params[:locale] == "en" ? "2017-2018" : "Año Académico 2017-2018" %></span><br><br>
     <h1 class="titulo-grande vino uk-margin-large-bottom" style="text-align:center"><%= params[:locale] == "en" ? "First Semester" : "Primer Semestre" %></h1>
     <div class="uk-grid uk-grid-large">
     <div class="uk-width-large-1-3 uk-width-medium-1-2 uk-text-left uk-margin-large-bottom">
@@ -209,10 +215,11 @@
 		</div>
     </div>
     </div>
-
+<br>
 		<% if params[:locale] != "en" %>
-		<a href=<%= asset_url("calendarioescolar.pdf") %> target="_blank" class="ver-mas uk-margin-large-bottom uk-button-small">Descargar en PDF</a>
+		<a href=<%= asset_url("calendario-escolar-2017-2018.pdf") %> target="_blank" class="ver-mas uk-margin-large-bottom uk-button-small">Descargar en PDF (2018)</a>
 		<% end %>
+
 	</div>
 
 <%= render 'principal/footer' %>
