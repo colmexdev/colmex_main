@@ -8,7 +8,7 @@ $.ajax({
 	dataType: "json",
 	success: function(data){
 		console.log(data);
-		$("#acordeon").html(<%= construir_docentes(data) %>);
+		$("#acordeon").html(data);
 	}
 });
 </script>
@@ -70,7 +70,7 @@ $.ajax({
 			</div>
 			<div class="col-xs-12 acordeon-premios" id="busqueda">
 				<div class="uk-accordion" id="acordeon" data-uk-accordion>
-				
+
 				</div>
 			</div>
 		</div>
@@ -78,4 +78,9 @@ $.ajax({
 		</div>
 	</div>
 
+<% if false %>
+<script type="text/javascript">
+	actualizarVisibleDirectorio([]);
+</script>
+<% end %>
 <%= render 'principal/footer' %>

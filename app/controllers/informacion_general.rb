@@ -161,7 +161,7 @@ class InformacionGeneralController < ApplicationController
 		#gon.academicos_size = @ac_json.size
 		respond_to do |format|
       format.html
-      format.json {render json: @ac_json}
+      format.json {render json: {html: construir_docentes(@ac_json)}}
     end
   end
 

@@ -1,14 +1,4 @@
-docentes = (typeof gon.academicos !== 'undefined' ? clone(JSON.parse(gon.academicos)) : "");
-agregarVisible(docentes);
-data = crossfilter(docentes);
-academicosPorNombre = data.dimension(function(d){ return limpiarPuntuacion(d["nombre"].toLowerCase())});
-academicosPorLinea = data.dimension(function(d){ return limpiarPuntuacion(d["libres"].join(" ").toLowerCase()/* + " " + d["conts"].join(" ").toLowerCase()*/)});
-//academicosPorTema = data.dimension(function(d){return limpiarPuntuacion(d["conts"].join(" ").toLowerCase() + " " + d["libres"].join(" ").toLowerCase())});
-academicosPorCentro = data.dimension(function(d){ return d["adscripcion"]});
-academicosPorInicial = data.dimension(function(d){ return d["inicial"]});
-vistas = 0;
-total = 0;
-vista_act = 0;
+
 
 function partirDirectorio(visibles){
 	var apartados;

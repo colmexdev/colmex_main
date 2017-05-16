@@ -7,6 +7,17 @@ $.ajax({
 	type: "GET",
 	dataType: "json",
 	success: function(data){
+		var docentes = (typeof gon.academicos !== 'undefined' ? clone(JSON.parse(gon.academicos)) : "");
+		agregarVisible(docentes);
+		var data = crossfilter(docentes);
+		var academicosPorNombre = data.dimension(function(d){ return limpiarPuntuacion(d["nombre"].toLowerCase())});
+		var academicosPorLinea = data.dimension(function(d){ return limpiarPuntuacion(d["libres"].join(" ").toLowerCase()/* + " " + d["conts"].join(" ").toLowerCase()*/)});
+//academicosPorTema = data.dimension(function(d){return limpiarPuntuacion(d["conts"].join(" ").toLowerCase() + " " + d["libres"].join(" ").toLowerCase())});
+		var academicosPorCentro = data.dimension(function(d){ return d["adscripcion"]});
+		var academicosPorInicial = data.dimension(function(d){ return d["inicial"]});
+		var vistas = 0;
+		var total = 0;
+		var vista_act = 0;
 		console.log(data);
 		$("#acordeon").html(data);
 	}
