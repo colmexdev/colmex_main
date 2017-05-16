@@ -1,7 +1,17 @@
 <%= render 'principal/barra' %>
 
 <%= include_gon %>
-
+<script type="text/javascript">
+$.ajax({
+	url: "<%= directorio_path %>",
+	type: "GET",
+	dataType: "json",
+	success: function(data){
+		console.log(data);
+		$("#acordeon").html(<%= construir_docentes(@ac_json) %>);
+	}
+});
+</script>
 <script type="text/javascript" src="/js/filtro_directorio.js"></script>
 
 
@@ -60,7 +70,7 @@
 			</div>
 			<div class="col-xs-12 acordeon-premios" id="busqueda">
 				<div class="uk-accordion" id="acordeon" data-uk-accordion>
-				<%= construir_docentes(@ac_json) %>
+				
 				</div>
 			</div>
 		</div>
@@ -68,9 +78,4 @@
 		</div>
 	</div>
 
-<% if false %>
-<script type="text/javascript">
-	actualizarVisibleDirectorio([]);
-</script>
-<% end %>
 <%= render 'principal/footer' %>

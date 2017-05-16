@@ -20,7 +20,12 @@ catch(err){
 
 barra_render = false;
 
-$(document).on('page:load', function(){ UIkit.init(); $(document).trigger("scroll");  })
+$(document).on('page:load', function(){ 
+	UIkit.init(); 
+	if(window.location.href.indexOf("directorio_academico") != -1)
+		actualizarVisibleDirectorio([]);
+	$(document).trigger("scroll");  
+})
 
 $(document).on("ready page:change", function(){
 	UIkit.init();
