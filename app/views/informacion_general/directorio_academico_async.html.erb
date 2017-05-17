@@ -7,7 +7,7 @@ $.ajax({
 	type: "GET",
 	dataType: "json",
 	success: function(data){
-		console.log(data["html"]);
+
 		window.docentes = clone(data["docs"]);
 		agregarVisible(docentes);
 		datum = crossfilter(docentes);
