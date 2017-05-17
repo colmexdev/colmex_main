@@ -7,7 +7,8 @@ $.ajax({
 	type: "GET",
 	dataType: "json",
 	success: function(data){
-		window.docentes = clone(JSON.parse(data["docs"]));
+		console.log(data);
+		window.docentes = clone(data["docs"]);
 		agregarVisible(docentes);
 		datum = crossfilter(docentes);
 		window.academicosPorNombre = datum.dimension(function(d){ return limpiarPuntuacion(d["nombre"].toLowerCase())});
@@ -15,7 +16,6 @@ $.ajax({
 //academicosPorTema = data.dimension(function(d){return limpiarPuntuacion(d["conts"].join(" ").toLowerCase() + " " + d["libres"].join(" ").toLowerCase())});
 		window.academicosPorCentro = datum.dimension(function(d){ return d["adscripcion"]});
 		academicosPorInicial = datum.dimension(function(d){ return d["inicial"]});
-		window.console.log(data);
 		$("#cont_ac").html("<%= j render partial: 'recuperar_docentes', docentes: @ac_json %>");
 	}
 });
