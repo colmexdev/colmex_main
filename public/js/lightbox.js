@@ -330,10 +330,10 @@
             lightbox.on("showitem.uk.lightbox", function(e, data){
 
                 var id, matches, resolve = function(id, width, height) {
-					var lista = data.source.match(youtubeRegExp) || "";
-					var list = (lista ? lista[3].match(/list=([^&]+)&?$/) : "");
+					//var lista = data.source.match(youtubeRegExp) || "";
+					//var list = (lista ? lista[3].match(/list=([^&]+)&?$/) : "");
                     data.meta = {
-                        'content': '<iframe src="//www.youtube.com/embed/'+id+'?rel=0&amp;showinfo=1&amp;autoplay=1' + ( list != "" ? ("listType=playlist&list=" + list) : "" ) + '" frameborder="0" width="'+Math.floor((window.innerWidth*0.95 > 1390 ? 1390 : window.innerWidth * 0.95)) /*width*/+'" height="'+/*height*/Math.floor((window.innerWidth*0.95 > 1390 ? 1390*9/16 : window.innerWidth * 0.95 * 9 / 16))+'" style="max-width:100%;"'+(modal.lightbox.options.allowfullscreen?' allowfullscreen':'')+'></iframe>',
+                        'content': '<iframe src="//www.youtube.com/embed/'+id+'?rel=0&amp;showinfo=1&amp;autoplay=1' + /*( list != "" ? ("listType=playlist&list=" + list) : "" ) +*/ '" frameborder="0" width="'+Math.floor((window.innerWidth*0.95 > 1390 ? 1390 : window.innerWidth * 0.95)) /*width*/+'" height="'+/*height*/Math.floor((window.innerWidth*0.95 > 1390 ? 1390*9/16 : window.innerWidth * 0.95 * 9 / 16))+'" style="max-width:100%;"'+(modal.lightbox.options.allowfullscreen?' allowfullscreen':'')+'></iframe>',
                         'width': /*width*/Math.floor((window.innerWidth*0.95 > 1390 ? 1390 : window.innerWidth * 0.95)),
                         'height': /*height*/Math.floor((window.innerWidth*0.95 > 1390 ? 1390*9/16 : window.innerWidth * 0.95 * 9 / 16))
                     };
