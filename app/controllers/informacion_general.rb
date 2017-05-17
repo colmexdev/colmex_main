@@ -175,8 +175,9 @@ class InformacionGeneralController < ApplicationController
 
 		ActiveDirectory::Base.setup(settings)
 		@ac_json = llenarLineas('/home/webuser/xml-autori-ene2017.xml')
-		gon.academicos = @ac_json.to_json
+		#gon.academicos = @ac_json.to_json
 		respond_to do |format|
+			format.html
       format.json {render json: {docs: @ac_json,html: construir_docentes(@ac_json)}}
     end
   end
