@@ -3,26 +3,27 @@
 <%= include_gon %>
 <script type="text/javascript">
 $.ajax({
-	url: "<%= directorio_path %>",
+	url: "<%= rec_doc_path %>",
 	type: "GET",
 	dataType: "json",
 	success: function(data){
-		console.log(data);
-		docentes = clone(JSON.parse(data["acs"]));
+
+		window.docentes = clone(data["docs"]);
 		agregarVisible(docentes);
 		datum = crossfilter(docentes);
-		academicosPorNombre = datum.dimension(function(d){ return limpiarPuntuacion(d["nombre"].toLowerCase())});
-		academicosPorLinea = datum.dimension(function(d){ return limpiarPuntuacion(d["libres"].join(" ").toLowerCase()/* + " " + d["conts"].join(" ").toLowerCase()*/)});
+		window.academicosPorNombre = datum.dimension(function(d){ return limpiarPuntuacion(d["nombre"].toLowerCase())});
+		window.academicosPorLinea = datum.dimension(function(d){ return limpiarPuntuacion(d["libres"].join(" ").toLowerCase())});
 //academicosPorTema = data.dimension(function(d){return limpiarPuntuacion(d["conts"].join(" ").toLowerCase() + " " + d["libres"].join(" ").toLowerCase())});
-		academicosPorCentro = datum.dimension(function(d){ return d["adscripcion"]});
-		academicosPorInicial = datum.dimension(function(d){ return d["inicial"]});
-		console.log(datum);
+		window.academicosPorCentro = datum.dimension(function(d){ return d["adscripcion"]});
+		window.academicosPorInicial = datum.dimension(function(d){ return d["inicial"]});
+		window.vistas = 0;
+		window.total = 0;
+		window.vista_act = 0;
+		$("#cont-ac").html("<%= j render :partial => 'recuperar_docentes' %>");
 		$("#acordeon").html(data["html"]);
 	}
 });
 </script>
-<script type="text/javascript" src="/js/filtro_directorio.js"></script>
-
 
 <div class="container-fluid" id="resto-cuerpo">
 	<div id="cuerpo" class="principal-chica uk-block-large">
@@ -36,60 +37,9 @@ $.ajax({
 			</div>
 		</div>
 
-		<div class="row" id="filtros-dir">
-			<div class="col-xs-12" style="padding-left:0;">
-				<h3>Buscar por orden alfabético.</h3>
-			</div>
-			<div class="col-xs-12" id="filtro-inic" style="text-align:center;padding-left:0;">
-			<% for i in 65..90 %>
-				<span class="inics letra" id=<%= "inic_" + i.chr %> style="cursor:pointer; margin:0 3px;font-size:24px;color:#909090;" onclick=<%= "filtrarDirectorio(docentes,academicosPorNombre,academicosPorLinea,academicosPorCentro,academicosPorInicial,'" + i.chr + "')" %>><%= i.chr %></span>
-			<% end %>
-			</div>
-			<div class="col-md-4 col-xs-12 filtro center" id="filtro-nombre">
-				<h3 style="display:inline-block;margin-right:8px;">Buscar por:</h3><%= text_field_tag("nombre", "", :oninput => "filtrarDirectorio(docentes,academicosPorNombre,academicosPorLinea,academicosPorCentro,academicosPorInicial);", :placeholder => "Nombre") %>
-			</div>
-			<div class="col-md-4 col-xs-12 center" id="filtro-linea" style="padding-left:5px;">
-				<%= text_field_tag("linea", "", :oninput => "filtrarDirectorio(docentes,academicosPorNombre,academicosPorLinea,academicosPorCentro,academicosPorInicial);", :placeholder => "Tema y/o línea de investigación") %><br>
-				<% if false %>
-				<p style="font-size:12px;margin-top:0;text-align:left;">Los temas de investigación utilizan lenguaje libre.</p>
-				<% end %>
-			</div>
-			<% if false %>
-			<div class="col-md-4 col-xs-12 center" id="filtro-mail" style="padding-left:15px;">
-				<%= text_field_tag("correo", "", :oninput => "filtrarDirectorio(docentes,academicosPorNombre,academicosPorLinea,academicosPorCentro,academicosPorInicial);", :placeholder => "Línea de investigación") %><br>
-				<p style="font-size:12px;margin-top:0;text-align:left;">Las líneas de investigación utilizan lenguaje controlado.</p>
-			</div>
-			<% end %>
-		</div>
-		<div class="row">
-			<div class="col-xs-12 col-md-4 center" id="filtro-centro">
-				<h3 style="display:inline-block;margin-right:8px;">Filtrar por:</h3><%= select_tag("contenido", options_for_select([["CEAA", "Asia y África"], ["CEDUA","Demográficos, Urbanos y Ambientales"], ["CEE", "Económicos"], ["CEH","Históricos"], ["CEI","Internacionales"], ["CELL", "Lingüisticos y Literarios"], ["CES","Sociológicos"]]), :include_blank => "Centro de Estudios", :onchange => "filtrarDirectorio(docentes,academicosPorNombre,academicosPorLinea,academicosPorCentro,academicosPorInicial);") %>
-			</div>
-			<div class="col-xs-12 col-md-4 center" id="filtro-limpiar" style="text-align:left;">
-				<div id="boton_limpiar">
-					<a href="#" onclick="borrarDocentes(event,docentes);" class="boton-donar"><span><%= "Limpiar búsqueda" %></span></a>
-				</div>
-			</div>
-		</div>
-
-		<div class="row">
-			<script type="text/javascript" src="../js/accordion.js"></script>
-			<div class="col-xs-12" style="text-align:left;padding-top:20px;" id="filete-top">
-				<h2 id="frase-linea"></h2>
-			</div>
-			<div class="col-xs-12 acordeon-premios" id="busqueda">
-				<div class="uk-accordion" id="acordeon" data-uk-accordion>
-
-				</div>
-			</div>
-		</div>
-		<div id="separadores" style="text-align:center;margin:10px auto;">
-		</div>
+	<div id="cont-ac">
+		<span class="titulo-chico" style="text-align:center;">Recuperando directorio. Espere un momento...</span>
 	</div>
+</div>
 
-<% if false %>
-<script type="text/javascript">
-	actualizarVisibleDirectorio([]);
-</script>
-<% end %>
 <%= render 'principal/footer' %>
