@@ -16,7 +16,7 @@ $.ajax({
 //academicosPorTema = data.dimension(function(d){return limpiarPuntuacion(d["conts"].join(" ").toLowerCase() + " " + d["libres"].join(" ").toLowerCase())});
 		window.academicosPorCentro = datum.dimension(function(d){ return d["adscripcion"]});
 		academicosPorInicial = datum.dimension(function(d){ return d["inicial"]});
-		$("#cont-ac").html("<%= j render partial: 'recuperar_docentes' %>");
+		$("#cont-ac").html("<%= j render :partial => 'recuperar_docentes', :locals => {:docentes => @ac_json, :algo =< 'a'} %>");
 	}
 });
 </script>
