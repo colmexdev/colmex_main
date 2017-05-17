@@ -344,8 +344,8 @@
 
                 if (matches = data.source.match(youtubeRegExp)) {
                     id = matches[2];
-										list = matches[3].match(/list=(.)*[&]?$/);
-										console.log(list);
+										console.log(matches[3].match(/list=(.)*[&]?$/));
+
                 }
 
                 if (matches = data.source.match(youtubeRegExpShort)) {
