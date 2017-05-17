@@ -16,7 +16,7 @@ $.ajax({
 		window.academicosPorCentro = datum.dimension(function(d){ return d["adscripcion"]});
 		academicosPorInicial = datum.dimension(function(d){ return d["inicial"]});
 		window.console.log(data);
-		$("#cont_ac").html("<%= j render(:partial => 'recuperar_docentes',:locales => {:docs => @ac_json}) %>");
+		$("#cont_ac").html("<%= j render partial: 'recuperar_docentes', docentes: @ac_json %>");
 	}
 });
 </script>
