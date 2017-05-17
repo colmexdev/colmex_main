@@ -7,7 +7,7 @@ $.ajax({
 	type: "GET",
 	dataType: "json",
 	success: function(data){
-		window.docentes = clone(JSON.parse(data["acs"]));
+		window.docentes = clone(JSON.parse(data["docs"]));
 		agregarVisible(docentes);
 		datum = crossfilter(docentes);
 		window.academicosPorNombre = datum.dimension(function(d){ return limpiarPuntuacion(d["nombre"].toLowerCase())});
@@ -39,6 +39,6 @@ $.ajax({
 
 
 	</div>
-
+</div>
 
 <%= render 'principal/footer' %>
