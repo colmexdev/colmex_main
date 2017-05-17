@@ -134,6 +134,11 @@ Rails.application.routes.draw do
   get 'principal/como_llegar' => 'principal#como_llegar', :as =>  :ubicacion
 
   get 'principal/set_language' => 'principal#set_language', :as => :cambiar_idioma
+
+  get 'informacion_general/directorio_academico_async' => 'informacion_general#directorio_academico_async', :as => :dir_async
+
+  get 'informacion_general/recuperar_docentes' => 'informacion_general#recuperar_docentes', :as => :rec_doc
+
   devise_scope :admin do
     get "/acceder" => "devise/sessions#new"
   end

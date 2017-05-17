@@ -3,25 +3,24 @@
 <%= include_gon %>
 <script type="text/javascript">
 $.ajax({
-	url: "<%= directorio_path %>",
+	url: "<%= rec_doc_path %>",
 	type: "GET",
 	dataType: "json",
 	success: function(data){
-		console.log(data);
-		docentes = clone(JSON.parse(data["acs"]));
+		window.docentes = clone(JSON.parse(data["acs"]));
 		agregarVisible(docentes);
 		datum = crossfilter(docentes);
-		academicosPorNombre = datum.dimension(function(d){ return limpiarPuntuacion(d["nombre"].toLowerCase())});
-		academicosPorLinea = datum.dimension(function(d){ return limpiarPuntuacion(d["libres"].join(" ").toLowerCase()/* + " " + d["conts"].join(" ").toLowerCase()*/)});
+		window.academicosPorNombre = datum.dimension(function(d){ return limpiarPuntuacion(d["nombre"].toLowerCase())});
+		window.academicosPorLinea = datum.dimension(function(d){ return limpiarPuntuacion(d["libres"].join(" ").toLowerCase()/* + " " + d["conts"].join(" ").toLowerCase()*/)});
 //academicosPorTema = data.dimension(function(d){return limpiarPuntuacion(d["conts"].join(" ").toLowerCase() + " " + d["libres"].join(" ").toLowerCase())});
-		academicosPorCentro = datum.dimension(function(d){ return d["adscripcion"]});
+		window.academicosPorCentro = datum.dimension(function(d){ return d["adscripcion"]});
 		academicosPorInicial = datum.dimension(function(d){ return d["inicial"]});
-		console.log(datum);
-		$("#acordeon").html(data["html"]);
+		window.console.log(data);
+		$("#cont_ac").html("<%= j render :partial => 'recuperar_docentes' %>");
 	}
 });
 </script>
-<script type="text/javascript" src="/js/filtro_directorio.js"></script>
+<script type="text/javascript" src="/js/filtro_directorio_async.js"></script>
 
 
 <div class="container-fluid" id="resto-cuerpo">
@@ -36,13 +35,10 @@ $.ajax({
 			</div>
 		</div>
 
-		<div id="cont-ac">
+	<div id="cont-ac">
 
-		</div>
 
-<% if false %>
-<script type="text/javascript">
-	actualizarVisibleDirectorio([]);
-</script>
-<% end %>
+	</div>
+
+
 <%= render 'principal/footer' %>
