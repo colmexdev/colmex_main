@@ -16,12 +16,15 @@ $.ajax({
 //academicosPorTema = data.dimension(function(d){return limpiarPuntuacion(d["conts"].join(" ").toLowerCase() + " " + d["libres"].join(" ").toLowerCase())});
 		window.academicosPorCentro = datum.dimension(function(d){ return d["adscripcion"]});
 		window.academicosPorInicial = datum.dimension(function(d){ return d["inicial"]});
+		window.vistas = 0;
+		window.total = 0;
+		window.vista_act = 0;
 		$("#cont-ac").html("<%= j render :partial => 'recuperar_docentes' %>");
 		$("#acordeon").html(data["html"]);
 	}
 });
 </script>
-<script type="text/javascript" src="/js/filtro_directorio.js"></script>
+<script type="text/javascript" src="/js/filtro_directorio_async.js"></script>
 
 
 <div class="container-fluid" id="resto-cuerpo">
