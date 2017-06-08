@@ -1,8 +1,8 @@
 # config valid only for current version of Capistrano
 lock '3.4.1'
 
-set :application, 'prueba'
-set :repo_url, 'https://github.com/RickS1/colmex_main'
+set :application, 'colmex_principal'
+set :repo_url, 'https://github.com/colmexdev/colmex_main'
 
 # Default branch is :master
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
