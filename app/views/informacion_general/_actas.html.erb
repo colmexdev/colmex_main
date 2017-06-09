@@ -1,6 +1,7 @@
 <%  @anios.each do |a| %>
 <span class="titulo-grande morado"><%= a %></span>
 <br>
+<br>
 
 <% @actas.where("anio = ?", a).each do |d| %>
 
@@ -13,6 +14,8 @@
 	</div>
 </div>
 <% end %>
-
+<br>
+<br>
+<br>
 <% end %>
 
