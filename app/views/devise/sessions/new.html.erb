@@ -1,6 +1,8 @@
 <div style="height:100%;width:100%;background:-webkit-linear-gradient(#5E002B, #FFFFFF);background:-o-linear-gradient(#5E002B, #FFFFFF);background:-moz-linear-gradient(#5E002B, #FFFFFF);background: linear-gradient(#5E002B, #FFFFFF);">
 <h2>Acceder al panel</h2>
 
+<div class="container">
+<div class="jumbotron">
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
   <div class="field">
     <%= f.label :usuario %><br />
@@ -25,4 +27,7 @@
     <%= f.submit "Acceder" %>
   </div>
 <% end %>
+</div>
+</div>
+
 </div>
