@@ -5,13 +5,17 @@
 <div class="jumbotron">
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
   <div class="field">
+		<% if false %>
     <%= f.label :usuario %><br />
-    <%= f.text_field :usuario, autofocus: true %>
+		<% end %>
+    <%= f.text_field :usuario, autofocus: true, placeholder: "Usuario" %>
   </div>
 
   <div class="field">
+		<% if false %>
     <%= f.label :password %><br />
-    <%= f.password_field :password, autocomplete: "off" %>
+		<% end %>
+    <%= f.password_field :password, autocomplete: "off", placeholder: "Contraseña" %>
   </div>
 
 	<% if false%>
