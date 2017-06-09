@@ -8,14 +8,14 @@
 		<% if false %>
     <%= f.label :usuario %><br />
 		<% end %>
-    <%= f.text_field :usuario, autofocus: true %>
+    <%= f.text_field :usuario, autofocus: true, placeholder: "Usuario" %>
   </div>
 
   <div class="field">
 		<% if false %>
     <%= f.label :password %><br />
 		<% end %>
-    <%= f.password_field :password, autocomplete: "off" %>
+    <%= f.password_field :password, autocomplete: "off", placeholder: "Contraseña" %>
   </div>
 
 	<% if false%>
