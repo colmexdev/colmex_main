@@ -11,12 +11,14 @@
     <%= f.password_field :password, autocomplete: "off" %>
   </div>
 
+	<% if false%>
   <% if devise_mapping.rememberable? -%>
     <div class="field">
       <%= f.check_box :remember_me %>
       <%= f.label "Mantener sesión abierta" %>
     </div>
   <% end -%>
+	<% end %>
 
   <div class="actions">
     <%= f.submit "Acceder" %>
