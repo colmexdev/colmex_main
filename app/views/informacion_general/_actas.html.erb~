@@ -1,4 +1,4 @@
-<%  @anios.each do |a| %>
+<%  @actas.order(anio: :desc).group(:anio).pluck(:anio) do |a| %>
 <span class="titulo-grande morado"><%= a %></span>
 <br>
 
