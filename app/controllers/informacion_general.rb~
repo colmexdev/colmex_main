@@ -23,6 +23,7 @@ class InformacionGeneralController < ApplicationController
 
   def actas
     @actas = Documento.where(:tipo => "Junta")
+		@anios = @actas.distinct.order(anio: :desc).pluck(:anio)
     respond_to do |format|
       format.js
     end

@@ -1,4 +1,8 @@
-<% @actas.order(:anio).each do |d| %>
+<%  @anios.each do |a| %>
+<span class="titulo-grande morado"><%= a %></span>
+<br>
+
+<% @actas.where("anio = ?", a).each do |d| %>
 
 <div class="wrapper-links-doc">
 	<div class="img-link-doc">
@@ -8,5 +12,7 @@
 		<a href=<%= d.liga.to_s == "" ? d.archivo.url : d.liga %> target="_blank" class="documento uk-link"><%= (params[:locale] == "sp" ? d.nombre : d.nombre_eng) %></a>
 	</div>
 </div>
+<% end %>
+
 <% end %>
 
