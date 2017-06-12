@@ -26,7 +26,7 @@
 }
 
 .text-ip{
-	background-color: rgba(0,0,0,0.1);
+	background-color: rgba(0,0,0,0.2);
 	border: none;
 	height: 50px;
 	width: 250px;
@@ -41,20 +41,11 @@
 
 .text-ip::placeholder{
 	color: rgb(0,0,0);
-	-moz-transition: all 0.2s linear;
-	-ms-transition: all 0.2s linear;
-	-webkit-transition: all 0.2s linear;
-	-o-transition: all 0.2s linear;
-	transition: all 0.2s linear;
 }
 
 .text-ip:hover, .text-ip:focus{
-	background-color: rgba(0,0,0,0.4);
-	color: #CCCCCC;
-}
-
-.text-ip::placeholder:hover, .text-ip::placeholder:focus{
-	color: #CCCCCC;
+	background-color: rgba(0,0,0,0.5);
+	color: #DDDDDD;
 }
 
 .sign-in{

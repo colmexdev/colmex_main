@@ -43,7 +43,7 @@
 	color: rgb(0,0,0);
 }
 
-.text-ip:hover{
+.text-ip:hover, .text-ip:focus{
 	background-color: rgba(0,0,0,0.4);
 	color: #CCCCCC;
 }
