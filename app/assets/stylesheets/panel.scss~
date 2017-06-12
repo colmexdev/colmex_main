@@ -29,12 +29,23 @@
 	background-color: rgba(0,0,0,0.1);
 	border: none;
 	height: 50px;
+	width: 250px;
 	padding: 5px 15px;
 	margin: 10px auto;
+	-moz-transition: all 0.4s linear;
+	-ms-transition: all 0.4s linear;
+	-webkit-transition: all 0.4s linear;
+	-o-transition: all 0.4s linear;
+	transition: all 0.4s linear;
 }
 
 .text-ip::placeholder{
 	color: rgb(0,0,0);
+}
+
+.text-ip:hover{
+	background-color: rgba(0,0,0,0.4);
+	color: #CCCCCC;
 }
 
 .sign-in{
@@ -45,4 +56,17 @@
 	padding: 10px;
 	margin-top: 10px;
 	width: 180px;
+	-moz-transition: all 0.4s linear;
+	-ms-transition: all 0.4s linear;
+	-webkit-transition: all 0.4s linear;
+	-o-transition: all 0.4s linear;
+	transition: all 0.4s linear;
+}
+
+.sign-in:hover{
+	background-color: #470020;
+}
+
+.img-login{
+	margin-bottom: 35px;
 }
