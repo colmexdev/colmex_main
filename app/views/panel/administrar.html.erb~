@@ -1,4 +1,5 @@
 <% if admin_signed_in? %>
+<div class="cont-gest">
 <div class="menu-lat">
 <% if current_admin.admin == "Administrador" || current_admin.admin == "Editor" %>
 <%= link_to "Profesores Eméritos",emeritos_path %><br />
@@ -29,5 +30,5 @@
 <br />
 <%= link_to "Cerrar sesión", destroy_admin_session_path, :method => "DELETE" %>
 
-
+</div>
 <% end %>
