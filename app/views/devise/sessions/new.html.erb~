@@ -17,7 +17,7 @@
 		<% if false %>
     <%= f.label :password %><br />
 		<% end %>
-    <%= f.password_field :password, autocomplete: "off", placeholder: "Contraseña", class="text-ip" %>
+    <%= f.password_field :password, autocomplete: "off", placeholder: "Contraseña", class: "text-ip" %>
   </div>
 
 	<% if false%>
