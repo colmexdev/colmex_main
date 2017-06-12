@@ -36,3 +36,11 @@
 .text-ip::placeholder{
 	color: rgb(0,0,0);
 }
+
+.sign-in{
+	border-radius: 25px;
+	border: none;
+	background-color: #5E002B;
+	color: #FFFFFF;
+	padding: 15px 20px;
+}
