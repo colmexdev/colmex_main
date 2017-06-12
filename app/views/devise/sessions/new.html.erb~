@@ -10,14 +10,14 @@
 		<% if false %>
     <%= f.label :usuario %><br />
 		<% end %>
-    <%= f.text_field :usuario, autocomplete: "off", autofocus: true, placeholder: "Usuario" %>
+    <%= f.text_field :usuario, autocomplete: "off", autofocus: true, placeholder: "Usuario", class: "text-ip" %>
   </div>
 
   <div class="field">
 		<% if false %>
     <%= f.label :password %><br />
 		<% end %>
-    <%= f.password_field :password, autocomplete: "off", placeholder: "Contraseña" %>
+    <%= f.password_field :password, autocomplete: "off", placeholder: "Contraseña", class="text-ip" %>
   </div>
 
 	<% if false%>
