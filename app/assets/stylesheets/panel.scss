@@ -1,3 +1,5 @@
+/*Ventana de login*/
+
 .princ{
 	position: fixed;
 	height: 100%;
@@ -69,4 +71,20 @@
 
 .img-login{
 	margin-bottom: 35px;
+}
+
+/* Panel lateral */
+.cont-gest{
+	position: fixed;
+	height: 100%;
+	width: 100%;
+	top: 0;
+	left: 0;
+}
+
+.menu-lat{
+	height:	100%;
+	overflow: auto;
+	width: 350px;
+	background-color: #E7E7E7;
 }

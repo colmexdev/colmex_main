@@ -1,25 +1,30 @@
 <% if admin_signed_in? %>
-<p id="notice"><%= notice %></p>
+<div class="menu-lat">
 <% if current_admin.admin == "Administrador" || current_admin.admin == "Editor" %>
-<%= link_to "Editar profesores eméritos",emeritos_path %><br />
+<%= link_to "Profesores Eméritos",emeritos_path %><br />
 <%= link_to "Editar tipos de curso", tipo_cursos_path %><br />
-<%= link_to "Editar cursos", cursos_path %><br />
-<%= link_to "Editar personas de sección de Autoridades", personals_path %><br />
-<%= link_to "Editar categorías de premios", categoria_path %><br />
-<%= link_to "Editar premiados y distinguidos", premiados_path %><br />
-<%= link_to "Editar documentos visibles", documentos_path %><br />
-<%= link_to "Editar desplegables en 'Descubre'", descubres_path %><br />
-<%= link_to "Editar tipos de contenido asignables a 'Descubre'", contents_path %><br />
+<%= link_to "Programas docentes", cursos_path %><br />
+<%= link_to "Directorio de Autoridades", personals_path %><br />
+<%= link_to "Categorías de Premios", categoria_path %><br />
+<%= link_to "Premios y distinciones", premiados_path %><br />
+<%= link_to "Documentos varios", documentos_path %><br />
+<%= link_to "Descubres", descubres_path %><br />
+<%= link_to "Categorías de 'Descubre'", contents_path %><br />
+<% if false %>
 <%= link_to "Editar galerías", galleries_path %><br />
 <%= link_to "Editar imágenes de galerías", imagens_path %><br />
-<%= link_to "Editar imágenes de slider", sliders_path %><br />
-<%= link_to "Editar cátedras y seminarios", catedras_path %><br />
-<%= link_to "Editar frase de la página principal", frases_path %><br />
+<% end %>
+<%= link_to "Imágenes de slider", sliders_path %><br />
+<%= link_to "Cátedras y seminarios", catedras_path %><br />
+<%= link_to "Frases de página principal", frases_path %><br />
 <% end %>
 <%= link_to "Editar directorio académico", academicos_path %><br />
 <% if current_admin.admin == "Administrador" %>
 <%= link_to "Editar usuarios gestores", admins_path %><br />
 <% end %>
+</div>
+<p id="notice"><%= notice %></p>
+
 <br />
 <br />
 <%= link_to "Cerrar sesión", destroy_admin_session_path, :method => "DELETE" %>

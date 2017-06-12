@@ -1,3 +1,5 @@
+/*Ventana de login*/
+
 .princ{
 	position: fixed;
 	height: 100%;
@@ -44,8 +46,8 @@
 }
 
 .text-ip:hover, .text-ip:focus{
-	background-color: rgba(0,0,0,0.5);
-	color: #DDDDDD;
+	background-color: rgba(0,0,0,0.6);
+	color: #EEEEEE;
 }
 
 .sign-in{
@@ -69,4 +71,17 @@
 
 .img-login{
 	margin-bottom: 35px;
+}
+
+/* Panel lateral */
+.cont-gest{
+	position: fixed;
+	height: 100%;
+	width: 100%;
+	top: 0;
+	left: 0;
+}
+
+.menu-lat{
+	height
 }
