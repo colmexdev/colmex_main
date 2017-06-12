@@ -32,11 +32,11 @@
 	width: 250px;
 	padding: 5px 15px;
 	margin: 10px auto;
-	-moz-transition: all 0.4s linear;
-	-ms-transition: all 0.4s linear;
-	-webkit-transition: all 0.4s linear;
-	-o-transition: all 0.4s linear;
-	transition: all 0.4s linear;
+	-moz-transition: all 0.2s linear;
+	-ms-transition: all 0.2s linear;
+	-webkit-transition: all 0.2s linear;
+	-o-transition: all 0.2s linear;
+	transition: all 0.2s linear;
 }
 
 .text-ip::placeholder{
@@ -56,11 +56,11 @@
 	padding: 10px;
 	margin-top: 10px;
 	width: 180px;
-	-moz-transition: all 0.4s linear;
-	-ms-transition: all 0.4s linear;
-	-webkit-transition: all 0.4s linear;
-	-o-transition: all 0.4s linear;
-	transition: all 0.4s linear;
+	-moz-transition: all 0.2s linear;
+	-ms-transition: all 0.2s linear;
+	-webkit-transition: all 0.2s linear;
+	-o-transition: all 0.2s linear;
+	transition: all 0.2s linear;
 }
 
 .sign-in:hover{
