@@ -27,10 +27,8 @@
 
 .text-ip{
 	background-color: rgba(0,0,0,0.1);
-	border-top: none;
-	border-right: none;
-	border-left: none;
-	border-bottom: 1px solid #000;
+	border: none;
 	height: 40px;
-	
+	padding: 5px 15px;
+	margin: 10px auto;
 }
