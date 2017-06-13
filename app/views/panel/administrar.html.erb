@@ -52,13 +52,15 @@
 <%= link_to "Editar usuarios gestores", admins_path, class: "link-panel" %><br />
 </li>
 <% end %>
+<li class="op-gest">
+<%= link_to "Cerrar sesión", destroy_admin_session_path, :method => "DELETE" %>
+</li>
 </ul>
 </div>
 <p id="notice"><%= notice %></p>
 
 <br />
 <br />
-<%= link_to "Cerrar sesión", destroy_admin_session_path, :method => "DELETE" %>
 
 </div>
 <% end %>
