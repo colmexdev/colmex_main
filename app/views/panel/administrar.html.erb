@@ -1,7 +1,7 @@
 <% if admin_signed_in? %>
 <div class="cont-gest">
 <div class="menu-lat">
-<ul>
+<ul id="ops-lat">
 <% if current_admin.admin == "Administrador" || current_admin.admin == "Editor" %>
 <li class="op-gest">
 <%= link_to "Profesores Eméritos",emeritos_path, class: "link-panel" %><br />
