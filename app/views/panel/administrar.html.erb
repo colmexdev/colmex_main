@@ -1,28 +1,58 @@
 <% if admin_signed_in? %>
 <div class="cont-gest">
 <div class="menu-lat">
+<ul>
 <% if current_admin.admin == "Administrador" || current_admin.admin == "Editor" %>
+<li class="op-gest">
 <%= link_to "Profesores Eméritos",emeritos_path, class: "link-panel" %><br />
+</li>
+<li class="op-gest">
 <%= link_to "Editar tipos de curso", tipo_cursos_path, class: "link-panel" %><br />
+</li>
+<li class="op-gest">
 <%= link_to "Programas docentes", cursos_path, class: "link-panel" %><br />
+</li>
+<li class="op-gest">
 <%= link_to "Directorio de Autoridades", personals_path, class: "link-panel" %><br />
+</li>
+<li class="op-gest">
 <%= link_to "Categorías de Premios", categoria_path, class: "link-panel" %><br />
+</li>
+<li class="op-gest">
 <%= link_to "Premios y distinciones", premiados_path, class: "link-panel" %><br />
+</li>
+<li class="op-gest">
 <%= link_to "Documentos varios", documentos_path, class: "link-panel" %><br />
+</li>
+<li class="op-gest">
 <%= link_to "Descubres", descubres_path, class: "link-panel" %><br />
+</li>
+<li class="op-gest">
 <%= link_to "Categorías de 'Descubre'", contents_path, class: "link-panel" %><br />
+</li>
 <% if false %>
 <%= link_to "Editar galerías", galleries_path, class: "link-panel" %><br />
 <%= link_to "Editar imágenes de galerías", imagens_path, class: "link-panel" %><br />
 <% end %>
+<li class="op-gest">
 <%= link_to "Imágenes de slider", sliders_path, class: "link-panel" %><br />
+</li>
+<li class="op-gest">
 <%= link_to "Cátedras y seminarios", catedras_path, class: "link-panel" %><br />
+</li>
+<li class="op-gest">
 <%= link_to "Frases de página principal", frases_path, class: "link-panel" %><br />
+</li>
 <% end %>
+<li class="op-gest">
 <%= link_to "Editar directorio académico", academicos_path, class: "link-panel" %><br />
+</li>
 <% if current_admin.admin == "Administrador" %>
+<li class="op-gest">
 <%= link_to "Editar usuarios gestores", admins_path, class: "link-panel" %><br />
+</li>
 <% end %>
+</ul>
 </div>
 <p id="notice"><%= notice %></p>
 
