@@ -85,7 +85,7 @@
 .menu-lat{
 	height:	100%;
 	overflow: auto;
-	width: 300px;
+	width: 250px;
 	background-color: #696969;
 }
 
