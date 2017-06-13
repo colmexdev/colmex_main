@@ -109,6 +109,22 @@
 	transform: translate(-50%,-50%);
 }
 
+.toggle-panel{
+	height:	40px;
+	width: 40px;
+	border: none;
+	border-radius: 100px;
+	background-color: #9E6680;
+	position: absolute;
+	top: 50%;
+	left: 100%;
+	-webkit-transform: translate(-50%,-50%);
+	-moz-transform: translate(-50%,-50%);
+	-ms-transform: translate(-50%,-50%);
+	-o-transform: translate(-50%,-50%);
+	transform: translate(-50%,-50%);
+}
+
 #title-gest{
 	display: inline-block;
 	width: -webkit-calc(100% - 220px);
