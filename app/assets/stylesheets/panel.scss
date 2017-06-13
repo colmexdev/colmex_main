@@ -86,19 +86,19 @@
 	height:	100%;
 	overflow: auto;
 	width: 300px;
-	background-color: #E7E7E7;
+	background-color: #696969;
 }
 
 #ops-lat{
 	padding-left: 0;
-	background-color: #E7E7E7;
+	background-color: #696969;
 }
 
 .op-gest{
 	display: table;
 	width: 100%;
 	height: 40px;
-	background-color: #E7E7E7;
+	background-color: #696969;
 }
 
 .link-panel{
@@ -113,4 +113,8 @@
 	-moz-transition: all 0.3s linear;
 	-o-transition: all 0.3s linear;
 	transition: all 0.3s linear;
+}
+
+.link-panel:hover{
+	color: #470020;
 }
