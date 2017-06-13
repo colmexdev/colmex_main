@@ -5,6 +5,8 @@
 		<div id="brand-gest">
 			<%= image_tag("colmex.png") %>
 		</div>
+		<div id="title-gest">
+		</div>
 	</div>
 
 <div class="menu-lat">
