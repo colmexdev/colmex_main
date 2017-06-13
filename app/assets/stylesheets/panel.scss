@@ -86,13 +86,13 @@
 .barra-gest{
 	width: 100%;
 	height: 70px;
-	border-bottom: 2px solid rgba(50,50,50,0.5);
+	border-bottom: 1px solid rgba(50,50,50,0.7);
 }
 
 #brand-gest{
 	text-align: center;
 	width: 220px; height: 100%;
-	background-color: #9E6680;
+	background-color: #7E0020;
 	display: inline-block;
 	position: relative;
 }
@@ -115,7 +115,7 @@
 	width: -moz-calc(100% - 220px);
 	width: calc(100% - 220px);
 	height: 100%;
-	background-color: #DCDCDC;
+	background-color: #F5F5F5;
 	float: right;
 }
 

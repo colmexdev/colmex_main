@@ -86,7 +86,7 @@
 .barra-gest{
 	width: 100%;
 	height: 70px;
-	border-bottom: 2px solid rgba(50,50,50,0.5);
+	border-bottom: 1px solid rgba(50,50,50,0.7);
 }
 
 #brand-gest{
@@ -116,6 +116,7 @@
 	width: calc(100% - 220px);
 	height: 100%;
 	background-color: #DCDCDC;
+	float: right;
 }
 
 .menu-lat{
