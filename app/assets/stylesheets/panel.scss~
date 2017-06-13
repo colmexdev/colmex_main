@@ -58,9 +58,8 @@
 	padding: 10px;
 	margin-top: 10px;
 	width: 180px;
-	-moz-transition: all 0.2s linear;
-	-ms-transition: all 0.2s linear;
 	-webkit-transition: all 0.2s linear;
+	-moz-transition: all 0.2s linear;
 	-o-transition: all 0.2s linear;
 	transition: all 0.2s linear;
 }
@@ -119,6 +118,10 @@
 	top: 50%;
 	left: 100%;
 	z-index: 3;
+	-webkit-transition: all 0.2s linear;
+	-moz-transition: all 0.2s linear;
+	-o-transition: all 0.2s linear;
+	transition: all 0.2s linear;
 	-webkit-transform: translate(-50%,-50%);
 	-moz-transform: translate(-50%,-50%);
 	-ms-transform: translate(-50%,-50%);
@@ -128,9 +131,13 @@
 
 .bars-toggle{
 	background-color: #E7E7E7;
-	width: 15px;
-	height: 2px;
-	margin: 0 auto;
+	width: 18px;
+	height: 3px;
+	margin: 2px auto;
+}
+
+#bar-s{
+	margin-top: 13px;
 }
 
 #title-gest{
