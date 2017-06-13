@@ -1,5 +1,12 @@
 <% if admin_signed_in? %>
 <div class="cont-gest">
+
+	<div class="barra-gest">
+		<div id="brand-gest">
+			<%= image_tag("colmex.png") %>
+		</div>
+	</div>
+
 <div class="menu-lat">
 <ul id="ops-lat">
 <% if current_admin.admin == "Administrador" || current_admin.admin == "Editor" %>

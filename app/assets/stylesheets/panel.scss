@@ -85,9 +85,22 @@
 
 .barra-gest{
 	width: 100%;
-	height: 350px;
-	background-color: #5E002B;
+	height: 70px;
 	border-bottom: 2px solid rgba(50,50,50,0.5);
+}
+
+.brand-gest{
+	text-align: center;
+	width: 220px; height: 100%;
+	background-color: #9E6680;
+}
+
+.title-gest{
+	width: -webkit-calc(100% - 220px);
+	width: -moz-calc(100% - 220px);
+	width: calc(100% - 220px);
+	height: 100%;
+	background-color: #DCDCDC;
 }
 
 .menu-lat{
