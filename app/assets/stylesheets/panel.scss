@@ -109,7 +109,7 @@
 	transform: translate(-50%,-50%);
 }
 
-.toggle-panel{
+#toggle-panel{
 	height:	40px;
 	width: 40px;
 	border: none;
@@ -118,11 +118,19 @@
 	position: absolute;
 	top: 50%;
 	left: 100%;
+	z-index: 3;
+	text-align: center;
 	-webkit-transform: translate(-50%,-50%);
 	-moz-transform: translate(-50%,-50%);
 	-ms-transform: translate(-50%,-50%);
 	-o-transform: translate(-50%,-50%);
 	transform: translate(-50%,-50%);
+}
+
+.bars-toggle{
+	background-color: #E7E7E7;
+	width: 10px;
+	height: 3px;
 }
 
 #title-gest{
