@@ -54,11 +54,11 @@
 </li>
 <% end %>
 <li class="op-gest">
-<%= link_to "Editar directorio académico", academicos_path, class: "link-panel" %><br />
+<%= link_to "Directorio académico", academicos_path, class: "link-panel" %><br />
 </li>
 <% if current_admin.admin == "Administrador" %>
 <li class="op-gest">
-<%= link_to "Editar usuarios gestores", admins_path, class: "link-panel" %><br />
+<%= link_to "Usuarios gestores", admins_path, class: "link-panel" %><br />
 </li>
 <% end %>
 <li class="op-gest">

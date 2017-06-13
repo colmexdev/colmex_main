@@ -92,7 +92,7 @@
 #brand-gest{
 	text-align: center;
 	width: 220px; height: 100%;
-	background-color: #7E0020;
+	background-color: #5E002B;
 	display: inline-block;
 	position: relative;
 }
@@ -117,6 +117,22 @@
 	height: 100%;
 	background-color: #F5F5F5;
 	float: right;
+	text-align: right;
+	position: relative;
+}
+
+#text-title-gest{
+	color: #5E002B;
+	font-size: 16px;
+	font-weight: 400;
+	padding-right: 50px;
+	position: absolute;
+	top: 50%;
+	-webkit-transform: translate(-50%,0);
+	-moz-transform: translate(-50%,0);
+	-ms-transform: translate(-50%,0);
+	-o-transform: translate(-50%,0);
+	transform: translate(-50%,0);
 }
 
 .menu-lat{
