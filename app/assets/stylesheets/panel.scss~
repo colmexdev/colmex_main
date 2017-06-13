@@ -108,25 +108,34 @@
 	transform: translate(-50%,-50%);
 }
 
-#toggle-panel{
+.toggle-panel{
 	height:	40px;
 	width: 40px;
 	border: none;
 	border-radius: 100px;
-	background-color: #9E6680;
 	position: absolute;
 	top: 50%;
 	left: 100%;
-	z-index: 3;
-	-webkit-transition: all 0.2s linear;
-	-moz-transition: all 0.2s linear;
-	-o-transition: all 0.2s linear;
-	transition: all 0.2s linear;
 	-webkit-transform: translate(-50%,-50%);
 	-moz-transform: translate(-50%,-50%);
 	-ms-transform: translate(-50%,-50%);
 	-o-transform: translate(-50%,-50%);
 	transform: translate(-50%,-50%);
+}
+
+#mask-toggle{
+	z-index: 4;
+	background-color: rgba(0,0,0,0);
+	cursor: pointer;
+}
+
+#but-toggle{
+	background-color: #9E6680;
+	z-index: 3;
+	-webkit-transition: all 0.2s linear;
+	-moz-transition: all 0.2s linear;
+	-o-transition: all 0.2s linear;
+	transition: all 0.2s linear;
 }
 
 .bars-toggle{

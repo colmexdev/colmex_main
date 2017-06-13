@@ -4,7 +4,7 @@
 	<div class="barra-gest">
 		<div id="brand-gest">
 			<%= image_tag("colmex.png", class: "img-brand") %>
-			<div class="toggle-panel">
+			<div class="toggle-panel" id="but-toggle">
 				<div class="bars-toggle" id="bar-s"></div>
 				<div class="bars-toggle" id="bar-m"></div>
 				<div class="bars-toggle" id="bar-i"></div>
