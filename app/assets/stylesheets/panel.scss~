@@ -117,7 +117,7 @@
 }
 
 .link-panel:hover, .link-panel:active, .link-panel:focus{
-	color: #470020;
+	color: #5E002B;
 	border-bottom: 1px solid #470020;
 	background-color: #696969;
 }
