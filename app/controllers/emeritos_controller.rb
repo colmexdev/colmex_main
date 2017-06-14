@@ -5,7 +5,6 @@ class EmeritosController < ApplicationController
   # GET /emeritos.json
   def index
     @emeritos = Emerito.all
-		byebug
     respond_to do |format|
       format.js
     end
