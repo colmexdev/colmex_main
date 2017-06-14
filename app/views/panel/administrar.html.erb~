@@ -23,7 +23,7 @@
 			<ul id="ops-lat">
 				<% if current_admin.admin == "Administrador" || current_admin.admin == "Editor" %>
 				<li class="op-gest">
-				<%= link_to "Profesores Eméritos",emeritos_path, class: "link-panel" %><br />
+				<%= link_to "Profesores Eméritos",emeritos_path, class: "link-panel", :remote => true %><br />
 				</li>
 				<li class="op-gest">
 				<%= link_to "Editar tipos de curso", tipo_cursos_path, class: "link-panel" %><br />
@@ -78,6 +78,7 @@
 		</div>
 		<div id="graphs-gest">
 		<p id="notice"><%= notice %></p>
+		<%= render 'panel/principal' %>
 		</div>
 	</div>
 </div>

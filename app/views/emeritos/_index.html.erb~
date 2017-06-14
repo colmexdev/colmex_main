@@ -32,7 +32,7 @@
 
 <br>
 
-<%= link_to 'Nuevo Emerito', new_emerito_path %>
+<%= link_to 'New Emerito', new_emerito_path %>
 <br>
 <%= link_to "Regresar", panel_path %>
 <% end %>
