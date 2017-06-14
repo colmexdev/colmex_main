@@ -21,7 +21,7 @@ Rails.application.routes.draw do
 
   get 'bienes/index' => 'bienes#index', :as => :bienes
 
-  get 'panel/administrar' => 'panel#administrar', :as => :panel
+  get 'panel/panel' => 'panel#panel', :as => :panel
 
   get 'centros_de_estudio/inicio' => "centros_de_estudio#inicio", :as => :centros_de_estudio
 
@@ -134,6 +134,11 @@ Rails.application.routes.draw do
   get 'principal/como_llegar' => 'principal#como_llegar', :as =>  :ubicacion
 
   get 'principal/set_language' => 'principal#set_language', :as => :cambiar_idioma
+
+  get 'informacion_general/directorio_academico_async' => 'informacion_general#directorio_academico_async', :as => :dir_async
+
+  get 'informacion_general/recuperar_docentes' => 'informacion_general#recuperar_docentes', :as => :rec_doc
+
   devise_scope :admin do
     get "/acceder" => "devise/sessions#new"
   end

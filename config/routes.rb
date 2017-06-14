@@ -21,7 +21,9 @@ Rails.application.routes.draw do
 
   get 'bienes/index' => 'bienes#index', :as => :bienes
 
-  get 'panel/administrar' => 'panel#administrar', :as => :panel
+  get 'panel/panel' => 'panel#panel', :as => :panel
+
+  get 'panel/principal' => 'panel#principal', :as => :panel_princ
 
   get 'centros_de_estudio/inicio' => "centros_de_estudio#inicio", :as => :centros_de_estudio
 
