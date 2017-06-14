@@ -7,7 +7,6 @@ class EmeritosController < ApplicationController
     @emeritos = Emerito.all
     respond_to do |format|
       format.js
-      format.json
     end
   end
 
