@@ -19,7 +19,7 @@
 
 
 	<div class="body-gest">
-		<div class="menu-lat">
+		<div id="menu-lat">
 			<ul id="ops-lat">
 				<% if current_admin.admin == "Administrador" || current_admin.admin == "Editor" %>
 				<li class="op-gest">
@@ -75,6 +75,8 @@
 				<%= link_to "Cerrar sesión", destroy_admin_session_path, :method => "DELETE", :class => "link-panel" %>
 				</li>
 			</ul>
+		</div>
+		<div id="graphs-gest">
 		</div>
 		<p id="notice"><%= notice %></p>
 	</div>
