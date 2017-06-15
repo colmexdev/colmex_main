@@ -23,7 +23,7 @@
 			<ul id="ops-lat">
 				<% if current_admin.admin == "Administrador" || current_admin.admin == "Editor" %>
 				<li class="op-gest">
-				<%= link_to "Profesores Eméritos", panel_index_path(:set => "Eméritos"), :remote => true, class: "link-panel" %><br />
+				<%= link_to "Profesores Eméritos", panel_index_path(:set => "Eméritos"), remote: true, class: "link-panel" %><br />
 				</li>
 				<li class="op-gest">
 				<%= link_to "Editar tipos de curso", tipo_cursos_path, class: "link-panel" %><br />
