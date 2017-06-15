@@ -77,8 +77,10 @@
 			</ul>
 		</div>
 		<div id="graphs-gest">
-		</div>
 		<p id="notice"><%= notice %></p>
+		<%= render 'panel/principal' %>
+		</div>
+
 	</div>
 </div>
 <% end %>
