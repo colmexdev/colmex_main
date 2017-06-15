@@ -14,8 +14,7 @@ Rails.application.routes.draw do
   resources :galleries
   resources :imagens
   resources :categoria
-  #resources :emeritos
-  get 'emeritos/index' => 'emeritos#index', :as => :emeritos
+  resources :emeritos
   devise_for :admins, :controllers => { :registrations => "registrations"}
   resources :admins
 
@@ -23,8 +22,8 @@ Rails.application.routes.draw do
   get 'bienes/index' => 'bienes#index', :as => :bienes
 
   get 'panel/panel' => 'panel#panel', :as => :panel
-
   get 'panel/principal' => 'panel#principal', :as => :panel_princ
+  get 'panel/index' => 'panel#index', :as => :panel_index
 
   get 'centros_de_estudio/inicio' => "centros_de_estudio#inicio", :as => :centros_de_estudio
 

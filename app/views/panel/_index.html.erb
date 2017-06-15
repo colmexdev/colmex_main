@@ -1,0 +1,41 @@
+<% if admin_signed_in? %>
+
+<p id="notice"><%= notice %></p>
+
+<h1>Listing set</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Nombre</th>
+      <th>Fecha anexion</th>
+      <th>Centro</th>
+      <th>Semblanza</th>
+      <th colspan="1"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @set.each do |s| %>
+      <tr>
+        <td><%= s.nombre %></td>
+        <td><%= s.fecha_anexion %></td>
+        <td><%= s.centro %></td>
+        <td><%= s.semblanza %></td>
+        <td><%= link_to 'Show', s %></td>
+				<% if false %>
+        <td><%= link_to 'Edit', edit_emerito_path(s) %></td>
+        <td><%= link_to 'Destroy', s, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+				<% end %>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<% if false %>
+<%= link_to 'Nuevo s', new_emerito_path %><br>
+<% end %>
+<%= link_to "Regresar", panel_path %>
+<% end %>
