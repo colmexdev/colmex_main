@@ -10,6 +10,9 @@ class PanelController < ApplicationController
 
   def index
     @set = ""
+		if params[:set] == "Eméritos"
+      @set = Emerito.all
+    end
     respond_to do |format|
       format.js
     end
