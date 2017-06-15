@@ -22,8 +22,8 @@
         <td><%= s.fecha_anexion %></td>
         <td><%= s.centro %></td>
         <td><%= s.semblanza %></td>
-				<% if false %>
         <td><%= link_to 'Show', s %></td>
+				<% if false %>
         <td><%= link_to 'Edit', edit_emerito_path(s) %></td>
         <td><%= link_to 'Destroy', s, method: :delete, data: { confirm: 'Are you sure?' } %></td>
 				<% end %>
