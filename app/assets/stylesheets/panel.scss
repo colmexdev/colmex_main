@@ -233,6 +233,8 @@
 	width: calc(100% - 220px);
 	height:100%;
 	float: right;
+	overflow-y: auto;
+	overflow-x: auto;
 	background-color: #DDD;
 	-webkit-transition: all 0.3s linear;
 	-moz-transition: all 0.3s linear;

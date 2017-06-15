@@ -2,26 +2,31 @@
 
 <p id="notice"><%= notice %></p>
 
-<h1>Listing set</h1>
+<h1>Listado de <%= params[:set] %></h1>
 
 <table>
   <thead>
     <tr>
-      <th>Nombre</th>
-      <th>Fecha anexion</th>
-      <th>Centro</th>
-      <th>Semblanza</th>
-      <th colspan="1"></th>
+			<% @fields.each do |f| %>
+			<td><%= f %></td>
+			<% end %>
+			<% @foto.each do |f| %>
+			<td><%= f %>
+			<% end %>
     </tr>
   </thead>
 
   <tbody>
     <% @set.each do |s| %>
       <tr>
-        <td><%= s.nombre %></td>
-        <td><%= s.fecha_anexion %></td>
-        <td><%= s.centro %></td>
-        <td><%= s.semblanza %></td>
+				<% @fields.each do |f| %>
+        <td><%= s[f] %></td>
+				<% end %>
+				<% @foto.each do |f| %>
+					<% if f == "foto" %>
+						<td><%= image_tag(s.foto.url ) %></td>
+					<% end %>
+				<% end %>
 				<% if false %>
         <td><%= link_to 'Show', s %></td>
         <td><%= link_to 'Edit', edit_emerito_path(s) %></td>
