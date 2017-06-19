@@ -11,11 +11,17 @@ class PanelController < ApplicationController
 
   def index
     @set = ""
+    @fields = []
+    @foto = ""
     case params[:set]
 		  when "Profesores eméritos"
         @set = Emerito.all
+        @fields = ["nombre","fecha_anexion","centro","semblanza","semblanza_eng"]
+        @foto = ["foto"]
       when "Programas docentes"
         @set = Curso.all
+        @fields = ["titulo","descripcion","fecha_inicio_conv","fecha_fin_conv","fecha_inicio_clases","fecha_fin_clases","liga","tipo_curso","programa","imparte","traduccion_desc","traduccion_tit"]
+        @foto = ["foto"]
       when "Directorio de Autoridades"
         @set = Personal.all
       when "Categorías de Premios"

@@ -2,28 +2,43 @@
 
 <p id="notice"><%= notice %></p>
 
-<h1>Listing set</h1>
+<h1>Listado de <%= params[:set] %></h1>
 
 <table>
   <thead>
     <tr>
-      <th>Nombre</th>
-      <th>Fecha anexion</th>
-      <th>Centro</th>
-      <th>Semblanza</th>
-      <th colspan="1"></th>
+			<% @fields.each do |f| %>
+			<td><%= f %></td>
+			<% end %>
+			<% @foto.each do |f| %>
+			<td><%= f %>
+			<% end %>
     </tr>
   </thead>
 
   <tbody>
     <% @set.each do |s| %>
       <tr>
-        <td><%= s.nombre %></td>
-        <td><%= s.fecha_anexion %></td>
-        <td><%= s.centro %></td>
-        <td><%= s.semblanza %></td>
-        <td><%= link_to 'Show', s %></td>
+				<% @fields.each do |f| %>
+        <td><%= s[f] %></td>
+				<% end %>
+				<% @foto.each do |f| %>
+					<% if f == "foto" %>
+						<td><%= image_tag(s.foto.url) %></td>
+					<% elsif f == "imagen" %>
+						<td><%= image_tag(s.imagen.url) %></td>
+					<% elsif f == "icono" %>
+						<td><%= image_tag(s.icono.url) %></td>	
+					<% elsif f == "badge" %>
+						<td><%= image_tag(s.badge.url) %></td>	
+					<% elsif f == "badge_eng" %>
+						<td><%= image_tag(s.badge_eng.url) %></td>	
+					<% elsif f == "archivo" %>
+						<td><%= link_to image_tag("documento.png"), s.documento.url %></td>
+					<% end %>
+				<% end %>
 				<% if false %>
+        <td><%= link_to 'Show', s %></td>
         <td><%= link_to 'Edit', edit_emerito_path(s) %></td>
         <td><%= link_to 'Destroy', s, method: :delete, data: { confirm: 'Are you sure?' } %></td>
 				<% end %>

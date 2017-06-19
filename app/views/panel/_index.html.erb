@@ -24,7 +24,17 @@
 				<% end %>
 				<% @foto.each do |f| %>
 					<% if f == "foto" %>
-						<td><%= image_tag(s.foto.url ) %></td>
+						<td><%= image_tag(s.foto.url) %></td>
+					<% elsif f == "imagen" %>
+						<td><%= image_tag(s.imagen.url) %></td>
+					<% elsif f == "icono" %>
+						<td><%= image_tag(s.icono.url) %></td>	
+					<% elsif f == "badge" %>
+						<td><%= image_tag(s.badge.url) %></td>	
+					<% elsif f == "badge_eng" %>
+						<td><%= image_tag(s.badge_eng.url) %></td>	
+					<% elsif f == "archivo" %>
+						<td><%= link_to image_tag("documento.png"), s.documento.url, target: "_blank" %></td>
 					<% end %>
 				<% end %>
 				<% if false %>
