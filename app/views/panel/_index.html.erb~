@@ -56,9 +56,7 @@
 <% end %>
 
 <script type="text/javascript">
-	$(document).on("load page:load",function(){
-		$(".head-ind").each(function(index){
-			$(this).css({"width": adjustWidths($(".head-ind").length)});
-		});
+	$(".head-ind").each(function(index){
+		$(this).css({"width": adjustWidths($(".head-ind").length), "text-align": "center"});
 	});
 </script>

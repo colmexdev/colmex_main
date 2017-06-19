@@ -245,4 +245,6 @@
 #index-panel{
 	width: 99%;
 	margin: 0 auto;
+	table-layout: fixed;
+	word-break: break-all;
 }
