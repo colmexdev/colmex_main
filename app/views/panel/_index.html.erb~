@@ -7,10 +7,10 @@
 <table>
   <thead>
     <tr>
-			<% @fields.each do |f| %>
+			<% @fields.values.each do |f| %>
 			<td><%= f %></td>
 			<% end %>
-			<% @foto.each do |f| %>
+			<% @foto.values.each do |f| %>
 			<td><%= f %>
 			<% end %>
     </tr>
@@ -19,22 +19,22 @@
   <tbody>
     <% @set.each do |s| %>
       <tr>
-				<% @fields.each do |f| %>
-        <td><%= s[f] %></td>
+				<% @fields.keys.each do |f| %>
+        <td><%= s[f.to_s] %></td>
 				<% end %>
-				<% @foto.each do |f| %>
-					<% if f == "foto" %>
+				<% @foto.keys.each do |f| %>
+					<% if f.to_s == "foto" %>
 						<td><%= image_tag(s.foto.url) %></td>
-					<% elsif f == "imagen" %>
+					<% elsif f.to_s == "imagen" %>
 						<td><%= image_tag(s.imagen.url) %></td>
-					<% elsif f == "icono" %>
+					<% elsif f.to_s == "icono" %>
 						<td><%= image_tag(s.icono.url) %></td>	
-					<% elsif f == "badge" %>
+					<% elsif f.to_s == "badge" %>
 						<td><%= image_tag(s.badge.url) %></td>	
-					<% elsif f == "badge_eng" %>
+					<% elsif f.to_s == "badge_eng" %>
 						<td><%= image_tag(s.badge_eng.url) %></td>	
-					<% elsif f == "archivo" %>
-						<td><%= link_to image_tag("documento.png"), s.documento.url, target: "_blank" %></td>
+					<% elsif f.to_s == "archivo" %>
+						<td><%= link_to image_tag("documento.png"), s.archivo.url, target: "_blank" %></td>
 					<% end %>
 				<% end %>
 				<% if false %>
