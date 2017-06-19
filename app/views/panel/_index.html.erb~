@@ -54,3 +54,11 @@
 <% end %>
 <%= link_to "Regresar", panel_path %>
 <% end %>
+
+<script type="text/javascript">
+	$(document).on("load page:load",function(){
+		$(".head-ind").each(function(index){
+			$(this).css({"width": adjustWidths($(".head-ind").length)});
+		});
+	});
+</script>
