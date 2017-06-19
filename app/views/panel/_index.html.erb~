@@ -11,7 +11,7 @@
 			<td class="head-ind"><%= f %></td>
 			<% end %>
 			<% @foto.values.each do |f| %>
-			<td><%= f %>
+			<td class="head-ind"><%= f %></td>
 			<% end %>
     </tr>
   </thead>

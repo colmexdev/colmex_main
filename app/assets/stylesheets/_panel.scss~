@@ -241,3 +241,8 @@
 	-o-transition: all 0.3s linear;
 	transition: all 0.3s linear;
 }
+
+#index-panel{
+	width: 99%;
+	margin: 0 auto;
+}
