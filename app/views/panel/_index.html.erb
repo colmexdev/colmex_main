@@ -4,11 +4,11 @@
 
 <h1>Listado de <%= params[:set] %></h1>
 
-<table>
+<table id="index-panel">
   <thead>
     <tr>
-			<% @fields.values.each do |f| %>
-			<td><%= f %></td>
+			<% @fields.values.each_with_index do |f,i| %>
+			<td class="head-ind"><%= f %></td>
 			<% end %>
 			<% @foto.values.each do |f| %>
 			<td><%= f %>
@@ -54,3 +54,11 @@
 <% end %>
 <%= link_to "Regresar", panel_path %>
 <% end %>
+
+<script type="text/javascript">
+	$(document).on("load page:load",function(){
+		$(".head-ind").each(function(index){
+			$(this).css({"width": adjustWidths($(".head-ind").length)});
+		});
+	});
+</script>

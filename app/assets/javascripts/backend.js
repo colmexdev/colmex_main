@@ -11,3 +11,7 @@ function slideMenu(){
 	$("#menu-lat").css({"width": (slide ? "" : "0px") });
 	$("#graphs-gest").css({"width": (slide ? "" : "100%")});
 }
+
+function adjustWidths(cols){
+	return (100/cols) + "%";
+}

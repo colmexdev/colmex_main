@@ -4,11 +4,11 @@
 
 <h1>Listado de <%= params[:set] %></h1>
 
-<table>
+<table id="index-panel">
   <thead>
     <tr>
-			<% @fields.values.each do |f| %>
-			<td><%= f %></td>
+			<% @fields.values.each_with_index do |f,i| %>
+			<td class="head-ind"><%= f %></td>
 			<% end %>
 			<% @foto.values.each do |f| %>
 			<td><%= f %>
@@ -16,7 +16,7 @@
     </tr>
   </thead>
 
-  <tbody>
+  <tbody style="font-size:14px;">
     <% @set.each do |s| %>
       <tr>
 				<% @fields.keys.each do |f| %>
