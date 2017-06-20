@@ -21,24 +21,24 @@
     <% @set.each do |s| %>
       <tr class="row-ind">
 				<% @fields.keys.each do |f| %>
-        <td><%= s[f.to_s] %></td>
+        <td class="ind-cell"><%= s[f.to_s] %></td>
 				<% end %>
 				<% @foto.keys.each do |f| %>
 					<% if f.to_s == "foto" %>
-						<td><%= image_tag(s.foto.url) %></td>
+						<td class="ind-cell"><%= image_tag(s.foto.url) %></td>
 					<% elsif f.to_s == "imagen" %>
-						<td><%= image_tag(s.imagen.url) %></td>
+						<td class="ind-cell"><%= image_tag(s.imagen.url) %></td>
 					<% elsif f.to_s == "icono" %>
-						<td><%= image_tag(s.icono.url) %></td>	
+						<td class="ind-cell"><%= image_tag(s.icono.url) %></td>	
 					<% elsif f.to_s == "badge" %>
-						<td><%= image_tag(s.badge.url) %></td>	
+						<td class="ind-cell"><%= image_tag(s.badge.url) %></td>	
 					<% elsif f.to_s == "badge_eng" %>
-						<td><%= image_tag(s.badge_eng.url) %></td>	
+						<td class="ind-cell"><%= image_tag(s.badge_eng.url) %></td>	
 					<% elsif f.to_s == "archivo" %>
-						<td><%= link_to image_tag("documento.png"), s.archivo.url, target: "_blank" %></td>
+						<td class="ind-cell"><%= link_to image_tag("documento.png"), s.archivo.url, target: "_blank" %></td>
 					<% end %>
 				<% end %>
-				<td>
+				<td class="ind-cell">
 					<span class="glyphicon glyphicon-eye-open"></span>
 					<span class="glyphicon glyphicon-pencil"></span>
 					<span class="glyphicon glyphicon-trash"></span>
@@ -63,6 +63,6 @@
 
 <script type="text/javascript">
 	$(".head-ind").each(function(index){
-		$(this).css({"width": adjustWidths($(".head-ind").length), "text-align": "center", "font-weight": "500"});
+		$(this).css({"width": adjustWidths($(".head-ind").length), "text-align": "center", "font-weight": "500","font-size": "16px"});
 	});
 </script>

@@ -244,6 +244,7 @@
 
 #index-panel{
 	width: 99%;
+	min-width: 1000px;
 	margin: 0 auto;
 	table-layout: fixed;
 	text-align: center;
