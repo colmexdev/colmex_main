@@ -38,7 +38,11 @@
 						<td><%= link_to image_tag("documento.png"), s.archivo.url, target: "_blank" %></td>
 					<% end %>
 				<% end %>
-				<td><span class="glyphicon glyphicon-thrash"></span></td>
+				<td>
+					<span class="glyphicon glyphicon-eye-open"></span>
+					<span class="glyphicon glyphicon-penncil"></span>
+					<span class="glyphicon glyphicon-trash"></span>
+				</td>
 				<% if false %>
         <td><%= link_to 'Show', s %></td>
         <td><%= link_to 'Edit', edit_emerito_path(s) %></td>
