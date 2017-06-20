@@ -6,7 +6,7 @@
 
 <table id="index-panel">
   <thead>
-    <tr>
+    <tr id="header-ind">
 			<% @fields.values.each_with_index do |f,i| %>
 			<td class="head-ind"><%= f %></td>
 			<% end %>
