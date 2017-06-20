@@ -68,7 +68,7 @@ class PanelController < ApplicationController
   end
 
   def mostrar
-    models = {"emerito" => Emerito,"curso" => Curso,"autoridades" => Personal,"cat_premios" => Categorium,"premios" => Premiado,"documento" => Documento,"descubre" => Descubre,"cat_descubre" => Content,"slider" => Slider,"catedras" => Catedra,"frase" => Frase,"academico" => Academico,"usuarios" => Admin}
+    models = {"Profesores eméritos" => Emerito,"Programas docentes" => Curso,"Directorio de Autoridades" => Personal,"Categorías de Premios" => Categorium,"Premios y distinciones" => Premiado,"Documentos varios" => Documento,"Descubres" => Descubre,"Categorías de 'Descubre'" => Content,"Imágenes de slider" => Slider,"Cátedras y seminarios" => Catedra,"Frases en página principal" => Frase,"Directorio académico" => Academico,"Usuarios gestores" => Admin}
     @obj = models[params[:set]].find(params[:id])
     respond_to do |format|
       format.js

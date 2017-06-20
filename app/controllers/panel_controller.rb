@@ -42,7 +42,7 @@ class PanelController < ApplicationController
         @foto = {imagen: "Imagen"}
       when "Categorías de 'Descubre'"
         @set = Content.all
-        @fields = {tipo: "Tipo",tipo_eng: "Tipo (Inglés)"}
+        @fields = {tipo: "Tipo",tipo_eng: "Tipo (Inglés)", t: ""}
         @foto = {icono: "Ícono"}
       when "Imágenes de slider"
         @set = Slider.all

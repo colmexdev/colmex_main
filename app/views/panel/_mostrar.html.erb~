@@ -1,1 +1,1 @@
-<%= @obj %>
+<%= @obj.as_json.keys %>
