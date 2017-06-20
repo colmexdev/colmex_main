@@ -11,8 +11,8 @@ class PanelController < ApplicationController
 
   def index
     @set = ""
-    @fields = []
-    @foto = []
+    @fields = {}
+    @foto = {}
     case params[:set]
 		  when "Profesores eméritos"
         @set = Emerito.all
@@ -28,6 +28,7 @@ class PanelController < ApplicationController
         @foto = {foto: "Foto"}
       when "Categorías de Premios"
         @set = Categorium.all
+        @fields = {nombre: "Nombre", nombre_eng: "Nombre (Inglés)"}
       when "Premios y distinciones"
         @set = Premiado.all
         @fields = {nombre: "Nombre", descripcion: "Descripción",tipo_premio: "Otorgado a",tipo: "Sección (comunidad)",liga: "Link"}
@@ -58,9 +59,17 @@ class PanelController < ApplicationController
         @fields = {nombre: "Nombre",inicial: "Inicial",correo: "Correo electrónico",adscripcion: "Centro de Estudios",lineas_investigacion: "Líneas de investigación",pagina: "Sitio personal"}
         @foto = {foto: "Foto"}
       when "Usuarios gestores"
-        @set = User.all
+        @set = Admin.all
         @fields = {usuario: "Usuario",admin: "Tipo"}
     end
+    respond_to do |format|
+      format.js
+    end
+  end
+
+  def mostrar
+    models = {"emerito" => Emerito,"curso" => Curso,"autoridades" => Personal,"cat_premios" => Categorium,"premios" => Premiado,"documento" => Documento,"descubre" => Descubre,"cat_descubre" => Content,"slider" => Slider,"catedras" => Catedra,"frase" => Frase,"academico" => Academico,"usuarios" => Admin}
+    @obj = models[params[:set]].find(params[:id])
     respond_to do |format|
       format.js
     end

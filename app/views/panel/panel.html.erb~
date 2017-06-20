@@ -25,9 +25,11 @@
 				<li class="op-gest">
 				<%= link_to "Profesores eméritos", panel_index_path(:set => "Profesores eméritos"), remote: true, class: "link-panel" %>
 				</li>
+				<% if false %>
 				<li class="op-gest">
 				<%= link_to "Editar tipos de curso", tipo_cursos_path, class: "link-panel" %><br />
 				</li>
+				<% end %>
 				<li class="op-gest">
 				<%= link_to "Programas docentes", panel_index_path(:set => "Programas docentes"), remote: true, class: "link-panel" %><br />
 				</li>
@@ -60,7 +62,7 @@
 				<%= link_to "Cátedras y seminarios", panel_index_path(:set => "Cátedras y seminarios"), remote: true, class: "link-panel" %><br />
 				</li>
 				<li class="op-gest">
-				<%= link_to "Frases de página principal", panel_index_path(:set => "Frases"), remote: true, class: "link-panel" %><br />
+				<%= link_to "Frases de página principal", panel_index_path(:set => "Frases en página principal"), remote: true, class: "link-panel" %><br />
 				</li>
 				<% end %>
 				<li class="op-gest">

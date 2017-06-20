@@ -21,7 +21,7 @@
     <% @set.each do |s| %>
       <tr class="row-ind">
 				<% @fields.keys.each do |f| %>
-        <td class="ind-cell"><%= s[f.to_s] %></td>
+        <td class="ind-cell"><%= s[f.to_s].html_safe %></td>
 				<% end %>
 				<% @foto.keys.each do |f| %>
 					<% if f.to_s == "foto" %>
@@ -39,7 +39,7 @@
 					<% end %>
 				<% end %>
 				<td class="ind-cell">
-					<span class="clickable-g glyphicon glyphicon-eye-open"></span>
+					<a data-remote=true href="<%= panel_mostrar_path(:set => params[:set], :id => s.id) %>"><span class="clickable-g glyphicon glyphicon-eye-open"></span></a>
 					<span class="clickable-g glyphicon glyphicon-pencil"></span>
 					<span class="clickable-g glyphicon glyphicon-trash"></span>
 				</td>
@@ -68,7 +68,8 @@
 	});
 	$(".ind-cell").each(function(index){
 		if(this.innerHTML.length > cols*90){
-			this.innerHTML = this.innerHTML.substring(0,cols*90) + "...";
+			var n_html = this.innerHTML.substring(0,cols*90) + "..."
+			this.innerHTML = n_html;
 		}
 	});
 </script>
