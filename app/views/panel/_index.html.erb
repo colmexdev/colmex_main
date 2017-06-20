@@ -62,12 +62,13 @@
 <% end %>
 
 <script type="text/javascript">
+	var cols = $(".head-ind").length;
 	$(".head-ind").each(function(index){
-		$(this).css({"width": adjustWidths($(".head-ind").length), "text-align": "center", "font-weight": "500","font-size": "16px"});
+		$(this).css({"width": adjustWidths(cols), "text-align": "center", "font-weight": "500","font-size": "16px"});
 	});
 	$(".ind-cell").each(function(index){
-		if(this.innerHTML.length > 450){
-			this.innerHTML = this.innerHTML.substring(0,450) + "...";
+		if(this.innerHTML.length > cols*90){
+			this.innerHTML = this.innerHTML.substring(0,cols*90) + "...";
 		}
 	});
 </script>

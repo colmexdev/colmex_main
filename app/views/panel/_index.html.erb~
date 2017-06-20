@@ -66,7 +66,7 @@
 		$(this).css({"width": adjustWidths($(".head-ind").length), "text-align": "center", "font-weight": "500","font-size": "16px"});
 	});
 	$(".ind-cell").each(function(index){
-		if(this.html().length > 450){
+		if(this.innerHTML.length > 450){
 			this.innerHTML = this.innerHTML.substring(0,450) + "...";
 		}
 	});
