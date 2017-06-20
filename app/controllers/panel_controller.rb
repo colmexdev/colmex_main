@@ -28,7 +28,7 @@ class PanelController < ApplicationController
         @foto = {foto: "Foto"}
       when "Categorías de Premios"
         @set = Categorium.all
-        @fields = {nombre: "Nombre", nombre_eng: "Nombre (Inglés)"}
+        @fields = {nombre: "Nombre", nombre_eng: "Nombre (Inglés)", t: ""}
       when "Premios y distinciones"
         @set = Premiado.all
         @fields = {nombre: "Nombre", descripcion: "Descripción",tipo_premio: "Otorgado a",tipo: "Sección (comunidad)",liga: "Link"}
@@ -42,7 +42,7 @@ class PanelController < ApplicationController
         @foto = {imagen: "Imagen"}
       when "Categorías de 'Descubre'"
         @set = Content.all
-        @fields = {tipo: "Tipo",tipo_eng: "Tipo (Inglés)", t: ""}
+        @fields = {tipo: "Tipo",tipo_eng: "Tipo (Inglés)"}
         @foto = {icono: "Ícono"}
       when "Imágenes de slider"
         @set = Slider.all
