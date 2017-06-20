@@ -7,7 +7,7 @@
 <table id="index-panel">
   <thead>
     <tr id="header-ind">
-			<% @fields.values.each_with_index do |f,i| %>
+			<% @fields.values.each do |f| %>
 			<td class="head-ind"><%= f %></td>
 			<% end %>
 			<% @foto.values.each do |f| %>
@@ -40,7 +40,7 @@
 				<% end %>
 				<td>
 					<span class="glyphicon glyphicon-eye-open"></span>
-					<span class="glyphicon glyphicon-penncil"></span>
+					<span class="glyphicon glyphicon-pencil"></span>
 					<span class="glyphicon glyphicon-trash"></span>
 				</td>
 				<% if false %>

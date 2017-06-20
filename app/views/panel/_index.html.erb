@@ -7,7 +7,7 @@
 <table id="index-panel">
   <thead>
     <tr id="header-ind">
-			<% @fields.values.each_with_index do |f,i| %>
+			<% @fields.values.each do |f| %>
 			<td class="head-ind"><%= f %></td>
 			<% end %>
 			<% @foto.values.each do |f| %>
@@ -63,6 +63,6 @@
 
 <script type="text/javascript">
 	$(".head-ind").each(function(index){
-		$(this).css({"width": adjustWidths($(".head-ind").length), "text-align": "center", "font-weight": "500"});
+		$(this).css({"width": adjustWidths($(".head-ind").length), "text-align": "center", "font-weight": "500","font-size": "16px"});
 	});
 </script>
