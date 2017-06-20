@@ -246,7 +246,15 @@
 	width: 99%;
 	margin: 0 auto;
 	table-layout: fixed;
-	word-break: break-all;
+	text-align: justify;
 }
 
-#index-panel tr td { padding: 1px 3px; } 
+#index-panel tr td { 
+	padding: 1px 3px; 
+	border-top: 1px solid rgba(0,0,0,0.25);
+	border-bottom: 1px solid rgba(0,0,0,0.25);
+}
+
+#index-panel tr:nth-child(odd){
+	background-color: rgba(158,102,128,0.4);
+}
