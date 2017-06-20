@@ -65,4 +65,9 @@
 	$(".head-ind").each(function(index){
 		$(this).css({"width": adjustWidths($(".head-ind").length), "text-align": "center", "font-weight": "500","font-size": "16px"});
 	});
+	$(".ind-cell").each(function(index){
+		if(this.html().length > 450){
+			this.html(this.html.substring(0,450) + "...");
+		}
+	});
 </script>
