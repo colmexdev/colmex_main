@@ -11,6 +11,7 @@ class PanelController < ApplicationController
   end
 
   def index 
+    logger.debug @sets
     @set = @sets[params[:set]][:model]
     @fields = @sets[:params[:set]][:fields]
     @foto = @sets[params[:set]][:imgs]
