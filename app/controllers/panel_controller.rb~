@@ -127,7 +127,7 @@ class PanelController < ApplicationController
         model: Academico,
         fields: {nombre: "Nombre",inicial: "Inicial",correo: "Correo electrónico",adscripcion: "Centro de Estudios",lineas_investigacion: "Líneas de investigación",pagina: "Sitio personal"},
         imgs: {foto: "Foto"}
-      }, "Usuarios gestores":
+      }, "Usuarios gestores": {
         model: Admin,
         fields: {usuario: "Usuario",admin: "Tipo"},
         imgs: {}

@@ -1,5 +1,5 @@
 class PanelController < ApplicationController
-  before_action :selectSet, only: [:index, :mostrar]
+  before_action :select_set, only: [:index, :mostrar]
 
   def principal
     respond_to do |format|
@@ -77,7 +77,7 @@ class PanelController < ApplicationController
 
   private
 
-  def selectSet
+  def select_set
     @sets = {
       "Profesores eméritos": {
         model: Emerito, 
