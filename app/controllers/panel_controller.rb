@@ -11,9 +11,8 @@ class PanelController < ApplicationController
   end
 
   def index 
-    logger.debug @sets
-    @set = @sets[params[:set]][:model]
-    @fields = @sets[:params[:set]][:fields]
+    @set = @sets[params[:set]][:model].all
+    @fields = @sets[params[:set]][:fields]
     @foto = @sets[params[:set]][:imgs]
     #case params[:set]
 		# when "Profesores eméritos"
