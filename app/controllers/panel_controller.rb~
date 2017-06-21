@@ -10,11 +10,10 @@ class PanelController < ApplicationController
   def panel
   end
 
-  def index
-    group = 
-    @set = ""
-    @fields = {}
-    @foto = {}
+  def index 
+    @set = @sets[params[:set]][:model]
+    @fields = @sets[:params[:set]][:fields]
+    @foto = @sets[params[:set]][:imgs]
     #case params[:set]
 		# when "Profesores eméritos"
     #    @set = Emerito.all
@@ -70,8 +69,7 @@ class PanelController < ApplicationController
   end
 
   def mostrar
-    models = {"Profesores eméritos" => Emerito,"Programas docentes" => Curso,"Directorio de Autoridades" => Personal,"Categorías de Premios" => Categorium,"Premios y distinciones" => Premiado,"Documentos varios" => Documento,"Descubres" => Descubre,"Categorías de 'Descubre'" => Content,"Imágenes de slider" => Slider,"Cátedras y seminarios" => Catedra,"Frases en página principal" => Frase,"Directorio académico" => Academico,"Usuarios gestores" => Admin}
-    @obj = models[params[:set]].find(params[:id])
+    @obj = @sets[params[:set]][:model].find(params[:id])
     respond_to do |format|
       format.js
     end
