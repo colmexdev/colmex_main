@@ -3,14 +3,14 @@
 	</thead>
 	<tbody>
 		<% @fields.each do |f| %>
-		<tr>
-			<td><%= f[1] %></td>
-			<td><%= raw(@obj[f[0]]) %></td>
+		<tr class="row-ind">
+			<td class="ind-cell"><%= f[1] %></td>
+			<td class="ind-cell"><%= raw(@obj[f[0]]) %></td>
 		</tr>
 		<% end %>
 		<% @imgs.each do |f| %>
-		<tr>
-			<td><%= f[1] %></td>
+		<tr class="row-ind">
+			<td class="ind-cell"><%= f[1] %></td>
 			<% val = f[1] %>
 			<% if val == "foto" %>
 				<td class="ind-cell"><%= image_tag(@obj.foto.url) %></td>

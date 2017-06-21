@@ -12,17 +12,17 @@
 		<tr class="row-ind">
 			<td class="ind-cell"><%= f[1] %></td>
 			<% val = f[1] %>
-			<% if val == "foto" %>
+			<% if val == "Foto" %>
 				<td class="ind-cell"><%= image_tag(@obj.foto.url) %></td>
-			<% elsif val == "imagen" %>
+			<% elsif val == "Imagen" %>
 				<td class="ind-cell"><%= image_tag(@obj.imagen.url) %></td>
-			<% elsif val == "icono" %>
+			<% elsif val == "Ícono" %>
 				<td class="ind-cell"><%= image_tag(@obj.icono.url) %></td>	
-			<% elsif val == "badge" %>
+			<% elsif val == "Badge" %>
 				<td class="ind-cell"><%= image_tag(@obj.badge.url) %></td>	
-			<% elsif val == "badge_eng" %>
+			<% elsif val == "Badge (Inglés)" %>
 				<td class="ind-cell"><%= image_tag(@obj.badge_eng.url) %></td>	
-			<% elsif val == "archivo" %>
+			<% elsif val == "Archivo" %>
 				<td class="ind-cell"><%= link_to image_tag("documento.png"), @obj.archivo.url, target: "_blank" %></td>
 			<% end %>
 		</tr>
