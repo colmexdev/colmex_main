@@ -121,7 +121,7 @@ class PanelController < ApplicationController
         imgs: {}
       }, "Frases en página principal": {
         model: Frase,
-        fields: {cita: "Cita",cita_eng: "Cita (Inglés)",autor: "Autor"}
+        fields: {cita: "Cita",cita_eng: "Cita (Inglés)",autor: "Autor"},
         imgs: {}
       }, "Directorio académico": {
         model: Academico,
@@ -129,7 +129,7 @@ class PanelController < ApplicationController
         imgs: {foto: "Foto"}
       }, "Usuarios gestores":
         model: Admin,
-        fields: {usuario: "Usuario",admin: "Tipo"}
+        fields: {usuario: "Usuario",admin: "Tipo"},
         imgs: {}
       }
     }
