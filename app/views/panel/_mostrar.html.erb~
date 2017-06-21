@@ -1,29 +1,29 @@
-<% obj_hash = @obj.as_json %>
 <table id="index-panel">
 	<thead>
 	</thead>
 	<tbody>
-		<% @fields.each do |f| %>
+		<% @fields.each_with_index do |f,i| %>
 		<tr>
-			<td><%= f %></td>
-			<td><%= raw(obj_hash[f.to_sym]) %></td>
+			<td><%= f.keys[i] %></td>
+			<td><%= raw(@obj[f.values[i]]) %></td>
 		</tr>
 		<% end %>
-		<% @imgs.each do |f| %>
+		<% @imgs.each_with_index do |f,i| %>
 		<tr>
-			<td><%= f %></td>
-			<% if f.to_s == "foto" %>
-				<td class="ind-cell"><%= image_tag(obj.foto.url) %></td>
-			<% elsif f.to_s == "imagen" %>
-				<td class="ind-cell"><%= image_tag(obj.imagen.url) %></td>
-			<% elsif f.to_s == "icono" %>
-				<td class="ind-cell"><%= image_tag(obj.icono.url) %></td>	
-			<% elsif f.to_s == "badge" %>
-				<td class="ind-cell"><%= image_tag(obj.badge.url) %></td>	
-			<% elsif f.to_s == "badge_eng" %>
-				<td class="ind-cell"><%= image_tag(obj.badge_eng.url) %></td>	
-			<% elsif f.to_s == "archivo" %>
-				<td class="ind-cell"><%= link_to image_tag("documento.png"), obj.archivo.url, target: "_blank" %></td>
+			<td><%= f.keys[i] %></td>
+			<% val = f.values[i] %>
+			<% if val == "foto" %>
+				<td class="ind-cell"><%= image_tag(@obj.foto.url) %></td>
+			<% elsif val == "imagen" %>
+				<td class="ind-cell"><%= image_tag(@obj.imagen.url) %></td>
+			<% elsif val == "icono" %>
+				<td class="ind-cell"><%= image_tag(@obj.icono.url) %></td>	
+			<% elsif val == "badge" %>
+				<td class="ind-cell"><%= image_tag(@obj.badge.url) %></td>	
+			<% elsif val == "badge_eng" %>
+				<td class="ind-cell"><%= image_tag(@obj.badge_eng.url) %></td>	
+			<% elsif val == "archivo" %>
+				<td class="ind-cell"><%= link_to image_tag("documento.png"), @obj.archivo.url, target: "_blank" %></td>
 			<% end %>
 		</tr>
 		<% end %>
