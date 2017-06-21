@@ -246,6 +246,7 @@
 	width: 99%;
 	min-width: 1000px;
 	margin: 0 auto;
+	margin-bottom: 69px;
 	table-layout: fixed;
 	text-align: center;
 	word-break: break-all;
@@ -282,4 +283,15 @@
 .link-img-panel, .link-img-panel:hover, .link-img-panel:active, .link-img-panel:visited, .link-img-panel:focus{
 	text-decoration: none;
 	color: #333;
+}
+
+.left-align{
+	text-align: left;
+	padding: 15px 20px;
+	font-size: 15px;
+}
+
+.marker{
+	font-weight: 500;
+	font-size:17px;
 }
