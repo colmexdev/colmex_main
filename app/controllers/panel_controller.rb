@@ -11,9 +11,9 @@ class PanelController < ApplicationController
   end
 
   def index 
-    @set = @sets[params[:set].to_s][:model].all
-    @fields = @sets[params[:set]][:fields]
-    @foto = @sets[params[:set]][:imgs]
+    @set = @sets[params[:set].to_sym][:model].all
+    @fields = @sets[params[:set].to_sym][:fields]
+    @foto = @sets[params[:set].to_sym][:imgs]
     #case params[:set]
 		# when "Profesores eméritos"
     #    @set = Emerito.all
