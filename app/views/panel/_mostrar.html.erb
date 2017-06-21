@@ -12,19 +12,18 @@
 		<% @imgs.each do |f| %>
 		<tr>
 			<td><%= f %></td>
-				<% if f.to_s == "foto" %>
-					<td class="ind-cell"><%= image_tag(obj.foto.url) %></td>
-				<% elsif f.to_s == "imagen" %>
-					<td class="ind-cell"><%= image_tag(obj.imagen.url) %></td>
-				<% elsif f.to_s == "icono" %>
-					<td class="ind-cell"><%= image_tag(obj.icono.url) %></td>	
-				<% elsif f.to_s == "badge" %>
-					<td class="ind-cell"><%= image_tag(obj.badge.url) %></td>	
-				<% elsif f.to_s == "badge_eng" %>
-					<td class="ind-cell"><%= image_tag(obj.badge_eng.url) %></td>	
-				<% elsif f.to_s == "archivo" %>
-					<td class="ind-cell"><%= link_to image_tag("documento.png"), obj.archivo.url, target: "_blank" %></td>
-				<% end %>
+			<% if f.to_s == "foto" %>
+				<td class="ind-cell"><%= image_tag(obj.foto.url) %></td>
+			<% elsif f.to_s == "imagen" %>
+				<td class="ind-cell"><%= image_tag(obj.imagen.url) %></td>
+			<% elsif f.to_s == "icono" %>
+				<td class="ind-cell"><%= image_tag(obj.icono.url) %></td>	
+			<% elsif f.to_s == "badge" %>
+				<td class="ind-cell"><%= image_tag(obj.badge.url) %></td>	
+			<% elsif f.to_s == "badge_eng" %>
+				<td class="ind-cell"><%= image_tag(obj.badge_eng.url) %></td>	
+			<% elsif f.to_s == "archivo" %>
+				<td class="ind-cell"><%= link_to image_tag("documento.png"), obj.archivo.url, target: "_blank" %></td>
 			<% end %>
 		</tr>
 		<% end %>
