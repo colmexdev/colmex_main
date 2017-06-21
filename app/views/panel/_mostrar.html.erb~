@@ -2,16 +2,16 @@
 	<thead>
 	</thead>
 	<tbody>
-		<% @fields.each_with_index do |f,i| %>
+		<% @fields.each do |f| %>
 		<tr>
-			<td><%= f.keys[i] %></td>
-			<td><%= raw(@obj[f.values[i]]) %></td>
+			<td><%= f[1] %></td>
+			<td><%= raw(@obj[f[0]]) %></td>
 		</tr>
 		<% end %>
-		<% @imgs.each_with_index do |f,i| %>
+		<% @imgs.each do |f| %>
 		<tr>
-			<td><%= f.keys[i] %></td>
-			<% val = f.values[i] %>
+			<td><%= f[1] %></td>
+			<% val = f[0] %>
 			<% if val == "foto" %>
 				<td class="ind-cell"><%= image_tag(@obj.foto.url) %></td>
 			<% elsif val == "imagen" %>
