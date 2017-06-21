@@ -21,7 +21,7 @@
     <% @set.each do |s| %>
       <tr class="row-ind">
 				<% @fields.keys.each do |f| %>
-        <td class="ind-cell"><%= s[f.to_s].html_safe %></td>
+        <td class="ind-cell"><%= raw(s[f.to_s]) %></td>
 				<% end %>
 				<% @foto.keys.each do |f| %>
 					<% if f.to_s == "foto" %>

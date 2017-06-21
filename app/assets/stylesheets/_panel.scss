@@ -278,3 +278,8 @@
 	margin: 0 4px;
 	cursor: pointer;
 }
+
+.link-img-panel, .link-img-panel:hover, .link-img-panel:active, .link-img-panel:visited, .link-img-panel:focus{
+	text-decoration: none;
+	color: #333;
+}
