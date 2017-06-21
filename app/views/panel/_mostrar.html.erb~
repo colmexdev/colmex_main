@@ -11,7 +11,7 @@
 		<% @imgs.each do |f| %>
 		<tr>
 			<td><%= f[1] %></td>
-			<% val = f[0] %>
+			<% val = f[1] %>
 			<% if val == "foto" %>
 				<td class="ind-cell"><%= image_tag(@obj.foto.url) %></td>
 			<% elsif val == "imagen" %>
