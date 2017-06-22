@@ -25,6 +25,8 @@ Rails.application.routes.draw do
   get 'panel/principal' => 'panel#principal', :as => :panel_princ
   get 'panel/index' => 'panel#index', :as => :panel_index
   get 'panel/:id' => 'panel#mostrar', :as => :panel_mostrar
+  get 'panel/generar' => 'panel#generar', :as => :panel_nuevo
+  post 'panel' => 'panel#crear'
 
   get 'centros_de_estudio/inicio' => "centros_de_estudio#inicio", :as => :centros_de_estudio
 
