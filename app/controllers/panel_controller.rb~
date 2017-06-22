@@ -1,5 +1,5 @@
 class PanelController < ApplicationController
-  before_action :select_set, only: [:index, :mostrar, :generar, :crear]
+  before_action :select_set, only: [:index, :mostrar, :generar, :crear, :eliminar]
 
   def principal
     respond_to do |format|
