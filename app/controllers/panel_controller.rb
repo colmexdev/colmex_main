@@ -1,5 +1,5 @@
 class PanelController < ApplicationController
-  before_action :select_set, only: [:index, :mostrar, :generar, :crear]
+  before_action :select_set, only: [:index, :mostrar, :generar, :crear, :eliminar]
 
   def principal
     respond_to do |format|
@@ -53,7 +53,7 @@ class PanelController < ApplicationController
   end
 
   def eliminar
-		@admin.destroy
+		@sets[params[:set]][:model].find(params[:id]).destroy
 		respond_to do |format|
       format.js { render :index, params: {set: params[:set]}, notice: 'Se ha eliminado el objeto exitosamente'}
 		  #format.html { redirect_to admins_url, notice: 'Admin was successfully destroyed.' }
