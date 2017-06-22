@@ -39,12 +39,12 @@ class PanelController < ApplicationController
     @obj = @sets[params[:set].to_sym][:model].new(obj_params)
     respond_to do |format|
       if @obj.save
-        logger.info @obj
+        @fields = @sets[params[:set].to_sym][:fields]
+        @foto = @sets[params[:set].to_sym][:imgs]
         format.js { render :mostrar, params: {set: params[:set]}, notice: 'Objeto generado exitosamente.' }
         #format.html { redirect_to @, notice: 'Admin was successfully created.' }
         #format.json { render :show, status: :created, location: @admin }
       else
-        logger.debug @obj
         format.js { render :generar }
         #format.html { render :new }
         format.json { render json: @obj.errors, status: :unprocessable_entity }
