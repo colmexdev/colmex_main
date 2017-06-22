@@ -54,6 +54,9 @@ class PanelController < ApplicationController
 
   def eliminar
 		@sets[params[:set].to_sym][:model].find(params[:id]).destroy
+    @set = @sets[params[:set].to_sym][:model].all
+    @fields = @sets[params[:set].to_sym][:fields]
+    @foto = @sets[params[:set].to_sym][:imgs]
 		respond_to do |format|
       format.js { render :index, params: {set: params[:set]}, notice: 'Se ha eliminado el objeto exitosamente'}
 		  #format.html { redirect_to admins_url, notice: 'Admin was successfully destroyed.' }
