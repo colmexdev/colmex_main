@@ -1,10 +1,10 @@
-<%= form_for(@curso, :html => { :multipart => true}) do |f| %>
-  <% if @curso.errors.any? %>
+<%= form_for(@obj, :url => { :}, :html => { :multipart => true}) do |f| %>
+  <% if @obj.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@curso.errors.count, "error") %> prohibited this curso from being saved:</h2>
+      <h2><%= pluralize(@obj.errors.count, "error") %> prohibited this curso from being saved:</h2>
 
       <ul>
-      <% @curso.errors.full_messages.each do |message| %>
+      <% @obj.errors.full_messages.each do |message| %>
         <li><%= message %></li>
       <% end %>
       </ul>
@@ -53,15 +53,15 @@
   </div>
   <div class="field">
     <%= f.label :programa %><br>
-    <%= f.select(:programa, options_for_select([['Licenciatura','Licenciatura'],['Maestría','Maestria'],['Doctorado','Doctorado'],['Curso','Curso'], ['Convocatoria', 'Convocatoria']],  @curso.programa || 'Licenciatura'), {}, {:onchange => "ocultarTipoCurso()"}) %>
+    <%= f.select(:programa, options_for_select([['Licenciatura','Licenciatura'],['Maestría','Maestria'],['Doctorado','Doctorado'],['Curso','Curso'], ['Convocatoria', 'Convocatoria']],  @obj.programa || 'Licenciatura'), {}, {:onchange => "ocultarTipoCurso()"}) %>
   </div>
   <div class="field" id="tipo_curso" style="display:none;">
     <%= f.label :tipo_curso %><br>
-    <%= f.select(:tipo_curso, options_from_collection_for_select(TipoCurso.all, "tipo", "tipo", @curso.tipo_curso || ""), {}, {}) %>
+    <%= f.select(:tipo_curso, options_from_collection_for_select(TipoCurso.all, "tipo", "tipo", @obj.tipo_curso || ""), {}, {}) %>
   </div>
   <div class="field" id="tipo_c_linea" style="display:none;">
     <%= f.label :tipo_curso_linea %><br>
-    <%= f.select(:tipo_curso_linea, options_for_select([['MOOC','MOOC'],['Breve','Breve']],  @curso.tipo_curso_linea || ''), {}, {}) %>
+    <%= f.select(:tipo_curso_linea, options_for_select([['MOOC','MOOC'],['Breve','Breve']],  @obj.tipo_curso_linea || ''), {}, {}) %>
   </div>
   <div class="field">
     <%= f.label :imparte %><br>
