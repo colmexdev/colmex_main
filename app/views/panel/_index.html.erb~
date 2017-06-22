@@ -39,7 +39,7 @@
 					<% end %>
 				<% end %>
 				<td class="ind-cell">
-					<a data-remote=true href="<%= panel_mostrar_path(:set => params[:set], :id => s.id) %>"><span class="clickable-g glyphicon glyphicon-eye-open"></span></a>
+					<a class="link-img-panel" data-remote=true onclick="hideLink(event,'<%= panel_mostrar_path(:set => params[:set], :id => s.id) %>')"><span class="clickable-g glyphicon glyphicon-eye-open"></span></a>
 					<span class="clickable-g glyphicon glyphicon-pencil"></span>
 					<span class="clickable-g glyphicon glyphicon-trash"></span>
 				</td>

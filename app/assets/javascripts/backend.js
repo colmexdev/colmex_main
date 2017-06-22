@@ -15,3 +15,9 @@ function slideMenu(){
 function adjustWidths(cols){
 	return (100/cols) + "%";
 }
+
+function hideLink(event,link){
+	event.preventDefault();
+	$("#index-panel").append('<a data-remote=true href="'+link+'" style="display:none;" id="vlink"></a>');
+	$("#vlink").trigger("click");
+}
