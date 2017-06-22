@@ -1,5 +1,5 @@
 class PanelController < ApplicationController
-  before_action :select_set, only: [:index, :mostrar]
+  before_action :select_set, only: [:index, :mostrar, :generar]
 
   def principal
     respond_to do |format|
@@ -26,6 +26,24 @@ class PanelController < ApplicationController
     respond_to do |format|
       format.js
     end
+  end
+
+  def generar
+    @obj = @sets[params[:set].to_sym][:model].new
+  end
+
+  def crear
+    @obj = @sets[params[:set].to_sym][:model].new(admin_params)
+
+    #respond_to do |format|
+    #  if @obj.save
+    #    format.html { redirect_to @, notice: 'Admin was successfully created.' }
+    #    format.json { render :show, status: :created, location: @admin }
+    #  else
+    #    format.html { render :new }
+    #    format.json { render json: @admin.errors, status: :unprocessable_entity }
+    #  end
+    #end
   end
 
   private

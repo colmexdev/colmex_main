@@ -30,6 +30,9 @@ class PanelController < ApplicationController
 
   def generar
     @obj = @sets[params[:set].to_sym][:model].new
+    respond_to do |format|
+      format.js
+    end
   end
 
   def crear
