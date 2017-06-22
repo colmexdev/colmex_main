@@ -23,7 +23,7 @@
 			<ul id="ops-lat">
 				<% if current_admin.admin == "Administrador" || current_admin.admin == "Editor" %>
 				<li class="op-gest">
-				<a class="link-panel" onclick="hideLink(event,'#ops-lat','<%= panel_index_path(:set => "Profesores eméritos") %>">Profesores eméritos</a>
+				<a class="link-panel" onclick="hideLink(event,'#ops-lat','<%= panel_index_path(:set => "Profesores eméritos") %>')">Profesores eméritos</a>
 
 				</li>
 				<% if false %>
