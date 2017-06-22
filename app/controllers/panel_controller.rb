@@ -40,7 +40,7 @@ class PanelController < ApplicationController
     respond_to do |format|
       if @obj.save
         logger.info @obj
-        format.js { render :mostrar }
+        format.js { render :mostrar, params: {set: params[:set]}, notice: 'Objeto generado exitosamente.' }
         #format.html { redirect_to @, notice: 'Admin was successfully created.' }
         #format.json { render :show, status: :created, location: @admin }
       else

@@ -41,7 +41,7 @@
 				<td class="ind-cell">
 					<a class="link-img-panel" onclick="hideLink(event,'#index-panel','<%= panel_mostrar_path(:set => params[:set], :id => s.id) %>')"><span class="clickable-g glyphicon glyphicon-eye-open"></span></a>
 					<a class="link-img-panel" onclick="hideLink(event,'#index-panel','<%= panel_nuevo_path(:set => params[:set]) %>')"><span class="clickable-g glyphicon glyphicon-pencil"></span></a>
-					<span class="clickable-g glyphicon glyphicon-trash"></span>
+					<a class="link-img-panel" onclick="hideLink(event,'#index-panel','<%= panel_eliminar_path(:set => params[:set], :id => s.id) %>')"><span class="clickable-g glyphicon glyphicon-trash"></span></a>
 				</td>
 				<% if false %>
         <td><%= link_to 'Show', s %></td>
