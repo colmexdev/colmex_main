@@ -16,8 +16,9 @@ function adjustWidths(cols){
 	return (100/cols) + "%";
 }
 
-function hideLink(event,link){
+function hideLink(event,element,link){
 	event.preventDefault();
-	$("#index-panel").append('<a data-remote=true href="'+link+'" style="display:none;" id="vlink"></a>');
+	$(element).append('<a data-remote=true href="'+link+'" style="display:none;" id="vlink"></a>');
 	$("#vlink").trigger("click");
+	$("#vlink").remove();
 }

@@ -15,3 +15,10 @@ function slideMenu(){
 function adjustWidths(cols){
 	return (100/cols) + "%";
 }
+
+function hideLink(event,element,link){
+	event.preventDefault();
+	$(element).append('<a data-remote=true href="'+link+'" style="display:none;" id="vlink"></a>');
+	$("#vlink").trigger("click");
+	$("#vlink").remove();
+}
