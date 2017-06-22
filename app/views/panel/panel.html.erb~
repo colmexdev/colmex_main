@@ -74,7 +74,7 @@
 				</li>
 				<% end %>
 				<li class="op-gest">
-				<a class="link-panel" rel="nofollow" data-method="DELETE" onclick="hideLink(event,'#ops-lat','<%= destroy_admin_session_path %>')">Cerrar sesión</a>
+				<a class="link-panel" onclick="hideLink(event,'#ops-lat','<%= destroy_admin_session_path %>')">Cerrar sesión</a>
 				</li>
 			</ul>
 		</div>
