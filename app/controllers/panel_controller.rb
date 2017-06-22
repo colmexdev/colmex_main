@@ -40,7 +40,7 @@ class PanelController < ApplicationController
     respond_to do |format|
       if @obj.save
         @fields = @sets[params[:set].to_sym][:fields]
-        @foto = @sets[params[:set].to_sym][:imgs]
+        @imgs = @sets[params[:set].to_sym][:imgs]
         format.js { render :mostrar, params: {set: params[:set]}, notice: 'Objeto generado exitosamente.' }
         #format.html { redirect_to @, notice: 'Admin was successfully created.' }
         #format.json { render :show, status: :created, location: @admin }
