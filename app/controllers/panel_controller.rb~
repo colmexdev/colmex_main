@@ -40,13 +40,11 @@ class PanelController < ApplicationController
     respond_to do |format|
       if @obj.save
         @fields = @sets[params[:set].to_sym][:fields]
-        @foto = @sets[params[:set].to_sym][:imgs]
+        @imgs = @sets[params[:set].to_sym][:imgs]
         format.js { render :mostrar, params: {set: params[:set]}, notice: 'Objeto generado exitosamente.' }
-        #format.html { redirect_to @, notice: 'Admin was successfully created.' }
         #format.json { render :show, status: :created, location: @admin }
       else
         format.js { render :generar }
-        #format.html { render :new }
         format.json { render json: @obj.errors, status: :unprocessable_entity }
       end
     end
@@ -130,6 +128,9 @@ class PanelController < ApplicationController
     elsif params[:set] == "Programas docentes"
       params.require(:curso).permit(:titulo, :descripcion, :fecha_inicio_conv, :fecha_fin_conv, :fecha_inicio_clases, :liga, :programa, :tipo_curso, :traduccion_tit, :traduccion_desc, :tags, :fecha_fin_clases, :tipo_curso_linea, :foto, :imparte)
     elsif params[:set] == "Directorio de Autoridades"
+      params.require(:personal).permit(:nombre, :seccion, :correo, :telefono, :extension, :cargo, :depto, :foto, :cargo_eng, :depto_eng)
+    elsif params[:set] == "Categorías de Premios"
+      params.require(:categorium).permit(:nombre,:nombre_eng)
     end
   end
 end
