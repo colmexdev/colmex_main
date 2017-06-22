@@ -1,1 +1,3 @@
-Sección de generar nuevo <%= params[:set] %><br>
+<% if params[:set] == "Profesores eméritos" %>
+	<%= render 'panel/form_emerito' %>
+<% end %>

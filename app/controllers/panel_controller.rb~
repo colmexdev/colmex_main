@@ -30,10 +30,13 @@ class PanelController < ApplicationController
 
   def generar
     @obj = @sets[params[:set].to_sym][:model].new
+    respond_to do |format|
+      format.js
+    end
   end
 
   def crear
-    @obj = @sets[params[:set].to_sym][:model].new(admin_params)
+    @obj = @sets[params[:set].to_sym][:model].new(object_params)
 
     #respond_to do |format|
     #  if @obj.save
@@ -104,5 +107,9 @@ class PanelController < ApplicationController
         imgs: {}
       }
     }
+  end
+
+  def obj_params
+    params.require(:emerito).permit(:nombre, :fecha_anexion, :centro, :semblanza, :foto, :semblanza_eng)
   end
 end

@@ -36,7 +36,7 @@ class PanelController < ApplicationController
   end
 
   def crear
-    @obj = @sets[params[:set].to_sym][:model].new(admin_params)
+    @obj = @sets[params[:set].to_sym][:model].new(object_params)
 
     #respond_to do |format|
     #  if @obj.save
@@ -107,5 +107,10 @@ class PanelController < ApplicationController
         imgs: {}
       }
     }
+  end
+
+  def obj_params
+    params.require(:emerito).permit(:nombre, :fecha_anexion, :centro, :semblanza, :foto, :semblanza_eng)
+    params.require(:curso).permit(:titulo, :descripcion, :fecha_inicio_conv, :fecha_fin_conv, :fecha_inicio_clases, :liga, :programa, :tipo_curso, :traduccion_tit, :traduccion_desc, :tags, :fecha_fin_clases, :tipo_curso_linea, :foto, :imparte)
   end
 end
