@@ -1,1 +1,1 @@
-Sección de generar nuevo
+Sección de generar nuevo <%= params[:set] %><br>
