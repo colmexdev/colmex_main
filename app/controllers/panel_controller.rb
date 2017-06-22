@@ -37,16 +37,17 @@ class PanelController < ApplicationController
 
   def crear
     @obj = @sets[params[:set].to_sym][:model].new(obj_params)
-    logger.debug @obj
-    #respond_to do |format|
-    #  if @obj.save
-    #    format.html { redirect_to @, notice: 'Admin was successfully created.' }
-    #    format.json { render :show, status: :created, location: @admin }
-    #  else
-    #    format.html { render :new }
-    #    format.json { render json: @admin.errors, status: :unprocessable_entity }
-    #  end
-    #end
+    respond_to do |format|
+      if @obj.save
+        format.js { render 'panel/mostrar' }
+        #format.html { redirect_to @, notice: 'Admin was successfully created.' }
+        #format.json { render :show, status: :created, location: @admin }
+      else
+        format.js { render 'panel/generar' }
+        #format.html { render :new }
+        #format.json { render json: @admin.errors, status: :unprocessable_entity }
+      end
+    end
   end
 
   private
