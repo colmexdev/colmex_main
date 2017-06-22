@@ -39,10 +39,12 @@ class PanelController < ApplicationController
     @obj = @sets[params[:set].to_sym][:model].new(obj_params)
     respond_to do |format|
       if @obj.save
+        logger.info @obj
         format.js { render :mostrar }
         #format.html { redirect_to @, notice: 'Admin was successfully created.' }
         #format.json { render :show, status: :created, location: @admin }
       else
+        logger.debug @obj
         format.js { render :generar }
         #format.html { render :new }
         format.json { render json: @obj.errors, status: :unprocessable_entity }
