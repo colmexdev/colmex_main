@@ -52,6 +52,15 @@ class PanelController < ApplicationController
     end
   end
 
+  def eliminar
+		@admin.destroy
+		respond_to do |format|
+      format.js { render :index, params: {set: params[:set]}, notice: 'Se ha eliminado el objeto exitosamente'}
+		  #format.html { redirect_to admins_url, notice: 'Admin was successfully destroyed.' }
+		  format.json { head :no_content }
+		end
+  end
+
   private
 
   def select_set
@@ -117,6 +126,7 @@ class PanelController < ApplicationController
       params.require(:emerito).permit(:nombre, :fecha_anexion, :centro, :semblanza, :foto, :semblanza_eng)
     elsif params[:set] == "Programas docentes"
       params.require(:curso).permit(:titulo, :descripcion, :fecha_inicio_conv, :fecha_fin_conv, :fecha_inicio_clases, :liga, :programa, :tipo_curso, :traduccion_tit, :traduccion_desc, :tags, :fecha_fin_clases, :tipo_curso_linea, :foto, :imparte)
+    elsif params[:set] == "Directorio de Autoridades"
     end
   end
 end
