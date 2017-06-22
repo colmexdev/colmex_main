@@ -1,5 +1,5 @@
 class PanelController < ApplicationController
-  before_action :select_set, only: [:index, :mostrar, :generar]
+  before_action :select_set, only: [:index, :mostrar, :generar, :crear]
 
   def principal
     respond_to do |format|
@@ -36,6 +36,7 @@ class PanelController < ApplicationController
   end
 
   def crear
+     logger.debug params[:set]
     @obj = @sets[params[:set].to_sym][:model].new(object_params)
 
     #respond_to do |format|
