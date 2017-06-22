@@ -43,9 +43,9 @@ class PanelController < ApplicationController
         #format.html { redirect_to @, notice: 'Admin was successfully created.' }
         #format.json { render :show, status: :created, location: @admin }
       else
-        format.js { render 'panel/generar' }
+        format.js
         #format.html { render :new }
-        #format.json { render json: @admin.errors, status: :unprocessable_entity }
+        format.json { render json: @obj.errors, status: :unprocessable_entity }
       end
     end
   end
