@@ -36,9 +36,8 @@ class PanelController < ApplicationController
   end
 
   def crear
-     logger.debug params[:set]
-    @obj = @sets[params[:set].to_sym][:model].new(object_params)
-
+    @obj = @sets[params[:set].to_sym][:model].new(obj_params)
+    logger.debug @obj
     #respond_to do |format|
     #  if @obj.save
     #    format.html { redirect_to @, notice: 'Admin was successfully created.' }
