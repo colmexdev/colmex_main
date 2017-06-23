@@ -1,6 +1,6 @@
 
 
-<%= form_for(@obj, :url => {:controller => "panel", :action => "crear", :params => {:set => "Profesores eméritos"}}, :html => { :multipart => true }) do |f| %>
+<%= form_for(@obj, :remote => true, :url => {:controller => "panel", :action => "crear", :params => {:set => "Profesores eméritos", :id => @obj.id}}, :html => { :multipart => true }) do |f| %>
   <% if @obj.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@obj.errors.count, "error") %> impidieron generar este objeto:</h2>

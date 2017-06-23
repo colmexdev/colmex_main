@@ -30,7 +30,6 @@ Rails.application.routes.draw do
   get 'panel/:id' => 'panel#mostrar', :as => :panel_mostrar
   delete 'panel/:id' => 'panel#eliminar', :as => :panel_eliminar
   put 'panel/:id' => 'panel#actualizar'
-  patch 'panel' => 'panel#actualizar'
   patch 'panel/:id' => 'panel#actualizar'
 
   get 'centros_de_estudio/inicio' => "centros_de_estudio#inicio", :as => :centros_de_estudio
