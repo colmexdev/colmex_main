@@ -25,8 +25,9 @@ Rails.application.routes.draw do
   get 'panel/principal' => 'panel#principal', :as => :panel_princ
   get 'panel/index' => 'panel#index', :as => :panel_index
   get 'panel/generar' => 'panel#generar', :as => :panel_nuevo
-  get 'panel/:id' => 'panel#mostrar', :as => :panel_mostrar
   post 'panel' => 'panel#crear'
+  get 'panel/:id' => 'panel#mostrar', :as => :panel_mostrar
+  delete 'panel/:id' => 'panel#eliminar', :as => :panel_eliminar
 
   get 'centros_de_estudio/inicio' => "centros_de_estudio#inicio", :as => :centros_de_estudio
 
