@@ -247,8 +247,7 @@
 #index-panel{
 	width: 99%;
 	min-width: 1000px;
-	margin: 0 auto;
-	margin-bottom: 69px;
+	margin: 35px auto;
 	table-layout: fixed;
 	text-align: center;
 	word-break: break-all;
@@ -300,4 +299,26 @@
 	width: 30%;
 	text-align: right;
 	padding: 15px 20px;
+}
+
+/* Sección de estilos de formas */
+#graphs-gest form{
+	width: 95%;
+	min-width: 750px;
+	margin: 45px auto 0 auto;
+}
+
+#graphs-gest form input[type="text"]{
+	background-color: inherit;
+	border: none;
+	border-bottom: 1px solid rgba(0,0,0,0.3);
+	font-size: 16px;
+	-webkit-transition: all 0.3s linear;
+	-moz-transition: all 0.3s linear;
+	-o-transition: all 0.3s linear;
+	transition: all 0.3s linear;
+}
+
+#graphs-gest form input[type="text"]:focus{
+	border-bottom: 2px solid rgba(0,0,0,0.5);
 }
