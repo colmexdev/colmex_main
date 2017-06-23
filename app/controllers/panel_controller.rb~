@@ -50,10 +50,18 @@ class PanelController < ApplicationController
     end
   end
 
+  def editar
+    @obj = @sets[params[:set].to_sym][:model].find(params[:id])
+    #@fields = @sets[params[:set].to_sym][:fields]
+    #@imgs = @sets[params[:set].to_sym][:imgs]
+  end
+
   def actualizar
     @obj = @sets[params[:set].to_sym][:model].find(params[:id])
     respond_to do |format|
       if @obj.update(obj_params)
+        @fields = @sets[params[:set].to_sym][:fields]
+        @imgs = @sets[params[:set].to_sym][:imgs]
         format.js { render :mostrar, params: {set: params[:set]}, notice: 'Objeto generado exitosamente.' }
         #format.json { render :show, status: :ok, location: @emerito }
       else
