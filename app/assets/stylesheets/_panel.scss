@@ -308,12 +308,14 @@
 	margin: 45px auto 0 auto;
 }
 
+/* Text-input */
 #graphs-gest form input[type="text"]{
 	background-color: inherit;
 	border: none;
 	border-bottom: 1px solid rgba(0,0,0,0.3);
 	font-size: 16px;
 	font-weight: 300;
+	padding-left: 10px;
 	-webkit-transition: all 0.3s linear;
 	-moz-transition: all 0.3s linear;
 	-o-transition: all 0.3s linear;
@@ -322,4 +324,24 @@
 
 #graphs-gest form input[type="text"]:focus{
 	border-bottom: 2px solid rgba(0,0,0,0.5);
+	font-weight: 500;
+}
+
+/* Text areas */
+#graphs-gest form textarea{
+	width: 95%;
+	min-height: 150px;
+	font-size: 16px;
+	border-radius: 3px;
+	border: 1px solid rgba(0,0,0,0.3);
+	font-weight: 300;
+	-webkit-transition: all 0.3s linear;
+	-moz-transition: all 0.3s linear;
+	-o-transition: all 0.3s linear;
+	transition: all 0.3s linear;
+}
+
+#graphs-gest form textarea:focus{
+	font-weight: 500;
+	border: 2px solid rgba(0,0,0,0.5);
 }
