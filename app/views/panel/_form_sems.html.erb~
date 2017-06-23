@@ -1,10 +1,10 @@
-<%= form_for(@catedra) do |f| %>
-  <% if @catedra.errors.any? %>
+<%= form_for(@obj), :action => (action_name == "editar" ? "editar" : "crear"), :params => {:set => "Profesores eméritos", :id => (@obj.id if action_name == "editar")}} do |f| %>
+  <% if @obj.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@catedra.errors.count, "error") %> prohibited this catedra from being saved:</h2>
+      <h2><%= pluralize(@obj.errors.count, "error") %> prohibited this catedra from being saved:</h2>
 
       <ul>
-      <% @catedra.errors.full_messages.each do |message| %>
+      <% @obj.errors.full_messages.each do |message| %>
         <li><%= message %></li>
       <% end %>
       </ul>
@@ -33,7 +33,7 @@
   </div>
   <div class="field">
     <%= f.label :tipo %><br>
-		<%= f.select(:tipo, [["Institucionales", "Institucionales"], ["CEAA", "CEAA"],["CEDUA","CEDUA"],["CEE","CEE"],["CEH","CEH"],["CEI","CEI"],["CELL","CELL"],["CES","CES"]], :selected => (@catedra.tipo || 'Institucionales')) %>
+		<%= f.select(:tipo, [["Institucionales", "Institucionales"], ["CEAA", "CEAA"],["CEDUA","CEDUA"],["CEE","CEE"],["CEH","CEH"],["CEI","CEI"],["CELL","CELL"],["CES","CES"]], :selected => (@obj.tipo || 'Institucionales')) %>
   </div>
   <div class="actions">
     <%= f.submit %>

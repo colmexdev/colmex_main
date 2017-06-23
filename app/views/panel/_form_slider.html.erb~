@@ -1,10 +1,10 @@
-<%= form_for(@slider, :html=> { :multipart => true}) do |f| %>
-  <% if @slider.errors.any? %>
+<%= form_for(@obj, :action => (action_name == "editar" ? "editar" : "crear"), :params => {:set => "Profesores eméritos", :id => (@obj.id if action_name == "editar")}}, :html=> { :multipart => true}) do |f| %>
+  <% if @obj.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@slider.errors.count, "error") %> prohibited this slider from being saved:</h2>
+      <h2><%= pluralize(@obj.errors.count, "error") %> prohibited this slider from being saved:</h2>
 
       <ul>
-      <% @slider.errors.full_messages.each do |message| %>
+      <% @obj.errors.full_messages.each do |message| %>
         <li><%= message %></li>
       <% end %>
       </ul>
@@ -29,7 +29,7 @@
   </div>
   <div class="field">
     <%= f.label :posicion %><br>
-    <%= f.select(:posicion, [['Superior izquierda','SI'],['Superior derecha','SD'],['Inferior derecha','ID'],['Inferior izquierda','II']], :selected => (@slider.posicion || 'SI')) %>
+    <%= f.select(:posicion, [['Superior izquierda','SI'],['Superior derecha','SD'],['Inferior derecha','ID'],['Inferior izquierda','II']], :selected => (@obj.posicion || 'SI')) %>
   </div>
   <div class="field">
     <%= f.label :fecha_expiracion %><br>

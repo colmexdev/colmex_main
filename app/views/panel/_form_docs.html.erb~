@@ -1,10 +1,10 @@
-<%= form_for(@documento, :html => { :multipart => true}) do |f| %>
-  <% if @documento.errors.any? %>
+<%= form_for(@obj, :action => (action_name == "editar" ? "editar" : "crear"), :params => {:set => "Profesores eméritos", :id => (@obj.id if action_name == "editar")}}, :html => { :multipart => true}) do |f| %>
+  <% if @obj.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@documento.errors.count, "error") %> prohibited this documento from being saved:</h2>
+      <h2><%= pluralize(@obj.errors.count, "error") %> prohibited this documento from being saved:</h2>
 
       <ul>
-      <% @documento.errors.full_messages.each do |message| %>
+      <% @obj.errors.full_messages.each do |message| %>
         <li><%= message %></li>
       <% end %>
       </ul>
@@ -28,7 +28,7 @@
   </div>
   <div class="field">
     <%= f.label :tipo %><br>
-    <%= f.select(:tipo, options_for_select([['Informe de actividades','Informe'],['Junta de Gobierno','Junta'],['Estatuto','Estatuto'],['Transparencia','Transparencia'], ['Reglamento', 'Reglamento'],['Marco normativo','Marco normativo'],['Unidad de Transparencia','Unidad de Transparencia']], @documento.tipo || 'Informe'),{},{:onchange => "ocultarAnio()"}) %>
+    <%= f.select(:tipo, options_for_select([['Informe de actividades','Informe'],['Junta de Gobierno','Junta'],['Estatuto','Estatuto'],['Transparencia','Transparencia'], ['Reglamento', 'Reglamento'],['Marco normativo','Marco normativo'],['Unidad de Transparencia','Unidad de Transparencia']], @obj.tipo || 'Informe'),{},{:onchange => "ocultarAnio()"}) %>
   </div>
   <div class="field" id="campo_anio" style="display:visible;">
     <%= f.label :anio %><br>

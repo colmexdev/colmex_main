@@ -1,10 +1,10 @@
-<%= form_for(@academico, :html => { :multipart => true}) do |f| %>
-  <% if @academico.errors.any? %>
+<%= form_for(@obj, :action => (action_name == "editar" ? "editar" : "crear"), :params => {:set => "Profesores eméritos", :id => (@obj.id if action_name == "editar")}}, :html => { :multipart => true}) do |f| %>
+  <% if @obj.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@academico.errors.count, "error") %> prohibited this academico from being saved:</h2>
+      <h2><%= pluralize(@obj.errors.count, "error") %> prohibited this academico from being saved:</h2>
 
       <ul>
-      <% @academico.errors.full_messages.each do |message| %>
+      <% @obj.errors.full_messages.each do |message| %>
         <li><%= message %></li>
       <% end %>
       </ul>
@@ -25,7 +25,7 @@
   </div>
   <div class="field">
     <%= f.label :adscripcion %><br>
-    <%= f.select(:adscripcion, [['Asia y África','Asia y África'],['Demográficos, Urbanos y Ambientales','Demográficos, Urbanos y Ambientales'],['Económicos','Económicos'],['Históricos','Históricos'],['Internacionales','Internacionales'],['Lingüísticos y Literarios','Lingüisticos y Literarios'],['Sociológicos','Sociológicos']], :selected => (@academico.adscripcion || current_admin.admin)) %>
+    <%= f.select(:adscripcion, [['Asia y África','Asia y África'],['Demográficos, Urbanos y Ambientales','Demográficos, Urbanos y Ambientales'],['Económicos','Económicos'],['Históricos','Históricos'],['Internacionales','Internacionales'],['Lingüísticos y Literarios','Lingüisticos y Literarios'],['Sociológicos','Sociológicos']], :selected => (@obj.adscripcion || current_admin.admin)) %>
   </div>
   <div class="field">
     <%= f.label :lineas_investigacion %><br>

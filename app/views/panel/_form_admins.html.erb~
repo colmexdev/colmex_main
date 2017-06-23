@@ -1,10 +1,10 @@
-<%= form_for(@admin) do |f| %>
-  <% if @admin.errors.any? %>
+<%= form_for(@obj), :action => (action_name == "editar" ? "editar" : "crear"), :params => {:set => "Profesores eméritos", :id => (@obj.id if action_name == "editar")}} do |f| %>
+  <% if @obj.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@admin.errors.count, "error") %> prohibited this admin from being saved:</h2>
+      <h2><%= pluralize(@obj.errors.count, "error") %> prohibited this admin from being saved:</h2>
 
       <ul>
-      <% @admin.errors.full_messages.each do |message| %>
+      <% @obj.errors.full_messages.each do |message| %>
         <li><%= message %></li>
       <% end %>
       </ul>
@@ -31,7 +31,7 @@
 
   <div class="field">
     <%= f.label :admin %><br />
-    <%= f.select(:admin, [['Administrador','Administrador'],['Editor','Editor'],['Responsable CEAA', 'Asia y África'], ['Responsable CEDUA', 'Demográficos, Urbanos y Ambientales'], ['Responsable CEE','Económicos'], ['Responsable CEH', 'Históricos'], ['Responsable CEI', 'Internacionales'], ['Responsable CELL', 'Lingüísticos y Literarios'], ['Responsable CES','Sociológicos']],:selected => (@admin.admin || 'Editor')) %>
+    <%= f.select(:admin, [['Administrador','Administrador'],['Editor','Editor'],['Responsable CEAA', 'Asia y África'], ['Responsable CEDUA', 'Demográficos, Urbanos y Ambientales'], ['Responsable CEE','Económicos'], ['Responsable CEH', 'Históricos'], ['Responsable CEI', 'Internacionales'], ['Responsable CELL', 'Lingüísticos y Literarios'], ['Responsable CES','Sociológicos']],:selected => (@obj.admin || 'Editor')) %>
   </div>
 
   <div class="actions">
