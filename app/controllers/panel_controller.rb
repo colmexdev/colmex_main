@@ -1,5 +1,5 @@
 class PanelController < ApplicationController
-  before_action :select_set, only: [:index, :mostrar, :generar, :crear, :eliminar]
+  before_action :select_set, only: [:index, :mostrar, :generar, :crear, :eliminar, :actualizar]
 
   def principal
     respond_to do |format|
@@ -45,6 +45,27 @@ class PanelController < ApplicationController
         #format.json { render :show, status: :created, location: @admin }
       else
         format.js { render :generar }
+        format.json { render json: @obj.errors, status: :unprocessable_entity }
+      end
+    end
+  end
+
+  def editar
+    @obj = @sets[params[:set].to_sym][:model].find(params[:id])
+    #@fields = @sets[params[:set].to_sym][:fields]
+    #@imgs = @sets[params[:set].to_sym][:imgs]
+  end
+
+  def actualizar
+    @obj = @sets[params[:set].to_sym][:model].find(params[:id])
+    respond_to do |format|
+      if @obj.update(obj_params)
+        @fields = @sets[params[:set].to_sym][:fields]
+        @imgs = @sets[params[:set].to_sym][:imgs]
+        format.js { render :mostrar, params: {set: params[:set]}, notice: 'Objeto generado exitosamente.' }
+        #format.json { render :show, status: :ok, location: @emerito }
+      else
+        format.js { render :editar }
         format.json { render json: @obj.errors, status: :unprocessable_entity }
       end
     end

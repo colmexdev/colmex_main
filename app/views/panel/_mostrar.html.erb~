@@ -29,4 +29,6 @@
 		<% end %>
 	</tbody>
 </table>
-<%= link_to "Regresar", panel_index_path(:set => params[:set]), class: "uk-link" %>
+<a class="uk-link" onclick="hideLink(event,'#index_panel','<%= panel_index_path(:set => params[:set]) %>')">Regresar</a><br>
+<a clas="uk-link" onclick="hideLink(event,'#index_panel','<%= panel_princ_path %>')">Inicio</a>
+<%= link_to "Regresar", panel_index_path(:set => params[:set]), remote: true, class: "uk-link" %>

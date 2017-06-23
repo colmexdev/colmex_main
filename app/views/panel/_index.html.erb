@@ -2,8 +2,9 @@
 
 <p id="notice"><%= notice %></p>
 
-<h1>Listado de <%= params[:set] %></h1>
+<h1>Listado de <%= params[:set] %></h1><br>
 
+<a class="uk-link" onclick="hideLink(event,'#index-panel','<%= panel_nuevo_path(:set => params[:set]) %>')">Inicio</a>
 <table id="index-panel">
   <thead>
     <tr id="header-ind">
@@ -40,14 +41,9 @@
 				<% end %>
 				<td class="ind-cell">
 					<a class="link-img-panel" onclick="hideLink(event,'#index-panel','<%= panel_mostrar_path(:set => params[:set], :id => s.id) %>')"><span class="clickable-g glyphicon glyphicon-eye-open"></span></a>
-					<a class="link-img-panel" onclick="hideLink(event,'#index-panel','<%= panel_nuevo_path(:set => params[:set]) %>')"><span class="clickable-g glyphicon glyphicon-pencil"></span></a>
+					<a class="link-img-panel" onclick="hideLink(event,'#index-panel','<%= panel_editar_path(:set => params[:set], :id => s.id) %>')"><span class="clickable-g glyphicon glyphicon-pencil"></span></a>
 					<a class="link-img-panel" onclick="hideLink(event,'#index-panel','<%= panel_eliminar_path(:set => params[:set], :id => s.id) %>','DELETE')"><span class="clickable-g glyphicon glyphicon-trash"></span></a>
 				</td>
-				<% if false %>
-        <td><%= link_to 'Show', s %></td>
-        <td><%= link_to 'Edit', edit_emerito_path(s) %></td>
-        <td><%= link_to 'Destroy', s, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-				<% end %>
       </tr>
     <% end %>
   </tbody>
@@ -55,7 +51,7 @@
 
 <br>
 
-<%= link_to "Inicio", panel_princ_path, remote: true, class: "uk-link" %>
+<a class="uk-link" onclick="hideLink(event,'#index-panel','<%= panel_princ_path %>')">Inicio</a>
 <% end %>
 
 <script type="text/javascript">

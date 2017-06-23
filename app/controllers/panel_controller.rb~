@@ -1,5 +1,5 @@
 class PanelController < ApplicationController
-  before_action :select_set, only: [:index, :mostrar, :generar, :crear, :eliminar]
+  before_action :select_set, only: [:index, :mostrar, :generar, :crear, :eliminar, :actualizar]
 
   def principal
     respond_to do |format|
@@ -45,6 +45,19 @@ class PanelController < ApplicationController
         #format.json { render :show, status: :created, location: @admin }
       else
         format.js { render :generar }
+        format.json { render json: @obj.errors, status: :unprocessable_entity }
+      end
+    end
+  end
+
+  def actualizar
+    @obj = @sets[params[:set].to_sym][:model].find(params[:id])
+    respond_to do |format|
+      if @obj.update(obj_params)
+        format.js { render :mostrar, params: {set: params[:set]}, notice: 'Objeto generado exitosamente.' }
+        #format.json { render :show, status: :ok, location: @emerito }
+      else
+        format.js { render :editar }
         format.json { render json: @obj.errors, status: :unprocessable_entity }
       end
     end
@@ -131,6 +144,24 @@ class PanelController < ApplicationController
       params.require(:personal).permit(:nombre, :seccion, :correo, :telefono, :extension, :cargo, :depto, :foto, :cargo_eng, :depto_eng)
     elsif params[:set] == "Categorías de Premios"
       params.require(:categorium).permit(:nombre,:nombre_eng)
+    elsif params[:set] == "Premios y distinciones"
+      params.require(:premiado).permit(:nombre, :descripcion, :tipo, :tipo_premio, :liga)
+    elsif params[:set] == "Documentos varios"
+      params.require(:documento).permit(:nombre, :tipo, :anio, :archivo, :nombre_eng)
+    elsif params[:set] == "Descubres"
+      params.require(:descubre).permit(:titulo, :liga, :contenido, :fecha_publicacion, :fecha_limite_pub, :imagen, :tags)
+    elsif params[:set] == "Categorías de 'Descubre'"
+      params.require(:content).permit(:tipo, :icono, :tipo_eng)
+    elsif params[:set] == "Imágenes de slider"
+      params.require(:slider).permit(:liga, :imagen, :badge, :posicion, :fecha_expiracion, :badge_eng)
+    elsif params[:set] == "Cátedras y seminarios"
+      params.require(:catedra).permit(:titulo, :titulo_eng, :descripcion_eng, :descripcion, :liga, :tipo)
+    elsif params[:set] == "Frases en página principal"
+      params.require(:frase).permit(:cita, :autor, :cita_eng)
+    elsif params[:set] == "Directorio académico"
+      params.require(:academico).permit(:nombre, :adscripcion, :lineas_investigacion, :correo, :pagina, :foto, :inicial)
+    elsif params[:set] == "Usuarios gestores"
+      params.require(:admin).permit(:usuario, :password, :password_confirmation, :admin)
     end
   end
 end

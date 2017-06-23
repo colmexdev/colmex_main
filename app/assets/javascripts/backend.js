@@ -18,7 +18,7 @@ function adjustWidths(cols){
 
 function hideLink(event,element,link,method){
 	event.preventDefault();
-	$(element).append('<a ' + (method == "DELETE" ? 'data-method="'+method+'" rel="nofollow" data-remote=true' : "data-remote=true") + ' href="'+link+'" style="display:none;" id="vlink"></a>');
+	$(element).append('<a ' + (method == "DELETE" ? 'data-method="'+method+'" rel="nofollow" data-remote=true' : "data-remote=true") + ' href="'+link+'" style="display:none;" id="vlink" data-confirm="¿Seguro que desea eliminar el objeto?"></a>');
 	$("#vlink").trigger("click");
 	$("#vlink").remove();
 }
