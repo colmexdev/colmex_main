@@ -1,0 +1,40 @@
+<%= form_for(@documento, :html => { :multipart => true}) do |f| %>
+  <% if @documento.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@documento.errors.count, "error") %> prohibited this documento from being saved:</h2>
+
+      <ul>
+      <% @documento.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <div class="field">
+    <%= f.label :archivo %><br>
+    <%= f.file_field :archivo %>
+  </div>
+  <div class="field">
+    <%= f.label :nombre %><br>
+    <%= f.text_field :nombre %>
+  </div>
+  <div class="field">
+    <%= f.label :nombre_eng %><br>
+    <%= f.text_field :nombre_eng %>
+  </div>
+  <div class="field">
+    <%= f.label :liga %><br>
+    <%= f.text_field :liga %>
+  </div>
+  <div class="field">
+    <%= f.label :tipo %><br>
+    <%= f.select(:tipo, options_for_select([['Informe de actividades','Informe'],['Junta de Gobierno','Junta'],['Estatuto','Estatuto'],['Transparencia','Transparencia'], ['Reglamento', 'Reglamento'],['Marco normativo','Marco normativo'],['Unidad de Transparencia','Unidad de Transparencia']], @documento.tipo || 'Informe'),{},{:onchange => "ocultarAnio()"}) %>
+  </div>
+  <div class="field" id="campo_anio" style="display:visible;">
+    <%= f.label :anio %><br>
+    <%= f.select :anio, (Time.zone.now.year - 15)..(Time.zone.now.year + 5) %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

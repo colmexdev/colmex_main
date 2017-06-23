@@ -1,0 +1,45 @@
+<%= form_for(@descubre, :html => { :multipart => true}) do |f| %>
+  <% if @descubre.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@descubre.errors.count, "error") %> prohibited this descubre from being saved:</h2>
+
+      <ul>
+      <% @descubre.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :titulo %><br>
+    <%= f.text_field :titulo %>
+  </div>
+  <div class="field">
+    <%= f.label :liga %><br>
+    <%= f.text_field :liga %>
+  </div>
+  <div class="field">
+    <%= f.label :contenido %><br>
+    <%= f.select(:contenido, options_from_collection_for_select(Content.all, :tipo, :tipo, @descubre.contenido || Content.first.tipo), {}, {}) %>
+  </div>
+  <div class="field">
+    <%= f.label :imagen %><br>
+    <%= f.file_field :imagen %>
+  </div>
+  <div class="field">
+    <%= f.label :fecha_publicacion %><br>
+    <%= f.text_field :fecha_publicacion, {"data-uk-datepicker" => "{format: 'YYYY-MM-DD'}"} %>
+  </div>
+  <div class="field">
+    <%= f.label :fecha_limite_pub %><br>
+    <%= f.text_field :fecha_limite_pub, {"data-uk-datepicker" => "{format: 'YYYY-MM-DD'}"} %>
+  </div>
+  <div class="field">
+    <%= f.label :tags %><br>
+    <%= f.text_area :tags %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

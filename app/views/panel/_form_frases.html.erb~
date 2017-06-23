@@ -1,0 +1,29 @@
+<%= form_for(@frase) do |f| %>
+  <% if @frase.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@frase.errors.count, "error") %> prohibited this frase from being saved:</h2>
+
+      <ul>
+      <% @frase.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :cita %><br>
+    <%= f.text_area :cita %>
+  </div>
+  <div class="field">
+    <%= f.label :cita_eng %><br>
+    <%= f.text_area :cita_eng %>
+  </div>
+  <div class="field">
+    <%= f.label :autor %><br>
+    <%= f.text_field :autor %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

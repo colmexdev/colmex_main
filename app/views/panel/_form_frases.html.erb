@@ -1,0 +1,29 @@
+<%= form_for(@obj), :action => (action_name == "editar" ? "editar" : "crear"), :params => {:set => "Profesores eméritos", :id => (@obj.id if action_name == "editar")}} do |f| %>
+  <% if @obj.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@obj.errors.count, "error") %> prohibited this frase from being saved:</h2>
+
+      <ul>
+      <% @obj.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :cita %><br>
+    <%= f.text_area :cita %>
+  </div>
+  <div class="field">
+    <%= f.label :cita_eng %><br>
+    <%= f.text_area :cita_eng %>
+  </div>
+  <div class="field">
+    <%= f.label :autor %><br>
+    <%= f.text_field :autor %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
