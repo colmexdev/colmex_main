@@ -13,7 +13,7 @@ function slideMenu(){
 }
 
 function adjustWidths(cols){
-	return (100/cols) + "%";
+	return (100/(cols-1)) + "%";
 }
 
 function hideLink(event,element,link,method){

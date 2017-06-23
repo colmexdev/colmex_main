@@ -14,7 +14,7 @@
 			<% @foto.values.each do |f| %>
 			<td class="head-ind"><%= f %></td>
 			<% end %>
-			<td class="head-ind-img" style="width:120px;"></td>
+			<td class="head-ind-img" style="width:130px;"></td>
     </tr>
   </thead>
 
@@ -39,7 +39,7 @@
 						<td class="ind-cell"><%= link_to image_tag("documento.png"), s.archivo.url, target: "_blank" %></td>
 					<% end %>
 				<% end %>
-				<td class="ind-cell-img" style="width:120px;">
+				<td class="ind-cell-img" style="width:130px;">
 					<a class="link-img-panel" onclick="hideLink(event,'#index-panel','<%= panel_mostrar_path(:set => params[:set], :id => s.id) %>')"><span class="clickable-g glyphicon glyphicon-eye-open"></span></a>
 					<a class="link-img-panel" onclick="hideLink(event,'#index-panel','<%= panel_editar_path(:set => params[:set], :id => s.id) %>')"><span class="clickable-g glyphicon glyphicon-pencil"></span></a>
 					<a class="link-img-panel" onclick="hideLink(event,'#index-panel','<%= panel_eliminar_path(:set => params[:set], :id => s.id) %>','DELETE')"><span class="clickable-g glyphicon glyphicon-trash"></span></a>
