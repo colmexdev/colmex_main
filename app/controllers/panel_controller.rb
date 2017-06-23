@@ -101,7 +101,7 @@ class PanelController < ApplicationController
         imgs: {foto: "Foto"}
       }, "Categorías de Premios": {
         model: Categorium,
-        fields: {nombre: "Nombre", nombre_eng: "Nombre (Inglés)", t: ""},
+        fields: {nombre: "Nombre", nombre_eng: "Nombre (Inglés)"},
         imgs: {}
       }, "Premios y distinciones": {
         model: Premiado,
