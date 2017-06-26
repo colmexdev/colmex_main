@@ -38,11 +38,13 @@ class PanelController < ApplicationController
   def crear
     @obj = @sets[params[:set].to_sym][:model].new(obj_params)
     respond_to do |format|
+      logger.debug "Previo a salvar"
       if @obj.save
         @fields = @sets[params[:set].to_sym][:fields]
         @imgs = @sets[params[:set].to_sym][:imgs]
+        logger.debug "Previo a foto"
         format.js { render :mostrar, params: {set: params[:set]}, notice: 'Objeto generado exitosamente.' }
-        #format.json { render :show, status: :created, location: @admin }
+        logger.debug "Salvado"
       else
         format.js { render :generar }
         format.json { render json: @obj.errors, status: :unprocessable_entity }
@@ -52,8 +54,6 @@ class PanelController < ApplicationController
 
   def editar
     @obj = @sets[params[:set].to_sym][:model].find(params[:id])
-    #@fields = @sets[params[:set].to_sym][:fields]
-    #@imgs = @sets[params[:set].to_sym][:imgs]
   end
 
   def actualizar
@@ -63,7 +63,6 @@ class PanelController < ApplicationController
         @fields = @sets[params[:set].to_sym][:fields]
         @imgs = @sets[params[:set].to_sym][:imgs]
         format.js { render :mostrar, params: {set: params[:set]}, notice: 'Objeto generado exitosamente.' }
-        #format.json { render :show, status: :ok, location: @emerito }
       else
         format.js { render :editar }
         format.json { render json: @obj.errors, status: :unprocessable_entity }
