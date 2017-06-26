@@ -22,3 +22,15 @@ function hideLink(event,element,link,method){
 	$("#vlink").trigger("click");
 	$("#vlink").remove();
 }
+
+function readURL(input,display) {
+  if (input.files && input.files[0]) {
+    var reader = new FileReader();
+    
+    reader.onload = function (e) {
+        $(display).attr('src', e.target.result);
+    }
+    
+    reader.readAsDataURL(input.files[0]);
+  }
+}

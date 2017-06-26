@@ -13,7 +13,7 @@ function slideMenu(){
 }
 
 function adjustWidths(cols){
-	return (100/(cols)) + "%";
+	return (100/cols) + "%";
 }
 
 function hideLink(event,element,link,method){
@@ -21,4 +21,16 @@ function hideLink(event,element,link,method){
 	$(element).append('<a ' + (method == "DELETE" ? 'data-method="'+method+'" rel="nofollow" data-remote=true data-confirm="¿Seguro que desea eliminar el objeto?"' : "data-remote=true") + ' href="'+link+'" style="display:none;" id="vlink"></a>');
 	$("#vlink").trigger("click");
 	$("#vlink").remove();
+}
+
+function readURL(input) {
+  if (input.files && input.files[0]) {
+    var reader = new FileReader();
+    
+    reader.onload = function (e) {
+        $('#blah').attr('src', e.target.result);
+    }
+    
+    reader.readAsDataURL(input.files[0]);
+  }
 }
