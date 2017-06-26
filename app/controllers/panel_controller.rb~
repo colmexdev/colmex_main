@@ -41,7 +41,7 @@ class PanelController < ApplicationController
       if @obj.save
         @fields = @sets[params[:set].to_sym][:fields]
         @imgs = @sets[params[:set].to_sym][:imgs]
-        logger.debug obj.as_json
+        logger.debug @obj.as_json
         format.js { render :mostrar, params: {set: params[:set]}, notice: 'Objeto generado exitosamente.' }
       else
         format.js { render :generar }
