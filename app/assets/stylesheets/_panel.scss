@@ -177,6 +177,10 @@
 	transform: translate(0,-50%);
 }
 
+@media only screen and(max-width:670px){
+	#text-title-gest { display: none; }
+}
+
 #menu-lat{
 	height:	100%;
 	overflow: auto;
@@ -305,7 +309,7 @@
 #graphs-gest form{
 	width: 95%;
 	min-width: 750px;
-	margin: 45px auto 0 auto;
+	margin: 45px auto 50px auto;
 }
 
 #graphs-gest form .field{
