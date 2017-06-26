@@ -177,6 +177,10 @@
 	transform: translate(0,-50%);
 }
 
+@media only screen and(max-width:670px){
+	#text-title-gest { display: none; }
+}
+
 #menu-lat{
 	height:	100%;
 	overflow: auto;

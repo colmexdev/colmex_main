@@ -161,6 +161,19 @@
 	position: relative;
 }
 
+#opciones-gest{
+	display: inline-block;
+	position: absolute;
+	top: 50%;
+	left: 0;
+	color: #5E002B;
+	-webkit-transform: translate(0,-50%);
+	-moz-transform: translate(0,-50%);
+	-ms-transform: translate(0,-50%);
+	-o-transform: translate(0,-50%);
+	transform: translate(0,-50%);
+}
+
 #text-title-gest{
 	color: #5E002B;
 	font-size: 22px;
