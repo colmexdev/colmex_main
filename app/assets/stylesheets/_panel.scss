@@ -366,3 +366,22 @@
 	background-color: #5E002B;
 	color: rgba(255,255,255,0.7);
 }
+
+/* Submit button */
+#graphs-gest form input[type="submit"]{
+	border: none;
+	border-radius: 100px;
+	color: #FFF;
+	width: 100px;
+	height: 45px;
+	background-color: #5E002B;
+	-webkit-transition: all 0.1s linear;
+	-moz-transition: all 0.1s linear;
+	-o-transition: all 0.1s linear;
+	transition: all 0.1s linear;
+}
+
+#graphs-gest form input[type="submit"]:hover{
+	color: #DDD;
+	background-color: #9E6680;
+}
