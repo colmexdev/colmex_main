@@ -38,13 +38,11 @@ class PanelController < ApplicationController
   def crear
     @obj = @sets[params[:set].to_sym][:model].new(obj_params)
     respond_to do |format|
-      logger.debug "Previo a salvar"
       if @obj.save
         @fields = @sets[params[:set].to_sym][:fields]
         @imgs = @sets[params[:set].to_sym][:imgs]
-        logger.debug "Previo a foto"
+        logger.debug obj.as_json
         format.js { render :mostrar, params: {set: params[:set]}, notice: 'Objeto generado exitosamente.' }
-        logger.debug "Salvado"
       else
         format.js { render :generar }
         format.json { render json: @obj.errors, status: :unprocessable_entity }
