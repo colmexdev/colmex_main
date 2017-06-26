@@ -178,6 +178,7 @@
 #opciones-gest .glyphicon{
 	cursor: pointer;
 	margin-right: 5px;
+	display: none;
 }
 
 #text-title-gest{
