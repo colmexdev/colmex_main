@@ -37,8 +37,8 @@
     <%= f.file_field :foto %>
 		</div>
 		<div class="img-display">
-			<% if !f.foto.url.nil? %>
-				<%= image_tag(f.foto.url) %>
+			<% if !@obj.foto.url.nil? %>
+				<%= image_tag(@obj.foto.url) %>
 			<% end %>
 		</div>
   </div>

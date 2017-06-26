@@ -32,7 +32,7 @@
     <%= f.text_area :semblanza_eng %>
   </div>
   <div class="field">
-		<div class="">
+		<div class="photo-upload">
     <%= f.label :foto, raw('<span class="glyphicon glyphicon-upload glyph-padding"></span>Añadir foto') %><br>
     <%= f.file_field :foto %>
 		</div>
