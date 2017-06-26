@@ -31,14 +31,14 @@
     <%= f.label :semblanza_eng %><br>
     <%= f.text_area :semblanza_eng %>
   </div>
-  <div class="field">
+  <div class="field" style="height: 250px;">
 		<div class="photo-upload">
     <%= f.label :foto, raw('<span class="glyphicon glyphicon-upload glyph-padding"></span>Añadir foto') %><br>
     <%= f.file_field :foto %>
 		</div>
 		<div class="img-display">
-			<% if !f.foto.url.nil? %>
-				<%= image_tag(f.foto.url) %>
+			<% if !@obj.foto.url.nil? %>
+				<%= image_tag(@obj.foto.url) %>
 			<% end %>
 		</div>
   </div>

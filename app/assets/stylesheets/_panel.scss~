@@ -374,6 +374,17 @@
 	color: rgba(255,255,255,0.7);
 }
 
+#graphs-gest form .photo-upload{
+	width: 50%;
+	height: 100%;	
+}
+
+#graphs-gest form .img-display{
+	width: 50%;
+	float: right;
+	height: 100%;
+}
+
 /* Submit button */
 #graphs-gest form input[type="submit"]{
 	border: none;
