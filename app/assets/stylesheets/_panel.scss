@@ -401,7 +401,7 @@
 	padding: 10px 15px;
 	width: auto;
 	font-weight: 300;
-	font-size: 18px;
+	font-size: 17px;
 	background-color: #696969;
 	color: rgba(255,255,255,0.7);
 	-webkit-transition: all 0.1s linear;
@@ -416,16 +416,16 @@
 }
 
 #graphs-gest form .photo-upload{
-	width: 180px;
+	width: 210px;
 	height: 100%;
 	display: inline-block;
 	text-align: center;
 }
 
 #graphs-gest form .img-display{
-	width: -webkit-calc(100% - 180px);
-	width: -moz-calc(100% - 180px);
-	width: calc(100% - 180px);
+	width: -webkit-calc(100% - 210px);
+	width: -moz-calc(100% - 210px);
+	width: calc(100% - 210px);
 	float: right;
 	height: 100%;
 }

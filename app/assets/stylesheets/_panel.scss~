@@ -393,7 +393,7 @@
 	z-index: -1;
 }
 
-#graphs-gest form label[for$="foto"]{
+#graphs-gest form label[for$="foto"], #graphs-gest form label[for$="imagen"]{
 	cursor: pointer;
 	border: none;
 	border-radius: 10px;
@@ -410,22 +410,22 @@
 	transition: all 0.1s linear;
 }
 
-#graphs-gest form label[for$="foto"]:hover, #graphs-gest form label[for$="foto"]:focus{
+#graphs-gest form label[for$="foto"]:hover, #graphs-gest form label[for$="foto"]:focus, #graphs-gest form label[for$="imagen"]:hover, #graphs-gest form label[for$="imagen"]:focus{
 	color: rgba(100,100,100,0.8);
 	background-color: #F5F5F5;
 }
 
 #graphs-gest form .photo-upload{
-	width: 180px;
+	width: 210px;
 	height: 100%;
 	display: inline-block;
 	text-align: center;
 }
 
 #graphs-gest form .img-display{
-	width: -webkit-calc(100% - 180px);
-	width: -moz-calc(100% - 180px);
-	width: calc(100% - 180px);
+	width: -webkit-calc(100% - 210px);
+	width: -moz-calc(100% - 210px);
+	width: calc(100% - 210px);
 	float: right;
 	height: 100%;
 }
