@@ -4,7 +4,9 @@
 
 <h1>Listado de <%= params[:set] %></h1><br>
 
+<% if false %>
 <a class="uk-link" onclick="hideLink(event,'#index-panel','<%= panel_nuevo_path(:set => params[:set]) %>')">Nuevo elemento</a>
+<% end %>
 <table id="index-panel">
   <thead>
     <tr id="header-ind">
@@ -50,8 +52,9 @@
 </table>
 
 <br>
-
+<% if false %>
 <a class="uk-link" onclick="hideLink(event,'#index-panel','<%= panel_princ_path %>')">Inicio</a>
+<% end %>
 <% end %>
 
 <script type="text/javascript">

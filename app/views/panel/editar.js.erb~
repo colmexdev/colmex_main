@@ -1,2 +1,6 @@
-$("#text-title-gest").html("<%= 'Generando objeto' %>");
+$("#text-title-gest").html("<%= 'Editando objeto' %>");
+$("#glyph-new").css({"display": "none"});
+$("#glyph-back").css({"display": "inline-block"}).on("click",function(event){hideLink(event,'#menu-lat','<%= panel_index_pat(:set => params[:set]) %>')});
+$("#glyph-home").css({"display": "inline-block"}).on("click",function(event){hideLink(event,'#menu-lat','<%= panel_princ_path %>')});
+$("glyph-edit").css({"display": "none"});
 $("#graphs-gest").html("<%= j render 'panel/generar' %>");
