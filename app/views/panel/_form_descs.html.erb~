@@ -24,10 +24,6 @@
     <%= f.select(:contenido, options_from_collection_for_select(Content.all, :tipo, :tipo, @obj.contenido || Content.first.tipo), {}, {}) %>
   </div>
   <div class="field">
-    <%= f.label :imagen %><br>
-    <%= f.file_field :imagen %>
-  </div>
-  <div class="field">
     <%= f.label :fecha_publicacion, "Fecha de publicación" %><br>
     <%= f.text_field :fecha_publicacion, {"data-uk-datepicker" => "{format: 'YYYY-MM-DD'}"} %>
   </div>
