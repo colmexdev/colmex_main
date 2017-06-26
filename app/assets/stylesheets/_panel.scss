@@ -372,15 +372,24 @@
 	font-size: 18px;
 	background-color: #696969;
 	color: rgba(255,255,255,0.7);
+	-webkit-transition: all 0.1s linear;
+	-moz-transition: all 0.1s linear;
+	-o-transition: all 0.1s linear;
+	transition: all 0.1s linear;
+}
+
+#graphs-gest form label[for$="foto"]:hover, #graphs-gest form label[for$="foto"]:focus{
+	color: rgba(100,100,100,0.8);
+	background-color: #F5F5F5;
 }
 
 #graphs-gest form .photo-upload{
-	width: 50%;
+	width: 20%;
 	height: 100%;	
 }
 
 #graphs-gest form .img-display{
-	width: 50%;
+	width: 70%;
 	float: right;
 	height: 100%;
 }

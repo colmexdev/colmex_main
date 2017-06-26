@@ -375,14 +375,19 @@
 }
 
 #graphs-gest form .photo-upload{
-	width: 50%;
+	width: 20%;
 	height: 100%;	
 }
 
 #graphs-gest form .img-display{
-	width: 50%;
+	width: 70%;
 	float: right;
 	height: 100%;
+}
+
+#graphs-gest form .img-display img{
+	height: 100%;
+	max-width: 95%;
 }
 
 /* Submit button */
