@@ -316,10 +316,11 @@
 	font-size: 16px;
 	font-weight: 300;
 	padding-left: 10px;
-	-webkit-transition: all 0.3s linear;
-	-moz-transition: all 0.3s linear;
-	-o-transition: all 0.3s linear;
-	transition: all 0.3s linear;
+	width: 400px;
+	-webkit-transition: all 0.1s linear;
+	-moz-transition: all 0.1s linear;
+	-o-transition: all 0.1s linear;
+	transition: all 0.1s linear;
 }
 
 #graphs-gest form input[type="text"]:focus{
@@ -330,18 +331,38 @@
 /* Text areas */
 #graphs-gest form .field textarea{
 	width: 95%;
+	min-width: 400px;
 	min-height: 150px;
 	font-size: 16px;
 	border-radius: 3px;
 	border: 1px solid rgba(0,0,0,0.3);
 	font-weight: 300;
-	-webkit-transition: all 0.3s linear;
-	-moz-transition: all 0.3s linear;
-	-o-transition: all 0.3s linear;
-	transition: all 0.3s linear;
+	-webkit-transition: all 0.1s linear;
+	-moz-transition: all 0.1s linear;
+	-o-transition: all 0.1s linear;
+	transition: all 0.1s linear;
 }
 
 #graphs-gest form .field textarea:focus{
-	font-weight: 500;
 	border: 2px solid rgba(0,0,0,0.5);
+}
+
+/* File inputs */
+#graphs-gest form input[type="file"]{
+	width: 0.1px;
+	height: 0.1px;
+	opacity: 0;
+	overflow: hidden;
+	position: absolute;
+	z-index: -1;
+}
+
+#graphs-gest form label[for$="foto"]{
+	cursor: pointer;
+	border: none;
+	border-radius: 10px;
+	height: 30px;
+	width: 50px;
+	background-color: #5E002B;
+	color: rgba(255,255,255,0.7);
 }
