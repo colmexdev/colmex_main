@@ -308,6 +308,10 @@
 	margin: 45px auto 0 auto;
 }
 
+#graphs-gest form .field{
+	margin-bottom: 50px;
+}
+
 /* Text-input */
 #graphs-gest form input[type="text"]{
 	background-color: inherit;
@@ -374,6 +378,8 @@
 	color: #FFF;
 	width: auto;
 	padding: 0 15px;
+	display: block;
+	margin: 0 auto;
 	height: 45px;
 	background-color: #5E002B;
 	-webkit-transition: all 0.1s linear;

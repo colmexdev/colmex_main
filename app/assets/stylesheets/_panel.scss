@@ -308,6 +308,10 @@
 	margin: 45px auto 0 auto;
 }
 
+#graphs-gest form .field{
+	margin-bottom: 50px;
+}
+
 /* Text-input */
 #graphs-gest form input[type="text"]{
 	background-color: inherit;
@@ -362,8 +366,9 @@
 	border: none;
 	border-radius: 10px;
 	height: 30px;
-	width: 50px;
-	background-color: #5E002B;
+	padding: 0 15px;
+	width: auto;
+	background-color: #696969;
 	color: rgba(255,255,255,0.7);
 }
 
@@ -387,4 +392,8 @@
 #graphs-gest form input[type="submit"]:hover{
 	color: #DDD;
 	background-color: #9E6680;
+}
+
+.glyph-padding{
+	margin-right: 10px;
 }
