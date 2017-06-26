@@ -167,7 +167,7 @@
 	top: 50%;
 	left: 0;
 	color: #5E002B;
-	margin-left: 40px;
+	margin-left: 50px;
 	-webkit-transform: translate(0,-50%);
 	-moz-transform: translate(0,-50%);
 	-ms-transform: translate(0,-50%);
@@ -178,6 +178,7 @@
 #opciones-gest .glyphicon{
 	cursor: pointer;
 	margin-right: 5px;
+	display: none;
 }
 
 #text-title-gest{
