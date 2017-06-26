@@ -41,8 +41,8 @@ class PanelController < ApplicationController
       if @obj.save
         @fields = @sets[params[:set].to_sym][:fields]
         @imgs = @sets[params[:set].to_sym][:imgs]
-        
-        format.js { render :index, params: {set: params[:set]}, notice: 'Objeto generado exitosamente.' }
+        @obj = @sets[params[:set].to_sym][:model].find(params[:id])
+        format.js { render :mostrar, params: {set: params[:set]}, notice: 'Objeto generado exitosamente.' }
       else
         format.js { render :generar }
         format.json { render json: @obj.errors, status: :unprocessable_entity }
