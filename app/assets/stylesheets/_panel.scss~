@@ -179,6 +179,14 @@
 	cursor: pointer;
 	margin-right: 5px;
 	display: none;
+	-webkit-transition: all 0.1s linear;
+	-moz-transition: all 0.1s linear;
+	-o-transition: all 0.1s linear;
+	transition: all 0.1s linear;
+}
+
+#opciones-gest .glyphicon:hover, :opciones-gest .glyphicon:active{
+	color: #DDD;
 }
 
 #text-title-gest{
