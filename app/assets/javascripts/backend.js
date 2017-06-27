@@ -23,13 +23,18 @@ function hideLink(event,element,link,method){
 	$("#vlink").remove();
 }
 
-function readURL(input,display) {
+function readURL(input,display,file) {
   if (input.files && input.files[0]) {
 		console.log(input.files);
     var reader = new FileReader();
     
     reader.onload = function (e) {
-        $(display).attr('src', e.target.result);
+				if(file != null ){
+        	$(display).attr('src', e.target.result);
+				}
+				else{
+					$(display).attr('href', e.target.result);
+				}
     }
     
     reader.readAsDataURL(input.files[0]);

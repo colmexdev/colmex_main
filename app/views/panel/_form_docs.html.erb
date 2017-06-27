@@ -38,7 +38,7 @@
 		</div>
 		<div class="img-display">
 			<% if @obj.archivo.url == "/archivos/original/missing.png" %>
-				<a href="<%= @obj.archivo.url %>" target="_blank"><img id="archivo-doc" src="<%= image_url('documento.png') %>"></a>
+				<a id="arch-doc" href="<%= @obj.archivo.url %>" target="_blank"><img id="archivo-doc" src="<%= image_url('documento.png') %>"></a>
 			<% else %>
 				<span>No hay archivo para mostrar.</span>
 			<% end %>
