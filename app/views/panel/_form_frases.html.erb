@@ -10,17 +10,17 @@
       </ul>
     </div>
   <% end %>
-
+<%= hidden_field_tag :authenticity_token, form_authenticity_token -%>
   <div class="field">
-    <%= f.label :cita %><br>
+    <%= f.label :cita, "Cita" %><br>
     <%= f.text_area :cita %>
   </div>
   <div class="field">
-    <%= f.label :cita_eng %><br>
+    <%= f.label :cita_eng, "Cita (Inglés)" %><br>
     <%= f.text_area :cita_eng %>
   </div>
   <div class="field">
-    <%= f.label :autor %><br>
+    <%= f.label :autor, "Autor" %><br>
     <%= f.text_field :autor %>
   </div>
   <div class="actions">

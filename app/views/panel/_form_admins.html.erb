@@ -10,14 +10,14 @@
       </ul>
     </div>
   <% end %>
-
+<%= hidden_field_tag :authenticity_token, form_authenticity_token -%>
 <div class="field">
-    <%= f.label :usuario %><br />
+    <%= f.label :usuario, "Usuario" %><br />
     <%= f.text_field :usuario, autofocus: true %>
   </div>
 
   <div class="field">
-    <%= f.label :password %>
+    <%= f.label :password, "Contraseña" %>
     <% if @minimum_password_length %>
     <em>(<%= @minimum_password_length %> characters minimum)</em>
     <% end %><br />
@@ -25,12 +25,12 @@
   </div>
 
   <div class="field">
-    <%= f.label :password_confirmation %><br />
+    <%= f.label :password_confirmation, "Confirmar contraseña" %><br />
     <%= f.password_field :password_confirmation, autocomplete: "off" %>
   </div>
 
   <div class="field">
-    <%= f.label :admin %><br />
+    <%= f.label :admin, "Rol" %><br />
     <%= f.select(:admin, [['Administrador','Administrador'],['Editor','Editor'],['Responsable CEAA', 'Asia y África'], ['Responsable CEDUA', 'Demográficos, Urbanos y Ambientales'], ['Responsable CEE','Económicos'], ['Responsable CEH', 'Históricos'], ['Responsable CEI', 'Internacionales'], ['Responsable CELL', 'Lingüísticos y Literarios'], ['Responsable CES','Sociológicos']],:selected => (@obj.admin || 'Editor')) %>
   </div>
 

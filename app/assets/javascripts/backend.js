@@ -25,6 +25,7 @@ function hideLink(event,element,link,method){
 
 function readURL(input,display) {
   if (input.files && input.files[0]) {
+		console.log(input);
     var reader = new FileReader();
     
     reader.onload = function (e) {

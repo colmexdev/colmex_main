@@ -10,13 +10,13 @@
       </ul>
     </div>
   <% end %>
-
+<%= hidden_field_tag :authenticity_token, form_authenticity_token -%>
   <div class="field">
-    <%= f.label :nombre %><br>
+    <%= f.label :nombre, "Categoría" %><br>
     <%= f.text_field :nombre %>
   </div>
   <div class="field">
-    <%= f.label :nombre_eng %><br>
+    <%= f.label :nombre_eng, "Categoría (Inglés)" %><br>
     <%= f.text_field :nombre_eng %>
   </div>
   <div class="actions">

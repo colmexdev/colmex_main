@@ -313,9 +313,17 @@
 	cursor: pointer;
 }
 
-.link-img-panel, .link-img-panel:hover, .link-img-panel:active, .link-img-panel:visited, .link-img-panel:focus{
+.link-img-panel, .link-img-panel:visited{
 	text-decoration: none;
 	color: #333;
+	-webkit-transition: all 0.2s linear;
+	-moz-transition: all 0.2s linear;
+	-o-transition: all 0.2s linear;
+	transition: all 0.2s linear;
+}
+
+.link-img-panel:hover, .link-img-panel:active, .link-img-panel:focus{
+	color: #5E002B;
 }
 
 .left-align{
@@ -393,7 +401,7 @@
 	z-index: -1;
 }
 
-#graphs-gest form label[for$="foto"], #graphs-gest form label[for$="imagen"]{
+#graphs-gest form label[for$="foto"], #graphs-gest form label[for$="imagen"], #graphs-gest form label[for$="icono"], #graphs-gest form label[for$="archivo"]{
 	cursor: pointer;
 	border: none;
 	border-radius: 10px;
@@ -401,7 +409,7 @@
 	padding: 10px 15px;
 	width: auto;
 	font-weight: 300;
-	font-size: 18px;
+	font-size: 17px;
 	background-color: #696969;
 	color: rgba(255,255,255,0.7);
 	-webkit-transition: all 0.1s linear;
@@ -410,7 +418,7 @@
 	transition: all 0.1s linear;
 }
 
-#graphs-gest form label[for$="foto"]:hover, #graphs-gest form label[for$="foto"]:focus, #graphs-gest form label[for$="imagen"]:hover, #graphs-gest form label[for$="imagen"]:focus{
+#graphs-gest form label[for$="foto"]:hover, #graphs-gest form label[for$="foto"]:focus, #graphs-gest form label[for$="imagen"]:hover, #graphs-gest form label[for$="imagen"]:focus, #graphs-gest form label[for$="icono"]:hover, #graphs-gest form label[for$="icono"]:focus, #graphs-gest form label[for$="archivo"]:hover, #graphs-gest form label[for$="archivo"]:focus{
 	color: rgba(100,100,100,0.8);
 	background-color: #F5F5F5;
 }
