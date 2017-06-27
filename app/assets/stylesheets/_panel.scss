@@ -409,7 +409,7 @@
 	z-index: -1;
 }
 
-#graphs-gest form label[for$="foto"], #graphs-gest form label[for$="imagen"], #graphs-gest form label[for$="icono"], #graphs-gest form label[for$="archivo"]{
+#graphs-gest form label[for$="foto"], #graphs-gest form label[for$="imagen"], #graphs-gest form label[for$="icono"], #graphs-gest form label[for$="archivo"], #graphs-gest form label[for$="badge"], #graphs-gest form label[for$="badge_eng"]{
 	cursor: pointer;
 	border: none;
 	border-radius: 10px;
@@ -426,7 +426,7 @@
 	transition: all 0.1s linear;
 }
 
-#graphs-gest form label[for$="foto"]:hover, #graphs-gest form label[for$="foto"]:focus, #graphs-gest form label[for$="imagen"]:hover, #graphs-gest form label[for$="imagen"]:focus, #graphs-gest form label[for$="icono"]:hover, #graphs-gest form label[for$="icono"]:focus, #graphs-gest form label[for$="archivo"]:hover, #graphs-gest form label[for$="archivo"]:focus{
+#graphs-gest form label[for$="foto"]:hover, #graphs-gest form label[for$="foto"]:focus, #graphs-gest form label[for$="imagen"]:hover, #graphs-gest form label[for$="imagen"]:focus, #graphs-gest form label[for$="icono"]:hover, #graphs-gest form label[for$="icono"]:focus, #graphs-gest form label[for$="archivo"]:hover, #graphs-gest form label[for$="archivo"]:focus, #graphs-gest form label[for$="badge"]:hover, #graphs-gest form label[for$="badge"]:focus, #graphs-gest form label[for$="badge_eng"]:hover, #graphs-gest form label[for$="badge_eng"]:focus{
 	color: rgba(100,100,100,0.8);
 	background-color: #F5F5F5;
 }
