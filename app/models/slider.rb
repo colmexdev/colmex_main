@@ -2,15 +2,18 @@ class Slider < ActiveRecord::Base
 
   has_attached_file :imagen, :styles => {},
                     :url => "/assets/slider/:basename_:style_:id.:extension",
-                    :path => ":rails_root/public/assets/slider/:basename_:style_:id.:extension"
+                    :path => ":rails_root/public/assets/slider/:basename_:style_:id.:extension",
+                    :default_url => "/vacio.png"
 
   has_attached_file :badge, :styles => {},
                     :url => "/assets/slider/:basename_:style_:id.:extension",
-                    :path => ":rails_root/public/assets/slider/:basename_:style_:id.:extension"
+                    :path => ":rails_root/public/assets/slider/:basename_:style_:id.:extension",
+                    :default_url => "/vacio.png"
 
   has_attached_file :badge_eng, :styles => {},
                     :url => "/assets/slider/:basename_:style_:id.:extension",
-                    :path => ":rails_root/public/assets/slider/:basename_:style_:id.:extension"
+                    :path => ":rails_root/public/assets/slider/:basename_:style_:id.:extension",
+                    :default_url => "/vacio.png"
 
   validates_presence_of :posicion
   validates_presence_of :fecha_expiracion
