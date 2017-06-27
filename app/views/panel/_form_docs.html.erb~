@@ -12,10 +12,6 @@
   <% end %>
 <%= hidden_field_tag :authenticity_token, form_authenticity_token -%>
   <div class="field">
-    <%= f.label :archivo %><br>
-    <%= f.file_field :archivo %>
-  </div>
-  <div class="field">
     <%= f.label :nombre, "Título" %><br>
     <%= f.text_field :nombre %>
   </div>
@@ -38,11 +34,11 @@
   <div class="field" style="height:250px;">
 		<div class="photo-upload">
     <%= f.label :archivo, raw('<span class="glyphicon glyphicon-upload glyph-padding"></span>Añadir imagen') %><br>
-    <%= f.file_field :archivo, :onchange => "readURL(this,'#foto-curso')" %><br>
+    <%= f.file_field :archivo, :onchange => "readURL(this,'#arch-doc')" %><br>
 		</div>
 		<div class="img-display">
-			<% if !@obj.archivo.url.nil? %>
-				<a href="<%= @obj.archivo.url %>" target="_blank"><img id="foto-curso" src="<%= image_url('documento.png') %>"></a>
+			<% if @obj.archivo.url == "/archivos/original/missing.png" %>
+				<a href="<%= @obj.archivo.url %>" target="_blank"><img id="archivo-doc" src="<%= image_url('documento.png') %>"></a>
 			<% else %>
 				<span>No hay archivo para mostrar.</span>
 			<% end %>
