@@ -4,3 +4,5 @@ $("#glyph-back").css({"display": "inline-block"}).on("click",function(event){hid
 $("#glyph-home").css({"display": "inline-block"}).on("click",function(event){hideLink(event,'#menu-lat','<%= panel_princ_path %>')});
 $("#glyph-edit").css({"display": "none"});
 $("#graphs-gest").html("<%= j render 'panel/generar' %>");
+
+console.log("<%= params[:set] %>" + " from generate");

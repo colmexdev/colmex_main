@@ -33,11 +33,11 @@
   </div>
   <div class="field" style="height:250px;">
 		<div class="photo-upload">
-    <%= f.label :archivo, raw('<span class="glyphicon glyphicon-upload glyph-padding"></span>Añadir imagen') %><br>
-    <%= f.file_field :archivo, :onchange => "readURL(this,'#arch-doc')" %><br>
+    <%= f.label :archivo, raw('<span class="glyphicon glyphicon-upload glyph-padding"></span>Añadir archivo') %><br>
+    <%= f.file_field :archivo %><br>
 		</div>
 		<div class="img-display">
-			<% if @obj.archivo.url == "/archivos/original/missing.png" %>
+			<% if @obj.archivo.url.include?("/archivos/original/missing.png") %>
 				<a id="arch-doc" href="<%= @obj.archivo.url %>" target="_blank"><img id="archivo-doc" src="<%= image_url('documento.png') %>"></a>
 			<% else %>
 				<span>No hay archivo para mostrar.</span>
