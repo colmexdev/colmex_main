@@ -1,8 +1,8 @@
 $("#text-title-gest").html("<%= params[:set] %>");
-$("#glyph-new").css({"display": "inline-block"}).on("click",function(event){hideLink(event,'#menu-lat','<%= panel_nuevo_path(:set => params[:set]) %>')});
-$("#glyph-back").css({"display": "none"});
-$("#glyph-home").css({"display": "inline-block"}).on("click",function(event){hideLink(event,'#menu-lat','<%= panel_princ_path %>')});
-$("#glyph-edit").css({"display": "none"});
+$("#glyph-new").css({"display": "inline-block"}).unbind().on("click",function(event){hideLink(event,'#menu-lat','<%= panel_nuevo_path(:set => params[:set]) %>')});
+$("#glyph-back").css({"display": "none"}).unbind();
+$("#glyph-home").css({"display": "inline-block"}).unbind().on("click",function(event){hideLink(event,'#menu-lat','<%= panel_princ_path %>')});
+$("#glyph-edit").css({"display": "none"}).unbind();
 $("#graphs-gest").html("<%= j render 'panel/index' %>");
 
 console.log("<%= params[:set] %>" + " from index");

@@ -5,4 +5,4 @@ $("#glyph-home").css({"display": "inline-block"}).on("click",function(event){hid
 $("#glyph-edit").css({"display": "none"});
 $("#graphs-gest").html("<%= j render 'panel/generar' %>");
 
-console.log("<%= params[:set] %>" + " from create");
+console.log("<%= params[:set] %>" + " from generate");

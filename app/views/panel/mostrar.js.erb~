@@ -4,3 +4,5 @@ $("#glyph-back").css({"display": "inline-block"}).on('click',function(event){hid
 $("#glyph-home").css({"display": "inline-block"}).on("click",function(event){hideLink(event,'#menu-lat','<%= panel_princ_path %>')});
 $("#glyph-edit").css({"display": "inline-block"}).on('click', function(event){hideLink(event,'#menu-lat','<%= panel_editar_path(:set => params[:set], :id => @obj.id) %>')});
 $("#graphs-gest").html("<%= j render 'panel/mostrar' %>");
+
+console.log("<%= params[:set] %>" + " from show");

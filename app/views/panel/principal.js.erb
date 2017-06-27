@@ -1,8 +1,8 @@
 $("#text-title-gest").html("Panel gestor de contenido");
-$("#glyph-new").css({"display": "none"});
-$("#glyph-back").css({"display": "none"});
-$("#glyph-home").css({"display": "none"});
-$("#glyph-edit").css({"display": "none"});
+$("#glyph-new").css({"display": "none"}).unbind();
+$("#glyph-back").css({"display": "none"}).unbind();
+$("#glyph-home").css({"display": "none"}).unbind();
+$("#glyph-edit").css({"display": "none"}).unbind();
 $("#graphs-gest").html("<%= j render 'panel/principal' %>");
 
 console.log("<%= params[:set] %>" + " from main");
