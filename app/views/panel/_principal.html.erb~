@@ -24,11 +24,11 @@
 				.domain([0,d3.max(objetosAgrupadosPorFecha,function(d){ return d.value})])
 				.range([0,400]);
 
-			var xAxis = d3.axisBottom(escalaX_tiempo)
+			var xAxis = d3.axisBottom(x)
 					.ticks(30)
 					.tickSize(400)
 					.tickPadding(8 - 400);
-			var yAxis = d3.axisRight(escalaY_lineal)
+			var yAxis = d3.axisRight(y)
 					.ticks(10)
 					.tickSize(450)
 					.tickPadding(8 - 450);
