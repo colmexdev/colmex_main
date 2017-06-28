@@ -6,7 +6,18 @@ class PanelController < ApplicationController
 		grupos = @sets.map {|k,v| v[:model]}
     @groups = []
     grupos.each do |g|
-      @groups << g.pluck(:nombre,:titulo,:cita,:badge,:created_at,:updated_at).where("created_at >= ? eOR updated_at >= ?", Date.current, Date.current)
+      begin
+        @groups << g.pluck(:nombre,:created_at,:updated_at).where("created_at >= ? eOR updated_at >= ?", Date.current, Date.current)
+      end
+      begin
+        @groups << g.pluck(:titulo,:created_at,:updated_at).where("created_at >= ? eOR updated_at >= ?", Date.current, Date.current)
+      end
+      begin
+        @groups << g.pluck(:cita,:created_at,:updated_at).where("created_at >= ? eOR updated_at >= ?", Date.current, Date.current)
+      end
+      begin
+        @groups << g.pluck(:badge,:created_at,:updated_at).where("created_at >= ? eOR updated_at >= ?", Date.current, Date.current)
+      end
     end
     respond_to do |format|
       format.js
