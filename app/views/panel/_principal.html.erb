@@ -1,16 +1,58 @@
+<div>
+	<svg id="svg1" width="650" height="600">
+	</svg>
+</div>
+
 <script type="text/javascript">
 	$.ajax({
 		url: "<%= panel_princ_path %>",
 		dataType: "JSON",
 		success: function(result){
-			var dataset = crossfilter(result);
+			//Variables para filtrado
+			var dataset = crossfilter(result["groups"]);
 			var objetosPorTipo = dataset.dimension(function(d){return d["tipo"]});
 			var objetosPorFechaUpd = dataset.dimension(function(d){return d["fecha_upd"]});
 			var objetosPorFechaGen = dataset.dimension(function(d){return d["fecha_creacion"]});
-			d3.select("#graphs-gest")
-				.selectAll("p")
-				.data(result)
-				.enter().append("p").text(function(d){return d["nombre"]});
+
+			var objetosAgrupadosPorFecha = objetosPorFechaUpd.group().reduceCount(function(d){return d["fecha_upd"]}).top(Infinity);
+
+			//Variables para graficación
+			var x = d3.scaleTime()
+				.domain([result["last_time"],"<%= Date.now %>")
+				.range([0,450]);
+			var y = d3.scaleLinear()
+				.domain([0,d3.max(objetosAgrupadosPorFecha,function(d){ return d.value})])
+				.range([0,400]);
+
+			var xAxis = d3.axisBottom(escalaX_tiempo)
+					.ticks(30)
+					.tickSize(400)
+					.tickPadding(8 - 400);
+			var yAxis = d3.axisRight(escalaY_lineal)
+					.ticks(10)
+					.tickSize(450)
+					.tickPadding(8 - 450);
+
+			var svg = d3.select("#svg");
+
+			var gX = svg.append("g")
+				.attr("class", "axis axis--x")
+				.call(xAxis);
+
+			var gY = svg.append("g")
+				.attr("class", "axis axis--y")
+				.call(yAxis);
+
+			var rects = svg.selectAll(".nodes")
+				.data(objetosAgrupadosPorFecha)
+				.enter().append("circle")
+				.attr("id",function(d,i){return "punto-" + i})
+				.attr("r", "2px" })
+				.attr("cx", function(d){ return x(d.key)})
+				.attr("cy", function(d){ return y(d.value)})
+				.attr("stroke", "#dddddd")
+				.attr("stroke-width", 1);
+				
 		}
 	});
 </script>

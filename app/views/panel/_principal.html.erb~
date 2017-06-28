@@ -1,12 +1,27 @@
+<div>
+	<svg id="svg1" width="650" height="600">
+	</svg>
+</div>
+
 <script type="text/javascript">
 	$.ajax({
 		url: "<%= panel_princ_path %>",
 		dataType: "JSON",
 		success: function(result){
-			var dataset = crossfilter(result);
+			//Variables para filtrado
+			var dataset = crossfilter(result["groups"]);
 			var objetosPorTipo = dataset.dimension(function(d){return d["tipo"]});
 			var objetosPorFechaUpd = dataset.dimension(function(d){return d["fecha_upd"]});
 			var objetosPorFechaGen = dataset.dimension(function(d){return d["fecha_creacion"]});
+			//Variables para graficación
+			var escalaX_tiempo = d3.scaleTime()
+				.domain([result["last_time"],"<%= Date.now %>")
+				.range([0,450]);
+			var escalaY_lineal = d3.scaleLinear()
+				.domain([0,objetosPorFechaUpd.group().reduceSum(function(d){return d["fecha_upd"]})])
+				.range([0,400]);
+			var svg = d3.select("#svg")
+				
 		}
 	});
 </script>
