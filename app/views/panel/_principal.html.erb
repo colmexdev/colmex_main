@@ -15,7 +15,7 @@
 			var objetosPorFechaGen = dataset.dimension(function(d){return d["fecha_creacion"]});
 
 			var objetosAgrupadosPorFecha = objetosPorFechaUpd.group().reduceCount(function(d){return d["fecha_upd"]}).top(Infinity);
-
+			console.log(objetosAgrupadosPorFecha);
 			//Variables para graficación
 			var x = d3.scaleTime()
 				.domain([result["last_time"],"<%= Date.today %>")
