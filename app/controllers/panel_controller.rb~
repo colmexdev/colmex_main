@@ -30,7 +30,7 @@ class PanelController < ApplicationController
     @groups = @groups.reject{|g| g.empty?}.flatten
     respond_to do |format|
       format.js
-      format.json {render json: {groups: @groups, last_time: Date.today - 30}}
+      format.json {render json: {groups: @groups, last_time: (Date.today - 30).as_date}}
     end
   end
 
