@@ -7,22 +7,22 @@ class PanelController < ApplicationController
     @groups = []
     grupos.each do |g|
       begin
-        @groups << g.where("created_at >= ? OR updated_at >= ?", Date.current, Date.current).pluck(:nombre,:created_at,:updated_at)
+        @groups << g.where("created_at >= ? OR updated_at >= ?", Date.today-30, Date.today-30).pluck(:nombre,:created_at,:updated_at)
       rescue Exception => e
         #next
       end
       begin
-        @groups << g.where("created_at >= ? OR updated_at >= ?", Date.current, Date.current).pluck(:titulo,:created_at,:updated_at)
+        @groups << g.where("created_at >= ? OR updated_at >= ?", Date.today-30, Date.today-30).pluck(:titulo,:created_at,:updated_at)
       rescue Exception => e
         #next
       end
       begin
-        @groups << g.where("created_at >= ? OR updated_at >= ?", Date.current, Date.current).pluck(:cita,:created_at,:updated_at)
+        @groups << g.where("created_at >= ? OR updated_at >= ?", Date.today-30, Date.current-30).pluck(:cita,:created_at,:updated_at)
       rescue Exception => e
         #next
       end
       begin
-        @groups << g.where("created_at >= ? OR updated_at >= ?", Date.current, Date.current).pluck(:badge,:created_at,:updated_at)
+        @groups << g.where("created_at >= ? OR updated_at >= ?", Date.today-30, Date.current-30).pluck(:badge,:created_at,:updated_at)
       rescue Exception => e
         #next
       end
