@@ -24,3 +24,4 @@
 //= require documentos
 //= require sobre_el_colegio
 //= require backend
+//= require d3

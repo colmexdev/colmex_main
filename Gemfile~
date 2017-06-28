@@ -44,11 +44,14 @@ gem 'paperclip'
 #crossfilter para el filtrado de datsets
 gem 'crossfilter-rails'
 
-#active_directory para extraer los datos de contacto de académicos
+# active_directory para extraer los datos de contacto de académicos
 gem 'active_directory'
 
 # Devise para autenticación
 gem 'devise'
+
+# remotipart para mandar formularios de modo remoto (js)
+gem 'remotipart', '~> 1.2'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
