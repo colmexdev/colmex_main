@@ -18,7 +18,7 @@
 			console.log(objetosAgrupadosPorFecha);
 			//Variables para graficación
 			var x = d3.scaleTime()
-				.domain([result["last_time"],"<%= Date.today %>"])
+				.domain([new Date(result["last_time"]),new Date("<%= Date.today %>")])
 				.range([0,450]);
 
 			console.log(x);
