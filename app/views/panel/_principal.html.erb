@@ -1,11 +1,16 @@
-<%= @groups.as_json %>
-
 <script type="text/javascript">
 	$.ajax({
 		url: "<%= panel_princ_path %>",
 		dataType: "JSON",
 		success: function(result){
-			console.log(result);
+			var dataset = crossfilter(result);
+			var objetosPorTipo = dataset.dimension(function(d){return d["tipo"]});
+			var objetosPorFechaUpd = dataset.dimension(function(d){return d["fecha_upd"]});
+			var objetosPorFechaGen = dataset.dimension(function(d){return d["fecha_creacion"]});
+			d3.select("#graphs-gest")
+				.selectAll("p")
+				.data(result)
+				.enter().append("p").text(function(d){return d["nombre"]});
 		}
 	});
 </script>

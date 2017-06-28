@@ -5,24 +5,24 @@ class PanelController < ApplicationController
   def principal
 		grupos = @sets.map {|k,v| v[:model]}
     @groups = []
-    grupos.each do |g|
+    grupos.each_with_index do |g,i|
       begin
-        @groups << g.where("created_at >= ? OR updated_at >= ?", Date.today-30, Date.today-30).pluck(:nombre,:created_at,:updated_at).map {|x| {nombre: x[0], fecha_creacion: x[1], fecha_upd: x[2]}}
+        @groups << g.where("created_at >= ? OR updated_at >= ?", Date.today-30, Date.today-30).pluck(:nombre,:created_at,:updated_at).map {|x| {nombre: x[0], fecha_creacion: x[1], fecha_upd: x[2], tipo: @sets.keys[i].to_s}}
       rescue Exception => e
         #next
       end
       begin
-        @groups << g.where("created_at >= ? OR updated_at >= ?", Date.today-30, Date.today-30).pluck(:titulo,:created_at,:updated_at).map {|x| {nombre: x[0], fecha_creacion: x[1], fecha_upd: x[2]}}
+        @groups << g.where("created_at >= ? OR updated_at >= ?", Date.today-30, Date.today-30).pluck(:titulo,:created_at,:updated_at).map {|x| {nombre: x[0], fecha_creacion: x[1], fecha_upd: x[2], tipo: @sets.keys[i].to_s}}
       rescue Exception => e
         #next
       end
       begin
-        @groups << g.where("created_at >= ? OR updated_at >= ?", Date.today-30, Date.current-30).pluck(:cita,:created_at,:updated_at).map {|x| {nombre: x[0], fecha_creacion: x[1], fecha_upd: x[2]}}
+        @groups << g.where("created_at >= ? OR updated_at >= ?", Date.today-30, Date.current-30).pluck(:cita,:created_at,:updated_at).map {|x| {nombre: x[0], fecha_creacion: x[1], fecha_upd: x[2], tipo: @sets.keys[i].to_s}}
       rescue Exception => e
         #next
       end
       begin
-        @groups << g.where("created_at >= ? OR updated_at >= ?", Date.today-30, Date.current-30).pluck(:badge,:created_at,:updated_at).map {|x| {nombre: x[0], fecha_creacion: x[1], fecha_upd: x[2]}}
+        @groups << g.where("created_at >= ? OR updated_at >= ?", Date.today-30, Date.current-30).pluck(:badge,:created_at,:updated_at).map {|x| {nombre: x[0], fecha_creacion: x[1], fecha_upd: x[2], tipo: @sets.keys[i].to_s}}
       rescue Exception => e
         #next
       end

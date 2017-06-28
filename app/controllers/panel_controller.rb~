@@ -30,6 +30,7 @@ class PanelController < ApplicationController
     @groups = @groups.reject{|g| g.empty?}.flatten
     respond_to do |format|
       format.js
+      format.json {render json: @groups}
     end
   end
 
