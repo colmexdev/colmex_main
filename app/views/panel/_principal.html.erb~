@@ -33,7 +33,7 @@
 					.tickSize(450)
 					.tickPadding(8 - 450);
 
-			var svg = d3.select("#svg");
+			var svg = d3.select("#svg1");
 
 			var gX = svg.append("g")
 				.attr("class", "axis axis--x")
