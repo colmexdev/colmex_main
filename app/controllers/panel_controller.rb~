@@ -27,6 +27,7 @@ class PanelController < ApplicationController
         #next
       end
     end
+    @groups = @groups.compact
     respond_to do |format|
       format.js
     end
