@@ -8,7 +8,6 @@
 		url: "<%= panel_princ_path %>",
 		dataType: "JSON",
 		success: function(result){
-			console.log(result);
 			//Variables para filtrado
 			var dataset = crossfilter(result["groups"]);
 			var objetosPorTipo = dataset.dimension(function(d){return d["tipo"]});
@@ -21,6 +20,9 @@
 			var x = d3.scaleTime()
 				.domain([result["last_time"],"<%= Date.today %>"])
 				.range([0,450]);
+
+			console.log(x);
+			window.x = x;
 			var y = d3.scaleLinear()
 				.domain([0,d3.max(objetosAgrupadosPorFecha,function(d){ return d.value})])
 				.range([0,400]);

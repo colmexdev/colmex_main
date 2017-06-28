@@ -8,7 +8,6 @@
 		url: "<%= panel_princ_path %>",
 		dataType: "JSON",
 		success: function(result){
-			console.log(result);
 			//Variables para filtrado
 			var dataset = crossfilter(result["groups"]);
 			var objetosPorTipo = dataset.dimension(function(d){return d["tipo"]});
@@ -48,7 +47,7 @@
 				.data(objetosAgrupadosPorFecha)
 				.enter().append("circle")
 				.attr("id",function(d,i){return "punto-" + i})
-				.attr("r", "2px" })
+				.attr("r", "2px")
 				.attr("cx", function(d){ return x(d.key)})
 				.attr("cy", function(d){ return y(d.value)})
 				.attr("stroke", "#dddddd")
