@@ -86,7 +86,6 @@
 		</div>
 		<div id="graphs-gest">
 		<p id="notice"><%= notice %></p>
-		<%= render 'panel/principal' %>
 		</div>
 
 	</div>
@@ -97,7 +96,6 @@
 	$.ajax({
 		url: "<%= panel_princ_path %>",
 		success: function(result){
-			console.log("Algo");
 		}
 	});
 </script>

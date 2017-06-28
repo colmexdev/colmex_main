@@ -1,17 +1,19 @@
 class PanelController < ApplicationController
-  before_action :select_set, only: [:index, :mostrar, :generar, :crear, :eliminar, :actualizar, :editar]
+  before_action :select_set, only: [:principal, :index, :mostrar, :generar, :crear, :eliminar, :actualizar, :editar]
   before_action :get_object_fields, only: [:index, :crear, :actualizar, :eliminar]
 
   def principal
+		grupos = @sets.map {|k,v| v[:model]}
+    @groups = []
+    grupos.each do |g|
+      @groups << g.pluck(:nombre,:titulo,:cita,:badge,:created_at,:updated_at).where("created_at >= ? eOR updated_at >= ?", Date.current, Date.current)
+    end
     respond_to do |format|
       format.js
     end
   end
 
   def panel
-    respond_to do |format|
-      format.html
-    end
   end
 
   def index 
