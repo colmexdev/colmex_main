@@ -1,1 +1,1 @@
-Hola mundo
+<%= @groups.as_json %>

@@ -1,1 +1,10 @@
 <%= @groups.as_json %>
+
+<script type="text/javascript">
+	$.ajax({
+		dataType: "JSON",
+		success: function(result){
+			console.log(result);
+		}
+	});
+</script>
