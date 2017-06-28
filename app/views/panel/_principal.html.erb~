@@ -8,6 +8,7 @@
 		url: "<%= panel_princ_path %>",
 		dataType: "JSON",
 		success: function(result){
+			console.log(result);
 			//Variables para filtrado
 			var dataset = crossfilter(result["groups"]);
 			var objetosPorTipo = dataset.dimension(function(d){return d["tipo"]});
