@@ -92,3 +92,12 @@
 	</div>
 </div>
 <% end %>
+
+<script type="text/javascript">
+	$.ajax({
+		url: "<%= panel_princ_path %>",
+		success: function(result){
+			console.log("Algo");
+		}
+	});
+</script>
