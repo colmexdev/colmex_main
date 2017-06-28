@@ -6,7 +6,7 @@
 <script type="text/javascript">
 	$.ajax({
 		url: "<%= panel_princ_path %>",
-		//dataType: "JSON",
+		dataType: "JSON",
 		success: function(result){
 			console.log(result);
 			//Variables para filtrado
@@ -19,7 +19,7 @@
 			console.log(objetosAgrupadosPorFecha);
 			//Variables para graficación
 			var x = d3.scaleTime()
-				.domain([result["last_time"],"<%= Date.today %>")
+				.domain([result["last_time"],"<%= Date.today %>"])
 				.range([0,450]);
 			var y = d3.scaleLinear()
 				.domain([0,d3.max(objetosAgrupadosPorFecha,function(d){ return d.value})])
@@ -37,11 +37,11 @@
 			var svg = d3.select("#svg1");
 
 			var gX = svg.append("g")
-				.attr("class", "axis axis--x")
+				.attr("class", "axis axis-x")
 				.call(xAxis);
 
 			var gY = svg.append("g")
-				.attr("class", "axis axis--y")
+				.attr("class", "axis axis-y")
 				.call(yAxis);
 
 			var rects = svg.selectAll(".nodes")
