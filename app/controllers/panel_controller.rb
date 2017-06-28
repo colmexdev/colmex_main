@@ -1,5 +1,6 @@
 class PanelController < ApplicationController
   before_action :select_set, only: [:index, :mostrar, :generar, :crear, :eliminar, :actualizar, :editar]
+  before_action :get_object_fields, only: [:index, :crear, :actualizar, :eliminar]
 
   def principal
     respond_to do |format|
@@ -10,23 +11,18 @@ class PanelController < ApplicationController
   def panel
     respond_to do |format|
       format.html
-      format.js { render :principal }
     end
   end
 
   def index 
     @set = @sets[params[:set].to_sym][:model].all
-    @fields = @sets[params[:set].to_sym][:fields]
-    @foto = @sets[params[:set].to_sym][:imgs]
     respond_to do |format|
       format.js
     end
   end
 
   def mostrar
-    @obj = @sets[params[:set].to_sym][:model].find(params[:id])
-    @fields = @sets[params[:set].to_sym][:fields]
-    @imgs = @sets[params[:set].to_sym][:imgs]
+
     respond_to do |format|
       format.js
     end
@@ -43,8 +39,6 @@ class PanelController < ApplicationController
     @obj = @sets[params[:set].to_sym][:model].new(obj_params)
     respond_to do |format|
       if @obj.save
-        @fields = @sets[params[:set].to_sym][:fields]
-        @imgs = @sets[params[:set].to_sym][:imgs]
         format.js { render :mostrar, params: {set: params[:set]}, notice: 'Objeto generado exitosamente.' }
       else
         format.js { render :generar }
@@ -61,8 +55,6 @@ class PanelController < ApplicationController
     @obj = @sets[params[:set].to_sym][:model].find(params[:id])
     respond_to do |format|
       if @obj.update(obj_params)
-        @fields = @sets[params[:set].to_sym][:fields]
-        @imgs = @sets[params[:set].to_sym][:imgs]
         format.js { render :mostrar, params: {set: params[:set]}, notice: 'Objeto generado exitosamente.' }
       else
         format.js { render :editar }
@@ -74,11 +66,8 @@ class PanelController < ApplicationController
   def eliminar
 		@sets[params[:set].to_sym][:model].find(params[:id]).destroy
     @set = @sets[params[:set].to_sym][:model].all
-    @fields = @sets[params[:set].to_sym][:fields]
-    @foto = @sets[params[:set].to_sym][:imgs]
 		respond_to do |format|
       format.js { render :index, params: {set: params[:set]}, notice: 'Se ha eliminado el objeto exitosamente'}
-		  #format.html { redirect_to admins_url, notice: 'Admin was successfully destroyed.' }
 		  format.json { head :no_content }
 		end
   end
@@ -141,6 +130,11 @@ class PanelController < ApplicationController
         imgs: {}
       }
     }
+  end
+
+  def get_object_fields
+    @fields = @sets[params[:set].to_sym][:fields]
+    @imgs = @sets[params[:set].to_sym][:imgs]
   end
 
   def obj_params
