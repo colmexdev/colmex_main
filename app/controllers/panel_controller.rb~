@@ -27,7 +27,7 @@ class PanelController < ApplicationController
         #next
       end
     end
-    @groups = @groups.compact
+    @groups = @groups.reject {|g| g.empty?}
     respond_to do |format|
       format.js
     end
