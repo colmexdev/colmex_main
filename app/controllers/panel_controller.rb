@@ -8,6 +8,10 @@ class PanelController < ApplicationController
   end
 
   def panel
+    respond_to do |format|
+      format.html
+      format.js { render :principal }
+    end
   end
 
   def index 

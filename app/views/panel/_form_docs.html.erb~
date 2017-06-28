@@ -33,7 +33,7 @@
   </div>
   <div class="field" style="height:250px;">
 		<div class="photo-upload">
-    <%= f.label :archivo, raw('<span class="glyphicon glyphicon-upload glyph-padding"></span>Añadir imagen') %><br>
+    <%= f.label :archivo, raw('<span class="glyphicon glyphicon-upload glyph-padding"></span>Añadir archivo') %><br>
     <%= f.file_field :archivo %><br>
 		</div>
 		<div class="img-display">
