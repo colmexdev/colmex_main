@@ -41,7 +41,7 @@
 			var circulos = svg.selectAll(".nodes")
 				.data(objetosAgrupadosPorFecha)
 				.enter().append("circle")
-				.attr("transform","translate("+margins["l"]+","+(margins["b"]+margins["t"])+")")
+				.attr("transform","translate("+margins["l"]+","+(margins["t"])+")")
 				.attr("id",function(d,i){return "punto-" + i})
 				.attr("r", "3px")
 				.attr("cx", function(d){ return x(new Date(d.key))})
