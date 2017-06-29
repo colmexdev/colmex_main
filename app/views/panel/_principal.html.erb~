@@ -23,7 +23,7 @@
 						v["val"] = objetosAgrupadosPorFecha[i].value;
 				}
 			});
-
+			console.log(fechas_ac);
 			//Variables para graficación
 			var margins = {t: 20, b: 20, r: 30, l: 30};
 			var sizes = {uc: {w: 950, h: 600}};
