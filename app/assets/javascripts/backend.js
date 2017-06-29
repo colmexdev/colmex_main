@@ -62,3 +62,12 @@ function eje(o,escala,n_ticks,s_ticks,p_ticks,f_ticks){
 					.tickPadding(p_ticks)
 					.tickFormat(f_ticks)
 }
+
+function completaFechas(f_i,f_f){
+	var fechas = [f_i];
+	var dif_dias = Math.ceil((f_1-f_f)/(24000*3600));
+	for(var i=0; i<dif_dias; i++){
+		fechas.push({fecha: new Date(fechas[fechas.length-1]+(i*24000*36000)), val: 0});
+	}
+	return fechas
+}

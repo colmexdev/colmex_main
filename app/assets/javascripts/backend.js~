@@ -55,10 +55,18 @@ function eje(o,escala,n_ticks,s_ticks,p_ticks,f_ticks){
 	p_ticks = p_ticks || null;
 	n_ticks = n_ticks || 10;
 	s_ticks = s_ticks || null;
-	var axis = (o == 'b' ? d3.axisBottom(escala) : d3.axisRight(escala));
+	var axis = (o == 'b' ? d3.axisBottom(escala) : d3.axisLeft(escala));
 	return axis
 					.ticks(n_ticks)
 					.tickSize(s_ticks)
 					.tickPadding(p_ticks)
 					.tickFormat(f_ticks)
+}
+
+function completaFechas(f_i,f_f){
+	var fechas = [f_i];
+	for(var i=f_i; i<=f_f; i++){
+		fechas.append(new Date(fechas[fechas.length-1]+(i*24000*36000)));
+	}
+	return fechas
 }
