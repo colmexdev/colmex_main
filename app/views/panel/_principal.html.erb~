@@ -19,7 +19,7 @@
 			var fechas_ac = completaFechas(new Date(result["last_time"]),new Date("<%= Date.today %>"));
 			for(var j=0; j<fechas_ac.length; j++){
 				for(var i=0; i<objetosAgrupadosPorFecha.length; i++){
-					console.log(fechas_ac[j]["fecha"] + " " + objetosAgrupadosPorFecha[i].key
+					console.log(fechas_ac[j]["fecha"] + " " + objetosAgrupadosPorFecha[i].key);
 					if(fechas_ac[j]["fecha"] == objetosAgrupadosPorFecha[i].key){
 						fechas_ac[j]["val"] = objetosAgrupadosPorFecha[i].value;
 						break;
