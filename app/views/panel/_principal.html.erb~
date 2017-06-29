@@ -21,6 +21,7 @@
 				for(var i=0; i<objetosAgrupadosPorFecha.length; i++){
 					console.log(fechas_ac[j]["fecha"] == objetosAgrupadosPorFecha[i].key);
 					if(fechas_ac[j]["fecha"] == objetosAgrupadosPorFecha[i].key){
+						console.log(objetosAgrupadosPorFecha[i].value);
 						fechas_ac[j]["val"] = objetosAgrupadosPorFecha[i].value;
 						break;
 					}
