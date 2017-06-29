@@ -17,22 +17,25 @@
 			var objetosAgrupadosPorFecha = objetosPorFechaUpd.group().reduceCount(function(d){return d["fecha_upd"]}).top(Infinity);
 
 			//Variables para graficación
-			var x = escala('t',[new Date(result["last_time"]),new Date("<%= Date.today %>")],[0,450]);
+			var margins = {t: 20, b: 20, r: 30, l: 30};
+			var sizes = {uc: {w: 650, h: 600}};
+			var x = escala('t',[new Date(result["last_time"]),new Date("<%= Date.today %>")],[0,sized["uc"]["w"]-margins["l"]);
 
-			var y = escala('l',[0,d3.max(objetosAgrupadosPorFecha,function(d){ return d.value})],[400,0]);
+			var y = escala('l',[0,d3.max(objetosAgrupadosPorFecha,function(d){ return d.value})],[sizes["uc"]["h"]-margins["b"],0]);
 
-			var xAxis = eje('b',x,30,450,-2,null);
-			var yAxis = eje('r',y,10,400,-392);
+			var xAxis = eje('b',x,30,2,-2,null);
+			var yAxis = eje('r',y,10,2,-2);
 
 			var svg = d3.select("#svg1");
 
 			var gX = svg.append("g")
 				.attr("class", "axis axis-x")
-				.attr("transform","translate("+0/*trans[0]*/+","+400/*trans[1]*/+")")
+				.attr("transform","translate("+margins["l"]+","+(sizes["uc"]["h"]-margins["b"])+")")
 				.call(xAxis);
 
 			var gY = svg.append("g")
 				.attr("class", "axis axis-y")
+				.attr("transform","translate("+margins["l"]+","+(margins["t"])+")")
 				.call(yAxis);
 
 			var circulos = svg.selectAll(".nodes")

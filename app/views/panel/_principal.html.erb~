@@ -21,7 +21,7 @@
 
 			var y = escala('l',[0,d3.max(objetosAgrupadosPorFecha,function(d){ return d.value})],[400,0]);
 
-			var xAxis = eje('b',x,30,450,-442,null);
+			var xAxis = eje('b',x,30,450,-2,null);
 			var yAxis = eje('r',y,10,400,-392);
 
 			var svg = d3.select("#svg1");

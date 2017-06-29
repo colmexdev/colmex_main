@@ -55,7 +55,7 @@ function eje(o,escala,n_ticks,s_ticks,p_ticks,f_ticks){
 	p_ticks = p_ticks || null;
 	n_ticks = n_ticks || 10;
 	s_ticks = s_ticks || null;
-	var axis = (o == 'b' ? d3.axisBottom(escala) : d3.axisRight(escala));
+	var axis = (o == 'b' ? d3.axisBottom(escala) : d3.axisLeft(escala));
 	return axis
 					.ticks(n_ticks)
 					.tickSize(s_ticks)
