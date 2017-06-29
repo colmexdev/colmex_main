@@ -17,13 +17,9 @@
 			var objetosAgrupadosPorFecha = objetosPorFechaUpd.group().reduceCount(function(d){return d["fecha_upd"]}).top(Infinity);
 
 			//Variables para graficación
-			var x = d3.scaleTime()
-				.domain([new Date(result["last_time"]),new Date("<%= Date.today %>")])
-				.range([0,450]);
+			var x = escalaTemporal([new Date(result["last_time"]),new Date("<%= Date.today %>")],[0,450]);
 
-			var y = d3.scaleLinear()
-				.domain([0,d3.max(objetosAgrupadosPorFecha,function(d){ return d.value})])
-				.range([400,0]);
+			var y = escalaLineal([0,d3.max(objetosAgrupadosPorFecha,function(d){ return d.value})],[400,0]);
 
 			var xAxis = d3.axisBottom(x)
 					.ticks(30)
@@ -44,15 +40,15 @@
 				.attr("class", "axis axis-y")
 				.call(yAxis);
 
-			var rects = svg.selectAll(".nodes")
+			var circulos = svg.selectAll(".nodes")
 				.data(objetosAgrupadosPorFecha)
 				.enter().append("circle")
 				.attr("id",function(d,i){return "punto-" + i})
-				.attr("r", "2px")
+				.attr("r", "3px")
 				.attr("cx", function(d){ return x(new Date(d.key))})
 				.attr("cy", function(d){ return y(d.value)})
 				.attr("stroke", "#dddddd")
-				.attr("stroke-width", 1);
+				.attr("stroke-width", 2);
 				
 		}
 	});

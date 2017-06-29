@@ -17,22 +17,12 @@
 			var objetosAgrupadosPorFecha = objetosPorFechaUpd.group().reduceCount(function(d){return d["fecha_upd"]}).top(Infinity);
 
 			//Variables para graficación
-			var x = d3.scaleTime()
-				.domain([new Date(result["last_time"]),new Date("<%= Date.today %>")])
-				.range([0,450]);
+			var x = escala('t',[new Date(result["last_time"]),new Date("<%= Date.today %>")],[0,450]);
 
-			var y = d3.scaleLinear()
-				.domain([0,d3.max(objetosAgrupadosPorFecha,function(d){ return d.value})])
-				.range([400,0]);
+			var y = escala('l',[0,d3.max(objetosAgrupadosPorFecha,function(d){ return d.value})],[400,0]);
 
-			var xAxis = d3.axisBottom(x)
-					.ticks(30)
-					.tickSize(400)
-					.tickPadding(8 - 400);
-			var yAxis = d3.axisRight(y)
-					.ticks(10)
-					.tickSize(450)
-					.tickPadding(8 - 450);
+			var xAxis = eje('b',x,30,450,-442,null,[0,400]);
+			var yAxis = eje('r',y,10,400,-392);
 
 			var svg = d3.select("#svg1");
 
@@ -44,7 +34,7 @@
 				.attr("class", "axis axis-y")
 				.call(yAxis);
 
-			var rects = svg.selectAll(".nodes")
+			var circulos = svg.selectAll(".nodes")
 				.data(objetosAgrupadosPorFecha)
 				.enter().append("circle")
 				.attr("id",function(d,i){return "punto-" + i})
