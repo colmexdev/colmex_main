@@ -54,6 +54,8 @@
       	.data([fechas_ac])
       	.attr("class", "line")
 				.attr("transform","translate("+margins["l"]+","+(margins["t"])+")")
+				.attr("fill","none")
+				.attr("stroke","black")
       	.attr("d", linea);
 
 			var circulos = svg.selectAll(".nodes")
