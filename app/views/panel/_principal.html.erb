@@ -23,7 +23,7 @@
 
 			var y = escala('l',[0,d3.max(objetosAgrupadosPorFecha,function(d){ return d.value})],[sizes["uc"]["h"]-margins["b"]-margins["t"],0]);
 
-			var xAxis = eje('b',x,30,2,-2,d3.time.format("%d/%m"));
+			var xAxis = eje('b',x,30,2,-2,d3.timeFormat("%d/%m"));
 			var yAxis = eje('r',y,10,2,-2);
 
 			var svg = d3.select("#svg1");
