@@ -54,6 +54,8 @@ function eje(o,escala,n_ticks,s_ticks,p_ticks,f_ticks,trans){
 	trans = trans || [0,0];
 	f_ticks = f_ticks || null;
 	p_ticks = p_ticks || null;
+	n_ticks = n_ticks || 10;
+	s_ticks = s_ticks || null;
 	var axis = (o == 'b' ? d3.axisBottom(escala) : d3.axisRight(escala));
 	return axis
 					.ticks(n_ticks)

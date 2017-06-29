@@ -17,18 +17,12 @@
 			var objetosAgrupadosPorFecha = objetosPorFechaUpd.group().reduceCount(function(d){return d["fecha_upd"]}).top(Infinity);
 
 			//Variables para graficación
-			var x = escalaTemporal([new Date(result["last_time"]),new Date("<%= Date.today %>")],[0,450]);
+			var x = escala('t',[new Date(result["last_time"]),new Date("<%= Date.today %>")],[0,450]);
 
-			var y = escalaLineal([0,d3.max(objetosAgrupadosPorFecha,function(d){ return d.value})],[400,0]);
+			var y = escala('l',[0,d3.max(objetosAgrupadosPorFecha,function(d){ return d.value})],[400,0]);
 
-			var xAxis = d3.axisBottom(x)
-					.ticks(30)
-					.tickSize(400)
-					.tickPadding(8 - 400);
-			var yAxis = d3.axisRight(y)
-					.ticks(10)
-					.tickSize(450)
-					.tickPadding(8 - 450);
+			var xAxis = eje('b',x,30,450,-442,null);
+			var yAxis = eje('r',y,10,400,-392);
 
 			var svg = d3.select("#svg1");
 

@@ -62,5 +62,4 @@ function eje(o,escala,n_ticks,s_ticks,p_ticks,f_ticks,trans){
 					.tickSize(s_ticks)
 					.tickPadding(p_ticks)
 					.tickFormat(f_ticks)
-					.attr("transform","translate("+trans[0]+","+trans[1]+")")
 }
