@@ -19,7 +19,7 @@
 			//Variables para graficación
 			var margins = {t: 20, b: 20, r: 30, l: 30};
 			var sizes = {uc: {w: 650, h: 600}};
-			var x = escala('t',[new Date(result["last_time"]),new Date("<%= Date.today %>")],[0,sized["uc"]["w"]-margins["l"]);
+			var x = escala('t',[new Date(result["last_time"]),new Date("<%= Date.today %>")],[0,sizes["uc"]["w"]-margins["l"]]);
 
 			var y = escala('l',[0,d3.max(objetosAgrupadosPorFecha,function(d){ return d.value})],[sizes["uc"]["h"]-margins["b"],0]);
 
