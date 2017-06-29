@@ -14,7 +14,7 @@
 			var objetosPorFechaUpd = dataset.dimension(function(d){return d["fecha_upd"]});
 			var objetosPorFechaGen = dataset.dimension(function(d){return d["fecha_creacion"]});
 
-			var objetosAgrupadosPorFecha = objetosPorFechaUpd.group().reduceCount(function(d){return d["fecha_upd"]}).top(Infinity).sort(function(a,b){return a["fecha_upd"] - b["fecha_upd"]});
+			var objetosAgrupadosPorFecha = objetosPorFechaUpd.group().reduceCount(function(d){return d["fecha_upd"]}).top(Infinity);
 
 			var fechas_ac = completaFechas(new Date(result["last_time"]),new Date("<%= Date.today %>"));
 			$.each(fechas_ac, function(i,v){
@@ -23,7 +23,6 @@
 						v["val"] = objetosAgrupadosPorFecha[i].value;
 				}
 			});
-			console.log(fechas_ac);
 
 			//Variables para graficación
 			var margins = {t: 20, b: 20, r: 30, l: 30};
