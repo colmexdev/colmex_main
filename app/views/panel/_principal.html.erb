@@ -21,7 +21,7 @@
 			var sizes = {uc: {w: 650, h: 600}};
 			var x = escala('t',[new Date(result["last_time"]),new Date("<%= Date.today %>")],[0,sizes["uc"]["w"]-margins["l"]]);
 
-			var y = escala('l',[0,d3.max(objetosAgrupadosPorFecha,function(d){ return d.value})],[sizes["uc"]["h"]-margins["b"],0]);
+			var y = escala('l',[0,d3.max(objetosAgrupadosPorFecha,function(d){ return d.value})],[sizes["uc"]["h"]-margins["b"]-margins["t"],0]);
 
 			var xAxis = eje('b',x,30,2,-2,null);
 			var yAxis = eje('r',y,10,2,-2);
@@ -41,6 +41,7 @@
 			var circulos = svg.selectAll(".nodes")
 				.data(objetosAgrupadosPorFecha)
 				.enter().append("circle")
+				.attr("transform","translate("+margins["l"]+","+(sizes["uc"]["h"]-margins["b"]-margins["t"])+")")
 				.attr("id",function(d,i){return "punto-" + i})
 				.attr("r", "3px")
 				.attr("cx", function(d){ return x(new Date(d.key))})
