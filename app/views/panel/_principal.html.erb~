@@ -28,6 +28,7 @@
 
 			var gX = svg.append("g")
 				.attr("class", "axis axis-x")
+				.attr("transform","translate("+0/*trans[0]*/+","+400/*trans[1]*/+")")
 				.call(xAxis);
 
 			var gY = svg.append("g")

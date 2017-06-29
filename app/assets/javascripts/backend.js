@@ -50,8 +50,7 @@ function escala(tipo,dom,rango){
 				.range(rango)
 }
 
-function eje(o,escala,n_ticks,s_ticks,p_ticks,f_ticks,trans){
-	trans = trans || [0,0];
+function eje(o,escala,n_ticks,s_ticks,p_ticks,f_ticks){
 	f_ticks = f_ticks || null;
 	p_ticks = p_ticks || null;
 	n_ticks = n_ticks || 10;
