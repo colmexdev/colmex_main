@@ -1,5 +1,5 @@
 <div>
-	<svg id="svg1" width="650" height="600">
+	<svg id="svg1" width="950" height="600">
 	</svg>
 </div>
 
@@ -18,7 +18,7 @@
 
 			//Variables para graficación
 			var margins = {t: 20, b: 20, r: 30, l: 30};
-			var sizes = {uc: {w: 650, h: 600}};
+			var sizes = {uc: {w: 950, h: 600}};
 			var x = escala('t',[new Date(result["last_time"]),new Date("<%= Date.today %>")],[0,sizes["uc"]["w"]-margins["l"]]);
 
 			var y = escala('l',[0,d3.max(objetosAgrupadosPorFecha,function(d){ return d.value})],[sizes["uc"]["h"]-margins["b"]-margins["t"],0]);
@@ -37,6 +37,15 @@
 				.attr("class", "axis axis-y")
 				.attr("transform","translate("+margins["l"]+","+(margins["t"])+")")
 				.call(yAxis);
+
+			var linea = d3.line()
+				.x(function(d){return new Date(d.key)})
+				.y(function(d){return d.value});
+
+			var uc_line = svg.append("path")
+      	.data(objetosAgrupadosPorFecha)
+      	.attr("class", "line")
+      	.attr("d", linea);
 
 			var circulos = svg.selectAll(".nodes")
 				.data(objetosAgrupadosPorFecha)
