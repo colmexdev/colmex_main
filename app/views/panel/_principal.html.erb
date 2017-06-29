@@ -39,8 +39,8 @@
 				.call(yAxis);
 
 			var linea = d3.line()
-				.x(function(d){return new Date(d.key)})
-				.y(function(d){return d.value});
+				.x(function(d){return x(new Date(d.key))})
+				.y(function(d){return y(d.value)});
 
 			var uc_line = svg.append("path")
       	.data(objetosAgrupadosPorFecha)

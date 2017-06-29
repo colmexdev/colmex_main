@@ -45,6 +45,7 @@
 			var uc_line = svg.append("path")
       	.data(objetosAgrupadosPorFecha)
       	.attr("class", "line")
+				.attr("transform","translate("+margins["l"]+","+(margins["t"])+")")
       	.attr("d", linea);
 
 			var circulos = svg.selectAll(".nodes")
