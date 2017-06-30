@@ -98,8 +98,8 @@
 			var arc = d3.arc()
 					.outerRadius(200 - 10)
 					.innerRadius(0)
-					.padAngle(0.5)
-					.padRadius(20);
+					.padAngle(0.8)
+					.padRadius(10);
 
 			/*var labelArc = d3.arc()
 					.outerRadius(radius - 40)
