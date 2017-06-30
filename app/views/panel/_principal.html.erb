@@ -19,10 +19,11 @@
 			//var objetosAgrupadosPorFechaUpd = objetosPorFechaUpd.group();
 			//var objetosAgrupadosPorFechaGen = objetosPorFechaGen.group();
 
-			var objetosFiltradosPorFecha = objetosPorFechaUpd.filter(function(d){ console.log(d); return (new Date(d).getTime() >= new Date(result["last_time"]).getTime() && new Date(d).getTime() <= new Date("<%= Date.today %>").getTime())});
+			var objetosFiltradosPorFecha = objetosPorFechaUpd.filter(function(d){ return (new Date(d).getTime() >= new Date(result["last_time"]).getTime() && new Date(d).getTime() <= new Date("<%= Date.today %>").getTime())});
 
 			var objetosContadosPorFecha = objetosFiltradosPorFecha.group().reduceCount(function(d){ return d}).top(Infinity);
-			console.log(objetosFiltradosPorFecha.top(Infinity));
+			var objetosContadosPorTipo = objetosPorTipo.group().reduceCount(function(d){return d}),top(Infinity);
+			console.log(objetosContadosPorTipo.top(Infinity));
 
 			var fechas_ac = completaFechas(new Date(result["last_time"]),new Date("<%= Date.today %>"));
 			var total_upds = 0;
@@ -35,7 +36,6 @@
 					}
 				}
 			}
-			console.log(total_upds);
 			//Variables para graficación
 			var margins = {t: 20, b: 20, r: 30, l: 30};
 			var sizes = {uc: {w: 950, h: 600}};
