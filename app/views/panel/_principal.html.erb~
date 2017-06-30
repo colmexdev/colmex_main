@@ -21,8 +21,8 @@
 
 			var objetosFiltradosPorFecha = objetosPorFechaUpd.filter(function(d){ return (new Date(d).getTime() >= new Date(result["last_time"]).getTime() && new Date(d).getTime() <= new Date("<%= Date.today %>").getTime())});
 
-			var objetosContadosPorFecha = objetosFiltradosPorFecha.group().reduceCount(function(d){ return d["fecha_upd"]}).top(Infinity);
-			var objetosContadosPorTipo = objetosPorTipo.group().reduceCount(function(d){return d}),top(Infinity);
+			var objetosContadosPorFecha = objetosFiltradosPorFecha.group().reduceCount(function(d){ return d}).top(Infinity);
+			var objetosContadosPorTipo = objetosPorTipo.group().reduceCount(function(d){return d}).top(Infinity);
 			console.log(objetosContadosPorTipo.top(Infinity));
 
 			var fechas_ac = completaFechas(new Date(result["last_time"]),new Date("<%= Date.today %>"));
