@@ -92,12 +92,13 @@
 			//Gráfica de porcentajes (Pastel)
 			var svg_p = d3.select("#svg_p")
 				.append("g")
-				.attr("id","pie_chart");
+				.attr("id","pie_chart")
+				.attr("transform","translate("+(sizes["pc"]["w"]/2)+","+(sizes["pc"]["h"]/2)+")");
 
 			var arc = d3.arc()
 					.outerRadius(200 - 10)
 					.innerRadius(0)
-					.padAngle(0.3)
+					.padAngle(0.5)
 					.padRadius(10);
 
 			/*var labelArc = d3.arc()
