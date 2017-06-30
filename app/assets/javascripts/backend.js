@@ -66,7 +66,7 @@ function eje(o,escala,n_ticks,s_ticks,p_ticks,f_ticks){
 function completaFechas(f_i,f_f){
 	var fs = [];
 	var dif_dias = Math.ceil((f_f-f_i)/(24000*3600));
-	for(var i=0; i<=dif_dias+1; i++){
+	for(var i=0; i<dif_dias; i++){
 		fs.push({fecha: new Date(f_i.getTime()+(i*24000*3600)), val: 0});
 	}
 	return fs

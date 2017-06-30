@@ -67,7 +67,7 @@ function completaFechas(f_i,f_f){
 	var fs = [];
 	var dif_dias = Math.ceil((f_f-f_i)/(24000*3600));
 	for(var i=0; i<=dif_dias+1; i++){
-		fs.push({fecha: new Date(f_i+(i*24000*3600)), val: 0});
+		fs.push({fecha: new Date(f_i.getTime()+(i*24000*3600)), val: 0});
 	}
 	return fs
 }
