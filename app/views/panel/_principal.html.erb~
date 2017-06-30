@@ -15,13 +15,13 @@
 			var objetosPorFechaUpd = dataset.dimension(function(d){return d["fecha_upd"]});
 			var objetosPorFechaGen = dataset.dimension(function(d){return d["fecha_creacion"]});
 
-			var objetosAgrupadosPorTipo = objetosPorTipo.group();
-			var objetosAgrupadosPorFechaUpd = objetosPorFechaUpd.group();
-			var objetosAgrupadosPorFechaGen = objetosPorFechaGen.group();
+			//var objetosAgrupadosPorTipo = objetosPorTipo.group();
+			//var objetosAgrupadosPorFechaUpd = objetosPorFechaUpd.group();
+			//var objetosAgrupadosPorFechaGen = objetosPorFechaGen.group();
 
 			var objetosFiltradosPorFecha = objetosPorFechaUpd.filter(function(d){ return (new Date(d["fecha_upd"]).getTime() >= new Date(result["last_time"]).getTime() && new Date(d["fecha_upd"]).getTime() <= new Date("<%= Date.today %>").getTime())});
 
-			var objetosContadosPorFecha = objetosFiltradosPorFecha.reduceCount(function(d){ return d["fecha_upd"]}).top(Infinity);
+			var objetosContadosPorFecha = objetosFiltradosPorFecha.group().reduceCount(function(d){ return d["fecha_upd"]}).top(Infinity);
 			console.log(objetosAgrupadosPorTipo.all());
 
 			var fechas_ac = completaFechas(new Date(result["last_time"]),new Date("<%= Date.today %>"));
