@@ -8,7 +8,6 @@
 		url: "<%= panel_princ_path %>",
 		dataType: "JSON",
 		success: function(result){
-			console.log(result["groups"]);
 			//Variables para filtrado
 			var dataset = crossfilter(result["groups"]);
 
@@ -20,7 +19,7 @@
 			//var objetosAgrupadosPorFechaUpd = objetosPorFechaUpd.group();
 			//var objetosAgrupadosPorFechaGen = objetosPorFechaGen.group();
 
-			var objetosFiltradosPorFecha = objetosPorFechaUpd.filter(function(d){ return (new Date(d["fecha_upd"]).getTime() >= new Date(result["last_time"]).getTime() && new Date(d["fecha_upd"]).getTime() <= new Date("<%= Date.today %>").getTime())});
+			var objetosFiltradosPorFecha = objetosPorFechaUpd.filter(function(d){ console.log(d); return (new Date(d["fecha_upd"]).getTime() >= new Date(result["last_time"]).getTime() && new Date(d["fecha_upd"]).getTime() <= new Date("<%= Date.today %>").getTime())});
 
 			var objetosContadosPorFecha = objetosFiltradosPorFecha.group().reduceCount(function(d){ return d["fecha_upd"]}).top(Infinity);
 			console.log(objetosFiltradosPorFecha.top(Infinity));
