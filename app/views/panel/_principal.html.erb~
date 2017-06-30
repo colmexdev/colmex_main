@@ -10,22 +10,29 @@
 		success: function(result){
 			//Variables para filtrado
 			var dataset = crossfilter(result["groups"]);
+
 			var objetosPorTipo = dataset.dimension(function(d){return d["tipo"]});
 			var objetosPorFechaUpd = dataset.dimension(function(d){return d["fecha_upd"]});
 			var objetosPorFechaGen = dataset.dimension(function(d){return d["fecha_creacion"]});
 
-			var objetosAgrupadosPorFecha = objetosPorFechaUpd.group().reduceCount(function(d){return d["fecha_upd"]}).top(Infinity);
+			var objetosFiltradosPorFecha = objetosPorFechaUpd.filter(function(d){ return (new Date(d["fecha_upd"]).getTime() >= new Date(result["last_time"]).getTime() && new Date(d["fecha_upd"]).getTime() <= new Date("<%= Date.today %>").getTime())});
+
+			var objetosAgrupadosPorFecha = objetosFiltradosPorFecha.group().reduceCount(function(d){return d["fecha_upd"]}).top(Infinity);
+			var objetosAgrupadosPorTipo = objetosFiltradosPorFecha.group().reduceCount(function(d){ return d["tipo"]}).top(Infinity);
+			console.log(objetosAgrupadosPorTipo);
 
 			var fechas_ac = completaFechas(new Date(result["last_time"]),new Date("<%= Date.today %>"));
+			var total_upds = 0;
 			for(var j=0; j<fechas_ac.length; j++){
 				for(var i=0; i<objetosAgrupadosPorFecha.length; i++){
-					console.log([fechas_ac[j]["fecha"],new Date(objetosAgrupadosPorFecha[i].key)]);
 					if(fechas_ac[j]["fecha"].getTime() == new Date(objetosAgrupadosPorFecha[i].key).getTime()){
+						total_upds = total_upds + objetosAgrupadosPorFecha[i].value;
 						fechas_ac[j]["val"] = objetosAgrupadosPorFecha[i].value;
 						break;
 					}
 				}
 			}
+			console.log(total_upds);
 			//Variables para graficación
 			var margins = {t: 20, b: 20, r: 30, l: 30};
 			var sizes = {uc: {w: 950, h: 600}};
