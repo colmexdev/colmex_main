@@ -50,7 +50,8 @@
 
 			var linea = d3.line()
 				.x(function(d){return x(new Date(d["fecha"]))})
-				.y(function(d){return y(d["val"])});
+				.y(function(d){return y(d["val"])})
+				.curve(d3.curveCatmullRom);
 
 			var uc_line = svg.append("path")
       	.data([fechas_ac])

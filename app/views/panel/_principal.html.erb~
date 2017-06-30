@@ -20,7 +20,7 @@
 			for(var j=0; j<fechas_ac.length; j++){
 				for(var i=0; i<objetosAgrupadosPorFecha.length; i++){
 					console.log([fechas_ac[j]["fecha"],new Date(objetosAgrupadosPorFecha[i].key)]);
-					if(fechas_ac[j]["fecha"] == new Date(objetosAgrupadosPorFecha[i].key)){
+					if(fechas_ac[j]["fecha"].getTime() == new Date(objetosAgrupadosPorFecha[i].key).getTime()){
 						fechas_ac[j]["val"] = objetosAgrupadosPorFecha[i].value;
 						break;
 					}
