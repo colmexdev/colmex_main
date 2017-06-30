@@ -99,7 +99,7 @@
 					.outerRadius(200 - 10)
 					.innerRadius(0)
 					.padAngle(0.5)
-					.padRadius(10);
+					.padRadius(20);
 
 			/*var labelArc = d3.arc()
 					.outerRadius(radius - 40)
