@@ -20,7 +20,7 @@
 			var objetosFiltradosPorFecha = objetosPorFechaUpd.filter(function(d){ return (new Date(d["fecha_upd"]).getTime() >= new Date(result["last_time"]).getTime() && new Date(d["fecha_upd"]).getTime() <= new Date("<%= Date.today %>").getTime())});
 
 			var objetosAgrupadosPorFecha = objetosFiltradosPorFecha.group().reduceCount(function(d){ return d["fecha_upd"]}).top(Infinity);
-			console.log(objetosAgrupadosPorTipo);
+			console.log(dataset);
 			console.log(objetosPorTipo.group().top(Infinity));
 
 			var fechas_ac = completaFechas(new Date(result["last_time"]),new Date("<%= Date.today %>"));
