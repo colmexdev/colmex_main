@@ -19,7 +19,7 @@
 			var objetosFiltradosPorTipo = objetosPorTipo.filterAll();
 
 			var objetosAgrupadosPorFecha = objetosFiltradosPorFecha.group().reduceCount(function(d){return d["fecha_upd"]}).top(Infinity);
-			var objetosAgrupadosPorTipo = objetosFiltradosPorTipo.group().reduceCount(function(d){ return d["tipo"]}).top(Infinity);
+			var objetosAgrupadosPorTipo = objetosFiltradosPorTipo.group().reduceCount(function(d){console.log(d); return d["tipo"]}).top(Infinity);
 			console.log(objetosAgrupadosPorTipo);
 
 			var fechas_ac = completaFechas(new Date(result["last_time"]),new Date("<%= Date.today %>"));
