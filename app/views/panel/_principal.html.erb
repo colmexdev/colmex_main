@@ -15,21 +15,22 @@
 			var objetosPorFechaUpd = dataset.dimension(function(d){return d["fecha_upd"]});
 			var objetosPorFechaGen = dataset.dimension(function(d){return d["fecha_creacion"]});
 
-			var objetosAgrupadosPorTipo = objetosPorTipo.group().all();
+			var objetosAgrupadosPorTipo = objetosPorTipo.group();
+			var objetosAgrupadosPorFechaUpd = objetosPorFechaUpd.group();
+			var objetosAgrupadosPorFechaGen = objetosPorFechaGen.group();
 
 			var objetosFiltradosPorFecha = objetosPorFechaUpd.filter(function(d){ return (new Date(d["fecha_upd"]).getTime() >= new Date(result["last_time"]).getTime() && new Date(d["fecha_upd"]).getTime() <= new Date("<%= Date.today %>").getTime())});
 
-			var objetosAgrupadosPorFecha = objetosFiltradosPorFecha.group().reduceCount(function(d){ return d["fecha_upd"]}).top(Infinity);
-			console.log(dataset);
-			console.log(objetosPorTipo.group().top(Infinity));
+			var objetosContadosPorFecha = objetosFiltradosPorFecha.reduceCount(function(d){ return d["fecha_upd"]}).top(Infinity);
+			console.log(objetosAgrupadosPorTipo.all());
 
 			var fechas_ac = completaFechas(new Date(result["last_time"]),new Date("<%= Date.today %>"));
 			var total_upds = 0;
 			for(var j=0; j<fechas_ac.length; j++){
-				for(var i=0; i<objetosAgrupadosPorFecha.length; i++){
-					if(fechas_ac[j]["fecha"].getTime() == new Date(objetosAgrupadosPorFecha[i].key).getTime()){
-						total_upds = total_upds + objetosAgrupadosPorFecha[i].value;
-						fechas_ac[j]["val"] = objetosAgrupadosPorFecha[i].value;
+				for(var i=0; i<objetosContadosPorFecha.length; i++){
+					if(fechas_ac[j]["fecha"].getTime() == new Date(objetosContadosPorFecha[i].key).getTime()){
+						total_upds = total_upds + objetosContadosPorFecha[i].value;
+						fechas_ac[j]["val"] = objetosContadosPorFecha[i].value;
 						break;
 					}
 				}
@@ -40,7 +41,7 @@
 			var sizes = {uc: {w: 950, h: 600}};
 			var x = escala('t',[new Date(result["last_time"]),new Date("<%= Date.today %>")],[0,sizes["uc"]["w"]-margins["l"]]);
 
-			var y = escala('l',[0,d3.max(objetosAgrupadosPorFecha,function(d){ return d.value})],[sizes["uc"]["h"]-margins["b"]-margins["t"],0]);
+			var y = escala('l',[0,d3.max(objetosContadosPorFecha,function(d){ return d.value})],[sizes["uc"]["h"]-margins["b"]-margins["t"],0]);
 
 			var xAxis = eje('b',x,30,2,-2,d3.timeFormat("%d/%m"));
 			var yAxis = eje('r',y,10,2,-2);
