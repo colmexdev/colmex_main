@@ -99,6 +99,8 @@
 				
 			//Gráfica de porcentajes (Pastel)
 			var svg_p = d3.select("#svg_p")
+  	 		.attr("preserveAspectRatio", "xMinYMin meet")
+   			.attr("viewBox", "0 0 "+sizes["pc"]["w"]+" "+sizes["pc"]["h"]);
 				.append("g")
 				.attr("id","pie_chart")
 				.attr("transform","translate("+(sizes["pc"]["w"]/2)+","+(sizes["pc"]["h"]/2)+")");

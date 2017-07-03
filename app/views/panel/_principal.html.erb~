@@ -1,9 +1,9 @@
-<div class="chart-cont">
+<div class="chart-cont" id="cont-1">
 	<svg id="svg1">
 	</svg>
 </div>
 
-<div class="chart-cont">
+<div class="chart-cont" id="cont-2">
 	<svg id="svg_p">
 	</svg>
 </div>
@@ -55,10 +55,13 @@
 			var xAxis = eje('b',x,30,2,-2,d3.timeFormat("%d/%m"));
 			var yAxis = eje('r',y,10,2,-2);
 
-			var svg = d3.select("#svg1")
+			var svg = d3.select("#cont-1")
+				.style("max-width","1100px")
+				.style("height",sizes["uc"]["h"]+"px")
+				.style("min-width",sizes["uc"]["w"]+"px")
+				.select("#svg1")
   	 		.attr("preserveAspectRatio", "xMinYMin meet")
-   			.attr("viewBox", "0 0 "+sizes["uc"]["w"]+" "+sizes["uc"]["h"])
-				.attr("class","svg-chart");
+   			.attr("viewBox", "0 0 "+sizes["uc"]["w"]+" "+sizes["uc"]["h"]);
 
 			var gX = svg.append("g")
 				.attr("class", "axis axis-x")
@@ -96,6 +99,8 @@
 				
 			//Gráfica de porcentajes (Pastel)
 			var svg_p = d3.select("#svg_p")
+  	 		.attr("preserveAspectRatio", "xMinYMin meet")
+   			.attr("viewBox", "0 0 "+sizes["pc"]["w"]+" "+sizes["pc"]["h"]);
 				.append("g")
 				.attr("id","pie_chart")
 				.attr("transform","translate("+(sizes["pc"]["w"]/2)+","+(sizes["pc"]["h"]/2)+")");
