@@ -22,12 +22,9 @@ module PrincipalHelper
       return bloque_html, bloque_opt_html, bloque_tiny_html
     end
     slides = (sliders.each.length / 4).ceil
-    if slides == 0
-      slides = 1 
-    end
     j = 0
     primer_item = true;
-    for i in 1..slides
+    for i in 1..slides + 1
       k = 1
 			if j >= sliders.each.length
 				break
