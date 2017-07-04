@@ -267,7 +267,7 @@ function queryCoreReportingApi(profileId) {
   })
   .then(function(response) {
     var formattedJson = JSON.stringify(response.result, null, 2);
-    document.getElementById('query-output').innerHTML += "\n\n" + formattedJson;
+    document.getElementById('query-output').innerHTML += "<br><br>" + formattedJson;
   })
   .then(null, function(err) {
       // Log any errors.
@@ -284,7 +284,7 @@ function queryCoreReportingApi(profileId) {
   })
   .then(function(response) {
     var formattedJson = JSON.stringify(response.result, null, 2);
-    document.getElementById('query-output').innerHTML += "\n\n" + formattedJson;
+    document.getElementById('query-output').innerHTML += "<br><br>" + formattedJson;
   })
   .then(null, function(err) {
       // Log any errors.
