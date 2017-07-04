@@ -9,10 +9,8 @@ try{
 	descubres = clone(JSON.parse(gon.descubres));
 	agregarVisible(descubres);
 	dataset = crossfilter(descubres);
-	console.log("Algo");
 	descubresPorContenido = dataset.dimension(function(d){ return d.contenido; });
 	descubresPorTags = dataset.dimension(function(d){ return (d.titulo + " " + d.contenido + " " + d.tags.replace(/ *, */, " ")).replace(/ +/, " ").toLowerCase()});
-	console.log("Success");
 }
 catch(err){
 	descubres = [];
