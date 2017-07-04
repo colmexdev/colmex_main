@@ -244,9 +244,10 @@ function queryCoreReportingApi(profileId) {
   // the past seven days.
   gapi.client.analytics.data.ga.get({
     'ids': 'ga:128026521',
-    'start-date': '7daysAgo',
+    'start-date': '30daysAgo',
     'end-date': 'today',
-    'metrics': 'ga:sessions'
+    'metrics': 'ga:totalEvents',
+		'dimensions': 'ga:eventAction'
   })
   .then(function(response) {
     var formattedJson = JSON.stringify(response.result, null, 2);
