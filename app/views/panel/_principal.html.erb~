@@ -262,8 +262,8 @@ function queryCoreReportingApi(profileId) {
     'ids': 'ga:128026521',
     'start-date': '30daysAgo',
     'end-date': 'today',
-    'metrics': 'ga:users,ga:sessions'//,
-		//'dimensions': 'ga:eventAction'
+    'metrics': 'ga:users,ga:sessions',
+		'dimensions': 'ga:date'
   })
   .then(function(response) {
     var formattedJson = JSON.stringify(response.result, null, 2);

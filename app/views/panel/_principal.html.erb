@@ -262,7 +262,7 @@ function queryCoreReportingApi(profileId) {
     'ids': 'ga:128026521',
     'start-date': '30daysAgo',
     'end-date': 'today',
-    'metrics': 'ga:users,ga:sessions',
+    'metrics': 'ga:users,ga:sessions,ga:avgSessionDuration,ga:bounceRate',
 		'dimensions': 'ga:date'
   })
   .then(function(response) {
