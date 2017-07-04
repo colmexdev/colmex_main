@@ -251,7 +251,7 @@ function queryCoreReportingApi(profileId) {
   })
   .then(function(response) {
     var formattedJson = JSON.stringify(response.result, null, 2);
-    document.getElementById('query-output').value = formattedJson;
+    document.getElementById('query-output').innerHTML = formattedJson;
   })
   .then(null, function(err) {
       // Log any errors.
