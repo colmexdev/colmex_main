@@ -71,3 +71,44 @@ function completaFechas(f_i,f_f){
 	}
 	return fs
 }
+
+
+
+function pieChart(div_cont,cont_props,canvas,corners,c_id,radii,pads,sect_class,d_set){
+			var cont = d3.select(div_cont);
+			for (var k in cont_props){
+				if(cont_props.hasOwnProperty(k){
+					cont = cont.style(k,cont_props[k]);
+				}
+			}
+				/*.style("max-width",max_w)
+				.style("height",sizes["pc"]["h"]+"px")
+				.style("min-width",sizes["pc"]["w"]+"px")*/
+			var svg_p = cont.select(canvas)
+  	 		.attr("preserveAspectRatio", "xMinYMin meet")
+   			.attr("viewBox", "0 0 "+corners[0]+" "+corners[1])
+				.append("g")
+				.attr("id",c_id)
+				.attr("transform","translate("+(corners[0]/2)+","+(corners[1]/2)+")");
+
+			var arc = d3.arc()
+					.outerRadius(radii[1])
+					.innerRadius(radii[0])
+					.padAngle(pads[0])
+					.padRadius(pads[1]);
+
+			/*var labelArc = d3.arc()
+					.outerRadius(radius - 40)
+					.innerRadius(radius - 40);*/
+
+			var pie = d3.pie()
+					.sort(null)
+					.value(function(d) { return d.value; });
+
+			var p_c = svg_p.selectAll("."+sect_class)
+					.data(pie(d_set))
+					.enter().append("g")
+					.attr("class",sect_class)
+					.append("path")
+					.attr("d",arc);
+}

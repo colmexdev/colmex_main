@@ -8,6 +8,11 @@
 	</svg>
 </div>
 
+<div class="chart-cont" id="cont-devs">
+	<svg id="svg_pd">
+	</svg>
+</div>
+
 <div id="query-output"></div>
 
 <script type="text/javascript">
@@ -98,7 +103,13 @@
 				.attr("stroke-width", 2);
 				
 			//Gráfica de porcentajes (Pastel)
-			var svg_p = d3.select("#svg_p")
+			pieChart("#cont-1",{"max-width":"500px","height":sizes["pc"]["h"]+"px","min-width":sizes["pc"]["w"]+"px"},"#svg_p",[sizes["pc"]["w"],sizes["pc"]["h"]],"pie_chart",[20,180],[0.8,9],"sect",objetosContadosPorTipo);
+
+			/*var svg_p = d3.select("#cont-1")
+				.style("max-width","500px")
+				.style("height",sizes["pc"]["h"]+"px")
+				.style("min-width",sizes["pc"]["w"]+"px")
+				.select("#svg_p")
   	 		.attr("preserveAspectRatio", "xMinYMin meet")
    			.attr("viewBox", "0 0 "+sizes["pc"]["w"]+" "+sizes["pc"]["h"])
 				.append("g")
@@ -113,7 +124,7 @@
 
 			/*var labelArc = d3.arc()
 					.outerRadius(radius - 40)
-					.innerRadius(radius - 40);*/
+					.innerRadius(radius - 40);
 
 			var pie = d3.pie()
 					.sort(null)
@@ -124,7 +135,7 @@
 					.enter().append("g")
 					.attr("class","sector")
 					.append("path")
-					.attr("d",arc);
+					.attr("d",arc);*/
 		}
 	});
 </script>
@@ -246,6 +257,28 @@ function queryCoreReportingApi(profileId) {
     'ids': 'ga:128026521',
     'start-date': '30daysAgo',
     'end-date': 'today',
+    'metrics': 'ga:users',
+		'dimensions': 'ga:deviceCategory'
+  })
+  .then(function(response) {
+		var results = response.result.rows;
+		var data_devs = [];
+		for(var a in results){
+			data_devs.push({key: results[0],value: results[1]});
+		}
+			pieChart("#cont-devs",{"max-width":"500px","height":sizes["pc"]["h"]+"px","min-width":sizes["pc"]["w"]+"px"},"#svg_p",[sizes["pc"]["w"],sizes["pc"]["h"]],"pie_devs",[20,180],[0.8,9],"sect",data_devs);
+    //var formattedJson = JSON.stringify(response.result, null, 2);
+    //document.getElementById('query-output').innerHTML += "<br><br>" + formattedJson;
+  })
+  .then(null, function(err) {
+      // Log any errors.
+      console.log(err);
+  });
+
+  gapi.client.analytics.data.ga.get({
+    'ids': 'ga:128026521',
+    'start-date': '30daysAgo',
+    'end-date': 'today',
     'metrics': 'ga:totalEvents',
 		'dimensions': 'ga:eventAction'
   })
@@ -295,23 +328,7 @@ function queryCoreReportingApi(profileId) {
     'start-date': '30daysAgo',
     'end-date': 'today',
     'metrics': 'ga:users',
-		'dimensions': 'ga:date,ga:sourceMedium'
-  })
-  .then(function(response) {
-    var formattedJson = JSON.stringify(response.result, null, 2);
-    document.getElementById('query-output').innerHTML += "<br><br>" + formattedJson;
-  })
-  .then(null, function(err) {
-      // Log any errors.
-      console.log(err);
-  });
-
-  gapi.client.analytics.data.ga.get({
-    'ids': 'ga:128026521',
-    'start-date': '30daysAgo',
-    'end-date': 'today',
-    'metrics': 'ga:users',
-		'dimensions': 'ga:date,ga:referralPath'
+		'dimensions': 'ga:date,ga:medium'
   })
   .then(function(response) {
     var formattedJson = JSON.stringify(response.result, null, 2);
@@ -343,7 +360,39 @@ function queryCoreReportingApi(profileId) {
     'start-date': '30daysAgo',
     'end-date': 'today',
     'metrics': 'ga:users',
-		'dimensions': 'ga:deviceCategory'
+		'dimensions': 'ga:date,ga:country'
+  })
+  .then(function(response) {
+    var formattedJson = JSON.stringify(response.result, null, 2);
+    document.getElementById('query-output').innerHTML += "<br><br>" + formattedJson;
+  })
+  .then(null, function(err) {
+      // Log any errors.
+      console.log(err);
+  });
+
+  gapi.client.analytics.data.ga.get({
+    'ids': 'ga:128026521',
+    'start-date': '30daysAgo',
+    'end-date': 'today',
+    'metrics': 'ga:users',
+		'dimensions': 'ga:1dayUsers,ga:7dayUsers,ga:30dayUsers'
+  })
+  .then(function(response) {
+    var formattedJson = JSON.stringify(response.result, null, 2);
+    document.getElementById('query-output').innerHTML += "<br><br>" + formattedJson;
+  })
+  .then(null, function(err) {
+      // Log any errors.
+      console.log(err);
+  });
+
+  gapi.client.analytics.data.ga.get({
+    'ids': 'ga:128026521',
+    'start-date': '30daysAgo',
+    'end-date': 'today',
+    'metrics': 'ga:cohortRetetnionRate',
+		'dimensions': 'ga:cohortNthDay,ga:cohortNthWeek,ga:cohortNthMonth'
   })
   .then(function(response) {
     var formattedJson = JSON.stringify(response.result, null, 2);
