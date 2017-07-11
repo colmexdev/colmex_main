@@ -266,7 +266,7 @@ function queryCoreReportingApi(profileId) {
 		for(var a in results){
 			data_devs.push({key: results[0],value: results[1]});
 		}
-			pieChart("#cont-devs",{"max-width":"500px","height":sizes["pc"]["h"]+"px","min-width":sizes["pc"]["w"]+"px"},"#svg_devs",[sizes["pc"]["w"],sizes["pc"]["h"]],"pie_devs",[20,180],[0.8,9],"sect",data_devs);
+			pieChart("#cont-devs",{"max-width":"500px","height":500+"px","min-width":500+"px"},"#svg_devs",[500,500],"pie_devs",[20,180],[0.8,9],"sect",data_devs);
     //var formattedJson = JSON.stringify(response.result, null, 2);
     //document.getElementById('query-output').innerHTML += "<br><br>" + formattedJson;
   })
