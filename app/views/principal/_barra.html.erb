@@ -21,18 +21,20 @@
 			  <!-- Collect the nav links, forms, and other content for toggling -->
 			  <div class="navbar-collapse" id="barra_nav">
 			    <ul class="nav navbar-nav reajustable">
-						<% if false %>
+						
 						<li class="nav_opciones idioma" id="idioma-top"><%= link_to (params[:locale] == "sp" ? "English" : "Español"), {:controller => controller_name, :action => action_name, :locale => (params[:locale] == "en" ? "sp" : "en" ), :condicion => (params[:condicion] if action_name == "resultados_busqueda")}, :class => "inactivo" , :id => 'idioma_en' %></li>
-						<% end %>
-
+						
+<% if false %>
 						<li class="nav_opciones idioma" id="idioma-top"><%= link_to (params[:locale] == "sp" ? "English" : "Español"), {:controller => "principal", :action => "proximamente", :locale => "sp", :condicion => (params[:condicion] if action_name == "resultados_busqueda")}, :class => "inactivo" , :id => 'idioma_en' %></li>
+<% end %>
 						<li class="nav_opciones" id="logo-main"><a href="<%= root_path %>"><%= image_tag("colmex.png") %></a></li>
 						<li class="nav_opciones mail"><a href="http://portal.office.com" target="_blank"><%= image_tag("mail.png") %><span class="borrable"><%= t('navbar.mail') %></span></a></li>
 						<li class="nav_opciones intranet"><a href="http://intranet.colmex.mx/" target="_blank"><%= image_tag("intranet.png") %><span class="borrable"><%= t('navbar.intranet') %></span></a></li>
-						<% if false %>
+						
 						<li class="nav_opciones idioma" id="idioma-small-scroll"><%= link_to (params[:locale] == "sp" ? "English" : "Español"), {:controller => controller_name, :action => action_name, :locale => (params[:locale] == "en" ? "sp" : "en" ), :condicion => (params[:condicion] if action_name == "resultados_busqueda")}, :class => "inactivo" , :id => 'idioma_en' %></li>
-						<% end %>
+						<%if false %>
 						<li class="nav_opciones idioma" id="idioma-small-scroll"><%= link_to (params[:locale] == "sp" ? "English" : "Español"), {:controller => "principal", :action => "proximamente", :locale => "sp", :condicion => (params[:condicion] if action_name == "resultados_busqueda")}, :class => "inactivo" , :id => 'idioma_en' %></li>
+						<% end %>
 			
 						<li class="mostrable-chico"><a href="#menu" class="uk-navbar-toggle" data-uk-offcanvas></a></li>
 			    </ul>
@@ -98,10 +100,12 @@
 				<li class="no-dropdown"><a href="https://publicaciones.colmex.mx/index.php" target="_blank"><span><%= t('botones.b6') %></span></a></li>
 
 				<li class="no-dropdown"><a href=" http://agenda.colmex.mx" target="_blank"><span><%= t('botones.b5') %></span></a></li>
-				<% if false %>
+				
 				<li class="no-dropdown"><a href="http://web.colmex.mx/<%= controller_name %>/<%= action_name %>?locale=<%= (params[:locale] == 'sp' ? 'en' : 'sp') + (action_name == 'resultados_busqueda' ? '&condicion=' + params[:condicion] : '' ) %>"><span style="color:#993366;"><%= (params[:locale] == "sp" ? "English" : "Español") %></span></a></li>
-				<% end %>
+				
+<% if false %>
 				<li class="no-dropdown"><a href="<%= soon_path %>"><span style="color:#993366;"><%= (params[:locale] == "sp" ? "English" : "Español") %></span></a></li>
+<% end %>
 			</ul> <!-- Cierre del menú -->
 </div>
 
