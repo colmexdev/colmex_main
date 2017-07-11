@@ -105,7 +105,7 @@ function pieChart(div_cont,cont_props,canvas,corners,c_id,radii,pads,sect_class,
 					.sort(null)
 					.value(function(d) { return d.value; });
 
-			var p_c = svg_p.selectAll(sect_class)
+			var p_c = svg_p.selectAll("."+sect_class)
 					.data(pie(d_set))
 					.enter().append("g")
 					.attr("class",sect_class)
