@@ -77,7 +77,7 @@ function completaFechas(f_i,f_f){
 function pieChart(div_cont,cont_props,canvas,corners,c_id,radii,pads,sect_class,d_set){
 			var cont = d3.select(div_cont);
 			for (var k in cont_props){
-				if(cont_props.hasOwnProperty(k){
+				if(cont_props.hasOwnProperty(k)){
 					cont = cont.style(k,cont_props[k]);
 				}
 			}

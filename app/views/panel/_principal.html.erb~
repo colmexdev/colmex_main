@@ -105,37 +105,6 @@
 			//Gráfica de porcentajes (Pastel)
 			pieChart("#cont-2",{"max-width":"500px","height":sizes["pc"]["h"]+"px","min-width":sizes["pc"]["w"]+"px"},"#svg_p",[sizes["pc"]["w"],sizes["pc"]["h"]],"pie_chart",[20,180],[0.8,9],"sect",objetosContadosPorTipo);
 
-			/*var svg_p = d3.select("#cont-1")
-				.style("max-width","500px")
-				.style("height",sizes["pc"]["h"]+"px")
-				.style("min-width",sizes["pc"]["w"]+"px")
-				.select("#svg_p")
-  	 		.attr("preserveAspectRatio", "xMinYMin meet")
-   			.attr("viewBox", "0 0 "+sizes["pc"]["w"]+" "+sizes["pc"]["h"])
-				.append("g")
-				.attr("id","pie_chart")
-				.attr("transform","translate("+(sizes["pc"]["w"]/2)+","+(sizes["pc"]["h"]/2)+")");
-
-			var arc = d3.arc()
-					.outerRadius(200 - 10)
-					.innerRadius(0)
-					.padAngle(0.8)
-					.padRadius(10);
-
-			/*var labelArc = d3.arc()
-					.outerRadius(radius - 40)
-					.innerRadius(radius - 40);
-
-			var pie = d3.pie()
-					.sort(null)
-					.value(function(d) { return d.value; });
-
-			var p_c = svg_p.selectAll(".sect")
-					.data(pie(objetosContadosPorTipo))
-					.enter().append("g")
-					.attr("class","sector")
-					.append("path")
-					.attr("d",arc);*/
 		}
 	});
 </script>
@@ -265,9 +234,9 @@ function queryCoreReportingApi(profileId) {
 		var data_devs = [];
 		for(var a in results){
 			data_devs.push({key: results[a][0],value: +results[a][1]});
-			console.logs(results[a]);
+			console.log(results[a]);
 		}
-			pieChart("#cont-devs",{"max-width":"500px","height":500+"px","min-width":500+"px"},"#svg_devs",[500,500],"pie_devs",[20,180],[0.8,9],"sect",data_devs);
+			pieChart("#cont-devs",{max-width:"500px",height:500+"px",min-width:500+"px"},"#svg_devs",[500,500],"pie_devs",[50,180],[0.8,9],"sect",data_devs);
     //var formattedJson = JSON.stringify(response.result, null, 2);
     //document.getElementById('query-output').innerHTML += "<br><br>" + formattedJson;
   })
@@ -275,7 +244,7 @@ function queryCoreReportingApi(profileId) {
       // Log any errors.
       console.log(err);
   });
-/*
+
   gapi.client.analytics.data.ga.get({
     'ids': 'ga:128026521',
     'start-date': '30daysAgo',
@@ -284,14 +253,14 @@ function queryCoreReportingApi(profileId) {
 		'dimensions': 'ga:eventAction'
   })
   .then(function(response) {
-    var formattedJson = JSON.stringify(response.result, null, 2);
-    document.getElementById('query-output').innerHTML = formattedJson;
+    /*var formattedJson = JSON.stringify(response.result, null, 2);
+    document.getElementById('query-output').innerHTML = formattedJson;*/
   })
   .then(null, function(err) {
       // Log any errors.
       console.log(err);
   });
-
+/*
   gapi.client.analytics.data.ga.get({
     'ids': 'ga:128026521',
     'start-date': '30daysAgo',

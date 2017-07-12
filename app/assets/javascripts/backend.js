@@ -75,16 +75,9 @@ function completaFechas(f_i,f_f){
 
 
 function pieChart(div_cont,cont_props,canvas,corners,c_id,radii,pads,sect_class,d_set){
-			var cont = d3.select(div_cont);
-			for (var k in cont_props){
-				if(cont_props.hasOwnProperty(k)){
-					cont = cont.style(k,cont_props[k]);
-				}
-			}
-				/*.style("max-width",max_w)
-				.style("height",sizes["pc"]["h"]+"px")
-				.style("min-width",sizes["pc"]["w"]+"px")*/
-			var svg_p = cont.select(canvas)
+			var cont = d3.select(div_cont)
+				.attrs(cont_props)
+			.select(canvas)
   	 		.attr("preserveAspectRatio", "xMinYMin meet")
    			.attr("viewBox", "0 0 "+corners[0]+" "+corners[1])
 				.append("g")
