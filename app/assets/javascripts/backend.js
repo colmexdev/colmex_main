@@ -72,7 +72,7 @@ function completaFechas(f_i,f_f){
 	return fs
 }
 
-function traceFigures(canvas,d_set,fig_class,figure,fig_props){
+function traceFigures(canvas,d_set,fig_class,figure,fig_props,sc_x,sc_y){
 	var figs = d3.select(canvas).selectAll("."+fig_class)
 		.data(d_set)
 		.enter().append(figure);

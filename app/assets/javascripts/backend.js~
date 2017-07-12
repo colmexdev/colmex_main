@@ -89,7 +89,7 @@ function pieChart(div_cont,cont_props,canvas,corners,c_id,radii,pads,sect_class,
 
 	for(var k in cont_props){
 		if(cont_props.hasOwnProperty(k)){
-			cont = cont.attr(k,cont_props[k]);
+			cont = cont.style(k,cont_props[k]);
 		}
 	}
 

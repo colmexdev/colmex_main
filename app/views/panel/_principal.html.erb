@@ -90,7 +90,7 @@
 				.attr("stroke","black")
       	.attr("d", linea);
 
-			traceFigures("#svg1",fechas_ac,"nodes","circle",{"class":"nodes","transform":"translate("+margins["l"]+","+(margins["t"])+")","id":function(d,i){return "punto-" + i},"r":"3px","cx":function(d){ return x(new Date(d["fecha"]))},"cy":function(d){ return y(d["val"])},"stroke":"#dddddd","stroke-width": 3});
+			traceFigures("#svg1",fechas_ac,"nodes","circle",{"class":"nodes","transform":"translate("+margins["l"]+","+(margins["t"])+")","id":function(d,i){return "punto-" + i},"r":"3px","cx":function(d){ return sc_x(new Date(d["fecha"]))},"cy":function(d){ return sc_y(d["val"])},"stroke":"#dddddd","stroke-width": 3},x,y);
 
 			/*var circulos = svg.selectAll(".nodes")
 				.data(fechas_ac)
