@@ -72,36 +72,41 @@ function completaFechas(f_i,f_f){
 	return fs
 }
 
-
+function traceFigures(canvas,d_set,fig_class,figure,fig_props){
+	var circulos = d3.select(canvas).selectAll("."+fig_class)
+		.data(d_set)
+		.enter().append(figure)
+		.attrs(fig_props);
+}
 
 function pieChart(div_cont,cont_props,canvas,corners,c_id,radii,pads,sect_class,d_set){
-			var cont = d3.select(div_cont)
-				.attrs(cont_props)
-			.select(canvas)
-  	 		.attr("preserveAspectRatio", "xMinYMin meet")
-   			.attr("viewBox", "0 0 "+corners[0]+" "+corners[1])
-				.append("g")
-				.attr("id",c_id)
-				.attr("transform","translate("+(corners[0]/2)+","+(corners[1]/2)+")");
+	var cont = d3.select(div_cont)
+		.attrs(cont_props)
+	.select(canvas)
+ 		.attr("preserveAspectRatio", "xMinYMin meet")
+		.attr("viewBox", "0 0 "+corners[0]+" "+corners[1])
+		.append("g")
+		.attr("id",c_id)
+		.attr("transform","translate("+(corners[0]/2)+","+(corners[1]/2)+")");
 
-			var arc = d3.arc()
-					.outerRadius(radii[1])
-					.innerRadius(radii[0])
-					.padAngle(pads[0])
-					.padRadius(pads[1]);
+	var arc = d3.arc()
+			.outerRadius(radii[1])
+			.innerRadius(radii[0])
+			.padAngle(pads[0])
+			.padRadius(pads[1]);
 
-			/*var labelArc = d3.arc()
-					.outerRadius(radius - 40)
-					.innerRadius(radius - 40);*/
+	/*var labelArc = d3.arc()
+			.outerRadius(radius - 40)
+			.innerRadius(radius - 40);*/
 
-			var pie = d3.pie()
-					.sort(null)
-					.value(function(d) { return d.value; });
+	var pie = d3.pie()
+			.sort(null)
+			.value(function(d) { return d.value; });
 
-			var p_c = svg_p.selectAll("."+sect_class)
-					.data(pie(d_set))
-					.enter().append("g")
-					.attr("class",sect_class)
-					.append("path")
-					.attr("d",arc);
+	var p_c = svg_p.selectAll("."+sect_class)
+			.data(pie(d_set))
+			.enter().append("g")
+			.attr("class",sect_class)
+			.append("path")
+			.attr("d",arc);
 }

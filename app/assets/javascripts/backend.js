@@ -75,8 +75,13 @@ function completaFechas(f_i,f_f){
 function traceFigures(canvas,d_set,fig_class,figure,fig_props){
 	var circulos = d3.select(canvas).selectAll("."+fig_class)
 		.data(d_set)
-		.enter().append(figure)
-		.attrs(fig_props);
+		.enter().append(figure);
+
+	for(var k in fig_props){
+		if(fig_props.hasOwnProperty(k)){
+			circulos = circulos.attr(k,fig_props[k]);
+		}
+	}
 }
 
 function pieChart(div_cont,cont_props,canvas,corners,c_id,radii,pads,sect_class,d_set){

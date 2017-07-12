@@ -91,7 +91,9 @@
 				.attr("stroke","black")
       	.attr("d", linea);
 
-			var circulos = svg.selectAll(".nodes")
+			traceFigures("#svg1",fechas_ac,"nodes","circle",{"transform":"translate("+margins["l"]+","+(margins["t"])+")","id":function(d,i){return "punto-" + i},"r":"3px","cx":function(d){ return x(new Date(d["fecha"]))},"cy":function(d){ return y(d["val"])},"stroke":"#dddddd","stroke-width": 3});
+
+			/*var circulos = svg.selectAll(".nodes")
 				.data(fechas_ac)
 				.enter().append("circle")
 				.attr("transform","translate("+margins["l"]+","+(margins["t"])+")")
@@ -100,7 +102,7 @@
 				.attr("cx", function(d){ return x(new Date(d["fecha"]))})
 				.attr("cy", function(d){ return y(d["val"])})
 				.attr("stroke", "#dddddd")
-				.attr("stroke-width", 2);
+				.attr("stroke-width", 2);*/
 				
 			//Gráfica de porcentajes (Pastel)
 			pieChart("#cont-2",{"max-width":"500px","height":sizes["pc"]["h"]+"px","min-width":sizes["pc"]["w"]+"px"},"#svg_p",[sizes["pc"]["w"],sizes["pc"]["h"]],"pie_chart",[20,180],[0.8,9],"sect",objetosContadosPorTipo);
