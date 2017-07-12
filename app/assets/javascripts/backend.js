@@ -73,21 +73,27 @@ function completaFechas(f_i,f_f){
 }
 
 function traceFigures(canvas,d_set,fig_class,figure,fig_props){
-	var circulos = d3.select(canvas).selectAll("."+fig_class)
+	var figs = d3.select(canvas).selectAll("."+fig_class)
 		.data(d_set)
 		.enter().append(figure);
 
 	for(var k in fig_props){
 		if(fig_props.hasOwnProperty(k)){
-			circulos = circulos.attr(k,fig_props[k]);
+			figs = figs.attr(k,fig_props[k]);
 		}
 	}
 }
 
 function pieChart(div_cont,cont_props,canvas,corners,c_id,radii,pads,sect_class,d_set){
-	var cont = d3.select(div_cont)
-		.attrs(cont_props)
-	.select(canvas)
+	var cont = d3.select(div_cont);
+
+	for(var k in cont_props){
+		if(cont_props.hasOwnProperty(k)){
+			cont = cont.attr(k,cont_props[k]);
+		}
+	}
+
+	var svg_p = cont.select(canvas)
  		.attr("preserveAspectRatio", "xMinYMin meet")
 		.attr("viewBox", "0 0 "+corners[0]+" "+corners[1])
 		.append("g")
