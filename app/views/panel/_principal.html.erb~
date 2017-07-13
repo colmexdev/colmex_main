@@ -45,9 +45,9 @@
 			var total_upds = 0;
 			for(var j=0; j<fechas_ac.length; j++){
 				for(var i=0; i<objetosContadosPorFecha.length; i++){
-					if(fechas_ac[j]["fecha"].getTime() == new Date(objetosContadosPorFecha[i].key).getTime()){
+					if(fechas_ac[j]["key"].getTime() == new Date(objetosContadosPorFecha[i].key).getTime()){
 						total_upds = total_upds + objetosContadosPorFecha[i].value;
-						fechas_ac[j]["val"] = objetosContadosPorFecha[i].value;
+						fechas_ac[j]["value"] = objetosContadosPorFecha[i].value;
 						break;
 					}
 				}
@@ -82,12 +82,13 @@
 				.attr("transform","translate("+margins["l"]+","+(margins["t"])+")")
 				.call(yAxis);
 
+			var linea_t = linea(x,y,d3.curveMonotoneX,0,1);
 			/*var linea = d3.line()
 				.x(function(d){return x(new Date(d["fecha"]))})
 				.y(function(d){return y(d["val"])})
 				.curve(d3.curveMonotoneX);*/
 
-			traceFigures("#svg1",[fechas_ac],"line-time","path",{"class":"line","transform":"translate("+margins["l"]+","+(margins["t"])+")","fill":"none","stroke":"black","d":linea(function(d){return x(new Date(d["fecha"]))},function(d){return y(d["val"])},d3.curveMonotoneX)});
+			traceFigures("#svg1",[fechas_ac],"line-time","path",{"class":"line","transform":"translate("+margins["l"]+","+(margins["t"])+")","fill":"none","stroke":"black","d":linea_t});
 			/*var uc_line = svg.append("path")
       	.data([fechas_ac])
       	.attr("class", "line")
