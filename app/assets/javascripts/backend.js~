@@ -67,7 +67,7 @@ function completaFechas(f_i,f_f){
 	var fs = [];
 	var dif_dias = Math.ceil((f_f-f_i)/(24000*3600));
 	for(var i=0; i<dif_dias; i++){
-		fs.push({fecha: new Date(f_i.getTime()+(i*24000*3600)), val: 0});
+		fs.push({key: new Date(f_i.getTime()+(i*24000*3600)), value: 0});
 	}
 	return fs
 }
@@ -82,6 +82,13 @@ function traceFigures(canvas,d_set,fig_class,figure,fig_props,sc_x,sc_y){
 			figs = figs.attr(k,fig_props[k]);
 		}
 	}
+}
+
+function linea(sc_x,sc_y,inter,typeX,typeY){
+	var line = d3.line()
+		.x(function(d){return sc_x((typeX == 0 ? new Date(d.key) : (typeX == 1 ? +d.key : d.key)))})
+		.y(function(d){return sc_y((typeY == 0 ? new Date(d.value) : (typeY == 1 ? +d.value : d.value)))})
+		.curve(inter);
 }
 
 function pieChart(div_cont,cont_props,canvas,corners,c_id,radii,pads,sect_class,d_set){

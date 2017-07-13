@@ -67,7 +67,7 @@ function completaFechas(f_i,f_f){
 	var fs = [];
 	var dif_dias = Math.ceil((f_f-f_i)/(24000*3600));
 	for(var i=0; i<dif_dias; i++){
-		fs.push({fecha: new Date(f_i.getTime()+(i*24000*3600)), val: 0});
+		fs.push({key: new Date(f_i.getTime()+(i*24000*3600)), value: 0});
 	}
 	return fs
 }
@@ -84,10 +84,11 @@ function traceFigures(canvas,d_set,fig_class,figure,fig_props,sc_x,sc_y){
 	}
 }
 
-function linea(x_fun,y_fun,inter){
+// 0 : Fecha; 1: Número; Default other
+function linea(sc_x,sc_y,inter,typeX,typeY){
 	var line = d3.line()
-		.x(x_fun)
-		.y(y_fun)
+		.x(function(d){return sc_x((typeX == 0 ? new Date(d.key) : (typeX == 1 ? +d.key : d.key)))})
+		.y(function(d){return sc_y((typeY == 0 ? new Date(d.value) : (typeY == 1 ? +d.value : d.value)))})
 		.curve(inter);
 }
 
