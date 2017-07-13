@@ -83,7 +83,6 @@
 				.call(yAxis);
 
 			//var linea_t = linea(x,y,d3.curveMonotoneX,0,1);
-			//console.log(linea_t);
 			/*var linea = d3.line()
 				.x(function(d){return x(new Date(d["fecha"]))})
 				.y(function(d){return y(d["val"])})

@@ -84,6 +84,7 @@ function traceFigures(canvas,d_set,fig_class,figure,fig_props,sc_x,sc_y){
 	}
 }
 
+// 0 : Fecha; 1: Número; Default other
 function linea(sc_x,sc_y,inter,typeX,typeY){
 	var line = d3.line()
 		.x(function(d){return sc_x((typeX == 0 ? new Date(d.key) : (typeX == 1 ? +d.key : d.key)))})
