@@ -247,12 +247,12 @@ function queryCoreReportingApi(profileId) {
 		var keys = [];
 		for(var a in results){
 			data_descs.push({key: results[a][0].replace("Click a Descubre: ",""),value: +results[a][1]});
-			keys.push(results[a][0]);
+			keys.push(results[a][0].replace("Click a Descubre: ",""));
 		}
 		console.log(keys);
 		var cont_descs = containerSelect("#cont-descs",{"min-width":"750px","height":"1100px", "max-width":"900px"}).select("#svg_descs");
 		var x_desc = escala("l",[0,d3.max(data_descs,function(d){return d.value})],[50,750]);
-		var y_desc = escala("b",keys,[50,1000],[10,5]);
+		var y_desc = escala("b",keys,[50,1000],[0.4,0]);
 		console.log(y_desc(data_descs[0].key));
 		var xAxis = eje('b',x_desc,30,2,-2);
 		var yAxis = eje('r',y_desc,data_descs.length,2,-2);
