@@ -13,6 +13,11 @@
 	</svg>
 </div>
 
+<div class="chart-cont" id="cont-descs">
+	<svg id="svg_descs">
+	</svg>
+</div>
+
 <div id="query-output"></div>
 
 <script type="text/javascript">
@@ -77,31 +82,22 @@
 				.attr("transform","translate("+margins["l"]+","+(margins["t"])+")")
 				.call(yAxis);
 
-			var linea = d3.line()
+			var linea_t = linea(function(d){return x(new Date(d["fecha"]))},function(d){return y(d["val"])},d3.curveMonotoneX);
+			/*var linea = d3.line()
 				.x(function(d){return x(new Date(d["fecha"]))})
 				.y(function(d){return y(d["val"])})
-				.curve(d3.curveMonotoneX);
+				.curve(d3.curveMonotoneX);*/
 
-			var uc_line = svg.append("path")
+			traceFigures("#svg1",[fechas_ac],"line-time","path",{"class":"line","transform":"translate("+margins["l"]+","+(margins["t"])+")","fill":"none","stroke":"black","d":linea_t});
+			/*var uc_line = svg.append("path")
       	.data([fechas_ac])
       	.attr("class", "line")
 				.attr("transform","translate("+margins["l"]+","+(margins["t"])+")")
 				.attr("fill","none")
 				.attr("stroke","black")
-      	.attr("d", linea);
+      	.attr("d", linea);*/
 
 			traceFigures("#svg1",fechas_ac,"nodes","circle",{"class":"nodes","transform":"translate("+margins["l"]+","+(margins["t"])+")","id":function(d,i){return "punto-" + i},"r":"3px","cx":function(d){ return x(new Date(d["fecha"]))},"cy":function(d){ return y(d["val"])},"stroke":"#dddddd","stroke-width": 3},x,y);
-
-			/*var circulos = svg.selectAll(".nodes")
-				.data(fechas_ac)
-				.enter().append("circle")
-				.attr("transform","translate("+margins["l"]+","+(margins["t"])+")")
-				.attr("id",function(d,i){return "punto-" + i})
-				.attr("r", "3px")
-				.attr("cx", function(d){ return x(new Date(d["fecha"]))})
-				.attr("cy", function(d){ return y(d["val"])})
-				.attr("stroke", "#dddddd")
-				.attr("stroke-width", 2);*/
 				
 			//Gráfica de porcentajes (Pastel)
 			pieChart("#cont-2",{"max-width":"500px","height":sizes["pc"]["h"]+"px","min-width":sizes["pc"]["w"]+"px"},"#svg_p",[sizes["pc"]["w"],sizes["pc"]["h"]],"pie_chart",[20,180],[0.8,9],"sect",objetosContadosPorTipo);
