@@ -247,23 +247,26 @@ function queryCoreReportingApi(profileId) {
 		var keys = [];
 		for(var a in results){
 			data_descs.push({key: results[a][0].replace("Click a Descubre: ",""),value: +results[a][1]});
-			keys.push(results[a][0].replace("Click a Descubre: ",""));
+		}
+		data_descs = data_descs.sort(function(a,b){return a.value - b.value});
+		for(var i in data_descs){
+			keys.push(data_descs[i].key);
 		}
 		var cont_descs = containerSelect("#cont-descs",{"min-width":"750px","height":"1100px", "max-width":"900px"}).select("#svg_descs");
 		var x_desc = escala("l",[0,d3.max(data_descs,function(d){return d.value})],[50,750]);
-		var y_desc = escala("b",keys,[50,1000],[0.4,0]);
-		console.log(y_desc.domain());
-		var xAxis = eje('b',x_desc,30,2,-2);
-		var yAxis = eje('r',y_desc,data_descs.length,2,-2);
-		console.log(yAxis);
+		var y_desc = escala("b",keys,[50,1000],[0.25,0]);
+
+		var xAxis = eje('b',x_desc,10,2,-2);
+		var yAxis = eje('r',y_desc,data_descs.length,2,-2,function(d){return d.substr(0,10)+"..."});
+
 		var gX = cont_descs.append("g")
-			.attr("class", "axis axis-x")
-			.attr("transform","translate("+margins[3]+","+margins[0]+")")
+			.attr("class", "axis axis-desc-x")
+			.attr("transform","translate("+"0"+","+"50"+")")
 			.call(xAxis);
 
 		var gY = cont_descs.append("g")
-			.attr("class", "axis axis-y")
-			.attr("transform","translate("+margins[3]+","+margins[0]+")")
+			.attr("class", "axis axis-desc-y")
+			.attr("transform","translate("+"100"+","+"50"+")")
 			.call(yAxis);
 
 		traceFigures("#svg_descs",data_descs,"desc-bar","rect",{"class":"desc-bar","transform":"translate("+margins[3]+","+(margins[0])+")","id":function(d,i){return "desc-bar-" + i},"x":x_desc(0),"y":function(d){return y_desc(d.key)},"width":function(d){return x_desc(d.value)},"height":y_desc.bandwidth(),"fill":"black",}, x_desc ,y_desc);
