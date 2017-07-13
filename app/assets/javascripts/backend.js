@@ -45,7 +45,7 @@ function readURL(input,display,file) {
 
 function escala(tipo,dom,rango,pad){
 	var scale = (tipo == 't' ? d3.scaleTime() : (tipo == 'l' ? d3.scaleLinear() : d3.scaleBand()));
-	if(tipo == "b") scale = scale.padding(pad);
+	if(tipo == "b") scale = scale.paddingInner(pad[0]).paddingOuter(pad[1]);
 	return scale
 				.domain(dom)
 				.range(rango)
