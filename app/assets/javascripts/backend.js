@@ -84,6 +84,13 @@ function traceFigures(canvas,d_set,fig_class,figure,fig_props,sc_x,sc_y){
 	}
 }
 
+function linea(x_fun,y_fun,inter){
+	var line = d3.line()
+		.x(x_fun)
+		.y(y_fun)
+		.curve(inter);
+}
+
 function pieChart(div_cont,cont_props,canvas,corners,c_id,radii,pads,sect_class,d_set){
 	var cont = d3.select(div_cont);
 
