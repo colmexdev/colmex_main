@@ -98,7 +98,7 @@
 				.attr("stroke","black")
       	.attr("d", linea);*/
 
-			traceFigures("#svg1",fechas_ac,"nodes","circle",{"class":"nodes","transform":"translate("+margins["l"]+","+(margins["t"])+")","id":function(d,i){return "punto-" + i},"r":"3px","cx":function(d){ return x(new Date(d["fecha"]))},"cy":function(d){ return y(d["val"])},"stroke":"#dddddd","stroke-width": 3},x,y);
+			traceFigures("#svg1",fechas_ac,"nodes","circle",{"class":"nodes","transform":"translate("+margins["l"]+","+(margins["t"])+")","id":function(d,i){return "punto-" + i},"r":"3px","cx":function(d){ return x(new Date(d["key"]))},"cy":function(d){ return y(d["value"])},"stroke":"#dddddd","stroke-width": 3},x,y);
 				
 			//Gráfica de porcentajes (Pastel)
 			pieChart("#cont-2",{"max-width":"500px","height":sizes["pc"]["h"]+"px","min-width":sizes["pc"]["w"]+"px"},"#svg_p",[sizes["pc"]["w"],sizes["pc"]["h"]],"pie_chart",[20,180],[0.8,9],"sect",objetosContadosPorTipo);
