@@ -220,7 +220,6 @@ function queryCoreReportingApi(profileId) {
 		var data_devs = [];
 		for(var a in results){
 			data_devs.push({key: results[a][0],value: +results[a][1]});
-			console.log(results[a]);
 		}
 			pieChart("#cont-devs",{"max-width":"500px","height":500+"px","min-width":500+"px"},"#svg_devs",[500,500],"pie_devs",[50,180],[0.8,9],"sect",data_devs);
     //var formattedJson = JSON.stringify(response.result, null, 2);
@@ -246,10 +245,10 @@ function queryCoreReportingApi(profileId) {
 		var results = response.result.rows;
 		var data_descs = [];
 		for(var a in results){
-			data_descs.push({key: results[a][0],value: +results[a][1]});
+			data_descs.push({key: results[a][0].replace("Click a Descubre: ",""),value: +results[a][1]});
 			console.log(results[a]);
 		}
-		var cont_descs = containerSelect("#cont-descs",{"min-width":"750px","height":"1100px", "max-width":"900x"});
+		var cont_descs = containerSelect("#cont-descs",{"min-width":"750px","height":"1100px", "max-width":"900x"}).select("#svg_descs");
 		var x_desc = escala("l",[0,d3.max(data_descs,function(d){return d.value})],[50,550]);
 		var y_desc = escala("b",$.map(data_descs,function(v,i){return i}),[50,1000],[10,5]);
 
@@ -266,7 +265,7 @@ function queryCoreReportingApi(profileId) {
 			.attr("transform","translate("+margins["l"]+","+(margins["t"])+")")
 			.call(yAxis);
 
-		traceFigures("#cont-descs",data_descs,"desc-bar","rect",{"class":"desc-bar","transform":"translate("+margins["l"]+","+(margins["t"])+")","id":function(d,i){return "desc-bar-" + i},"x":x_desc(0),"y":function(d){return y_desc(d.key)},"width":function(d){return x_desc(d.value)},"height":y_desc.bandwidth(),"fill":"black",}, x_desc ,y_desc);
+		traceFigures("#svg_descs",data_descs,"desc-bar","rect",{"class":"desc-bar","transform":"translate("+margins["l"]+","+(margins["t"])+")","id":function(d,i){return "desc-bar-" + i},"x":x_desc(0),"y":function(d){return y_desc(d.key)},"width":function(d){return x_desc(d.value)},"height":y_desc.bandwidth(),"fill":"black",}, x_desc ,y_desc);
 			
     /*var formattedJson = JSON.stringify(response.result, null, 2);
     document.getElementById('query-output').innerHTML = formattedJson;*/
