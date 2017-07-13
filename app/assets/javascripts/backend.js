@@ -43,8 +43,9 @@ function readURL(input,display,file) {
 
 /* Funciones de graficación */
 
-function escala(tipo,dom,rango){
-	var scale = (tipo == 't' ? d3.scaleTime() : d3.scaleLinear());
+function escala(tipo,dom,rango,pad){
+	var scale = (tipo == 't' ? d3.scaleTime() : (tipo == 'l' ? d3.scaleLinear() : d3.scaleBand()));
+	if(tipo == "b") scale = scale.padding(pad);
 	return scale
 				.domain(dom)
 				.range(rango)
@@ -72,6 +73,16 @@ function completaFechas(f_i,f_f){
 	return fs
 }
 
+function containerSelect(cont_id,cont_props){
+	var c = d3.select(cont_id);
+	for(var k in cont_props){
+		if(cont_props.hasOwnProperty(k)){
+			c = c.style(k,cont_props[k]);
+		}
+	}
+	return c;
+}
+
 function traceFigures(canvas,d_set,fig_class,figure,fig_props,sc_x,sc_y){
 	var figs = d3.select(canvas).selectAll("."+fig_class)
 		.data(d_set)
@@ -86,11 +97,6 @@ function traceFigures(canvas,d_set,fig_class,figure,fig_props,sc_x,sc_y){
 
 // 0 : Fecha; 1: Número; Default other
 function linea(sc_x,sc_y,inter,typeX,typeY){
-	console.log(sc_x);
-	console.log(sc_y);
-	console.log(inter);
-	console.log(typeX);
-	console.log(typeY);
 	return d3.line()
 		.x(function(d){return sc_x((typeX == 0 ? new Date(d.key) : (typeX == 1 ? +d.key : d.key)))})
 		.y(function(d){return sc_y((typeY == 0 ? new Date(d.value) : (typeY == 1 ? +d.value : d.value)))})
@@ -98,13 +104,15 @@ function linea(sc_x,sc_y,inter,typeX,typeY){
 }
 
 function pieChart(div_cont,cont_props,canvas,corners,c_id,radii,pads,sect_class,d_set){
-	var cont = d3.select(div_cont);
+	var cont = containerSelect(div_cont,cont_props);
+
+	/*d3.select(div_cont);
 
 	for(var k in cont_props){
 		if(cont_props.hasOwnProperty(k)){
 			cont = cont.style(k,cont_props[k]);
 		}
-	}
+	}*/
 
 	var svg_p = cont.select(canvas)
  		.attr("preserveAspectRatio", "xMinYMin meet")
