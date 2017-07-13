@@ -248,7 +248,7 @@ function queryCoreReportingApi(profileId) {
 		for(var a in results){
 			data_descs.push({key: results[a][0].replace("Click a Descubre: ",""),value: +results[a][1]});
 		}
-		data_descs = data_descs.sort(function(a,b){return a.value - b.value});
+		data_descs = data_descs.sort(function(a,b){return b.value - a.value});
 		for(var i in data_descs){
 			keys.push(data_descs[i].key);
 		}
@@ -261,15 +261,15 @@ function queryCoreReportingApi(profileId) {
 
 		var gX = cont_descs.append("g")
 			.attr("class", "axis axis-desc-x")
-			.attr("transform","translate("+"0"+","+"50"+")")
+			.attr("transform","translate("+"50"+","+"50"+")")
 			.call(xAxis);
 
 		var gY = cont_descs.append("g")
 			.attr("class", "axis axis-desc-y")
-			.attr("transform","translate("+"100"+","+"50"+")")
+			.attr("transform","translate("+"100"+","+"0"+")")
 			.call(yAxis);
 
-		traceFigures("#svg_descs",data_descs,"desc-bar","rect",{"class":"desc-bar","transform":"translate("+margins[3]+","+(margins[0])+")","id":function(d,i){return "desc-bar-" + i},"x":x_desc(0),"y":function(d){return y_desc(d.key)},"width":function(d){return x_desc(d.value)},"height":y_desc.bandwidth(),"fill":"black",}, x_desc ,y_desc);
+		traceFigures("#svg_descs",data_descs,"desc-bar","rect",{"class":"desc-bar","transform":"translate("+"50"+","+"0"+")","id":function(d,i){return "desc-bar-" + i},"x":x_desc(0),"y":function(d){return y_desc(d.key)},"width":function(d){return x_desc(d.value)},"height":y_desc.bandwidth(),"fill":"black",}, x_desc ,y_desc);
 			
     /*var formattedJson = JSON.stringify(response.result, null, 2);
     document.getElementById('query-output').innerHTML = formattedJson;*/
