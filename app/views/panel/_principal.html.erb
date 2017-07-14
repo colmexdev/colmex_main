@@ -364,15 +364,15 @@ function queryCoreReportingApi(profileId) {
 		var x_heat = escala("b",dates, [50,1050],[0.2,0]);
 		var y_heat = escala("b",hours, [600,50],[0.2,0]);
 
-		var xAxis = eje('b',x_usr,dates.length,2,-2,d3.timeFormat("%d/%m"));
-		var yAxis = eje('r',y_usr,hours.length,2,-2,function(d){return d + ":00"});
+		var xAxis = eje('b',x_heat,dates.length,2,-2,d3.timeFormat("%d/%m"));
+		var yAxis = eje('r',y_heat,hours.length,2,-2,function(d){return d + ":00"});
 
-		var gX = cont_usrs.append("g")
+		var gX = cont_heat.append("g")
 			.attr("class", "axis axis-heat-x")
 			.attr("transform","translate("+"50"+","+"600"+")")
 			.call(xAxis);
 
-		var gY = cont_usrs.append("g")
+		var gY = cont_heat.append("g")
 			.attr("class", "axis axis-heat-y")
 			.attr("transform","translate("+"100"+","+"0"+")")
 			.call(yAxis);

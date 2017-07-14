@@ -379,7 +379,7 @@ function queryCoreReportingApi(profileId) {
 
 		d3.selectAll(".axis-heat-x .tick text").attr("y","10");
 
-		traceFigures("#svg_heat",data_heat,"heat-bar","rect",{"class":"heat-bar","transform":"translate("+"50"+","+"0"+")","id":function(d,i){return "heat-bar-" + i},"x":function(d){return x_heat(d.key)},"y":function(d){return y_heat(d.value)},"width":function(d){return x_heat.bandwidth()},"height":y_heat.bandwidth(),"fill":function(d){ return "rgba(70,30,180,"+ d.heat/d3.max(data,heat,function(a){return a.heat}) +")"}}, x_desc ,y_desc);
+		traceFigures("#svg_heat",data_heat,"heat-bar","rect",{"class":"heat-bar","transform":"translate("+"50"+","+"0"+")","id":function(d,i){return "heat-bar-" + i},"x":function(d){return x_heat(d.key)},"y":function(d){return y_heat(d.value)},"width":function(d){return x_heat.bandwidth()},"height":y_heat.bandwidth(),"fill":function(d){ return "rgba(70,30,180,"+ d.heat/d3.max(data,heat,function(a){return a.heat}) +")"}}, x_heat ,y_heat);
 	
     //var formattedJson = JSON.stringify(response.result, null, 2);
     //document.getElementById('query-output').innerHTML += "<br><br>" + formattedJson;
