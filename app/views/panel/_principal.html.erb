@@ -302,8 +302,8 @@ function queryCoreReportingApi(profileId) {
 
 		var cont_usrs = containerSelect("#cont-usrs",{"min-width":"850px","height":"600px", "max-width":"1200px"}).select("#svg_usrs");
 
-		var x_usr = escala("t",d3.extent(results,function(d){return d.key}),[50,950]);
-		var y_usr = escala("l",[0,d3.max(results,function(d){return d.value})],[50,500]);
+		var x_usr = escala("t",d3.extent(data_usrs,function(d){return d.key}),[50,950]);
+		var y_usr = escala("l",[0,d3.max(data_usrs,function(d){return d.value})],[50,500]);
 
 		var xAxis = eje('b',x_usr,10,2,-2,d3.timeFormat("%d/%m"));
 		var yAxis = eje('r',y_usr,10,2,-2);
@@ -324,7 +324,6 @@ function queryCoreReportingApi(profileId) {
 
 		var linea_u = linea(x_usr,y_usr,d3.curveLinear,0,1);
 
-		console.log(linea_u);
 
 		traceFigures("#svg_usrs",[data_usrs],"usr-line","path",{"class":"usr-line","transform":"translate("+"50"+","+"0"+")","fill":"none","stroke":"black","d":linea_u},x_usr,y_usr);
 		
