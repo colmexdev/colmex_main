@@ -296,21 +296,23 @@ function queryCoreReportingApi(profileId) {
 		var avgDur = +response.result.totalsForAllResults["ga:avgSessionDuration"];
 		var bounceR = +response.result.totalsForAllResults["ga:bounceRate"];
 		var data_usrs = [];
+		var data_sessions = [];
 		for(var a in results){
 			data_usrs.push({key: new Date(+results[a][0].substr(0,4),+results[a][0].substr(4,2)-1,+results[a][0].substr(6,2)),value: +results[a][1]});
+			data_sessions.push({key: new Date(+results[a][0].substr(0,4),+results[a][0].substr(4,2)-1,+results[a][0].substr(6,2)),value: +results[a][2]});
 		}
 
 		var cont_usrs = containerSelect("#cont-usrs",{"min-width":"850px","height":"600px", "max-width":"1200px"}).select("#svg_usrs");
 
 		var x_usr = escala("t",d3.extent(data_usrs,function(d){return d.key}),[50,950]);
-		var y_usr = escala("l",[0,d3.max(data_usrs,function(d){return d.value})],[50,500]);
+		var y_usr = escala("l",[0,d3.max(data_sessions,function(d){return d.value})],[500,50]);
 
 		var xAxis = eje('b',x_usr,10,2,-2,d3.timeFormat("%d/%m"));
 		var yAxis = eje('r',y_usr,10,2,-2);
 
 		var gX = cont_usrs.append("g")
 			.attr("class", "axis axis-usr-x")
-			.attr("transform","translate("+"50"+","+"50"+")")
+			.attr("transform","translate("+"50"+","+"500"+")")
 			.call(xAxis);
 
 		var gY = cont_usrs.append("g")
@@ -322,14 +324,16 @@ function queryCoreReportingApi(profileId) {
 
 		d3.selectAll(".axis-desc-x .tick text").attr("y","-10");
 
-		var linea_u = linea(x_usr,y_usr,d3.curveLinear,0,1);
+		var linea_u = linea(x_usr,y_usr,d3.curveLinear,0,1,true,"500");
+		var linea_s = linea(x_usr,y_usr,d3.curveLinear,0,1);
 
+		traceFigures("#svg_usrs",[data_usrs],"usr-area","path",{"class":"usr-area","transform":"translate("+"50"+","+"0"+")","fill":"rgba(0,0,0,0.2)","stroke":"black","d":linea_u},x_usr,y_usr);
 
-		traceFigures("#svg_usrs",[data_usrs],"usr-line","path",{"class":"usr-line","transform":"translate("+"50"+","+"0"+")","fill":"none","stroke":"black","d":linea_u},x_usr,y_usr);
+		traceFigures("#svg_usrs",data_sessions,"ses-line","path",{"class":"ses-line","transform":"translate("+"50"+","+"0"+")","fill":"none","stroke":"black","d":linea_s},x_usr,y_usr).style("stroke-dasharray",("3,3"));
 		
 
-    var formattedJson = JSON.stringify(results, null, 2);
-    document.getElementById('query-output').innerHTML += "<br><br>" + avgDur + " -- " + bounceR + "<br><br>" + formattedJson;
+    //var formattedJson = JSON.stringify(results, null, 2);
+    //document.getElementById('query-output').innerHTML += "<br><br>" + avgDur + " -- " + bounceR + "<br><br>" + formattedJson;
   })
   .then(null, function(err) {
       // Log any errors.

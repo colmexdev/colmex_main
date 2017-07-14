@@ -83,7 +83,8 @@ function containerSelect(cont_id,cont_props){
 	return c;
 }
 
-function traceFigures(canvas,d_set,fig_class,figure,fig_props,sc_x,sc_y){
+function traceFigures(canvas,d_set,fig_class,figure,fig_props,sc_x,sc_y,styles){
+	styles = styles || null;
 	var figs = d3.select(canvas).selectAll("."+fig_class)
 		.data(d_set)
 		.enter().append(figure);
@@ -92,6 +93,14 @@ function traceFigures(canvas,d_set,fig_class,figure,fig_props,sc_x,sc_y){
 		if(fig_props.hasOwnProperty(k)){
 			figs = figs.attr(k,fig_props[k]);
 		}
+	}
+
+	if(styles != null){
+	for(var k in styles){
+		if(styles.hasOwnProperty(k)){
+			figs = figs.style(k,styles[k]);
+		}
+	}
 	}
 }
 
