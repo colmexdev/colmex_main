@@ -322,7 +322,7 @@ function queryCoreReportingApi(profileId) {
 
 		d3.selectAll(".axis-desc-x .tick text").attr("y","-10");
 
-		var linea_u = linea(x_usr,y_usr,d3.curveLinear(),0,1);
+		var linea_u = linea(x_usr,y_usr,d3.curveLinear,0,1);
 
 		console.log(linea_u);
 
