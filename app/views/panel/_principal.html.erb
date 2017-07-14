@@ -329,7 +329,7 @@ function queryCoreReportingApi(profileId) {
 
 		traceFigures("#svg_usrs",[data_usrs],"usr-area","path",{"class":"usr-area","transform":"translate("+"50"+","+"0"+")","fill":"rgba(0,0,0,0.2)","stroke":"black","d":linea_u},x_usr,y_usr);
 
-		traceFigures("#svg_usrs",data_sessions,"ses-line","path",{"class":"ses-line","transform":"translate("+"50"+","+"0"+")","fill":"none","stroke":"black","d":linea_s},x_usr,y_usr,{"stroke-dasharray":("3,3")});
+		traceFigures("#svg_usrs",[data_sessions],"ses-line","path",{"class":"ses-line","transform":"translate("+"50"+","+"0"+")","fill":"none","stroke":"black","d":linea_s},x_usr,y_usr,{"stroke-dasharray":("3,3")});
 		
 
     //var formattedJson = JSON.stringify(results, null, 2);
