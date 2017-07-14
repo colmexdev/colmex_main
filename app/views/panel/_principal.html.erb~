@@ -18,6 +18,11 @@
 	</svg>
 </div>
 
+<div class="chart-cont" id="cont-usrs">
+	<svg id="svg_usrs">
+	</svg>
+</div>
+
 <div id="query-output"></div>
 
 <script type="text/javascript">
@@ -278,7 +283,7 @@ function queryCoreReportingApi(profileId) {
       // Log any errors.
       console.log(err);
   });
-/*
+
   gapi.client.analytics.data.ga.get({
     'ids': 'ga:128026521',
     'start-date': '30daysAgo',
@@ -287,14 +292,47 @@ function queryCoreReportingApi(profileId) {
 		'dimensions': 'ga:date'
   })
   .then(function(response) {
-    var formattedJson = JSON.stringify(response.result, null, 2);
-    document.getElementById('query-output').innerHTML += "<br><br>" + formattedJson;
+		var results = response.result.rows;
+		var avgDur = +response.result.totalsForAllResults["ga:avgSessionDuration"];
+		var bounceR = +response.result.totalsForAllResults["ga:bounceRate"];
+		var data_usrs = [];
+		for(var a in results){
+			data_usrs.push({key: new Date(+results[a][0].substr(0,4),+results[a][0].substr(4,2)-1,+results[a][0].substr(6,2)),value: +results[a][1]});
+		}
+
+		var cont_usrs = containerSelect("#cont-usrs",{"min-width":"850px","height":"600px", "max-width":"1200px"}).select("#svg_descs");
+
+		var x_usr = escala("t",d3.extent(results,function(d){return d.key}),[50,950]);
+		var y_usr = escala("l",[0,d3.max(results,function(d){return d.value})],[50,500]);
+
+		var xAxis = eje('b',x_usr,10,2,-2,d3.timeFormat("%d/%m"));
+		var yAxis = eje('r',y_usr,10,2,-2);
+
+		var gX = cont_descs.append("g")
+			.attr("class", "axis axis-desc-x")
+			.attr("transform","translate("+"50"+","+"50"+")")
+			.call(xAxis);
+
+		var gY = cont_descs.append("g")
+			.attr("class", "axis axis-desc-y")
+			.attr("transform","translate("+"100"+","+"0"+")")
+			.call(yAxis);
+
+		var color = escala("l",[0,0.5,1],["#DC143C", "#FF8C00", "#32CD32"]);
+
+		d3.selectAll(".axis-desc-x .tick text").attr("y","-10");
+
+		traceFigures("#svg_descs",data_descs,"desc-bar","rect",{"class":"desc-bar","transform":"translate("+"50"+","+"0"+")","id":function(d,i){return "desc-bar-" + i},"x":x_desc(0),"y":function(d){return y_desc(d.key)},"width":function(d){return x_desc(d.value)},"height":y_desc.bandwidth(),"fill":"black","fill":function(d){ return color(d.value/d3.max(data_descs,function(a){return a.value}))}}, x_desc ,y_desc);
+		
+
+    var formattedJson = JSON.stringify(results, null, 2);
+    document.getElementById('query-output').innerHTML += "<br><br>" + avgDur + " -- " + bounceR + "<br><br>" + formattedJson;
   })
   .then(null, function(err) {
       // Log any errors.
       console.log(err);
   });
-
+/*
   gapi.client.analytics.data.ga.get({
     'ids': 'ga:128026521',
     'start-date': '30daysAgo',
