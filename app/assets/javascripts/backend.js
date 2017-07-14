@@ -96,11 +96,13 @@ function traceFigures(canvas,d_set,fig_class,figure,fig_props,sc_x,sc_y){
 }
 
 // 0 : Fecha; 1: Número; Default other
-function linea(sc_x,sc_y,inter,typeX,typeY){
-	return d3.line()
-		.x(function(d){return sc_x((typeX == 0 ? new Date(d.key) : (typeX == 1 ? +d.key : d.key)))})
+function linea(sc_x,sc_y,inter,typeX,typeY,area,y0){
+	var fig = (area ? d3.area() : d3.line());
+		fig = fig.x(function(d){return sc_x((typeX == 0 ? new Date(d.key) : (typeX == 1 ? +d.key : d.key)))})
 		.y(function(d){return sc_y((typeY == 0 ? new Date(d.value) : (typeY == 1 ? +d.value : d.value)))})
 		.curve(inter);
+
+	return (area ? fig.y0(y0) : fig);
 }
 
 function pieChart(div_cont,cont_props,canvas,corners,c_id,radii,pads,sect_class,d_set){

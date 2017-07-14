@@ -45,7 +45,7 @@ function readURL(input,display,file) {
 
 function escala(tipo,dom,rango,pad){
 	var scale = (tipo == 't' ? d3.scaleTime() : (tipo == 'l' ? d3.scaleLinear() : d3.scaleBand()));
-	if(tipo == "b") scale = scale.padding(pad);
+	if(tipo == "b") scale = scale.paddingInner(pad[0]).paddingOuter(pad[1]);
 	return scale
 				.domain(dom)
 				.range(rango)
@@ -96,11 +96,13 @@ function traceFigures(canvas,d_set,fig_class,figure,fig_props,sc_x,sc_y){
 }
 
 // 0 : Fecha; 1: Número; Default other
-function linea(sc_x,sc_y,inter,typeX,typeY){
-	return d3.line()
+function linea(sc_x,sc_y,inter,typeX,typeY,path,y0){
+	var fig = d3.line()
 		.x(function(d){return sc_x((typeX == 0 ? new Date(d.key) : (typeX == 1 ? +d.key : d.key)))})
 		.y(function(d){return sc_y((typeY == 0 ? new Date(d.value) : (typeY == 1 ? +d.value : d.value)))})
 		.curve(inter);
+
+	return (path ? fig.y0(y0) : fig);
 }
 
 function pieChart(div_cont,cont_props,canvas,corners,c_id,radii,pads,sect_class,d_set){
