@@ -344,7 +344,7 @@ function queryCoreReportingApi(profileId) {
 		'dimensions': 'ga:date,ga:hour'
   })
   .then(function(response) {
-		var results = response.results.rows;
+		var results = response.result.rows;
 		var data_heat = [];
 		//for(var a in results){
 		//	data_heat.push({key: new Date()});
