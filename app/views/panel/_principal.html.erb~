@@ -313,7 +313,7 @@ function queryCoreReportingApi(profileId) {
 			.attr("transform","translate("+"50"+","+"50"+")")
 			.call(xAxis);
 
-		var gY = cont_descs.append("g")
+		var gY = cont_usrs.append("g")
 			.attr("class", "axis axis-usr-y")
 			.attr("transform","translate("+"100"+","+"0"+")")
 			.call(yAxis);
@@ -322,7 +322,7 @@ function queryCoreReportingApi(profileId) {
 
 		d3.selectAll(".axis-desc-x .tick text").attr("y","-10");
 
-		traceFigures("#svg_usrs",[data_usrs],"usr-line","path",{"class":"usr-line","transform":"translate("+"50"+","+"0"+")","id":function(d,i){return "usr-line-" + i},"fill":"none","stroke":"black","d":linea(x_usr,y_usr,d3.curveLinearClosed(),0,1)/*,"fill":function(d){ return color(d.value/d3.max(data_descs,function(a){return a.value}))}*/}, x_desc ,y_desc);
+		traceFigures("#svg_usrs",[data_usrs],"usr-line","path",{"class":"usr-line","transform":"translate("+"50"+","+"0"+")","id":function(d,i){return "usr-line-" + i},"fill":"none","stroke":"black","d":linea(x_usr,y_usr,d3.curveLinear(),0,1)},x_usr,y_usr);
 		
 
     var formattedJson = JSON.stringify(results, null, 2);
