@@ -403,7 +403,7 @@ function queryCoreReportingApi(profileId) {
 			data_countries.push({key: results[a][0], value: +results[a][1]});
 		}
     //var formattedJson = JSON.stringify(response.result, null, 2);
-    document.getElementById('query-output').innerHTML += "<br><br>" + data_countries;
+    console.log(data_countries);
   })
   .then(null, function(err) {
       // Log any errors.
@@ -426,6 +426,21 @@ function queryCoreReportingApi(profileId) {
 		//} 
     var formattedJson = JSON.stringify(response.result, null, 2);
     document.getElementById('query-output').innerHTML += "<br><br>" + formattedJson;
+			gapi.client.analytics.data.ga.get({
+				'ids': 'ga:128026521',
+				'start-date': '30daysAgo',
+				'end-date': 'today',
+				'metrics': 'ga:users',
+				'dimensions': 'ga:date,ga:source'
+			})
+			.then(function(response) {
+				var formattedJson = JSON.stringify(response.result, null, 2);
+				document.getElementById('query-output').innerHTML += "<br><br>" + formattedJson;
+			})
+			.then(null, function(err) {
+				  // Log any errors.
+				  console.log(err);
+			});
   })
   .then(null, function(err) {
       // Log any errors.

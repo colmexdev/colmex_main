@@ -403,7 +403,7 @@ function queryCoreReportingApi(profileId) {
 			data_countries.push({key: results[a][0], value: +results[a][1]});
 		}
     //var formattedJson = JSON.stringify(response.result, null, 2);
-    document.getElementById('query-output').innerHTML += "<br><br>" + data_countries;
+    console.log(data_countries);
   })
   .then(null, function(err) {
       // Log any errors.
@@ -415,7 +415,7 @@ function queryCoreReportingApi(profileId) {
     'start-date': '30daysAgo',
     'end-date': 'today',
     'metrics': 'ga:users',
-		'dimensions': 'ga:date,ga:medium,ga:source'
+		'dimensions': 'ga:date,ga:medium'
   })
   .then(function(response) {
 		var results = response.result.rows;
