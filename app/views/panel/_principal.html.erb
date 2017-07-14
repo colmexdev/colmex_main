@@ -359,7 +359,7 @@ function queryCoreReportingApi(profileId) {
 			if(dates.indexOf(fecha)==-1) dates.push(fecha);
 		}
 
-		var cont_heat = containerSelect("#cont-heat",{"min-width":"850px","height":"700px", "max-width":"1200px"}).select("#svg_usrs");
+		var cont_heat = containerSelect("#cont-heat",{"min-width":"850px","height":"700px", "max-width":"1200px"}).select("#svg_heat");
 
 		var x_heat = escala("b",dates, [50,1050],[0.2,0]);
 		var y_heat = escala("b",hours, [600,50],[0.2,0]);
