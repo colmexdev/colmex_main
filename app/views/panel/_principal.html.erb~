@@ -269,7 +269,7 @@ function queryCoreReportingApi(profileId) {
 
 		d3.selectAll(".axis-desc-x .tick text").attr("y","-10");
 
-		traceFigures("#svg_descs",data_descs,"desc-bar","rect",{"class":"desc-bar","transform":"translate("+"50"+","+"0"+")","id":function(d,i){return "desc-bar-" + i},"x":x_desc(0),"y":function(d){return y_desc(d.key)},"width":function(d){return x_desc(d.value)},"height":y_desc.bandwidth(),"fill":"black","fill":function(d){ return color(d/d3.max(data_descs,function(a){return a.value}))}}, x_desc ,y_desc);
+		traceFigures("#svg_descs",data_descs,"desc-bar","rect",{"class":"desc-bar","transform":"translate("+"50"+","+"0"+")","id":function(d,i){return "desc-bar-" + i},"x":x_desc(0),"y":function(d){return y_desc(d.key)},"width":function(d){return x_desc(d.value)},"height":y_desc.bandwidth(),"fill":"black","fill":function(d){ return color(d.value/d3.max(data_descs,function(a){return a.value}))}}, x_desc ,y_desc);
 			
     /*var formattedJson = JSON.stringify(response.result, null, 2);
     document.getElementById('query-output').innerHTML = formattedJson;*/
