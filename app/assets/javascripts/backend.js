@@ -106,6 +106,7 @@ function traceFigures(canvas,d_set,fig_class,figure,fig_props,sc_x,sc_y,styles){
 
 // 0 : Fecha; 1: Número; Default other
 function linea(sc_x,sc_y,inter,typeX,typeY,area,y0){
+	area = area || false
 	var fig = (area ? d3.area() : d3.line());
 		fig = fig.x(function(d){return sc_x((typeX == 0 ? new Date(d.key) : (typeX == 1 ? +d.key : d.key)))}).curve(inter);
 		fig = (area ? fig.y1(function(d){return sc_y((typeY == 0 ? new Date(d.value) : (typeY == 1 ? +d.value : d.value)))}) : fig.y(function(d){return sc_y((typeY == 0 ? new Date(d.value) : (typeY == 1 ? +d.value : d.value)))}) );
