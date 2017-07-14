@@ -397,7 +397,7 @@ function queryCoreReportingApi(profileId) {
 		'dimensions': 'ga:country'
   })
   .then(function(response) {
-		var results = response.results.rows;
+		var results = response.result.rows;
 		var data_countries = [];
 		for(var a in results){
 			data_countries.push({key: results[a][0], value: +results[a][1]});
@@ -415,7 +415,7 @@ function queryCoreReportingApi(profileId) {
     'start-date': '30daysAgo',
     'end-date': 'today',
     'metrics': 'ga:users',
-		'dimensions': 'ga:date,ga:medium,ga:source'
+		'dimensions': 'ga:date,ga:medium'
   })
   .then(function(response) {
 		var results = response.result.rows;

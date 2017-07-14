@@ -388,45 +388,56 @@ function queryCoreReportingApi(profileId) {
       // Log any errors.
       console.log(err);
   });
+
+  gapi.client.analytics.data.ga.get({
+    'ids': 'ga:128026521',
+    'start-date': '30daysAgo',
+    'end-date': 'today',
+    'metrics': 'ga:users',
+		'dimensions': 'ga:country'
+  })
+  .then(function(response) {
+		var results = response.result.rows;
+		var data_countries = [];
+		for(var a in results){
+			data_countries.push({key: results[a][0], value: +results[a][1]});
+		}
+    //var formattedJson = JSON.stringify(response.result, null, 2);
+    document.getElementById('query-output').innerHTML += "<br><br>" + data_countries;
+  })
+  .then(null, function(err) {
+      // Log any errors.
+      console.log(err);
+  });
+
+  gapi.client.analytics.data.ga.get({
+    'ids': 'ga:128026521',
+    'start-date': '30daysAgo',
+    'end-date': 'today',
+    'metrics': 'ga:users',
+		'dimensions': 'ga:date,ga:medium,ga:source'
+  })
+  .then(function(response) {
+		var results = response.result.rows;
+		var data_meds = [];
+		var data_src = [];
+		//for(var a in results){
+		//	data_meds.push({key});
+		//} 
+    var formattedJson = JSON.stringify(response.result, null, 2);
+    document.getElementById('query-output').innerHTML += "<br><br>" + formattedJson;
+  })
+  .then(null, function(err) {
+      // Log any errors.
+      console.log(err);
+  });
 /*
   gapi.client.analytics.data.ga.get({
     'ids': 'ga:128026521',
     'start-date': '30daysAgo',
     'end-date': 'today',
     'metrics': 'ga:users',
-		'dimensions': 'ga:date,ga:medium'
-  })
-  .then(function(response) {
-    var formattedJson = JSON.stringify(response.result, null, 2);
-    document.getElementById('query-output').innerHTML += "<br><br>" + formattedJson;
-  })
-  .then(null, function(err) {
-      // Log any errors.
-      console.log(err);
-  });
-
-  gapi.client.analytics.data.ga.get({
-    'ids': 'ga:128026521',
-    'start-date': '30daysAgo',
-    'end-date': 'today',
-    'metrics': 'ga:users',
 		'dimensions': 'ga:date,ga:source'
-  })
-  .then(function(response) {
-    var formattedJson = JSON.stringify(response.result, null, 2);
-    document.getElementById('query-output').innerHTML += "<br><br>" + formattedJson;
-  })
-  .then(null, function(err) {
-      // Log any errors.
-      console.log(err);
-  });
-
-  gapi.client.analytics.data.ga.get({
-    'ids': 'ga:128026521',
-    'start-date': '30daysAgo',
-    'end-date': 'today',
-    'metrics': 'ga:users',
-		'dimensions': 'ga:date,ga:country'
   })
   .then(function(response) {
     var formattedJson = JSON.stringify(response.result, null, 2);
