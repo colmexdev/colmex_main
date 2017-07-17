@@ -457,8 +457,6 @@ function queryCoreReportingApi(profileId) {
 
 		var cont_country = containerSelect("#cont-countries",{"min-width":"650px","height":"500px", "max-width":"900px"}).select("#svg_countries");
 
-		console.log(data_countries);
-
 		cont_country.selectAll(".country")
 		    .data(countries)
 		  .enter().insert("path", ".graticule")
