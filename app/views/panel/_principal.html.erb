@@ -412,10 +412,10 @@ function queryCoreReportingApi(profileId) {
 		var path_mapa = d3.geoPath()
 		  .projection(proj_mapa);
 
-	d3.json("<%= root_path %>/world.json", function(error, world) {
+	d3.json("https://www.colmex.mx/world.json", function(error, world) {
 		if (error) throw error;
 
-		d3.json("<%= root_path %>/countries.json", function(error,countries){
+		d3.json("https://www.colmex.mx/countries.json", function(error,countries){
 
 		var paises = countries;
 		console.log(paises);

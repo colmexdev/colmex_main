@@ -430,7 +430,7 @@ function queryCoreReportingApi(profileId) {
 		  .enter().insert("path", ".graticule")
 		    .attr("class", "country")
 		    .attr("d", path_mapa)
-				.attr("id",function(d,i){ return "pais-"+i})
+				.attr("id",function(d,i){ return paises[i]})
 				.attr("fill","#CCCCCC")
 				.on("mouseover",function(d,i){
 					d3.selectAll(".country").transition()
