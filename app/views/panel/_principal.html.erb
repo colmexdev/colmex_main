@@ -387,7 +387,26 @@ function queryCoreReportingApi(profileId) {
 				else
 					data_meds[results[a][1]].push({key: new Date(+results[a][0].substr(0,4),+results[a][0].substr(4,2)-1,+results[a][0].substr(6,2)), value: +results[a][2]})
 			} 
-			console.log(data_meds);
+
+			var cont_meds = containerSelect("#cont-meds",{"min-width":"850px","height":"600px", "max-width":"1200px"}).select("#svg_meds")
+ 		.attr("preserveAspectRatio", "xMinYMin meet")
+		.attr("viewBox", "0 0 "+"600"+" "+"1100");
+
+		var gmX = cont_meds.append("g")
+			.attr("class", "axis axis-med-x")
+			.attr("transform","translate("+"50"+","+"500"+")")
+			.call(xAxis);
+
+		var gmY = cont_meds.append("g")
+			.attr("class", "axis axis-med-y")
+			.attr("transform","translate("+"100"+","+"0"+")")
+			.call(yAxis);
+
+		//var color = escala("l",[0,0.5,1],["#DC143C", "#FF8C00", "#32CD32"]);
+
+		d3.selectAll(".axis-usr-x .tick text").attr("y","10");
+
+
 			//var formattedJson = JSON.stringify(response.result, null, 2);
 			//document.getElementById('query-output').innerHTML += "<br><br>" + formattedJson;
 		})
@@ -462,10 +481,6 @@ function queryCoreReportingApi(profileId) {
   })
   .then(function(response) {
 		var results = response.result.rows;
-		//var data_countries = [];
-		//for(var a in results){
-		//	data_countries.push({key: results[a][0], value: +results[a][1]});
-		//}
 
 		var proj_mapa = d3.geoEquirectangular();
 		var path_mapa = d3.geoPath()
@@ -491,7 +506,6 @@ function queryCoreReportingApi(profileId) {
 				if(!it) paises[a].value = 0;
 			}
 		}
-		console.log(paises);
 
 		var countries = topojson.feature(world, world.objects.countries).features,
 		    neighbors = topojson.neighbors(world.objects.countries.geometries);

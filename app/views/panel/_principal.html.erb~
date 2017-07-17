@@ -33,6 +33,11 @@
 	</svg>
 </div>
 
+<div class="chart-cont" id="cont-meds">
+	<svg id="svg_meds">
+	</svg>
+</div>
+
 <div id="query-output"></div>
 
 <script type="text/javascript">
@@ -254,8 +259,6 @@ function queryCoreReportingApi(profileId) {
 			data_devs.push({key: results[a][0],value: +results[a][1]});
 		}
 			pieChart("#cont-devs",{"max-width":"500px","height":500+"px","min-width":500+"px"},"#svg_devs",[500,500],"pie_devs",[50,180],[0.8,9],"sect",data_devs);
-    //var formattedJson = JSON.stringify(response.result, null, 2);
-    //document.getElementById('query-output').innerHTML += "<br><br>" + formattedJson;
   })
   .then(null, function(err) {
       // Log any errors.
@@ -284,7 +287,10 @@ function queryCoreReportingApi(profileId) {
 		for(var i in data_descs){
 			keys.push(data_descs[i].key);
 		}
-		var cont_descs = containerSelect("#cont-descs",{"min-width":"750px","height":"1100px", "max-width":"900px"}).select("#svg_descs");
+		var cont_descs = containerSelect("#cont-descs",{"min-width":"750px","height":"1100px", "max-width":"900px"}).select("#svg_descs")
+	 	.attr("preserveAspectRatio", "xMinYMin meet")
+		.attr("viewBox", "0 0 "+"1100"+" "+"900");
+
 		var x_desc = escala("l",[0,d3.max(data_descs,function(d){return d.value})],[50,750]);
 		var y_desc = escala("b",keys,[50,1000],[0.2,0]);
 
@@ -333,7 +339,9 @@ function queryCoreReportingApi(profileId) {
 			data_sessions.push({key: new Date(+results[a][0].substr(0,4),+results[a][0].substr(4,2)-1,+results[a][0].substr(6,2)),value: +results[a][2]});
 		}
 
-		var cont_usrs = containerSelect("#cont-usrs",{"min-width":"850px","height":"600px", "max-width":"1200px"}).select("#svg_usrs");
+		var cont_usrs = containerSelect("#cont-usrs",{"min-width":"850px","height":"600px", "max-width":"1200px"}).select("#svg_usrs")
+ 		.attr("preserveAspectRatio", "xMinYMin meet")
+		.attr("viewBox", "0 0 "+"600"+" "+"1100");
 
 		var x_usr = escala("t",d3.extent(data_usrs,function(d){return d.key}),[50,950]);
 		var y_usr = escala("l",[0,d3.max(data_sessions,function(d){return d.value})],[500,50]);
@@ -361,6 +369,34 @@ function queryCoreReportingApi(profileId) {
 		traceFigures("#svg_usrs",[data_usrs],"usr-area","path",{"class":"usr-area","transform":"translate("+"50"+","+"0"+")","fill":"rgba(0,0,0,0.2)","stroke":"black","d":linea_u},x_usr,y_usr);
 
 		traceFigures("#svg_usrs",[data_sessions],"ses-line","path",{"class":"ses-line","transform":"translate("+"50"+","+"0"+")","fill":"none","stroke":"black","d":linea_s},x_usr,y_usr,{"stroke-dasharray":("3,3")});
+
+		//Drill down en medium
+		gapi.client.analytics.data.ga.get({
+			'ids': 'ga:128026521',
+			'start-date': '30daysAgo',
+			'end-date': 'today',
+			'metrics': 'ga:users',
+			'dimensions': 'ga:date,ga:medium'
+		})
+		.then(function(response) {
+			var results = response.result.rows;
+			var data_meds = {};
+			for(var a in results){
+				if(data_meds[results[a][1]] == null)
+					data_meds[results[a][1]] = [{key: new Date(+results[a][0].substr(0,4),+results[a][0].substr(4,2)-1,+results[a][0].substr(6,2)), value: +results[a][2]}];
+				else
+					data_meds[results[a][1]].push({key: new Date(+results[a][0].substr(0,4),+results[a][0].substr(4,2)-1,+results[a][0].substr(6,2)), value: +results[a][2]})
+			} 
+			console.log(data_meds);
+			//var formattedJson = JSON.stringify(response.result, null, 2);
+			//document.getElementById('query-output').innerHTML += "<br><br>" + formattedJson;
+		})
+		.then(null, function(err) {
+				// Log any errors.
+				console.log(err);
+		});
+
+
   })
   .then(null, function(err) {
       // Log any errors.
@@ -385,7 +421,9 @@ function queryCoreReportingApi(profileId) {
 			if(dates.indexOf(fecha)==-1) dates.push(fecha);
 		}
 
-		var cont_heat = containerSelect("#cont-heat",{"min-width":"850px","height":"700px", "max-width":"1200px"}).select("#svg_heat");
+		var cont_heat = containerSelect("#cont-heat",{"min-width":"850px","height":"700px", "max-width":"1200px"}).select("#svg_heat")
+ 		.attr("preserveAspectRatio", "xMinYMin meet")
+		.attr("viewBox", "0 0 "+"700"+" "+"1150");
 
 		var x_heat = escala("b",dates, [50,1050],[0.2,0]);
 		var y_heat = escala("b",hours, [600,50],[0.2,0]);
@@ -452,14 +490,14 @@ function queryCoreReportingApi(profileId) {
 				}
 				if(!it) paises[a].value = 0;
 			}
-			//data_countries.push({key: results[a][0], value: +results[a][1]});
 		}
-		console.log(paises);
 
 		var countries = topojson.feature(world, world.objects.countries).features,
 		    neighbors = topojson.neighbors(world.objects.countries.geometries);
 
-		var cont_country = containerSelect("#cont-countries",{"min-width":"650px","height":"500px", "max-width":"960px"}).select("#svg_countries");
+		var cont_country = containerSelect("#cont-countries",{"min-width":"650px","height":"500px", "max-width":"960px"}).select("#svg_countries")
+ 		.attr("preserveAspectRatio", "xMinYMin meet")
+		.attr("viewBox", "0 0 "+"500"+" "+"960");
 
 		cont_country.selectAll(".country")
 		    .data(countries)
@@ -503,42 +541,7 @@ function queryCoreReportingApi(profileId) {
       console.log(err);
   });
 
-  gapi.client.analytics.data.ga.get({
-    'ids': 'ga:128026521',
-    'start-date': '30daysAgo',
-    'end-date': 'today',
-    'metrics': 'ga:users',
-		'dimensions': 'ga:date,ga:medium'
-  })
-  .then(function(response) {
-		var results = response.result.rows;
-		var data_meds = [];
-		//for(var a in results){
-		//	data_meds.push({key});
-		//} 
-    var formattedJson = JSON.stringify(response.result, null, 2);
-    document.getElementById('query-output').innerHTML += "<br><br>" + formattedJson;
-  })
-  .then(null, function(err) {
-      // Log any errors.
-      console.log(err);
-  });
 /*
-  gapi.client.analytics.data.ga.get({
-    'ids': 'ga:128026521',
-    'start-date': '30daysAgo',
-    'end-date': 'today',
-    'metrics': 'ga:users',
-		'dimensions': 'ga:date,ga:source'
-  })
-  .then(function(response) {
-    var formattedJson = JSON.stringify(response.result, null, 2);
-    document.getElementById('query-output').innerHTML += "<br><br>" + formattedJson;
-  })
-  .then(null, function(err) {
-      // Log any errors.
-      console.log(err);
-  });
 
   gapi.client.analytics.data.ga.get({
     'ids': 'ga:128026521',
@@ -572,7 +575,7 @@ function queryCoreReportingApi(profileId) {
       console.log(err);
   });
 
- /* gapi.client.analytics.data.ga.get({
+  gapi.client.analytics.data.ga.get({
     'ids': 'ga:128026521',
     'start-date': '30daysAgo',
     'end-date': 'today',
@@ -592,7 +595,7 @@ function queryCoreReportingApi(profileId) {
     'ids': 'ga:128026521',
     'start-date': '30daysAgo',
     'end-date': 'today',
-    'metrics': 'ga:cohortRetetnionRate',
+    'metrics': 'ga:cohortRetentionRate',
 		'dimensions': 'ga:cohortNthDay,ga:cohortNthWeek,ga:cohortNthMonth'
   })
   .then(function(response) {
