@@ -105,6 +105,7 @@
 		}
 	});
 </script>
+<script src="//d3js.org/topojson.v1.min.js"></script>
 <script type="text/javascript">
   var CLIENT_ID = '384237971543-uv4rn3cj3m33v5trf0oip7ff03ojl1fm.apps.googleusercontent.com';
 
@@ -412,10 +413,10 @@ function queryCoreReportingApi(profileId) {
 		var path_mapa = d3.geoPath()
 		  .projection(proj_mapa);
 
-	d3.json("<%= root_path %>/world.json", function(error, world) {
+	d3.json("https://www.colmex.mx/world.json", function(error, world) {
 		if (error) throw error;
 
-		d3.json("<%= root_path %>/countries.json", function(error,countries){
+		d3.json("https://www.colmex.mx/countries.json", function(error,countries){
 
 		var paises = countries;
 		console.log(paises);
