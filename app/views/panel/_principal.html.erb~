@@ -437,9 +437,10 @@ function queryCoreReportingApi(profileId) {
 		if (error) throw error;
 
 		d3.json("https://www.colmex.mx/countries.json", function(error,countries){
+			if error throw error
 
 		var paises = countries;
-		console.log(paises);
+		console.log(countries);
 
 		var countries = topojson.feature(world, world.objects.countries).features,
 		    neighbors = topojson.neighbors(world.objects.countries.geometries);
@@ -451,7 +452,7 @@ function queryCoreReportingApi(profileId) {
 		  .enter().insert("path", ".graticule")
 		    .attr("class", "country")
 		    .attr("d", path_mapa)
-				.attr("id",function(d,i){ return paises[i]})
+				.attr("id",function(d,i){ return paises[i].pais_eng})
 				.attr("fill","#CCCCCC")
 				.on("mouseover",function(d,i){
 					d3.selectAll(".country").transition()
