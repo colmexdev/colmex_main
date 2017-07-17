@@ -117,15 +117,6 @@ function linea(sc_x,sc_y,inter,typeX,typeY,area,y0){
 
 function pieChart(div_cont,cont_props,canvas,corners,c_id,radii,pads,sect_class,d_set){
 	var cont = containerSelect(div_cont,cont_props);
-
-	/*d3.select(div_cont);
-
-	for(var k in cont_props){
-		if(cont_props.hasOwnProperty(k)){
-			cont = cont.style(k,cont_props[k]);
-		}
-	}*/
-
 	var svg_p = cont.select(canvas)
  		.attr("preserveAspectRatio", "xMinYMin meet")
 		.attr("viewBox", "0 0 "+corners[0]+" "+corners[1])
