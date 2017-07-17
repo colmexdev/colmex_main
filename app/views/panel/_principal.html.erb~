@@ -334,16 +334,18 @@ function queryCoreReportingApi(profileId) {
 		var bounceR = +response.result.totalsForAllResults["ga:bounceRate"];
 		var data_usrs = [];
 		var data_sessions = [];
+		var acums_fecha = {};
 		for(var a in results){
+			acums_fecha[(new Date(+results[a][0].substr(0,4),+results[a][0].substr(4,2)-1,+results[a][0].substr(6,2))).toString()] = 0;
 			data_usrs.push({key: new Date(+results[a][0].substr(0,4),+results[a][0].substr(4,2)-1,+results[a][0].substr(6,2)),value: +results[a][1]});
 			data_sessions.push({key: new Date(+results[a][0].substr(0,4),+results[a][0].substr(4,2)-1,+results[a][0].substr(6,2)),value: +results[a][2]});
 		}
 
 		var cont_usrs = containerSelect("#cont-usrs",{"min-width":"850px","height":"600px", "max-width":"1200px"}).select("#svg_usrs")
  		.attr("preserveAspectRatio", "xMinYMin meet")
-		.attr("viewBox", "0 0 "+"600"+" "+"1100");
+		.attr("viewBox", "0 0 "+"1100"+" "+"600");
 
-		var x_usr = escala("t",d3.extent(data_usrs,function(d){return d.key}),[50,950]);
+		var x_usr = escala("b",d3.extent(data_usrs,function(d){return d.key}),[50,950],[0.1,0]);
 		var y_usr = escala("l",[0,d3.max(data_sessions,function(d){return d.value})],[500,50]);
 
 		var xAxis = eje('b',x_usr,10,2,-2,d3.timeFormat("%d/%m"));
@@ -387,7 +389,33 @@ function queryCoreReportingApi(profileId) {
 				else
 					data_meds[results[a][1]].push({key: new Date(+results[a][0].substr(0,4),+results[a][0].substr(4,2)-1,+results[a][0].substr(6,2)), value: +results[a][2]})
 			} 
-			console.log(data_meds);
+
+			var cont_meds = containerSelect("#cont-meds",{"min-width":"850px","height":"600px", "max-width":"1200px"}).select("#svg_meds")
+ 		.attr("preserveAspectRatio", "xMinYMin meet")
+		.attr("viewBox", "0 0 "+"1100"+" "+"600");
+
+		var gmX = cont_meds.append("g")
+			.attr("class", "axis axis-med-x")
+			.attr("transform","translate("+"50"+","+"500"+")")
+			.call(xAxis);
+
+		var gmY = cont_meds.append("g")
+			.attr("class", "axis axis-med-y")
+			.attr("transform","translate("+"100"+","+"0"+")")
+			.call(yAxis);
+
+		//var color = escala("l",[0,0.5,1],["#DC143C", "#FF8C00", "#32CD32"]);
+
+		d3.selectAll(".axis-med-x .tick text").attr("y","10");
+
+		var acum_fechas = [];
+		
+
+		for(var k in data_meds){
+			traceFigures("#svg_meds",[data_meds[k]],"med-bar","rect",{"class":"med-bar-"+k,"transform":"translate("+"50"+","+"0"+")","id":function(d,i){return "desc-bar-" + k + "-" + i},"x":x_usr(0),"y":function(d){return y_desc(d.key)},"width":function(d){return x_desc(d.value)},"height":y_desc.bandwidth(),"fill":"black","fill":function(d){ return color(d.value/d3.max(data_descs,function(a){return a.value}))}}, x_usr ,y_usr);
+		}
+
+
 			//var formattedJson = JSON.stringify(response.result, null, 2);
 			//document.getElementById('query-output').innerHTML += "<br><br>" + formattedJson;
 		})
@@ -423,7 +451,7 @@ function queryCoreReportingApi(profileId) {
 
 		var cont_heat = containerSelect("#cont-heat",{"min-width":"850px","height":"700px", "max-width":"1200px"}).select("#svg_heat")
  		.attr("preserveAspectRatio", "xMinYMin meet")
-		.attr("viewBox", "0 0 "+"700"+" "+"1150");
+		.attr("viewBox", "0 0 "+"1150"+" "+"650");
 
 		var x_heat = escala("b",dates, [50,1050],[0.2,0]);
 		var y_heat = escala("b",hours, [600,50],[0.2,0]);
@@ -462,10 +490,6 @@ function queryCoreReportingApi(profileId) {
   })
   .then(function(response) {
 		var results = response.result.rows;
-		//var data_countries = [];
-		//for(var a in results){
-		//	data_countries.push({key: results[a][0], value: +results[a][1]});
-		//}
 
 		var proj_mapa = d3.geoEquirectangular();
 		var path_mapa = d3.geoPath()
@@ -497,7 +521,7 @@ function queryCoreReportingApi(profileId) {
 
 		var cont_country = containerSelect("#cont-countries",{"min-width":"650px","height":"500px", "max-width":"960px"}).select("#svg_countries")
  		.attr("preserveAspectRatio", "xMinYMin meet")
-		.attr("viewBox", "0 0 "+"500"+" "+"960");
+		.attr("viewBox", "0 0 "+"960"+" "+"500");
 
 		cont_country.selectAll(".country")
 		    .data(countries)

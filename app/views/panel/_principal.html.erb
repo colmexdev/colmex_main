@@ -334,16 +334,18 @@ function queryCoreReportingApi(profileId) {
 		var bounceR = +response.result.totalsForAllResults["ga:bounceRate"];
 		var data_usrs = [];
 		var data_sessions = [];
+		var acums_fecha = {};
 		for(var a in results){
+			acums_fecha[(new Date(+results[a][0].substr(0,4),+results[a][0].substr(4,2)-1,+results[a][0].substr(6,2))).toString()] = 0;
 			data_usrs.push({key: new Date(+results[a][0].substr(0,4),+results[a][0].substr(4,2)-1,+results[a][0].substr(6,2)),value: +results[a][1]});
 			data_sessions.push({key: new Date(+results[a][0].substr(0,4),+results[a][0].substr(4,2)-1,+results[a][0].substr(6,2)),value: +results[a][2]});
 		}
 
 		var cont_usrs = containerSelect("#cont-usrs",{"min-width":"850px","height":"600px", "max-width":"1200px"}).select("#svg_usrs")
  		.attr("preserveAspectRatio", "xMinYMin meet")
-		.attr("viewBox", "0 0 "+"600"+" "+"1100");
+		.attr("viewBox", "0 0 "+"1100"+" "+"600");
 
-		var x_usr = escala("t",d3.extent(data_usrs,function(d){return d.key}),[50,950]);
+		var x_usr = escala("b",d3.extent(data_usrs,function(d){return d.key}),[50,950],[0.1,0]);
 		var y_usr = escala("l",[0,d3.max(data_sessions,function(d){return d.value})],[500,50]);
 
 		var xAxis = eje('b',x_usr,10,2,-2,d3.timeFormat("%d/%m"));
@@ -390,7 +392,7 @@ function queryCoreReportingApi(profileId) {
 
 			var cont_meds = containerSelect("#cont-meds",{"min-width":"850px","height":"600px", "max-width":"1200px"}).select("#svg_meds")
  		.attr("preserveAspectRatio", "xMinYMin meet")
-		.attr("viewBox", "0 0 "+"600"+" "+"1100");
+		.attr("viewBox", "0 0 "+"1100"+" "+"600");
 
 		var gmX = cont_meds.append("g")
 			.attr("class", "axis axis-med-x")
@@ -404,7 +406,11 @@ function queryCoreReportingApi(profileId) {
 
 		//var color = escala("l",[0,0.5,1],["#DC143C", "#FF8C00", "#32CD32"]);
 
-		d3.selectAll(".axis-usr-x .tick text").attr("y","10");
+		d3.selectAll(".axis-med-x .tick text").attr("y","10");
+
+		for(var k in data_meds){
+			traceFigures("#svg_meds",[data_meds[k]],"med-bar","rect",{"class":"med-bar-"+k,"transform":"translate("+"50"+","+"0"+")","id":function(d,i){return "desc-bar-" + k + "-" + i},"x":function(d){return x_usr(d.key)},"y":function(d){return y_usr(acums_fecha[d.key.toString()])},"width":x_usr.bandwidth(),"height": function(d){acums_fecha[d.key.toString()] += d.value; return y_usr(acums_fecha[d.key.toString()])},"fill":"green"/*function(d){ return color(d.value/d3.max(data_descs,function(a){return a.value}))}*/}, x_usr ,y_usr);
+		}
 
 
 			//var formattedJson = JSON.stringify(response.result, null, 2);
@@ -442,7 +448,7 @@ function queryCoreReportingApi(profileId) {
 
 		var cont_heat = containerSelect("#cont-heat",{"min-width":"850px","height":"700px", "max-width":"1200px"}).select("#svg_heat")
  		.attr("preserveAspectRatio", "xMinYMin meet")
-		.attr("viewBox", "0 0 "+"700"+" "+"1150");
+		.attr("viewBox", "0 0 "+"1150"+" "+"650");
 
 		var x_heat = escala("b",dates, [50,1050],[0.2,0]);
 		var y_heat = escala("b",hours, [600,50],[0.2,0]);
@@ -512,7 +518,7 @@ function queryCoreReportingApi(profileId) {
 
 		var cont_country = containerSelect("#cont-countries",{"min-width":"650px","height":"500px", "max-width":"960px"}).select("#svg_countries")
  		.attr("preserveAspectRatio", "xMinYMin meet")
-		.attr("viewBox", "0 0 "+"500"+" "+"960");
+		.attr("viewBox", "0 0 "+"960"+" "+"500");
 
 		cont_country.selectAll(".country")
 		    .data(countries)
