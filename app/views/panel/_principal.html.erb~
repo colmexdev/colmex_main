@@ -410,7 +410,7 @@ function queryCoreReportingApi(profileId) {
 
 		for(var k in data_meds){
 			console.log(x_usr(data_meds[k][0].key));
-			traceFigures("#svg_meds",[data_meds[k]],"med-bar","rect",{"class":"med-bar-"+k,"transform":"translate("+"50"+","+"0"+")","id":function(d,i){return "desc-bar-" + k + "-" + i},"x":function(d,i){console.log(d[i]);return x_usr(d[i].key)},"y":function(d,i){return y_usr(acums_fecha[d[i].key.toString()])},"width":"20","height": function(d,i){acums_fecha[d[i].key.toString()] += d[i].value; return y_usr(acums_fecha[d[i].key.toString()])},"fill":"green"}, x_usr ,y_usr);
+			traceFigures("#svg_meds",data_meds[k],"med-bar","rect",{"class":"med-bar-"+k,"transform":"translate("+"50"+","+"0"+")","id":function(d,i){return "desc-bar-" + k + "-" + i},"x":function(d,i){console.log(d);return x_usr(d.key)},"y":function(d,i){return y_usr(acums_fecha[d.key.toString()])},"width":"20","height": function(d,i){acums_fecha[d.key.toString()] += d.value; return y_usr(acums_fecha[d.key.toString()])},"fill":"green"}, x_usr ,y_usr);
 		}
 
 
