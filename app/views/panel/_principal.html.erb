@@ -440,13 +440,17 @@ function queryCoreReportingApi(profileId) {
 			if(errorc) throw errorc;
 
 		var paises = counts;
+		var it;
 		for(var a in paises){
+			it = false;
 			for(var b in results){
 				if(paises[a].pais_eng == results[b][0].replace("&","and")){
 					paises[a].value = +results[b][1];
 					results.splice(b,1);
+					it = true;
 					break;
 				}
+				if(!it) paises[a].value = 0;
 			}
 			//data_countries.push({key: results[a][0], value: +results[a][1]});
 		}
