@@ -454,7 +454,7 @@ function queryCoreReportingApi(profileId) {
 		    .attr("class", "country")
 		    .attr("d", path_mapa)
 				.attr("id",function(d,i){ return "pais-"+i})
-				.attr("fill",function(d,i){ return (data_countries[i*.value == 0 ? " #CCCCCC" : "rgba(60,179,113," + (0.2 + (data_countries[i].value/d3.max(data_countries,function(a){return a.value}))) + ")") })
+				.attr("fill",function(d,i){ return (data_countries[i].value == 0 ? " #CCCCCC" : "rgba(60,179,113," + (0.2 + (data_countries[i].value/d3.max(data_countries,function(a){return a.value}))) + ")") })
 				.on("mouseover",function(d,i){
 					d3.selectAll(".country").transition()
 						.duration(200).style("opacity","0.3");
