@@ -437,10 +437,10 @@ function queryCoreReportingApi(profileId) {
 		if (error) throw error;
 
 		d3.json("https://www.colmex.mx/countries.json", function(error,countries){
+		console.log(countries);
 			if error throw error
 
 		var paises = countries;
-		console.log(countries);
 
 		var countries = topojson.feature(world, world.objects.countries).features,
 		    neighbors = topojson.neighbors(world.objects.countries.geometries);
