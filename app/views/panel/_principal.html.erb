@@ -434,11 +434,12 @@ function queryCoreReportingApi(profileId) {
 		  .projection(proj_mapa);
 
 	d3.json("https://www.colmex.mx/world.json", function(error, world) {
+    console.log(data_countries);
 		if (error) throw error;
 
-		d3.json("https://www.colmex.mx/countries.json", function(error,countries){
+		d3.json("https://www.colmex.mx/countries.json", function(countries){
 			console.log(countries);
-			if(error) throw error;
+			//if(error) throw error;
 
 		var paises = countries;
 
@@ -483,7 +484,6 @@ function queryCoreReportingApi(profileId) {
 
 		
     //var formattedJson = JSON.stringify(response.result, null, 2);
-    console.log(data_countries);
   })
   .then(null, function(err) {
       // Log any errors.

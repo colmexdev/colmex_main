@@ -436,9 +436,9 @@ function queryCoreReportingApi(profileId) {
 	d3.json("https://www.colmex.mx/world.json", function(error, world) {
 		if (error) throw error;
 
-		d3.json("https://www.colmex.mx/countries.json", function(errorc,countries){
+		d3.json("https://www.colmex.mx/countries.json", function(error,countries){
 			console.log(countries);
-			if(errorc) throw error;
+			if(error) throw error;
 
 		var paises = countries;
 
