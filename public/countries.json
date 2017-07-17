@@ -41,7 +41,7 @@
 {"pais": "Suiza", "pais_eng": "Switzerland", "cont": "Europa"},
 {"pais": "Chile", "pais_eng": "Chile", "cont": "América"},
 {"pais": "China", "pais_eng": "China", "cont": "Asia"},
-{"pais": "Costa de Marfil", "pais"_ng: "Côte d'Ivoire", "cont": "África"},
+{"pais": "Costa de Marfil", "pais_eng": "Côte d'Ivoire", "cont": "África"},
 {"pais": "Camerún", "pais_eng": "Cameroon", "cont": "África"},
 {"pais": "República Democrática del Congo", "pais_eng": "Congo [DRC]", "cont": "África"}, 
 {"pais": "Congo", "pais_eng": "Congo [Republic]", "cont": "África"},
@@ -237,4 +237,4 @@
 {"pais": "Sudáfrica", "pais_eng": "South Africa", "cont": "África"},
 {"pais": "Zambia", "pais_eng": "Zambia", "cont": "África"},
 {"pais": "Zimbabwe", "pais_eng": "Zimbabwe", "cont": "África"} 
-];
+]
