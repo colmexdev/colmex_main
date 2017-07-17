@@ -443,7 +443,7 @@ function queryCoreReportingApi(profileId) {
 		for(var a in paises){
 			for(var b in results){
 				if(paises[a].pais_eng == results[b][0].replace("&","and")){
-					paises[a].values = +results[b][1];
+					paises[a].value = +results[b][1];
 					results.splice(b,1);
 					break;
 				}

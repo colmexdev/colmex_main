@@ -425,9 +425,9 @@ function queryCoreReportingApi(profileId) {
   .then(function(response) {
 		var results = response.result.rows;
 		//var data_countries = [];
-		for(var a in results){
-			data_countries.push({key: results[a][0], value: +results[a][1]});
-		}
+		//for(var a in results){
+		//	data_countries.push({key: results[a][0], value: +results[a][1]});
+		//}
 
 		var proj_mapa = d3.geoEquirectangular();
 		var path_mapa = d3.geoPath()
