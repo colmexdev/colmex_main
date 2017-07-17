@@ -409,7 +409,10 @@ function queryCoreReportingApi(profileId) {
 		d3.selectAll(".axis-med-x .tick text").attr("y","10");
 
 		for(var k in data_meds){
-			traceFigures("#svg_meds",[data_meds[k]],"med-bar","rect",{"class":"med-bar-"+k,"transform":"translate("+"50"+","+"0"+")","id":function(d,i){return "desc-bar-" + k + "-" + i},"x":function(d){return x_usr(d.key)},"y":function(d){return y_usr(acums_fecha[d.key.toString()])},"width":"20","height": function(d){acums_fecha[d.key.toString()] += d.value; return y_usr(acums_fecha[d.key.toString()])},"fill":"green"/*function(d){ return color(d.value/d3.max(data_descs,function(a){return a.value}))}*/}, x_usr ,y_usr);
+			console.log(acums_fecha);
+			console.log(data_meds[k]);
+			console.log(x_usr(data_meds[k][0].key));
+			traceFigures("#svg_meds",[data_meds[k]],"med-bar","rect",{"class":"med-bar-"+k,"transform":"translate("+"50"+","+"0"+")","id":function(d,i){return "desc-bar-" + k + "-" + i},"x":function(d){return x_usr(d.key)},"y":function(d){return y_usr(acums_fecha[d.key.toString()])},"width":"20","height": function(d){acums_fecha[d.key.toString()] += d.value; return y_usr(acums_fecha[d.key.toString()])},"fill":"green"}, x_usr ,y_usr);
 		}
 
 
