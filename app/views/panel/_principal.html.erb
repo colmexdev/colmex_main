@@ -434,12 +434,10 @@ function queryCoreReportingApi(profileId) {
 		  .projection(proj_mapa);
 
 	d3.json("https://www.colmex.mx/world.json", function(error, world) {
-    console.log(data_countries);
 		if (error) throw error;
 
-		d3.json("https://www.colmex.mx/countries.json", function(countries){
-			console.log(countries);
-			//if(error) throw error;
+		d3.json("https://www.colmex.mx/countries.json", function(errorc,countries){
+			if(errorc) throw errorc;
 
 		var paises = countries;
 
