@@ -436,23 +436,25 @@ function queryCoreReportingApi(profileId) {
 	d3.json("https://www.colmex.mx/world.json", function(error, world) {
 		if (error) throw error;
 
-		d3.json("https://www.colmex.mx/countries.json", function(errorc,countries){
+		d3.json("https://www.colmex.mx/countries.json", function(errorc,counts){
 			if(errorc) throw errorc;
 
-		var paises = countries;
+		var paises = counts;
 
 		var countries = topojson.feature(world, world.objects.countries).features,
 		    neighbors = topojson.neighbors(world.objects.countries.geometries);
 
 		var cont_country = containerSelect("#cont-countries",{"min-width":"650px","height":"500px", "max-width":"900px"}).select("#svg_countries");
 
+		console.log(countries);
+
 		cont_country.selectAll(".country")
-		    .data(data_countries)
+		    .data(countries)
 		  .enter().insert("path", ".graticule")
 		    .attr("class", "country")
 		    .attr("d", path_mapa)
 				.attr("id",function(d,i){ return "pais-"+i})
-				.attr("fill",function(d,i){ return (d.value == 0 ? " #CCCCCC" : "rgba(60,179,113," + (0.2 + (d.value/d3.max(data_countries,function(a){return a.value}))) + ")") })
+				.attr("fill",function(d,i){ return (d.value == 0 ? " #CCCCCC" : "rgba(60,179,113," + (0.2 + (data_countries[i].value/d3.max(data_countries,function(a){return a.value}))) + ")") })
 				.on("mouseover",function(d,i){
 					d3.selectAll(".country").transition()
 						.duration(200).style("opacity","0.3");
