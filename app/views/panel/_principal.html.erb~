@@ -649,6 +649,7 @@ function queryCoreReportingApi(profileId) {
 		var det = 1/(s2x - (n*sx2));
 		var m = det*((n*sxy)-(sx*sy));
 		var b = det*((sx2*sy)-(sx*sxy));
+		console.log(m + " -- " + b);
 
 		var cont_sp = containerSelect("#cont-sp",{"min-width":"650px","height":"650px","max-width":"700px"}).select("#svg_sp")
 			.attr("preserveAspectRatio", "xMinYMin meet")
