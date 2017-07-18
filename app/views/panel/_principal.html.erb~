@@ -590,7 +590,7 @@ function queryCoreReportingApi(profileId) {
  		.attr("preserveAspectRatio", "xMinYMin meet")
 		.attr("viewBox", "0 0 "+"1160"+" "+"1000");
 
-		var x_uv = escala('l',[d3.max(results,function(d){return d[1]})*(-1),d3.max(results,function(d){return d[2]})],[50,1100]);
+		var x_uv = escala('l',[d3.max(results,function(d){return +d[1]})*(-1),d3.max(results,function(d){return +d[2]})],[50,1100]);
 		var y_uv = escala('b',pages,[50,950],[0.2,0]);
 
 		var xAxis = eje('b',x_uv,20,2,-2,function(d){return d.toString().replace("-","")});
