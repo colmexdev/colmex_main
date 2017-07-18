@@ -596,7 +596,7 @@ function queryCoreReportingApi(profileId) {
 		var y_uv = escala('b',pages,[50,950],[0.2,0]);
 
 		var xAxis = eje('b',x_uv,20,2,-2);
-		var yAxis = eje('r',y_uv,pages.length,0,0,null,"");
+		var yAxis = eje('r',y_uv,pages.length,0,0,"");
 
 		var gX = cont_ups.append("g")
 			.attr("class", "axis axis-up-x")
@@ -608,11 +608,11 @@ function queryCoreReportingApi(profileId) {
 			.attr("transform","translate("+"625"+","+"0"+")")
 			.call(yAxis);
 
-		d3.selectAll(".axis-heat-x .tick text").attr("y","10");
+		d3.selectAll(".axis-up-x .tick text").attr("y","10");
 
-		traceFigures("#svg_ups",data_pv,"pv-bar","rect",{"class":"pv-bar","transform":"translate("+"625"+","+"50"+")","id":function(d,i){return "pv-bar-" + i},"x":x_uv(0),"y":function(d){return y_uv(d.key)},"width":function(d){return x_uv(d.value) - x_uv(0)},"height":y_uv.bandwidth(),"fill":"rgba(100,149,237,0.5)"}, x_uv ,y_uv);
+		traceFigures("#svg_ups",data_pv,"pv-bar","rect",{"class":"pv-bar","transform":"translate("+"625"+","+"50"+")","id":function(d,i){return "pv-bar-" + i},"x":0,"y":function(d){return y_uv(d.key)},"width":function(d){return x_uv(d.value)},"height":y_uv.bandwidth(),"fill":"rgba(100,149,237,0.5)"}, x_uv ,y_uv);
 
-		traceFigures("#svg_ups",data_uv,"uv-bar","rect",{"class":"uv-bar","transform":"translate("+"625"+","+"50"+")","id":function(d,i){return "uv-bar-" + i},"x":function(d){return x_uv(0) - x_uv(d.value)},"y":function(d){return y_uv(d.key)},"width":function(d){return x_uv(d.value) - x_uv(0)},"height":y_uv.bandwidth(),"fill":"rgba(210,180,140,0.5"}, x_uv ,y_uv);
+		traceFigures("#svg_ups",data_uv,"uv-bar","rect",{"class":"uv-bar","transform":"translate("+"625"+","+"50"+")","id":function(d,i){return "uv-bar-" + i},"x":function(d){return (-1)*x_uv(d.value)},"y":function(d){return y_uv(d.key)},"width":function(d){return x_uv(d.value)},"height":y_uv.bandwidth(),"fill":"rgba(210,180,140,0.5"}, x_uv ,y_uv);
 		
     //var formattedJson = JSON.stringify(response.result, null, 2);
     //document.getElementById('query-output').innerHTML += "<br><br>" + formattedJson;
