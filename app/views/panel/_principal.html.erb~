@@ -421,7 +421,6 @@ function queryCoreReportingApi(profileId) {
 			traceFigures("#svg_meds",data_meds[k],"med-bar","rect",{"class":"med-bar-"+k,"transform":"translate("+"50"+","+"0"+")","id":function(d,i){return "desc-bar-" + k + "-" + i},"x":function(d,i){return x_usr(d.key)},"y":function(d,i){return y_usr(acums_fecha[d.key.toString()] + d.value)},"width":"20","height": function(d,i){var ac = acums_fecha[d.key.toString()]; acums_fecha[d.key.toString()] += d.value; return y_usr(0)-y_usr(d.value)},"fill":function(d){return "rgba(240,128,128,"+ (1.15 - cats.indexOf(k)/cats.length) +")"},"stroke-width":"1","stroke":"rgba(50,50,50,0.4)"}, x_usr ,y_usr);
 		}
 
-
 			//var formattedJson = JSON.stringify(response.result, null, 2);
 			//document.getElementById('query-output').innerHTML += "<br><br>" + formattedJson;
 		})
@@ -580,7 +579,9 @@ function queryCoreReportingApi(profileId) {
 		var results = response.result.rows;
 		var data_pv = [];
 		var data_uv = [];
+		var pages = [];
 		for(var a in results){
+			pages.push(results[a][0]);
 			data_pv.push({key: results[a][0], value: results[a][2]});
 			data_uv.push({key: results[a][0], value: results[a][1]});
 		}
@@ -590,6 +591,22 @@ function queryCoreReportingApi(profileId) {
 		var cont_ups = containerSelect("#cont-ups",{"min-width":"750px","height":"1000px", "max-width":"1160px"}).select("#svg_ups")
  		.attr("preserveAspectRatio", "xMinYMin meet")
 		.attr("viewBox", "0 0 "+"1160"+" "+"1000");
+
+		var x_uv = escala('l',[max_d*(-1),max_d],[50,1100]);
+		var y_uv = escala('b',pages,[50,950],[0.2,0]);
+
+		var xAxis = eje('b',x_uv,20,2,-2);
+		var yAxis = eje('r',y_uv,pages.length,0,0,"");
+
+		var gX = cont_ups.append("g")
+			.attr("class", "axis axis-up-x")
+			.attr("transform","translate("+"50"+","+"0"+")")
+			.call(xAxis);
+
+		var gY = cont_ups.append("g")
+			.attr("class", "axis axis-up-y")
+			.attr("transform","translate("+"580"+","+"0"+")")
+			.call(yAxis);
 		
     //var formattedJson = JSON.stringify(response.result, null, 2);
     //document.getElementById('query-output').innerHTML += "<br><br>" + formattedJson;
