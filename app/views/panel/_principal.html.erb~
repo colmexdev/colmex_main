@@ -646,7 +646,7 @@ function queryCoreReportingApi(profileId) {
 			sx2 += ((+results[a][1])*(+results[a][1]));
 		}
 		s2x = sx*sx;
-		var det = 1/(s2x - (n*sx2));
+		var det = 1/((n*sx2) - s2x);
 		var m = det*((n*sxy)-(sx*sy));
 		var b = det*((sx2*sy)-(sx*sxy));
 		console.log(m + " -- " + b);
