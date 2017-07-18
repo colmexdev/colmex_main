@@ -623,7 +623,7 @@ function queryCoreReportingApi(profileId) {
 
 		traceFigures("#svg_ups",data_pv,"pv-bar","rect",{"class":"pv-bar","transform":"translate("+"50"+","+"0"+")","id":function(d,i){return "pv-bar-" + i},"x":x_uv(0),"y":function(d){return y_uv(d.key)},"width":function(d){return (x_uv(d.value) - x_uv(0) < 3.5 ? 3.5 : x_uv(d.value) - x_uv(0) )},"height":y_uv.bandwidth(),"fill":"rgba(100,149,237,0.8)"}, x_uv ,y_uv);
 
-		traceFigures("#svg_ups",data_uv,"uv-bar","rect",{"class":"uv-bar","transform":"translate("+"50"+","+"0"+")","id":function(d,i){return "uv-bar-" + i},"x":function(d){return (x_uv(-1*d.value) > -3.5 ? -3.5 : x_uv(-1*d.value))},"y":function(d){return y_uv(d.key)},"width":function(d){return (x_uv(0)-x_uv(-1*d.value) < 3.5 ? 3.5 : x_uv(0)-x_uv(-1*d.value) )},"height":y_uv.bandwidth(),"fill":"rgba(210,180,140,0.8"}, x_uv ,y_uv);
+		traceFigures("#svg_ups",data_uv,"uv-bar","rect",{"class":"uv-bar","transform":"translate("+"50"+","+"0"+")","id":function(d,i){return "uv-bar-" + i},"x":function(d){return (x_uv(-1*d.value) > x_uv(0)-3.5 ? x_uv(0)-3.5 : x_uv(-1*d.value))},"y":function(d){return y_uv(d.key)},"width":function(d){return (x_uv(0)-x_uv(-1*d.value) < 3.5 ? 3.5 : x_uv(0)-x_uv(-1*d.value) )},"height":y_uv.bandwidth(),"fill":"rgba(210,180,140,0.8"}, x_uv ,y_uv);
 		
     //var formattedJson = JSON.stringify(response.result, null, 2);
     //document.getElementById('query-output').innerHTML += "<br><br>" + formattedJson;
