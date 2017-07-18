@@ -413,7 +413,7 @@ function queryCoreReportingApi(profileId) {
 		}
 
 		for(var k in data_meds){
-			traceFigures("#svg_meds",data_meds[k],"med-bar","rect",{"class":"med-bar-"+k,"transform":"translate("+"50"+","+"0"+")","id":function(d,i){return "desc-bar-" + k + "-" + i},"x":function(d,i){return x_usr(d.key)},"y":function(d,i){return y_usr(acums_fecha[d.key.toString()] + d.value)},"width":"20","height": function(d,i){var ac = acums_fecha[d.key.toString()]; acums_fecha[d.key.toString()] += d.value; return y_usr(d.value)-y_usr(0)},"fill":function(d){return "rgba(240,128,128,"+ (1.15 - cats.indexOf(k)/cats.length) +")"}}, x_usr ,y_usr);
+			traceFigures("#svg_meds",data_meds[k],"med-bar","rect",{"class":"med-bar-"+k,"transform":"translate("+"50"+","+"0"+")","id":function(d,i){return "desc-bar-" + k + "-" + i},"x":function(d,i){return x_usr(d.key)},"y":function(d,i){return y_usr(acums_fecha[d.key.toString()] + d.value)},"width":"20","height": function(d,i){var ac = acums_fecha[d.key.toString()]; acums_fecha[d.key.toString()] += d.value; return y_usr(0)-y_usr(d.value)},"fill":function(d){return "rgba(240,128,128,"+ (1.15 - cats.indexOf(k)/cats.length) +")"},"stroke-width":"1","stroke":"rgba(50,50,50,0.4)"}, x_usr ,y_usr);
 		}
 
 
