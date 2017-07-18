@@ -297,9 +297,9 @@ function queryCoreReportingApi(profileId) {
 		for(var i in data_descs){
 			keys.push(data_descs[i].key);
 		}
-		var cont_descs = containerSelect("#cont-descs",{"min-width":"750px","height":"1100px", "max-width":"900px"}).select("#svg_descs")
+		var cont_descs = containerSelect("#cont-descs",{"min-width":"750px","height":"980px", "max-width":"900px"}).select("#svg_descs")
 	 	.attr("preserveAspectRatio", "xMinYMin meet")
-		.attr("viewBox", "0 0 "+"1100"+" "+"900");
+		.attr("viewBox", "0 0 "+"980"+" "+"900");
 
 		var x_desc = escala("l",[0,d3.max(data_descs,function(d){return d.value})],[50,750]);
 		var y_desc = escala("b",keys,[50,1000],[0.2,0]);
@@ -545,7 +545,7 @@ function queryCoreReportingApi(profileId) {
 		    .attr("class", "country")
 		    .attr("d", path_mapa)
 				.attr("id",function(d,i){ return "pais-"+i})
-				.attr("fill",function(d,i){ return (paises[i].value == 0 ? " #CCCCCC" : "rgba(60,179,113," + (0.2 + (paises[i].value/d3.max(paises,function(a){return a.value}))) + ")") })
+				.attr("fill",function(d,i){ return (paises[i].value == 0 ? " #CCCCCC" : "rgba(60,179,113," + (0.35 + (paises[i].value/d3.max(paises,function(a){return a.value}))) + ")") })
 				.on("mouseover",function(d,i){
 					d3.selectAll(".country").transition()
 						.duration(200).style("opacity","0.3");
