@@ -611,7 +611,7 @@ function queryCoreReportingApi(profileId) {
 		d3.selectAll(".axis-up-x .tick text").attr("y","-10");
 		d3.selectAll(".axis-up-y .tick text").remove();
 
-		traceFigures("#svg_ups",data_pv,"pv-bar","rect",{"class":"pv-bar","transform":"translate("+"625"+","+"0"+")","id":function(d,i){return "pv-bar-" + i},"x":x_uv(0),"y":function(d){return y_uv(d.key)},"width":function(d){return x_uv(d.value) - x_uv(0)},"height":y_uv.bandwidth(),"fill":"rgba(100,149,237,0.5)"}, x_uv ,y_uv);
+		traceFigures("#svg_ups",data_pv,"pv-bar","rect",{"class":"pv-bar","transform":"translate("+"0"+","+"0"+")","id":function(d,i){return "pv-bar-" + i},"x":x_uv(0),"y":function(d){return y_uv(d.key)},"width":function(d){return x_uv(d.value) - x_uv(0)},"height":y_uv.bandwidth(),"fill":"rgba(100,149,237,0.5)"}, x_uv ,y_uv);
 
 		traceFigures("#svg_ups",data_uv,"uv-bar","rect",{"class":"uv-bar","transform":"translate("+"625"+","+"50"+")","id":function(d,i){return "uv-bar-" + i},"x":function(d){return x_uv(0)-x_uv(d.value)},"y":function(d){return y_uv(d.key)},"width":function(d){return x_uv(d.value)-x_uv(0)},"height":y_uv.bandwidth(),"fill":"rgba(210,180,140,0.5"}, x_uv ,y_uv);
 		
