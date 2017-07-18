@@ -595,7 +595,7 @@ function queryCoreReportingApi(profileId) {
 		var x_uv = escala('l',[max_d*(-1),max_d],[50,1100]);
 		var y_uv = escala('b',pages,[50,950],[0.2,0]);
 
-		var xAxis = eje('b',x_uv,20,2,-2,function(d){return d.replace("-","")});
+		var xAxis = eje('b',x_uv,20,2,-2,function(d){console.log(d); return true});
 		var yAxis = eje('r',y_uv,pages.length,0,0,function(d){return ""});
 
 		var gX = cont_ups.append("g")
