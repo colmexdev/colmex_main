@@ -638,7 +638,7 @@ function queryCoreReportingApi(profileId) {
 		var results = response.result.rows;
 		var data_pu =[];
 		for(var a in results){
-			data_pu.push({key: +results[a][0], value: +results[a][1]});
+			data_pu.push({key: +results[a][1], value: +results[a][2]});
 		}
 
 		var cont_sp = containerSelect("#cont-sp",{"min-width":"650px","height":"650px","max-width":"700px"}).select("#svg_sp")
@@ -658,13 +658,13 @@ function queryCoreReportingApi(profileId) {
 
 		var gY = cont_sp.append("g")
 			.attr("class", "axis axis-sp-y")
-			.attr("transform","translate("+"40"+","+"40"+")")
+			.attr("transform","translate("+"40"+","+"0"+")")
 			.call(yAxis);
 
-		traceFigures("#svg_sp",data_pu,"sp-point","circle",{"class":"sp-point","transform":"translate("+"40"+","+"40"+")","id":function(d,i){return "sp-point-"+i},"r":"4","cx":function(d){return x_sp(d.key)},"cy":function(d){return y_sp(d.value)},"fill":"rgba(255,165,0,0.6)","stroke-width":"1","stroke":"#rgba(0,0,0,0.8)"},x_sp,y_sp);
+		traceFigures("#svg_sp",data_pu,"sp-point","circle",{"class":"sp-point","transform":"translate("+"40"+","+"40"+")","id":function(d,i){return "sp-point-"+i},"r":"4","cx":function(d){return x_sp(d.key)},"cy":function(d){return y_sp(d.value)},"fill":"rgba(255,165,0,0.6)","stroke-width":"1","stroke":"rgba(0,0,0,0.8)"},x_sp,y_sp);
 
-    //var formattedJson = JSON.stringify(response.result, null, 2);
-    //document.getElementById('query-output').innerHTML += "<br><br>" + formattedJson;
+    var formattedJson = JSON.stringify(response.result, null, 2);
+    document.getElementById('query-output').innerHTML += "<br><br>" + formattedJson;
   })
   .then(null, function(err) {
       // Log any errors.
