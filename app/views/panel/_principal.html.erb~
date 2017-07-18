@@ -637,9 +637,18 @@ function queryCoreReportingApi(profileId) {
   .then(function(response) {
 		var results = response.result.rows;
 		var data_pu =[];
+		var sx = 0, sy = 0, sx2 = 0, s2x = 0, sxy = 0, n = results.length;
 		for(var a in results){
 			data_pu.push({key: +results[a][1], value: +results[a][2]});
+			sx += +results[a][1];
+			sy += +results[a][2];
+			sxy += ((+results[a][1])*(+results[a][2]));
+			sx2 += ((+results[a][1])*(+results[a][1]));
 		}
+		s2x = sx*sx;
+		var det = 1/(s2x - (n*sx2));
+		var m = det*((n*sxy)-(sx*sy));
+		var b = det*((sx2*sy)-(sx*sxy));
 
 		var cont_sp = containerSelect("#cont-sp",{"min-width":"650px","height":"650px","max-width":"700px"}).select("#svg_sp")
 			.attr("preserveAspectRatio", "xMinYMin meet")
@@ -653,7 +662,7 @@ function queryCoreReportingApi(profileId) {
 
 		var gX = cont_sp.append("g")
 			.attr("class", "axis axis-sp-x")
-			.attr("transform","translate("+"40"+","+"610"+")")
+			.attr("transform","translate("+"40"+","+"600"+")")
 			.call(xAxis);
 
 		var gY = cont_sp.append("g")
@@ -662,6 +671,11 @@ function queryCoreReportingApi(profileId) {
 			.call(yAxis);
 
 		traceFigures("#svg_sp",data_pu,"sp-point","circle",{"class":"sp-point","transform":"translate("+"40"+","+"40"+")","id":function(d,i){return "sp-point-"+i},"r":"4","cx":function(d){return x_sp(d.key)},"cy":function(d){return y_sp(d.value)},"fill":"rgba(255,165,0,0.6)","stroke-width":"1","stroke":"rgba(0,0,0,0.8)"},x_sp,y_sp);
+
+		var reg_lin = linea(x_sp,y_sp,d3.curveLinear,1,1);
+		var line_points = [{key: x_sp.domain()[0], value: (b+(m*x_sp.domain()[0]))},{key: x_sp.domain()[1], value: (b+(m*x_sp.domain()[1]))}];
+
+		traceFigures("#svg_sp",[line_points],"sp-line","path",{"class":"sp-line","transform":"translate("+"40"+","+"40"+")","d":reg_lin,"fill":"none","stroke-width":"3","stroke":"rgba(220,20,60,0.8)"},x_sp,y_sp);
 
     //var formattedJson = JSON.stringify(response.result, null, 2);
     //document.getElementById('query-output').innerHTML += "<br><br>" + formattedJson;
