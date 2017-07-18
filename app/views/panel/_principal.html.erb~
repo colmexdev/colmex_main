@@ -661,7 +661,7 @@ function queryCoreReportingApi(profileId) {
 			.attr("transform","translate("+"40"+","+"40"+")")
 			.call(yAxis);
 
-		traceFigures("#svg_sp",data_pu,"sp-point","circle",{"class":"sp-point","transfor},x_sp,y_sp);
+		traceFigures("#svg_sp",data_pu,"sp-point","circle",{"class":"sp-point","transform":"translate("+"40"+","+"40"+")","id":function(d,i){return "sp-point-"+i},"r":"4","cx":function(d){return x_sp(d.key)},"cy":function(d){return y_sp(d.value)},"fill":"rgba(255,165,0,0.6)","stroke-width":"1","stroke":"#rgba(0,0,0,0.8)"},x_sp,y_sp);
 
     //var formattedJson = JSON.stringify(response.result, null, 2);
     //document.getElementById('query-output').innerHTML += "<br><br>" + formattedJson;

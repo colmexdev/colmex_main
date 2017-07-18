@@ -651,12 +651,12 @@ function queryCoreReportingApi(profileId) {
 		var xAxis = eje("b",x_sp,10,2,-2);
 		var yAxis = eje("r",y_sp,10,2,-2);
 
-		var gX = cont_ups.append("g")
+		var gX = cont_sp.append("g")
 			.attr("class", "axis axis-sp-x")
 			.attr("transform","translate("+"610"+","+"40"+")")
 			.call(xAxis);
 
-		var gY = cont_ups.append("g")
+		var gY = cont_sp.append("g")
 			.attr("class", "axis axis-sp-y")
 			.attr("transform","translate("+"40"+","+"40"+")")
 			.call(yAxis);
