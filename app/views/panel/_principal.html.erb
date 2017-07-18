@@ -355,10 +355,16 @@ function queryCoreReportingApi(profileId) {
  		.attr("preserveAspectRatio", "xMinYMin meet")
 		.attr("viewBox", "0 0 "+"1100"+" "+"600");
 
-		var x_usr = escala("t",d3.extent(data_usrs,function(d){return d.key}),[50,950],[0.1,0]);
+		var fechas_dom = [];
+		for(var k in acums_fecha)
+			fechas_dom.push(new Date(k));
+
+		var x_usr = escala("t",d3.extent(data_usrs,function(d){return d.key}),[50,950]);
 		var y_usr = escala("l",[0,d3.max(data_sessions,function(d){return d.value})],[500,50]);
+		var x_usr_b = escala("b",fechas_dom,[50,950],[0.1,0]);
 
 		var xAxis = eje('b',x_usr,10,2,-2,d3.timeFormat("%d/%m"));
+		var xAxis2 = eje('b',x_usr_b,fechas_dom.length,2,-2,d3.timeFormat("%d/%m"));
 		var yAxis = eje('r',y_usr,10,2,-2);
 
 		var gX = cont_usrs.append("g")
@@ -407,7 +413,7 @@ function queryCoreReportingApi(profileId) {
 		var gmX = cont_meds.append("g")
 			.attr("class", "axis axis-med-x")
 			.attr("transform","translate("+"50"+","+"500"+")")
-			.call(xAxis);
+			.call(xAxis2);
 
 		var gmY = cont_meds.append("g")
 			.attr("class", "axis axis-med-y")
@@ -423,7 +429,7 @@ function queryCoreReportingApi(profileId) {
 		}
 
 		for(var k in data_meds){
-			traceFigures("#svg_meds",data_meds[k],"med-bar","rect",{"class":"med-bar-"+k,"transform":"translate("+"50"+","+"0"+")","id":function(d,i){return "desc-bar-" + k + "-" + i},"x":function(d,i){return x_usr(d.key)},"y":function(d,i){return y_usr(acums_fecha[d.key.toString()] + d.value)},"width":"20","height": function(d,i){var ac = acums_fecha[d.key.toString()]; acums_fecha[d.key.toString()] += d.value; return y_usr(0)-y_usr(d.value)},"fill":function(d){return "rgba(240,128,128,"+ (1.15 - cats.indexOf(k)/cats.length) +")"},"stroke-width":"1","stroke":"rgba(50,50,50,0.4)"}, x_usr ,y_usr);
+			traceFigures("#svg_meds",data_meds[k],"med-bar","rect",{"class":"med-bar-"+k,"transform":"translate("+"50"+","+"0"+")","id":function(d,i){return "desc-bar-" + k + "-" + i},"x":function(d,i){return x_usr_b(d.key)},"y":function(d,i){return y_usr(acums_fecha[d.key.toString()] + d.value)},"width":"20","height": function(d,i){var ac = acums_fecha[d.key.toString()]; acums_fecha[d.key.toString()] += d.value; return y_usr(0)-y_usr(d.value)},"fill":function(d){return "rgba(240,128,128,"+ (1.15 - cats.indexOf(k)/cats.length) +")"},"stroke-width":"1","stroke":"rgba(50,50,50,0.4)"}, x_usr_b ,y_usr);
 		}
 
 			//var formattedJson = JSON.stringify(response.result, null, 2);
