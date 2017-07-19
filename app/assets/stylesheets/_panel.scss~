@@ -493,5 +493,11 @@ svg{
 #tooltip-backend{
 	position: absolute;
 	background-color: rgba(105,105,105,0.8);
-	display: none;
+	width: 0;
+	height: 0;
+	opacity: 0;
+	-webkit-transition: opacity 0.3s linear;
+	-moz-transition: opacity 0.3s linear;
+	-o-transition: opacity 0.3s linear;
+	transition: opacity 0.3s linear;
 }
