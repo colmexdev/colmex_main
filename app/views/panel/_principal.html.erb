@@ -329,8 +329,8 @@ function queryCoreReportingApi(profileId) {
 		.transition().style("height","auto")
 		.style("width","auto");
 	tooltip.html("Evento:"  + d.key + "<br>" + "Usuarios: " + d.value)
-		.style("left", (d3.event.pageX + 5) + "px")
-		.style("top", (d3.event.pageY - 28) + "px");
+		.style("left", (d3.event.pageX - 5) + "px")
+		.style("top", (d3.event.pageY + 15) + "px");
 	},
 	"mouseleave":function(d,i,event){
 		tooltip.html("").style("opacity","0").transition()
