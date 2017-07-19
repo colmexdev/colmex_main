@@ -324,7 +324,7 @@ function queryCoreReportingApi(profileId) {
 		d3.selectAll(".axis-desc-x .tick text").attr("y","-10");
 
 		traceFigures("#svg_descs",data_descs,"desc-bar","rect",{"class":"desc-bar","transform":"translate("+"50"+","+"0"+")","id":function(d,i){return "desc-bar-" + i},"x":x_desc(0),"y":function(d){return y_desc(d.key)},"width":function(d){return x_desc(d.value)},"height":y_desc.bandwidth(),"fill":"black","fill":function(d){ return color(d.value/d3.max(data_descs,function(a){return a.value}))}}, x_desc ,y_desc,null,{"mouseover":function(d,i,event){
-	console.log(event.pageX + " " + event.pageY);
+	console.log(d3.event.pageX + " " + d3.event.pageY);
 	tooltip.style("opacity","0.8")
 		.style("font-size","15px")
 		.transition().style("height","auto")
