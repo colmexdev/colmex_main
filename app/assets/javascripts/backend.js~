@@ -64,11 +64,15 @@ function eje(o,escala,n_ticks,s_ticks,p_ticks,f_ticks){
 					.tickFormat(f_ticks)
 }
 
-function completaFechas(f_i,f_f){
+function completaFechas(f_i,f_f,only){
+	only = only || false;
 	var fs = [];
 	var dif_dias = Math.ceil((f_f-f_i)/(24000*3600));
 	for(var i=0; i<dif_dias; i++){
-		fs.push({key: new Date(f_i.getTime()+(i*24000*3600)), value: 0});
+		if(!only)
+			fs.push({key: new Date(f_i.getTime()+(i*24000*3600)), value: 0});
+		else
+			fs.push(new Date(f_i.getTime()+(i*24000*3600)));
 	}
 	return fs
 }
