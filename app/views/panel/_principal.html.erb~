@@ -332,7 +332,7 @@ function queryCoreReportingApi(profileId) {
 	},
 	"mouseleave":function(event,d,i){
 		tooltip.style("opacity","0").transition()
-			.delay(400).style("height","0")
+			.delay(300).style("height","0")
 				.style("width","0");
 	}
 });
