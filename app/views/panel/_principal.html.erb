@@ -328,11 +328,9 @@ function queryCoreReportingApi(profileId) {
 		.style("font-size","14px")
 		.transition().style("height","auto")
 		.style("width","auto");
-	console.log(d3.event.pageX);
-	console.log(tooltip.style("width"));
-	var l = ((d3.event.pageX < (parseInt(tooltip.style("width").replace("px",""))/2)) ? 10 : (d3.event.pageX - (parseInt(tooltip.style("width").replace("px",""))/2)) );
+	//var l = ((d3.event.pageX < (parseInt(tooltip.style("width").replace("px",""))/2)) ? 10 : (d3.event.pageX - (parseInt(tooltip.style("width").replace("px",""))/2)) );
 	tooltip.html("Evento:"  + d.key + "<br>" + "Usuarios: " + d.value)
-		.style("left", l + "px")
+		.style("left", ((d3.event.pageX < (parseInt(tooltip.style("width").replace("px",""))/2)) ? 10 : (d3.event.pageX - (parseInt(tooltip.style("width").replace("px",""))/2)) ) + "px")
 		.style("top", (d3.event.pageY - (1.5*parseInt(tooltip.style("height").replace("px","")))) + "px");
 	},
 	"mouseleave":function(d,i,event){
