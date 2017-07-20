@@ -325,7 +325,7 @@ function queryCoreReportingApi(profileId) {
 
 		traceFigures("#svg_descs",data_descs,"desc-bar","rect",{"class":"desc-bar","transform":"translate("+"50"+","+"0"+")","id":function(d,i){return "desc-bar-" + i},"x":x_desc(0),"y":function(d){return y_desc(d.key)},"width":function(d){return x_desc(d.value)},"height":y_desc.bandwidth(),"fill":function(d){ return color(d.value/d3.max(data_descs,function(a){return a.value}))}}, x_desc ,y_desc,null,{"mouseover":function(d,i){
 	d3.selectAll(".desc-bar").transition().duration(250).style("opacity","0.3");
-	d3.select("#desc-bar-"+i).style("opacity","1");
+	d3.select("#desc-bar-"+i).transition().style("opacity","1");
 	tooltip.style("opacity","0.8")
 		.style("font-size","14px")
 		.transition().style("height","auto")
@@ -407,10 +407,10 @@ function queryCoreReportingApi(profileId) {
 
 		traceFigures("#svg_usrs",[data_usrs],"usr-area","path",{"class":"usr-area","transform":"translate("+"50"+","+"0"+")","fill":"rgba(0,0,0,0.2)","stroke":"black","d":linea_u},x_usr,y_usr,null);
 
-		traceFigures("#svg_usrs",data_usrs,"usr-point","circle",{"class":"usr-point","transform":"translate("+"50"+","+"0"+")","fill":"rgba(0,0,0,0.2)","stroke":"black","r":"5","cx":function(d){return x_usr(d.key)},"cy":function(d){return y_usr(d.value)}},x_usr,y_usr,null,
+		traceFigures("#svg_usrs",data_usrs,"usr-point","circle",{"class":"usr-point","transform":"translate("+"50"+","+"0"+")","id":function(d,i){return "usr-point-"+i},"fill":"rgba(0,0,0,0.2)","stroke":"black","r":"5","cx":function(d){return x_usr(d.key)},"cy":function(d){return y_usr(d.value)}},x_usr,y_usr,null,
 {"mouseover":function(d,i){
 	d3.selectAll(".usr-point").transition().duration(250).style("opacity","0.3");
-	d3.select(this.geAttribute("id")).style("opacity","1");
+	d3.select("#usr-point-"+i).style("opacity","1");
 	tooltip.style("opacity","0.8")
 		.style("font-size","14px")
 		.transition().style("height","auto")
@@ -431,10 +431,10 @@ function queryCoreReportingApi(profileId) {
 
 		traceFigures("#svg_usrs",[data_sessions],"ses-line","path",{"class":"ses-line","transform":"translate("+"50"+","+"0"+")","fill":"none","stroke":"black","d":linea_s},x_usr,y_usr,{"stroke-dasharray":("3,3")});
 
-		traceFigures("#svg_usrs",data_sessions,"ses-point","circle",{"class":"ses-point","transform":"translate("+"50"+","+"0"+")","fill":"rgba(0,0,0,0.2)","stroke":"black","r":"5","cx":function(d){return x_usr(d.key)},"cy":function(d){return y_usr(d.value)}},x_usr,y_usr,null,
+		traceFigures("#svg_usrs",data_sessions,"ses-point","circle",{"class":"ses-point","transform":"translate("+"50"+","+"0"+")","id":function(d,i){return "ses-point-"+i},"fill":"rgba(0,0,0,0.2)","stroke":"black","r":"5","cx":function(d){return x_usr(d.key)},"cy":function(d){return y_usr(d.value)}},x_usr,y_usr,null,
 {"mouseover":function(d,i){
 	d3.selectAll(".ses-point").transition().duration(250).style("opacity","0.3");
-	d3.select(this.geAttribute("id")).style("opacity","1");
+	d3.select("ses-point-"+i).style("opacity","1");
 	tooltip.style("opacity","0.8")
 		.style("font-size","14px")
 		.transition().style("height","auto")
