@@ -328,10 +328,10 @@ function queryCoreReportingApi(profileId) {
 		.style("font-size","14px")
 		.transition().style("height","auto")
 		.style("width","auto");
-	d3.select("#tooltip-backend:after").style("left",d3.event.pageX+"px");
 	tooltip.html("Evento:"  + d.key + "<br>" + "Usuarios: " + d.value)
 		.style("left", ((d3.event.pageX < (parseInt(tooltip.style("width").replace("px",""))/2)) ? 10 : (d3.event.pageX - (parseInt(tooltip.style("width").replace("px",""))/2)) ) + "px")
-		.style("top", (d3.event.pageY - (1.5*parseInt(tooltip.style("height").replace("px","")))) + "px");
+		.style("top", (d3.event.pageY - (1.1*parseInt(tooltip.style("height").replace("px","")))) + "px");
+	d3.select("#tooltip-backend:after").style("left",d3.event.pageX+"px");
 	},
 	"mouseleave":function(d,i,event){
 		tooltip.html("").style("opacity","0").transition()
