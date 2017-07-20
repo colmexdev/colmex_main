@@ -512,11 +512,10 @@ svg{
     content: '';
     display: block;  
     position: absolute;
-    left: 141px;
-    bottom: 100%;
+    left: 50%;
+    bottom: -42%;
     width: 0;
-		//opacity: 0;
     height: 0;
     border: 9px solid transparent;
-    border-bottom-color: white;
+    border-top-color: rgba(245,245,245,0.8);
 }
