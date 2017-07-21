@@ -333,7 +333,7 @@ function queryCoreReportingApi(profileId) {
 	tooltip.html("Evento:"  + d.key + "<br>" + "Usuarios: " + d.value)
 		.style("left", (d3.event.pageX < parseInt(tooltip.style("width").replace("px",""))/2 ? "10px" : (d3.event.pageX + (parseInt(tooltip.style("width").replace("px",""))/2) >= $(window).width() ? (($(window).width() - parseInt(tooltip.style("width").replace("px",""))) + "px")  : (d3.event.pageX - (parseInt(tooltip.style("width").replace("px",""))/2)) ) + "px" ) )
 		.style("top", (d3.event.pageY - (1.3*parseInt(tooltip.style("height").replace("px","")))) + "px");
-	console.log($(window).width() + " -- " + ($(window).width() - parseInt(tooltip.style("width").replace("px",""))));
+	console.log($(window).width() + " -- " + ($(window).width() + parseInt(tooltip.style("width").replace("px",""))));
 	},
 	"mouseleave":function(d,i){
 		d3.selectAll(".desc-bar").transition().duration(250).style("opacity","");
