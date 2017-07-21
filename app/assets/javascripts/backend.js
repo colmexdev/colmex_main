@@ -43,6 +43,13 @@ function readURL(input,display,file) {
 
 /* Funciones de graficación */
 
+function modifyTooltip(sheet,left){
+	if(sheet.rules.length == 1){
+		sheet.removeRule(0);
+	}
+	sheet.insertRule('#tooltip-backend::after { left: ' + left + 'px }',0);
+}
+
 function escala(tipo,dom,rango,pad){
 	var scale = (tipo == 't' ? d3.scaleTime() : (tipo == 'l' ? d3.scaleLinear() : d3.scaleBand()));
 	if(tipo == "b") scale = scale.paddingInner(pad[0]).paddingOuter(pad[1]);

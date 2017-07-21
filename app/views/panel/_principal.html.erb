@@ -75,6 +75,12 @@
 <script type="text/javascript">
 	var tooltip = d3.select("#tooltip-backend");
 
+	var style = document.createElement("style");
+	document.head.appendChild(style);
+	var sheet = style.sheet;
+	//sheet.insertRule("#tooltip-backend:after{ content: ''; display: block; position: absolute; left: 50%; bottom: -25%; width: 0; height: 0; border: 9px solid transparent; border-top-color: rgba(245,245,245,0.8); }",0);
+
+
 	$.ajax({
 		url: "<%= panel_princ_path %>",
 		dataType: "JSON",
@@ -326,6 +332,7 @@ function queryCoreReportingApi(profileId) {
 		traceFigures("#svg_descs",data_descs,"desc-bar","rect",{"class":"desc-bar","transform":"translate("+"50"+","+"0"+")","id":function(d,i){return "desc-bar-" + i},"x":x_desc(0),"y":function(d){return y_desc(d.key)},"width":function(d){return x_desc(d.value)},"height":y_desc.bandwidth(),"fill":function(d){ return color(d.value/d3.max(data_descs,function(a){return a.value}))}}, x_desc ,y_desc,null,{"mouseover":function(d,i){
 	d3.selectAll(".desc-bar").transition().duration(250).style("opacity","0.3");
 	d3.select("#desc-bar-"+i).transition().style("opacity","1");
+	modifyTooltip(sheet,d3.event.pageX);
 	tooltip.style("opacity","0.8")
 		.style("font-size","14px")
 		.transition().style("height","auto")
@@ -411,6 +418,7 @@ function queryCoreReportingApi(profileId) {
 {"mouseover":function(d,i){
 	d3.selectAll(".usr-point").transition().duration(250).style("opacity","0.3");
 	d3.select("#usr-point-"+i).transition().style("opacity","1");
+	modifyTooltip(sheet,d3.event.pageX);
 	tooltip.style("opacity","0.8")
 		.style("font-size","14px")
 		.transition().style("height","auto")
