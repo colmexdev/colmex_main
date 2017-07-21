@@ -326,19 +326,19 @@ function queryCoreReportingApi(profileId) {
 		traceFigures("#svg_descs",data_descs,"desc-bar","rect",{"class":"desc-bar","transform":"translate("+"50"+","+"0"+")","id":function(d,i){return "desc-bar-" + i},"x":x_desc(0),"y":function(d){return y_desc(d.key)},"width":function(d){return x_desc(d.value)},"height":y_desc.bandwidth(),"fill":function(d){ return color(d.value/d3.max(data_descs,function(a){return a.value}))}}, x_desc ,y_desc,null,{"mouseover":function(d,i){
 	d3.selectAll(".desc-bar").transition().duration(250).style("opacity","0.3");
 	d3.select("#desc-bar-"+i).transition().style("opacity","1");
-	tooltip.html("Evento:"  + d.key + "<br>" + "Usuarios: " + d.value).transition().duration(250).style("opacity","0.8")
+	tooltip.html("Evento:"  + d.key + "<br>" + "Usuarios: " + d.value)
+	.style("left", (d3.event.pageX < parseInt(tooltip.style("width").replace("px",""))/2 ? "10px" : (d3.event.pageX + (parseInt(tooltip.style("width").replace("px",""))) >= $(window).width() ? (($(window).width() - ( d3.event.pageX + parseInt(tooltip.style("width").replace("px","")))) + "px")  : (d3.event.pageX - (parseInt(tooltip.style("width").replace("px",""))/2)) ) + "px" ) )
+		.style("top", (d3.event.pageY - (1.3*parseInt(tooltip.style("height").replace("px","")))) + "px")
 		.style("font-size","14px")
 		.style("height","auto")
-		.style("width","auto").transition()
-		.style("left", (d3.event.pageX < parseInt(tooltip.style("width").replace("px",""))/2 ? "10px" : (d3.event.pageX + (parseInt(tooltip.style("width").replace("px",""))) >= $(window).width() ? (($(window).width() - ( d3.event.pageX + parseInt(tooltip.style("width").replace("px","")))) + "px")  : (d3.event.pageX - (parseInt(tooltip.style("width").replace("px",""))/2)) ) + "px" ) )
-		.style("top", (d3.event.pageY - (1.3*parseInt(tooltip.style("height").replace("px","")))) + "px");
-	console.log($(window).width() + " -- " + (d3.event.pageX + parseInt(tooltip.style("width").replace("px",""))));
+		.style("padding","")
+		.style("width","auto").transition().duration(250).style("opacity","0.8");
 	},
 	"mouseleave":function(d,i){
 		d3.selectAll(".desc-bar").transition().duration(250).style("opacity","");
 		//d3.select("#desc-bar-"+i).style("opacity","1");
-		tooltip.html("").style("height","0px")
-				.style("width","0px");
+		tooltip.html("")
+				.style("padding","0");
 	}
 });
 			
