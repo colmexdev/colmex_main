@@ -38,7 +38,7 @@ $.ajax({
 		</div>
 
 	<div id="cont-ac">
-		<span class="titulo-chico" style="text-align:center;">Recuperando directorio. Espere un momento...</span>
+		<span class="titulo-chico" style="text-align:center;"><%= params[:locale] == "en" ? "Downloading information. Please wait..." : "Recuperando directorio. Espere un momento..." %></span>
 	</div>
 </div>
 

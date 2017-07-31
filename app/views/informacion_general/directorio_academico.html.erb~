@@ -30,10 +30,10 @@ $.ajax({
 
 		<div class="row">
 			<div class="col-xs-12" style="padding-left:0;">
-				<span class="titulo-grande">Directorio académico</span><br>
+				<span class="titulo-grande"><%= params[:locale] == "en" ? "Academic Staff" : "Directorio académico" %></span><br>
 			</div>
 			<div class="col-xs-12" style="padding-left:0;">
-				<p style="margin-top:25px;margin-bottom:25px">Aquí podrás encontrar información general sobre la planta académica de El Colegio de México.</p>
+				<p style="margin-top:25px;margin-bottom:25px"><%= params[:locale] != "en" ? "Aquí podrás encontrar información general sobre la planta académica de El Colegio de México." : "Here you can find general information about the academic staff of El Colegio de México." %></p>
 			</div>
 		</div>
 
