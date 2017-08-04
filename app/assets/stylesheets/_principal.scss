@@ -1216,11 +1216,13 @@ ul.ul-nav { display: table;
 		a{
 			color: #fff;
 			line-height: 46px;
-			display: block;
+			display: table;
 			height: 100%;
+			text-align: center;
+			width: 100%;
 
 			span{
-				display: inline-block;
+				display: table-cell;
 				vertical-align: middle;
 				line-height: 3.5;
 			}
