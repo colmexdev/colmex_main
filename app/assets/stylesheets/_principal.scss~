@@ -1352,7 +1352,7 @@ ul.ul-nav { display: table;
 	z-index: 27;
 	box-shadow: rgba(0, 0, 0, 0.172549) 0px 6px 12px;
 	position: relative;
-	height: 60px;
+	height: 230px;
 
 	.img-banner{
 		position:relative;
