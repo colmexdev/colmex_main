@@ -94,7 +94,7 @@
 				<% contenidos = Descubre.where("fecha_publicacion <= ? AND fecha_limite_pub >= ?", Date.current(), Date.current()).group(:contenido).order(:contenido) %>
 				<% cont_plural, cont = [], [] %>
 				<% contenidos.each do |c| %>
-					<% cont_plural << pluralizar(c.contenido) %>
+					<% cont_plural << pluralizar(c.contenido,(params[:locale] == "en" ? 1 : 0)) %>
 					<% cont << c.contenido %>
 				<% end %>
 				<% contenidos = [] %>

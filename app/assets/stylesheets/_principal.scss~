@@ -138,7 +138,7 @@ a, a:hover, a:active, a:visited, a:link{  text-decoration: none; }
 	font-family: "Gotham SSm A", "Gotham SSm B", Lato; 
 	font-style: normal; 
 	font-weight: 700; 
-	font-size: 28px;
+	font-size: 25px;
 	display: inline-block;
 	margin-bottom:12px;
 }
@@ -1344,6 +1344,21 @@ ul.ul-nav { display: table;
 	}
 
 	.col-xs-6.col-md-3.revista { margin-bottom: 20px; }
+}
+
+//Estilos que afectan al banner de Presidencia
+#div-banner-pres{
+	background-color: #F3F3F3;
+	z-index: 27;
+	box-shadow: rgba(0, 0, 0, 0.172549) 0px 6px 12px;
+	position: relative;
+	height: 60px;
+
+	.img-banner{
+		position:relative;
+		max-width: 100%;
+		@include centrado;
+	}
 }
 
 //Estilos que afectan la sección del descubre
