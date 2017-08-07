@@ -53,6 +53,9 @@ gem 'devise'
 # remotipart para mandar formularios de modo remoto (js)
 gem 'remotipart', '~> 1.2'
 
+# d3-rails para realizar visualizaciones
+gem 'd3-rails'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

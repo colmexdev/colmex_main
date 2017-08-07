@@ -46,6 +46,7 @@ gem 'crossfilter-rails'
 
 # active_directory para extraer los datos de contacto de académicos
 gem 'active_directory'
+gem "devise_ldap_authenticatable"
 
 # Devise para autenticación
 gem 'devise'

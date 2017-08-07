@@ -87,7 +87,7 @@
 
 	<div class="row"><!-- Fila para banners de presidencia -->
 		<div class="col-md-12" id="div-banner-pres">
-			<%= image_tag("logo-red.png", class: "img-banner") %>
+			<%= link_to image_tag("logo-red.png", class: "img-banner"), "http://desigualdades.colmex.mx/", target: "_blank" %>
 		</div>
 	</div>
 

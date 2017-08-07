@@ -5,7 +5,7 @@
 <h2>Acceder al panel</h2>
 <% end %>
 
-<div class="container" style="text-align:center;padding-top:7%;">
+<div class="container" style="text-align:center;padding-top:10%;">
 
 <%= image_tag("colmex.png", class: "img-login") %>
 
@@ -14,7 +14,7 @@
 		<% if false %>
     <%= f.label :usuario %><br />
 		<% end %>
-    <%= f.text_field :usuario, autocomplete: "off", autofocus: true, placeholder: "Usuario", class: "text-ip" %>
+    <%= f.email_field :usuario, autocomplete: "off", autofocus: true, placeholder: "Usuario", class: "text-ip" %>
   </div>
 
   <div class="field">

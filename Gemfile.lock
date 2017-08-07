@@ -91,6 +91,9 @@ GEM
       railties (>= 4.1.0, < 5.1)
       responders
       warden (~> 1.2.3)
+    devise_ldap_authenticatable (0.4.4)
+      devise (> 1.0.4)
+      net-ldap (>= 0.1.1)
     erubis (2.7.0)
     execjs (2.7.0)
     globalid (0.3.6)
@@ -227,6 +230,7 @@ DEPENDENCIES
   crossfilter-rails
   d3-rails
   devise
+  devise_ldap_authenticatable
   gon
   jbuilder (~> 2.0)
   jquery-rails
