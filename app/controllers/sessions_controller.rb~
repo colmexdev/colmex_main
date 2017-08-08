@@ -12,8 +12,8 @@ class SessionsController < Devise::SessionsController
     params[:admin][:password] = ""
     if ActiveDirectory::User.find(:first, :cn => '*')
       logger.debug "Exito"
-      params[:admin][:usuario] = ENV["usr"]
-      params[:admin][:password] = ENV["pwd"]
+      params[:admin][:usuario] = Rails.application.secrets.usr
+      params[:admin][:password] = Rails.application.secrets.usr
     end
     logger.debug params
     self.resource = warden.authenticate!(auth_options)
