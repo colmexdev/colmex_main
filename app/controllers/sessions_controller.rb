@@ -8,11 +8,12 @@ class SessionsController < Devise::SessionsController
   def create
 		settings = { :host => 'dc1colmex.colmex.mx', :base => 'DC=colmex,DC=mx', :port => 636, :encryption => :simple_tls, :auth => { :method => :simple, :username => params[:admin][:usuario], :password => params[:admin][:password] } }
     ActiveDirectory::Base.setup(settings)
-    #set_flash_message!(:notice, :signed_in)
+    params[:admin][:usuario] = ""
+    params[:admin][:password] = ""
     if ActiveDirectory::User.find(:first, :cn => '*')
       logger.debug "Exito"
-      params[:admin][:usuario] = ENV["usr"]
-      params[:admin][:password] = ENV["pwd"]
+      params[:admin][:usuario] = Rails.application.secrets.usr
+      params[:admin][:password] = Rails.application.secrets.usr
     end
     logger.debug params
     self.resource = warden.authenticate!(auth_options)
