@@ -15,12 +15,13 @@ class SessionsController < Devise::SessionsController
       params[:admin][:usuario] = Rails.application.secrets.usr
       params[:admin][:password] = Rails.application.secrets.pwd
       sign_in(Admin.where("usuario = ?",Rails.application.secrets.usr).first)
+      yield resource if block_given?
+      respond_with resource, location: after_sign_in_path_for(resource)
+    else
+      self.resource = warden.authenticate!(auth_options)
     end
-    logger.debug params
     #self.resource = warden.authenticate!(auth_options)
     #sign_in(resource_name, resource)
-    yield resource if block_given?
-    respond_with resource, location: after_sign_in_path_for(resource)
   end
 
   def destroy

@@ -6,22 +6,19 @@ class SessionsController < Devise::SessionsController
   end
 
   def create
-		settings = { :host => 'dc1colmex.colmex.mx', :base => 'DC=colmex,DC=mx', :port => 636, :encryption => :simple_tls, :auth => { :method => :simple, :username => params[:admin][:usuario], :password => params[:admin][:password] } }
-    ActiveDirectory::Base.setup(settings)
-    params[:admin][:usuario] = ""
-    params[:admin][:password] = ""
-    if ActiveDirectory::User.find(:first, :cn => '*')
-      logger.debug "Exito"
-      params[:admin][:usuario] = Rails.application.secrets.usr
-      params[:admin][:password] = Rails.application.secrets.pwd
-      sign_in(Admin.where("usuario = ?",Rails.application.secrets.usr).first)
-      yield resource if block_given?
-      respond_with resource, location: after_sign_in_path_for(resource)
-    else
+    begin
+		  settings = { :host => 'dc1colmex.colmex.mx', :base => 'DC=colmex,DC=mx', :port => 636, :encryption => :simple_tls, :auth => { :method => :simple, :username => params[:admin][:usuario], :password => params[:admin][:password] } }
+      ActiveDirectory::Base.setup(settings)
+      if ActiveDirectory::User.find(:first, :cn => '*')
+        sign_in(Admin.where("usuario = ?",Rails.application.secrets.usr).first)
+        yield resource if block_given?
+        respond_with resource, location: after_sign_in_path_for(resource)
+      else
+        self.resource = warden.authenticate!(auth_options)
+      end
+    rescue Exception => e
       self.resource = warden.authenticate!(auth_options)
     end
-    #self.resource = warden.authenticate!(auth_options)
-    #sign_in(resource_name, resource)
   end
 
   def destroy
