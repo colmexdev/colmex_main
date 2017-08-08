@@ -10,16 +10,18 @@ class SessionsController < Devise::SessionsController
     self.resource = warden.authenticate!(auth_options)
     logger.debug self.resource
     set_flash_message!(:notice, :signed_in)
-    logger.debug sign_in(resource_name, resource)
     if ActiveDirectory::User.find(:first, :cn => '*')
       logger.debug "Exito"
+      #sign_in(resource_name, resource)
+      sign_in(:admin, Admin.where("usuario = ?","adminweb").first)
       if block_given?
         yield resource
       end
       respond_with resource, location: after_sign_in_path_for(resource)
     else
       logger.debug "Fallo"
-      redirect_to new_admin_session_path
+			sign_in(:admin,nil)
+      #redirect_to new_admin_session_path
     end
   end
 
