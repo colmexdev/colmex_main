@@ -11,8 +11,9 @@ class SessionsController < Devise::SessionsController
     #set_flash_message!(:notice, :signed_in)
     if ActiveDirectory::User.find(:first, :cn => '*')
       logger.debug "Exito"
-      params[:admin][:usuario] = "adminweb"
-      params[:admin][:password] = "Adm1n_W3b@"
+      params[:admin][:usuario] = ENV["usr"]
+      params[:admin][:password] = ENV["pwd"]
+      logger.debug params
     end
     self.resource = warden.authenticate!(auth_options)
     sign_in(resource_name, resource)

@@ -14,6 +14,7 @@ class SessionsController < Devise::SessionsController
       params[:admin][:usuario] = ENV["usr"]
       params[:admin][:password] = ENV["pwd"]
     end
+    logger.debug params
     self.resource = warden.authenticate!(auth_options)
     sign_in(resource_name, resource)
     yield resource if block_given?
