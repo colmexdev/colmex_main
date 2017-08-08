@@ -7,21 +7,20 @@ class SessionsController < Devise::SessionsController
   def create
 		settings = { :host => 'dc1colmex.colmex.mx', :base => 'DC=colmex,DC=mx', :port => 636, :encryption => :simple_tls, :auth => { :method => :simple, :username => params[:admin][:usuario], :password => params[:admin][:password] } }
     ActiveDirectory::Base.setup(settings)
-    self.resource = warden.authenticate!(auth_options)
-    logger.debug resource_name.class
-    logger.debug resource.class
-    set_flash_message!(:notice, :signed_in)
+    #set_flash_message!(:notice, :signed_in)
     if ActiveDirectory::User.find(:first, :cn => '*')
       logger.debug "Exito"
       #sign_in(resource_name, resource)
+      self.resource = warden.authenticate!(auth_options)
       sign_in(resource_name, Admin.where("usuario = ?","adminweb").first)
       if block_given?
         yield resource
       end
       respond_with resource, location: after_sign_in_path_for(resource)
     else
+      self.resource = warden.authenticate!(auth_options)
       logger.debug "Fallo"
-			sign_in(resource_name,nil)
+			#sign_in(resource_name,nil)
       #redirect_to new_admin_session_path
     end
   end
