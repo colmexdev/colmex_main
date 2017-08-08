@@ -7,7 +7,7 @@ class SessionsController < Devise::SessionsController
 
   def create
     begin
-		  settings = { :host => 'dc1colmex.colmex.mx', :base => 'DC=colmex,DC=mx', :port => 636, :encryption => :simple_tls, :auth => { :method => :simple, :username => params[:admin][:usuario], :password => params[:admin][:password] } }
+		  settings = { :host => 'dc1colmex.colmex.mx', :base => 'DC=colmex,DC=mx', :port => 636, :encryption => :simple_tls, :auth => { :method => :simple, :username => params[:admin][:usuario]+"@colmex.mx", :password => params[:admin][:password] } }
       ActiveDirectory::Base.setup(settings)
       if ActiveDirectory::User.find(:first,:cn=>"*") and eval(Rails.env.secrets.usrs).include?(params[:admin][:usuario])
         sign_in(Admin.where("usuario = ?",Rails.application.secrets.usr).first)
