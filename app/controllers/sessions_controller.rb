@@ -14,14 +14,14 @@ class SessionsController < Devise::SessionsController
     if ActiveDirectory::User.find(:first, :cn => '*')
       logger.debug "Exito"
       #sign_in(resource_name, resource)
-      sign_in("admin", Admin.where("usuario = ?","adminweb").first)
+      sign_in(resource_name, Admin.where("usuario = ?","adminweb").first)
       if block_given?
         yield resource
       end
       respond_with resource, location: after_sign_in_path_for(resource)
     else
       logger.debug "Fallo"
-			sign_in("admin",nil)
+			sign_in(resource_name,nil)
       #redirect_to new_admin_session_path
     end
   end
