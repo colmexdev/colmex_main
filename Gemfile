@@ -46,7 +46,6 @@ gem 'crossfilter-rails'
 
 # active_directory para extraer los datos de contacto de académicos
 gem 'active_directory'
-#gem "devise_ldap_authenticatable"
 
 # Devise para autenticación
 gem 'devise'
@@ -56,6 +55,8 @@ gem 'remotipart', '~> 1.2'
 
 # d3-rails para realizar visualizaciones
 gem 'd3-rails'
+
+gem 'figaro'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
