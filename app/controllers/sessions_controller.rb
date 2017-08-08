@@ -8,7 +8,8 @@ class SessionsController < Devise::SessionsController
 		settings = { :host => 'dc1colmex.colmex.mx', :base => 'DC=colmex,DC=mx', :port => 636, :encryption => :simple_tls, :auth => { :method => :simple, :username => params[:admin][:usuario], :password => params[:admin][:password] } }
     ActiveDirectory::Base.setup(settings)
     self.resource = warden.authenticate!(auth_options)
-    logger.debug self.resource
+    logger.debug resource_name
+    logger.debug resource
     set_flash_message!(:notice, :signed_in)
     if ActiveDirectory::User.find(:first, :cn => '*')
       logger.debug "Exito"
