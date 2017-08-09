@@ -272,6 +272,7 @@ function queryCoreReportingApi(profileId) {
 		}
 			pieChart("#cont-devs",{"max-width":"500px","height":500+"px","min-width":500+"px"},"#svg_devs",[500,500],"pie_devs",[50,180],[0.8,9],"sect",data_devs,
 {"mouseover":function(d,i){
+	console.log(i);
 	d3.selectAll(".sect").transition().duration(250).style("opacity","0.3");
 	d3.select("#sect-"+i).transition().style("opacity","1");
 	tooltip.html("Dispositivo:"  + data_devs[i].key + "<br>" + "Usuarios: " + d.value)
