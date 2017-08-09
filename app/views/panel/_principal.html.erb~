@@ -582,7 +582,7 @@ function queryCoreReportingApi(profileId) {
 		d3.selectAll(".heat-bar").transition().style("opacity","");
 		tooltip.html("")
 				.style("padding","0");
-	});
+	}});
 	
     //var formattedJson = JSON.stringify(response.result, null, 2);
     //document.getElementById('query-output').innerHTML += "<br><br>" + formattedJson;
