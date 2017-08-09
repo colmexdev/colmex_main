@@ -135,7 +135,7 @@ function linea(sc_x,sc_y,inter,typeX,typeY,area,y0){
 	return (area ? fig.y0(y0) : fig);
 }
 
-function pieChart(div_cont,cont_props,canvas,corners,c_id,radii,pads,sect_class,d_set){
+function pieChart(div_cont,cont_props,canvas,corners,c_id,radii,pads,sect_class,d_set,events){
 	var cont = containerSelect(div_cont,cont_props);
 	var svg_p = cont.select(canvas)
  		.attr("preserveAspectRatio", "xMinYMin meet")
@@ -162,6 +162,11 @@ function pieChart(div_cont,cont_props,canvas,corners,c_id,radii,pads,sect_class,
 			.data(pie(d_set))
 			.enter().append("g")
 			.attr("class",sect_class)
+			.attr("id",function(d,i){ return sect_class+i})
 			.append("path")
 			.attr("d",arc);
+
+	for(var k in events){
+		p_c = pc.on(k,events[k]);
+	}
 }

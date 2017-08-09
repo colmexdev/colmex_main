@@ -270,7 +270,24 @@ function queryCoreReportingApi(profileId) {
 		for(var a in results){
 			data_devs.push({key: results[a][0],value: +results[a][1]});
 		}
-			pieChart("#cont-devs",{"max-width":"500px","height":500+"px","min-width":500+"px"},"#svg_devs",[500,500],"pie_devs",[50,180],[0.8,9],"sect",data_devs);
+			pieChart("#cont-devs",{"max-width":"500px","height":500+"px","min-width":500+"px"},"#svg_devs",[500,500],"pie_devs",[50,180],[0.8,9],"sect",data_devs,
+{"mouseover":function(d,i){
+	d3.selectAll(".sect").transition().duration(250).style("opacity","0.3");
+	d3.select("#sect-"+i).transition().style("opacity","1");
+	tooltip.html("Dispositivo:"  + d.key + "<br>" + "Usuarios: " + d.value)
+		.style("font-size","14px")
+		.style("height","auto")
+		.style("padding","")
+		.style("width","auto")
+		.style("left", (d3.event.pageX < parseInt(tooltip.style("width").replace("px",""))/2 ? "10px" : (d3.event.pageX + (parseInt(tooltip.style("width").replace("px",""))) >= $(window).width() ? (($(window).width() - ( d3.event.pageX + parseInt(tooltip.style("width").replace("px","")))) + "px")  : (d3.event.pageX - (parseInt(tooltip.style("width").replace("px",""))/2)) ) + "px" ) )
+		.style("top", (d3.event.pageY - (25 + 1.2*parseInt(tooltip.style("height").replace("px","")))) + "px").transition()
+	.style("opacity","0.8");
+	},
+	"mouseleave":function(d,i){
+		d3.selectAll(".sect").transition().style("opacity","");
+		tooltip.html("")
+				.style("padding","0");
+	});
   })
   .then(null, function(err) {
       // Log any errors.
@@ -330,7 +347,7 @@ function queryCoreReportingApi(profileId) {
 		.style("font-size","14px")
 		.style("height","auto")
 		.style("padding","")
-		.style("width","auto").transition()
+		.style("width","auto")
 		.style("left", (d3.event.pageX < parseInt(tooltip.style("width").replace("px",""))/2 ? "10px" : (d3.event.pageX + (parseInt(tooltip.style("width").replace("px",""))) >= $(window).width() ? (($(window).width() - ( d3.event.pageX + parseInt(tooltip.style("width").replace("px","")))) + "px")  : (d3.event.pageX - (parseInt(tooltip.style("width").replace("px",""))/2)) ) + "px" ) )
 		.style("top", (d3.event.pageY - (25 + 1.2*parseInt(tooltip.style("height").replace("px","")))) + "px").transition()
 	.style("opacity","0.8");
@@ -432,7 +449,7 @@ function queryCoreReportingApi(profileId) {
 		traceFigures("#svg_usrs",data_sessions,"ses-point","circle",{"class":"ses-point","transform":"translate("+"50"+","+"0"+")","id":function(d,i){return "ses-point-"+i},"fill":"rgba(0,0,0,0.2)","stroke":"black","r":"5","cx":function(d){return x_usr(d.key)},"cy":function(d){return y_usr(d.value)}},x_usr,y_usr,null,
 {"mouseover":function(d,i){
 	d3.selectAll(".ses-point").transition().duration(250).style("opacity","0.3");
-	d3.select("ses-point-"+i).transition().style("opacity","1");
+	d3.select("#ses-point-"+i).transition().style("opacity","1");
 	tooltip.style("opacity","0.8")
 		.style("font-size","14px")
 		.transition().style("height","auto")

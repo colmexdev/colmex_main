@@ -43,6 +43,13 @@ function readURL(input,display,file) {
 
 /* Funciones de graficación */
 
+function modifyTooltip(sheet,left){
+	if(sheet.rules.length == 1){
+		sheet.removeRule(0);
+	}
+	sheet.insertRule('#tooltip-backend::after { left: ' + left + 'px }',0);
+}
+
 function escala(tipo,dom,rango,pad){
 	var scale = (tipo == 't' ? d3.scaleTime() : (tipo == 'l' ? d3.scaleLinear() : d3.scaleBand()));
 	if(tipo == "b") scale = scale.paddingInner(pad[0]).paddingOuter(pad[1]);
@@ -128,7 +135,7 @@ function linea(sc_x,sc_y,inter,typeX,typeY,area,y0){
 	return (area ? fig.y0(y0) : fig);
 }
 
-function pieChart(div_cont,cont_props,canvas,corners,c_id,radii,pads,sect_class,d_set){
+function pieChart(div_cont,cont_props,canvas,corners,c_id,radii,pads,sect_class,d_set,events){
 	var cont = containerSelect(div_cont,cont_props);
 	var svg_p = cont.select(canvas)
  		.attr("preserveAspectRatio", "xMinYMin meet")
@@ -157,4 +164,8 @@ function pieChart(div_cont,cont_props,canvas,corners,c_id,radii,pads,sect_class,
 			.attr("class",sect_class)
 			.append("path")
 			.attr("d",arc);
+
+	for(var k in events){
+		p_c = pc.on(k,events[k]);
+	}
 }
