@@ -270,22 +270,22 @@ function queryCoreReportingApi(profileId) {
 		for(var a in results){
 			data_devs.push({key: results[a][0],value: +results[a][1]});
 		}
-			pieChart("#cont-devs",{"max-width":"500px","height":500+"px","min-width":500+"px"},"#svg_devs",[500,500],"pie_devs",[50,180],[0.8,9],"sect",data_devs,
+			pieChart("#cont-devs",{"max-width":"500px","height":500+"px","min-width":500+"px"},"#svg_devs",[500,500],"pie_devs",[50,180],[0.8,9],"sect-dev",data_devs,
 {"mouseover":function(d,i){
 	console.log(i);
-	d3.selectAll(".sect").transition().duration(250).style("opacity","0.3");
-	d3.select("#sect-"+i).transition().style("opacity","1");
+	d3.selectAll(".sect-dev").transition().duration(250).style("opacity","0.3");
+	d3.select("#sect-dev-"+i)).transition().style("opacity","1");
 	tooltip.html("Dispositivo:"  + data_devs[i].key + "<br>" + "Usuarios: " + d.value)
 		.style("font-size","14px")
 		.style("height","auto")
 		.style("padding","")
 		.style("width","auto")
 		.style("left", (d3.event.pageX < parseInt(tooltip.style("width").replace("px",""))/2 ? "10px" : (d3.event.pageX + (parseInt(tooltip.style("width").replace("px",""))) >= $(window).width() ? (($(window).width() - ( d3.event.pageX + parseInt(tooltip.style("width").replace("px","")))) + "px")  : (d3.event.pageX - (parseInt(tooltip.style("width").replace("px",""))/2)) ) + "px" ) )
-		.style("top", (d3.event.pageY - (25 + 1.2*parseInt(tooltip.style("height").replace("px","")))) + "px").transition()
+		.style("top", (d3.event.pageY - (25 + 1*parseInt(tooltip.style("height").replace("px","")))) + "px").transition()
 	.style("opacity","0.8");
 	},
 	"mouseleave":function(d,i){
-		d3.selectAll(".sect").transition().style("opacity","");
+		d3.selectAll(".sect-dev").transition().style("opacity","");
 		tooltip.html("")
 				.style("padding","0");
 	}});
@@ -350,7 +350,7 @@ function queryCoreReportingApi(profileId) {
 		.style("padding","")
 		.style("width","auto")
 		.style("left", (d3.event.pageX < parseInt(tooltip.style("width").replace("px",""))/2 ? "10px" : (d3.event.pageX + (parseInt(tooltip.style("width").replace("px",""))) >= $(window).width() ? (($(window).width() - ( d3.event.pageX + parseInt(tooltip.style("width").replace("px","")))) + "px")  : (d3.event.pageX - (parseInt(tooltip.style("width").replace("px",""))/2)) ) + "px" ) )
-		.style("top", (d3.event.pageY - (25 + 1.2*parseInt(tooltip.style("height").replace("px","")))) + "px").transition()
+		.style("top", (d3.event.pageY - (25 + 1*parseInt(tooltip.style("height").replace("px","")))) + "px").transition()
 	.style("opacity","0.8");
 	},
 	"mouseleave":function(d,i){
@@ -433,7 +433,7 @@ function queryCoreReportingApi(profileId) {
 		.style("width","auto");
 	tooltip.html("Fecha:"  + d.key + "<br>" + "Usuarios: " + d.value)
 		.style("left", ((d3.event.pageX < (parseInt(tooltip.style("width").replace("px",""))/2)) ? 10 : (d3.event.pageX - (parseInt(tooltip.style("width").replace("px",""))/2)) ) + "px")
-		.style("top", (d3.event.pageY - (1.3*parseInt(tooltip.style("height").replace("px","")))) + "px");
+		.style("top", (d3.event.pageY - (1*parseInt(tooltip.style("height").replace("px","")))) + "px");
 
 	},
 	"mouseleave":function(d,i){
@@ -457,7 +457,7 @@ function queryCoreReportingApi(profileId) {
 		.style("width","auto");
 	tooltip.html("Fecha:"  + d.key + "<br>" + "Sesiones: " + d.value)
 		.style("left", ((d3.event.pageX < (parseInt(tooltip.style("width").replace("px",""))/2)) ? 10 : (d3.event.pageX - (parseInt(tooltip.style("width").replace("px",""))/2)) ) + "px")
-		.style("top", (d3.event.pageY - (1.3*parseInt(tooltip.style("height").replace("px","")))) + "px");
+		.style("top", (d3.event.pageY - (1*parseInt(tooltip.style("height").replace("px","")))) + "px");
 
 	},
 	"mouseleave":function(d,i){
@@ -576,7 +576,7 @@ function queryCoreReportingApi(profileId) {
 		.style("padding","")
 		.style("width","auto")
 		.style("left", (d3.event.pageX < parseInt(tooltip.style("width").replace("px",""))/2 ? "10px" : (d3.event.pageX + (parseInt(tooltip.style("width").replace("px",""))) >= $(window).width() ? (($(window).width() - ( d3.event.pageX + parseInt(tooltip.style("width").replace("px","")))) + "px")  : (d3.event.pageX - (parseInt(tooltip.style("width").replace("px",""))/2)) ) + "px" ) )
-		.style("top", (d3.event.pageY - (25 + 1.2*parseInt(tooltip.style("height").replace("px","")))) + "px").transition()
+		.style("top", (d3.event.pageY - (25 + 1*parseInt(tooltip.style("height").replace("px","")))) + "px").transition()
 	.style("opacity","0.8");
 	},
 	"mouseleave":function(d,i){
@@ -647,18 +647,19 @@ function queryCoreReportingApi(profileId) {
 						.duration(200).style("opacity","0.3");
 					d3.select("#pais-"+i).transition()
 						.duration(200).style("opacity","1");
-          //tooltip.transition()
-           //    .duration(200)
-           //    .style("opacity", .9);
-          //tooltip.html("País: " + (paises[i]["pais"] != "" ? paises[i]["pais"] : i))
-          //     .style("left", (d3.event.pageX + 5) + "px")
-           //    .style("top", (d3.event.pageY - 28) + "px");
+					tooltip.html("País: "  + paises[i].pais + "<br>" + "Usuarios: " + paises[i].value)
+						.style("font-size","14px")
+						.style("height","auto")
+						.style("padding","")
+						.style("width","auto")
+						.style("left", (d3.event.pageX < parseInt(tooltip.style("width").replace("px",""))/2 ? "10px" : (d3.event.pageX + (parseInt(tooltip.style("width").replace("px",""))) >= $(window).width() ? (($(window).width() - ( d3.event.pageX + parseInt(tooltip.style("width").replace("px","")))) + "px")  : (d3.event.pageX - (parseInt(tooltip.style("width").replace("px",""))/2)) ) + "px" ) )
+						.style("top", (d3.event.pageY - (25 + 1*parseInt(tooltip.style("height").replace("px","")))) + "px").transition()
+					.style("opacity","0.8");
 				})
 				.on("mouseleave",function(d,i){
 					d3.selectAll(".country").transition()
 						.duration(200).style("opacity","");
-				//	tooltip.transition()
-				//		.duration(200).style("opacity","0");
+					tooltip.html("").style("padding","0");
 				});
 
 			cont_country.insert("path", ".graticule")

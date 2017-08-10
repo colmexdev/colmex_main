@@ -270,10 +270,11 @@ function queryCoreReportingApi(profileId) {
 		for(var a in results){
 			data_devs.push({key: results[a][0],value: +results[a][1]});
 		}
-			pieChart("#cont-devs",{"max-width":"500px","height":500+"px","min-width":500+"px"},"#svg_devs",[500,500],"pie_devs",[50,180],[0.8,9],"sect",data_devs,
+			pieChart("#cont-devs",{"max-width":"500px","height":500+"px","min-width":500+"px"},"#svg_devs",[500,500],"pie_devs",[50,180],[0.8,9],"sect-dev",data_devs,
 {"mouseover":function(d,i){
-	d3.selectAll(".sect").transition().duration(250).style("opacity","0.3");
-	d3.select("#sect-"+i).transition().style("opacity","1");
+	console.log(i);
+	d3.selectAll(".sect-dev").transition().duration(250).style("opacity","0.3");
+	d3.select("#sect-dev-"+i)).transition().style("opacity","1");
 	tooltip.html("Dispositivo:"  + data_devs[i].key + "<br>" + "Usuarios: " + d.value)
 		.style("font-size","14px")
 		.style("height","auto")
@@ -284,7 +285,7 @@ function queryCoreReportingApi(profileId) {
 	.style("opacity","0.8");
 	},
 	"mouseleave":function(d,i){
-		d3.selectAll(".sect").transition().style("opacity","");
+		d3.selectAll(".sect-dev").transition().style("opacity","");
 		tooltip.html("")
 				.style("padding","0");
 	}});

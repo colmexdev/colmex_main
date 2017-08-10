@@ -162,7 +162,7 @@ function pieChart(div_cont,cont_props,canvas,corners,c_id,radii,pads,sect_class,
 			.data(pie(d_set))
 			.enter().append("g")
 			.attr("class",sect_class)
-			.attr("id",function(d,i){ return sect_class+i})
+			.attr("id",function(d,i){ return sect_class+"-"+(i+1)})
 			.append("path")
 			.attr("d",arc);
 
