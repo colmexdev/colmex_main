@@ -274,7 +274,7 @@ function queryCoreReportingApi(profileId) {
 {"mouseover":function(d,i){
 	console.log(i);
 	d3.selectAll(".sect-dev").transition().duration(250).style("opacity","0.3");
-	d3.select("#sect-dev-"+i)).transition().style("opacity","1");
+	d3.select("#sect-dev-"+i).transition().style("opacity","1");
 	tooltip.html("Dispositivo:"  + data_devs[i].key + "<br>" + "Usuarios: " + d.value)
 		.style("font-size","14px")
 		.style("height","auto")
