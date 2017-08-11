@@ -29,7 +29,7 @@ en:
     b3:
       texto: "Academic programs"
       opciones:
-        op1: "Undergratuate programs"
+        op1: "Undergraduate programs"
         op2: "Masters programs"
         op3: "Doctoral programs"
         op4: "Admissions"
@@ -120,11 +120,11 @@ en:
       fecha: "Date of appointment"
     principios:
       intro: "Introduction"
-      p1: "El Colegio de México expresses its commitment to ensure respect for the integrity of all members of its community, as well as the products of its work and the public goods that it owns and safeguards. Due to the above, El Colegio de México issues the following pronouncements:"
+      p1: "El Colegio de México expresses its commitment to ensure respect for the integrity of all members of its community, as well as the products of its work and the public goods that it owns and safeguards. Due to the above, El Colegio de México has agreed to the following principles:"
       pron: "Principles:"
-      p2: "El Colegio de México is committed to academic integrity in all its aspects, and requires the community as a whole to respect rigorous principles of ethics, without exception. In particular, El Colegio de México strongly condemns any form of scientific or academic fraud and plagiarism, which is the attempt to present the work of others as their own, in any context. The above implies that the community and members of El Colegio de México, without exception, are  obliged to attribute correctly, explicitly and punctually the authorship of texts and ideas in any written communication; The community also undertakes to always explicitly recognize the sources of information, opinions, interviews and ideas on which works, articles, books or any research products are based. The academic staff, in particular, also undertakes to explicitly and clearly recognize the contribution of assistants, assistants, students, as well as any other support received in the research."
-      p3: "3.	El Colegio de México is committed to the care of its facilities, moveable and fixed property, equipment and documentary collections of books journals and archival documents and artistic works in its possession. Members of the community, without exception, are obliged to preserve, respect and maintain such property."
-      p4: ""
+      p2: "El Colegio de México is committed to the preservation of a sound and healthy environment of work, research, teaching and study. Sexual harassment is intolerable, discriminatory and illegal, as it generates inacceptable difficulties for another person by making direct or indirect suggestions, invitations or propositions related to sexual activities, considered offensive. It is a denial of the rights and dignity of the other, as it contradicts the policies of equality and equal treatment and opportunities of the members of the academic community. This institution considers that this behavior is in violation of the norms that govern the community. Consequently, El Colegio de México feels aggrieved by such practices and strictly prohibits sexual harassment. The institution commits itself to adopt the actions that are necessary to prevent and correct the behaviors that violate this institutional policy."
+      p3: "El Colegio de México is committed to academic integrity in all its aspects, and requires the community as a whole to respect rigorous principles of ethics, without exception. In particular, El Colegio de México strongly condemns any form of scientific or academic fraud and plagiarism, which is the attempt to present the work of others as their own, in any context. The above implies that the community and members of El Colegio de México, without exception, are obliged to attribute correctly, explicitly and punctually the authorship of texts and ideas in any written communication; The community also undertakes to always explicitly recognize the sources of information, opinions, interviews and ideas on which works, articles, books or any research products are based. The academic staff, in particular, also undertakes to explicitly and clearly recognize the contribution of assistants, assistants, students, as well as any other support received in the research."
+      p4: "El Colegio de México is committed to the care of its facilities, moveable and fixed property, equipment and documentary collections of books journals and archival documents and artistic works in its possession. Members of the community, without exception, are obliged to preserve, respect and maintain such property."
   programas:
     licenciaturas: "Bachelor of Arts Programs"
     maestrias: "Master's Programs"
