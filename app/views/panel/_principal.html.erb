@@ -510,7 +510,7 @@ function queryCoreReportingApi(profileId) {
 		}
 
 		for(var k in data_meds){
-			traceFigures("#svg_meds",data_meds[k],"med-bar","rect",{"class":function(d,i){return "med-bar med-bar-"+i},"transform":"translate("+"50"+","+"0"+")","id":function(d,i){return "med-bar-" + k + "-" + i},"x":function(d,i){return x_usr_b(d.key)},"y":function(d,i){return y_usr(acums_fecha[d.key.toString()] + d.value)},"width":x_usr_b.bandwidth(),"height": function(d,i){var ac = acums_fecha[d.key.toString()]; acums_fecha[d.key.toString()] += d.value; return y_usr(0)-y_usr(d.value)},"fill":function(d){return "rgba(240,128,128,"+ (1.15 - cats.indexOf(k)/cats.length) +")"},"stroke-width":"1","stroke":"rgba(50,50,50,0.4)"}, x_usr_b ,y_usr, null,{"mouseover":function(d,i){
+			traceFigures("#svg_meds",data_meds[k],"med-bar","rect",{"class":function(d,i){return "med-bar med-bar-"+i},"transform":"translate("+"50"+","+"0"+")","id":function(d,i){return "med-bar-" + k.replace(/[()]/g,"") + "-" + i},"x":function(d,i){return x_usr_b(d.key)},"y":function(d,i){return y_usr(acums_fecha[d.key.toString()] + d.value)},"width":x_usr_b.bandwidth(),"height": function(d,i){var ac = acums_fecha[d.key.toString()]; acums_fecha[d.key.toString()] += d.value; return y_usr(0)-y_usr(d.value)},"fill":function(d){return "rgba(240,128,128,"+ (1.15 - cats.indexOf(k)/cats.length) +")"},"stroke-width":"1","stroke":"rgba(50,50,50,0.4)"}, x_usr_b ,y_usr, null,{"mouseover":function(d,i){
 	d3.selectAll(".med-bar").transition().duration(250).style("opacity","0.3");
 	d3.selectAll(".med-bar-"+i).transition().style("opacity","1");
 	tooltip.style("opacity","0.8")
@@ -520,7 +520,7 @@ function queryCoreReportingApi(profileId) {
 	tooltip.html(function(){
 		var texto = "Fecha:"  + d.key + "<br>" + "Total: " + d.value + "<br>";
 		for(var h in cats){
-			texto = texto + cats[h] + ": " + y_usr.invert($("#med-bar-"+cats[h]+"-"+i).height()) + "<br>";
+			texto = texto + cats[h] + ": " + y_usr.invert($("#med-bar-"+cats[h].replace(/[()]/,"")+"-"+i).height()) + "<br>";
 		}
 		return texto;
 	})
