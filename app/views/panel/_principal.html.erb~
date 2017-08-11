@@ -529,7 +529,7 @@ function queryCoreReportingApi(profileId) {
 		tooltip.html("").style("opacity","0").transition()
 			.delay(300).style("height","0px")
 				.style("width","0px");
-	}*/});
+	}}*/);
 		}
 
 		})
