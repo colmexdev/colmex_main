@@ -531,9 +531,7 @@ function queryCoreReportingApi(profileId) {
 	"mouseleave":function(d,i){
 		d3.selectAll(".med-bar").transition().duration(250).style("opacity","");
 		//d3.select("#desc-bar-"+i).style("opacity","1");
-		tooltip.html("").style("opacity","0").transition()
-			.delay(300).style("height","0px")
-				.style("width","0px");
+		tooltip.html("").style("opacity","0")
 	}});
 		}
 

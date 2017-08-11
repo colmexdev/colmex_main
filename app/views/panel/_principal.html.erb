@@ -520,7 +520,7 @@ function queryCoreReportingApi(profileId) {
 	tooltip.html(function(){
 		var texto = "Fecha:"  + d.key + "<br>" + "Total: " + d.value + "<br>";
 		for(var h in cats){
-			texto = texto + cats[h] + ": " + y_usr.invert($("#med-bar-"+h+"-"+i).height()) + "<br>";
+			texto = texto + cats[h] + ": " + y_usr.invert($("#med-bar-"+cats[h]+"-"+i).height()) + "<br>";
 		}
 		return texto;
 	})
