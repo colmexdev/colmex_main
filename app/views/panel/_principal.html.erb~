@@ -518,9 +518,9 @@ function queryCoreReportingApi(profileId) {
 		.transition().style("height","auto")
 		.style("width","auto");
 	tooltip.html(function(){
-		var texto = "Fecha:"  + d.key + "<br>" + "Total: " + d.value + "<br>";
+		var texto = "Fecha: "  + d.key + "<br>" + "Total: " + d.value + "<br>";
 		for(var h in cats){
-			texto = texto + cats[h] + ": " + y_usr.invert(parseInt($("#med-bar-"+cats[h].replace(/[()]/g,"")+"-"+i).attr("height"))) + "<br>";
+			texto = texto + cats[h] + ": " + (y_usr.invert(y_usr(0) - parseInt($("#med-bar-"+cats[h].replace(/[()]/g,"")+"-"+i).attr("height")))) + "<br>";
 		}
 		return texto;
 	})
