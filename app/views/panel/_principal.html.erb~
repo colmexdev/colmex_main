@@ -518,11 +518,7 @@ function queryCoreReportingApi(profileId) {
 		.transition().style("height","auto")
 		.style("width","auto");
 	tooltip.html(function(){
-		var texto = "Fecha: "  + d.key + "<br>" + "Total: " + d.value + "<br>";
-		for(var h in cats){
-			texto = texto + cats[h] + ": " + (y_usr.invert(y_usr(0) - parseInt($("#med-bar-"+cats[h].replace(/[()]/g,"")+"-"+i).attr("height")))) + "<br>";
-		}
-		return texto;
+"hola"
 	})
 		.style("left", ((d3.event.pageX < (parseInt(tooltip.style("width").replace("px",""))/2)) ? 10 : (d3.event.pageX - (parseInt(tooltip.style("width").replace("px",""))/2)) ) + "px")
 		.style("top", (d3.event.pageY - (25 + 1*parseInt(tooltip.style("height").replace("px","")))) + "px");
