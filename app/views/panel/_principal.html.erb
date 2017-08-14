@@ -429,7 +429,8 @@ function queryCoreReportingApi(profileId) {
 	d3.select("#usr-point-"+i).transition().style("opacity","1");
 	tooltip.style("opacity","0.8")
 		.style("font-size","14px")
-		.transition().style("height","auto")
+		.style("height","auto")
+		.style("padding","")
 		.style("width","auto");
 	tooltip.html("Fecha:"  + d.key + "<br>" + "Usuarios: " + d.value)
 		.style("left", ((d3.event.pageX < (parseInt(tooltip.style("width").replace("px",""))/2)) ? 10 : (d3.event.pageX - (parseInt(tooltip.style("width").replace("px",""))/2)) ) + "px")
@@ -438,10 +439,7 @@ function queryCoreReportingApi(profileId) {
 	},
 	"mouseleave":function(d,i){
 		d3.selectAll(".usr-point").transition().duration(250).style("opacity","");
-		//d3.select("#desc-bar-"+i).style("opacity","1");
-		tooltip.html("").style("opacity","0").transition()
-			.delay(300).style("height","0px")
-				.style("width","0px");
+		tooltip.html("").style("padding","0");
 	}
 });
 
@@ -453,7 +451,8 @@ function queryCoreReportingApi(profileId) {
 	d3.select("#ses-point-"+i).transition().style("opacity","1");
 	tooltip.style("opacity","0.8")
 		.style("font-size","14px")
-		.transition().style("height","auto")
+		.style("height","auto")
+		.style("padding","")
 		.style("width","auto");
 	tooltip.html("Fecha:"  + d.key + "<br>" + "Sesiones: " + d.value)
 		.style("left", ((d3.event.pageX < (parseInt(tooltip.style("width").replace("px",""))/2)) ? 10 : (d3.event.pageX - (parseInt(tooltip.style("width").replace("px",""))/2)) ) + "px")
@@ -463,9 +462,7 @@ function queryCoreReportingApi(profileId) {
 	"mouseleave":function(d,i){
 		d3.selectAll(".ses-point").transition().duration(250).style("opacity","");
 		//d3.select("#desc-bar-"+i).style("opacity","1");
-		tooltip.html("").style("opacity","0").transition()
-			.delay(300).style("height","0px")
-				.style("width","0px");
+		tooltip.html("").style("padding","0");
 		}
 	});
 
@@ -515,7 +512,8 @@ function queryCoreReportingApi(profileId) {
 	d3.selectAll(".med-bar-"+i).transition().style("opacity","1");
 	tooltip.style("opacity","0.8")
 		.style("font-size","14px")
-		.transition().style("height","auto")
+		.style("height","auto")
+		.style("padding","")
 		.style("width","auto");
 	tooltip.html(function(){
 		var texto = "Fecha:"  + d.key + "<br>" + "Total: " + data_usrs[i].value + "<br>";
@@ -530,9 +528,7 @@ function queryCoreReportingApi(profileId) {
 	},
 	"mouseleave":function(d,i){
 		d3.selectAll(".med-bar").transition().duration(250).style("opacity","");
-		tooltip.html("").style("opacity","0").transition()
-			.delay(300).style("height","0px")
-				.style("width","0px");
+		tooltip.html("").style("padding","0");
 	}});
 		}
 
@@ -839,7 +835,7 @@ function queryCoreReportingApi(profileId) {
 		traceFigures("#svg_sp",data_pu,"sp-point","circle",{"class":"sp-point","transform":"translate("+"40"+","+"40"+")","id":function(d,i){return "sp-point-"+i},"r":"4","cx":function(d){return x_sp(d.key)},"cy":function(d){return y_sp(d.value)},"fill":"rgba(255,165,0,0.6)","stroke-width":"1","stroke":"rgba(0,0,0,0.8)"},x_sp,y_sp,null,
 {"mouseover":function(d,i){
 	d3.selectAll(".sp-point").transition().duration(250).style("opacity","0.3");
-	d3.select("#sp-point"+i).transition().style("opacity","1");
+	d3.select("#sp-point-"+i).transition().style("opacity","1");
 	tooltip.html("Usuarios: "  + d.key + "<br>" + "Visitas: " + d.value)
 		.style("font-size","14px")
 		.style("height","auto")

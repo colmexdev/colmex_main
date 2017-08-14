@@ -741,9 +741,49 @@ function queryCoreReportingApi(profileId) {
 		d3.selectAll(".axis-up-x .tick text").attr("y","-10");
 		d3.selectAll(".axis-up-y .tick text").remove();
 
-		traceFigures("#svg_ups",data_pv,"pv-bar","rect",{"class":"pv-bar","transform":"translate("+"50"+","+"0"+")","id":function(d,i){return "pv-bar-" + i},"x":x_uv(0),"y":function(d){return y_uv(d.key)},"width":function(d){return (x_uv(d.value) - x_uv(0) < 3.5 ? 3.5 : x_uv(d.value) - x_uv(0) )},"height":y_uv.bandwidth(),"fill":"rgba(100,149,237,0.8)"}, x_uv ,y_uv);
+		traceFigures("#svg_ups",data_pv,"pv-bar","rect",{"class":"pv-bar","transform":"translate("+"50"+","+"0"+")","id":function(d,i){return "pv-bar-" + i},"x":x_uv(0),"y":function(d){return y_uv(d.key)},"width":function(d){return (x_uv(d.value) - x_uv(0) < 3.5 ? 3.5 : x_uv(d.value) - x_uv(0) )},"height":y_uv.bandwidth(),"fill":"rgba(100,149,237,0.8)"}, x_uv ,y_uv, null,
+{"mouseover":function(d,i){
+	d3.selectAll(".pv-bar").transition().duration(250).style("opacity","0.3");
+	d3.select("#pv-bar-"+i).transition().style("opacity","1");
+	d3.selectAll(".uv-bar").transition().duration(250).style("opacity","0.3");
+	d3.select("#uv-bar-"+i).transition().style("opacity","1");
+	tooltip.html("Liga: "  + d.key + "<br>" + "Visitas: " + data_uv[i].value + "<br>Usuarios: " + d.value)
+		.style("font-size","14px")
+		.style("height","auto")
+		.style("padding","")
+		.style("width","auto")
+		.style("left", (d3.event.pageX < parseInt(tooltip.style("width").replace("px",""))/2 ? "10px" : (d3.event.pageX + (parseInt(tooltip.style("width").replace("px",""))) >= $(window).width() ? (($(window).width() - ( d3.event.pageX + parseInt(tooltip.style("width").replace("px","")))) + "px")  : (d3.event.pageX - (parseInt(tooltip.style("width").replace("px",""))/2)) ) + "px" ) )
+		.style("top", (d3.event.pageY - (25 + 1*parseInt(tooltip.style("height").replace("px","")))) + "px").transition()
+	.style("opacity","0.8");
+	},
+	"mouseleave":function(d,i){
+		d3.selectAll(".pv-bar").transition().style("opacity","");
+		d3.selectAll(".uv-bar").transition().style("opacity","");
+		tooltip.html("")
+				.style("padding","0");
+	}});
 
-		traceFigures("#svg_ups",data_uv,"uv-bar","rect",{"class":"uv-bar","transform":"translate("+"50"+","+"0"+")","id":function(d,i){return "uv-bar-" + i},"x":function(d){return (x_uv(-1*d.value) > x_uv(0)-3.5 ? x_uv(0)-3.5 : x_uv(-1*d.value))},"y":function(d){return y_uv(d.key)},"width":function(d){return (x_uv(0)-x_uv(-1*d.value) < 3.5 ? 3.5 : x_uv(0)-x_uv(-1*d.value) )},"height":y_uv.bandwidth(),"fill":"rgba(210,180,140,0.8"}, x_uv ,y_uv);
+		traceFigures("#svg_ups",data_uv,"uv-bar","rect",{"class":"uv-bar","transform":"translate("+"50"+","+"0"+")","id":function(d,i){return "uv-bar-" + i},"x":function(d){return (x_uv(-1*d.value) > x_uv(0)-3.5 ? x_uv(0)-3.5 : x_uv(-1*d.value))},"y":function(d){return y_uv(d.key)},"width":function(d){return (x_uv(0)-x_uv(-1*d.value) < 3.5 ? 3.5 : x_uv(0)-x_uv(-1*d.value) )},"height":y_uv.bandwidth(),"fill":"rgba(210,180,140,0.8"}, x_uv ,y_uv, null,
+{"mouseover":function(d,i){
+	d3.selectAll(".pv-bar").transition().duration(250).style("opacity","0.3");
+	d3.select("#pv-bar-"+i).transition().style("opacity","1");
+	d3.selectAll(".uv-bar").transition().duration(250).style("opacity","0.3");
+	d3.select("#uv-bar-"+i).transition().style("opacity","1");
+	tooltip.html("Liga: "  + d.key + "<br>" + "Visitas: " + d.value + "<br>Usuarios: " + data_pv[i].value)
+		.style("font-size","14px")
+		.style("height","auto")
+		.style("padding","")
+		.style("width","auto")
+		.style("left", (d3.event.pageX < parseInt(tooltip.style("width").replace("px",""))/2 ? "10px" : (d3.event.pageX + (parseInt(tooltip.style("width").replace("px",""))) >= $(window).width() ? (($(window).width() - ( d3.event.pageX + parseInt(tooltip.style("width").replace("px","")))) + "px")  : (d3.event.pageX - (parseInt(tooltip.style("width").replace("px",""))/2)) ) + "px" ) )
+		.style("top", (d3.event.pageY - (25 + 1*parseInt(tooltip.style("height").replace("px","")))) + "px").transition()
+	.style("opacity","0.8");
+	},
+	"mouseleave":function(d,i){
+		d3.selectAll(".pv-bar").transition().style("opacity","");
+		d3.selectAll(".uv-bar").transition().style("opacity","");
+		tooltip.html("")
+				.style("padding","0");
+	}});
 		
     //var formattedJson = JSON.stringify(response.result, null, 2);
     //document.getElementById('query-output').innerHTML += "<br><br>" + formattedJson;
@@ -796,7 +836,24 @@ function queryCoreReportingApi(profileId) {
 			.attr("transform","translate("+"40"+","+"0"+")")
 			.call(yAxis);
 
-		traceFigures("#svg_sp",data_pu,"sp-point","circle",{"class":"sp-point","transform":"translate("+"40"+","+"40"+")","id":function(d,i){return "sp-point-"+i},"r":"4","cx":function(d){return x_sp(d.key)},"cy":function(d){return y_sp(d.value)},"fill":"rgba(255,165,0,0.6)","stroke-width":"1","stroke":"rgba(0,0,0,0.8)"},x_sp,y_sp);
+		traceFigures("#svg_sp",data_pu,"sp-point","circle",{"class":"sp-point","transform":"translate("+"40"+","+"40"+")","id":function(d,i){return "sp-point-"+i},"r":"4","cx":function(d){return x_sp(d.key)},"cy":function(d){return y_sp(d.value)},"fill":"rgba(255,165,0,0.6)","stroke-width":"1","stroke":"rgba(0,0,0,0.8)"},x_sp,y_sp,null,
+{"mouseover":function(d,i){
+	d3.selectAll(".sp-point").transition().duration(250).style("opacity","0.3");
+	d3.select("#sp-point-"+i).transition().style("opacity","1");
+	tooltip.html("Usuarios: "  + d.key + "<br>" + "Visitas: " + d.value)
+		.style("font-size","14px")
+		.style("height","auto")
+		.style("padding","")
+		.style("width","auto")
+		.style("left", (d3.event.pageX < parseInt(tooltip.style("width").replace("px",""))/2 ? "10px" : (d3.event.pageX + (parseInt(tooltip.style("width").replace("px",""))) >= $(window).width() ? (($(window).width() - ( d3.event.pageX + parseInt(tooltip.style("width").replace("px","")))) + "px")  : (d3.event.pageX - (parseInt(tooltip.style("width").replace("px",""))/2)) ) + "px" ) )
+		.style("top", (d3.event.pageY - (25 + 1*parseInt(tooltip.style("height").replace("px","")))) + "px").transition()
+	.style("opacity","0.8");
+	},
+	"mouseleave":function(d,i){
+		d3.selectAll(".sp-point").transition().style("opacity","");
+		tooltip.html("")
+				.style("padding","0");
+	}});
 
 		var reg_lin = linea(x_sp,y_sp,d3.curveLinear,1,1);
 		var line_points = [{key: x_sp.domain()[0], value: (b+(m*x_sp.domain()[0]))},{key: x_sp.domain()[1], value: (b+(m*x_sp.domain()[1]))}];
