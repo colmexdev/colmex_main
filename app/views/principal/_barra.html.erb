@@ -242,7 +242,7 @@
 					</ul>
 				</li>
 				<li class="uk-parent">
-					<a href="#"><%= t('botones.b2.texto') %></a>
+					<a href="<%= params[:locale] == "en" ? centros_de_estudio_path(locale: "en") : "#" %>"><%= t('botones.b2.texto') %></a>
 					<ul class="uk-nav-sub">
 						<li><a href="http://ceaa.colmex.mx/" target="_blank" class="sublink"><%= t('botones.b2.opciones.op1') %></a></li>
           	<li><a href="http://cedua.colmex.mx/" target="_blank" class="sublink"><%= t('botones.b2.opciones.op2') %></a></li>

@@ -70,7 +70,7 @@
 		    </li>
 
 				<li class="dropdown" id="dropdown2">
-		      <a class="dropdown-toggle" data-hover="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span><%= t('botones.b2.texto') %></span></a>
+		      <a href="<%= params[:locale] == "en" ? centros_de_estudio_path(locale: "en") : "" %>" class="dropdown-toggle" data-hover="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span><%= t('botones.b2.texto') %></span></a>
 		        <ul class="dropdown-menu">
 		          <li><a href="http://ceaa.colmex.mx/" target="_blank"><%= t('botones.b2.opciones.op1') %></a></li>
 		          <li><a href="http://cedua.colmex.mx/" target="_blank"><%= t('botones.b2.opciones.op2') %></a></li>
@@ -178,7 +178,7 @@
 		    </li>
 
 				<li class="dropdown" id="dropdown2">
-		      <a class="dropdown-toggle" data-hover="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span><%= t('botones.b2.texto') %></span></a>
+		      <a href="<%= params[:locale] == "en" ? centros_de_estudio_path(locale: "en") : "" %>" class="dropdown-toggle" data-hover="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span><%= t('botones.b2.texto') %></span></a>
 		        <ul class="dropdown-menu">
 		          <li><a href="http://ceaa.colmex.mx/" target="_blank"><%= t('botones.b2.opciones.op1') %></a></li>
 		          <li><a href="http://cedua.colmex.mx/" target="_blank"><%= t('botones.b2.opciones.op2') %></a></li>
