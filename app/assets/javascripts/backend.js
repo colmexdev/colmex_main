@@ -25,7 +25,7 @@ function hideLink(event,element,link,method){
 
 function readURL(input,display,file) {
   if (input.files && input.files[0]) {
-		console.log(input.files);
+		//console.log(input.files);
     var reader = new FileReader();
     
     reader.onload = function (e) {
@@ -39,6 +39,15 @@ function readURL(input,display,file) {
     
     reader.readAsDataURL(input.files[0]);
   }
+}
+
+function formatDate(fecha){
+	var day = fecha.getDate(), month = fecha.getMonth() - 1;
+	return padZero(day) + "/" + padZero(month)
+}
+
+function padZero(n){
+	return (n < 10 ? "0" + n : n.toString())
 }
 
 /* Funciones de graficación */
