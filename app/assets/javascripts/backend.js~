@@ -25,7 +25,7 @@ function hideLink(event,element,link,method){
 
 function readURL(input,display,file) {
   if (input.files && input.files[0]) {
-		console.log(input.files);
+		//console.log(input.files);
     var reader = new FileReader();
     
     reader.onload = function (e) {
@@ -33,12 +33,22 @@ function readURL(input,display,file) {
         	$(display).attr('src', e.target.result);
 				}
 				else{
-					$(display).attr('href', e.target.result);
+					$(display).attr('src', e.target.result);
 				}
     }
     
     reader.readAsDataURL(input.files[0]);
   }
+}
+
+function formatDate(fecha){
+	var months = ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre']
+	var day = fecha.getDate(), month = fecha.getMonth();
+	return months[month] + " " + padZero(day) /*padZero(month)*/
+}
+
+function padZero(n){
+	return (n < 10 ? "0" + n : n.toString())
 }
 
 /* Funciones de graficación */

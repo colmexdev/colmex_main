@@ -123,12 +123,12 @@
    			.attr("viewBox", "0 0 "+sizes["uc"]["w"]+" "+sizes["uc"]["h"]);
 
 			var gX = svg.append("g")
-				.attr("class", "axis axis-x")
+				.attr("class", "axis axis-x axis-bottom")
 				.attr("transform","translate("+margins["l"]+","+(sizes["uc"]["h"]-margins["b"])+")")
 				.call(xAxis);
 
 			var gY = svg.append("g")
-				.attr("class", "axis axis-y")
+				.attr("class", "axis axis-y axis-left")
 				.attr("transform","translate("+margins["l"]+","+(margins["t"])+")")
 				.call(yAxis);
 
@@ -275,7 +275,7 @@ function queryCoreReportingApi(profileId) {
 	console.log(i);
 	d3.selectAll(".sect-dev").transition().duration(250).style("opacity","0.3");
 	d3.select("#sect-dev-"+i).transition().style("opacity","1");
-	tooltip.html("Dispositivo:"  + data_devs[i].key + "<br>" + "Usuarios: " + d.value)
+	tooltip.html("Dispositivo: "  + data_devs[i].key + "<br>" + "Usuarios: " + d.value)
 		.style("font-size","14px")
 		.style("height","auto")
 		.style("padding","")
@@ -328,12 +328,12 @@ function queryCoreReportingApi(profileId) {
 		var yAxis = eje('r',y_desc,data_descs.length,2,-2,function(d){return d.substr(0,10)+"..."});
 
 		var gX = cont_descs.append("g")
-			.attr("class", "axis axis-desc-x")
+			.attr("class", "axis axis-desc-x axis-top")
 			.attr("transform","translate("+"50"+","+"50"+")")
 			.call(xAxis);
 
 		var gY = cont_descs.append("g")
-			.attr("class", "axis axis-desc-y")
+			.attr("class", "axis axis-desc-y axis-left")
 			.attr("transform","translate("+"100"+","+"0"+")")
 			.call(yAxis);
 
@@ -344,7 +344,7 @@ function queryCoreReportingApi(profileId) {
 		traceFigures("#svg_descs",data_descs,"desc-bar","rect",{"class":"desc-bar","transform":"translate("+"50"+","+"0"+")","id":function(d,i){return "desc-bar-" + i},"x":x_desc(0),"y":function(d){return y_desc(d.key)},"width":function(d){return x_desc(d.value)},"height":y_desc.bandwidth(),"fill":function(d){ return color(d.value/d3.max(data_descs,function(a){return a.value}))}}, x_desc ,y_desc,null,{"mouseover":function(d,i){
 	d3.selectAll(".desc-bar").transition().duration(250).style("opacity","0.3");
 	d3.select("#desc-bar-"+i).transition().style("opacity","1");
-	tooltip.html("Evento:"  + d.key + "<br>" + "Usuarios: " + d.value)
+	tooltip.html("Evento: "  + d.key + "<br>" + "Usuarios: " + d.value)
 		.style("font-size","14px")
 		.style("height","auto")
 		.style("padding","")
@@ -405,12 +405,12 @@ function queryCoreReportingApi(profileId) {
 		var yAxis = eje('r',y_usr,10,2,-2);
 
 		var gX = cont_usrs.append("g")
-			.attr("class", "axis axis-usr-x")
+			.attr("class", "axis axis-usr-x axis-bottom")
 			.attr("transform","translate("+"50"+","+"500"+")")
 			.call(xAxis);
 
 		var gY = cont_usrs.append("g")
-			.attr("class", "axis axis-usr-y")
+			.attr("class", "axis axis-usr-y axis-left")
 			.attr("transform","translate("+"100"+","+"0"+")")
 			.call(yAxis);
 
@@ -434,7 +434,7 @@ function queryCoreReportingApi(profileId) {
 		.style("height","auto")
 		.style("padding","")
 		.style("width","auto");
-	tooltip.html("Fecha:"  + d.key + "<br>Usuarios: " + d.value + "<br>Sesiones: " + data_sessions[i].value)
+	tooltip.html("Fecha: "  + formatDate(d.key) + "<br>Usuarios: " + d.value + "<br>Sesiones: " + data_sessions[i].value)
 		.style("left", ((d3.event.pageX < (parseInt(tooltip.style("width").replace("px",""))/2)) ? 10 : (d3.event.pageX - (parseInt(tooltip.style("width").replace("px",""))/2)) ) + "px")
 		.style("top", (d3.event.pageY - (25 + 1*parseInt(tooltip.style("height").replace("px","")))) + "px");
 
@@ -459,7 +459,7 @@ function queryCoreReportingApi(profileId) {
 		.style("height","auto")
 		.style("padding","")
 		.style("width","auto");
-	tooltip.html("Fecha:"  + d.key + "<br>Usuarios: " + data_usrs[i].value + "<br>Sesiones: " + d.value)
+	tooltip.html("Fecha: "  + formatDate(d.key) + "<br>Usuarios: " + data_usrs[i].value + "<br>Sesiones: " + d.value)
 		.style("left", ((d3.event.pageX < (parseInt(tooltip.style("width").replace("px",""))/2)) ? 10 : (d3.event.pageX - (parseInt(tooltip.style("width").replace("px",""))/2)) ) + "px")
 		.style("top", (d3.event.pageY - (25 + 1*parseInt(tooltip.style("height").replace("px","")))) + "px");
 
@@ -494,12 +494,12 @@ function queryCoreReportingApi(profileId) {
 		.attr("viewBox", "0 0 "+"1100"+" "+"600");
 
 		var gmX = cont_meds.append("g")
-			.attr("class", "axis axis-med-x")
+			.attr("class", "axis axis-med-x axis-bottom")
 			.attr("transform","translate("+"50"+","+"500"+")")
 			.call(xAxis2);
 
 		var gmY = cont_meds.append("g")
-			.attr("class", "axis axis-med-y")
+			.attr("class", "axis axis-med-y axis-left")
 			.attr("transform","translate("+"100"+","+"0"+")")
 			.call(yAxis);
 
@@ -521,7 +521,7 @@ function queryCoreReportingApi(profileId) {
 		.style("padding","")
 		.style("width","auto");
 	tooltip.html(function(){
-		var texto = "Fecha:"  + d.key + "<br>" + "Total: " + data_usrs[i].value + "<br>";
+		var texto = "Fecha: "  + formatDate(d.key) + "<br>" + "Total: " + data_usrs[i].value + "<br>";
 		for(var h in cats){
       try{
 			  texto += cats[h].replace(/[()]/g,"") + ": " + data_meds[cats[h]][i].value + "<br>";
@@ -583,12 +583,12 @@ function queryCoreReportingApi(profileId) {
 		var yAxis = eje('r',y_heat,hours.length,2,-2,function(d){return d + ":00"});
 
 		var gX = cont_heat.append("g")
-			.attr("class", "axis axis-heat-x")
+			.attr("class", "axis axis-heat-x axis-bottom")
 			.attr("transform","translate("+"50"+","+"600"+")")
 			.call(xAxis);
 
 		var gY = cont_heat.append("g")
-			.attr("class", "axis axis-heat-y")
+			.attr("class", "axis axis-heat-y axis-left")
 			.attr("transform","translate("+"100"+","+"0"+")")
 			.call(yAxis);
 
@@ -598,7 +598,7 @@ function queryCoreReportingApi(profileId) {
 {"mouseover":function(d,i){
 	d3.selectAll(".heat-bar").transition().duration(250).style("opacity","0.3");
 	d3.select("#heat-bar-"+i).transition().style("opacity","1");
-	tooltip.html("Fecha:"  + (d.key + " " + d.value) + "<br>" + "Usuarios: " + d.heat)
+	tooltip.html("Fecha: "  + (formatDate(d.key) + " " + padZero(d.value) + ":00") + "<br>" + "Usuarios: " + d.heat)
 		.style("font-size","14px")
 		.style("height","auto")
 		.style("padding","")
@@ -734,7 +734,7 @@ function queryCoreReportingApi(profileId) {
 		var yAxis = eje('r',y_uv,pages.length,0,0,function(d){return ""});
 
 		var gX = cont_ups.append("g")
-			.attr("class", "axis axis-up-x")
+			.attr("class", "axis axis-up-x axis-top")
 			.attr("transform","translate("+"50"+","+"50"+")")
 			.call(xAxis);
 
@@ -832,12 +832,12 @@ function queryCoreReportingApi(profileId) {
 		var yAxis = eje("r",y_sp,10,2,-2);
 
 		var gX = cont_sp.append("g")
-			.attr("class", "axis axis-sp-x")
+			.attr("class", "axis axis-sp-x axis-bottom")
 			.attr("transform","translate("+"40"+","+"600"+")")
 			.call(xAxis);
 
 		var gY = cont_sp.append("g")
-			.attr("class", "axis axis-sp-y")
+			.attr("class", "axis axis-sp-y axis-left")
 			.attr("transform","translate("+"40"+","+"0"+")")
 			.call(yAxis);
 
@@ -873,87 +873,11 @@ function queryCoreReportingApi(profileId) {
       console.log(err);
   });
 
-/*
-  gapi.client.analytics.data.ga.get({
-    'ids': 'ga:128026521',
-    'start-date': '30daysAgo',
-    'end-date': 'today',
-    'metrics': 'ga:1dayUsers',
-		'dimensions': 'ga:date'
-  })
-  .then(function(response) {
-    var formattedJson = JSON.stringify(response.result, null, 2);
-    document.getElementById('query-output').innerHTML += "<br><br>" + formattedJson;
-  })
-  .then(null, function(err) {
-      // Log any errors.
-      console.log(err);
-  });
+	d3.selectAll(".axis-left").attr("x","-10");
+	d3.selectAll(".axis-right").attr("x","10");
+	d3.selectAll(".axis-top").attr("y","-10");
+	d3.selectAll(".axis-bottom").attr("y","10");
 
-  gapi.client.analytics.data.ga.get({
-    'ids': 'ga:128026521',
-    'start-date': '30daysAgo',
-    'end-date': 'today',
-    'metrics': 'ga:7dayUsers',
-		'dimensions': 'ga:date'
-  })
-  .then(function(response) {
-    var formattedJson = JSON.stringify(response.result, null, 2);
-    document.getElementById('query-output').innerHTML += "<br><br>" + formattedJson;
-  })
-  .then(null, function(err) {
-      // Log any errors.
-      console.log(err);
-  });
-
-  gapi.client.analytics.data.ga.get({
-    'ids': 'ga:128026521',
-    'start-date': '30daysAgo',
-    'end-date': 'today',
-    'metrics': 'ga:30dayUsers',
-		'dimensions': 'ga:date'
-  })
-  .then(function(response) {
-    var formattedJson = JSON.stringify(response.result, null, 2);
-    document.getElementById('query-output').innerHTML += "<br><br>" + formattedJson;
-  })
-  .then(null, function(err) {
-      // Log any errors.
-      console.log(err);
-  });
-
-  gapi.client.analytics.data.ga.get({
-    'ids': 'ga:128026521',
-    'start-date': '30daysAgo',
-    'end-date': 'today',
-    'metrics': 'ga:cohortRetentionRate',
-		'dimensions': 'ga:cohortNthDay,ga:cohortNthWeek,ga:cohortNthMonth'
-  })
-  .then(function(response) {
-    var formattedJson = JSON.stringify(response.result, null, 2);
-    document.getElementById('query-output').innerHTML += "<br><br>" + formattedJson;
-  })
-  .then(null, function(err) {
-      // Log any errors.
-      console.log(err);
-  });
-
-	gapi.client.analytics.data.ga.get({
-		'ids': 'ga:128026521',
-		'start-date': '30daysAgo',
-		'end-date': 'today',
-		'metrics': 'ga:users',
-		'dimensions': 'ga:date,ga:source'
-	})
-	.then(function(response) {
-		var formattedJson = JSON.stringify(response.result, null, 2);
-		document.getElementById('query-output').innerHTML += "<br><br>" + formattedJson;
-	})
-	.then(null, function(err) {
-		  // Log any errors.
-		  console.log(err);
-	});
-*/
 }
 </script>
 <style>
