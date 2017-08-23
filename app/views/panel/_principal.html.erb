@@ -740,7 +740,6 @@ function queryCoreReportingApi(profileId) {
 			.call(yAxis);
 
 		adjustLabels();
-		//d3.selectAll(".axis-up-y .tick text").remove();
 
 		traceFigures("#svg_ups",data_pv,"pv-bar","rect",{"class":"pv-bar","transform":"translate("+"50"+","+"0"+")","id":function(d,i){return "pv-bar-" + i},"x":x_uv(0),"y":function(d){return y_uv(d.key)},"width":function(d){return (x_uv(d.value) - x_uv(0) < 3.5 ? 3.5 : x_uv(d.value) - x_uv(0) )},"height":y_uv.bandwidth(),"fill":"rgba(100,149,237,0.8)"}, x_uv ,y_uv, null,
 {"mouseover":function(d,i){
@@ -748,7 +747,7 @@ function queryCoreReportingApi(profileId) {
 	d3.select("#pv-bar-"+i).transition().style("opacity","1");
 	d3.selectAll(".uv-bar").transition().duration(250).style("opacity","0.3");
 	d3.select("#uv-bar-"+i).transition().style("opacity","1");
-	tooltip.html("Liga: "  + d.key + "<br>" + "Visitas: " + data_uv[i].value + "<br>Usuarios: " + d.value)
+	tooltip.html("Liga: "  + d.key + "<br>" + "Visitas: " + d.value + "<br>Usuarios: " + data_uv[i].value)
 		.style("font-size","14px")
 		.style("height","auto")
 		.style("padding","")
@@ -770,7 +769,7 @@ function queryCoreReportingApi(profileId) {
 	d3.select("#pv-bar-"+i).transition().style("opacity","1");
 	d3.selectAll(".uv-bar").transition().duration(250).style("opacity","0.3");
 	d3.select("#uv-bar-"+i).transition().style("opacity","1");
-	tooltip.html("Liga: "  + d.key + "<br>" + "Visitas: " + d.value + "<br>Usuarios: " + data_pv[i].value)
+	tooltip.html("Liga: "  + d.key + "<br>" + "Visitas: " + data_pv[i].value + "<br>Usuarios: " + d.value)
 		.style("font-size","14px")
 		.style("height","auto")
 		.style("padding","")
