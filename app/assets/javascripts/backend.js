@@ -135,6 +135,13 @@ function traceFigures(canvas,d_set,fig_class,figure,fig_props,sc_x,sc_y,styles,d
 	}
 }
 
+function adjustLabels(){
+	d3.selectAll(".axis-left .tick text").attr("x","-7");
+	d3.selectAll(".axis-right .tick text").attr("x","7");
+	d3.selectAll(".axis-top .tick text").attr("y","-10");
+	d3.selectAll(".axis-bottom .tick text").attr("y","8");
+}
+
 // 0 : Fecha; 1: Número; Default other
 function linea(sc_x,sc_y,inter,typeX,typeY,area,y0){
 	area = area || false

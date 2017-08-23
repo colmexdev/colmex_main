@@ -873,10 +873,10 @@ function queryCoreReportingApi(profileId) {
       console.log(err);
   });
 
-	d3.selectAll(".axis-left").attr("x","-10");
-	d3.selectAll(".axis-right").attr("x","10");
-	d3.selectAll(".axis-top").attr("y","-10");
-	d3.selectAll(".axis-bottom").attr("y","10");
+	d3.selectAll(".axis-left .tick text").attr("x","-10");
+	d3.selectAll(".axis-right .tick text").attr("x","10");
+	d3.selectAll(".axis-top .tick text").attr("y","-10");
+	d3.selectAll(".axis-bottom .tick text").attr("y","10");
 
 }
 </script>
