@@ -339,7 +339,7 @@ function queryCoreReportingApi(profileId) {
 
 		var color = escala("l",[0,0.5,1],["#DC143C", "#FF8C00", "#32CD32"]);
 
-		d3.selectAll(".axis-desc-x .tick text").attr("y","-10");
+		//d3.selectAll(".axis-desc-x .tick text").attr("y","-10");
 
 		traceFigures("#svg_descs",data_descs,"desc-bar","rect",{"class":"desc-bar","transform":"translate("+"50"+","+"0"+")","id":function(d,i){return "desc-bar-" + i},"x":x_desc(0),"y":function(d){return y_desc(d.key)},"width":function(d){return x_desc(d.value)},"height":y_desc.bandwidth(),"fill":function(d){ return color(d.value/d3.max(data_descs,function(a){return a.value}))}}, x_desc ,y_desc,null,{"mouseover":function(d,i){
 	d3.selectAll(".desc-bar").transition().duration(250).style("opacity","0.3");
@@ -416,7 +416,7 @@ function queryCoreReportingApi(profileId) {
 
 		//var color = escala("l",[0,0.5,1],["#DC143C", "#FF8C00", "#32CD32"]);
 
-		d3.selectAll(".axis-usr-x .tick text").attr("y","10");
+		//d3.selectAll(".axis-usr-x .tick text").attr("y","10");
 
 		var linea_u = linea(x_usr,y_usr,d3.curveLinear,0,1,true,"500");
 		var linea_s = linea(x_usr,y_usr,d3.curveLinear,0,1);
@@ -504,7 +504,7 @@ function queryCoreReportingApi(profileId) {
 			.call(yAxis);
 
 
-		d3.selectAll(".axis-med-x .tick text").attr("y","10");
+		//d3.selectAll(".axis-med-x .tick text").attr("y","10");
 
 		var cats = [];
 		for(var k in data_meds){
@@ -592,7 +592,7 @@ function queryCoreReportingApi(profileId) {
 			.attr("transform","translate("+"100"+","+"0"+")")
 			.call(yAxis);
 
-		d3.selectAll(".axis-heat-x .tick text").attr("y","10");
+		//d3.selectAll(".axis-heat-x .tick text").attr("y","10");
 
 		traceFigures("#svg_heat",data_heat,"heat-bar","rect",{"class":"heat-bar","transform":"translate("+"50"+","+"0"+")","id":function(d,i){return "heat-bar-" + i},"x":function(d){return x_heat(d.key)},"y":function(d){return y_heat(d.value)},"width":function(d){return x_heat.bandwidth()},"height":y_heat.bandwidth(),"fill":function(d){ return "rgba(70,30,180,"+ d.heat/d3.max(data_heat,function(a){return a.heat}) +")"}}, x_heat ,y_heat,null,
 {"mouseover":function(d,i){
@@ -743,8 +743,8 @@ function queryCoreReportingApi(profileId) {
 			.attr("transform","translate("+(50+x_uv(0))+","+"0"+")")
 			.call(yAxis);
 
-		d3.selectAll(".axis-up-x .tick text").attr("y","-10");
-		d3.selectAll(".axis-up-y .tick text").remove();
+		//d3.selectAll(".axis-up-x .tick text").attr("y","-10");
+		//d3.selectAll(".axis-up-y .tick text").remove();
 
 		traceFigures("#svg_ups",data_pv,"pv-bar","rect",{"class":"pv-bar","transform":"translate("+"50"+","+"0"+")","id":function(d,i){return "pv-bar-" + i},"x":x_uv(0),"y":function(d){return y_uv(d.key)},"width":function(d){return (x_uv(d.value) - x_uv(0) < 3.5 ? 3.5 : x_uv(d.value) - x_uv(0) )},"height":y_uv.bandwidth(),"fill":"rgba(100,149,237,0.8)"}, x_uv ,y_uv, null,
 {"mouseover":function(d,i){
