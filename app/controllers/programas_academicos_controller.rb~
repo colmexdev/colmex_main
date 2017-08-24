@@ -21,7 +21,7 @@ class ProgramasAcademicosController < ApplicationController
   end
 
   def convocatorias
-		@convocatorias = Curso.where("programa = ? AND fecha_fin_conv >= ?", "Convocatoria", Date.current()).union(Curso.where("programa = ? AND fecha_fin_conv >= ?", "Curso", Date.current())).order(:titulo)
+		@convocatorias = Curso.where("programa = ? AND fecha_fin_conv >= ?", "Licenciatura", Date.current()).union(Curso.where("programa = ? AND fecha_fin_conv >= ?", "Maestría", Date.current())).union(Curso.where("programa = ? AND fecha_fin_conv >= ?", "Doctorado", Date.current())).union(Curso.where("programa = ? AND fecha_fin_conv >= ?", "Curso", Date.current())).order(:titulo)
     respond_to do |format|
       format.js
     end
