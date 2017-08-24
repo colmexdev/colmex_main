@@ -38,7 +38,7 @@ class PanelController < ApplicationController
   end
 
   def index 
-    @set = @sets[params[:set].to_sym][:model].all
+    @set = @sets[params[:set].to_sym][:model].order(updated_at: :desc)
     respond_to do |format|
       format.js
     end
