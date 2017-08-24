@@ -45,7 +45,7 @@ class PanelController < ApplicationController
   end
 
   def mostrar
-
+		@obj = @sets[params[:set].to_sym][:model].find(params[:id].to_i)
     respond_to do |format|
       format.js
     end
@@ -123,7 +123,7 @@ class PanelController < ApplicationController
         model: Documento,
         fields: {nombre: "Título",nombre_eng: "Título (Inglés)",tipo: "Sección",anio: "Año",liga: "Link"},
         imgs: {archivo: "Archivo"}
-      }, "Descubres": {
+      }, "Descubre": {
         model: Descubre,
         fields: {titulo: "Título",liga: "Link",contenido: "Categoría",fecha_publicacion: "Fecha de despliegue",fecha_limite_pub: "Fecha de expiración",tags: "Etiquetas"},
         imgs: {imagen: "Imagen"}
