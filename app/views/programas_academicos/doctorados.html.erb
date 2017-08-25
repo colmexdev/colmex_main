@@ -12,10 +12,10 @@
 
 
 	<% @doctorados.each do |doc| %>
-    <h2 class="vino uk-margin-large-top"><%= params[:locale] == "sp" ? ("Doctorado en " + doc.titulo) : ("Doctorate in " + doc.traduccion_tit) %></h2>
+    <h2 class="vino uk-margin-large-top"><%= params[:locale] == "es" ? ("Doctorado en " + doc.titulo) : ("Doctorate in " + doc.traduccion_tit) %></h2>
     <div class="uk-grid uk-grid-large">
     <div class="uk-width-large-3-5 uk-text-left">
-    <p><%= params[:locale] == "sp" ? doc.descripcion : doc.traduccion_desc %></p>
+    <p><%= params[:locale] == "es" ? doc.descripcion : doc.traduccion_desc %></p>
     <% if !doc.liga.nil? %>
       <a href=<%= doc.liga %> target="_blank" class="ver-mas uk-margin-large-bottom uk-button-small"><%= t('programas.info') %></a>
     <% end %>
@@ -30,11 +30,11 @@
 			<% if doc.fecha_inicio_conv == doc.fecha_fin_conv %>
 				<%= l(doc.fecha_inicio_conv, format: :mes_anio ).capitalize %>
 			<% else %>
-				<%= (params[:locale] == "sp" ? "Abierta hasta " : "Open until ") + l(doc.fecha_fin_conv, format: :normal) %>
+				<%= (params[:locale] == "es" ? "Abierta hasta " : "Open until ") + l(doc.fecha_fin_conv, format: :normal) %>
 			<% end %>
 		</h4>
     <!-- Go to www.addthis.com/dashboard to customize your tools -->
-    <div class="addthis_inline_share_toolbox" data-url=<%= doc.liga %> data-title="<%= params[:locale] == "sp" ? ("Doctorado en " + doc.titulo) : ("Doctorate in " + doc.traduccion_tit) %>"></div>
+    <div class="addthis_inline_share_toolbox" data-url=<%= doc.liga %> data-title="<%= params[:locale] == "es" ? ("Doctorado en " + doc.titulo) : ("Doctorate in " + doc.traduccion_tit) %>"></div>
     </div>
     </div>
 	<% end %>

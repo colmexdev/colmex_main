@@ -24,7 +24,7 @@
     <h4 class="uk-margin-top-remove"><%= l(lic.fecha_inicio_clases, format: :mes_anio).capitalize %></h4>
     <h3 class="vino uk-margin-bottom-remove"><%= t('programas.prox_conv') %></h3>
     <h4 class="uk-margin-top-remove"><%= l(lic.fecha_inicio_conv, format: :mes_anio).capitalize %></h4>
-    <div class="addthis_inline_share_toolbox" data-url=<%= lic.liga %> data-title="<%= (params[:locale] == "sp" ? ("Licenciatura en " + lic.titulo) : ("B.A in " + lic.traduccion_tit) %>"></div>
+    <div class="addthis_inline_share_toolbox" data-url=<%= lic.liga %> data-title="<%= (params[:locale] == "sp" ? ("Licenciatura en " + lic.titulo) : ("B.A in " + lic.traduccion_tit)) %>"></div>
     </div>
     </div>
     <% end %>

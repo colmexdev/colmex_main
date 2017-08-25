@@ -31,6 +31,8 @@ Rails.application.routes.draw do
   put 'panel/editar' => 'panel#actualizar'
   patch 'panel/editar' => 'panel#actualizar'
 
+  get '/' => 'principal#principal', :as => :main_es
+  get '/:locale' => 'principal#principal', :as => :main
   scope "(:locale)", locale: /(en)|(sp)/ do
     get 'centros' => "centros_de_estudio#inicio", :as => :centros_de_estudio
     get 'ceaa' => "centros_de_estudio#ceaa", :as => :ceaa
@@ -89,8 +91,6 @@ Rails.application.routes.draw do
     get 'calendario' => 'programas_academicos#calendario_escolar', :as => :calendario
 
     get 'principios-eticos' => 'principal#principios_eticos', :as => :principios
-
-    get '/' => 'principal#principal', :as => :main
 
     get 'resultados_busqueda' => 'principal#resultados_busqueda', :as => :busqueda
 

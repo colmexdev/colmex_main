@@ -31,7 +31,7 @@
 			<% end %>
 		</h4>
     <!-- Go to www.addthis.com/dashboard to customize your tools -->
-    <div class="addthis_inline_share_toolbox" data-url=<%= mt.liga %> data-title="<%= "Maestría en " + mt.titulo %>"></div>
+    <div class="addthis_inline_share_toolbox" data-url=<%= mt.liga %> data-title="<%= (params[:locale] == "sp" ? ("Maestría en " + mt.titulo) : ("Master in " + mt.traduccion_tit)) %>"></div>
     </div>
     </div>
     <% end %>
