@@ -33,7 +33,7 @@ Rails.application.routes.draw do
 
   get '/' => 'principal#principal', :as => :main_es
   get '/:locale' => 'principal#principal', :as => :main
-  scope "(:locale)", locale: /(en)|(sp)/ do
+  scope "(:locale)", locale: /(en)|(es)/ do
     get 'centros' => "centros_de_estudio#inicio", :as => :centros_de_estudio
     get 'ceaa' => "centros_de_estudio#ceaa", :as => :ceaa
     get 'cedua' => "centros_de_estudio#cedua", :as => :cedua
