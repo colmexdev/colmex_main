@@ -31,7 +31,7 @@ Rails.application.routes.draw do
   put 'panel/editar' => 'panel#actualizar'
   patch 'panel/editar' => 'panel#actualizar'
 
-  scope "(:locale)", locale: /en/ do
+  scope "(:locale)", locale: /(en)|(sp)/ do
     get 'centros' => "centros_de_estudio#inicio", :as => :centros_de_estudio
     get 'ceaa' => "centros_de_estudio#ceaa", :as => :ceaa
     get 'cedua' => "centros_de_estudio#cedua", :as => :cedua
@@ -78,7 +78,7 @@ Rails.application.routes.draw do
     get 'info_estudiantes' => 'informacion_general#informacion_para_estudiantes', :as => :info_estudiantes
     get 'operativas' => 'informacion_general#operativas', :as => :operativas
     get 'premios-y-distinciones' => 'informacion_general#premios_y_distinciones', :as => :premios
-    get 'historia_75_años' => 'informacion_general#historia_75_años', :as => :historia75
+    get 'historia-75-anuiversario' => 'informacion_general#historia_75_años', :as => :historia75
     get 'comunidad' => 'informacion_general#comunidad', :as => :otorgadoscomunidad
     get 'colegio' => 'informacion_general#colegio', :as => :otorgadoscolegio
     get 'directorio-academico' => 'informacion_general#directorio_academico', :as => :directorio
