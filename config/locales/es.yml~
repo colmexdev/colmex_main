@@ -1,5 +1,349 @@
-#Traduccion a español
-es:
+sp:
   navbar:
     mail: "Correo electrónico"
     intranet: "Intranet"
+  botones:
+    b1: 
+      texto: "Información general"
+      texto2: "Sobre El Colegio"
+      opciones:
+        op1: "Directorio institucional"
+        op2: "Autoridades"
+        op3: "Historia"
+        op4: "Documentación institucional"
+        op5: "Profesores eméritos"
+        op6: "Premios y distinciones"
+        op7: "Licitaciones"
+        op8: "Relación de bienes"
+        op9: "Unidad de Transparencia"
+    b2:
+      texto: "Centros de Estudios"
+      opciones:
+        op1: "Centro de Estudios de Asia y África"
+        op2: "Centro de Estudios Demográficos, Urbanos y Ambientales"
+        op3: "Centro de Estudios Económicos"
+        op4: "Centro de Estudios Históricos"
+        op5: "Centro de Estudios Internacionales"
+        op6: "Centro de Estudios Lingüísticos y Literarios"
+        op7: "Centro de Estudios Sociológicos"
+    b3:
+      texto: "Programas docentes"
+      opciones:
+        op1: "Licenciaturas"
+        op2: "Maestrías"
+        op3: "Doctorados"
+        op4: "Admisiones"
+        op5: "Oficina de intercambio académico"
+        op6: "Cursos"
+        op7: "Calendario escolar"
+        op8: "Convocatorias"
+        op9: "Cátedras y seminarios"
+    b4: "Biblioteca"
+    b5: "Agenda"
+    b6: "Publicaciones"
+  eventos:
+    liga: "Más información"
+  actividades:
+    boton: "VER TODAS LAS ACTIVIDADES"
+  suscripcion:
+    texto: "Suscríbete a nuestra Agenda"
+    boton: "Suscribirse"
+    placeholder: "tucorreo@dominio.com"
+  descubre: "DESCUBRE"
+  mas: "VER MÁS"
+  filtro: "Filtrar por:"
+  cat: "Categoría (Todos)"
+  cont: "Contenido"
+  sobre_col:
+    pred: "Programa de Educación Digital"
+    sobre: "Sobre"
+    revistas: "Revistas"
+    colegio: "El Colegio de México"
+    p1: "El Colegio de México es una institución pública, de carácter universitario, dedicada a la investigación y a la enseñanza superior en ciencias sociales y humanidades, y es una de las más destacadas en el mundo hispánico, por lo cual ha recibido numerosos reconocimientos desde su fundación en 1940 hasta el presente."
+    p2: "Para cumplir con sus fines, El Colegio de México lleva a cabo investigaciones y docencia en las áreas de la especialidad de los Centros de Estudios que lo integran: Históricos, Lingüísticos y Literarios, Internacionales, de Asia y África, Económicos, Demográficos Urbanos y Ambientales, y Sociológicos, además del Programa de Estudios de Género. Ofrece licenciaturas, maestrías y doctorados por especialidad, así como cursos de especialización y de verano."
+    p3: "El Colegio cuenta con una gran biblioteca, abierta al público, especializada en ciencias sociales y humanidades. Su acervo está constituido por más de 700,000 volúmenes y cuenta con una enorme cantidad de recursos electrónicos y digitales. Asimismo, la institución cuenta con las siguientes unidades de apoyo y servicio: Dirección de Publicaciones, Programa de Educación Digital y Coordinación de Servicios de Cómputo."
+    p4: "De las aulas de El Colegio han salido varios millares de egresados que se han destacado en la investigación, la docencia, la función pública y otros campos de actividad profesional en México y en numerosos países del mundo."
+    p5: ""
+    p6: ""
+  historia:
+    historia: "La historia de"
+    p1: "Los orígenes de El Colegio de México se remontan a La Casa de España en México (1938-1940). Germen de El Colegio de México, refugio de intelectuales españoles republicanos, origen y logro de grandes obras académicas, renovadora de la cultura mexicana, por derecho propio ocupa un lugar eminente en el desarrollo científico de México. En marzo de 1939, el presidente Lázaro Cárdenas nombró a Alfonso Reyes presidente de La Casa de España y de su patronato. Este patronato quedó definitivamente formado por Eduardo Villaseñor, subsecretario de Hacienda, en representación del Gobierno; Gustavo Baz, rector de la Universidad Nacional; Enrique Arreguín, en nombre de la Secretaría de Educación Pública, y Daniel Cosío Villegas como secretario del patronato y de La Casa, y segundo de a bordo."
+    p2: "Los fundadores pusieron los sólidos cimientos sobre los cuales, a partir de octubre de 1940, se pudo construir El Colegio de México que hoy concemos. En primer lugar, Alfonso Reyes, quien durante casi veinte años, hasta su muerte el 27 de diciembre de 1959, presidió de manera ininterrumpida e incansable esta gran obra cultural y académica. También fue decisivo el apoyo inteligente y enérgico de Daniel Cosío Villegas, secretario de El Colegio durante sus primeros años. Aunque desde 1948 la presencia de Cosío en la institución fue intermitente, pues compartió su enorme vitalidad y energía con varias otras actividades culturales y políticas, su influencia en El Colegio de México se intensificó durante un lustro, primero como director (1958-1959) y luego, a la muerte de Reyes, desde enero de 1960 hasta enero de 1963, como segundo presidente. En su presidencia se fundó el Centro de Estudios Internacionales y la revista <i>Foro Internacional</i> en 1960."
+    p3: "Silvio Zavala, tercer presidente de El Colegio de 1963 a 1966, durante muchos años fue miembro de aquel primer Colegio y, por derecho propio, debe ser considerado un fundador, pues en 1941 creó el Centro de Estudios Históricos, el más antiguo de esta institución. Durante sus breves años como presidente de El Colegio, Silvio Zavala dio continuidad a los planes trazados por Cosío Villegas para crear otros centros y ampliar la planta física. Bajo Reyes, en 1948, también vio la luz el actual Centro de Estudios Lingüísticos y Literarios, fundado por el exiliado argentino Raimundo Lida, quien en 1947 ya había iniciado la primera revista especializada de la institución, la <i>Nueva Revista de Filología Hispánica</i>. Por su parte, en 1951, Daniel Cosío fundó la revista <i>Historia Mexicana</i>."
+    p4: "Víctor L. Urquidi presidió El Colegio desde 1966 hasta 1985. Fue responsable de la creación en 1964 del Centro de Estudios Económicos y Demográficos, luego dividido en dos: el Centro de Estudios Económicos y un nuevo Centro de Estudios Demográficos y de Desarrollo Urbano, más tarde ampliado a Centro de Estudios Demográficos, Urbanos y Ambientales. Durante sus años como presidente, Urquidi fomentó el desarrollo de otros centros: el de Estudios Sociológicos, el Centro de Estudios de Asia y África, y varios programas de investigación, incluyendo un programa de estudios de género, que hoy se encuentra incorporado al Centro de Estudios Sociológicos como Programa Interdisciplinario de Estudios de la Mujer."
+    p5: "En 1976 Víctor Urquidi supervisó la inauguración del moderno edificio en el cual reside actualmente El Colegio de México, mismo que ha recibido diversos reconocimientos y premios. Los arquitectos fueron Teodoro González de León y Abraham Zabludovsky. Desde hace cinco decenios, la institución ha incrementado su planta docente y administrativa de manera gradual, así como el número de investigadores y de becarios. Asimismo, ha continuado con su prestigiado programa de publicaciones, con un total de más de dos millares de libros publicados."
+    p6: "Mario Ojeda fue nombrado presidente de El Colegio de México el 20 de septiembre de 1985 y ejerció este cargo hasta el año de 1995. Miembro fundador del Centro de Estudios Internacionales, supervisó el funcionamiento de El Colegio y de sus diversos centros. Aunque durante su gestión el país vivió tiempos complicados tanto política como económicamente, que afectarían también a la institución, en esos años se hicieron importantes mejoras, incluyendo la construcción del quinto nivel de oficinas, salones y seminarios."
+    p7: "El historiador Andrés Lira fue nombrado presidente de El Colegio de México en 1995, y ocupó el cargo hasta septiembre de 2005. Durante su madato, en 1998, se obtuvo la autonomía institucional; se puso en marcha el Consejo Académico desde 2003, y se lograron importantes mejoras a la infraestructura del edificio, biblioteca y servicios generales, así como la fundación del Archivo histórico y administrativo de la institución. Asimismo, durante su gestión se inauguran nuevos programas académicos."
+    p8: "En diciembre de 2002 se aprobó el Estatuto Orgánico de El Colegio de México, que se ha renovado en varias oportunidades y puede consultarse <a target=\"_blank\" class=\"uk-link\" href=\"%{url}\">aquí</a>."
+    p9: "Javier Garciadiego Dantan, también historiador, fue nombrado presidente de El Colegio de México desde el 20 de septiembre de 2005 hasta el 19 de septiembre de 2015. En su presidencia se mantuvo el alto nivel de desempeño de la institución en docencia, investigación y publicaciones. Se puso en marcha el Programa de Jubilaciones que ha permitido iniciar el cambio generacional en la planta docente y de investigación. Igualmente, bajo su mandato se inició el proceso de la construcción de una nueva, funcional, amplia y luminosa ala de la Biblioteca, que se inauguró en 2016, ya en la administración de la presidenta de El Colegio de México, la demógrafa Silvia Elena Giorguli, quien asumió el puesto el 20 de septiembre de 2015."
+    ver: "Ver más"
+  footer:
+    liga1: "Principios éticos"
+    liga2: "Aviso de Privacidad"
+    liga3: "Directorio Institucional"
+    liga4: "Correo electrónico"
+    liga5: "Cómo llegar"
+    liga6: "Mapa de sitio"
+    copy: "Derechos reservados"
+  donacion:
+    texto: "El Fondo Patrimonial en Beneficio de El Colegio de México, A.C. se creó en 1986 con el único objetivo de contribuir al crecimiento y desarrollo de El Colegio de México."
+    boton_conoce: "Conoce más"
+    boton_donar: "Contribuye"
+    boton_act: "Actualiza tus datos"
+  centros:
+    boton: "Más información"
+  sobre:
+    autoridades:
+      titulo: "Autoridades"
+      asamblea: "Asamblea de Socios"
+      junta: "Junta de Gobierno"
+      presidencia: "Presidencia"
+      centros: "Centros de Estudios"
+      admin: "Administración"
+      apoyo: "Unidades de apoyo"
+      operativas: "Áreas operativas"
+      consejo: "Consejo Académico"
+      comision: "Comisión Dictaminadora"
+      correo: "Correo electrónico"
+      tel: "Teléfono"
+      ext: "Extensión"
+      encabezado_pres: "Investigadores Asociados a Presidencia (desde el 1° de enero de 2017)"
+      sub_ce: "Asociados a los Centros de Estudios"
+      sub_inv: "Investigadores en proyectos específicos"
+    documentacion:
+      op1: "Actas de la Junta de Gobierno"
+      op2: "Informes de Actividades"
+      op3: "Estatuto Orgánico"
+      op4: "Información para Estudiantes"
+    emeritos: 
+      titulo: "Profesores Eméritos"
+      fecha: "Fecha de nombramiento"
+    principios:
+      intro: "Introducción"
+      p1: "El Colegio de México expresa su compromiso para asegurar el respeto a la integridad de todas las personas que conforman su comunidad, así como a los productos de su trabajo y los bienes públicos que tiene en propiedad y resguardo. En razón de lo anterior, El Colegio de México emite los siguientes pronunciamientos:"
+      pron: "Pronunciamientos:"
+      p2: "El Colegio de México está comprometido con la preservación de un ambiente de trabajo, investigación, docencia y estudio sano. El hostigamiento sexual es intolerable, discriminatorio e ilegal, ya que consiste en molestar, perturbar o crear dificultades a otra persona, al hacerle, de manera directa o indirecta, sugerencias, invitaciones o proposiciones íntimas, relacionadas con actividades sexuales, consideradas ofensivas. Es una negación de los derechos y de la dignidad del otro, en tanto contradice las políticas de equidad e igualdad de trato y oportunidades de los miembros de la comunidad académica. Esta institución considera que ese comportamiento es violatorio de las normas que rigen a la comunidad. Por consiguiente, El Colegio de México se siente agraviado ante tales prácticas y prohíbe estrictamente el hostigamiento sexual. La institución se compromete a adoptar las acciones que sean necesarias para prevenir y corregir los comportamientos que violen esta política institucional."
+      p3: "El Colegio de México está comprometido con la integridad académica en todos sus aspectos, y exige al conjunto de la comunidad el respeto de rigurosos principios de ética, que no admiten excepciones. En particular, El Colegio de México condena de la manera más enérgica cualquier forma de fraude científico o académico, y de manera contundente el plagio, es decir, el intento de presentar el trabajo ajeno como propio, en cualquier contexto. Lo anterior implica que la comunidad de El Colegio de México, sin excepción, se obliga a atribuir correcta, explícita y puntualmente la autoría de textos e ideas en cualquier comunicación escrita; la comunidad se obliga, igualmente, a reconocer siempre de manera explícita las fuentes de información, opiniones, entrevistas e ideas en las que se fundamenten los trabajos, artículos, libros o cualesquiera productos de investigación; el personal académico, en particular, se obliga asimismo a reconocer de manera explícita y clara la contribución de asistentes, auxiliares, estudiantes, así como cualquier otro apoyo recibido en la investigación."
+      p4: "El Colegio de México está comprometido con el cuidado de sus instalaciones, los bienes muebles e inmuebles, equipos y acervos documentales en todos sus soportes. Los miembros de la comunidad, sin excepción, están obligados a preservar, respetar y mantener dichos bienes."
+  programas:
+    licenciaturas: "Licenciaturas"
+    maestrias: "Maestrías"
+    doctorados: "Doctorados"
+    mas: "Conoce más"
+    info: "Más información"
+    prox_conv: "Próxima convocatoria"
+    promo: "Inicio de la promoción"
+  activerecord:
+    errors:
+      messages:
+        record_invalid: "La validación falló: %{errors}"
+        restrict_dependent_destroy:
+          has_one: "No se puede eliminar el registro porque existe un %{record} dependiente"
+          has_many: "No se puede eliminar el registro porque existen %{record} dependientes"
+  date:
+    abbr_day_names:
+    - dom
+    - lun
+    - mar
+    - mié
+    - jue
+    - vie
+    - sáb
+    abbr_month_names:
+    -
+    - Enero
+    - Febrero
+    - Marzo
+    - Abril
+    - Mayo
+    - Junio
+    - Julio
+    - Agosto
+    - Septiembre
+    - Octubre
+    - Noviembre
+    - Diciembre
+    day_names:
+    - Domingo
+    - Lunes
+    - Martes
+    - Miércoles
+    - Jueves
+    - Viernes
+    - Sábado
+    formats:
+      default: "%d/%m/%Y"
+      long: "%A %d de %B"
+      short: "%b %d"
+      normal: "%d de %B de %Y"
+      mes_anio: "%B de %Y"
+    month_names:
+    -
+    - enero
+    - febrero
+    - marzo
+    - abril
+    - mayo
+    - junio
+    - julio
+    - agosto
+    - septiembre
+    - octubre
+    - noviembre
+    - diciembre
+    order:
+    - :day
+    - :month
+    - :year
+  datetime:
+    distance_in_words:
+      about_x_hours:
+        one: "alrededor de 1 hora"
+        other: "alrededor de %{count} horas"
+      about_x_months:
+        one: "alrededor de 1 mes"
+        other: "alrededor de %{count} meses"
+      about_x_years:
+        one: "alrededor de 1 año"
+        other: "alrededor de %{count} años"
+      almost_x_years:
+        one: "casi 1 año"
+        other: "casi %{count} años"
+      half_a_minute: "medio minuto"
+      less_than_x_minutes:
+        one: "menos de 1 minuto"
+        other: "menos de %{count} minutos"
+      less_than_x_seconds:
+        one: "menos de 1 segundo"
+        other: "menos de %{count} segundos"
+      over_x_years:
+        one: "más de 1 año"
+        other: "más de %{count} años"
+      x_days:
+        one: "1 día"
+        other: "%{count} días"
+      x_minutes:
+        one: "1 minuto"
+        other: "%{count} minutos"
+      x_months:
+        one: "1 mes"
+        other: "%{count} meses"
+      x_seconds:
+        one: "1 segundo"
+        other: "%{count} segundos"
+    prompts:
+      day: "Día"
+      hour: "Hora"
+      minute: "Minutos"
+      month: "Mes"
+      second: "Segundos"
+      year: "Año"
+  errors:
+    format: "%{attribute} %{message}"
+    messages:
+      accepted: "debe ser aceptado"
+      blank: "no puede estar en blanco"
+      present: "debe estar en blanco"
+      confirmation: "no coincide"
+      empty: "no puede estar vacío"
+      equal_to: "debe ser igual a %{count}"
+      even: "debe ser par"
+      exclusion: "está reservado"
+      greater_than: "debe ser mayor que %{count}"
+      greater_than_or_equal_to: "debe ser mayor que o igual a %{count}"
+      inclusion: "no está incluido en la lista"
+      invalid: "no es válido"
+      less_than: "debe ser menor que %{count}"
+      less_than_or_equal_to: "debe ser menor que o igual a %{count}"
+      model_invalid: "La validación falló: %{errors}"
+      not_a_number: "no es un número"
+      not_an_integer: "debe ser un entero"
+      odd: "debe ser impar"
+      required: "debe existir"
+      taken: "ya está en uso"
+      too_long:
+        one: "es demasiado largo (1 carácter máximo)"
+        other: "es demasiado largo (%{count} caracteres máximo)"
+      too_short:
+        one: "es demasiado corto (1 carácter mínimo)"
+        other: "es demasiado corto (%{count} caracteres mínimo)"
+      wrong_length:
+        one: "no tiene la longitud correcta (1 carácter exactos)"
+        other: "no tiene la longitud correcta (%{count} caracteres exactos)"
+      other_than: "debe ser distinto de %{count}"
+    template:
+      body: "Se encontraron problemas con los siguientes campos:"
+      header:
+        one: "No se pudo guardar este/a %{model} porque se encontró 1 error"
+        other: "No se pudo guardar este/a %{model} porque se encontraron %{count} errores"
+  helpers:
+    select:
+      prompt: "Por favor seleccione"
+    submit:
+      create: "Crear %{model}"
+      submit: "Guardar %{model}"
+      update: "Actualizar %{model}"
+  number:
+    currency:
+      format:
+        delimiter: "."
+        format: "%n %u"
+        precision: 2
+        separator: ","
+        significant: false
+        strip_insignificant_zeros: false
+        unit: "€"
+    format:
+      delimiter: "."
+      precision: 3
+      separator: ","
+      significant: false
+      strip_insignificant_zeros: false
+    human:
+      decimal_units:
+        format: "%n %u"
+        units:
+          billion: "mil millones"
+          million:
+            one: "millón"
+            other: "millones"
+          quadrillion: "mil billones"
+          thousand: "mil"
+          trillion:
+            one: "billón"
+            other: "billones"
+          unit: ''
+      format:
+        delimiter: ''
+        precision: 1
+        significant: true
+        strip_insignificant_zeros: true
+      storage_units:
+        format: "%n %u"
+        units:
+          byte:
+            one: "Byte"
+            other: "Bytes"
+          gb: "GB"
+          kb: "KB"
+          mb: "MB"
+          tb: "TB"
+    percentage:
+      format:
+        delimiter: ''
+        format: "%n %"
+    precision:
+      format:
+        delimiter: ''
+  support:
+    array:
+      last_word_connector: " y "
+      two_words_connector: " y "
+      words_connector: ", "
+  time:
+    am: "am"
+    formats:
+      default: "%A, %d de %B de %Y %H:%M:%S %z"
+      long: "%d de %B de %Y %H:%M"
+      short: "%d de %b %H:%M"
+    pm: "pm"
