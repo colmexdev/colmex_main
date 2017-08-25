@@ -101,7 +101,7 @@
 
 				<li class="no-dropdown"><a href=" http://agenda.colmex.mx" target="_blank"><span><%= t('botones.b5') %></span></a></li>
 				
-				<li class="no-dropdown"><a href="http://web.colmex.mx/<%= controller_name %>/<%= action_name %>?locale=<%= (params[:locale] == 'sp' ? 'en' : 'sp') + (action_name == 'resultados_busqueda' ? '&condicion=' + params[:condicion] : '' ) %>"><span style="color:#993366;"><%= (params[:locale] == "sp" ? "English" : "Español") %></span></a></li>
+				<li class="no-dropdown"><a href="http://web.colmex.mx/<%= controller_name %>/<%= action_name %>?locale=<%= (I18n.locale == 'en' ? 'en' : 'sp') + (action_name == 'resultados_busqueda' ? '&condicion=' + params[:condicion] : '' ) %>"><span style="color:#993366;"><%= (params[:locale] == "sp" ? "English" : "Español") %></span></a></li>
 				
 <% if false %>
 				<li class="no-dropdown"><a href="<%= soon_path %>"><span style="color:#993366;"><%= (params[:locale] == "sp" ? "English" : "Español") %></span></a></li>
