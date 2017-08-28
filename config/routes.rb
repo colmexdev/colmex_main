@@ -18,18 +18,22 @@ Rails.application.routes.draw do
   devise_for :admins, :controllers => { :registrations => "registrations", :sessions => "sessions"}
   resources :admins
 
-  get 'bienes/index' => 'bienes#index', :as => :bienes
+  devise_scope :admin do
+    get "/acceder" => "devise/sessions#new"
+  end
 
-  get 'panel/panel' => 'panel#panel', :as => :panel
-  get 'panel/principal' => 'panel#principal', :as => :panel_princ
-  get 'panel/index' => 'panel#index', :as => :panel_index
-  get 'panel/generar' => 'panel#generar', :as => :panel_nuevo
-  get 'panel/editar' => 'panel#editar', :as => :panel_editar
-  post 'panel' => 'panel#crear'
-  get 'panel/:id' => 'panel#mostrar', :as => :panel_mostrar
-  delete 'panel/:id' => 'panel#eliminar', :as => :panel_eliminar
-  put 'panel/editar' => 'panel#actualizar'
-  patch 'panel/editar' => 'panel#actualizar'
+  get '/bienes/index' => 'bienes#index', :as => :bienes
+
+  get '/panel/panel' => 'panel#panel', :as => :panel
+  get '/panel/principal' => 'panel#principal', :as => :panel_princ
+  get '/panel/index' => 'panel#index', :as => :panel_index
+  get '/panel/generar' => 'panel#generar', :as => :panel_nuevo
+  get '/panel/editar' => 'panel#editar', :as => :panel_editar
+  post '/panel' => 'panel#crear'
+  get '/panel/:id' => 'panel#mostrar', :as => :panel_mostrar
+  delete '/panel/:id' => 'panel#eliminar', :as => :panel_eliminar
+  put '/panel/editar' => 'panel#actualizar'
+  patch '/panel/editar' => 'panel#actualizar'
 
   get '/' => 'principal#principal', :as => :main_es
   get '/:locale' => 'principal#principal', :as => :main
@@ -104,10 +108,6 @@ Rails.application.routes.draw do
     get "sitemap" => "principal#sitemap", :as => :sitemap
     get 'proximamente' => 'principal#proximamente', :as => :soon
     get 'aviso-privacidad' => 'principal#aviso_de_privacidad', :as => :aviso
-  end
-
-  devise_scope :admin do
-    get "/acceder" => "devise/sessions#new"
   end
 
 

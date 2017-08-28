@@ -18,6 +18,10 @@ Rails.application.routes.draw do
   devise_for :admins, :controllers => { :registrations => "registrations", :sessions => "sessions"}
   resources :admins
 
+  devise_scope :admin do
+    get "/acceder" => "devise/sessions#new"
+  end
+
   get 'bienes/index' => 'bienes#index', :as => :bienes
 
   get 'panel/panel' => 'panel#panel', :as => :panel
@@ -53,12 +57,12 @@ Rails.application.routes.draw do
     get "maestrias" => "programas_academicos#maestrias", :as => :maestrias
     get "doctorados" => "programas_academicos#doctorados", :as => :doctorados
     get "cursos" => "programas_academicos#cursos", :as => :cursos_varios
-    get 'catedras-y-seminarios' => "programas_academicos#catedras_y_seminarios", :as => :catedras_seminarios
+    get 'catedras-seminarios' => "programas_academicos#catedras_y_seminarios", :as => :catedras_seminarios
     get "catedras" => "programas_academicos#catedras", :as => :cats
     get "seminarios" => "programas_academicos#seminarios", :as => :seminarios
 
     get 'autoridades' => 'informacion_general#autoridades', :as => :autoridades
-    get 'emeritos' => 'informacion_general#profesores_emeritos', :as => :profesores_emeritos
+    get 'profesores-emeritos' => 'informacion_general#profesores_emeritos', :as => :profesores_emeritos
     get 'historia' => 'informacion_general#historia', :as => :historia
     get 'sobre' => 'informacion_general#sobre_el_colegio', :as => :sobre_el_colegio
     get 'transparencia' => 'informacion_general#transparencia', :as => :transparencia
@@ -79,8 +83,8 @@ Rails.application.routes.draw do
     get "consejo" => "informacion_general#consejo", :as => :consejo
     get 'info_estudiantes' => 'informacion_general#informacion_para_estudiantes', :as => :info_estudiantes
     get 'operativas' => 'informacion_general#operativas', :as => :operativas
-    get 'premios-y-distinciones' => 'informacion_general#premios_y_distinciones', :as => :premios
-    get 'historia-75-anuiversario' => 'informacion_general#historia_75_años', :as => :historia75
+    get 'premios-distinciones' => 'informacion_general#premios_y_distinciones', :as => :premios
+    get 'historia-75-aniversario' => 'informacion_general#historia_75_años', :as => :historia75
     get 'comunidad' => 'informacion_general#comunidad', :as => :otorgadoscomunidad
     get 'colegio' => 'informacion_general#colegio', :as => :otorgadoscolegio
     get 'directorio-academico' => 'informacion_general#directorio_academico', :as => :directorio
@@ -88,7 +92,7 @@ Rails.application.routes.draw do
     get 'presenciales' => 'programas_academicos#presenciales', :as => :presenciales
     get 'electronicos' => 'programas_academicos#electronicos', :as => :electronicos
 
-    get 'calendario' => 'programas_academicos#calendario_escolar', :as => :calendario
+    get 'calendario-escolar' => 'programas_academicos#calendario_escolar', :as => :calendario
 
     get 'principios-eticos' => 'principal#principios_eticos', :as => :principios
 
@@ -103,11 +107,7 @@ Rails.application.routes.draw do
 
     get "sitemap" => "principal#sitemap", :as => :sitemap
     get 'proximamente' => 'principal#proximamente', :as => :soon
-    get 'aviso-de-privacidad' => 'principal#aviso_de_privacidad', :as => :aviso
-  end
-
-  devise_scope :admin do
-    get "/acceder" => "devise/sessions#new"
+    get 'aviso-privacidad' => 'principal#aviso_de_privacidad', :as => :aviso
   end
 
 
