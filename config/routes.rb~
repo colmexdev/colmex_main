@@ -36,7 +36,7 @@ Rails.application.routes.draw do
   patch '/panel/editar' => 'panel#actualizar'
 
   get '/' => 'principal#principal', :as => :main_es
-  get '/:locale' => 'principal#principal', :as => :main
+
   scope "(:locale)", locale: /(en)|(es)/ do
     get 'centros' => "centros_de_estudio#inicio", :as => :centros_de_estudio
     get 'ceaa' => "centros_de_estudio#ceaa", :as => :ceaa
@@ -109,9 +109,8 @@ Rails.application.routes.draw do
     get 'proximamente' => 'principal#proximamente', :as => :soon
     get 'aviso-privacidad' => 'principal#aviso_de_privacidad', :as => :aviso
   end
-
-
-
+ 
+  get '/:locale' => 'principal#principal', :as => :main
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
