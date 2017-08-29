@@ -105,7 +105,7 @@ Rails.application.routes.draw do
     get 'directorio_academico_async' => 'informacion_general#directorio_academico_async', :as => :dir_async
     get 'recuperar_docentes' => 'informacion_general#recuperar_docentes', :as => :rec_doc
 
-    get "sitemap" => "principal#sitemap", :as => :sitemap
+    get "mapa-sitio" => "principal#sitemap", :as => :sitemap
     get 'proximamente' => 'principal#proximamente', :as => :soon
     get 'aviso-privacidad' => 'principal#aviso_de_privacidad', :as => :aviso
   end
