@@ -11,20 +11,22 @@
 
     <!--          Aquí empiezan las licenciaturas          -->
     <% @licenciaturas.each do |lic| %>
-    <h2 class="vino"><%= params[:locale] == "sp" ? ("Licenciatura en " + lic.titulo) : ("B.A. in " + lic.traduccion_tit) %></h2>
+    <h2 class="vino"><%= params[:locale] == "es" ? ("Licenciatura en " + lic.titulo) : ("B.A. in " + lic.traduccion_tit) %></h2>
     <div class="uk-grid uk-grid-large">
     <div class="uk-width-large-3-5 uk-text-left">
-    <p><%= (params[:locale] == "sp" ? lic.descripcion : lic.traduccion_desc) %></p>
+    <p><%= (params[:locale] == "es" ? lic.descripcion : lic.traduccion_desc) %></p>
     <% if !lic.liga.nil? %>
       <a href=<%= lic.liga %> target="_blank" class="ver-mas uk-margin-large-bottom uk-button-small"><%= t('programas.info') %></a>
     <% end %>
     </div>
     <div class="uk-width-large-2-5">
+		<% if !lic.fecha_inicio_clases.nil? %>
     <h3 class="vino uk-margin-bottom-remove"><%= t('programas.promo') %></h3>
     <h4 class="uk-margin-top-remove"><%= l(lic.fecha_inicio_clases, format: :mes_anio).capitalize %></h4>
+		<% end %>
     <h3 class="vino uk-margin-bottom-remove"><%= t('programas.prox_conv') %></h3>
     <h4 class="uk-margin-top-remove"><%= l(lic.fecha_inicio_conv, format: :mes_anio).capitalize %></h4>
-    <div class="addthis_inline_share_toolbox" data-url=<%= lic.liga %> data-title="<%= (params[:locale] == "sp" ? ("Licenciatura en " + lic.titulo) : ("B.A in " + lic.traduccion_tit)) %>"></div>
+    <div class="addthis_inline_share_toolbox" data-url=<%= lic.liga %> data-title="<%= (params[:locale] == "es" ? ("Licenciatura en " + lic.titulo) : ("B.A in " + lic.traduccion_tit)) %>"></div>
     </div>
     </div>
     <% end %>
