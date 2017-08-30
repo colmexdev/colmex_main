@@ -55,7 +55,7 @@
 <div style="margin-bottom:25px;text-align:center;font-size:18px;font-weight:500;">
 <% ind = 0 %>
 <% while ind < @pags %>
-	<span style="margin:0 6px;cursor:pointer;" onclick="renderRecords('<%= panel_index_path(set: params[:set], offset: ind)')"><%= ind %></span>
+	<span style="margin:0 6px;cursor:pointer;" onclick="renderRecords('<%= panel_index_path(set: params[:set], offset: ind)') %>"><%= ind %></span>
 	<% ind = ind + 1 %>
 <% end %>
 </div>
