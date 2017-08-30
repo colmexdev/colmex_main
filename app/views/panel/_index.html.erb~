@@ -52,6 +52,7 @@
 </table>
 
 <br>
+<span><%= @pags %></span>
 <% if false %>
 <a class="uk-link" onclick="hideLink(event,'#index-panel','<%= panel_princ_path %>')">Inicio</a>
 <% end %>
