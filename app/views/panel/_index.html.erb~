@@ -52,8 +52,13 @@
 </table>
 
 <br>
-<span><%= @set.size %></span><br>
-<span><%= @pags %></span>
+<div style="margin-bottom:25px;text-align:center;font-size:18px;font-weight:500;">
+<% ind = 0 %>
+<% while ind < @pags %>
+	<span style="margin:0 8px;cursor:pointer;"><%= ind %></span>
+	<% ind = ind + 1 %>
+<% end %>
+</div>
 <% if false %>
 <a class="uk-link" onclick="hideLink(event,'#index-panel','<%= panel_princ_path %>')">Inicio</a>
 <% end %>
