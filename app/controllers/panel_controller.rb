@@ -1,6 +1,6 @@
 class PanelController < ApplicationController
-  before_action :select_set, only: [:principal, :index, :mostrar, :generar, :crear, :eliminar, :actualizar, :editar]
-  before_action :get_object_fields, only: [:index, :crear, :actualizar, :eliminar, :mostrar]
+  before_action :select_set, only: [:principal, :subset_index, :index, :mostrar, :generar, :crear, :eliminar, :actualizar, :editar]
+  before_action :get_object_fields, only: [:subset_index, :index, :crear, :actualizar, :eliminar, :mostrar]
 
   def principal
 		grupos = @sets.map {|k,v| v[:model]}
@@ -39,9 +39,14 @@ class PanelController < ApplicationController
 
   def index 
     @set = @sets[params[:set].to_sym][:model].order(updated_at: :desc)
+    @pags = @set.size / 15
     respond_to do |format|
       format.js
     end
+  end
+
+  def subset_index
+    @set = @sets[params[:set].to_sym][:model].order(updated_at: :desc) 
   end
 
   def mostrar

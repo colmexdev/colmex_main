@@ -173,7 +173,7 @@ class PanelController < ApplicationController
       params.require(:premiado).permit(:nombre, :descripcion, :tipo, :tipo_premio, :liga)
     elsif params[:set] == "Documentos varios"
       params.require(:documento).permit(:nombre, :tipo, :anio, :archivo, :nombre_eng)
-    elsif params[:set] == "Descubres"
+    elsif params[:set] == "Descubre"
       params.require(:descubre).permit(:titulo, :liga, :contenido, :fecha_publicacion, :fecha_limite_pub, :imagen, :tags)
     elsif params[:set] == "Categorías de 'Descubre'"
       params.require(:content).permit(:tipo, :icono, :tipo_eng)
