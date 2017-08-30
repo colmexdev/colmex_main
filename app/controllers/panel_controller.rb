@@ -39,17 +39,13 @@ class PanelController < ApplicationController
 
   def index 
     @rpp = 15
-    @count = @sets[params[:set].to_sym][:model].all.size
-    @set = @sets[params[:set].to_sym][:model].where("").order(updated_at: :desc).limit(@rpp).offset(params[:offset].present? ? (params[:offset].to_i*@rpp) : 0)
+    @count = @sets[params[:set].to_sym][:model].count
+    @set = @sets[params[:set].to_sym][:model].where("").order(updated_at: :desc).limit(@rpp).offset(params[:offset].to_i*@rpp)
     @pags = (@count == 0 ? 0 : ((@count / @rpp) + (@count % @rpp == 0 ? 0 : 1) ))
     respond_to do |format|
       format.js
-      format.json {render json: {filas: @set} }
+      #format.json {render json: {filas: @set} }
     end
-  end
-
-  def subset_index
-    @set = @sets[params[:set].to_sym][:model].order(updated_at: :desc) 
   end
 
   def mostrar

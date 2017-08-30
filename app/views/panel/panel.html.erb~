@@ -52,7 +52,7 @@
 				<a class="link-panel" onclick="hideLink(event,'#ops-lat','<%= panel_index_path(:set => "Documentos varios") %>')">Documentos varios</a>
 				</li>
 				<li class="op-gest">
-				<a class="link-panel" onclick="hideLink(event,'#ops-lat','<%= panel_index_path(:set => "Descubres") %>')">Descubres</a>
+				<a class="link-panel" onclick="hideLink(event,'#ops-lat','<%= panel_index_path(:set => "Descubre") %>')">Descubre</a>
 				</li>
 				<li class="op-gest">
 				<a class="link-panel" onclick="hideLink(event,'#ops-lat','<%= panel_index_path(:set => "Categorías de 'Descubre'") %>')">Categorías de 'Descubre'</a>

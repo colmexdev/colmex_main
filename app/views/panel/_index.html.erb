@@ -54,13 +54,22 @@
 <br>
 <div style="margin-bottom:25px;text-align:center;font-size:18px;font-weight:500;">
 <% ind = 0 %>
+
+	<% if @pags > 1 %>
+		<span style="margin:0 6px;cursor:<%= params[:offset] != 0 ? "pointer" : "auto" %>;" <%= params[:offset] != 0 ? "onclick=\"hideLink(event,'#index-panel','" + panel_index_path(set: params[:set], offset: ind - 1) + "')\"" : "" %>><</span>
+	<% end %>
+
 <% while ind < @pags %>
-	<span style="margin:0 6px;cursor:pointer;" onclick="hideLink(event,'#index-panel','<%= panel_index_path(set: params[:set], offset: ind) %>')"><%= ind + 1 %></span>
+	<span class="numeros" style="margin:0 6px;cursor:pointer;" onclick="renderRecords('<%= panel_index_path(set: params[:set], offset: ind-1) %>')"><%= ind + 1 %></span>
 	<% if false %>
-		<span style="margin:0 6px;cursor:pointer;" onclick="renderRecords('<%= panel_index_path(set: params[:set], offset: ind) %>')"><%= ind %></span>
+		<span class="numeros" style="margin:0 6px;cursor:pointer;" onclick="renderRecords('<%= panel_index_path(set: params[:set], offset: ind) %>')"><%= ind %></span>
 	<% end %>
 	<% ind = ind + 1 %>
 <% end %>
+
+	<% if @pags > 1 %>
+		<span style="margin:0 6px;cursor:<%= params[:offset] != @pags - 1 ? "pointer" : "auto" %>;" <%= params[:offset] != @pags - 1 ? "onclick=\"hideLink(event,'#index-panel','" + panel_index_path(set: params[:set], offset: ind + 1) + "')\"" : "" %>><</span>
+	<% end %>
 </div>
 <% if false %>
 <a class="uk-link" onclick="hideLink(event,'#index-panel','<%= panel_princ_path %>')">Inicio</a>
