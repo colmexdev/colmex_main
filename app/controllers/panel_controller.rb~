@@ -40,7 +40,7 @@ class PanelController < ApplicationController
   def index 
     @rpp = 15
     @set = @sets[params[:set].to_sym][:model].order(updated_at: :desc)
-    @pags = (@set.size == 0 ? 0 : ((@set.size / @rpp + 1) + 1))
+    @pags = (@set.size == 0 ? 0 : ((@set.size / (@rpp + 1)) + 1))
     respond_to do |format|
       format.js
     end
