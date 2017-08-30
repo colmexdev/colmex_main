@@ -39,10 +39,11 @@ class PanelController < ApplicationController
 
   def index 
     @rpp = 15
-    @set = @sets[params[:set].to_sym][:model].order(updated_at: :desc)
+    @set = @sets[params[:set].to_sym][:model].where("").order(updated_at: :desc).limit(@rpp).offset(params[:offset].present? ? (1+(params[:offset].to_i*@rpp)) : 0)
     @pags = (@set.size == 0 ? 0 : ((@set.size / @rpp) + (@set.size % @rpp == 0 ? 0 : 1) ))
     respond_to do |format|
       format.js
+      format.json {render json: {filas: @set} }
     end
   end
 
