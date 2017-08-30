@@ -24,14 +24,22 @@ function hideLink(event,element,link,method){
 }
 
 function renderRecords(link){
-	$.ajax({
+	
+/*	$.ajax({
 		url: link,
 		dataType: 'JSON',
 		method: 'GET',
 		success: function(result){
+			var tabla = $("#index-panel tbody");
+			var record = "";
 			console.log(result);
+			tabla.html("");
+			for(var i = 0; i < result.length; i++){
+				
+			}
 		}
 	});
+*/
 }
 
 function readURL(input,display,file) {

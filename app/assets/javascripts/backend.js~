@@ -23,6 +23,17 @@ function hideLink(event,element,link,method){
 	$("#vlink").remove();
 }
 
+function renderRecords(link){
+	$.ajax({
+		url: link,
+		dataType: 'JSON',
+		method: 'GET',
+		success: function(result){
+			console.log(result);
+		}
+	});
+}
+
 function readURL(input,display,file) {
   if (input.files && input.files[0]) {
 		console.log(input.files);
