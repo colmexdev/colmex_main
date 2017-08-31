@@ -1,6 +1,6 @@
 class PanelController < ApplicationController
-  before_action :select_set, only: [:principal, :subset_index, :index, :mostrar, :generar, :crear, :eliminar, :actualizar, :editar]
-  before_action :get_object_fields, only: [:subset_index, :index, :crear, :actualizar, :eliminar, :mostrar]
+  before_action :select_set, only: [:principal, :index, :mostrar, :generar, :crear, :eliminar, :actualizar, :editar]
+  before_action :get_object_fields, only: [:index, :crear, :actualizar, :eliminar, :mostrar]
 
   def principal
 		grupos = @sets.map {|k,v| v[:model]}
@@ -37,7 +37,10 @@ class PanelController < ApplicationController
   def panel
   end
 
-  def index 
+  def index
+    if params[:keyword].present?
+      query
+    end
     @rpp = 10
     @count = @sets[params[:set].to_sym][:model].count
     @set = @sets[params[:set].to_sym][:model].where("").order(updated_at: :desc).limit(@rpp).offset(params[:offset].to_i*@rpp)
@@ -100,6 +103,14 @@ class PanelController < ApplicationController
   end
 
   private
+
+  def query
+    @query = ""
+    @fields.keys.each do |f|
+      @query = @query + f.to_s + " like '%" + params[:keyword] + "%'" + (f == @fields.keys[-1] ? "" : " and ")
+    end
+    logger.debug @query
+  end
 
   def select_set
     @sets = {

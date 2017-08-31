@@ -361,7 +361,7 @@
 }
 
 /* Text-input */
-#graphs-gest form input[type="text"]{
+#graphs-gest form input[type="text"], #graphs-gest input[type="text"]{
 	background-color: inherit;
 	border: none;
 	border-bottom: 1px solid rgba(0,0,0,0.3);
@@ -375,7 +375,7 @@
 	transition: all 0.1s linear;
 }
 
-#graphs-gest form input[type="text"]:focus{
+#graphs-gest form input[type="text"]:focus, #graphs-gest input[type="text"]:focus{
 	border-bottom: 2px solid rgba(0,0,0,0.5);
 	font-weight: 500;
 }
@@ -497,10 +497,10 @@ svg{
 	max-width: 100%;
 	height: 0;
 	opacity: 0;
-	-webkit-transition: width 0.3s linear,height 0.3s linear;
-	-moz-transition: height 0.3s linear,height 0.3s linear;
-	-o-transition: width 0.3s linear,height 0.3s linear;
-	transition: width 0.3s linear,height 0.3s linear;
+	-webkit-transition: width 0s linear,height 0s linear;
+	-moz-transition: height 0s linear,height 0s linear;
+	-o-transition: width 0s linear,height 0s linear;
+	transition: width 0s linear,height 0s linear;
 	border-radius: 5px;
 	border: none;
 	padding: 15px 30px;
