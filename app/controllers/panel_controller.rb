@@ -105,9 +105,9 @@ class PanelController < ApplicationController
   private
 
   def query
-    @query = ""
+    @query = "("
     @fields.keys.each do |f|
-      @query = @query + f.to_s + " like '%" + params[:keyword] + "%'" + (f == @fields.keys[-1] ? "" : " or ")
+      @query = @query + f.to_s + " like '%" + params[:keyword] + "%'" + (f == @fields.keys[-1] ? ")" : " or ")
     end
     logger.debug @query
   end

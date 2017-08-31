@@ -25,6 +25,10 @@ function hideLink(event,element,link,method,keyword){
 	$("#vlink").remove();
 }
 
+function buildQuery(conds){
+	console.log(conds);
+}
+
 function readURL(input,display,file) {
   if (input.files && input.files[0]) {
 		console.log(input.files);
