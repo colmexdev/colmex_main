@@ -78,8 +78,8 @@
 		$(this).css({"width": adjustWidths(cols), "text-align": "center", "font-weight": "500","font-size": "16px"}).css('width',('-='+(130/cols)+'px'));
 	});
 	$(".ind-cell").each(function(index){
-		if(this.innerHTML.length > cols*90){
-			var n_html = this.innerHTML.substring(0,cols*90) + "..."
+		if(this.innerHTML.length > 250){
+			var n_html = this.innerHTML.substring(0,250) + "..."
 			this.innerHTML = n_html;
 		}
 	});

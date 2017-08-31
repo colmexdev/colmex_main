@@ -38,7 +38,7 @@ class PanelController < ApplicationController
   end
 
   def index 
-    @rpp = 15
+    @rpp = 10
     @count = @sets[params[:set].to_sym][:model].count
     @set = @sets[params[:set].to_sym][:model].where("").order(updated_at: :desc).limit(@rpp).offset(params[:offset].to_i*@rpp)
     @pags = (@count == 0 ? 0 : ((@count / @rpp) + (@count % @rpp == 0 ? 0 : 1) ))
