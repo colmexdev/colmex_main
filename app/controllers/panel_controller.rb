@@ -42,7 +42,7 @@ class PanelController < ApplicationController
       query
     end
     @rpp = 10
-    @count = @sets[params[:set].to_sym][:model].count
+    @count = @sets[params[:set].to_sym][:model].where(params[:keyword].present? ? @query : "").count
     @set = @sets[params[:set].to_sym][:model].where(params[:keyword].present? ? @query : "").order(updated_at: :desc).limit(@rpp).offset(params[:offset].to_i*@rpp)
     @pags = (@count == 0 ? 0 : ((@count / @rpp) + (@count % @rpp == 0 ? 0 : 1) ))
     respond_to do |format|
