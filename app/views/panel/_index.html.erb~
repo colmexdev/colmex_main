@@ -5,7 +5,6 @@
 <h1>Listado de <%= params[:set] %></h1><br>
 
 <input type="text" name="keyword" id="keyword" <%= params[:keyword].present? ? 'value="'+params[:keyword]+'"' : "" %> placeholder="Palabra clave" onclick="hideLink(event,'#index-panel','<%= panel_index_path(set: params[:set], offset: 0) %>')">
-<%= text_field_tag 'keyword', (params[:keyword].present? ? params[:keyword] : nil ), placeholder: "Palabra clave", onchange: "onclick=hideLink(event,'#index-panel','" + panel_index_path(set: params[:set], offset: 0) + "',null,this.value)" %>
 
 <% if false %>
 <a class="uk-link" onclick="hideLink(event,'#index-panel','<%= panel_nuevo_path(:set => params[:set]) %>')">Nuevo elemento</a>
