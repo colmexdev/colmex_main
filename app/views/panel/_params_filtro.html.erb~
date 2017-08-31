@@ -1,4 +1,7 @@
 <% if params[:set] == "Descubre" %>
-	<%= select_tag "contenido", options_for_select(Descubre.select(:contenido).distinct.pluck(:contenido).map{|c| [c,c]}, prompt: "Todos") %>
+	<%= select_tag "contenido", options_for_select(Descubre.select(:contenido).distinct.pluck(:contenido).map{|c| [c,c]}, include_blank: "Todos") %>
+	<script type="text/javascript">
+		$("#contenido").on("change",function(){console.log($("#contenido").value)});
+	</script>
 <% end %>
 
