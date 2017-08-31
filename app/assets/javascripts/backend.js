@@ -18,6 +18,7 @@ function adjustWidths(cols){
 
 function hideLink(event,element,link,method,keyword){
   keyword = keyword || null;
+  if(keyword != null) console.log(keyword);
 	event.preventDefault();
 	$(element).append('<a ' + (method == "DELETE" ? 'data-method="'+method+'" rel="nofollow" data-remote=true data-confirm="¿Seguro que desea eliminar el objeto?"' : "data-remote=true") + ' href="'+link+(keyword != null ? '&keyword="'+keyword+'"' : "")+'" style="display:none;" id="vlink"></a>');
 	$("#vlink").trigger("click");
