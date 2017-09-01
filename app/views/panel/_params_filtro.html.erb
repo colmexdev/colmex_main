@@ -3,7 +3,7 @@
 <% if params[:set] == "Descubre" %>
 	<%= select_tag "contenido", options_for_select(Descubre.select(:contenido).distinct.pluck(:contenido).map{|c| [c,c]}, params[:contenido] || ""), include_blank: "Todos" %>
 <% elsif params[:set] == "Programas docentes" %>
-	<%= select_tag "programa", options_for_select(Curso.select(:programa).distinct.pluck(:curso).map{|c| [c,c]}, params[:programa] || ""), include_blank: "Todos" %>
+	<%= select_tag "programa", options_for_select(Curso.select(:programa).distinct.pluck(:programa).map{|c| [c,c]}, params[:programa] || ""), include_blank: "Todos" %>
 <% end %>
 
 <script type="text/javascript">
