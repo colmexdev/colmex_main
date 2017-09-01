@@ -27,6 +27,24 @@ function hideLink(event,element,link,method,keyword){
 
 function buildQuery(conds){
 	console.log(conds);
+	var query = "";
+	for(var i in conds){
+		var filter = $("#query_"+conds[i][0])[0];
+		if(filter.value == "" || filter.value == null) continue
+		else query += (query.length > 0 ? " and " : "") + conds[i][0] + " " + conds[i][1] + " " + (conds[i][2] == 0 ? "'" : ( conds[i][2] == 1 ? "'%'" : "")) filter.value + (conds[i][2] == 0 ? "'" : ( conds[i][2] == 1 ? "'%'" : ""));
+	}
+	console.log(query);
+	//return query;
+}
+
+// 0 : Cadena (total)
+// 1 : Cadena (parcial)
+// 2 : Número
+// 3 : Fecha
+function filteredParams(set){
+	if(set == "Descubre") return [["contenido","=",0]];
+	else if(set == "Programas docentes") return [["tipo_curso","=",0],["tipo_curso_linea","=",0]];
+	else return [];
 }
 
 function readURL(input,display,file) {
