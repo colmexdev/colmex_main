@@ -31,7 +31,7 @@ function buildQuery(conds){
 	var query = "";
 	var url_params = "";
 	for(var i in conds){
-		var filter = $("#query_"+conds[i][0])[0];
+		var filter = $("#"+conds[i][0])[0];
 		if(filter.value == "" || filter.value == null) continue
 		else{
 			query += (query.length > 0 ? " and " : "") + conds[i][0] + " " + conds[i][1] + " " + (conds[i][2] == 0 ? "'" : ( conds[i][2] == 1 ? "'%'" : "")) + filter.value + (conds[i][2] == 0 ? "'" : ( conds[i][2] == 1 ? "'%'" : ""));

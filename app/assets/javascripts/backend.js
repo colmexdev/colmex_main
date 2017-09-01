@@ -35,10 +35,10 @@ function buildQuery(conds){
 		if(filter.value == "" || filter.value == null) continue
 		else{
 			query += (query.length > 0 ? " and " : "") + conds[i][0] + " " + conds[i][1] + " " + (conds[i][2] == 0 ? "'" : ( conds[i][2] == 1 ? "'%'" : "")) + filter.value + (conds[i][2] == 0 ? "'" : ( conds[i][2] == 1 ? "'%'" : ""));
-			html_params += (html_params.length > 0 ? "&" : "") + conds[i][0] + "=" + filter.value;
+			url_params += (url_params.length > 0 ? "&" : "") + conds[i][0] + "=" + filter.value;
 		}
 	}
-	return [query,html_params];
+	return [query,url_params];
 }
 
 // 0 : Cadena (total)
