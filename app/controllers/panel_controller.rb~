@@ -40,10 +40,13 @@ class PanelController < ApplicationController
   def index
     if params[:keyword].present?
       query
+      @query = @query + (params[:complement].present? ? (" and " + params[:complement]) : "")
+    else
+      @query = (params[:complement].present? ? params[:complement] : "")
     end
     @rpp = 10
-    @count = @sets[params[:set].to_sym][:model].where(params[:keyword].present? ? @query : "").count
-    @set = @sets[params[:set].to_sym][:model].where(params[:keyword].present? ? @query : "").order(updated_at: :desc).limit(@rpp).offset(params[:offset].to_i*@rpp)
+    @count = @sets[params[:set].to_sym][:model].where(@query.present? ? @query : "").count
+    @set = @sets[params[:set].to_sym][:model].where(@query.present? ? @query : "").order(updated_at: :desc).limit(@rpp).offset(params[:offset].to_i*@rpp)
     @pags = (@count == 0 ? 0 : ((@count / @rpp) + (@count % @rpp == 0 ? 0 : 1) ))
     respond_to do |format|
       format.js
@@ -109,7 +112,6 @@ class PanelController < ApplicationController
     @fields.keys.each do |f|
       @query = @query + f.to_s + " like '%" + params[:keyword] + "%'" + (f == @fields.keys[-1] ? ")" : " or ")
     end
-    logger.debug @query
   end
 
   def select_set
