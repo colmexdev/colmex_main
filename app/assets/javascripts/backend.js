@@ -47,7 +47,7 @@ function buildQuery(conds){
 // 3 : Fecha
 function filteredParams(set){
 	if(set == "Descubre") return [["contenido","=",0]];
-	else if(set == "Programas docentes") return [["tipo_curso","=",0],["tipo_curso_linea","=",0]];
+	else if(set == "Programas docentes") return [["programa","=",0]];
 	else return [];
 }
 
