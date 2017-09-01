@@ -119,9 +119,9 @@ function completaFechas(f_i,f_f,only){
 	var dif_dias = Math.ceil((f_f-f_i)/(24000*3600));
 	for(var i=0; i<dif_dias; i++){
 		if(!only)
-			fs.push({key: new Date((f_i.getTime()-(17000*3600))+(i*24000*3600)), value: 0});
+			fs.push({key: new Date(f_i.getTime()+(i*24000*3600)), value: 0});
 		else
-			fs.push(new Date((f_i.getTime()-(17000*3600))+(i*24000*3600)));
+			fs.push(new Date(f_i.getTime()+(i*24000*3600)));
 	}
 	return fs
 }
