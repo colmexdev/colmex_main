@@ -16,11 +16,12 @@ function adjustWidths(cols){
 	return (100/cols) + "%";
 }
 
-function hideLink(event,element,link,method,keyword){
+function hideLink(event,element,link,method,keyword,query){
   keyword = keyword || null;
-  if(keyword != null) console.log(keyword);
+	query = query || null;
+  if(query != null) console.log(query);
 	event.preventDefault();
-	$(element).append('<a ' + (method == "DELETE" ? 'data-method="'+method+'" rel="nofollow" data-remote=true data-confirm="¿Seguro que desea eliminar el objeto?"' : "data-remote=true") + ' href="'+link+(keyword != null ? '&keyword='+keyword : "")+'" style="display:none;" id="vlink"></a>');
+	$(element).append('<a ' + (method == "DELETE" ? 'data-method="'+method+'" rel="nofollow" data-remote=true data-confirm="¿Seguro que desea eliminar el objeto?"' : "data-remote=true") + ' href="'+link+(keyword != null ? '&keyword='+keyword : "") + (query != null ? "&"+query[1]+"&complement="+query[0] : "") +'" style="display:none;" id="vlink"></a>');
 	$("#vlink").trigger("click");
 	$("#vlink").remove();
 }
@@ -28,13 +29,15 @@ function hideLink(event,element,link,method,keyword){
 function buildQuery(conds){
 	console.log(conds);
 	var query = "";
+	var url_params = "";
 	for(var i in conds){
 		var filter = $("#query_"+conds[i][0])[0];
 		if(filter.value == "" || filter.value == null) continue
-		else query += (query.length > 0 ? " and " : "") + conds[i][0] + " " + conds[i][1] + " " + (conds[i][2] == 0 ? "'" : ( conds[i][2] == 1 ? "'%'" : "")) + filter.value + (conds[i][2] == 0 ? "'" : ( conds[i][2] == 1 ? "'%'" : ""));
+		else{
+			query += (query.length > 0 ? " and " : "") + conds[i][0] + " " + conds[i][1] + " " + (conds[i][2] == 0 ? "'" : ( conds[i][2] == 1 ? "'%'" : "")) + filter.value + (conds[i][2] == 0 ? "'" : ( conds[i][2] == 1 ? "'%'" : ""));
+			html_params += (html_params.length > 0 ? "&" : "") + conds[i][0] + "=" + filter.value;
 	}
-	console.log(query);
-	//return query;
+	return [query,html_params];
 }
 
 // 0 : Cadena (total)
