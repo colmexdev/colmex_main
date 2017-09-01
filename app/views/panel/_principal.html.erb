@@ -137,7 +137,7 @@
 
 			traceFigures("#svg1",[fechas_ac],"line-time","path",{"class":"line","transform":"translate("+margins["l"]+","+(margins["t"])+")","fill":"none","stroke":"black","d":linea_t});
 
-			traceFigures("#svg1",fechas_ac,"nodes","circle",{"class":"nodes","transform":"translate("+margins["l"]+","+(margins["t"])+")","id":function(d,i){return "punto-" + i},"r":"3px","cx":function(d){ return x(new Date(d["key"]))},"cy":function(d){ return y(d["value"])},"stroke":"#dddddd","stroke-width": 3},x,y,null,
+			traceFigures("#svg1",fechas_ac,"nodes","circle",{"class":"nodes","transform":"translate("+margins["l"]+","+(sizes["uc"]["h"]-margins["b"])+")","id":function(d,i){return "punto-" + i},"r":"3px","cx":function(d){ return x(new Date(d["key"]))},"cy":function(d){ return y(d["value"])},"stroke":"#dddddd","stroke-width": 3},x,y,null,
 {"mouseover":function(d,i){
 	d3.selectAll(".nodes").transition().duration(250).style("opacity","0.3");
 	d3.select("#punto-"+i).transition().style("opacity","1");
