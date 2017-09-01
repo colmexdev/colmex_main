@@ -8,6 +8,7 @@
 	var pars = filteredParams("<%= params[:set] %>");
 	for(var i in pars){
 		$("#query_"+pars[i]).on("change",function(){
+			//hideLink(event,'#index-panel','<%= panel_index_path(set: params[:set], offset: 0) %>',null,$("#keyword")[0].value)
 			buildQuery(pars);
 		});
 	}
