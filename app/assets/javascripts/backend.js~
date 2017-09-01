@@ -124,6 +124,7 @@ function completaFechas(f_i,f_f,only){
 		else
 			fs.push(new Date(f_i.getTime()+(i*24000*3600)));
 	}
+	console.log(fs);
 	return fs
 }
 
