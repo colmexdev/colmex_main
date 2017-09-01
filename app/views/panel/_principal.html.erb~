@@ -139,7 +139,24 @@
 			traceFigures("#svg1",fechas_ac,"nodes","circle",{"class":"nodes","transform":"translate("+margins["l"]+","+(margins["t"])+")","id":function(d,i){return "punto-" + i},"r":"3px","cx":function(d){ return x(new Date(d["key"]))},"cy":function(d){ return y(d["value"])},"stroke":"#dddddd","stroke-width": 3},x,y);
 				
 			//Gráfica de porcentajes (Pastel)
-			pieChart("#cont-2",{"max-width":"500px","height":sizes["pc"]["h"]+"px","min-width":sizes["pc"]["w"]+"px"},"#svg_p",[sizes["pc"]["w"],sizes["pc"]["h"]],"pie_chart",[20,180],[0.8,9],"sect",objetosContadosPorTipo);
+			pieChart("#cont-2",{"max-width":"500px","height":sizes["pc"]["h"]+"px","min-width":sizes["pc"]["w"]+"px"},"#svg_p",[sizes["pc"]["w"],sizes["pc"]["h"]],"pie_chart",[20,180],[0.8,9],"sect",objetosContadosPorTipo,
+{"mouseover":function(d,i){
+	d3.selectAll(".sect").transition().duration(250).style("opacity","0.3");
+	d3.select("#sect-"+i).transition().style("opacity","1");
+	tooltip.html("Contenido: "  + d.key + "<br>" + "Total: " + d.value)
+		.style("font-size","14px")
+		.style("height","auto")
+		.style("padding","")
+		.style("width","auto")
+		.style("left", (d3.event.pageX < parseInt(tooltip.style("width").replace("px",""))/2 ? "10px" : (d3.event.pageX + (parseInt(tooltip.style("width").replace("px",""))) >= $(window).width() ? (($(window).width() - ( d3.event.pageX + parseInt(tooltip.style("width").replace("px","")))) + "px")  : (d3.event.pageX - (parseInt(tooltip.style("width").replace("px",""))/2)) ) + "px" ) )
+		.style("top", (d3.event.pageY - (25 + 1*parseInt(tooltip.style("height").replace("px","")))) + "px").transition()
+	.style("opacity","0.8");
+	},
+	"mouseleave":function(d,i){
+		d3.selectAll(".sect").transition().style("opacity","");
+		tooltip.html("")
+				.style("padding","0");
+	}});
 
 			adjustLabels();
 
@@ -274,7 +291,6 @@ function queryCoreReportingApi(profileId) {
 		}
 			pieChart("#cont-devs",{"max-width":"500px","height":500+"px","min-width":500+"px"},"#svg_devs",[500,500],"pie_devs",[50,180],[0.8,9],"sect-dev",data_devs,
 {"mouseover":function(d,i){
-	console.log(i);
 	d3.selectAll(".sect-dev").transition().duration(250).style("opacity","0.3");
 	d3.select("#sect-dev-"+i).transition().style("opacity","1");
 	tooltip.html("Dispositivo: "  + data_devs[i].key + "<br>" + "Usuarios: " + d.value)
@@ -740,7 +756,6 @@ function queryCoreReportingApi(profileId) {
 			.call(yAxis);
 
 		adjustLabels();
-		//d3.selectAll(".axis-up-y .tick text").remove();
 
 		traceFigures("#svg_ups",data_pv,"pv-bar","rect",{"class":"pv-bar","transform":"translate("+"50"+","+"0"+")","id":function(d,i){return "pv-bar-" + i},"x":x_uv(0),"y":function(d){return y_uv(d.key)},"width":function(d){return (x_uv(d.value) - x_uv(0) < 3.5 ? 3.5 : x_uv(d.value) - x_uv(0) )},"height":y_uv.bandwidth(),"fill":"rgba(100,149,237,0.8)"}, x_uv ,y_uv, null,
 {"mouseover":function(d,i){
@@ -748,7 +763,7 @@ function queryCoreReportingApi(profileId) {
 	d3.select("#pv-bar-"+i).transition().style("opacity","1");
 	d3.selectAll(".uv-bar").transition().duration(250).style("opacity","0.3");
 	d3.select("#uv-bar-"+i).transition().style("opacity","1");
-	tooltip.html("Liga: "  + d.key + "<br>" + "Visitas: " + data_uv[i].value + "<br>Usuarios: " + d.value)
+	tooltip.html("Liga: "  + d.key + "<br>" + "Visitas: " + d.value + "<br>Usuarios: " + data_uv[i].value)
 		.style("font-size","14px")
 		.style("height","auto")
 		.style("padding","")
@@ -770,7 +785,7 @@ function queryCoreReportingApi(profileId) {
 	d3.select("#pv-bar-"+i).transition().style("opacity","1");
 	d3.selectAll(".uv-bar").transition().duration(250).style("opacity","0.3");
 	d3.select("#uv-bar-"+i).transition().style("opacity","1");
-	tooltip.html("Liga: "  + d.key + "<br>" + "Visitas: " + d.value + "<br>Usuarios: " + data_pv[i].value)
+	tooltip.html("Liga: "  + d.key + "<br>" + "Visitas: " + data_pv[i].value + "<br>Usuarios: " + d.value)
 		.style("font-size","14px")
 		.style("height","auto")
 		.style("padding","")

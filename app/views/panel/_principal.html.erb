@@ -136,10 +136,44 @@
 
 			traceFigures("#svg1",[fechas_ac],"line-time","path",{"class":"line","transform":"translate("+margins["l"]+","+(margins["t"])+")","fill":"none","stroke":"black","d":linea_t});
 
-			traceFigures("#svg1",fechas_ac,"nodes","circle",{"class":"nodes","transform":"translate("+margins["l"]+","+(margins["t"])+")","id":function(d,i){return "punto-" + i},"r":"3px","cx":function(d){ return x(new Date(d["key"]))},"cy":function(d){ return y(d["value"])},"stroke":"#dddddd","stroke-width": 3},x,y);
+			traceFigures("#svg1",fechas_ac,"nodes","circle",{"class":"nodes","transform":"translate("+margins["l"]+","+(margins["t"])+")","id":function(d,i){return "punto-" + i},"r":"3px","cx":function(d){ return x(new Date(d["key"]))},"cy":function(d){ return y(d["value"])},"stroke":"#dddddd","stroke-width": 3},x,y,null,
+{"mouseover":function(d,i){
+	d3.selectAll(".nodes").transition().duration(250).style("opacity","0.3");
+	d3.select("#punto-"+i).transition().style("opacity","1");
+	tooltip.html("Fecha: "  + formatDate(d.key) + "<br>" + "Total: " + d.value)
+		.style("font-size","14px")
+		.style("height","auto")
+		.style("padding","")
+		.style("width","auto")
+		.style("left", (d3.event.pageX < parseInt(tooltip.style("width").replace("px",""))/2 ? "10px" : (d3.event.pageX + (parseInt(tooltip.style("width").replace("px",""))) >= $(window).width() ? (($(window).width() - ( d3.event.pageX + parseInt(tooltip.style("width").replace("px","")))) + "px")  : (d3.event.pageX - (parseInt(tooltip.style("width").replace("px",""))/2)) ) + "px" ) )
+		.style("top", (d3.event.pageY - (25 + 1*parseInt(tooltip.style("height").replace("px","")))) + "px").transition()
+	.style("opacity","0.8");
+	},
+	"mouseleave":function(d,i){
+		d3.selectAll(".nodes").transition().style("opacity","");
+		tooltip.html("")
+				.style("padding","0");
+	}});
 				
 			//Gráfica de porcentajes (Pastel)
-			pieChart("#cont-2",{"max-width":"500px","height":sizes["pc"]["h"]+"px","min-width":sizes["pc"]["w"]+"px"},"#svg_p",[sizes["pc"]["w"],sizes["pc"]["h"]],"pie_chart",[20,180],[0.8,9],"sect",objetosContadosPorTipo);
+			pieChart("#cont-2",{"max-width":"500px","height":sizes["pc"]["h"]+"px","min-width":sizes["pc"]["w"]+"px"},"#svg_p",[sizes["pc"]["w"],sizes["pc"]["h"]],"pie_chart",[20,180],[0.8,9],"sect",objetosContadosPorTipo,
+{"mouseover":function(d,i){
+	d3.selectAll(".sect").transition().duration(250).style("opacity","0.3");
+	d3.select("#sect-"+i).transition().style("opacity","1");
+	tooltip.html("Contenido: "  + d.key + "<br>" + "Total: " + d.value)
+		.style("font-size","14px")
+		.style("height","auto")
+		.style("padding","")
+		.style("width","auto")
+		.style("left", (d3.event.pageX < parseInt(tooltip.style("width").replace("px",""))/2 ? "10px" : (d3.event.pageX + (parseInt(tooltip.style("width").replace("px",""))) >= $(window).width() ? (($(window).width() - ( d3.event.pageX + parseInt(tooltip.style("width").replace("px","")))) + "px")  : (d3.event.pageX - (parseInt(tooltip.style("width").replace("px",""))/2)) ) + "px" ) )
+		.style("top", (d3.event.pageY - (25 + 1*parseInt(tooltip.style("height").replace("px","")))) + "px").transition()
+	.style("opacity","0.8");
+	},
+	"mouseleave":function(d,i){
+		d3.selectAll(".sect").transition().style("opacity","");
+		tooltip.html("")
+				.style("padding","0");
+	}});
 
 			adjustLabels();
 
@@ -274,7 +308,6 @@ function queryCoreReportingApi(profileId) {
 		}
 			pieChart("#cont-devs",{"max-width":"500px","height":500+"px","min-width":500+"px"},"#svg_devs",[500,500],"pie_devs",[50,180],[0.8,9],"sect-dev",data_devs,
 {"mouseover":function(d,i){
-	console.log(i);
 	d3.selectAll(".sect-dev").transition().duration(250).style("opacity","0.3");
 	d3.select("#sect-dev-"+i).transition().style("opacity","1");
 	tooltip.html("Dispositivo: "  + data_devs[i].key + "<br>" + "Usuarios: " + d.value)
