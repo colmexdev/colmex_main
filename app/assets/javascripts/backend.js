@@ -48,6 +48,10 @@ function buildQuery(conds){
 function filteredParams(set){
 	if(set == "Descubre") return [["contenido","=",0]];
 	else if(set == "Programas docentes") return [["programa","=",0]];
+	else if(set == "Directorio de Autoridades") return [["seccion","=",0]];
+	else if(set == "Documentos varios") return [["tipo","=",0]];
+	else if(set == "Cátedras y seminarios") return [["tipo","=",0]];
+	else if(set == "Directorio académico") return [["adscripcion","=",0]];
 	else return [];
 }
 

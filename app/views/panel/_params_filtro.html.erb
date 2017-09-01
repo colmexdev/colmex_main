@@ -4,6 +4,14 @@
 	<%= select_tag "contenido", options_for_select(Descubre.select(:contenido).distinct.pluck(:contenido).map{|c| [c,c]}, params[:contenido] || ""), include_blank: "Todos" %>
 <% elsif params[:set] == "Programas docentes" %>
 	<%= select_tag "programa", options_for_select(Curso.select(:programa).distinct.pluck(:programa).map{|c| [c,c]}, params[:programa] || ""), include_blank: "Todos" %>
+<% elsif params[:set] == "Directorio de Autoridades" %>
+	<%= select_tag "seccion", options_for_select(Personal.select(:seccion).distinct.pluck(:seccion).map{|s| [s,s]}, params[:seccion] || ""), include_blank: "Todos" %>
+<% elsif params[:set] == "Documentos varios" %>
+	<%= select_tag "tipo", options_for_select(Documento.select(:tipo).distinct.pluck(:tipo).map{|t| [t,t]}, params[:tipo] || ""), include_blank: "Todos" %>
+<% elsif params[:set] == "Cátedras y seminarios" %>
+	<%= select_tag "tipo", options_for_select(Catedra.select(:tipo).distinct.pluck(:tipo).map{|t| [t,t]}, params[:tipo] || ""), include_blank: "Todos" %>
+<% elsif params[:set] == "Directorio académico" %>
+	<%= select_tag "adscripcion", options_for_select(Academico.select(:adscripcion).distinct.pluck(:adscripcion).map{|a| [a,a]},params[:adscripcion] || ""), include_blank: "Todos" %>
 <% end %>
 
 <script type="text/javascript">
