@@ -161,7 +161,7 @@
 {"mouseover":function(d,i){
 	d3.selectAll(".sect").transition().duration(250).style("opacity","0.3");
 	d3.select("#sect-"+i).transition().style("opacity","1");
-	tooltip.html("Contenido: "  + d.key + "<br>" + "Total: " + d.value)
+	tooltip.html("Contenido: "  + objetosContadosPorTipo[i].key + "<br>" + "Total: " + d.value)
 		.style("font-size","14px")
 		.style("height","auto")
 		.style("padding","")
