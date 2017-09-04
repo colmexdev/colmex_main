@@ -11,7 +11,7 @@ class InformacionGeneralController < ApplicationController
   def documentacion_institucional
     @actas = Documento.where(:tipo => "Junta")
  		@estatutos = Documento.where(:tipo => "Estatuto").first
-
+    @anios = Documento.where(:tipo => "Junta").order(anio: :desc).group(:anio).pluck(:anio)
   end
 
   def informacion_para_estudiantes
@@ -23,6 +23,7 @@ class InformacionGeneralController < ApplicationController
 
   def actas
     @actas = Documento.where(:tipo => "Junta")
+    @anios = Documento.where(:tipo => "Junta").order(anio: :desc).group(:anio).pluck(:anio)
     respond_to do |format|
       format.js
     end
