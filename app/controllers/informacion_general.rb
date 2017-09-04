@@ -97,7 +97,8 @@ class InformacionGeneralController < ApplicationController
 
   def presidencia
     @presidencias = Personal.where(:seccion => "Presidencia")
-		@profs_centros = Personal.where("seccion = ? AND nombre = ?", "Asociado","Luis Óscar Gómez Rodríguez †").union(Personal.where("seccion = ? AND nombre = ?", "Asociado","Ma. Guadalupe González González")).union(Personal.where("seccion = ? AND nombre = ?", "Asociado","María Eugenia Zavala"))
+    @profs_centros = Personal.find(47).union(Personal.find(48)).union(Personal.find(46))
+		#@profs_centros = Personal.where("seccion = ? AND nombre = ?", "Asociado","Luis Óscar Gómez Rodríguez †").union(Personal.where("seccion = ? AND nombre = ?", "Asociado","Ma. Guadalupe González González")).union(Personal.where("seccion = ? AND nombre = ?", "Asociado","María Eugenia Zavala"))
     @asociados = Personal.where("seccion = ? AND nombre = ?", "Asociado","María Adela Angoa").union(Personal.where("seccion = ? AND nombre = ?", "Asociado","Cristopher Domínguez")).union(Personal.where("seccion = ? AND nombre = ?", "Asociado","Dulce Carolina Mendoza Cazarez")).union(Personal.where("seccion = ? AND nombre = ?", "Asociado","Mauricio Rodríguez Abreu")).union(Personal.where("seccion = ? AND nombre = ?", "Asociado","Alejandro Rosales Martínez"))
     respond_to do |format|
       format.js
