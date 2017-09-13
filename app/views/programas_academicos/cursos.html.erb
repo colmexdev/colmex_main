@@ -29,7 +29,7 @@
     <span class="titulo-chico morado" id="titulo-render"><%= params[:locale] == "en" ? (@presenciales.count > 0 ? "Short courses" : "") : (@presenciales.count > 0 ? "Cursos presenciales" : "Cursos en línea") %></span><br>
 
     <div id="cursos-render">
-    	<%= render (@presenciales.size > 0 ? 'programas_academicos/presenciales' : 'programas_academicos/electronicos'), tipo: 'MOOC' %>
+    	<%= render (@presenciales.size > 0 ? 'programas_academicos/presenciales' : 'programas_academicos/electronicos'), params: {tipo: 'MOOC'} %>
 
     </div>
     </div>
