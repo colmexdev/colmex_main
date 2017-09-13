@@ -11,7 +11,7 @@
     <!--          Aquí empieza el menú pequeño          -->
     <ul style="text-align:left;">
 
-			<% if @presenciales.size == 0 %>
+			<% if @presenciales.count == 0 %>
       <li style="list-style-type:none; margin-bottom:5px;"><%= link_to(image_tag('bt-flechita.png', :class => "leave_img") + image_tag("bt-flechita-hover.png", :class => "hover_img") + (params[:locale] == "en" ? "Short courses" : "Presenciales"), presenciales_path, :remote => true, :class => "link-sobre", :id => "presencial-link") %></li>
 			<% end %>
 			<% if params[:locale] != "en" %>
@@ -21,7 +21,7 @@
     </div>
 
     <div class="uk-width-large-4-5">
-    <span class="titulo-chico morado" id="titulo-render"><%= params[:locale] == "en" ? "Short courses" : "Cursos presenciales" %></span><br>
+    <span class="titulo-chico morado" id="titulo-render"><%= params[:locale] == "en" ? (@presenciales.count > 0 ? "Short courses" : "") : (@presenciales.count > 0 ? "Cursos presenciales" : "Cursos en línea") %></span><br>
 
     <div id="cursos-render">
     	<%= render (@presenciales.size > 0 ? 'programas_academicos/presenciales' : 'programas_academicos/electronicos') %>
