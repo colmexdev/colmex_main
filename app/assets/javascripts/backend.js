@@ -25,8 +25,25 @@ function hideLink(event,element,link,method,keyword,query){
 	$("#vlink").remove();
 }
 
+function filterAnalytics(link){
+	var conds = [];
+	var pars = "";
+	var url = "";
+	if($("#fecha_desde")[0].value != "")
+		conds.push(["di",$("#fecha_desde")[0].value]);
+	if($("#fecha_hasta")[0].value != "")
+		conds.push(["dd",$("#fecha_hasta")[0].value]);
+	if(conds.length != 0){
+		url = link + (link.indexOf("?") != -1 ? "" : "?")
+		for(var i in conds)
+			pars = pars + conds[i][0] + "=" + conds[i][1] + (i == conds.length -1 ? "" : "&");
+		url = url + (url.indexOf("?") != -1 ? (url.indexOf("&") != -1 ? ("&" + pars) : pars) : ("?"+pars))
+	}
+	console.log(url);
+	return url;
+}
+
 function buildQuery(conds){
-	console.log(conds);
 	var query = "";
 	var url_params = "";
 	for(var i in conds){
