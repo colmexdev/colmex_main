@@ -24,7 +24,7 @@
     <span class="titulo-chico morado" id="titulo-render"><%= params[:locale] == "en" ? "Short courses" : "Cursos presenciales" %></span><br>
 
     <div id="cursos-render">
-    	<%= render 'programas_academicos/presenciales' %>
+    	<%= render (@presenciales.size > 0 ? 'programas_academicos/presenciales' : 'programas_academicos/electronicos') %>
 
     </div>
     </div>
