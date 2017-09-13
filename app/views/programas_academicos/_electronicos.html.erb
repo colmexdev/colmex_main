@@ -8,7 +8,7 @@
 	  <h3 class="uk-accordion-title"><%= construir_encabezado("bt-flechita.png", "bt-flechita-abajo.png", t.tipo_curso_linea + "s") %></h3>
 	  <div class="uk-accordion-content">
 
-	    <% @electronicos.where(:tipo_curso_linea => t.tipo_curso_linea).order(created_at: (t.tipo_curso_linea == "MOOC" ? :desc : "")).each do |e| %>
+	    <% @electronicos.where(:tipo_curso_linea => t.tipo_curso_linea).order(created_at: (t.tipo_curso_linea == "MOOC" ? :desc : :asc)).each do |e| %>
 
     <div class="uk-grid uk-grid-medium uk-margin-large-bottom">
     <div class="uk-width-1-5 uk-text-center">
