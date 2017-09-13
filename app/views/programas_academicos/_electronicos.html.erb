@@ -1,8 +1,9 @@
 <div class="acordeon-premios">
-<script type="text/javascript" src="../js/accordion.js"></script>
+
 
 <script type="text/javascript">initAddThis();</script>
 
+<% if false %>
 <div class="uk-accordion" data-uk-accordion="{showfirst: true}">
 	<% @electronicos.group(:tipo_curso_linea).order(tipo_curso_linea: :desc).each do |t| %>
 	  <h3 class="uk-accordion-title"><%= construir_encabezado("bt-flechita.png", "bt-flechita-abajo.png", t.tipo_curso_linea + "s") %></h3>
@@ -105,6 +106,103 @@
           </div>
 	<% end %>
 </div>
+<% end %>
+<%= tipo %>
+
+    <% @electronicos.where(:tipo_curso_linea => tipo).order(created_at: (tipo == "MOOC" ? :desc : :asc)).each do |e| %>
+
+    <div class="uk-grid uk-grid-medium uk-margin-large-bottom">
+    <div class="uk-width-1-5 uk-text-center">
+    <img src=<%= e.foto.url %> class="uk-border-rounded" alt="Foto curso">
+    </div>
+    <div class="uk-width-4-5 uk-vertical-align-middle uk-text-left uk-text-break">
+    <h2 class="vino"><%= e.titulo %></h2>
+    <% if tipo != "Breve" %>
+    <div class="uk-grid uk-grid-large">
+    <div class="uk-width-large-4-6 uk-text-left">
+    <% end %>
+    <p><%= e.descripcion %></p>
+    <% if e.imparte.to_s != "" %>
+      <p class="uk-text-left">Impartido por <%= e.imparte %></p>
+    <% end %>
+
+		<% if tipo == "MOOC" %>
+		  <% if e.liga.present? %>
+		    <a href=<%= e.liga %> target="_blank" class="ver-mas uk-margin-large-bottom uk-button-small"><%= t('centros.boton') %></a>
+		  <% end %>
+		<% end %>
+
+		<%= e.tags.html_safe %>
+
+		<% if false %>
+    <% if tipo == "Breve" && !e.liga.nil? %>
+      <div class="addthis_inline_share_toolbox" data-url=<%= e.liga %> data-title="<%= e.titulo %>" style="display:inline-block; float: right;margin-top:15px;"></div>
+    <% end %>
+		<% end %>
+
+    <% if tipo == "MOOC" %>
+    </div>
+    <div class="uk-width-large-2-6">
+    <h3 class="vino uk-margin-bottom-remove">
+    <% if !e.fecha_inicio_clases.nil? %>
+      <% if e.fecha_fin_clases.nil? %>
+        <%= "Inicio de clases:" %>
+      <% else %>
+        <%= "Duración:" %>
+      <% end %>
+    <% end %>
+    </h3>
+    <h4 class="uk-margin-top-remove">
+      <% if !e.fecha_inicio_clases.nil? %>
+        <%= (e.fecha_inicio_clases.day.to_s + " de " + num2Month(e.fecha_inicio_clases.month - 1)) || "" %>
+        <% if e.fecha_fin_clases.nil? %>
+          <%= (" de " + e.fecha_inicio_clases.year.to_s) || "" %>
+        <% else %>
+          <% if e.fecha_fin_clases.year != e.fecha_inicio_clases.year %>
+            <%= (" de " + e.fecha_inicio_clases.year.to_s + " al " + e.fecha_fin_clases.day.to_s + " de " + num2Month(e.fecha_fin_clases.month - 1) + " de " + e.fecha_fin_clases.year.to_s ) || "" %>
+          <% else %>
+            <%= (" al " + e.fecha_fin_clases.day.to_s + " de " + num2Month(e.fecha_fin_clases.month - 1) + " de " + e.fecha_fin_clases.year.to_s ) || "" %>
+          <% end %>
+        <% end %>
+      <% end %>
+    </h4>
+    <h3 class="vino uk-margin-bottom-remove">
+    <% if !e.fecha_inicio_conv.nil? and !e.fecha_fin_conv.nil? %>
+      <%= "Próxima convocatoria" %>
+    <% end %>
+    </h3>
+    <h4 class="uk-margin-top-remove">
+      <% if !e.fecha_inicio_conv.nil? %>
+        <%= (e.fecha_inicio_conv.day.to_s + " de " + num2Month(e.fecha_inicio_conv.month - 1)) || "" %>
+        <% if e.fecha_fin_conv.nil? %>
+          <%= (" de " + e.fecha_inicio_conv.year.to_s) || "" %>
+        <% else %>
+          <% if e.fecha_fin_conv.year != e.fecha_inicio_conv.year %>
+            <%= (" de " + e.fecha_inicio_conv.year.to_s + " al " + e.fecha_fin_conv.day.to_s + " de " + num2Month(e.fecha_fin_conv.month - 1) + " de " + e.fecha_fin_conv.year.to_s ) || "" %>
+          <% else %>
+            <%= (" al " + e.fecha_fin_conv.day.to_s + " de " + num2Month(e.fecha_fin_conv.month - 1) + " de " + e.fecha_fin_conv.year.to_s ) || "" %>
+          <% end %>
+        <% end %>
+      <% end %>
+    </h4>
+    <h3 class="vino uk-margin-top-remove">
+    <% if !e.fecha_fin_clases.nil? && e.fecha_inicio_clases > Date.current() && e.tipo_curso_linea == "MOOC" && e.tipo_curso == "En línea" %>
+      <%= "Convocatoria abierta" %>
+    <% else %>
+      <%= tipo == "MOOC" ? "Curso abierto" : "Convocatoria cerrada" %>
+    <% end %>
+    </h3>
+    <% if tipo == "MOOC" && !e.liga.nil? %>
+      <div class="addthis_inline_share_toolbox" data-url=<%= e.liga %> data-title="<%= e.titulo %>"></div>
+    <% end %>
+    </div>
+    </div>
+    <% end %>
+    </div>
+    </div>
+
+            <% end %>
+
 </div>
 
     <!-- Go to www.addthis.com/dashboard to customize your tools -->

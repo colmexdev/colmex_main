@@ -88,7 +88,9 @@
 		          <li><a href="<%= licenciaturas_path %>"><%= t('botones.b3.opciones.op1') %></a></li>
 		          <li><a href="<%= maestrias_path %>"><%= t('botones.b3.opciones.op2') %></a></li>
 		          <li><a href="<%= doctorados_path %>"><%= t('botones.b3.opciones.op3') %></a></li>
-		          <li><a href="<%= cursos_varios_path %>"><%= t('botones.b3.opciones.op6') %></a></li>
+							<% if params[:locale] == "es" || Curso.where("programa = ? AND tipo_curso = ? and fecha_fin_conv >= ?", "Curso", "Presencial", Date.current()).count > 0 %>
+          		<li><a href="<%= cursos_varios_path %>"><%= t('botones.b3.opciones.op6') %></a></li>
+							<% end %>
 		          <li><a href="<%= catedras_seminarios_path %>"><%= t('botones.b3.opciones.op9') %></a></li>
 		          <li><a href="<%= admisiones_path %>"><%= t('botones.b3.opciones.op4') %></a></li>
 		          <li><a href="<%= (params[:locale] != 'en' ? 'http://oia.colmex.mx/' : 'http://oia.colmex.mx/index.php/home' ) %>" target="_blank"><%= t('botones.b3.opciones.op5') %></a></li>
@@ -196,7 +198,9 @@
 		          <li><a href="<%= licenciaturas_path %>"><%= t('botones.b3.opciones.op1') %></a></li>
 		          <li><a href="<%= maestrias_path %>"><%= t('botones.b3.opciones.op2') %></a></li>
 		          <li><a href="<%= doctorados_path %>"><%= t('botones.b3.opciones.op3') %></a></li>
-		          <li><a href="<%= cursos_varios_path %>"><%= t('botones.b3.opciones.op6') %></a></li>
+							<% if params[:locale] == "es" || Curso.where("programa = ? AND tipo_curso = ? and fecha_fin_conv >= ?", "Curso", "Presencial", Date.current()).count > 0 %>
+          		<li><a href="<%= cursos_varios_path %>"><%= t('botones.b3.opciones.op6') %></a></li>
+							<% end %>
 		          <li><a href="<%= catedras_seminarios_path %>"><%= t('botones.b3.opciones.op9') %></a></li>
 		          <li><a href="<%= admisiones_path %>"><%= t('botones.b3.opciones.op4') %></a></li>
 		          <li><a href="<%= (params[:locale] != 'en' ? 'http://oia.colmex.mx/' : 'http://oia.colmex.mx/index.php/home' ) %>" target="_blank"><%= t('botones.b3.opciones.op5') %></a></li>
@@ -259,7 +263,9 @@
 						<li><a href="<%= licenciaturas_path %>" class="sublink"><%= t('botones.b3.opciones.op1') %></a></li>
           	<li><a href="<%= maestrias_path %>" class="sublink"><%= t('botones.b3.opciones.op2') %></a></li>
           	<li><a href="<%= doctorados_path %>" class="sublink"><%= t('botones.b3.opciones.op3') %></a></li>
+						<% if params[:locale] == "es" || Curso.where("programa = ? AND tipo_curso = ? and fecha_fin_conv >= ?", "Curso", "Presencial", Date.current()).count > 0 %>
           	<li><a href="<%= cursos_varios_path %>" class="sublink"><%= t('botones.b3.opciones.op6') %></a></li>
+						<% end %>
           	<li><a href="<%= catedras_seminarios_path %>" class="sublink"><%= t('botones.b3.opciones.op9') %></a></li>
           	<li><a href="<%= admisiones_path %>" class="sublink"><%= t('botones.b3.opciones.op4') %></a></li>
           	<li><a href="<%= (params[:locale] != 'en' ? 'http://oia.colmex.mx/' : 'http://oia.colmex.mx/index.php/home' ) %>" class="sublink" target="_blank"><%= t('botones.b3.opciones.op5') %></a></li>

@@ -15,7 +15,12 @@
       <li style="list-style-type:none; margin-bottom:5px;"><%= link_to(image_tag('bt-flechita.png', :class => "leave_img") + image_tag("bt-flechita-hover.png", :class => "hover_img") + (params[:locale] == "en" ? "Short courses" : "Presenciales"), presenciales_path, :remote => true, :class => "link-sobre", :id => "presencial-link") %></li>
 			<% end %>
 			<% if params[:locale] != "en" %>
+
+			<% if false %>
       <li style="list-style-type:none; margin-bottom:5px;"><%= link_to image_tag('bt-flechita.png', :class => "leave_img") + image_tag("bt-flechita-hover.png", :class => "hover_img") + (params[:locale] == "en" ? "Massive online courses" : "En línea"), electronicos_path, :remote => true, :class => "link-sobre", :id => "electronico-link" %></li>
+			<% end %>
+      <li style="list-style-type:none; margin-bottom:5px;"><%= link_to image_tag('bt-flechita.png', :class => "leave_img") + image_tag("bt-flechita-hover.png", :class => "hover_img") + "MOOCs", electronicos_path(tipo: "MOOC"), :remote => true, :class => "link-sobre", :id => "electronico-link" %></li>
+      <li style="list-style-type:none; margin-bottom:5px;"><%= link_to image_tag('bt-flechita.png', :class => "leave_img") + image_tag("bt-flechita-hover.png", :class => "hover_img") + "Cursos breves", electronicos_path(tipo: "Breve"), :remote => true, :class => "link-sobre", :id => "electronico-link" %></li>
 			<% end %>
     </ul>
     </div>
@@ -24,7 +29,7 @@
     <span class="titulo-chico morado" id="titulo-render"><%= params[:locale] == "en" ? (@presenciales.count > 0 ? "Short courses" : "") : (@presenciales.count > 0 ? "Cursos presenciales" : "Cursos en línea") %></span><br>
 
     <div id="cursos-render">
-    	<%= render (@presenciales.size > 0 ? 'programas_academicos/presenciales' : 'programas_academicos/electronicos') %>
+    	<%= render (@presenciales.size > 0 ? 'programas_academicos/presenciales' : 'programas_academicos/electronicos'), tipo: 'MOOC' %>
 
     </div>
     </div>
