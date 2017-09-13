@@ -39,7 +39,7 @@ function filterAnalytics(link){
 			pars = pars + conds[i][0] + "=" + conds[i][1] + (i == conds.length -1 ? "" : "&");
 		url = url + "&" + pars;
 	}
-	console.log(url);
+	//console.log(url);
 	return url;
 }
 
@@ -73,7 +73,7 @@ function filteredParams(set){
 
 function readURL(input,display,file) {
   if (input.files && input.files[0]) {
-		console.log(input.files);
+		//console.log(input.files);
 		window.archivo = input.files;
     var reader = new FileReader();
     
