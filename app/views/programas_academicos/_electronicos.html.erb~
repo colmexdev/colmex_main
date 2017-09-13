@@ -4,7 +4,7 @@
 <script type="text/javascript">initAddThis();</script>
 
 <% tip = (tipo.present? ? tipo : params[:tipo]) %>
-<%= tip %>
+
 
     <% @electronicos.where(:tipo_curso_linea => tip).order(created_at: (tip == "MOOC" ? :desc : :asc)).each do |e| %>
 
