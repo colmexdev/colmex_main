@@ -37,7 +37,7 @@ function filterAnalytics(link){
 		url = link + (link.indexOf("?") != -1 ? "" : "?")
 		for(var i in conds)
 			pars = pars + conds[i][0] + "=" + conds[i][1] + (i == conds.length -1 ? "" : "&");
-		url = url + (url.indexOf("?") != -1 ? (url.indexOf("&") != -1 ? ("&" + pars) : pars) : ("?"+pars))
+		url = url + "&" + pars;
 	}
 	console.log(url);
 	return url;
