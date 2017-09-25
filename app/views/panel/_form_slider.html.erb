@@ -17,7 +17,7 @@
   </div>
   <div class="field">
     <%= f.label :posicion, "Posición del badge" %><br>
-    <%= f.select(:posicion, [['Superior izquierda','SI'],['Superior derecha','SD'],['Inferior derecha','ID'],['Inferior izquierda','II']], :selected => (@obj.posicion || 'SI')) %>
+    <%= f.select(:posicion, [['Superior izquierda','SI'],['Superior derecha','SD'],['Inferior derecha','ID'],['Inferior izquierda','II'],['Centrado','CC']], :selected => (@obj.posicion || 'SI')) %>
   </div>
   <div class="field">
     <%= f.label :fecha_expiracion, "Fecha de vencimiento (si aplica)" %><br>

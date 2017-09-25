@@ -928,6 +928,7 @@ ul.ul-nav { display: table;
 	.sd { top: 35px; right: 100px; }
 	.id { bottom: 50px; right: 100px; }
 	.ii { bottom: 50px; left: 100px; }
+	.c	{ @include centrado; }
 
 //Clases que afectan la sección de eventos
 #div_eventos{
