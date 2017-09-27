@@ -58,6 +58,9 @@ gem 'd3-rails'
 
 gem 'figaro'
 
+#trix como editor de textos
+gem 'trix'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
