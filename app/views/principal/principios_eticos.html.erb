@@ -6,7 +6,9 @@
 		  <p>&nbsp;</p>
 		  <span class="titulo-grande vino"><%= t('sobre.principios.intro') %></span>
 		  <p><%= t('sobre.principios.p1') %></p>
+			<% if params[:locale] == "es" %>
 		  <p>&nbsp;</p>
+			<% end %>
 		  <span class="titulo-grande vino"><%= t('sobre.principios.pron') %></span>
 			<% if params[:locale] == "en" %>
 		  <ol>
