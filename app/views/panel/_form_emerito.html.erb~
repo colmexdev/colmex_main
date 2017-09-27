@@ -26,11 +26,11 @@
   </div>
   <div class="field">
     <%= f.label :semblanza, "Semblanza" %><br>
-    <%= f.text_area :semblanza %>
+    <%= f.trix_editor :semblanza %>
   </div>
   <div class="field">
     <%= f.label :semblanza_eng, "Semblanza (inglés)" %><br>
-    <%= f.text_area :semblanza_eng %>
+    <%= f.trix editor :semblanza_eng %>
   </div>
   <div class="field" style="height:250px;">
 		<div class="photo-upload">
