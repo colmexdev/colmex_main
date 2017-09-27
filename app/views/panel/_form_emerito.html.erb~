@@ -14,7 +14,7 @@
 <%= hidden_field_tag :authenticity_token, form_authenticity_token -%>
   <div class="field">
     <%= f.label :nombre, "Nombre" %><br>
-    <%= f.text_field :nombre %>
+    <%= f.trix_editor :nombre %>
   </div>
   <div class="field">
     <%= f.label :fecha_anexion, "Fecha de anexión" %><br>
@@ -30,7 +30,7 @@
   </div>
   <div class="field">
     <%= f.label :semblanza_eng, "Semblanza (inglés)" %><br>
-    <%= f.trix editor :semblanza_eng %>
+    <%= f.trix_editor :semblanza_eng %>
   </div>
   <div class="field" style="height:250px;">
 		<div class="photo-upload">

@@ -24,7 +24,7 @@
     <%= f.select(:tipo_premio, options_for_select([['Otorgados a la comunidad', 'Comunidad'], ['Otorgados por El Colegio', 'Colegio']], @obj.tipo_premio || 'Otorgados a la comunidad'), {}, {}) %>
   </div>
   <div class="field">
-    <%= f.label :tipo, "Categoría (sólo Otorgados a la Comunidad)" %><br>
+    <%= f.label :tipo, "Categoría (sólo Otorgados a la comunidad)" %><br>
     <%= f.select(:tipo, options_from_collection_for_select(Categorium.all, "nombre", "nombre", @obj.tipo || Categorium.first.nombre), {}, {}) %>
   </div>
   <div class="field">

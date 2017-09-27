@@ -13,19 +13,19 @@
 <%= hidden_field_tag :authenticity_token, form_authenticity_token -%>
   <div class="field">
     <%= f.label :titulo, "Título" %><br>
-    <%= f.text_field :titulo %>
+    <%= f.trix_editor :titulo %>
   </div>
   <div class="field">
     <%= f.label :traduccion_tit, "Título (Inglés)" %><br>
-    <%= f.text_field :traduccion_tit %>
+    <%= f.trix_editor :traduccion_tit %>
   </div>
   <div class="field">
     <%= f.label :descripcion, "Descripción" %><br>
-    <%= f.text_area :descripcion %>
+    <%= f.trix_editor :descripcion %>
   </div>
   <div class="field">
     <%= f.label :traduccion_desc, "Descripción (Inglés)" %><br>
-    <%= f.text_area :traduccion_desc %>
+    <%= f.trix_editor :traduccion_desc %>
   </div>
   <div class="field">
     <%= f.label :fecha_inicio_conv, "Fecha de inicio de convocatoria" %><br>
@@ -61,10 +61,10 @@
   </div>
   <div class="field">
     <%= f.label :imparte, "Impartido por" %><br>
-    <%= f.text_field :imparte %>
+    <%= f.trix_editor :imparte %>
   </div>
   <div class="field">
-    <%= f.label :tags, "Etiquetas" %><br>
+    <%= f.label :tags, "Etiquetas (separadas por coma)" %><br>
     <%= f.text_area :tags %>
   </div>
   <div class="field" style="height:250px;">

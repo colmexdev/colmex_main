@@ -13,7 +13,7 @@
 <%= hidden_field_tag :authenticity_token, form_authenticity_token -%>
   <div class="field">
     <%= f.label :titulo, "Título" %><br>
-    <%= f.text_field :titulo %>
+    <%= f.trix_editor :titulo %>
   </div>
   <div class="field">
     <%= f.label :liga, "Link" %><br>
