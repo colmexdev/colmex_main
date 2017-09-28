@@ -97,58 +97,61 @@ function formatDate(fecha){
 }
 
 /* Funciones de edición de texto */
+function configTrix(){
+	Trix.config.blockAttributes.left = {
+		breakOnReturn: true,
+		group: false,
+		style: {textAlign: "left"},
+		terminal: false
+	}
+	Trix.config.blockAttributes.center = {
+		breakOnReturn: true,
+		group: false,
+		style: {textAlign: "center"},
+		terminal: false
+	}
+	Trix.config.blockAttributes.center = {
+		breakOnReturn: true,
+		group: false,
+		style: {textAlign: "right"},
+		terminal: false
+	}
+	Trix.config.blockAttributes.justify = {
+		breakOnReturn: true,
+		group: false,
+		style: {textAlign: "justify"},
+		terminal: false
+	}
+	Trix.config.blockAttributes.heading2 = {
+		breakOnReturn: true,
+		group: false,
+		tagName: "h2",
+		terminal: true
+	}
+	Trix.config.blockAttributes.heading3 = {
+		breakOnReturn: true,
+		group: false,
+		tagName: "h3",
+		terminal: true
+	}
+	Trix.config.textAttributes.underline = { 
+		tagName: "u",
+		parser: function(element) {
+			return element.style.textDecoration === "underline"
+		},
+		inheritable: true
+	}
+	Trix.config.textAttributes.color = { 
+		style: { color: "#7E3355" },
+		parser: function(element) {
+			return element.style.color === "#7E3355"
+		},
+		inheritable: true
+	}
+	Trix.config.textAttributes.italic.tagName = "i";
+}
+
 function extendTrix(toolbar,blocks){
-		Trix.config.blockAttributes.left = {
-			breakOnReturn: true,
-			group: false,
-			style: {textAlign: "left"},
-			terminal: false
-		}
-		Trix.config.blockAttributes.center = {
-			breakOnReturn: true,
-			group: false,
-			style: {textAlign: "center"},
-			terminal: false
-		}
-		Trix.config.blockAttributes.center = {
-			breakOnReturn: true,
-			group: false,
-			style: {textAlign: "right"},
-			terminal: false
-		}
-		Trix.config.blockAttributes.justify = {
-			breakOnReturn: true,
-			group: false,
-			style: {textAlign: "justify"},
-			terminal: false
-		}
-		Trix.config.blockAttributes.heading2 = {
-			breakOnReturn: true,
-			group: false,
-			tagName: "h2",
-			terminal: true
-		}
-		Trix.config.blockAttributes.heading3 = {
-			breakOnReturn: true,
-			group: false,
-			tagName: "h3",
-			terminal: true
-		}
-		Trix.config.textAttributes.underline = { 
-			tagName: "u",
-  		parser: function(element) {
-  			return element.style.textDecoration === "underline"
-  		},
-  		inheritable: true
- 		}
-		Trix.config.textAttributes.color = { 
-			style: { color: "#7E3355" },
-  		parser: function(element) {
-  			return element.style.color === "#7E3355"
-  		},
-  		inheritable: true
- 		}
-		Trix.config.textAttributes.italic.tagName = "i";
  		var buttonHTML = "<button type=\"button\" class=\"trix-button trix-button-icon\" data-trix-attribute=\"color\" title=\"Color\" tabindex=\"-1\"><div style=\"display:table-cell;background-color:#7E3355;width:20px;height:20px;\"></div></button>";
  		var buttonHTML2 = "<button type=\"button\" class=\"trix-button trix-button-icon\" data-trix-attribute=\"underline\" title=\"Underline\" tabindex=\"-1\"><div style=\"display:inline-block;\"><i class=\"fa fa-underline\" aria-hidden=\"true\"></i></div></button>";
  		var buttonHTML3 = "<button type=\"button\" class=\"trix-button trix-button-icon\" data-trix-attribute=\"heading2\" title=\"Heading2\" tabindex=\"-1\"><div style=\"display:inline-block;font-size:16px;\">H2</div></button>";
