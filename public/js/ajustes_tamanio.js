@@ -25,6 +25,11 @@ $(document).on('page:load', function(){
 
 $(document).on("ready page:change", function(){
 	UIkit.init();
+	try{
+		Trix.config.blockAttributes.heading = { tagName: 'color' };
+	}
+	catch(err){
+	}
 	var cw = $('.frame-descubre').width() - 8;
 	try{
 		if(gon.ev_tiny == ""){

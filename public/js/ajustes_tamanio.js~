@@ -1,7 +1,7 @@
 ancho = Math.max(document.documentElement.clientWidth, window.innerWidth || document.body.ClientWidth || 0);
 descubres = [];
 num_filas = 2;
-anchos_badges =[];
+//anchos_badges =[];
 dataset = [];
 descubresPorContenido = [];
 descubresPorTags = [];
@@ -54,8 +54,8 @@ $(document).on("ready page:change", function(){
 
   agregarAnaliticos();
 	try{
-		recabarAnchos();
-		escalarSlider();
+		var anchos_badges = recabarAnchos();
+		escalarSlider(anchos_badges);
 		setTimeout(function(){
 		try{
 			partirDescubres();
@@ -97,7 +97,7 @@ $(window).on("resize",function(){
 	}
 
 	try{
-		escalarSlider();
+		escalarSlider(anchos_badges);
 		setTimeout(function(){
 		partirDescubres();
 		margenAuto();}, 850);
@@ -121,30 +121,32 @@ $(window).on("resize",function(){
 
 
 function recabarAnchos(){
+	var arr_w = [];
 	for( var i = 0; i < gon.cant_sliders; i++){
 		var image = new Image();
 		image.onload = function(){
 			var ancho_img = this.width;
-			anchos_badges.push(ancho_img);
-			reajustarBadges();
+			arr_w.push(ancho_img);
+			reajustarBadges(arr_w);
 		}
 		image.src = $( "#badge-" + i).attr("src");
-	}	
+	}
+	return arr_w;
 }
 
-function escalarSlider(){
+function escalarSlider(arr_a){
 	var ancho_slide = $("#div_slider").width();
 	var alto_slide = ancho_slide*(17/40);
 	$('#div_slider').css({'height':alto_slide+'px'});
 	$('.ghost-slider').css("height",alto_slide+"px");
-	reajustarBadges();
+	reajustarBadges(arr_a);
 }
 
-function reajustarBadges(){
-	console.log(anchos_badges);
+function reajustarBadges(arr){
+	console.log(arr);
 	for( var i = 0; i < gon.cant_sliders; i++){
-		var ancho_nuevo = ($("#div_slider").width() * anchos_badges[i]) / 1341;
-		$( "#badge-" + i ).css({"width": ancho_nuevo+"px", "max-width": anchos_badges[i]+"px" });
+		var ancho_nuevo = ($("#div_slider").width() * arr[i]) / 1341;
+		$( "#badge-" + i ).css({"width": ancho_nuevo+"px", "max-width": arr[i]+"px" });
 	}
 }
 
