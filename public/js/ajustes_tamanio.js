@@ -25,6 +25,13 @@ $(document).on('page:load', function(){
 
 $(document).on("ready page:change", function(){
 	UIkit.init();
+	try{
+		extendTrix();
+	}
+	catch(err){
+		console.log(err);
+	}
+
 	var cw = $('.frame-descubre').width() - 8;
 	try{
 		if(gon.ev_tiny == ""){
@@ -143,7 +150,6 @@ function escalarSlider(arr_a){
 }
 
 function reajustarBadges(arr){
-	console.log(arr);
 	for( var i = 0; i < gon.cant_sliders; i++){
 		var ancho_nuevo = ($("#div_slider").width() * arr[i]) / 1341;
 		$( "#badge-" + i ).css({"width": ancho_nuevo+"px", "max-width": arr[i]+"px" });
