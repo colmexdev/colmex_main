@@ -1,6 +1,6 @@
 <script type="text/javascript">
 addEventListener("trix-initialize", function(event) {
-  const groupElement = event.target.toolbarElement.querySelector(".block_tools");
+  var groupElement = event.target.toolbarElement.querySelector(".block_tools");
 	try{
 		Trix.config.textAttributes.color = { 
 			style: { color: "#7E3355" },
@@ -10,6 +10,7 @@ addEventListener("trix-initialize", function(event) {
   		inheritable: true
  		}
  		var buttonHTML = "<button type=\"button\" class=\"trix-button trix-button-icon\" data-trix-attribute=\"color\" title=\"Color\" tabindex=\"-1\"><span style=\"color:#7E3355;\"></span></button>";
+		console.log(groupElement);
 		groupElement.insertAdjacentHTML("beforeend", buttonHTML);
 	}
 	catch(err){

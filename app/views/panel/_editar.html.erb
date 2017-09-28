@@ -1,5 +1,5 @@
 <script type="text/javascript">
-addEventListener("trix-initialize", function(event) {
+function(){
   var groupElement = event.target.toolbarElement.querySelector(".block_tools");
 	try{
 		Trix.config.textAttributes.color = { 
@@ -16,7 +16,7 @@ addEventListener("trix-initialize", function(event) {
 	catch(err){
 		console.log(err);
 	} 
-})
+}
 </script>
 
 <% parts = {"Profesores eméritos": "emerito", "Programas docentes": "progs", "Directorio de Autoridades": "auts", "Categorías de Premios": "cats_p", "Premios y distinciones": "pd", "Documentos varios": "docs", "Descubres": "descs", "Categorías de 'Descubre'": "cats_d", "Imágenes de slider": "slider", "Cátedras y seminarios": "sems", "Frases en página principal": "frases", "Directorio académico": "acad", "Usuarios gestores": "admins"} %>
