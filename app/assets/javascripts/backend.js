@@ -98,8 +98,16 @@ function formatDate(fecha){
 
 /* Funciones de edición de texto */
 function extendTrix(){
-  var groupElement = document.querySelectorAll("[data-trix-button-group='text-tools']");
+  //var groupElement = document.querySelectorAll("[data-trix-button-group='text-tools']");
+	var groupElement = Trix.config.toolbar.content.querySelector(".block_tools");
 	try{
+		Trix.config.textAttributes.underline = { 
+			style: {textDecoration: "underline"},
+  		parser: function(element) {
+  			return element.style.textDecoration === "underline"
+  		},
+  		inheritable: true
+ 		}
 		Trix.config.textAttributes.color = { 
 			style: { color: "#7E3355" },
   		parser: function(element) {
@@ -108,10 +116,12 @@ function extendTrix(){
   		inheritable: true
  		}
 		Trix.config.textAttributes.italic.tagName = "i";
- 		var buttonHTML = "<button type=\"button\" class=\"trix-button trix-button-icon\" data-trix-attribute=\"color\" title=\"Color\" tabindex=\"-1\"><div style=\"display:table-cell;background-color:#7E3355;width:20px;height:20px;position:relative;top:50%;left:50%;transform:translate(-50%,0%);\"></div></button>";
+ 		var buttonHTML = "<button type=\"button\" class=\"trix-button trix-button-icon\" data-trix-attribute=\"color\" title=\"Color\" tabindex=\"-1\"><div style=\"display:table-cell;background-color:#7E3355;width:20px;height:20px;\"></div></button>";
+ 		var buttonHTML2 = "<button type=\"button\" class=\"trix-button trix-button-icon\" data-trix-attribute=\"color\" title=\"Color\" tabindex=\"-1\"><i class=\"fa fa-underline\" aria-hidden=\"true\"></i></button>";
 		console.log(groupElement);
 		for(var i in groupElement){
 			groupElement[i].insertAdjacentHTML("beforeend", buttonHTML);
+			groupElement[i].insertAdjacentHTML("beforeend", buttonHTML2);
 		}
 	}
 	catch(err){

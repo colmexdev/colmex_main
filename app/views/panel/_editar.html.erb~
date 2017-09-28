@@ -4,5 +4,5 @@
 	<%= render ('panel/form_'+parts[params[:set].to_sym]) %>
 
 <script type="text/javascript">
-
+extendTrix();
 </script>
