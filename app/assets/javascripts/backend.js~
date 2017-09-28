@@ -39,7 +39,7 @@ function filterAnalytics(link){
 			pars = pars + conds[i][0] + "=" + conds[i][1] + (i == conds.length -1 ? "" : "&");
 		url = url + "&" + pars;
 	}
-	console.log(url);
+	//console.log(url);
 	return url;
 }
 

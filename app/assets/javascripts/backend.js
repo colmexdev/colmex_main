@@ -96,6 +96,29 @@ function formatDate(fecha){
 	return months[month] + " " + padZero(day) /*padZero(month)*/
 }
 
+/* Funciones de edición de texto */
+function extendTrix(){
+  var groupElement = document.querySelectorAll("[data-trix-button-group='text-tools']");
+	try{
+		Trix.config.textAttributes.color = { 
+			style: { color: "#7E3355" },
+  		parser: function(element) {
+  			return element.style.color === "#7E3355"
+  		},
+  		inheritable: true
+ 		}
+		Trix.config.textAttributes.italic.tagName = "i";
+ 		var buttonHTML = "<button type=\"button\" class=\"trix-button trix-button-icon\" data-trix-attribute=\"color\" title=\"Color\" tabindex=\"-1\"><div style=\"display:table-cell;background-color:#7E3355;width:20px;height:20px;position:relative;top:50%;left:50%;transform:translate(-50%,0%);\"></div></button>";
+		console.log(groupElement);
+		for(var i in groupElement){
+			groupElement[i].insertAdjacentHTML("beforeend", buttonHTML);
+		}
+	}
+	catch(err){
+		console.log(err);
+	}
+}
+
 function padZero(n){
 	return (n < 10 ? "0" + n : n.toString())
 }
