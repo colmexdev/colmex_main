@@ -1,7 +1,6 @@
 <script type="text/javascript">
-extendTrix();
-
-function extendTrix(){
+addEventListener("trix-initialize", function(event) {
+  const groupElement = event.target.toolbarElement.querySelector(".block_tools");
 	try{
 		Trix.config.textAttributes.color = { 
 			style: { color: "#7E3355" },
@@ -11,13 +10,12 @@ function extendTrix(){
   		inheritable: true
  		}
  		var buttonHTML = "<button type=\"button\" class=\"trix-button trix-button-icon\" data-trix-attribute=\"color\" title=\"Color\" tabindex=\"-1\"><span style=\"color:#7E3355;\"></span></button>";
-		var groupElement = Trix.config.toolbar.content.querySelector(".block_tools");
 		groupElement.insertAdjacentHTML("beforeend", buttonHTML);
 	}
 	catch(err){
 		console.log(err);
 	} 
-}
+})
 </script>
 
 <% parts = {"Profesores eméritos": "emerito", "Programas docentes": "progs", "Directorio de Autoridades": "auts", "Categorías de Premios": "cats_p", "Premios y distinciones": "pd", "Documentos varios": "docs", "Descubres": "descs", "Categorías de 'Descubre'": "cats_d", "Imágenes de slider": "slider", "Cátedras y seminarios": "sems", "Frases en página principal": "frases", "Directorio académico": "acad", "Usuarios gestores": "admins"} %>
