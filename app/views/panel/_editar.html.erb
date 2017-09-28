@@ -4,6 +4,7 @@
 	<%= render ('panel/form_'+parts[params[:set].to_sym]) %>
 
 <script type="text/javascript">
+window.addEventListener('load page:load', function(){
   var groupElement = document.querySelectorAll("[data-trix-button-group='text-tools']");
 	try{
 		Trix.config.textAttributes.color = { 
@@ -22,5 +23,6 @@
 	}
 	catch(err){
 		console.log(err);
-	} 
+	}
+});
 </script>
