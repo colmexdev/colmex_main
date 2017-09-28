@@ -23,16 +23,16 @@ $(document).on('page:load', function(){
 	$(document).trigger("scroll"); 
 })
 
-$(document).on("ready page:change", function(){
+$(document).on("ready", function(){
 	UIkit.init();
 	try{
 		addEventListener("trix-initialize", function(event) {
 			var groupElement = event.target.toolbarElement.querySelector("[data-trix-button-group='text-tools']");
+			console.log(groupElement);
 			extendTrix(groupElement);
 		})
 	}
 	catch(err){
-		console.log(err);
 	}
 
 	var cw = $('.frame-descubre').width() - 8;
