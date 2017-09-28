@@ -127,8 +127,8 @@ function extendTrix(toolbar,blocks){
 		Trix.config.textAttributes.italic.tagName = "i";
  		var buttonHTML = "<button type=\"button\" class=\"trix-button trix-button-icon\" data-trix-attribute=\"color\" title=\"Color\" tabindex=\"-1\"><div style=\"display:table-cell;background-color:#7E3355;width:20px;height:20px;\"></div></button>";
  		var buttonHTML2 = "<button type=\"button\" class=\"trix-button trix-button-icon\" data-trix-attribute=\"underline\" title=\"Underline\" tabindex=\"-1\"><div style=\"display:inline-block;\"><i class=\"fa fa-underline\" aria-hidden=\"true\"></i></div></button>";
- 		var buttonHTML3 = "<button type=\"button\" class=\"trix-button trix-button-icon\" data-trix-attribute=\"heading2\" title=\"Heading2\" tabindex=\"-1\"><div style=\"display:inline-block;font-size:15px;\">H2</div></button>";
- 		var buttonHTML4 = "<button type=\"button\" class=\"trix-button trix-button-icon\" data-trix-attribute=\"heading3\" title=\"Heading3\" tabindex=\"-1\"><div style=\"display:inline-block;font-size:10px;\">H3</div></button>";
+ 		var buttonHTML3 = "<button type=\"button\" class=\"trix-button trix-button-icon\" data-trix-attribute=\"heading2\" title=\"Heading2\" tabindex=\"-1\"><div style=\"display:inline-block;font-size:16px;\">H2</div></button>";
+ 		var buttonHTML4 = "<button type=\"button\" class=\"trix-button trix-button-icon\" data-trix-attribute=\"heading3\" title=\"Heading3\" tabindex=\"-1\"><div style=\"display:inline-block;font-size:13px;\">H3</div></button>";
 		toolbar.insertAdjacentHTML("beforeend", buttonHTML2);
 		toolbar.insertAdjacentHTML("beforeend", buttonHTML);
 		blocks.insertAdjacentHTML("afterbegin",buttonHTML3);

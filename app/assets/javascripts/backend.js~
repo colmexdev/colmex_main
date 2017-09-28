@@ -131,8 +131,8 @@ function extendTrix(toolbar,blocks){
  		var buttonHTML4 = "<button type=\"button\" class=\"trix-button trix-button-icon\" data-trix-attribute=\"heading3\" title=\"Heading3\" tabindex=\"-1\"><div style=\"display:inline-block;font-size:10px;\">H3</div></button>";
 		toolbar.insertAdjacentHTML("beforeend", buttonHTML2);
 		toolbar.insertAdjacentHTML("beforeend", buttonHTML);
-		blocks.insertAdjacentHTML("afterbegin",buttonHTML4);
 		blocks.insertAdjacentHTML("afterbegin",buttonHTML3);
+		blocks.insertAdjacentHTML("afterbegin",buttonHTML4);
 
 }
 
