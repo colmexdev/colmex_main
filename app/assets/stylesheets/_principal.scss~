@@ -137,7 +137,7 @@ i {font-style: italic; }
 a, a:hover, a:active, a:visited, a:link{  text-decoration: none; }
 .titulo {}
 .subtitulo {color: #838383}
-.titulo-chico{
+.titulo-chico, h2, trix-content h2{
 	font-family: "Gotham SSm A", "Gotham SSm B", Lato; 
 	font-style: normal; 
 	font-weight: 700; 
@@ -193,7 +193,7 @@ p {text-align: justify; font-size: 18px;}
 	border-bottom: 3px solid #9E6680;
 }
 
-.titulo-chico.morado, .titulo-grande.morado{ color: #7E3355; border-bottom: none; }
+.titulo-chico.morado, h2, trix-content h2, .titulo-grande.morado, h1, trix-content h1{ color: #7E3355; border-bottom: none; }
 
 
 
