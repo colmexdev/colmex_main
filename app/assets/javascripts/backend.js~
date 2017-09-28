@@ -153,6 +153,7 @@ function configTrix(){
 		inheritable: true
 	}
 	Trix.config.textAttributes.italic.tagName = "i";
+	Trix.config.blockAttributes.heading.className = "titulo-grande vino";
 }
 
 function extendTrix(toolbar,blocks){
