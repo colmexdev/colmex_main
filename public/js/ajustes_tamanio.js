@@ -26,6 +26,9 @@ $(document).on('page:load', function(){
 $(document).on("ready page:change", function(){
 	UIkit.init();
 	try{
+		buttonHTML = "<button type=\"button\" class=\"heading\" data-attribute=\"heading\" title=\"Heading\">Heading</button>";
+		groupElement = Trix.config.toolbar.content.querySelector(".block_tools");
+		groupElement.insertAdjacentHTML("beforeend", buttonHTML);
 		Trix.config.blockAttributes.heading = { tagName: 'color' };
 	}
 	catch(err){
