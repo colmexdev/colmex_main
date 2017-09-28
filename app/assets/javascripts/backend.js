@@ -99,7 +99,7 @@ function formatDate(fecha){
 /* Funciones de edición de texto */
 function extendTrix(){
   //var groupElement = document.querySelectorAll("[data-trix-button-group='text-tools']");
-	var groupElement = Trix.config.toolbar.content.querySelector(".block_tools");
+	var groupElement = Trix.config.toolbar.content.querySelectorAll(".block_tools");
 	try{
 		Trix.config.textAttributes.underline = { 
 			style: {textDecoration: "underline"},
