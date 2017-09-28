@@ -1,20 +1,3 @@
 <% parts = {"Profesores eméritos": "emerito", "Programas docentes": "progs", "Directorio de Autoridades": "auts", "Categorías de Premios": "cats_p", "Premios y distinciones": "pd", "Documentos varios": "docs", "Descubres": "descs", "Categorías de 'Descubre'": "cats_d", "Imágenes de slider": "slider", "Cátedras y seminarios": "sems", "Frases en página principal": "frases", "Directorio académico": "acad", "Usuarios gestores": "admins"} %>
 
 	<%= render ('panel/form_'+parts[params[:set].to_sym]) %>
-
-<script type="text/javascript">
-extendTrix();
-
-function extendTrix(){
-	try{
-		console.log("Hola");
-		buttonHTML = "<button type=\"button\" class=\"heading\" data-attribute=\"heading\" title=\"Heading\">Heading</button>";
-		groupElement = Trix.config.toolbar.content.querySelector(".block_tools");
-		groupElement.insertAdjacentHTML("beforeend", buttonHTML);
-		//Trix.config.blockAttributes.heading = { tagName: 'color' };
-	}
-	catch(err){
-		console.log("Error");
-	} 
-}
-</script>

@@ -49,24 +49,3 @@
     <%= f.submit %>
   </div>
 <% end %>
-
-<script type="text/javascript">
-extendTrix();
-
-function extendTrix(){
-	try{
-		console.log("Hola");
-		Trix.config.blockAttributes.heading = { tagName: 'h1' };
-		console.log("Hola2");
-		buttonHTML = "<button type=\"button\" class=\"heading\" data-attribute=\"heading\" title=\"Heading\">Heading</button>";
-		console.log("Hola3");
-		groupElement = Trix.config.toolbar.content.querySelector(".block_tools");
-		console.log("Hola4");
-		groupElement.insertAdjacentHTML("beforeend", buttonHTML);
-		console.log("Hola5");
-	}
-	catch(err){
-		console.log(err);
-	} 
-}
-</script>
