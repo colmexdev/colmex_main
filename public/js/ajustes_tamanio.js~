@@ -20,12 +20,6 @@ barra_render = false;
 
 $(document).on('page:load', function(){ 
 	UIkit.init(); 
-	try{
-		extendTrix();
-	}
-	catch(err){
-		console.log("1 " + err);
-	}
 	$(document).trigger("scroll"); 
 })
 
@@ -33,8 +27,8 @@ $(document).on("ready page:change", function(){
 	UIkit.init();
 	try{
 		addEventListener("trix-initialize", function(event) {
-			const groupElement = event.target.toolbarElement.querySelector(".block_tools");
-			console.log(groupElement);
+			var groupElement = event.target.toolbarElement.querySelector(".block_tools");
+			console.log(event.target.toolbarElement);
 		})
 	}
 	catch(err){
