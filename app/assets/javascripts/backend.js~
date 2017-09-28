@@ -132,7 +132,7 @@ function extendTrix(toolbar,blocks){
 		toolbar.insertAdjacentHTML("beforeend", buttonHTML2);
 		toolbar.insertAdjacentHTML("beforeend", buttonHTML);
 		blocks.insertAdjacentHTML("afterbegin",buttonHTML4);
-		blocks.insertAdjacentHTML("afterbegin",button3);
+		blocks.insertAdjacentHTML("afterbegin",buttonHTML3);
 
 }
 
