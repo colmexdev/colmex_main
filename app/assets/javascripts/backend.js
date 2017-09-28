@@ -101,24 +101,28 @@ function configTrix(){
 	Trix.config.blockAttributes.left = {
 		breakOnReturn: true,
 		group: false,
+		tagName: "p",
 		style: {textAlign: "left"},
 		terminal: true
 	}
 	Trix.config.blockAttributes.center = {
 		breakOnReturn: true,
 		group: false,
+		tagName: "p",
 		style: {textAlign: "center"},
 		terminal: true
 	}
-	Trix.config.blockAttributes.center = {
+	Trix.config.blockAttributes.right = {
 		breakOnReturn: true,
 		group: false,
+		tagName: "p",
 		style: {textAlign: "right"},
 		terminal: true
 	}
 	Trix.config.blockAttributes.justify = {
 		breakOnReturn: true,
 		group: false,
+		tagName: "p",
 		style: {textAlign: "justify"},
 		terminal: true
 	}
