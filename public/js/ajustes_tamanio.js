@@ -32,7 +32,10 @@ $(document).on('page:load', function(){
 $(document).on("ready page:change", function(){
 	UIkit.init();
 	try{
-		extendTrix();
+		addEventListener("trix-initialize", function(event) {
+			const groupElement = event.target.toolbarElement.querySelector(".block_tools");
+			console.log(groupElement);
+		})
 	}
 	catch(err){
 		console.log(err);

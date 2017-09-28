@@ -24,7 +24,7 @@ $(document).on('page:load', function(){
 		extendTrix();
 	}
 	catch(err){
-		console.log(err);
+		console.log("1 " + err);
 	}
 	$(document).trigger("scroll"); 
 })
