@@ -20,31 +20,11 @@ barra_render = false;
 
 $(document).on('page:load', function(){ 
 	UIkit.init(); 
-	$(document).trigger("scroll");
-	try{
-		console.log("Hola");
-		buttonHTML = "<button type=\"button\" class=\"heading\" data-attribute=\"heading\" title=\"Heading\">Heading</button>";
-		groupElement = Trix.config.toolbar.content.querySelector(".block_tools");
-		groupElement.insertAdjacentHTML("beforeend", buttonHTML);
-		//Trix.config.blockAttributes.heading = { tagName: 'color' };
-	}
-	catch(err){
-		console.log("Error");
-	}  
+	$(document).trigger("scroll"); 
 })
 
 $(document).on("ready page:change", function(){
 	UIkit.init();
-	try{
-		console.log("Hola");
-		buttonHTML = "<button type=\"button\" class=\"heading\" data-attribute=\"heading\" title=\"Heading\">Heading</button>";
-		groupElement = Trix.config.toolbar.content.querySelector(".block_tools");
-		groupElement.insertAdjacentHTML("beforeend", buttonHTML);
-		//Trix.config.blockAttributes.heading = { tagName: 'color' };
-	}
-	catch(err){
-		console.log("Error");
-	}
 	var cw = $('.frame-descubre').width() - 8;
 	try{
 		if(gon.ev_tiny == ""){
