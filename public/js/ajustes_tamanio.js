@@ -20,13 +20,13 @@ barra_render = false;
 
 $(document).on('page:load', function(){ 
 	UIkit.init(); 
-	$(document).trigger("scroll");
 	try{
 		extendTrix();
 	}
 	catch(err){
-		console.log(err);
-	} 
+		console.log("1 " + err);
+	}
+	$(document).trigger("scroll"); 
 })
 
 $(document).on("ready page:change", function(){
