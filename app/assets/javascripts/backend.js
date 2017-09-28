@@ -102,7 +102,7 @@ function extendTrix(toolbar){
 	//var groupElement = Trix.config.toolbar.content.querySelectorAll(".block_tools");
 
 		Trix.config.textAttributes.underline = { 
-			style: {textDecoration: "underline"},
+			tagName: "u",
   		parser: function(element) {
   			return element.style.textDecoration === "underline"
   		},

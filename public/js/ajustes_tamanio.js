@@ -28,7 +28,6 @@ $(document).on("ready", function(){
 	try{
 		addEventListener("trix-initialize", function(event) {
 			var groupElement = event.target.toolbarElement.querySelector("[data-trix-button-group='text-tools']");
-			console.log(groupElement);
 			extendTrix(groupElement);
 		})
 	}
