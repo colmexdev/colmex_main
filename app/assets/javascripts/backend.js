@@ -97,10 +97,19 @@ function formatDate(fecha){
 }
 
 /* Funciones de edición de texto */
-function extendTrix(toolbar){
-  //var groupElement = document.querySelectorAll("[data-trix-button-group='text-tools']");
-	//var groupElement = Trix.config.toolbar.content.querySelectorAll(".block_tools");
-
+function extendTrix(toolbar,blocks){
+		Trix.config.blockAttributes.heading2 = {
+			breakOnReturn: true,
+			group: false,
+			tagName: "h2",
+			terminal: true
+		}
+		Trix.config.blockAttributes.heading3 = {
+			breakOnReturn: true,
+			group: false,
+			tagName: "h3",
+			terminal: true
+		}
 		Trix.config.textAttributes.underline = { 
 			tagName: "u",
   		parser: function(element) {
@@ -118,11 +127,13 @@ function extendTrix(toolbar){
 		Trix.config.textAttributes.italic.tagName = "i";
  		var buttonHTML = "<button type=\"button\" class=\"trix-button trix-button-icon\" data-trix-attribute=\"color\" title=\"Color\" tabindex=\"-1\"><div style=\"display:table-cell;background-color:#7E3355;width:20px;height:20px;\"></div></button>";
  		var buttonHTML2 = "<button type=\"button\" class=\"trix-button trix-button-icon\" data-trix-attribute=\"underline\" title=\"Underline\" tabindex=\"-1\"><div style=\"display:inline-block;\"><i class=\"fa fa-underline\" aria-hidden=\"true\"></i></div></button>";
-		//console.log(groupElement);
-		//for(var i in groupElement){
-			toolbar.insertAdjacentHTML("beforeend", buttonHTML2);
-			toolbar.insertAdjacentHTML("beforeend", buttonHTML);
-		//}
+ 		var buttonHTML3 = "<button type=\"button\" class=\"trix-button trix-button-icon\" data-trix-attribute=\"heading2\" title=\"Heading2\" tabindex=\"-1\"><div style=\"display:inline-block;\">H2</div></button>";
+ 		var buttonHTML4 = "<button type=\"button\" class=\"trix-button trix-button-icon\" data-trix-attribute=\"heading3\" title=\"Heading3\" tabindex=\"-1\"><div style=\"display:inline-block;\">H3</div></button>";
+		toolbar.insertAdjacentHTML("beforeend", buttonHTML2);
+		toolbar.insertAdjacentHTML("beforeend", buttonHTML);
+		blocks.insertAdjacentHTML("afterbegin",buttonHTML4);
+		blocks.insertAdjacentHTML("afterbegin",buttonHTML3);
+
 }
 
 function padZero(n){
