@@ -1,6 +1,11 @@
+
+<% parts = {"Profesores eméritos": "emerito", "Programas docentes": "progs", "Directorio de Autoridades": "auts", "Categorías de Premios": "cats_p", "Premios y distinciones": "pd", "Documentos varios": "docs", "Descubres": "descs", "Categorías de 'Descubre'": "cats_d", "Imágenes de slider": "slider", "Cátedras y seminarios": "sems", "Frases en página principal": "frases", "Directorio académico": "acad", "Usuarios gestores": "admins"} %>
+
+	<%= render ('panel/form_'+parts[params[:set].to_sym]) %>
+
 <script type="text/javascript">
 function(){
-  var groupElement = event.target.toolbarElement.querySelector(".block_tools");
+  var groupElement = document.querySelectorAll("[data-trix-button-group='text-tools']");
 	try{
 		Trix.config.textAttributes.color = { 
 			style: { color: "#7E3355" },
@@ -11,14 +16,12 @@ function(){
  		}
  		var buttonHTML = "<button type=\"button\" class=\"trix-button trix-button-icon\" data-trix-attribute=\"color\" title=\"Color\" tabindex=\"-1\"><span style=\"color:#7E3355;\"></span></button>";
 		console.log(groupElement);
-		groupElement.insertAdjacentHTML("beforeend", buttonHTML);
+		for(var i in groupElement){
+			groupElement[i].insertAdjacentHTML("beforeend", buttonHTML);
+		}
 	}
 	catch(err){
 		console.log(err);
 	} 
 }
 </script>
-
-<% parts = {"Profesores eméritos": "emerito", "Programas docentes": "progs", "Directorio de Autoridades": "auts", "Categorías de Premios": "cats_p", "Premios y distinciones": "pd", "Documentos varios": "docs", "Descubres": "descs", "Categorías de 'Descubre'": "cats_d", "Imágenes de slider": "slider", "Cátedras y seminarios": "sems", "Frases en página principal": "frases", "Directorio académico": "acad", "Usuarios gestores": "admins"} %>
-
-	<%= render ('panel/form_'+parts[params[:set].to_sym]) %>
