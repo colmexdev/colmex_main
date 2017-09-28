@@ -168,10 +168,10 @@ function extendTrix(toolbar,blocks){
 		toolbar.insertAdjacentHTML("beforeend", buttonHTML);
 		blocks.insertAdjacentHTML("afterbegin",buttonHTML3);
 		blocks.insertAdjacentHTML("afterbegin",buttonHTML4);
-		blocks.insertAdjacentHTML("beforeend",buttonHTML5);
-		blocks.insertAdjacentHTML("beforeend",buttonHTML6);
-		blocks.insertAdjacentHTML("beforeend",buttonHTML7);
-		blocks.insertAdjacentHTML("beforeend",buttonHTML8);
+		//blocks.insertAdjacentHTML("beforeend",buttonHTML5);
+		//blocks.insertAdjacentHTML("beforeend",buttonHTML6);
+		//blocks.insertAdjacentHTML("beforeend",buttonHTML7);
+		//blocks.insertAdjacentHTML("beforeend",buttonHTML8);
 }
 
 function padZero(n){
