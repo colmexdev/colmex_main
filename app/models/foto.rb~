@@ -1,4 +1,6 @@
 class Foto < ActiveRecord::Base
+  belongs_to :sitio
+
   has_attached_file :foto, :styles => {},
                     :url => "/assets/fotos/:id/:style/:basename.:extension",
                     :path => ":rails_root/public/assets/fotos/:id/:style/:basename.:extension",

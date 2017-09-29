@@ -7,6 +7,6 @@ class Foto < ActiveRecord::Base
                     :default_url => "/vacio.png"
 
   validates_presence_of :sitio_id
-  validates_presence_of :index
+  validates_presence_of :f_ind
   validates_attachment_content_type :foto, :content_type => ['image/jpeg', 'image/png', 'image/jpg']
 end
