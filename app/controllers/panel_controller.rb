@@ -240,7 +240,7 @@ class PanelController < ApplicationController
     elsif params[:set] == "Usuarios gestores"
       params.require(:admin).permit(:usuario, :password, :password_confirmation, :admin)
     elsif params[:set] == "Catálogo de sitios"
-      params.require(:sitio).permit(:ref, :partial)
+      params.require(:sitio).permit(:ref, :partial, :num_parrafos, :num_fotos)
     elsif params[:set] == "Contenido de sitios"
       params.require(:parrafo).permit(:ref, :texto, :index)
       params.require(:foto).permit(:ref, :foto, :index)
