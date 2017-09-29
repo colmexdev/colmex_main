@@ -208,6 +208,8 @@ class PanelController < ApplicationController
       params.require(:academico).permit(:nombre, :adscripcion, :lineas_investigacion, :correo, :pagina, :foto, :inicial)
     elsif params[:set] == "Usuarios gestores"
       params.require(:admin).permit(:usuario, :password, :password_confirmation, :admin)
+    elsif params[:set] == "Catálogo de sitios"
+      params.require(:sitio).permit(:ref,:partial)
     end
   end
 end
