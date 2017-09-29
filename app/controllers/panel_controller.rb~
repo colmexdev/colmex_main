@@ -130,7 +130,7 @@ class PanelController < ApplicationController
             end
           end
 
-          if @num_pars.count < obj_params[:num_fotos].to_i
+          if @num_fotos.count < obj_params[:num_fotos].to_i
             k = 0
             while k < obj_params[:num_fotos].to_i
               if Foto.where("sitio_id = ? and f_ind = ? ",params[:id].to_i, k).count == 0
@@ -280,7 +280,7 @@ class PanelController < ApplicationController
     elsif params[:set] == "Catálogo de sitios"
       params.require(:sitio).permit(:ref, :partial, :num_parrafos, :num_fotos)
     elsif params[:set] == "Contenido de sitios"
-      params.require(:parrafo).permit(:ref, :texto, :p_ind)
+      params.require(:parrafo).permit(:ref, :texto, :texto_ingles, :p_ind)
       params.require(:foto).permit(:ref, :foto, :f_ind)
     end
   end

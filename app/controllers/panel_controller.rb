@@ -239,7 +239,7 @@ class PanelController < ApplicationController
         imgs: {}
       }, "Contenido de sitios": {
         model: [Sitio,Parrafo, Foto],
-        fields: [{ref: "Página", partial: "URL", num_parrafos: "Párrafos", num_fotos: "Fotos"}, {ref: "Página", texto: "Texto", p_ind: "Párrafo"}, {ref: "Página", f_ind: "Foto"}],
+        fields: [{ref: "Página", partial: "URL", num_parrafos: "Párrafos", num_fotos: "Fotos"}, {ref: "Página", texto: "Texto", texto_ingles: "Texto (Inglés)", p_ind: "Párrafo"}, {ref: "Página", f_ind: "Foto"}],
         imgs: [{}, {}, {foto: "Foto"}]
       }
     }
@@ -280,7 +280,7 @@ class PanelController < ApplicationController
     elsif params[:set] == "Catálogo de sitios"
       params.require(:sitio).permit(:ref, :partial, :num_parrafos, :num_fotos)
     elsif params[:set] == "Contenido de sitios"
-      params.require(:parrafo).permit(:ref, :texto, :p_ind)
+      params.require(:parrafo).permit(:ref, :texto, :texto_ingles, :p_ind)
       params.require(:foto).permit(:ref, :foto, :f_ind)
     end
   end
