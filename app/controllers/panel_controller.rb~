@@ -75,6 +75,20 @@ class PanelController < ApplicationController
     @obj = @sets[params[:set].to_sym][:model].new(obj_params)
     respond_to do |format|
       if @obj.save
+        if @sets[params[:set].to_sym][:model] == Sitio
+          i = 0
+          while i < obj_params[:num_parrafos]
+            @pf = Parrafo.new({sitio_id: obj_params[:id], texto: " ", index: i})
+            @pf.save
+            i = i + 1
+          end
+          i = 0
+          while i < obj_params[:num_fotos]
+            @pf = Foto.new({sitio_id: obj_params[:id], index: i})
+            @pf.save
+            i = i + 1
+          end
+        end
         format.js { render :mostrar, params: {set: params[:set]}, notice: 'Objeto generado exitosamente.' }
       else
         format.js { render :generar }

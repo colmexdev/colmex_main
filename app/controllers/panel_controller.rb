@@ -77,14 +77,14 @@ class PanelController < ApplicationController
       if @obj.save
         if @sets[params[:set].to_sym][:model] == Sitio
           i = 0
-          while i < obj_params[:num_parrafos]
-            @pf = Parrafo.new({sitio_id: obj_params[:id], texto: " ", index: i})
+          while i < obj_params[:num_parrafos].to_i
+            @pf = Parrafo.new({sitio_id: obj_params[:id].to_i, texto: " ", index: i})
             @pf.save
             i = i + 1
           end
           i = 0
-          while i < obj_params[:num_fotos]
-            @pf = Foto.new({sitio_id: obj_params[:id], index: i})
+          while i < obj_params[:num_fotos].to_i
+            @pf = Foto.new({sitio_id: obj_params[:id].to_i, index: i})
             @pf.save
             i = i + 1
           end
