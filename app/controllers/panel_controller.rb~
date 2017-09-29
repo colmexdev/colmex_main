@@ -58,40 +58,28 @@ class PanelController < ApplicationController
   end
 
   def mostrar
-    if @sets[params[:set].to_sym][:model].class.to_s != "Array"
-		  @obj = @sets[params[:set].to_sym][:model].find(params[:id].to_i)
-      respond_to do |format|
-        format.js
-      end
-    else
-
+		@obj = @sets[params[:set].to_sym][:model].find(params[:id].to_i)
+    respond_to do |format|
+      format.js
     end
   end
 
   def generar
-    if @sets[params[:set].to_sym][:model].class.to_s != "Array"
-      @obj = @sets[params[:set].to_sym][:model].new
-      respond_to do |format|
-        format.js
-      end
-    else
-
+    @obj = @sets[params[:set].to_sym][:model].new
+    respond_to do |format|
+      format.js
     end
   end
 
   def crear
-    if @sets[params[:set].to_sym][:model].class.to_s != "Array"
-      @obj = @sets[params[:set].to_sym][:model].new(obj_params)
-      respond_to do |format|
-        if @obj.save
-          format.js { render :mostrar, params: {set: params[:set]}, notice: 'Objeto generado exitosamente.' }
-        else
-          format.js { render :generar }
-          format.json { render json: @obj.errors, status: :unprocessable_entity }
-        end
+    @obj = @sets[params[:set].to_sym][:model].new(obj_params)
+    respond_to do |format|
+      if @obj.save
+        format.js { render :mostrar, params: {set: params[:set]}, notice: 'Objeto generado exitosamente.' }
+      else
+        format.js { render :generar }
+        format.json { render json: @obj.errors, status: :unprocessable_entity }
       end
-    else
-
     end
   end
 
@@ -99,37 +87,30 @@ class PanelController < ApplicationController
     if @sets[params[:set].to_sym][:model].class.to_s != "Array"
       @obj = @sets[params[:set].to_sym][:model].find(params[:id])
     else 
-
+      @obj = @sets[params[:set].to_sym][:model][0].where("sitio_id = ?",params[:id])
+      @obj2 = @sets[params[:set].to_sym][:model][1].where("sitio_id = ?",params[:id])
     end
   end
 
   def actualizar
-    if @sets[params[:set].to_sym][:model].class.to_s != "Array"
-      @obj = @sets[params[:set].to_sym][:model].find(params[:id])
-      respond_to do |format|
-        if @obj.update(obj_params)
-          format.js { render :mostrar, params: {set: params[:set]}, notice: 'Objeto generado exitosamente.' }
-        else
-          format.js { render :editar }
-          format.json { render json: @obj.errors, status: :unprocessable_entity }
-        end
+    @obj = @sets[params[:set].to_sym][:model].find(params[:id])
+    respond_to do |format|
+      if @obj.update(obj_params)
+        format.js { render :mostrar, params: {set: params[:set]}, notice: 'Objeto generado exitosamente.' }
+      else
+        format.js { render :editar }
+        format.json { render json: @obj.errors, status: :unprocessable_entity }
       end
-    else
-
     end
   end
 
   def eliminar
-    if @sets[params[:set].to_sym][:model].class.to_s != "Array"
-		  @sets[params[:set].to_sym][:model].find(params[:id]).destroy
-      @set = @sets[params[:set].to_sym][:model].all
-		  respond_to do |format|
-        format.js { render :index, params: {set: params[:set]}, notice: 'Se ha eliminado el objeto exitosamente'}
-		    format.json { head :no_content }
-		  end
-    else
-
-    end
+		@sets[params[:set].to_sym][:model].find(params[:id]).destroy
+    @set = @sets[params[:set].to_sym][:model].all
+		respond_to do |format|
+      format.js { render :index, params: {set: params[:set]}, notice: 'Se ha eliminado el objeto exitosamente'}
+		  format.json { head :no_content }
+		end
   end
 
   private
@@ -240,7 +221,7 @@ class PanelController < ApplicationController
     elsif params[:set] == "Usuarios gestores"
       params.require(:admin).permit(:usuario, :password, :password_confirmation, :admin)
     elsif params[:set] == "Catálogo de sitios"
-      params.require(:sitio).permit(:ref, :partial)
+      params.require(:sitio).permit(:ref, :partial, :num_parrafos, :num_fotos)
     elsif params[:set] == "Contenido de sitios"
       params.require(:parrafo).permit(:ref, :texto, :index)
       params.require(:foto).permit(:ref, :foto, :index)
