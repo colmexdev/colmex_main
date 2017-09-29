@@ -78,13 +78,13 @@ class PanelController < ApplicationController
         if @sets[params[:set].to_sym][:model] == Sitio
           i = 0
           while i < obj_params[:num_parrafos].to_i
-            @pf = Parrafo.new({sitio_id: obj_params[:id].to_i, index: i})
+            @pf = Parrafo.new({sitio_id: obj_params[:id].to_i, p_ind: i})
             @pf.save
             i = i + 1
           end
           i = 0
           while i < obj_params[:num_fotos].to_i
-            @pf = Foto.new({sitio_id: obj_params[:id].to_i, index: i})
+            @pf = Foto.new({sitio_id: obj_params[:id].to_i, f_ind: i})
             @pf.save
             i = i + 1
           end
@@ -119,7 +119,7 @@ class PanelController < ApplicationController
             k = 0
             while k < obj_params[:num_parrafos].to_i
               if Parrafo.where("sitio_id = ? and p_ind = ? ", params[:id].to_i, k.to_i).count == 0
-                @pf = Parrafo.new({sitio_id: obj_params[:id].to_i, index: k})
+                @pf = Parrafo.new({sitio_id: obj_params[:id].to_i, p_ind: k})
                 @pf.save
               end
               k = k + 1
@@ -134,7 +134,7 @@ class PanelController < ApplicationController
             k = 0
             while i < obj_params[:num_fotos].to_i
               if Foto.where("sitio_id = ? and f_ind = ? ",params[:id].to_i, k.to_i).count == 0
-                @pf = Foto.new({sitio_id: obj_params[:id].to_i, index: k})
+                @pf = Foto.new({sitio_id: obj_params[:id].to_i, f_ind: k})
                 @pf.save
               end
               k = k + 1
@@ -236,7 +236,7 @@ class PanelController < ApplicationController
         imgs: {}
       }, "Contenido de sitios": {
         model: [Sitio,Parrafo, Foto],
-        fields: [{ref: "Página", partial: "URL", num_parrafos: "Párrafos", num_fotos: "Fotos"}, {ref: "Página", texto: "Texto", index: "Párrafo"}, {ref: "Página", index: "Foto"}],
+        fields: [{ref: "Página", partial: "URL", num_parrafos: "Párrafos", num_fotos: "Fotos"}, {ref: "Página", texto: "Texto", p_ind: "Párrafo"}, {ref: "Página", f_ind: "Foto"}],
         imgs: [{}, {}, {foto: "Foto"}]
       }
     }
@@ -277,8 +277,8 @@ class PanelController < ApplicationController
     elsif params[:set] == "Catálogo de sitios"
       params.require(:sitio).permit(:ref, :partial, :num_parrafos, :num_fotos)
     elsif params[:set] == "Contenido de sitios"
-      params.require(:parrafo).permit(:ref, :texto, :index)
-      params.require(:foto).permit(:ref, :foto, :index)
+      params.require(:parrafo).permit(:ref, :texto, :p_ind)
+      params.require(:foto).permit(:ref, :foto, :f_ind)
     end
   end
 end
