@@ -78,13 +78,13 @@ class PanelController < ApplicationController
         if @sets[params[:set].to_sym][:model] == Sitio
           i = 0
           while i < obj_params[:num_parrafos].to_i
-            @pf = Parrafo.new({sitio_id: obj_params[:id].to_i, p_ind: i})
+            @pf = Parrafo.new({sitio_id: params[:id].to_i, p_ind: i})
             @pf.save
             i = i + 1
           end
           i = 0
           while i < obj_params[:num_fotos].to_i
-            @pf = Foto.new({sitio_id: obj_params[:id].to_i, f_ind: i})
+            @pf = Foto.new({sitio_id: params[:id].to_i, f_ind: i})
             @pf.save
             i = i + 1
           end
@@ -119,7 +119,7 @@ class PanelController < ApplicationController
             k = 0
             while k < obj_params[:num_parrafos].to_i
               if Parrafo.where("sitio_id = ? and p_ind = ? ", params[:id].to_i, k).count == 0
-                @pf = Parrafo.new({sitio_id: obj_params[:id].to_i, p_ind: k})
+                @pf = Parrafo.new({sitio_id: params[:id].to_i, p_ind: k})
                 @pf.save
               end
               k = k + 1
@@ -134,7 +134,7 @@ class PanelController < ApplicationController
             k = 0
             while k < obj_params[:num_fotos].to_i
               if Foto.where("sitio_id = ? and f_ind = ? ",params[:id].to_i, k).count == 0
-                @pf = Foto.new({sitio_id: obj_params[:id].to_i, f_ind: k})
+                @pf = Foto.new({sitio_id: params[:id].to_i, f_ind: k})
                 @pf.save
               end
               k = k + 1
