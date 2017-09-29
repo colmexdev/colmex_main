@@ -168,6 +168,10 @@ class PanelController < ApplicationController
         model: Admin,
         fields: {usuario: "Usuario",admin: "Tipo"},
         imgs: {}
+      }, "Catálogo de sitios": {
+        model: Sitio,
+        fields: {ref: "Página", partial: "URL"},
+        imgs: {}
       }
     }
   end
