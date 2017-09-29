@@ -277,8 +277,8 @@ class PanelController < ApplicationController
     elsif params[:set] == "Catálogo de sitios"
       params.require(:sitio).permit(:ref, :partial, :num_parrafos, :num_fotos)
     elsif params[:set] == "Contenido de sitios"
-      params.require(:parrafo).permit(:ref, :texto, :index)
-      params.require(:foto).permit(:ref, :foto, :index)
+      params.require(:parrafo).permit(:ref, :texto, :p_ind)
+      params.require(:foto).permit(:ref, :foto, :f_ind)
     end
   end
 end
