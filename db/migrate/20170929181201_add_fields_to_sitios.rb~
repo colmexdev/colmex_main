@@ -1,0 +1,6 @@
+class AddFieldsToSites < ActiveRecord::Migration
+  def change
+    add_column :sites, :num_parrafos, :integer
+    add_column :sites, :num_fotos, :integer
+  end
+end

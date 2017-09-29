@@ -1,0 +1,2 @@
+class Parrafo < ActiveRecord::Base
+end
