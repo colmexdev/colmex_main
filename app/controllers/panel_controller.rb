@@ -101,8 +101,9 @@ class PanelController < ApplicationController
     if @sets[params[:set].to_sym][:model].class.to_s != "Array"
       @obj = @sets[params[:set].to_sym][:model].find(params[:id])
     else 
-      @obj = @sets[params[:set].to_sym][:model][0].where("sitio_id = ?",params[:id])
-      @obj2 = @sets[params[:set].to_sym][:model][1].where("sitio_id = ?",params[:id])
+      @obj = @sets[params[:set].to_sym][:model][0].find(params[:id])
+      @objs = @sets[params[:set].to_sym][:model][1].where("sitio_id = ?",params[:id])
+      @objs2 = @sets[params[:set].to_sym][:model][2].where("sitio_id = ?",params[:id])
     end
   end
 
@@ -110,6 +111,41 @@ class PanelController < ApplicationController
     @obj = @sets[params[:set].to_sym][:model].find(params[:id])
     respond_to do |format|
       if @obj.update(obj_params)
+        if @sets[params[:set].to_sym][:model] == Sitio
+          @num_pars = Parrafo.where("sitio_id = ?", params[:id])
+          @num_fotos = Foto.where("sitio_id =?", params[:id])
+
+          if @num_pars.count <= obj_params[:num_parrafos].to_i
+            i = 0
+            while i < obj_params[:num_parrafos].to_i
+              if Parrafo.where("sitio_id = ? and index = ?",obj_params[:id].to_i,i).count == 0
+                @pf = Parrafo.new({sitio_id: obj_params[:id].to_i, index: i})
+                @pf.save
+              end
+              i = i + 1
+            end
+          else
+            while @num_pars.count > obj_params[:num_parrafos].to_i
+              @num_pars[-1].destroy
+            end
+          end
+
+          if @num_pars.count <= obj_params[:num_parrafos].to_i
+            i = 0
+            while i < obj_params[:num_fotos].to_i
+              if Foto.where("sitio_id = ? and index = ?",obj_params[:id].to_i,i).count == 0
+                @pf = Foto.new({sitio_id: obj_params[:id].to_i, index: i})
+                @pf.save
+              end
+              i = i + 1
+            end
+          else
+            while @num_fotos.count > obj_params[:num_fotos].to_i
+              @num_fotos[-1].destroy
+            end
+          end
+
+        end
         format.js { render :mostrar, params: {set: params[:set]}, notice: 'Objeto generado exitosamente.' }
       else
         format.js { render :editar }
