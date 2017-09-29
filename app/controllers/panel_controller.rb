@@ -156,10 +156,13 @@ class PanelController < ApplicationController
 
   def eliminar
 		@sets[params[:set].to_sym][:model].find(params[:id]).destroy
+    if params[:set] == "Catálogo de sitios"
+      Parrafo.where("sitio_id = ?", params[:id].to_i).destroy_all
+      Foto.where("sitio_id = ?", params[:id].to_i).destroy_all
+    end
     @set = @sets[params[:set].to_sym][:model].order(updated_at: :desc).limit(@rpp).offset(0)
     @rpp = 10
     @count = @sets[params[:set].to_sym][:model].count
-
     @pags = (@count == 0 ? 0 : ((@count / @rpp) + (@count % @rpp == 0 ? 0 : 1) ))
 		respond_to do |format|
       format.js { render :index, params: {set: params[:set]}, notice: 'Se ha eliminado el objeto exitosamente'}
