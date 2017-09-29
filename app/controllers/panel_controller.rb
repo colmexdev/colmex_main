@@ -130,7 +130,7 @@ class PanelController < ApplicationController
             end
           end
 
-          if @num_pars.count < obj_params[:num_fotos].to_i
+          if @num_fotos.count < obj_params[:num_fotos].to_i
             k = 0
             while k < obj_params[:num_fotos].to_i
               if Foto.where("sitio_id = ? and f_ind = ? ",params[:id].to_i, k).count == 0
