@@ -116,13 +116,13 @@ class PanelController < ApplicationController
           @num_fotos = Foto.where("sitio_id =?", params[:id])
 
           if @num_pars.count <= obj_params[:num_parrafos].to_i
-            i = 0
-            while i < obj_params[:num_parrafos].to_i
-              if Parrafo.where("sitio_id = ? and index = ?",obj_params[:id].to_i,i).count == 0
-                @pf = Parrafo.new({sitio_id: obj_params[:id].to_i, index: i})
+            k = 0
+            while k < obj_params[:num_parrafos].to_i
+              if Parrafo.where("sitio_id = ? and index = ? ", obj_params[:id].to_i, k).count == 0
+                @pf = Parrafo.new({sitio_id: obj_params[:id].to_i, index: k})
                 @pf.save
               end
-              i = i + 1
+              k = k + 1
             end
           else
             while @num_pars.count > obj_params[:num_parrafos].to_i
@@ -131,13 +131,13 @@ class PanelController < ApplicationController
           end
 
           if @num_pars.count <= obj_params[:num_parrafos].to_i
-            i = 0
+            k = 0
             while i < obj_params[:num_fotos].to_i
-              if Foto.where("sitio_id = ? and index = ?",obj_params[:id].to_i,i).count == 0
-                @pf = Foto.new({sitio_id: obj_params[:id].to_i, index: i})
+              if Foto.where("sitio_id = ? and index = ? ",obj_params[:id].to_i, k).count == 0
+                @pf = Foto.new({sitio_id: obj_params[:id].to_i, index: k})
                 @pf.save
               end
-              i = i + 1
+              k = k + 1
             end
           else
             while @num_fotos.count > obj_params[:num_fotos].to_i
