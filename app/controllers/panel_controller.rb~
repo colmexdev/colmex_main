@@ -115,7 +115,7 @@ class PanelController < ApplicationController
           @num_pars = Parrafo.where("sitio_id = ?", params[:id])
           @num_fotos = Foto.where("sitio_id =?", params[:id])
 
-          if @num_pars.count <= obj_params[:num_parrafos].to_i
+          if @num_pars.count < obj_params[:num_parrafos].to_i
             k = 0
             while k < obj_params[:num_parrafos].to_i
               if Parrafo.where("sitio_id = ? and index = ? ", params[:id], k).count == 0
@@ -130,7 +130,7 @@ class PanelController < ApplicationController
             end
           end
 
-          if @num_pars.count <= obj_params[:num_fotos].to_i
+          if @num_pars.count < obj_params[:num_fotos].to_i
             k = 0
             while i < obj_params[:num_fotos].to_i
               if Foto.where("sitio_id = ? and index = ? ",params[:id], k).count == 0

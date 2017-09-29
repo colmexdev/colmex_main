@@ -1,0 +1,4 @@
+class AddAlgoToParrafos < ActiveRecord::Migration
+  def change
+  end
+end

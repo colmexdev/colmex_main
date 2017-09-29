@@ -118,7 +118,7 @@ class PanelController < ApplicationController
           if @num_pars.count < obj_params[:num_parrafos].to_i
             k = 0
             while k < obj_params[:num_parrafos].to_i
-              if Parrafo.where("sitio_id = ? and index = ? ", params[:id], k).count == 0
+              if Parrafo.where("sitio_id = ? and ind = ? ", params[:id].to_i, k.to_i).count == 0
                 @pf = Parrafo.new({sitio_id: obj_params[:id].to_i, index: k})
                 @pf.save
               end
@@ -133,7 +133,7 @@ class PanelController < ApplicationController
           if @num_pars.count < obj_params[:num_fotos].to_i
             k = 0
             while i < obj_params[:num_fotos].to_i
-              if Foto.where("sitio_id = ? and index = ? ",params[:id], k).count == 0
+              if Foto.where("sitio_id = ? and ind = ? ",params[:id].to_i, k.to_i).count == 0
                 @pf = Foto.new({sitio_id: obj_params[:id].to_i, index: k})
                 @pf.save
               end
