@@ -3,10 +3,10 @@
 
 <table id="index-panel" style="margin-top:35px;word-break:normal;">
 	<thead>
-    <tr>
-      <th>Párrafo</th>
-      <th>Texto</th>
-      <th>Texto (Inglés)</th>
+    <tr id="header-ind">
+      <td class="head-ind">Párrafo</td>
+      <td class="head-ind">Texto</td>
+      <td class="head-ind">Texto (Inglés)</td>
     </tr>
 	</thead>
 	<tbody>
@@ -21,18 +21,19 @@
 </table>
 <br>
 <hr>
+<br>
 <table id="index-panel" style="margin-top:25px;word-break:normal;">
 	<thead>
-    <tr>
-      <th>Foto</th>
-      <th>Imagen</th>
+    <tr id="header-ind">
+      <td class="head-ind">Foto</td>
+      <td class="head-ind">Imagen</td>
     </tr>
 	</thead>
 	<tbody>
 		<% @fotos.each do |f| %>
 		<tr class="row-ind">
 			<td class="ind-cell"><%= f.f_ind %></td>
-			<td class="ind-cell"><%= image_tag(f.foto.url) %></td>
+			<td class="ind-cell"><%= image_tag(f.foto.url, style: "max-height:300px;") %></td>
 		</tr>
 		<% end %>
 	</tbody>
