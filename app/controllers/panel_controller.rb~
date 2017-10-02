@@ -260,11 +260,11 @@ class PanelController < ApplicationController
   end
 
   def par_params(pars)
-    pars.require(:parrafo).permit(:ref, :texto, :texto_ingles, :p_ind)
+    pars.permit(:ref, :texto, :texto_ingles, :p_ind)
   end
 
   def pic_params(pics)
-    pics.require(:foto).permit(:ref, :foto, :f_ind)
+    pics.permit(:ref, :foto, :f_ind)
   end
 
   def obj_params
