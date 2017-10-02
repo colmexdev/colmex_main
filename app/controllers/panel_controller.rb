@@ -100,6 +100,7 @@ class PanelController < ApplicationController
   def editar
     if @sets[params[:set].to_sym][:model].class.to_s != "Array"
       @obj = @sets[params[:set].to_sym][:model].find(params[:id])
+			
     elsif params[:set] == "Contenido de sitios"
       @obj = Sitio.find(params[:id])
       @pars = Parrafo.where("sitio_id = ?",params[:id].to_i)
