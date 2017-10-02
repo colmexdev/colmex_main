@@ -111,8 +111,8 @@ class PanelController < ApplicationController
     @obj = @sets[params[:set].to_sym][:model].find(params[:id])
     respond_to do |format|
       if params[:set] == "Contenido de sitios"
-        @llaves = [params[:pars].keys.params[:pics].keys]
-        @vals = [params[:pars].values,params[:pics].values]
+        @llaves = [params[:pars].keys, params[:pics].keys]
+        @vals = [params[:pars].values, params[:pics].values]
         params[:pars].each_with_index do |p,i|
           Parrafo.find(@llaves[0][i].to_i).update(par_params(ActionController::Parameters.new(@vals[0][i])))
         end
