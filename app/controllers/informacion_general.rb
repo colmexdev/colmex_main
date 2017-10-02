@@ -96,7 +96,7 @@ class InformacionGeneralController < ApplicationController
   end
 
   def presidencia
-    @presidencias = Personal.where("seccion = ? and lower(cargo) like ?", "Presidencia", "'president?'").union(Personal.where("seccion = ? and lower(cargo) like ?", "Presidencia", "'secretari? general'")).union(Personal.where("seccion = ? and lower(cargo) like ?", "Presidencia", "'coordinador% general academic?'")).union(Personal.where("seccion = ? and lower(cargo) like ?", "Presidencia", "'secretari? academic?'")).union(Personal.where("seccion = ? and lower(cargo) like ?", "Presidencia", "'secretari? adjunt? administrativ?'"))
+    @presidencias = Personal.where("seccion = ? and lower(cargo) like ?", "Presidencia", "president?").union(Personal.where("seccion = ? and lower(cargo) like ?", "Presidencia", "secretari? general")).union(Personal.where("seccion = ? and lower(cargo) like ?", "Presidencia", "coordinador% general academic?")).union(Personal.where("seccion = ? and lower(cargo) like ?", "Presidencia", "secretari? academic?")).union(Personal.where("seccion = ? and lower(cargo) like ?", "Presidencia", "secretari? adjunt? administrativ?"))
     #@profs_centros = Personal.find(47).union(Personal.find(48)).union(Personal.find(46))
 		@profs_centros = Personal.where("id = ?", 47).union(Personal.where("id = ?", 48)).union(Personal.where("id = ?", 46))
 		#@profs_centros = Personal.where("seccion = ? AND nombre = ?", "Asociado","Luis Óscar Gómez Rodríguez †").union(Personal.where("seccion = ? AND nombre = ?", "Asociado","Ma. Guadalupe González González")).union(Personal.where("seccion = ? AND nombre = ?", "Asociado","María Eugenia Zavala"))
