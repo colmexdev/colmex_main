@@ -18,11 +18,11 @@
 
 			<div class="field">
 				<%= p.label :texto, "Texto (Párrafo " + ((par.p_ind+1).to_s) + ")" %><br>
-				<%= p.trix_editor :texto %>
+				<%= p.trix_editor :texto, value: par.texto.html_safe %>
 			</div>
 			<div class="field">
 				<%= p.label :texto_ingles, "Texto (inglés, párrafo " + ((par.p_ind+1).to_s) + ")" %><br>
-				<%= p.trix_editor :texto_ingles %>
+				<%= p.trix_editor :texto_ingles, value: par.texto_ingles.html_safe %>
 			</div>
 		<% end %>
 	<% end %>
