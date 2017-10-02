@@ -119,6 +119,7 @@ class PanelController < ApplicationController
         params[:pics].each_with_index do |p,i|
           Foto.find(@llaves[1][i].to_i).update(pic_params(ActionController::Parameters.new(@vals[1][i])))
         end
+        format.js { render :mostrar, params: {set: params[:set]}, notice: 'Objeto generado exitosamente.' }
       elsif @obj.update(obj_params)
         if @sets[params[:set].to_sym][:model] == Sitio
           @num_pars = Parrafo.where("sitio_id = ?", params[:id])

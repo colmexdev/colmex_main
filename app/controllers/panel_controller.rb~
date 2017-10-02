@@ -117,7 +117,7 @@ class PanelController < ApplicationController
           Parrafo.find(@llaves[0][i].to_i).update(par_params(ActionController::Parameters.new(@vals[0][i])))
         end
         params[:pics].each_with_index do |p,i|
-          Foto.find(@llaves[1][i].to_i).update(pic_params(ActionController::Parameters.new(@vals[0][i])))
+          Foto.find(@llaves[1][i].to_i).update(pic_params(ActionController::Parameters.new(@vals[1][i])))
         end
       elsif @obj.update(obj_params)
         if @sets[params[:set].to_sym][:model] == Sitio

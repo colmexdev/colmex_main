@@ -1,4 +1,3 @@
-<p>&nbsp;</p>
   <% @juntas.each do |j| %>
     <h3><%= j.nombre %></h3>
   <% end %>
