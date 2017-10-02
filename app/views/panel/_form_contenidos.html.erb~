@@ -1,6 +1,3 @@
-<%= @pars.size %>
-<%= @pics.size %>
-
 <%= form_for(@obj, :remote => true, :url => {:controller => "panel", :action => (action_name == "editar" ? "editar" : "crear"), :params => {:set => params[:set], :id => (@obj.id if action_name == "editar")}}, :html => { :multipart => true }) do |f| %>
   <% if @obj.errors.any? %>
     <div id="error_explanation">
@@ -17,26 +14,28 @@
 <%= hidden_field_tag :authenticity_token, form_authenticity_token -%>
 
 	<% @pars.each do |par| %>
-		<% fields_for 'pars[]', par do |p| %>
+		<%= fields_for 'pars[]', par do |p| %>
 			<%= p.hidden_field(:id, :value => (par.id || "")) %>
 			<div class="field">
 				<%= p.label :texto, "Texto (Párrafo " + ((par.p_ind+1).to_s) + ")" %><br>
 				<%= p.trix_editor :texto %>
 			</div>
 			<div class="field">
-				<%= p.label :texto_ingles, "Texto (inglés, " + ((par.p_ind+1).to_s) + ")" %><br>
+				<%= p.label :texto_ingles, "Texto (inglés, párrafo " + ((par.p_ind+1).to_s) + ")" %><br>
 				<%= p.trix_editor :texto_ingles %>
 			</div>
 		<% end %>
 	<% end %>
 
+	
+
 	<% @pics.each do |pic| %>
-		<% fields_for 'pics[]', pic do |p| %>
+		<%= fields_for 'pics[]', pic do |p| %>
 			<%= p.hidden_field(:id, :value => (pic.id || "")) %>
 			<div class="field" style="height:250px;">
 				<div class="photo-upload">
 				<%= p.label :foto, raw('<span class="glyphicon glyphicon-upload glyph-padding"></span>Añadir foto') %><br>
-				<%= p.file_field :foto, :onchange => "readURL(this,'#foto-cont-'" + ((pic.f_ind+1).to_s) +")" %><br>
+				<%= p.file_field :foto, :onchange => "readURL(this,'#foto-cont-" + ((pic.f_ind+1).to_s) +"')" %><br>
 				</div>
 				<div class="img-display">
 					<% if !pic.foto.url.nil? %>
