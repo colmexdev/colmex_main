@@ -111,11 +111,14 @@ class PanelController < ApplicationController
     @obj = @sets[params[:set].to_sym][:model].find(params[:id])
     respond_to do |format|
       if params[:set] == "Contenido de sitios"
-        logger.debug params[:pars]
-        logger.debug params[:pics]
-        #params[:pars].each do |p|
-          
-        #end
+        @llaves = [params[:pars].keys.params[:pics].keys]
+        @vals = [params[:pars].values,params[:pics].values]
+        params[:pars].each_with_index do |p,i|
+          Parrafo.find(@llaves[0][i].to_i).update(par_params(ActionController::Parameters.new(@vals[0][i])))
+        end
+        params[:pics].each_with_index do |p,i|
+          Foto.find(@llaves[1][i].to_i).update(pic_params(ActionController::Parameters.new(@vals[0][i])))
+        end
       elsif @obj.update(obj_params)
         if @sets[params[:set].to_sym][:model] == Sitio
           @num_pars = Parrafo.where("sitio_id = ?", params[:id])
@@ -256,6 +259,14 @@ class PanelController < ApplicationController
     @imgs = (@sets[params[:set].to_sym][:imgs].class.to_s != "Array" ? @sets[params[:set].to_sym][:imgs] : @sets[params[:set].to_sym][:imgs][0])
   end
 
+  def par_params
+    params.require(:parrafo).permit(:ref, :texto, :texto_ingles, :p_ind)
+  end
+
+  def pic_params
+    params.require(:foto).permit(:ref, :foto, :f_ind)
+  end
+
   def obj_params
     if params[:set] == "Profesores eméritos"
       params.require(:emerito).permit(:nombre, :fecha_anexion, :centro, :semblanza, :foto, :semblanza_eng)
@@ -285,9 +296,6 @@ class PanelController < ApplicationController
       params.require(:admin).permit(:usuario, :password, :password_confirmation, :admin)
     elsif params[:set] == "Catálogo de sitios"
       params.require(:sitio).permit(:ref, :partial, :num_parrafos, :num_fotos)
-    elsif params[:set] == "Contenido de sitios"
-      params.require(:parrafo).permit(:ref, :texto, :texto_ingles, :p_ind)
-      params.require(:foto).permit(:ref, :foto, :f_ind)
     end
   end
 end

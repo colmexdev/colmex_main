@@ -114,7 +114,7 @@ class InformacionGeneralController < ApplicationController
   end
 
   def unidades_de_apoyo
-    @bibliotecas = Personal.where("seccion = ? AND nombre = ?","Unidades de apoyo", "Micaela Chávez Villa").union(Personal.where("seccion = ? AND nombre = ?","Unidades de apoyo", "Gabriela Said Reyes")).union(Personal.where("seccion = ? AND nombre = ?","Unidades de apoyo", "José Luis Arciga Torres"))
+    @bibliotecas = Personal.where("seccion = ? AND nombre = ?","Unidades de apoyo", "Micaela Chávez Villa").union(Personal.where("seccion = ? AND nombre = ?","Unidades de apoyo", "Gabriela Said Reyes")).union(Personal.where("seccion = ? AND nombre = ?","Unidades de apoyo", "José Luis Arciga Torres")).union(Personal.where("seccion = ? AND nombre = ?","Unidades de apoyo", "Canek Ramírez Devars"))
     respond_to do |format|
       format.js
     end
