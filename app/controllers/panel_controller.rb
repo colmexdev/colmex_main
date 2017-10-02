@@ -100,10 +100,10 @@ class PanelController < ApplicationController
   def editar
     if @sets[params[:set].to_sym][:model].class.to_s != "Array"
       @obj = @sets[params[:set].to_sym][:model].find(params[:id])
-    else 
-      @obj = @sets[params[:set].to_sym][:model][0].find(params[:id])
-      @objs = @sets[params[:set].to_sym][:model][1].where("sitio_id = ?",params[:id])
-      @objs2 = @sets[params[:set].to_sym][:model][2].where("sitio_id = ?",params[:id])
+    elsif params[:set] == "Contenido de sitios"
+      @obj = Sitio.find(params[:id])
+      @pars = Parrafo.where("sitio_id = ?",params[:id])
+      @pics = Foto.where("sitio_id = ?",params[:id])
     end
   end
 
@@ -111,7 +111,13 @@ class PanelController < ApplicationController
     @obj = @sets[params[:set].to_sym][:model].find(params[:id])
     respond_to do |format|
       if @obj.update(obj_params)
-        if @sets[params[:set].to_sym][:model] == Sitio
+        if params[:set] == "Contenido de sitios"
+          logger.debug params[:pars]
+          logger.debug params[:pics]
+          #params[:pars].each do |p|
+            
+          #end
+        elsif @sets[params[:set].to_sym][:model] == Sitio
           @num_pars = Parrafo.where("sitio_id = ?", params[:id])
           @num_fotos = Foto.where("sitio_id =?", params[:id])
 
