@@ -110,14 +110,14 @@ class PanelController < ApplicationController
   def actualizar
     @obj = @sets[params[:set].to_sym][:model].find(params[:id])
     respond_to do |format|
-      if @obj.update(obj_params)
-        if params[:set] == "Contenido de sitios"
-          logger.debug params[:pars]
-          logger.debug params[:pics]
-          #params[:pars].each do |p|
-            
-          #end
-        elsif @sets[params[:set].to_sym][:model] == Sitio
+      if params[:set] == "Contenido de sitios"
+        logger.debug params[:pars]
+        logger.debug params[:pics]
+        #params[:pars].each do |p|
+          
+        #end
+      elsif @obj.update(obj_params)
+        if @sets[params[:set].to_sym][:model] == Sitio
           @num_pars = Parrafo.where("sitio_id = ?", params[:id])
           @num_fotos = Foto.where("sitio_id =?", params[:id])
 

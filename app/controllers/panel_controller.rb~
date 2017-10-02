@@ -102,8 +102,8 @@ class PanelController < ApplicationController
       @obj = @sets[params[:set].to_sym][:model].find(params[:id])
     elsif params[:set] == "Contenido de sitios"
       @obj = Sitio.find(params[:id])
-      @pars = Parrafo.where("sitio_id = ?",params[:id])
-      @pics = Foto.where("sitio_id = ?",params[:id])
+      @pars = Parrafo.where("sitio_id = ?",params[:id].to_i)
+      @pics = Foto.where("sitio_id = ?",params[:id].to_i)
     end
   end
 
