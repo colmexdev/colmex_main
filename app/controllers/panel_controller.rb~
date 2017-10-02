@@ -89,7 +89,7 @@ class PanelController < ApplicationController
             i = i + 1
           end
         end
-        format.js { render :mostrar, params: {set: params[:set]}, notice: 'Objeto generado exitosamente.' }
+        format.js { render :mostrar, params: {set: params[:set], id: @obj.id}, notice: 'Objeto generado exitosamente.' }
       else
         format.js { render :generar }
         format.json { render json: @obj.errors, status: :unprocessable_entity }
