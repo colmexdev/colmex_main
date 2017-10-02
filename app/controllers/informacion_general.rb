@@ -82,7 +82,7 @@ class InformacionGeneralController < ApplicationController
   end
 
   def operativas
-    @operativas = Personal.where("seccion = ? AND lower(departamento) = ?", "Operativas", "oficina de vinculación institucional").union(Personal.where("seccion = ? AND lower(departamento) = ?", "Operativas", "oficina de intercambio académico")).union(Personal.where("seccion = ? AND lower(departamento) = ?", "Operativas", "programa de edcuación digital")).union(Personal.where("seccion = ? AND lower(departamento) = ?", "Operativas", "coordinación de promoción de programas académicos")).union(Personal.where("seccion = ? AND lower(departamento) = ?", "Operativas", "oficina de planeación académica y transparencia")).union(Personal.where("seccion = ? AND lower(departamento) = ?", "Operativas", "oficina de comunicación digital")).union(Personal.where("seccion = ? AND lower(departamento) = ?", "Operativas", "oficina de apoyo a proyectos institucionales"))
+    @operativas = Personal.where("seccion = ? AND lower(depto) = ?", "Operativas", "oficina de vinculación institucional").union(Personal.where("seccion = ? AND lower(depto) = ?", "Operativas", "oficina de intercambio académico")).union(Personal.where("seccion = ? AND lower(depto) = ?", "Operativas", "programa de edcuación digital")).union(Personal.where("seccion = ? AND lower(depto) = ?", "Operativas", "coordinación de promoción de programas académicos")).union(Personal.where("seccion = ? AND lower(depto) = ?", "Operativas", "oficina de planeación académica y transparencia")).union(Personal.where("seccion = ? AND lower(depto) = ?", "Operativas", "oficina de comunicación digital")).union(Personal.where("seccion = ? AND lower(depto) = ?", "Operativas", "oficina de apoyo a proyectos institucionales"))
     respond_to do |format|
       format.js
     end
@@ -114,7 +114,7 @@ class InformacionGeneralController < ApplicationController
   end
 
   def unidades_de_apoyo
-    @bibliotecas = Personal.where("seccion = ? AND lower(departamento) = ?","Unidades de apoyo", "biblioteca “daniel cosío villegas”").union(Personal.where("seccion = ? AND lower(departamento) = ?","Unidades de apoyo", "dirección de publicaciones")).union(Personal.where("seccion = ? AND lower(departamento) = ?","Unidades de apoyo", "coordinación de servicios de cómputo"))
+    @bibliotecas = Personal.where("seccion = ? AND lower(depto) = ?","Unidades de apoyo", "biblioteca “daniel cosío villegas”").union(Personal.where("seccion = ? AND lower(depto) = ?","Unidades de apoyo", "dirección de publicaciones")).union(Personal.where("seccion = ? AND lower(depto) = ?","Unidades de apoyo", "coordinación de servicios de cómputo"))
     respond_to do |format|
       format.js
     end
