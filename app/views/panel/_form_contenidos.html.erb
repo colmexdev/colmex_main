@@ -15,7 +15,7 @@
 
 	<% @pars.each do |par| %>
 		<%= fields_for 'pars[]', par do |p| %>
-			<%= p.hidden_field :p_ind, value: pic.p_ind.to_i %>
+			<%= p.hidden_field :p_ind, value: par.p_ind.to_i %>
 			<div class="field">
 				<%= p.label :texto, "Texto (Párrafo " + ((par.p_ind+1).to_s) + ")" %><br>
 				<%= p.trix_editor :texto, value: par.texto.html_safe %>
