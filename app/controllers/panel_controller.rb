@@ -259,12 +259,12 @@ class PanelController < ApplicationController
     @imgs = (@sets[params[:set].to_sym][:imgs].class.to_s != "Array" ? @sets[params[:set].to_sym][:imgs] : @sets[params[:set].to_sym][:imgs][0])
   end
 
-  def par_params
-    params.require(:parrafo).permit(:ref, :texto, :texto_ingles, :p_ind)
+  def par_params(pars)
+    pars.require(:parrafo).permit(:ref, :texto, :texto_ingles, :p_ind)
   end
 
-  def pic_params
-    params.require(:foto).permit(:ref, :foto, :f_ind)
+  def pic_params(pics)
+    pics.require(:foto).permit(:ref, :foto, :f_ind)
   end
 
   def obj_params
