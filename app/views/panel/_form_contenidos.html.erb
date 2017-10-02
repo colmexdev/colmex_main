@@ -1,6 +1,3 @@
-<%= @pars.size %>
-<%= @pics.size %>
-
 <%= form_for(@obj, :remote => true, :url => {:controller => "panel", :action => (action_name == "editar" ? "editar" : "crear"), :params => {:set => params[:set], :id => (@obj.id if action_name == "editar")}}, :html => { :multipart => true }) do |f| %>
   <% if @obj.errors.any? %>
     <div id="error_explanation">
@@ -17,7 +14,7 @@
 <%= hidden_field_tag :authenticity_token, form_authenticity_token -%>
 
 	<% @pars.each do |par| %>
-		<% fields_for 'pars[]', par do |p| %>
+		<%= fields_for 'pars[]', par do |p| %>
 			<%= p.hidden_field(:id, :value => (par.id || "")) %>
 			<div class="field">
 				<%= p.label :texto, "Texto (Párrafo " + ((par.p_ind+1).to_s) + ")" %><br>
@@ -31,7 +28,7 @@
 	<% end %>
 
 	<% @pics.each do |pic| %>
-		<% fields_for 'pics[]', pic do |p| %>
+		<%= fields_for 'pics[]', pic do |p| %>
 			<%= p.hidden_field(:id, :value => (pic.id || "")) %>
 			<div class="field" style="height:250px;">
 				<div class="photo-upload">
