@@ -119,7 +119,7 @@ class PanelController < ApplicationController
         params[:pics].each_with_index do |p,i|
           Foto.find(@llaves[1][i].to_i).update(pic_params(ActionController::Parameters.new(@vals[1][i])))
         end
-        format.js { render :mostrar, params: {set: params[:set]}, notice: 'Objeto generado exitosamente.' }
+        format.js { render :mostrar, params: {set: params[:set], id: params[:id]}, notice: 'Objeto generado exitosamente.' }
       elsif @obj.update(obj_params)
         if @sets[params[:set].to_sym][:model] == Sitio
           @num_pars = Parrafo.where("sitio_id = ?", params[:id])
@@ -156,7 +156,7 @@ class PanelController < ApplicationController
           end
 
         end
-        format.js { render :mostrar, params: {set: params[:set]}, notice: 'Objeto generado exitosamente.' }
+        format.js { render :mostrar, params: {set: params[:set], id: params[:id]}, notice: 'Objeto generado exitosamente.' }
       else
         format.js { render :editar }
         format.json { render json: @obj.errors, status: :unprocessable_entity }
@@ -256,8 +256,8 @@ class PanelController < ApplicationController
   end
 
   def get_object_fields
-    @fields = (@sets[params[:set].to_sym][:fields].class.to_s != "Array" ? @sets[params[:set].to_sym][:fields] : @sets[params[:set].to_sym][:fields][0])
-    @imgs = (@sets[params[:set].to_sym][:imgs].class.to_s != "Array" ? @sets[params[:set].to_sym][:imgs] : @sets[params[:set].to_sym][:imgs][0])
+    @fields = (@sets[params[:set].to_sym][:fields].class.to_s != "Array" ? @sets[params[:set].to_sym][:fields] : @sets[params[:set].to_sym][:fields][1] )
+    @imgs = (@sets[params[:set].to_sym][:imgs].class.to_s != "Array" ? @sets[params[:set].to_sym][:imgs] : @sets[params[:set].to_sym][:imgs][2])
   end
 
   def par_params(pars)
