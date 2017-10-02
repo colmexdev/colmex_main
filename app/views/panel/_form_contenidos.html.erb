@@ -1,3 +1,6 @@
+<%= pars.size %>
+<%= pics.size %>
+
 <%= form_for(@obj, :remote => true, :url => {:controller => "panel", :action => (action_name == "editar" ? "editar" : "crear"), :params => {:set => params[:set], :id => (@obj.id if action_name == "editar")}}, :html => { :multipart => true }) do |f| %>
   <% if @obj.errors.any? %>
     <div id="error_explanation">
