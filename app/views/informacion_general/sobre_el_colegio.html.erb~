@@ -13,7 +13,7 @@
 <li><%= construir_link("bt-flechita.png", "bt-flechita-hover.png", "Centros de Estudios",centros_de_estudio_url,"link-sobre",false) %></li>
 					<li><%= construir_link("bt-flechita.png", "bt-flechita-hover.png",t('botones.b6'),"http://libros.colmex.mx/","link-sobre") %></li>
 					<li><%= construir_link("bt-flechita.png", "bt-flechita-hover.png",t('sobre_col.revistas'),"http://revistas.colmex.mx/","link-sobre") %></li>
-					<li><%= construir_link("bt-flechita.png", "bt-flechita-hover.png","Programa de Educación Digital","http://digital.colmex.mx/","link-sobre") %></li>
+					<li><%= construir_link("bt-flechita.png", "bt-flechita-hover.png",t('sobre_col.pred') ,"http://digital.colmex.mx/","link-sobre") %></li>
     </ul>
     </div>
     <!--          Aquí termina el menú pequeño          -->
