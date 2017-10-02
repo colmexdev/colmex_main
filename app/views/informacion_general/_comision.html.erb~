@@ -1,4 +1,4 @@
-  <% @consejos.each do |c| %>
-    <h3><%= j.nombre %></h3>
+  <% @coms.each do |c| %>
+    <h3><%= c.nombre %></h3>
   <% end %>
 
