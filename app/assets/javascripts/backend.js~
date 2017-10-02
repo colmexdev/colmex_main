@@ -138,6 +138,12 @@ function configTrix(){
 		tagName: "h3",
 		terminal: true
 	}
+	Trix.config.blockAttributes.paragraph = {
+		breakOnReturn: true,
+		group: false,
+		tagName: "p",
+		terminal: true
+	}
 	Trix.config.textAttributes.underline = { 
 		tagName: "u",
 		parser: function(element) {
@@ -164,10 +170,12 @@ function extendTrix(toolbar,blocks){
  		var buttonHTML6 = "<button type=\"button\" class=\"trix-button trix-button-icon\" data-trix-attribute=\"center\" title=\"Center\" tabindex=\"-1\"><div style=\"display:inline-block;font-size:20px;\"><i class=\"fa fa-align-center\" aria-hidden=\"true\"></i></div></button>";
  		var buttonHTML7 = "<button type=\"button\" class=\"trix-button trix-button-icon\" data-trix-attribute=\"right\" title=\"Right\" tabindex=\"-1\"><div style=\"display:inline-block;font-size:20px;\"><i class=\"fa fa-align-right\" aria-hidden=\"true\"></i></div></button>";
  		var buttonHTML8 = "<button type=\"button\" class=\"trix-button trix-button-icon\" data-trix-attribute=\"justify\" title=\"Justify\" tabindex=\"-1\"><div style=\"display:inline-block;font-size:20px;\"><i class=\"fa fa-align-justify\" aria-hidden=\"true\"></i></div></button>";
+ 		var buttonHTML9 = "<button type=\"button\" class=\"trix-button trix-button-icon\" data-trix-attribute=\"paragraph\" title=\"Paragraph\" tabindex=\"-1\"><div style=\"display:inline-block;font-size:20px;\"><i class=\"fa fa-paragraph\" aria-hidden=\"true\"></i></div></button>";
 		toolbar.insertAdjacentHTML("beforeend", buttonHTML2);
 		toolbar.insertAdjacentHTML("beforeend", buttonHTML);
 		blocks.insertAdjacentHTML("afterbegin",buttonHTML3);
 		blocks.insertAdjacentHTML("afterbegin",buttonHTML4);
+		blocks.insertAdjacentHTML("afterbegin",buttonHTML9);
 		//blocks.insertAdjacentHTML("beforeend",buttonHTML5);
 		//blocks.insertAdjacentHTML("beforeend",buttonHTML6);
 		//blocks.insertAdjacentHTML("beforeend",buttonHTML7);
