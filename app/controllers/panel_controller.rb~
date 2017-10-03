@@ -115,6 +115,7 @@ class PanelController < ApplicationController
         @llaves = [params[:pars].keys, params[:pics].keys]
         @vals = [params[:pars].values, params[:pics].values]
         params[:pars].each_with_index do |p,i|
+					logger.debug @vals[0][i][:text]
           Parrafo.find(@llaves[0][i].to_i).update(par_params(ActionController::Parameters.new(@vals[0][i])))
         end
         params[:pics].each_with_index do |p,i|
