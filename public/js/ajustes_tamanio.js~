@@ -26,6 +26,7 @@ $(document).on('page:load', function(){
 $(document).on("ready", function(){
 	UIkit.init();
 	try{
+		configTrix();
 		addEventListener("trix-initialize", function(event) {
 			var groupElement = event.target.toolbarElement.querySelector("[data-trix-button-group='text-tools']");
 			var blockElement = event.target.toolbarElement.querySelector("[data-trix-button-group='block-tools']");
