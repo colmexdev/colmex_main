@@ -141,7 +141,8 @@ function configTrix(){
 	Trix.config.blockAttributes.paragraph = {
 		breakOnReturn: true,
 		group: false,
-		tagName: "p",
+		tagName: "div",
+		style: {textAlign: "justify", fontSize: "18px", margin: "0 0 15px"}
 		terminal: true
 	}
 	Trix.config.textAttributes.underline = { 
@@ -159,6 +160,7 @@ function configTrix(){
 		inheritable: true
 	}
 	Trix.config.textAttributes.italic.tagName = "i";
+	Trix.confir.blockAttributes.default.style = {textAlign: "justify", fontSize: "18px", margin: "0 0 15px"};
 }
 
 function extendTrix(toolbar,blocks){
@@ -184,9 +186,9 @@ function extendTrix(toolbar,blocks){
 }
 
 function clearPars(editor){
-	var regex = /<p>(?!(<p>))(?!(<br>)).+?(<\/p>)/g;
+	var regex = /<div>(?!(<div>))(?!(<br>)).+?(<\/div>)/g;
 	editor.value = editor.value.match(regex).join("");
-	//console.log(editor.value.match(regex).join(""));
+	console.log(editor.value);
 }
 
 function padZero(n){
