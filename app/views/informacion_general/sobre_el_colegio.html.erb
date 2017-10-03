@@ -27,8 +27,15 @@
     <div class="uk-width-large-2-5">
     <span class="titulo-chico"><%= t('sobre_col.sobre') %></span><br>
     <span class="titulo-grande"><%= t('sobre_col.colegio') %></span><br>
-		<%= params[:locale] == "es" ? @pars[0].texto.html_safe : @pars[0].texto_ingles.html_safe %>
+    <p><%= t('sobre_col.p1') %></p>
+    <p><%= t('sobre_col.p2') %></p>
+    <p><%= t('sobre_col.p3') %></p>
+    <p><%= t('sobre_col.p4') %></p>
+		<p><%= t('sobre_col.p5') %></p>
+		<p><%= t('sobre_col.p6').html_safe %></p>
+
 <% if false %>
+		<%= params[:locale] == "es" ? @pars[0].texto.html_safe : @pars[0].texto_ingles.html_safe %>
     <p><%= t('sobre_col.p1') %></p>
     <p><%= t('sobre_col.p2') %></p>
     <p><%= t('sobre_col.p3') %></p>
