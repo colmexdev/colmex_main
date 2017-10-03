@@ -139,8 +139,8 @@ function configTrix(){
 		terminal: true
 	}
 	Trix.config.blockAttributes.paragraph = {
-		breakOnReturn: true,
-		group: false,
+		breakOnReturn: false,
+		parse: false,
 		tagName: "p",
 		terminal: true
 	}
@@ -159,7 +159,7 @@ function configTrix(){
 		inheritable: true
 	}
 	Trix.config.textAttributes.italic.tagName = "i";
-	Trix.config.blockAttributes.default.tagName = "p";
+	//Trix.config.blockAttributes.default.tagName = "p";
 	//Trix.config.blockAttributes.default.breakOnReturn = true;
 	//Trix.config.blockAttributes.default.terminal = true;
 	//Trix.config.blockAttributes.default.group = false;
