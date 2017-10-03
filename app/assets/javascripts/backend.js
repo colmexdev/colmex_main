@@ -141,8 +141,7 @@ function configTrix(){
 	Trix.config.blockAttributes.paragraph = {
 		breakOnReturn: true,
 		group: false,
-		tagName: "div",
-		style: {textAlign: "justify", fontSize: "18px", margin: "0 0 15px"},
+		tagName: "p",
 		terminal: true
 	}
 	Trix.config.textAttributes.underline = { 
@@ -160,7 +159,10 @@ function configTrix(){
 		inheritable: true
 	}
 	Trix.config.textAttributes.italic.tagName = "i";
-	Trix.config.blockAttributes.default.style = {textAlign: "justify", fontSize: "18px", margin: "0 0 15px"};
+	Trix.config.blockAttributes.default.tagName = "p";
+	Trix.config.blockAttributes.default.breakOnReturn = true;
+	Trix.config.blockAttributes.default.terminal = true;
+	Trix.config.blockAttributes.default.group = false;
 }
 
 function extendTrix(toolbar,blocks){
