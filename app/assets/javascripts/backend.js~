@@ -194,7 +194,7 @@ function clearPars(edit){
 	var newHTML = edit.value.match(regex).join("")
 	edit.editor.setSelectedRange([0,cars]);
 	edit.editor.deleteInDirection("forward");
-	edit.editor.insertHTML(newHTML);
+	//edit.editor.insertHTML(newHTML);
 	
 	console.log(cars + " -- " + newHTML);
 }
