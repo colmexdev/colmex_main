@@ -32,7 +32,7 @@ $(document).on("ready", function(){
 			var blockElement = event.target.toolbarElement.querySelector("[data-trix-button-group='block-tools']");
 			extendTrix(groupElement,blockElement);
 			clearPars(event.srcElement);
-			event.srcElement.on("focus",function(){console.log(this)});
+			event.srcElement.addEventListener("focus",function(){console.log(this)});
 		})
 	}
 	catch(err){
