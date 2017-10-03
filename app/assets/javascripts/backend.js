@@ -195,7 +195,7 @@ function clearPars(edit){
 	edit.innerHTML = "";
 	//edit.editor.setSelectedRange([0,cars]);
 	//edit.editor.deleteInDirection("forward");
-	//edit.editor.insertHTML(newHTML);
+	edit.editor.insertHTML(newHTML);
 	
 	console.log(cars + " -- " + newHTML);
 }

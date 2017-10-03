@@ -192,7 +192,7 @@ function clearPars(edit){
 	var regex = /<p>(?!(<p>))(?!(<br>)).+?(<\/p>)/g;
 	var cars = edit.value.length;
 	var newHTML = edit.value.match(regex).join("");
-	edit.editor.innerHTML = "";
+	edit.innerHTML = "";
 	//edit.editor.setSelectedRange([0,cars]);
 	//edit.editor.deleteInDirection("forward");
 	//edit.editor.insertHTML(newHTML);
