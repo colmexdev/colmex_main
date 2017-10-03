@@ -142,7 +142,7 @@ function configTrix(){
 		breakOnReturn: true,
 		group: false,
 		tagName: "div",
-		style: {textAlign: "justify", fontSize: "18px", margin: "0 0 15px"}
+		style: {textAlign: "justify", fontSize: "18px", margin: "0 0 15px"},
 		terminal: true
 	}
 	Trix.config.textAttributes.underline = { 
