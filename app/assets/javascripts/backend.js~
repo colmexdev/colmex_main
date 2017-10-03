@@ -180,6 +180,11 @@ function extendTrix(toolbar,blocks){
 		//blocks.insertAdjacentHTML("beforeend",buttonHTML6);
 		//blocks.insertAdjacentHTML("beforeend",buttonHTML7);
 		//blocks.insertAdjacentHTML("beforeend",buttonHTML8);
+
+}
+
+function clearPars(editor){
+	
 }
 
 function padZero(n){
