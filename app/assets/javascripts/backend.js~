@@ -139,8 +139,9 @@ function configTrix(){
 		terminal: true
 	}
 	Trix.config.blockAttributes.paragraph = {
-		breakOnReturn: false,
+		breakOnReturn: true,
 		parse: false,
+		group: false;
 		tagName: "p",
 		terminal: true
 	}
