@@ -160,6 +160,7 @@ function configTrix(){
 		inheritable: true
 	}
 	Trix.config.textAttributes.italic.tagName = "i";
+	Trix.confir.blockAttributes.default.style = {textAlign: "justify", fontSize: "18px", margin: "0 0 15px"};
 }
 
 function extendTrix(toolbar,blocks){
