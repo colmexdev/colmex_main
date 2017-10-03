@@ -196,7 +196,7 @@ function clearPars(edit){
 	//edit.editor.deleteInDirection("forward");
 	edit.editor.insertHTML(newHTML);
 	
-	console.log(cars + " -- " + newHTML);
+	console.log(newHTML);
 }
 
 function padZero(n){
