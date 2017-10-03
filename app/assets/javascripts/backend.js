@@ -184,7 +184,7 @@ function extendTrix(toolbar,blocks){
 }
 
 function clearPars(editor){
-	var regex = /<p>(?!(<p>)).+?<\/p>/g;
+	var regex = /<p>(?!(<p>))(?!(<br>)).+?<\/p>/g;
 	console.log(editor.value.match(regex));
 }
 
