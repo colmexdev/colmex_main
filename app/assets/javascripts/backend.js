@@ -160,9 +160,9 @@ function configTrix(){
 	}
 	Trix.config.textAttributes.italic.tagName = "i";
 	Trix.config.blockAttributes.default.tagName = "p";
-	Trix.config.blockAttributes.default.breakOnReturn = true;
-	Trix.config.blockAttributes.default.terminal = true;
-	Trix.config.blockAttributes.default.group = false;
+	//Trix.config.blockAttributes.default.breakOnReturn = true;
+	//Trix.config.blockAttributes.default.terminal = true;
+	//Trix.config.blockAttributes.default.group = false;
 }
 
 function extendTrix(toolbar,blocks){
