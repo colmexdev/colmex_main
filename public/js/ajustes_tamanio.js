@@ -33,7 +33,7 @@ $(document).on("ready", function(){
 			extendTrix(groupElement,blockElement);
 			clearPars(event.srcElement);
 			console.log(event);
-			event.srcElement.addEventListener("focus",function(){clearPars(this)});
+			event.srcElement.addEventListener("trix-focus",function(){clearPars(this)});
 		})
 	}
 	catch(err){
