@@ -191,7 +191,7 @@ function extendTrix(toolbar,blocks){
 function clearPars(edit){
 	var regex = /<p>(?!(<p>))(?!(<br>))(.+?)(<\/p>)/g;
 	var cars = edit.value.length;
-	var newHTML = edit.value.match(regex).map(function(s){return s.replace("</p>","")}).join("");
+	var newHTML = edit.value.match(regex).map(function(s){return s.replace("</p>","</div>").replace("<p>",'<div style="text-align:justify;font-size:18px;">')}).join("");
 	edit.innerHTML = "";
 	edit.editor.setSelectedRange([0,cars]);
 	edit.editor.deleteInDirection("forward");
