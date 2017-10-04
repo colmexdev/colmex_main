@@ -183,19 +183,18 @@ function extendTrix(toolbar,blocks){
 
 }
 
-function clearPars(edit,tag){
+function clearPars(edit){
 	try{
 	var regex = /<p>(?!(<p>))(?!(<br>))(.+?)(<\/p>)/g;
 	var cars = edit.value.length;
-	var newHTML = ( tag == 'p' ? edit.value.match(regex).join("").replace(/<p>/g,"<div>").replace(/<\/p>/g,"</div>") : edit.value.replace(/<br>/g,"<\/div><div>"));
+	var newHTML = edit.value.match(regex).join("").replace(/<p>/g,"<div>").replace(/<\/p>/g,"</div>");
 	edit.innerHTML = "";
 	edit.editor.setSelectedRange([0,cars]);
 	edit.editor.deleteInDirection("forward");
 	edit.editor.insertHTML(newHTML);
 	
-	console.log(tag + " -- " + newHTML);
 	}catch(err){
-		console.log("Vacío");
+
 	}
 }
 
