@@ -184,6 +184,7 @@ function extendTrix(toolbar,blocks){
 }
 
 function clearPars(edit,tag){
+	try{
 	var regex = /<p>(?!(<p>))(?!(<br>))(.+?)(<\/p>)/g;
 	var cars = edit.value.length;
 	var newHTML = ( tag == 'p' ? edit.value.match(regex).join("").replace(/<p>/g,"<div>").replace(/<\/p>/g,"</div>") : edit.value.replace(/<br>/g,"<\/div><div>"));
@@ -193,6 +194,9 @@ function clearPars(edit,tag){
 	edit.editor.insertHTML(newHTML);
 	
 	console.log(tag + " -- " + newHTML);
+	}catch(err){
+		console.log("Vacío");
+	}
 }
 
 function padZero(n){
