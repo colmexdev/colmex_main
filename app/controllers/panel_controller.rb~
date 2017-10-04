@@ -115,10 +115,10 @@ class PanelController < ApplicationController
         @llaves = [params[:pars].keys, params[:pics].keys]
         @vals = [params[:pars].values, params[:pics].values]
         params[:pars].each_with_index do |p,i|
-					#@vals[0][i]["texto"] = @vals[0][i]["texto"].scan(/<p>(?!<p>).+?<\/p>/).join("")
-					#@vals[0][i]["texto_ingles"] = @vals[0][i]["texto_ingles"].scan(/<p>(?!<p>).+?<\/p>/).join("")
-          logger.debug @vals[0][i]["texto"]
-          logger.debug @vals[0][i]["texto_ingles"]
+					@vals[0][i]["texto"] = @vals[0][i]["texto"].scan(/<p>(?!<p>).+?<\/p>/).join("")
+					@vals[0][i]["texto_ingles"] = @vals[0][i]["texto_ingles"].scan(/<p>(?!<p>).+?<\/p>/).join("")
+          #logger.debug @vals[0][i]["texto"]
+          #logger.debug @vals[0][i]["texto_ingles"]
           Parrafo.find(@llaves[0][i].to_i).update(par_params(ActionController::Parameters.new(@vals[0][i])))
         end
         params[:pics].each_with_index do |p,i|

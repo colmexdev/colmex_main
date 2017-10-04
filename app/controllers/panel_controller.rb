@@ -105,6 +105,9 @@ class PanelController < ApplicationController
       @obj = Sitio.find(params[:id])
       @pars = Parrafo.where("sitio_id = ?",params[:id].to_i)
       @pics = Foto.where("sitio_id = ?",params[:id].to_i)
+      if @pars.size > 0
+        logger.debug @pars[1].texto
+      end
     end
   end
 
