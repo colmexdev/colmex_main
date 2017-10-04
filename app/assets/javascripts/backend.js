@@ -185,7 +185,7 @@ function extendTrix(toolbar,blocks){
 
 function clearPars(edit){
 	try{
-	var regex = /<p>(?!(<p>))(?!(<br>))(.+?)(<\/p>)/g;
+	var regex = /<p>(?!<p>)(?!(<--block-->)?<br>).+?<\/p>/g;
 	var cars = edit.value.length;
 	var newHTML = edit.value.match(regex).join("").replace(/<p>/g,"<div>").replace(/<\/p>/g,"</div>");
 	edit.innerHTML = "";
