@@ -192,6 +192,7 @@ function clearPars(edit,tag){
 	//edit.editor.deleteInDirection("forward");
 	edit.editor.insertHTML(newHTML);
 	
+	console.log(tag + " -- " + newHTML);
 }
 
 function padZero(n){
