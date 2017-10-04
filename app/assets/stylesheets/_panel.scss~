@@ -277,7 +277,7 @@
 	float: right;
 	overflow-y: auto;
 	overflow-x: auto;
-	background-color: #DDD;
+	background-color: #FFF;
 	-webkit-transition: all 0.3s linear;
 	-moz-transition: all 0.3s linear;
 	-o-transition: all 0.3s linear;
