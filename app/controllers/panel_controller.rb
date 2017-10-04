@@ -100,7 +100,9 @@ class PanelController < ApplicationController
   def editar
     if @sets[params[:set].to_sym][:model].class.to_s != "Array"
       @obj = @sets[params[:set].to_sym][:model].find(params[:id])
-			
+			@trix.each do |t|
+        @obj[t] = @obj[t].gsub(/<p>/,"<div>").gsub(/<\/p>/,"</div>").gsub(/<\/div><div>/,"<br>")
+      end
     elsif params[:set] == "Contenido de sitios"
       @obj = Sitio.find(params[:id])
       @pars = Parrafo.where("sitio_id = ?",params[:id].to_i)
@@ -114,6 +116,11 @@ class PanelController < ApplicationController
 
   def actualizar
     @obj = @sets[params[:set].to_sym][:model].find(params[:id])
+    if params[:set] != "Contenido de sitios"
+      @trix.each do |t|
+        obj_params[t] = obj_params[t].gsub(/<br>/,"</p><p>").gsub(/<div>/,"<p>").gsub(/<\/div>/,"</p>")
+      end
+    end
     respond_to do |format|
       if params[:set] == "Contenido de sitios"
         @llaves = [params[:pars].keys, params[:pics].keys]
@@ -121,8 +128,6 @@ class PanelController < ApplicationController
         params[:pars].each_with_index do |p,i|
 					@vals[0][i]["texto"] = @vals[0][i]["texto"].gsub(/<br>/,"</p><p>").gsub(/<div>/,"<p>").gsub(/<\/div>/,"</p>")
 					@vals[0][i]["texto_ingles"] = @vals[0][i]["texto_ingles"].gsub(/<br>/,"</p><p>").gsub(/<div>/,"<p>").gsub(/<\/div>/,"</p>")
-          logger.debug @vals[0][i]["texto"]
-          logger.debug @vals[0][i]["texto_ingles"]
           Parrafo.find(@llaves[0][i].to_i).update(par_params(ActionController::Parameters.new(@vals[0][i])))
         end
         params[:pics].each_with_index do |p,i|
@@ -203,63 +208,78 @@ class PanelController < ApplicationController
       "Profesores eméritos": {
         model: Emerito, 
         fields: {nombre: "Nombre",fecha_anexion: "Fecha de anexión",centro: "Centro",semblanza: "Semblanza",semblanza_eng: "Semblanza (Inglés)"}, 
-        imgs: {foto: "Foto"}
+        imgs: {foto: "Foto"},
+        trix: [:nombre, :semblanza, :semblanza_eng]
       }, "Programas docentes": {
         model: Curso,
         fields: {titulo: "Título",descripcion: "Descripción",fecha_inicio_conv: "Inicio de convocatoria",fecha_fin_conv: "Fin de convocatoria",fecha_inicio_clases: "Inicio de clases",fecha_fin_clases: "Fin de clases",liga: "Link",programa: "Programa docente",tipo_curso: "Tipo de curso",imparte: "Impartido por",traduccion_tit: "Título (Inglés)", traduccion_desc: "Descripción (Inglés)"},
-        imgs: {foto: "Foto"}
+        imgs: {foto: "Foto"},
+        trix: [:titulo, :traduccion_tit, :descripcion, :imparte, :traduccion_desc]
       }, "Directorio de Autoridades": {
         model: Personal,
         fields: {nombre: "Nombre",seccion: "Sección",correo: "Correo electrónico",telefono: "Teléfono",extension: "Extensión",depto: "Departamento",cargo: "Cargo"},
-        imgs: {foto: "Foto"}
+        imgs: {foto: "Foto"},
+        trix: []
       }, "Categorías de Premios": {
         model: Categorium,
         fields: {nombre: "Nombre", nombre_eng: "Nombre (Inglés)"},
-        imgs: {}
+        imgs: {},
+        trix: []
       }, "Premios y distinciones": {
         model: Premiado,
         fields: {nombre: "Nombre", descripcion: "Descripción",tipo_premio: "Otorgado a",tipo: "Sección (comunidad)",liga: "Link"},
-        imgs: {}
+        imgs: {},
+        trix: [:nombre, :descripcion]
       }, "Documentos varios": {
         model: Documento,
         fields: {nombre: "Título",nombre_eng: "Título (Inglés)",tipo: "Sección",anio: "Año",liga: "Link"},
-        imgs: {archivo: "Archivo"}
+        imgs: {archivo: "Archivo"},
+        trix: [:nombre, :nombre_eng]
       }, "Descubre": {
         model: Descubre,
         fields: {titulo: "Título",liga: "Link",contenido: "Categoría",fecha_publicacion: "Fecha de despliegue",fecha_limite_pub: "Fecha de expiración",tags: "Etiquetas"},
-        imgs: {imagen: "Imagen"}
+        imgs: {imagen: "Imagen"},
+        trix: [:titulo]
       }, "Categorías de 'Descubre'": {
         model: Content,
         fields: {tipo: "Tipo",tipo_eng: "Tipo (Inglés)"},
-        imgs: {icono: "Ícono"}
+        imgs: {icono: "Ícono"},
+        trix: []
       }, "Imágenes de slider": {
         model: Slider,
         fields: {liga: "Link",fecha_expiracion: "Fecha de expiración",posicion: "Posición (badge)"},
-        imgs: {imagen: "Imagen",badge: "Badge", badge_eng: "Badge (Inglés)"}
+        imgs: {imagen: "Imagen",badge: "Badge", badge_eng: "Badge (Inglés)"},
+        trix: []
       }, "Cátedras y seminarios": {
         model: Catedra,
         fields: {titulo: "Título",titulo_eng: "Título (Inglés)",descripcion: "Descripción",descripcion_eng: "Descripción (Inglés)",tipo: "Tipo",liga: "Link"},
-        imgs: {}
+        imgs: {},
+        trix: [:titulo, :titulo_eng, :descripcion, :descripcion_eng]
       }, "Frases en página principal": {
         model: Frase,
         fields: {cita: "Cita",cita_eng: "Cita (Inglés)",autor: "Autor"},
-        imgs: {}
+        imgs: {},
+        trix: [:cita, :cita_eng, :autor]
       }, "Directorio académico": {
         model: Academico,
         fields: {nombre: "Nombre",inicial: "Inicial",correo: "Correo electrónico",adscripcion: "Centro de Estudios",lineas_investigacion: "Líneas de investigación",pagina: "Sitio personal"},
-        imgs: {foto: "Foto"}
+        imgs: {foto: "Foto"},
+        trix: []
       }, "Usuarios gestores": {
         model: Admin,
         fields: {usuario: "Usuario",admin: "Tipo"},
-        imgs: {}
+        imgs: {},
+        trix: []
       }, "Catálogo de sitios": {
         model: Sitio,
         fields: {ref: "Página", partial: "URL", num_parrafos: "Párrafos", num_fotos: "Fotos"},
-        imgs: {}
+        imgs: {},
+        trix: []
       }, "Contenido de sitios": {
         model: [Sitio,Parrafo, Foto],
         fields: [{ref: "Página", partial: "URL", num_parrafos: "Párrafos", num_fotos: "Fotos"}, {ref: "Página", texto: "Texto", texto_ingles: "Texto (Inglés)", p_ind: "Párrafo"}, {ref: "Página", f_ind: "Foto"}],
-        imgs: [{}, {}, {foto: "Foto"}]
+        imgs: [{}, {}, {foto: "Foto"}],
+        trix: [[],[:texto, :texto_ingles],[]]
       }
     }
   end
@@ -267,6 +287,7 @@ class PanelController < ApplicationController
   def get_object_fields
     @fields = (@sets[params[:set].to_sym][:fields].class.to_s != "Array" ? @sets[params[:set].to_sym][:fields] : @sets[params[:set].to_sym][:fields][0] )
     @imgs = (@sets[params[:set].to_sym][:imgs].class.to_s != "Array" ? @sets[params[:set].to_sym][:imgs] : @sets[params[:set].to_sym][:imgs][0])
+    @trix = (@sets[params[:set].to_sym][:trix].class.to_s != "Array" ? @sets[params[:set].to_sym][:trix] : @sets[params[:set].to_sym][:trix][0])
   end
 
   def par_params(pars)
