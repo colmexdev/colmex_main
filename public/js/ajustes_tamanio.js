@@ -31,8 +31,8 @@ $(document).on("ready", function(){
 			var groupElement = event.target.toolbarElement.querySelector("[data-trix-button-group='text-tools']");
 			var blockElement = event.target.toolbarElement.querySelector("[data-trix-button-group='block-tools']");
 			extendTrix(groupElement,blockElement);
-			clearPars(event.srcElement);
-			event.srcElement.addEventListener("trix-focus",function(){clearPars(this)});
+			clearPars(event.srcElement,'p');
+			event.srcElement.addEventListener("trix-change",function(){clearPars(this,'div')});
 		})
 	}
 	catch(err){

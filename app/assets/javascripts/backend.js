@@ -159,10 +159,6 @@ function configTrix(){
 		inheritable: true
 	}
 	Trix.config.textAttributes.italic.tagName = "i";
-	//Trix.config.blockAttributes.default.tagName = "p";
-	//Trix.config.blockAttributes.default.breakOnReturn = true;
-	//Trix.config.blockAttributes.default.terminal = true;
-	//Trix.config.blockAttributes.default.group = false;
 }
 
 function extendTrix(toolbar,blocks){
@@ -187,16 +183,15 @@ function extendTrix(toolbar,blocks){
 
 }
 
-function clearPars(edit){
+function clearPars(edit,tag){
 	var regex = /<p>(?!(<p>))(?!(<br>))(.+?)(<\/p>)/g;
 	var cars = edit.value.length;
-	var newHTML = edit.value.match(regex).join("");
+	var newHTML = ( tag == 'p' ? edit.value.match(regex).join("").replace(/<p>/g,"<div>").replace(/<\/p>/g,"</div>") : edit.value.replace(/<br>/g,"<\/div><div>"));
 	edit.innerHTML = "";
-	edit.editor.setSelectedRange([0,cars]);
-	edit.editor.deleteInDirection("forward");
+	//edit.editor.setSelectedRange([0,cars]);
+	//edit.editor.deleteInDirection("forward");
 	edit.editor.insertHTML(newHTML);
 	
-	console.log(newHTML);
 }
 
 function padZero(n){
