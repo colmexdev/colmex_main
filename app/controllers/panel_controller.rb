@@ -1,6 +1,6 @@
 class PanelController < ApplicationController
   before_action :select_set, only: [:principal, :index, :mostrar, :generar, :crear, :eliminar, :actualizar, :editar]
-  before_action :get_object_fields, only: [:index, :crear, :actualizar, :eliminar, :mostrar]
+  before_action :get_object_fields, only: [:index, :crear, :actualizar, :eliminar, :mostrar, :editar]
 
   def principal
 		grupos = @sets.map {|k,v| v[:model]}
@@ -117,10 +117,9 @@ class PanelController < ApplicationController
   def actualizar
     @obj = @sets[params[:set].to_sym][:model].find(params[:id])
     if params[:set] != "Contenido de sitios"
-      logger.debug @trix
-      #@trix.each do |t|
-      #  obj_params[t] = obj_params[t].gsub(/<br>/,"</p><p>").gsub(/<div>/,"<p>").gsub(/<\/div>/,"</p>")
-      #end
+      @trix.each do |t|
+        obj_params[t] = obj_params[t].gsub(/<br>/,"</p><p>").gsub(/<div>/,"<p>").gsub(/<\/div>/,"</p>")
+      end
     end
     respond_to do |format|
       if params[:set] == "Contenido de sitios"
