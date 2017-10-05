@@ -459,7 +459,7 @@ trix-editor div {
 }
 
 /* Submit button */
-#graphs-gest form input[type="submit"], #graphs-gest submit{
+#graphs-gest form input[type="submit"], #graphs-gest input[type="submit"]{
 	border: none;
 	border-radius: 100px;
 	color: #FFF;
@@ -475,7 +475,7 @@ trix-editor div {
 	transition: all 0.1s linear;
 }
 
-#graphs-gest form input[type="submit"]:hover, #graphs-gest submit:hover{
+#graphs-gest form input[type="submit"]:hover, #graphs-gest input[type="submit"]:hover{
 	color: #DDD;
 	background-color: #9E6680;
 }
