@@ -129,21 +129,20 @@ button:focus{
 
 body {font-family: "Whitney SSm A", "Whitney SSm B", Lato, sans-serif; font-style: normal; font-weight: 400; font-size: 18px; color: #333333; }
 h1, h2, h3, h4, h5, h6 {font-family: "Gotham SSm A", "Gotham SSm B", Lato, sans-serif; font-style: normal; font-weight: 700;}
-h1, trix-content h1 { font-size: 34px !important; }
-h2 { font-size: 29px; }
-h3 { font-size: 25px; }
+trix-content h1 { font-size: 34px !important; }
+
 strong {font-weight: 600; color: #838383}
 i {font-style: italic; }
 a, a:hover, a:active, a:visited, a:link{  text-decoration: none; }
 .titulo {}
 .subtitulo {color: #838383}
-.titulo-chico, h2, trix-content h2{
+.titulo-chico, trix-content h2{
 	font-family: "Gotham SSm A", "Gotham SSm B", Lato; 
 	font-style: normal; 
 	font-weight: 700; 
 	font-size: 25px;
 	display: block;
-	margin-bottom: -15px;/*12px;*/
+	margin-bottom: 12px;
 }
 p {text-align: justify; font-size: 18px;}
 
@@ -176,9 +175,10 @@ p {text-align: justify; font-size: 18px;}
 	#map { margin-top: 40px; }
 }
 
-.uk-link { color: #7E3355; text-decoration: none; outline: none; }
 
-.uk-link:hover, .uk-link:visited, .uk-link:focus { color: #7E3355; text-decoration: none; }	
+.uk-link, p a, trix-editor a { color: #7E3355; text-decoration: none; outline: none; }
+
+.uk-link:hover, .uk-link:visited, .uk-link:focus, p a:hover, p a:visited, p a:focus,  trix-editor a:hover, trix-editor a:visited, trix-editor a:focus{ color: #7E3355; text-decoration: none; }	
 
 .uk-link.sin-pointer { cursor: auto; }
 
