@@ -33,7 +33,7 @@
 		<% @fotos.each do |f| %>
 		<tr class="row-ind">
 			<td class="ind-cell"><%= f.f_ind %></td>
-			<td class="ind-cell"><%= image_tag(f.foto.url, style: "max-height:300px;") %></td>
+			<td class="ind-cell"><%= image_tag(f.foto.url, style: "max-height:250px;") %></td>
 		</tr>
 		<% end %>
 	</tbody>
