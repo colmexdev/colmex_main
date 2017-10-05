@@ -1,6 +1,6 @@
 <% @pars = Parrafo.where('sitio_id = ?', params[:id].to_i) %>
 <% @pics = Foto.where('sitio_id = ?', params[:id].to_i) %>
-<% @site = Sitio.first(params[:id]).partial %>
+<% @site = Sitio.find(params[:id]).partial %>
 
 
 <%= render @site %>

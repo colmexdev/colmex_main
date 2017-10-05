@@ -1,6 +1,11 @@
-<% @parrafos = Parrafo.where('sitio_id = ?', params[:id].to_i) %>
-<% @fotos = Foto.where('sitio_id = ?', params[:id].to_i) %>
+<% @pars = Parrafo.where('sitio_id = ?', params[:id].to_i) %>
+<% @pics = Foto.where('sitio_id = ?', params[:id].to_i) %>
+<% @site = Sitio.first(params[:id]).partial %>
 
+
+<%= render @site %>
+
+<% if false %>
 <table id="index-panel" style="margin-top:35px;word-break:normal;">
 	<thead>
     <tr id="header-ind">
@@ -38,4 +43,4 @@
 		<% end %>
 	</tbody>
 </table>	
-
+<% end %>
