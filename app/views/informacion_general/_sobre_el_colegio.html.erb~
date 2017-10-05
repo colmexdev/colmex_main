@@ -1,0 +1,55 @@
+<%= render 'principal/barra' %>
+<% @sitio = Sitio.where("ref = ?","Sobre El Colegio de México").first.id %>
+<% @pars = Parrafo.where("sitio_id = ?", @sitio) %>
+<% @pics = Foto.where("sitio_id = ?", @sitio) %>
+<div class="container-fluid" id="resto-cuerpo">
+	<div id="cuerpo" class="principal-chica uk-block-large">
+
+<div class="uk-width-1-1">
+    <div class="uk-grid uk-grid-small">
+    <div class="uk-width-large-3-5 uk-text-center-small uk-text-center-medium uk-text-left">
+		<%= image_tag(@pics[0].foto.url) %>
+		<% if false %>
+    <img src=<%= image_url("sobre-el-colegio.jpg") %> alt="Historia de El Colegio de México">
+		<% end %>
+    <p>&nbsp;</p>
+    <!--          Aquí empieza el menú pequeño          -->
+    <div class="uk-hidden-medium uk-hidden-small">
+    <ul class="lista-links" style="text-align:left;">
+<li><%= construir_link("bt-flechita.png", "bt-flechita-hover.png", "Centros de Estudios",centros_de_estudio_url,"link-sobre",false) %></li>
+					<li><%= construir_link("bt-flechita.png", "bt-flechita-hover.png",t('botones.b6'),"http://libros.colmex.mx/","link-sobre") %></li>
+					<li><%= construir_link("bt-flechita.png", "bt-flechita-hover.png",t('sobre_col.revistas'),"http://revistas.colmex.mx/","link-sobre") %></li>
+					<li><%= construir_link("bt-flechita.png", "bt-flechita-hover.png",t('sobre_col.pred') ,"http://digital.colmex.mx/","link-sobre") %></li>
+    </ul>
+    </div>
+    <!--          Aquí termina el menú pequeño          -->
+    </div>
+    <div class="uk-width-large-2-5">
+    <span class="titulo-chico"><%= t('sobre_col.sobre') %></span><br>
+    <span class="titulo-grande"><%= t('sobre_col.colegio') %></span><br>
+    <p><%= t('sobre_col.p1') %></p>
+    <p><%= t('sobre_col.p2') %></p>
+    <p><%= t('sobre_col.p3') %></p>
+    <p><%= t('sobre_col.p4') %></p>
+		<p><%= t('sobre_col.p5') %></p>
+		<p><%= t('sobre_col.p6').html_safe %></p>
+
+<% if false %>
+		<%= params[:locale] == "es" ? @pars[0].texto.html_safe : @pars[0].texto_ingles.html_safe %>
+    <p><%= t('sobre_col.p1') %></p>
+    <p><%= t('sobre_col.p2') %></p>
+    <p><%= t('sobre_col.p3') %></p>
+    <p><%= t('sobre_col.p4') %></p>
+		<p><%= t('sobre_col.p5') %></p>
+		<p><%= t('sobre_col.p6').html_safe %></p>
+<% end %>
+    <p>&nbsp;</p>
+    </div>
+    </div>
+    </div> 
+
+
+		
+	</div>
+
+<%= render 'principal/footer'%>
