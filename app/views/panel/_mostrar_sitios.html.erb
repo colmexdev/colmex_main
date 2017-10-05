@@ -2,45 +2,6 @@
 <% @pics = Foto.where('sitio_id = ?', params[:id].to_i) %>
 <% @site = Sitio.find(params[:id]).partial %>
 
+<%= submit_tag ("Ver en " + (params[:locale] == "es" ? "inglés" : "español")), onclick: ("hideLink(event,'#graphs-gest','" + panel_mostrar_path(:set => params[:set], :id => params[:id], :locale => (params[:locale] == "es" ? "en" : "es")) + "')") %>
 
 <%= render @site %>
-
-<% if false %>
-<table id="index-panel" style="margin-top:35px;word-break:normal;">
-	<thead>
-    <tr id="header-ind">
-      <td class="head-ind">Párrafo</td>
-      <td class="head-ind">Texto</td>
-      <td class="head-ind">Texto (Inglés)</td>
-    </tr>
-	</thead>
-	<tbody>
-		<% @parrafos.each do |f| %>
-		<tr class="row-ind">
-			<td class="ind-cell"><%= f.p_ind %></td>
-			<td class="ind-cell"><%= f.texto.html_safe %></td>
-			<td class="ind-cell"><%= f.texto_ingles.html_safe %></td>
-		</tr>
-		<% end %>
-	</tbody>
-</table>
-<br>
-<hr>
-<br>
-<table id="index-panel" style="margin-top:25px;word-break:normal;">
-	<thead>
-    <tr id="header-ind">
-      <td class="head-ind">Foto</td>
-      <td class="head-ind">Imagen</td>
-    </tr>
-	</thead>
-	<tbody>
-		<% @fotos.each do |f| %>
-		<tr class="row-ind">
-			<td class="ind-cell"><%= f.f_ind %></td>
-			<td class="ind-cell"><%= image_tag(f.foto.url, style: "max-height:250px;") %></td>
-		</tr>
-		<% end %>
-	</tbody>
-</table>	
-<% end %>
