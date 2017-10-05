@@ -100,7 +100,7 @@ class PanelController < ApplicationController
   def editar
     if @sets[params[:set].to_sym][:model].class.to_s != "Array"
       @obj = @sets[params[:set].to_sym][:model].find(params[:id])
-      logger.debug @trix
+      logger.debug @sets[params[:set].to_sym][:trix]
 			#@trix.each do |t|
       #  @obj[t] = @obj[t].gsub(/<p>/,"<div>").gsub(/<\/p>/,"</div>").gsub(/<\/div><div>/,"<br>")
       #end
