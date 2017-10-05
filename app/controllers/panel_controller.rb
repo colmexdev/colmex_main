@@ -74,7 +74,7 @@ class PanelController < ApplicationController
   def crear
     @obj = @sets[params[:set].to_sym][:model].new(obj_params)
 	  @sets[params[:set].to_sym][:trix].each do |t|
-      @obj[t] = @obj[t].gsub(/<br>/,"</p><p>").gsub(/<div>/,"<p>").gsub(/<\/div>/,"</p>")
+      @obj[t] = (@obj[t].nil? ? "" : @obj[t].gsub(/<br>/,"</p><p>").gsub(/<div>/,"<p>").gsub(/<\/div>/,"</p>"))
     end
     respond_to do |format|
       if @obj.save
@@ -104,7 +104,7 @@ class PanelController < ApplicationController
     if @sets[params[:set].to_sym][:model].class.to_s != "Array"
       @obj = @sets[params[:set].to_sym][:model].find(params[:id])
 			@sets[params[:set].to_sym][:trix].each do |t|
-        @obj[t] = @obj[t].gsub(/<p>/,"<div>").gsub(/<\/p>/,"</div>").gsub(/<\/div><div>/,"<br>")
+        @obj[t] = (@obj[t].nil? ? "" : @obj[t].gsub(/<p>/,"<div>").gsub(/<\/p>/,"</div>").gsub(/<\/div><div>/,"<br>"))
       end
     elsif params[:set] == "Contenido de sitios"
       @obj = Sitio.find(params[:id])
@@ -129,8 +129,8 @@ class PanelController < ApplicationController
         @llaves = [params[:pars].keys, params[:pics].keys]
         @vals = [params[:pars].values, params[:pics].values]
         params[:pars].each_with_index do |p,i|
-					@vals[0][i]["texto"] = @vals[0][i]["texto"].gsub(/<br>/,"</p><p>").gsub(/<div>/,"<p>").gsub(/<\/div>/,"</p>")
-					@vals[0][i]["texto_ingles"] = @vals[0][i]["texto_ingles"].gsub(/<br>/,"</p><p>").gsub(/<div>/,"<p>").gsub(/<\/div>/,"</p>")
+					@vals[0][i]["texto"] = (@vals[0][i]["texto"].nil? ? "" : @vals[0][i]["texto"].gsub(/<br>/,"</p><p>").gsub(/<div>/,"<p>").gsub(/<\/div>/,"</p>"))
+					@vals[0][i]["texto_ingles"] = (@vals[0][i]["texto_ingles"].nil? ? "" : @vals[0][i]["texto_ingles"].gsub(/<br>/,"</p><p>").gsub(/<div>/,"<p>").gsub(/<\/div>/,"</p>"))
           Parrafo.find(@llaves[0][i].to_i).update(par_params(ActionController::Parameters.new(@vals[0][i])))
         end
         params[:pics].each_with_index do |p,i|

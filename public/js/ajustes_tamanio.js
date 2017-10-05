@@ -131,7 +131,6 @@ $(window).on("resize",function(){
 	$(document).trigger("scroll");
 });
 
-
 function recabarAnchos(){
 	var arr_w = [];
 	for( var i = 0; i < gon.cant_sliders; i++){
