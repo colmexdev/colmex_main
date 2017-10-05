@@ -100,9 +100,10 @@ class PanelController < ApplicationController
   def editar
     if @sets[params[:set].to_sym][:model].class.to_s != "Array"
       @obj = @sets[params[:set].to_sym][:model].find(params[:id])
-			@trix.each do |t|
-        @obj[t] = @obj[t].gsub(/<p>/,"<div>").gsub(/<\/p>/,"</div>").gsub(/<\/div><div>/,"<br>")
-      end
+      logger.debug @trix
+			#@trix.each do |t|
+      #  @obj[t] = @obj[t].gsub(/<p>/,"<div>").gsub(/<\/p>/,"</div>").gsub(/<\/div><div>/,"<br>")
+      #end
     elsif params[:set] == "Contenido de sitios"
       @obj = Sitio.find(params[:id])
       @pars = Parrafo.where("sitio_id = ?",params[:id].to_i)
@@ -117,9 +118,9 @@ class PanelController < ApplicationController
   def actualizar
     @obj = @sets[params[:set].to_sym][:model].find(params[:id])
     if params[:set] != "Contenido de sitios"
-      @trix.each do |t|
-        obj_params[t] = obj_params[t].gsub(/<br>/,"</p><p>").gsub(/<div>/,"<p>").gsub(/<\/div>/,"</p>")
-      end
+      #@trix.each do |t|
+      #  obj_params[t] = obj_params[t].gsub(/<br>/,"</p><p>").gsub(/<div>/,"<p>").gsub(/<\/div>/,"</p>")
+      #end
     end
     respond_to do |format|
       if params[:set] == "Contenido de sitios"
