@@ -111,8 +111,8 @@ class PanelController < ApplicationController
       @pars = Parrafo.where("sitio_id = ?",params[:id].to_i)
       @pics = Foto.where("sitio_id = ?",params[:id].to_i)
       @pars.each do |p|
-        p.texto = p.texto.gsub(/<p>/,"<div>").gsub(/<\/p>/,"</div>").gsub(/<\/div><div>/,"<br>")
-        p.texto_ingles = p.texto_ingles.gsub(/<p>/,"<div>").gsub(/<\/p>/,"</div>").gsub(/<\/div><div>/,"<br>")
+        p.texto = (p.texto.nil? ? "" : p.texto.gsub(/<p>/,"<div>").gsub(/<\/p>/,"</div>").gsub(/<\/div><div>/,"<br>"))
+        p.texto_ingles = (p.texto_ingles.nil? ? "" : p.texto_ingles.gsub(/<p>/,"<div>").gsub(/<\/p>/,"</div>").gsub(/<\/div><div>/,"<br>"))
       end
     end
   end
