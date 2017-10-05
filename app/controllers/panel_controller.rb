@@ -1,6 +1,6 @@
 class PanelController < ApplicationController
   before_action :select_set, only: [:principal, :index, :mostrar, :generar, :crear, :eliminar, :actualizar, :editar]
-  before_action :get_object_fields, only: [:index, :crear, :actualizar, :eliminar, :mostrar, :editar]
+  before_action :get_object_fields, only: [:index, :crear, :actualizar, :eliminar, :mostrar]
 
   def principal
 		grupos = @sets.map {|k,v| v[:model]}
@@ -73,6 +73,9 @@ class PanelController < ApplicationController
 
   def crear
     @obj = @sets[params[:set].to_sym][:model].new(obj_params)
+	  @sets[params[:set].to_sym][:trix].each do |t|
+      @obj[t] = @obj[t].gsub(/<br>/,"</p><p>").gsub(/<div>/,"<p>").gsub(/<\/div>/,"</p>")
+    end
     respond_to do |format|
       if @obj.save
         if @sets[params[:set].to_sym][:model] == Sitio
@@ -100,7 +103,7 @@ class PanelController < ApplicationController
   def editar
     if @sets[params[:set].to_sym][:model].class.to_s != "Array"
       @obj = @sets[params[:set].to_sym][:model].find(params[:id])
-			@trix.each do |t|
+			@sets[params[:set].to_sym][:trix].each do |t|
         @obj[t] = @obj[t].gsub(/<p>/,"<div>").gsub(/<\/p>/,"</div>").gsub(/<\/div><div>/,"<br>")
       end
     elsif params[:set] == "Contenido de sitios"
@@ -287,7 +290,6 @@ class PanelController < ApplicationController
   def get_object_fields
     @fields = (@sets[params[:set].to_sym][:fields].class.to_s != "Array" ? @sets[params[:set].to_sym][:fields] : @sets[params[:set].to_sym][:fields][0] )
     @imgs = (@sets[params[:set].to_sym][:imgs].class.to_s != "Array" ? @sets[params[:set].to_sym][:imgs] : @sets[params[:set].to_sym][:imgs][0])
-    @trix = (@sets[params[:set].to_sym][:trix].class.to_s != "Array" ? @sets[params[:set].to_sym][:trix] : @sets[params[:set].to_sym][:trix][0])
   end
 
   def par_params(pars)

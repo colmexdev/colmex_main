@@ -287,7 +287,7 @@ class PanelController < ApplicationController
   def get_object_fields
     @fields = (@sets[params[:set].to_sym][:fields].class.to_s != "Array" ? @sets[params[:set].to_sym][:fields] : @sets[params[:set].to_sym][:fields][0] )
     @imgs = (@sets[params[:set].to_sym][:imgs].class.to_s != "Array" ? @sets[params[:set].to_sym][:imgs] : @sets[params[:set].to_sym][:imgs][0])
-    @trix = (@sets[params[:set].to_sym][:trix].class.to_s != "Array" ? @sets[params[:set].to_sym[:trix] : @sets[params[:set].to_sym][:trix][0])
+    @trix = (@sets[params[:set].to_sym][:trix].class.to_s != "Array" ? @sets[params[:set].to_sym][:trix] : @sets[params[:set].to_sym][:trix][0])
   end
 
   def par_params(pars)
