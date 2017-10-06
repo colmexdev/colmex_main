@@ -74,7 +74,7 @@ class PanelController < ApplicationController
   def crear
     @obj = @sets[params[:set].to_sym][:model].new(obj_params)
 	  @sets[params[:set].to_sym][:trix].each do |t|
-      @obj[t] = (@obj[t].nil? ? "" : @obj[t].gsub(/<br>/,"</p><p>").gsub(/<div>/,"<p>").gsub(/<\/div>/,"</p>"))
+      @obj[t] = (@obj[t].nil? ? "" : @obj[t].gsub(/<br><\/div>/,"</div>").gsub(/<br>(<br>)+/,"<br>").gsub(/<br>/,"</p><p>").gsub(/<div>/,"<p>").gsub(/<\/div>/,"</p>"))
     end
     respond_to do |format|
       if @obj.save
@@ -111,8 +111,8 @@ class PanelController < ApplicationController
       @pars = Parrafo.where("sitio_id = ?",params[:id].to_i)
       @pics = Foto.where("sitio_id = ?",params[:id].to_i)
       @pars.each do |p|
-        p.texto = p.texto.gsub(/<p>/,"<div>").gsub(/<\/p>/,"</div>").gsub(/<\/div><div>/,"<br>")
-        p.texto_ingles = p.texto_ingles.gsub(/<p>/,"<div>").gsub(/<\/p>/,"</div>").gsub(/<\/div><div>/,"<br>")
+        p.texto = (p.texto.nil? ? "" : p.texto.gsub(/<p>/,"<div>").gsub(/<\/p>/,"</div>").gsub(/<\/div><div>/,"<br>"))
+        p.texto_ingles = (p.texto_ingles.nil? ? "" : p.texto_ingles.gsub(/<p>/,"<div>").gsub(/<\/p>/,"</div>").gsub(/<\/div><div>/,"<br>"))
       end
     end
   end

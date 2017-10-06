@@ -1,4 +1,4 @@
-<%= render 'principal/barra' %>
+
 <div class="container-fluid" id="resto-cuerpo">
 
 	<div id="cuerpo" class="principal uk-block-large">
@@ -9,13 +9,18 @@
     <span class="titulo-chico"><%= t('historia.historia') %></span><br>
     <span class="titulo-grande">El Colegio de México</span>
     </div>
-    <%= image_tag("historia.jpg", :style=> "margin-bottom:25px;") %>
+    <%= image_tag(@pics[0].foto.url, :style=> "margin-bottom:25px;") %>
     </div>
     <div class="uk-width-large-3-5">
+		<%= params[:locale] == "es" ? @pars[0].texto.html_safe : @pars[0].texto_ingles.html_safe %>
+		<% if false %>
     <p><%= t('historia.p1').html_safe %></p>
     <p><%= t('historia.p2').html_safe %></p>
+		<% end %>
     </div>
     </div>
+		<%= params[:locale] == "es" ? @pars[1].texto.html_safe : @pars[1].texto_ingles.html_safe %>
+		<% if false %>
     <p><%= t('historia.p3').html_safe %></p>
     <p><%= t('historia.p4').html_safe %></p>
     <p><%= t('historia.p5').html_safe %></p>
@@ -23,8 +28,9 @@
     <p><%= t('historia.p7').html_safe %></p>
     <p><%= t('historia.p8', url: @estatuto_organico.archivo.url).html_safe %></p>
     <p><%= t('historia.p9').html_safe %></p>
+		<% end %>
     <p>&nbsp;</p>
     <a href=<%= historia75_path %> class="ver-mas uk-margin-large-bottom uk-button-medium"><%= t('historia.ver') %></a>
     </div> 
 	</div>
-<%= render 'principal/footer' %>
+

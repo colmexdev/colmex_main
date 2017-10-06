@@ -74,7 +74,7 @@ class PanelController < ApplicationController
   def crear
     @obj = @sets[params[:set].to_sym][:model].new(obj_params)
 	  @sets[params[:set].to_sym][:trix].each do |t|
-      @obj[t] = (@obj[t].nil? ? "" : @obj[t].gsub(/<br>/,"</p><p>").gsub(/<div>/,"<p>").gsub(/<\/div>/,"</p>"))
+      @obj[t] = (@obj[t].nil? ? "" : @obj[t].gsub(/<br><\/div>/,"</div>").gsub(/<br>(<br>)+/,"<br>").gsub(/<br>/,"</p><p>").gsub(/<div>/,"<p>").gsub(/<\/div>/,"</p>"))
     end
     respond_to do |format|
       if @obj.save
@@ -121,7 +121,7 @@ class PanelController < ApplicationController
     @obj = @sets[params[:set].to_sym][:model].find(params[:id])
     if params[:set] != "Contenido de sitios"
       @sets[params[:set].to_sym][:trix].each do |t|
-        obj_params[t] = obj_params[t].gsub(/<br>/,"</p><p>").gsub(/<div>/,"<p>").gsub(/<\/div>/,"</p>")
+        obj_params[t] = obj_params[t].gsub(/<br><\/div>/,"</div>").gsub(/<br>(<br>)+/,"<br>").gsub(/<br>/,"</p><p>").gsub(/<div>/,"<p>").gsub(/<\/div>/,"</p>")
       end
     end
     respond_to do |format|
