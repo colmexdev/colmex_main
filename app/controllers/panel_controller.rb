@@ -114,6 +114,10 @@ class PanelController < ApplicationController
         p.texto = (p.texto.nil? ? "" : p.texto.gsub(/<p>/,"<div>").gsub(/<\/p>/,"</div>").gsub(/<\/div><div>/,"<br>"))
         p.texto_ingles = (p.texto_ingles.nil? ? "" : p.texto_ingles.gsub(/<p>/,"<div>").gsub(/<\/p>/,"</div>").gsub(/<\/div><div>/,"<br>"))
       end
+      @pics.each do |p|
+        p.caption = (p.caption.nil? ? "" : p.caption.gsub(/<p>/,"<div>").gsub(/<\/p>/,"</div>").gsub(/<\/div><div>/,"<br>"))
+        p.caption_ingles = (p.caption_ingles.nil? ? "" : p.caption_ingles.gsub(/<p>/,"<div>").gsub(/<\/p>/,"</div>").gsub(/<\/div><div>/,"<br>"))
+      end
     end
   end
 
@@ -134,6 +138,8 @@ class PanelController < ApplicationController
           Parrafo.find(@llaves[0][i].to_i).update(par_params(ActionController::Parameters.new(@vals[0][i])))
         end
         params[:pics].each_with_index do |p,i|
+					@vals[1][i]["caption"] = (@vals[1][i]["caption"].nil? ? "" : @vals[1][i]["caption"].gsub(/<br>/,"</p><p>").gsub(/<div>/,"<p>").gsub(/<\/div>/,"</p>"))
+					@vals[1][i]["caption_ingles"] = (@vals[1][i]["caption_ingles"].nil? ? "" : @vals[1][i]["caption_ingles"].gsub(/<br>/,"</p><p>").gsub(/<div>/,"<p>").gsub(/<\/div>/,"</p>"))
           Foto.find(@llaves[1][i].to_i).update(pic_params(ActionController::Parameters.new(@vals[1][i])))
         end
         format.js { render :mostrar, params: {set: params[:set], id: params[:id]}, notice: 'Objeto generado exitosamente.' }
@@ -297,7 +303,7 @@ class PanelController < ApplicationController
   end
 
   def pic_params(pics)
-    pics.permit(:ref, :foto, :f_ind)
+    pics.permit(:ref, :foto, :f_ind, :caption, :caption_ingles)
   end
 
   def obj_params
