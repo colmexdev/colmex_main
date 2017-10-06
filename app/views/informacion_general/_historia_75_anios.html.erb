@@ -12,27 +12,27 @@
     <h6 class="uk-text-break"><%= @pics[1].caption.html_safe %></h6>
     </div>
     <div class="uk-width-large-7-10 uk-width-medium-7-10 uk-width-small-3-5">
-    <%= @pars[0].texto %>
+    <%= @pars[0].texto.html_safe %>
     <p>&nbsp;</p>
     </div>
     <div class="uk-width-large-8-10 uk-width-medium-8-10 uk-width-small-4-6">
-    <%= @pars[1].texto %>
+    <%= @pars[1].texto.html_safe %>
 <p>&nbsp;</p>
     </div>
     <div class="uk-width-large-2-10 uk-width-medium-2-10 uk-width-small-2-6  uk-text-left">
     <%= image_tag(@pics[2].foto.url) %><br>
-    <h6 class="uk-text-break"><%= @pics[2].caption %></h6>
+    <h6 class="uk-text-break"><%= @pics[2].caption.html_safe %></h6>
     </div>
     <div class="uk-width-large-3-10 uk-width-medium-3-10 uk-width-small-2-5  uk-text-left">
     <%= image_tag(@pics[3].foto.url) %><br>
-    <h6 class="uk-text-break"><%= @pics[3].caption %></h6>
+    <h6 class="uk-text-break"><%= @pics[3].caption.html_safe %></h6>
     </div>
     <div class="uk-width-large-7-10 uk-width-medium-7-10 uk-width-small-3-5">
-    <%= @pars[2].texto %>
+    <%= @pars[2].texto.html_safe %>
     <p>&nbsp;</p>
     </div>
     <div class="uk-width-large-8-10 uk-width-medium-8-10 uk-width-small-4-6">
-    <%= @pars[3].texto %>
+    <%= @pars[3].texto.html_safe %>
     <p>&nbsp;</p>
 		<% if false %>
     <a href="http://www.colmex.mx/archivo-historico" target="_blank" class="ver-mas">Archivo Histórico</a>
@@ -40,12 +40,12 @@
     </div>
     <div class="uk-width-large-2-10 uk-width-medium-2-10 uk-width-small-2-6  uk-text-left">
     <%= image_tag(@pics[4].foto.url) %><br>
-    <h6 class="uk-text-break"><%= @pics[4].caption %></h6>
+    <h6 class="uk-text-break"><%= @pics[4].caption.html_safe %></h6>
     </div>
     </div>
     <hr style="border: 1px solid #7E3355">
     <div style="font-size:14px">
-			<%= @pars[4].texto %>
+			<%= @pars[4].texto.html_safe %>
 		</div>
 	</div>
 	</div>
