@@ -21,11 +21,11 @@
     </div>
     <div class="uk-width-large-2-10 uk-width-medium-2-10 uk-width-small-2-6  uk-text-left">
     <%= image_tag(@pics[2].foto.url) %><br>
-    <h6 class="uk-text-break"><%= @pics[2].caption.gsub(/<((\/)?p)|(br)>/,"").html_safe %></h6>
+    <h6 class="uk-text-break"><%= @pics[2].gsub(/<((\/)?p)|(br)>/,"").caption.html_safe %></h6>
     </div>
     <div class="uk-width-large-3-10 uk-width-medium-3-10 uk-width-small-2-5  uk-text-left">
     <%= image_tag(@pics[3].foto.url) %><br>
-    <h6 class="uk-text-break"><%= @pics[3].caption.gsub(/<((\/)?p)|(br)>/,"").html_safe %></h6>
+    <h6 class="uk-text-break"><%= @pics[3].gsub(/<((\/)?p)|(br)>/,"").caption.html_safe %></h6>
     </div>
     <div class="uk-width-large-7-10 uk-width-medium-7-10 uk-width-small-3-5">
     <%= @pars[2].texto.html_safe %>
@@ -40,7 +40,7 @@
     </div>
     <div class="uk-width-large-2-10 uk-width-medium-2-10 uk-width-small-2-6  uk-text-left">
     <%= image_tag(@pics[4].foto.url) %><br>
-    <h6 class="uk-text-break"><%= @pics[4].caption.gsub(/<((\/)?p)|(br)>/,"").html_safe %></h6>
+    <h6 class="uk-text-break"><%= @pics[4].gsub(/<((\/)?p)|(br)>/,"").caption.html_safe %></h6>
     </div>
     </div>
     <hr style="border: 1px solid #7E3355">
