@@ -484,7 +484,7 @@ trix-editor div {
 	margin-right: 10px;
 }
 
-.trix-button, .trix-button--icon { width: 25px; }
+.trix-button, .trix-button--icon { width: 25px; padding: 0; }
 
 /* Gráficas */
 svg{
