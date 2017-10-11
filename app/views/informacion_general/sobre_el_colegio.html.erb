@@ -2,6 +2,7 @@
 <% @sitio = Sitio.where("ref = ?","Sobre El Colegio de México").first.id %>
 <% @pars = Parrafo.where("sitio_id = ?", @sitio) %>
 <% @pics = Foto.where("sitio_id = ?", @sitio) %>
+<%= @editable %>
 <div class="container-fluid" id="resto-cuerpo">
 	<div id="cuerpo" class="principal-chica uk-block-large">
 

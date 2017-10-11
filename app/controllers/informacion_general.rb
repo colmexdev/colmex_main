@@ -56,7 +56,7 @@ class InformacionGeneralController < ApplicationController
   end
 
   def sobre_el_colegio
-    logger.debug request.original_fullpath
+    @editable = request.original_fullpath.include?("editable")
   end
 
   def transparencia
