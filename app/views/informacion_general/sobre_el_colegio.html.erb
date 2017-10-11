@@ -78,6 +78,8 @@
 
 	<% end %>
 
+  <%= hidden_field :uri, value: request.original_fullpath.gsub(/editable\//,"") %>
+
   <div class="actions">
     <%= f.submit %>
   </div>

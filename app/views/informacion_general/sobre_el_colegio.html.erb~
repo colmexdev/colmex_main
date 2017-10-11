@@ -1,7 +1,5 @@
 <%= render 'principal/barra' %>
-<% @sitio = Sitio.where("ref = ?","Sobre El Colegio de México").first %>
-<% @pars = Parrafo.where("sitio_id = ?", @sitio.id) %>
-<% @pics = Foto.where("sitio_id = ?", @sitio.id) %>
+
 <div class="container-fluid" id="resto-cuerpo">
 	<div id="cuerpo" class="principal-chica uk-block-large">
 
