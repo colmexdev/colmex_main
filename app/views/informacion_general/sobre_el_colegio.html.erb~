@@ -25,7 +25,7 @@
     <div class="uk-width-large-2-5">
 		<% if @editable %>
 
-<%= form_for(@sitio, :url => {:controller => "panel", :action => "editar", :params => {:set => "Contenido de sitios", :id => @sitio.id}}, :html => { :multipart => true }) do |f| %>
+<%= form_for(@sitio, :url => {:controller => "panel", :action => "editar", :params => {:set => "Contenido de sitios", :id => @sitio.id}, :uri => request.original_fullpath.gsub(/editable\//,"")}, :html => { :multipart => true }) do |f| %>
   <% if @sitio.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@sitio.errors.count, "error") %> impidieron generar este objeto:</h2>
@@ -77,8 +77,6 @@
 	<% end %>
 
 	<% end %>
-
-  <%= f.hidden_field :actual_uri, value: request.original_fullpath.gsub(/editable\//,"") %>
 
   <div class="actions">
     <%= f.submit %>
