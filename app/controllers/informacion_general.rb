@@ -57,8 +57,8 @@ class InformacionGeneralController < ApplicationController
 
   def sobre_el_colegio
     @editable = request.original_fullpath.include?("editable")
+    get_pars_pics("Sobre El Colegio de México")
     if(@editable)
-      get_pars_pics("Sobre El Colegio de México")
       filter_pars_pics
     end
   end
