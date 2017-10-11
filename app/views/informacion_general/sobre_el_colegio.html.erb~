@@ -27,7 +27,7 @@
     <div class="uk-width-large-2-5">
 		<% if @editable %>
 
-<%= form_for(@obj, :remote => true, :url => {:controller => "panel", :action => "editar", :params => {:id => (@obj.id if action_name == "editar")}}, :html => { :multipart => true }) do |f| %>
+<%= form_for(@obj, :url => {:controller => "panel", :action => "editar", :params => {:id => (@obj.id if action_name == "editar")}}, :html => { :multipart => true }) do |f| %>
   <% if @obj.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@obj.errors.count, "error") %> impidieron generar este objeto:</h2>
@@ -45,7 +45,7 @@
 	<%= fields_for 'pars[]', @pars[0] do |p| %>
 		<div class="field">
 			<%= p.label (params[:locale] == "es" ? :texto : :texto_ingles), (params[:locale] == "es" ? ("Texto (Párrafo " + ((par.p_ind+1).to_s) + ")") : ("Texto (Inglés, párrafo " + ((par.p_ind+1).to_s) + ")")) %><br>
-			<%= p.trix_editor (params[:locale] == "es" ? :texto : :texto_ingles), value: (params[:locale == "es" ? par.texto.html_safe : par.texto_ingles.html_safe) %>
+			<%= p.trix_editor (params[:locale] == "es" ? :texto : :texto_ingles), value: (params[:locale] == "es" ? par.texto.html_safe : par.texto_ingles.html_safe) %>
 		</div>
 	<% end %>
 
