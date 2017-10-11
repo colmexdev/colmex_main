@@ -151,7 +151,8 @@ function configTrix(){
 		},
 		inheritable: true
 	}
-	Trix.config.textAttributes.color = { 
+	Trix.config.textAttributes.color = {
+    tagName = "span", 
 		style: { color: "#7E3355" },
 		parser: function(element) {
 			return element.style.color === "#7E3355"
