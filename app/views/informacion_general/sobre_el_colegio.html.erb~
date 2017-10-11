@@ -24,29 +24,15 @@
     <div class="uk-width-large-3-5 uk-text-center-small uk-text-center-medium uk-text-left">
 <%= fields_for 'pics[]', @pics[0] do |p| %>
 
-		<%= image_tag(@pics[0].foto.url) %>
+		<%= image_tag(@pics[0].foto.url, id: "foto_1") %>
 		<br>
+				<%= p.label :foto, raw('<span class="glyphicon glyphicon-upload glyph-padding"></span>Añadir foto') %><br>
+				<%= p.file_field :foto, :onchange => "readURL(this,'#foto_1')" %><br>
+
 		<div class="field">
 				<%= p.label (params[:locale] == "es" ? :caption : :caption_ingles), "Pie de foto (Foto " + ((@pics[0].f_ind+1).to_s) + ")" %><br>
 				<%= p.trix_editor (params[:locale] == "es" ? :caption : :caption_ingles), value: (params[:locale] == "es" ? @pics[0].caption.gsub(/<(((\/)?p)|(br))>/,"").html_safe : @pics[0].caption_ingles.gsub(/<(((\/)?p)|(br))>/,"").html_safe ) %>
-			</div>
-			<div class="field">
-				<%= p.label :caption_ingles, "Pie de foto (inglés, párrafo " + ((pic.f_ind+1).to_s) + ")" %><br>
-				<%= p.trix_editor :caption_ingles, value: pic.caption_ingles.html_safe %>
-			</div>
-			<div class="field" style="height:250px;">
-				<div class="photo-upload">
-				<%= p.label :foto, raw('<span class="glyphicon glyphicon-upload glyph-padding"></span>Añadir foto') %><br>
-				<%= p.file_field :foto, :onchange => "readURL(this,'#foto-cont-" + ((pic.f_ind+1).to_s) +"')" %><br>
-				</div>
-				<div class="img-display">
-					<% if !pic.foto.url.nil? %>
-						<img id="<%= "foto-cont-" + ((pic.f_ind+1).to_s) %>" src="<%= pic.foto.url %>">
-					<% else %>
-						<span>No hay foto para mostrar.</span>
-					<% end %>
-				</div>
-			</div>
+		</div>
 
 
 <% end %>

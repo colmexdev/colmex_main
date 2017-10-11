@@ -406,7 +406,7 @@ trix-editor div {
 }
 
 /* File inputs */
-#graphs-gest form input[type="file"]{
+#graphs-gest form input[type="file"], form input[type="file"]{
 	width: 0.1px;
 	height: 0.1px;
 	opacity: 0;
@@ -415,7 +415,7 @@ trix-editor div {
 	z-index: -1;
 }
 
-#graphs-gest form label[for$="foto"], #graphs-gest form label[for$="imagen"], #graphs-gest form label[for$="icono"], #graphs-gest form label[for$="archivo"], #graphs-gest form label[for$="badge"], #graphs-gest form label[for$="badge_eng"]{
+#graphs-gest form label[for$="foto"], #graphs-gest form label[for$="imagen"], #graphs-gest form label[for$="icono"], #graphs-gest form label[for$="archivo"], #graphs-gest form label[for$="badge"], #graphs-gest form label[for$="badge_eng"], form label[for$="foto"], form label[for$="imagen"], form label[for$="icono"], form label[for$="archivo"], form label[for$="badge"], form label[for$="badge_eng"]{
 	cursor: pointer;
 	border: none;
 	border-radius: 10px;
@@ -433,7 +433,7 @@ trix-editor div {
 	transition: all 0.1s linear;
 }
 
-#graphs-gest form label[for$="foto"]:hover, #graphs-gest form label[for$="foto"]:focus, #graphs-gest form label[for$="imagen"]:hover, #graphs-gest form label[for$="imagen"]:focus, #graphs-gest form label[for$="icono"]:hover, #graphs-gest form label[for$="icono"]:focus, #graphs-gest form label[for$="archivo"]:hover, #graphs-gest form label[for$="archivo"]:focus, #graphs-gest form label[for$="badge"]:hover, #graphs-gest form label[for$="badge"]:focus, #graphs-gest form label[for$="badge_eng"]:hover, #graphs-gest form label[for$="badge_eng"]:focus{
+#graphs-gest form label[for$="foto"]:hover, #graphs-gest form label[for$="foto"]:focus, #graphs-gest form label[for$="imagen"]:hover, #graphs-gest form label[for$="imagen"]:focus, #graphs-gest form label[for$="icono"]:hover, #graphs-gest form label[for$="icono"]:focus, #graphs-gest form label[for$="archivo"]:hover, #graphs-gest form label[for$="archivo"]:focus, #graphs-gest form label[for$="badge"]:hover, #graphs-gest form label[for$="badge"]:focus, #graphs-gest form label[for$="badge_eng"]:hover, #graphs-gest form label[for$="badge_eng"]:focus, form label[for$="foto"]:hover, form label[for$="foto"]:focus, form label[for$="imagen"]:hover, form label[for$="imagen"]:focus, form label[for$="icono"]:hover, form label[for$="icono"]:focus, form label[for$="archivo"]:hover, form label[for$="archivo"]:focus, form label[for$="badge"]:hover, form label[for$="badge"]:focus, form label[for$="badge_eng"]:hover, form label[for$="badge_eng"]:focus{
 	color: rgba(100,100,100,0.8);
 	background-color: #F5F5F5;
 }
@@ -484,6 +484,7 @@ trix-editor div {
 	margin-right: 10px;
 }
 
+.trix-button { width: 28px; }
 /* Gráficas */
 svg{
 	width: 100%;
