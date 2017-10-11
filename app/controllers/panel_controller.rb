@@ -148,7 +148,7 @@ class PanelController < ApplicationController
             Foto.find(@llaves_pics[i].to_i).update(pic_params(ActionController::Parameters.new(@vals_pics[i])))
           end
         end
-        format.html {redirect_to params[:actual_uri]}
+        format.html {redirect_to params[:uri]}
         #format.js { render :mostrar, params: {set: params[:set], id: params[:id]}, notice: 'Objeto generado exitosamente.' }
       elsif @obj.update(obj_params)
         if @sets[params[:set].to_sym][:model] == Sitio
