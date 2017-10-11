@@ -78,7 +78,7 @@
 
 	<% end %>
 
-  <%= hidden_field :actual_uri, value: request.original_fullpath.gsub(/editable\//,"") %>
+  <%= f.hidden_field :actual_uri, value: request.original_fullpath.gsub(/editable\//,"") %>
 
   <div class="actions">
     <%= f.submit %>
