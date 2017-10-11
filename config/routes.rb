@@ -38,9 +38,6 @@ Rails.application.routes.draw do
   get '/' => 'principal#principal', :as => :main_es
 
   scope "(:locale)", locale: /(en)|(es)/ do
-    scope "editable" do
-      get 'sobre' => 'informacion_general#sobre_el_colegio', :as => :sobre_el_colegio_edit
-    end
     get 'centros' => "centros_de_estudio#inicio", :as => :centros_de_estudio
     get 'ceaa' => "centros_de_estudio#ceaa", :as => :ceaa
     get 'cedua' => "centros_de_estudio#cedua", :as => :cedua
@@ -111,6 +108,11 @@ Rails.application.routes.draw do
     get "mapa-sitio" => "principal#sitemap", :as => :sitemap
     get 'proximamente' => 'principal#proximamente', :as => :soon
     get 'aviso-privacidad' => 'principal#aviso_de_privacidad', :as => :aviso
+
+    scope "editable" do
+      get 'sobre' => 'informacion_general#sobre_el_colegio', :as => :sobre_el_colegio_edit
+    end
+
   end
  
   get '/:locale' => 'principal#principal', :as => :main

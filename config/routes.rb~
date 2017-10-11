@@ -38,6 +38,9 @@ Rails.application.routes.draw do
   get '/' => 'principal#principal', :as => :main_es
 
   scope "(:locale)", locale: /(en)|(es)/ do
+    scope "editable" do
+      get 'sobre' => 'informacion_general#sobre_el_colegio', :as => :sobre_el_colegio_edit
+    end
     get 'centros' => "centros_de_estudio#inicio", :as => :centros_de_estudio
     get 'ceaa' => "centros_de_estudio#ceaa", :as => :ceaa
     get 'cedua' => "centros_de_estudio#cedua", :as => :cedua
