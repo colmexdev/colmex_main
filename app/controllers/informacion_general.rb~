@@ -56,6 +56,7 @@ class InformacionGeneralController < ApplicationController
   end
 
   def sobre_el_colegio
+    logger.debug request.request_uri
   end
 
   def transparencia
