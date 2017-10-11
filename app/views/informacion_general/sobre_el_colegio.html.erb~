@@ -27,13 +27,13 @@
     <div class="uk-width-large-2-5">
 		<% if @editable %>
 
-<%= form_for(@obj, :url => {:controller => "panel", :action => "editar", :params => {:id => (@obj.id if action_name == "editar")}}, :html => { :multipart => true }) do |f| %>
-  <% if @obj.errors.any? %>
+<%= form_for(@sitio, :url => {:controller => "panel", :action => "editar", :params => {:id => @sitio.id}}, :html => { :multipart => true }) do |f| %>
+  <% if @sitio.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@obj.errors.count, "error") %> impidieron generar este objeto:</h2>
+      <h2><%= pluralize(@sitio.errors.count, "error") %> impidieron generar este objeto:</h2>
 
       <ul>
-      <% @obj.errors.full_messages.each do |message| %>
+      <% @sitio.errors.full_messages.each do |message| %>
         <li><%= message %></li>
       <% end %>
       </ul>

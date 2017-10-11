@@ -44,8 +44,8 @@
 
 	<%= fields_for 'pars[]', @pars[0] do |p| %>
 		<div class="field">
-			<%= p.label (params[:locale] == "es" ? :texto : :texto_ingles), (params[:locale] == "es" ? ("Texto (Párrafo " + ((par.p_ind+1).to_s) + ")") : ("Texto (Inglés, párrafo " + ((par.p_ind+1).to_s) + ")")) %><br>
-			<%= p.trix_editor (params[:locale] == "es" ? :texto : :texto_ingles), value: (params[:locale] == "es" ? par.texto.html_safe : par.texto_ingles.html_safe) %>
+			<%= p.label (params[:locale] == "es" ? :texto : :texto_ingles), (params[:locale] == "es" ? ("Texto (Párrafo " + ((@pars[0].p_ind+1).to_s) + ")") : ("Texto (Inglés, párrafo " + ((@pars[0].p_ind+1).to_s) + ")")) %><br>
+			<%= p.trix_editor (params[:locale] == "es" ? :texto : :texto_ingles), value: (params[:locale] == "es" ? @pars[0].texto.html_safe : @pars[0].texto_ingles.html_safe) %>
 		</div>
 	<% end %>
 
