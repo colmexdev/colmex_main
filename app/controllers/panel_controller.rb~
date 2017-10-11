@@ -130,18 +130,25 @@ class PanelController < ApplicationController
     end
     respond_to do |format|
       if params[:set] == "Contenido de sitios"
-        @llaves = [params[:pars].keys, params[:pics].keys]
-        @vals = [params[:pars].values, params[:pics].values]
-        params[:pars].each_with_index do |p,i|
-					@vals[0][i]["texto"] = (@vals[0][i]["texto"].nil? ? "" : @vals[0][i]["texto"].gsub(/<br>/,"</p><p>").gsub(/<div>/,"<p>").gsub(/<\/div>/,"</p>"))
-					@vals[0][i]["texto_ingles"] = (@vals[0][i]["texto_ingles"].nil? ? "" : @vals[0][i]["texto_ingles"].gsub(/<br>/,"</p><p>").gsub(/<div>/,"<p>").gsub(/<\/div>/,"</p>"))
-          Parrafo.find(@llaves[0][i].to_i).update(par_params(ActionController::Parameters.new(@vals[0][i])))
+        if params[:pars].present?
+          @llaves_pars = params[:pars].keys
+          @vals_pars = params[:pars].values
+          params[:pars].each_with_index do |p,i|
+					  @vals_pars[i]["texto"] = (@vals_pars[i]["texto"].nil? ? "" : @vals_pars[i]["texto"].gsub(/<br>/,"</p><p>").gsub(/<div>/,"<p>").gsub(/<\/div>/,"</p>"))
+					  @vals_pars[i]["texto_ingles"] = (@vals_pars[i]["texto_ingles"].nil? ? "" : @vals_pars[i]["texto_ingles"].gsub(/<br>/,"</p><p>").gsub(/<div>/,"<p>").gsub(/<\/div>/,"</p>"))
+          Parrafo.find(@llaves_pars[i].to_i).update(par_params(ActionController::Parameters.new(@vals_pars[i])))
+          end
         end
-        params[:pics].each_with_index do |p,i|
-					@vals[1][i]["caption"] = (@vals[1][i]["caption"].nil? ? "" : @vals[1][i]["caption"].gsub(/<br>/,"</p><p>").gsub(/<div>/,"<p>").gsub(/<\/div>/,"</p>"))
-					@vals[1][i]["caption_ingles"] = (@vals[1][i]["caption_ingles"].nil? ? "" : @vals[1][i]["caption_ingles"].gsub(/<br>/,"</p><p>").gsub(/<div>/,"<p>").gsub(/<\/div>/,"</p>"))
-          Foto.find(@llaves[1][i].to_i).update(pic_params(ActionController::Parameters.new(@vals[1][i])))
+        if params[:pics].present?
+          @llaves_pics = params[:pics].keys
+          @vals_pics = params[:pics].values
+          params[:pics].each_with_index do |p,i|
+					  @vals_pics[i]["caption"] = (@vals_pics[i]["caption"].nil? ? "" : @vals_pics[i]["caption"].gsub(/<br>/,"</p><p>").gsub(/<div>/,"<p>").gsub(/<\/div>/,"</p>"))
+					  @vals_pics[i]["caption_ingles"] = (@vals_pics[i]["caption_ingles"].nil? ? "" : @vals_pics[i]["caption_ingles"].gsub(/<br>/,"</p><p>").gsub(/<div>/,"<p>").gsub(/<\/div>/,"</p>"))
+            Foto.find(@llaves_pics[i].to_i).update(pic_params(ActionController::Parameters.new(@vals_pics[i])))
+          end
         end
+
         format.js { render :mostrar, params: {set: params[:set], id: params[:id]}, notice: 'Objeto generado exitosamente.' }
       elsif @obj.update(obj_params)
         if @sets[params[:set].to_sym][:model] == Sitio
