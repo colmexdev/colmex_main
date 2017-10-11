@@ -1,7 +1,7 @@
 <script type="text/javascript" src="/js/filtro_directorio_async.js"></script>
 		<div class="row" id="filtros-dir">
 			<div class="col-xs-12" style="padding-left:0;">
-				<h3>Buscar por orden alfabético.</h3>
+				<h3><%= params[:locale] == "es" ? "Buscar por orden alfabético." : "Search by last name's first letter." %></h3>
 			</div>
 			<div class="col-xs-12" id="filtro-inic" style="text-align:center;padding-left:0;">
 			<% for i in 65..90 %>
@@ -9,28 +9,28 @@
 			<% end %>
 			</div>
 			<div class="col-md-4 col-xs-12 filtro center" id="filtro-nombre">
-				<h3 style="display:inline-block;margin-right:8px;">Buscar por:</h3><%= text_field_tag("nombre", "", :oninput => "filtrarDirectorio();", :placeholder => "Nombre") %>
+				<h3 style="display:inline-block;margin-right:8px;"><%= params[:locale] == "es" ? "Buscar por:" : "Search by:" %></h3><%= text_field_tag("nombre", "", :oninput => "filtrarDirectorio();", :placeholder => (params[:locale] == "es" ? "Nombre" : "Name")) %>
 			</div>
 			<div class="col-md-4 col-xs-12 center" id="filtro-linea" style="padding-left:5px;">
-				<%= text_field_tag("linea", "", :oninput => "filtrarDirectorio();", :placeholder => "Tema y/o línea de investigación") %><br>
+				<%= text_field_tag("linea", "", :oninput => "filtrarDirectorio();", :placeholder => (params[:locale] == "es" ? "Tema y/o línea de investigación" : "Research topic(s)" )) %><br>
 				<% if false %>
 				<p style="font-size:12px;margin-top:0;text-align:left;">Los temas de investigación utilizan lenguaje libre.</p>
 				<% end %>
 			</div>
 			<% if false %>
 			<div class="col-md-4 col-xs-12 center" id="filtro-mail" style="padding-left:15px;">
-				<%= text_field_tag("correo", "", :oninput => "filtrarDirectorio();", :placeholder => "Línea de investigación") %><br>
+				<%= text_field_tag("correo", "", :oninput => "filtrarDirectorio();", :placeholder => (params[:locale] == "es" ? "Línea de investigación" : "Research line")) %><br>
 				<p style="font-size:12px;margin-top:0;text-align:left;">Las líneas de investigación utilizan lenguaje controlado.</p>
 			</div>
 			<% end %>
 		</div>
 		<div class="row">
 			<div class="col-xs-12 col-md-4 center" id="filtro-centro">
-				<h3 style="display:inline-block;margin-right:8px;">Filtrar por:</h3><%= select_tag("contenido", options_for_select([["CEAA", "Asia y África"], ["CEDUA","Demográficos, Urbanos y Ambientales"], ["CEE", "Económicos"], ["CEH","Históricos"], ["CEI","Internacionales"], ["CELL", "Lingüisticos y Literarios"], ["CES","Sociológicos"]]), :include_blank => "Centro de Estudios", :onchange => "filtrarDirectorio();") %>
+				<h3 style="display:inline-block;margin-right:8px;"><%= params[:locale] == "es" ? "Filtrar por:" : "Filter by:" %></h3><%= select_tag("contenido", options_for_select([["CEAA", "Asia y África"], ["CEDUA","Demográficos, Urbanos y Ambientales"], ["CEE", "Económicos"], ["CEH","Históricos"], ["CEI","Internacionales"], ["CELL", "Lingüisticos y Literarios"], ["CES","Sociológicos"]]), :include_blank => "Centro de Estudios", :onchange => "filtrarDirectorio();") %>
 			</div>
 			<div class="col-xs-12 col-md-4 center" id="filtro-limpiar" style="text-align:left;">
 				<div id="boton_limpiar">
-					<a href="#" onclick="borrarDocentes(event,docentes);" class="boton-donar"><span><%= "Limpiar búsqueda" %></span></a>
+					<a href="#" onclick="borrarDocentes(event,docentes);" class="boton-donar"><span><%= params[:locale] == "es" ? "Limpiar búsqueda" : "Reset filters" %></span></a>
 				</div>
 			</div>
 		</div>
