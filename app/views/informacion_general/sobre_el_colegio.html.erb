@@ -1,8 +1,7 @@
 <%= render 'principal/barra' %>
-<% @sitio = Sitio.where("ref = ?","Sobre El Colegio de México").first.id %>
-<% @pars = Parrafo.where("sitio_id = ?", @sitio) %>
-<% @pics = Foto.where("sitio_id = ?", @sitio) %>
-<%= @editable %>
+<% @sitio = Sitio.where("ref = ?","Sobre El Colegio de México").first %>
+<% @pars = Parrafo.where("sitio_id = ?", @sitio.id) %>
+<% @pics = Foto.where("sitio_id = ?", @sitio.id) %>
 <div class="container-fluid" id="resto-cuerpo">
 	<div id="cuerpo" class="principal-chica uk-block-large">
 
@@ -26,14 +25,78 @@
     <!--          Aquí termina el menú pequeño          -->
     </div>
     <div class="uk-width-large-2-5">
-    <span class="titulo-chico"><%= t('sobre_col.sobre') %></span><br>
-    <span class="titulo-grande"><%= t('sobre_col.colegio') %></span><br>
-    <p><%= t('sobre_col.p1') %></p>
-    <p><%= t('sobre_col.p2') %></p>
-    <p><%= t('sobre_col.p3') %></p>
-    <p><%= t('sobre_col.p4') %></p>
-		<p><%= t('sobre_col.p5') %></p>
-		<p><%= t('sobre_col.p6').html_safe %></p>
+		<% if @editable %>
+
+<%= form_for(@obj, :remote => true, :url => {:controller => "panel", :action => "editar", :params => {:id => (@obj.id if action_name == "editar")}}, :html => { :multipart => true }) do |f| %>
+  <% if @obj.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@obj.errors.count, "error") %> impidieron generar este objeto:</h2>
+
+      <ul>
+      <% @obj.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+<%= hidden_field_tag :authenticity_token, form_authenticity_token -%>
+
+	<%= fields_for 'pars[]', @pars[0] do |p| %>
+		<div class="field">
+			<%= p.label (params[:locale] == "es" ? :texto : :texto_ingles), (params[:locale] == "es" ? ("Texto (Párrafo " + ((par.p_ind+1).to_s) + ")") : ("Texto (Inglés, párrafo " + ((par.p_ind+1).to_s) + ")")) %><br>
+			<%= p.trix_editor (params[:locale] == "es" ? :texto, :texto_ingles), value: (params[:locale == "es" ? par.texto.html_safe : par.texto_ingles.html_safe) %>
+		</div>
+	<% end %>
+
+	<hr>
+	
+	<% if false %>
+	<% @pics.each do |pic| %>
+		<%= fields_for 'pics[]', pic do |p| %>
+			<%= p.hidden_field :f_ind, value: pic.f_ind.to_i %>
+			<div class="field">
+				<%= p.label :caption, "Pie de foto (Foto " + ((pic.f_ind+1).to_s) + ")" %><br>
+				<%= p.trix_editor :caption, value: pic.caption.html_safe %>
+			</div>
+			<div class="field">
+				<%= p.label :caption_ingles, "Pie de foto (inglés, párrafo " + ((pic.f_ind+1).to_s) + ")" %><br>
+				<%= p.trix_editor :caption_ingles, value: pic.caption_ingles.html_safe %>
+			</div>
+			<div class="field" style="height:250px;">
+				<div class="photo-upload">
+				<%= p.label :foto, raw('<span class="glyphicon glyphicon-upload glyph-padding"></span>Añadir foto') %><br>
+				<%= p.file_field :foto, :onchange => "readURL(this,'#foto-cont-" + ((pic.f_ind+1).to_s) +"')" %><br>
+				</div>
+				<div class="img-display">
+					<% if !pic.foto.url.nil? %>
+						<img id="<%= "foto-cont-" + ((pic.f_ind+1).to_s) %>" src="<%= pic.foto.url %>">
+					<% else %>
+						<span>No hay foto para mostrar.</span>
+					<% end %>
+				</div>
+			</div>
+		<% end %>
+	<% end %>
+
+	<% end %>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
+
+		<% else %>
+    	<span class="titulo-chico"><%= t('sobre_col.sobre') %></span><br>
+    	<span class="titulo-grande"><%= t('sobre_col.colegio') %></span><br>
+    	<p><%= t('sobre_col.p1') %></p>
+    	<p><%= t('sobre_col.p2') %></p>
+    	<p><%= t('sobre_col.p3') %></p>
+    	<p><%= t('sobre_col.p4') %></p>
+			<p><%= t('sobre_col.p5') %></p>
+			<p><%= t('sobre_col.p6').html_safe %></p>
+		<% end %>
+
 
 <% if false %>
 		<%= params[:locale] == "es" ? @pars[0].texto.html_safe : @pars[0].texto_ingles.html_safe %>
