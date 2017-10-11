@@ -1,5 +1,8 @@
 class InformacionGeneralController < ApplicationController
 
+  before_action :get_pars_pics, only: [:sobre_el_colegio]
+  before_action :filter_pars_pics, only: [:sobre_el_colegio]
+
   def historia_75_años
   end
 
@@ -56,7 +59,7 @@ class InformacionGeneralController < ApplicationController
   end
 
   def sobre_el_colegio
-    logger.debug request.original_fullpath
+    @editable = request.original_fullpath.include?("editable")
   end
 
   def transparencia

@@ -27,7 +27,7 @@
     <div class="uk-width-large-2-5">
 		<% if @editable %>
 
-<%= form_for(@sitio, :url => {:controller => "panel", :action => "editar", :params => {:id => @sitio.id}}, :html => { :multipart => true }) do |f| %>
+<%= form_for(@sitio, :url => {:controller => "panel", :action => "editar", :params => {:set => "Contenido de sitios", :id => @sitio.id}}, :html => { :multipart => true }) do |f| %>
   <% if @sitio.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@sitio.errors.count, "error") %> impidieron generar este objeto:</h2>
@@ -49,7 +49,6 @@
 		</div>
 	<% end %>
 
-	<hr>
 	
 	<% if false %>
 	<% @pics.each do |pic| %>

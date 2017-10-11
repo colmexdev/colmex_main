@@ -15,6 +15,23 @@ class ApplicationController < ActionController::Base
     { :locale => I18n.locale }
   end
 
+  def get_pars_pics(ref)
+    @sitio = Sitio.where("ref = ?",ref).first
+    @pars = Parrafo.where("sitio_id = ?", @sitio.id)
+    @pics = Foto.where("sitio_id = ?", @sitio.id)
+  end
+
+  def filter_pars_pics
+    @pars.each do |p|
+      p.texto = (p.texto.nil? ? "" : p.texto.gsub(/<p>/,"<div>").gsub(/<\/p>/,"</div>").gsub(/<\/div><div>/,"<br>"))
+      p.texto_ingles = (p.texto_ingles.nil? ? "" : p.texto_ingles.gsub(/<p>/,"<div>").gsub(/<\/p>/,"</div>").gsub(/<\/div><div>/,"<br>"))
+    end
+    @pics.each do |p|
+      p.caption = (p.caption.nil? ? "" : p.caption.gsub(/<p>/,"<div>").gsub(/<\/p>/,"</div>").gsub(/<\/div><div>/,"<br>"))
+      p.caption_ingles = (p.caption_ingles.nil? ? "" : p.caption_ingles.gsub(/<p>/,"<div>").gsub(/<\/p>/,"</div>").gsub(/<\/div><div>/,"<br>"))
+    end
+  end
+
   protected
   def after_sign_in_path_for(resource)
     panel_path

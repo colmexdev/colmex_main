@@ -12,7 +12,13 @@ class ApplicationController < ActionController::Base
   end
 
   def default_url_options(options={})
-  #  { :locale => I18n.locale }
+    { :locale => I18n.locale }
+  end
+
+  def get_pars_pics(ref)
+    @sitio = Sitio.where("ref = ?",ref).first
+    @pars = Parrafo.where("sitio_id = ?", @sitio.id)
+    @pics = Foto.where("sitio_id = ?", @sitio.id)
   end
 
   protected
