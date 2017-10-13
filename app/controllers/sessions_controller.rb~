@@ -2,7 +2,9 @@ class SessionsController < Devise::SessionsController
   #prepend_before_action :allow_params_authentication!, only: []
 
   def new
-    super
+    super do
+      store_location_for(resource, params[:redirect_to])
+    end
   end
 
   def create

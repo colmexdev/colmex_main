@@ -4,6 +4,7 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
   before_action :set_locale
   before_action :configure_permitted_parameters, if: :devise_controller?
+  before_action :check_editable, if: !:devise_controller?
   include PrincipalHelper
   include SobreElColegioHelper
 
@@ -33,6 +34,12 @@ class ApplicationController < ActionController::Base
   end
 
   protected
+  def check_editable
+    if request.original_fullpath.include?("editable")
+      store_location_for(:admin, request.original_fullpath )
+    end
+  end
+
   def after_sign_in_path_for(resource)
     stored_location_for(resource) || panel_path
   end
