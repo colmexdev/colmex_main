@@ -222,6 +222,7 @@ class InformacionGeneralController < ApplicationController
     @editable = request.original_fullpath.include?("editable")
     get_pars_pics(sect)
     if(@editable)
+      authenticate_admin!
       filter_pars_pics
     end
   end

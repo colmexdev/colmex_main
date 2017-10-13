@@ -44,6 +44,7 @@ class InformacionGeneralController < ApplicationController
   end
 
   def historia
+    is_editable("La Historia de El Colegio de México")
     @estatuto_organico = Documento.where("tipo = ? AND nombre LIKE ?","Estatuto","%Orgánico%").first
   end
 
