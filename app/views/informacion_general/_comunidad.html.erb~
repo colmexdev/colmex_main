@@ -1,4 +1,4 @@
-<p><%= params[:locale] == "en" ? "El Colegio de México congratulates the member of its community who have received prizes and special recognitions, nationally and internationally, which are a recognition of the levels of academic excellence which this institution considers can contribute to the progress of this nation." : "El Colegio de México felicita a los miembros de su comunidad que obtuvieron durante el año 2016 un reconocimiento especial, distinciones que ratifican el compromiso de esta institución con la excelencia académica, a la que consideramos el mejor camino para el progreso del país." %></p> 
+<p><%= params[:locale] == "es" ? @premiados.where("tipo = ?", "Intro").first.nombre : @premiados.where("tipo = ?", "Intro").first.descripcion  %></p> 
 <div class="acordeon-premios">
 <script type="text/javascript" src="../js/accordion.js"></script>
 

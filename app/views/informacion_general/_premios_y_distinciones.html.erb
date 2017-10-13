@@ -1,4 +1,5 @@
-
+<%=    @categorias = Categorium.all %>
+<%=    @premiados = Premiado.where("tipo_premio = ?", "Comunidad") %>
 
 <div class="container-fluid" id="resto-cuerpo">
 	<div id="cuerpo" class="principal uk-block-large">

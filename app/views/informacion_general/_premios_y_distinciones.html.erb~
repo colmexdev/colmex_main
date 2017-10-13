@@ -1,11 +1,12 @@
-<%= render 'principal/barra' %>
+<%=    @categorias = Categorium.all %>
+<%=    @premiados = Premiado.where("tipo_premio = ?", "Comunidad") %>
 
 <div class="container-fluid" id="resto-cuerpo">
 	<div id="cuerpo" class="principal uk-block-large">
 
     <div class="uk-width-1-1">
         <span class="titulo-grande"><%= t('botones.b1.opciones.op6') %></span><br>
-    <div class="uk-container-center uk-block"><img src=<%= image_url("premios-nueva.jpg") %> alt="Cursos"></div>
+    <div class="uk-container-center uk-block"><img src=<%= image_url(@pics[0].foto.url) %> alt="Cursos"></div>
     <p>&nbsp;</p>
     <div class="uk-grid uk-grid-medium">
     <div class="uk-width-large-1-5 uk-text-center-small uk-text-center-medium uk-text-left" style="border-right:2px solid #EEEEEE;">
@@ -26,8 +27,4 @@
     </div>
     </div>
     </div>
-
-	</div>
-
-
-<%= render 'principal/footer' %>
+</div>

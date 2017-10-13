@@ -1,4 +1,4 @@
-<p><%= params[:locale] == "es" ? @premiados.where("tipo = ?", "Intro").first.nombre : @premiados.where("tipo = ?", "Intro").first.descripcion  %></p> 
+<p><%= params[:locale] == "es" ? @premiados.where("tipo = ?", "Intro").first.nombre.html_safe : @premiados.where("tipo = ?", "Intro").first.descripcion.html_safe  %></p> 
 <div class="acordeon-premios">
 <script type="text/javascript" src="../js/accordion.js"></script>
 
