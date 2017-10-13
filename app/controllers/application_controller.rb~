@@ -44,18 +44,11 @@ class ApplicationController < ActionController::Base
     end
 
   def after_sign_in_path_for(resource)
-    logger.debug request.referrer
-    if request.referrer.nil?
-      panel_path
-    elsif !request.referrer.include?("sign_in")
-      panel_path
-    else
-      request.referrer
-    end
+    stored_location_for(resource_or_scope) || panel_path
   end
 
   def after_sign_out_path_for(resource_or_scope)
-    new_admin_session_path
+    stored_location_for(resource_or_scope) || root_path
   end
 
   def configure_permitted_parameters
