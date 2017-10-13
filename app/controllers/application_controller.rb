@@ -4,6 +4,7 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
   before_action :set_locale
   before_action :configure_permitted_parameters, if: :devise_controller?
+  before_action :store_user_location!, if: :storable_location?
   include PrincipalHelper
   include SobreElColegioHelper
 
@@ -33,19 +34,21 @@ class ApplicationController < ActionController::Base
   end
 
   protected
-  def after_sign_in_path_for(resource)
-    logger.debug request.referrer
-    if request.referrer.nil?
-      panel_path
-    elsif !request.referrer.include?("sign_in")
-      panel_path
-    else
-      request.referrer
+  private
+    def storable_location?
+      request.get? && is_navigational_format? && !devise_controller? && !request.xhr? 
     end
+
+    def store_admin_location!
+      store_location_for(:admin, request.fullpath)
+    end
+
+  def after_sign_in_path_for(resource)
+    stored_location_for(resource_or_scope) || panel_path
   end
 
   def after_sign_out_path_for(resource_or_scope)
-    new_admin_session_path
+    stored_location_for(resource_or_scope) || root_path
   end
 
   def configure_permitted_parameters
