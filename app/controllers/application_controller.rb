@@ -43,12 +43,12 @@ class ApplicationController < ActionController::Base
       store_location_for(:admin, request.fullpath)
     end
 
-  def after_sign_in_path_for(resource)
-    stored_location_for(resource) || panel_path
+  def after_sign_in_path_for(resource_or_scope)
+    stored_location_for(resource_or_scope) || super
   end
 
   def after_sign_out_path_for(resource_or_scope)
-    stored_location_for(resource_or_scope) || root_path
+    stored_location_for(resource_or_scope) || super
   end
 
   def configure_permitted_parameters
