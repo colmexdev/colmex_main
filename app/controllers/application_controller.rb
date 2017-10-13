@@ -35,7 +35,9 @@ class ApplicationController < ActionController::Base
   protected
   def after_sign_in_path_for(resource)
     logger.debug request.referrer
-    if request.referrer.include?("sign_in")
+    if request.referrer.nil?
+      panel_path
+    elsif !request.referrer.include?("sign_in")
       panel_path
     else
       request.referrer
