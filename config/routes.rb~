@@ -112,6 +112,7 @@ Rails.application.routes.draw do
     scope "editable" do
       get 'sobre' => 'informacion_general#sobre_el_colegio', :as => :sobre_el_colegio_edit
       get 'historia' => 'informacion_general#historia', :as => :historia_edit
+      get 'historia-75-aniversario' => 'informacion_general#historia_75_años', :as => :hist_75_edit
     end
 
   end

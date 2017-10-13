@@ -7,7 +7,7 @@
 			<h3 class="uk-accordion-title"><%= construir_encabezado("bt-flechita.png", "bt-flechita-abajo.png", (params[:locale] != "en" ? c.nombre : c.nombre_eng)) %></h3>
 			<div class="uk-accordion-content">
 				<ul class="uk-list uk-list-line">
-				<% @premiados.where("tipo = ?", c.nombre).each do |p| %>
+				<% @premiados.where("tipo = ?", c.nombre).order(:nombre).each do |p| %>
 					<li style="margin-bottom: 20px; font-size: 15px;"><p><%= (p.nombre.split(",").reverse.join(" ") + ", " + p.descripcion).html_safe %></p></li>
 				<% end %>
 				</ul>
