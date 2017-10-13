@@ -38,12 +38,11 @@ class ApplicationController < ActionController::Base
     if request.original_fullpath.include?("editable")
       logger.debug request.original_fullpath
       store_location_for(:admin, request.original_fullpath )
-      logger.debug stored_location_for(:admin)
     end
   end
 
   def after_sign_in_path_for(resource)
-    stored_location_for(resource) || panel_path
+    panel_path
   end
 
   def after_sign_out_path_for(resource_or_scope)
