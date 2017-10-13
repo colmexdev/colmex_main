@@ -35,8 +35,7 @@ class ApplicationController < ActionController::Base
 
   protected
   def check_editable
-    if request.original_fullpath.include?("editable")
-      logger.debug request.original_fullpath
+    if request.original_fullpath.include?("editable") && !admin_signed_in?
       store_location_for(:admin, request.original_fullpath )
     end
   end

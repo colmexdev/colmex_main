@@ -42,7 +42,7 @@ class ApplicationController < ActionController::Base
   end
 
   def after_sign_in_path_for(resource)
-    panel_path
+    stored_location_for(:admin) || panel_path
   end
 
   def after_sign_out_path_for(resource_or_scope)
