@@ -62,38 +62,6 @@
 		</div>
 	<% end %>
 
-	
-	<% if false %>
-	<% @pics.each do |pic| %>
-		<%= fields_for 'pics[]', pic do |p| %>
-			<%= p.hidden_field :f_ind, value: pic.f_ind.to_i %>
-			<div class="field">
-				<%= p.label :caption, "Pie de foto (Foto " + ((pic.f_ind+1).to_s) + ")" %><br>
-				<%= p.trix_editor :caption, value: pic.caption.html_safe %>
-			</div>
-			<div class="field">
-				<%= p.label :caption_ingles, "Pie de foto (inglés, párrafo " + ((pic.f_ind+1).to_s) + ")" %><br>
-				<%= p.trix_editor :caption_ingles, value: pic.caption_ingles.html_safe %>
-			</div>
-			<div class="field" style="height:250px;">
-				<div class="photo-upload">
-				<%= p.label :foto, raw('<span class="glyphicon glyphicon-upload glyph-padding"></span>Añadir foto') %><br>
-				<%= p.file_field :foto, :onchange => "readURL(this,'#foto-cont-" + ((pic.f_ind+1).to_s) +"')" %><br>
-				</div>
-				<div class="img-display">
-					<% if !pic.foto.url.nil? %>
-						<img id="<%= "foto-cont-" + ((pic.f_ind+1).to_s) %>" src="<%= pic.foto.url %>">
-					<% else %>
-						<span>No hay foto para mostrar.</span>
-					<% end %>
-				</div>
-			</div>
-		<% end %>
-	<% end %>
-
-	<% end %>
-
-
     <p>&nbsp;</p>
     </div>
     </div>

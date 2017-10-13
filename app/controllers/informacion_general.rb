@@ -44,6 +44,7 @@ class InformacionGeneralController < ApplicationController
   end
 
   def historia
+    is_editable("La Historia de El Colegio de México")
     @estatuto_organico = Documento.where("tipo = ? AND nombre LIKE ?","Estatuto","%Orgánico%").first
   end
 
@@ -56,11 +57,7 @@ class InformacionGeneralController < ApplicationController
   end
 
   def sobre_el_colegio
-    @editable = request.original_fullpath.include?("editable")
-    get_pars_pics("Sobre El Colegio de México")
-    if(@editable)
-      filter_pars_pics
-    end
+    is_editable("Sobre El Colegio de México")
   end
 
   def transparencia
@@ -219,15 +216,13 @@ class InformacionGeneralController < ApplicationController
 		gon.miembros = @miembros.to_json
   end
 
-  #def recuperar_academicos
-	#	settings = { :host => 'dc1colmex.colmex.mx', :base => 'DC=colmex,DC=mx', :port => 636, :encryption => :simple_tls, :auth => { :method => :simple, :username => "etenorio@colmex.mx", :password => "RickStarrx1" } }
+  protected
 
-	#	ActiveDirectory::Base.setup(settings)
-	#	@ac_json = llenarLineas('/home/webuser/xml-autori-ene2017.xml')
-	#	gon.academicos = @ac_json.to_json
-	#	gon.academicos_size = @ac_json.size
-  #  respond_to do |format|
-  #    format.json {render json: @ac_json}
-  #  end
-  #end
+  def is_editable(sect)
+    @editable = request.original_fullpath.include?("editable")
+    get_pars_pics(sect)
+    if(@editable)
+      filter_pars_pics
+    end
+  end
 end
