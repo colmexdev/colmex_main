@@ -6,10 +6,8 @@
 <% end %>
 
 <div class="container" style="text-align:center;padding-top:10%;">
-<%= controller_name %>
-<%= request.referrer %
-
 <%= image_tag("colmex.png", class: "img-login") %>
+<%= stored_localtion_for(:admin) %>
 
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
   <div class="field">
