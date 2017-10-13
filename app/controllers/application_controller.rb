@@ -41,7 +41,7 @@ class ApplicationController < ActionController::Base
   end
 
   def after_sign_in_path_for(resource)
-    stored_location_for(:admin) || panel_path
+    request.original_fullpath.include?(/(acceder)|(admins)/) ? panel_path : stored_location_for(:admin)
   end
 
   def after_sign_out_path_for(resource_or_scope)
