@@ -2,29 +2,93 @@
 <div class="container-fluid" id="resto-cuerpo">
 
 	<div id="cuerpo" class="principal uk-block-large">
-<div class="uk-width-1-1">
-    <div class="uk-grid">
-    <div class="uk-width-large-2-5 uk-text-left">
-    <div>
-    <span class="titulo-chico"><%= t('historia.historia') %></span><br>
-    <span class="titulo-grande">El Colegio de México</span>
-    </div>
-    <%= image_tag("historia.jpg", :style=> "margin-bottom:25px;") %>
-    </div>
-    <div class="uk-width-large-3-5">
-    <p><%= t('historia.p1').html_safe %></p>
-    <p><%= t('historia.p2').html_safe %></p>
-    </div>
-    </div>
-    <p><%= t('historia.p3').html_safe %></p>
-    <p><%= t('historia.p4').html_safe %></p>
-    <p><%= t('historia.p5').html_safe %></p>
-    <p><%= t('historia.p6').html_safe %></p>
-    <p><%= t('historia.p7').html_safe %></p>
-    <p><%= t('historia.p8', url: @estatuto_organico.archivo.url).html_safe %></p>
-    <p><%= t('historia.p9').html_safe %></p>
-    <p>&nbsp;</p>
-    <a href=<%= historia75_path %> class="ver-mas uk-margin-large-bottom uk-button-medium"><%= t('historia.ver') %></a>
-    </div> 
+
+	<% if @editable %>
+	<%= form_for(@sitio, :url => {:controller => "panel", :action => "editar", :params => {:set => "Contenido de sitios", :id => @sitio.id}, :uri => request.original_fullpath.gsub(/editable\//,"")}, :html => { :multipart => true }) do |f| %>
+  	<% if @sitio.errors.any? %>
+    	<div id="error_explanation">
+      	<h2><%= pluralize(@sitio.errors.count, "error") %> impidieron generar este objeto:</h2>
+
+      	<ul>
+      	<% @sitio.errors.full_messages.each do |message| %>
+        	<li><%= message %></li>
+      	<% end %>
+     	 </ul>
+    	</div>
+  	<% end %>
+
+	<%= hidden_field_tag :authenticity_token, form_authenticity_token -%>
+
+		<div class="uk-width-1-1">
+    	<div class="uk-grid">
+    		<div class="uk-width-large-2-5 uk-text-left">
+    			<div>
+    				<span class="titulo-chico"><%= t('historia.historia') %></span><br>
+    				<span class="titulo-grande">El Colegio de México</span>
+    			</div>
+
+<%= fields_for 'pics[]', @pics[0] do |p| %>
+		<br>
+		<%= image_tag(@pics[0].foto.url, id: "foto_1", style: "margin-bottom:25px;") %>
+		<br>
+				<%= p.label :foto, raw('<span class="glyphicon glyphicon-upload glyph-padding"></span>Añadir foto') %><br>
+				<%= p.file_field :foto, :onchange => "readURL(this,'#foto_1')" %><br>
+
+		<div class="field">
+				<%= p.label (params[:locale] == "es" ? :caption : :caption_ingles), "Pie de foto (Foto " + ((@pics[0].f_ind+1).to_s) + ")" %><br>
+				<%= p.trix_editor (params[:locale] == "es" ? :caption : :caption_ingles), value: (params[:locale] == "es" ? @pics[0].caption.gsub(/<(((\/)?p)|(br))>/,"").html_safe : @pics[0].caption_ingles.gsub(/<(((\/)?p)|(br))>/,"").html_safe ) %>
+		</div>
+
+
+<% end %>
+
+    		</div>
+    		<div class="uk-width-large-3-5">
+					<%= fields_for 'pars[]', @pars[0] do |p| %>
+						<div class="field">
+							<%= p.label (params[:locale] == "es" ? :texto : :texto_ingles), (params[:locale] == "es" ? ("Texto (Párrafo " + ((@pars[0].p_ind+1).to_s) + ")") : ("Texto (Inglés, párrafo " + ((@pars[0].p_ind+1).to_s) + ")")) %><br>
+							<%= p.trix_editor (params[:locale] == "es" ? :texto : :texto_ingles), value: (params[:locale] == "es" ? @pars[0].texto.html_safe : @pars[0].texto_ingles.html_safe) %>
+						</div>
+					<% end %>
+    		</div>
+    	</div>
+
+			<%= fields_for 'pars[]', @pars[1] do |p| %>
+				<div class="field">
+					<%= p.label (params[:locale] == "es" ? :texto : :texto_ingles), (params[:locale] == "es" ? ("Texto (Párrafo " + ((@pars[1].p_ind+1).to_s) + ")") : ("Texto (Inglés, párrafo " + ((@pars[1].p_ind+1).to_s) + ")")) %><br>
+					<%= p.trix_editor (params[:locale] == "es" ? :texto : :texto_ingles), value: (params[:locale] == "es" ? @pars[1].texto.html_safe : @pars[1].texto_ingles.html_safe) %>
+				</div>
+			<% end %>
+
+			<p>&nbsp;</p>
+  		<a href=<%= historia75_path %> class="ver-mas uk-margin-large-bottom uk-button-medium"><%= t('historia.ver') %></a>
+		</div> 
 	</div>
+  <div class="actions">
+    <%= f.submit "Guardar cambios" %>
+  </div>
+	<% end %>
+
+	<% else %>
+
+		<div class="uk-width-1-1">
+    	<div class="uk-grid">
+    		<div class="uk-width-large-2-5 uk-text-left">
+    			<div>
+    				<span class="titulo-chico"><%= t('historia.historia') %></span><br>
+    				<span class="titulo-grande">El Colegio de México</span>
+    			</div>
+    			<%= image_tag(@pics[0].foto.url, :style=> "margin-bottom:25px;") %>
+    		</div>
+    		<div class="uk-width-large-3-5">
+					<%= params[:locale] == "es" ? @pars[0].texto.html_safe : @pars[0].texto_ingles.html_safe %>
+    		</div>
+    	</div>
+			<%= params[:locale] == "es" ? @pars[1].texto.html_safe : @pars[1].texto_ingles.html_safe %>
+			<p>&nbsp;</p>
+  		<a href=<%= historia75_path %> class="ver-mas uk-margin-large-bottom uk-button-medium"><%= t('historia.ver') %></a>
+		</div> 
+	</div>
+
+	<% end %>
 <%= render 'principal/footer' %>
