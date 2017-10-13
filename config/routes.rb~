@@ -111,6 +111,7 @@ Rails.application.routes.draw do
 
     scope "editable" do
       get 'sobre' => 'informacion_general#sobre_el_colegio', :as => :sobre_el_colegio_edit
+      get 'historia' => 'informacion_general#historia', :as => :historia_edit
     end
 
   end
