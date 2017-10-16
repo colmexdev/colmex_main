@@ -28,7 +28,7 @@
 				</div>
 			<% end %>
     </div> 
-
+<br>
   <div class="actions">
     <%= f.submit "Guardar cambios" %>
   </div>
@@ -39,51 +39,7 @@
 		<div class="uk-width-1-1">
 		  <span class="titulo-grande"><%= t('footer.liga1') %></span><br>
 		  <p>&nbsp;</p>
-			<% if params[:locale] == "en" %>
-		  <span class="titulo-grande vino"><%= t('sobre.principios.intro') %></span>
-			<% end %>
-		  <p><%= t('sobre.principios.p1') %></p>
-			<% if params[:locale] == "en" %>
-		  <p>&nbsp;</p>
-		  <span class="titulo-grande vino"><%= t('sobre.principios.pron') %></span>
-			<% end %>
-			<% if params[:locale] == "en" %>
-		  <ol>
-				<li>
-					<p><%= t('sobre.principios.p2') %></p>
-				</li>
-				<li>
-					<p><%= t('sobre.principios.p3') %></p>
-				</li>
-				<li>
-					<p><%= t('sobre.principios.p4') %></p>
-				</li>
-		  </ol>
-			<% else %>
-			<ul>
-				<li>
-					<p><%= t('sobre.principios.u1') %></p>
-				</li>
-				<li>
-					<p><%= t('sobre.principios.u2') %></p>
-				</li>
-				<li>
-					<p><%= t('sobre.principios.u3') %></p>
-				</li>
-				<li>
-					<p><%= t('sobre.principios.u4') %></p>
-				</li>
-				<li>
-					<p><%= t('sobre.principios.u5') %></p>
-				</li>
-				<li>
-					<p><%= t('sobre.principios.u6') %></p>
-				</li>
-				<li>
-					<p><%= t('sobre.principios.u7') %></p>
-				</li>
-			</ul>
-			<% end %>
+			<%= params[:locale] == "es" ? @pars[0].texto.html_safe : @pars[0].texto_ingles.html_safe %>
     </div> 
 
 <% end %>
