@@ -47,6 +47,7 @@ class PrincipalController < ApplicationController
   end
 
   def principios_eticos
+    is_editable("Principios éticos")
   end
 
   def sitemap

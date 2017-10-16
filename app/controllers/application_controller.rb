@@ -54,5 +54,14 @@ class ApplicationController < ActionController::Base
   def configure_permitted_parameters
     devise_parameter_sanitizer.permit(:sign_up, keys: [:usuario, :password, :password_confirmation, :admin])
   end
+
+  def is_editable(sect)
+    @editable = request.original_fullpath.include?("editable")
+    get_pars_pics(sect)
+    if(@editable)
+      authenticate_admin!
+      filter_pars_pics
+    end
+  end
 end
 
