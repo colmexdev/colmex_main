@@ -28,8 +28,10 @@ $(document).on("ready", function(){
 	try{
 		configTrix();
 		addEventListener("trix-initialize", function(event) {
+			var histElement = event.target.toolbarElement.querySelector("[data-trix-button-group='history-tools']");
 			var groupElement = event.target.toolbarElement.querySelector("[data-trix-button-group='text-tools']");
 			var blockElement = event.target.toolbarElement.querySelector("[data-trix-button-group='block-tools']");
+			histElement.style.display = "none";
 			extendTrix(groupElement,blockElement);
 			clearPars(event.srcElement);
 		})
