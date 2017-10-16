@@ -38,12 +38,13 @@ class ApplicationController < ActionController::Base
     if request.original_fullpath.include?("editable") && !admin_signed_in?
       store_location_for(:admin, request.original_fullpath )
     elsif /(admins)|(acceder)/.match(request.original_fullpath) && !admin_signed_in?
+      logger.debug "Entrada con link directo a backend"
       store_location_for(:admin, panel_path )
     end
   end
 
   def after_sign_in_path_for(resource)
-    request.original_fullpath.include?(/(acceder)|(admins)/) ? panel_path : stored_location_for(:admin)
+    /(admins)|(acceder)/.match(request.original_fullpath) ? panel_path : stored_location_for(:admin)
   end
 
   def after_sign_out_path_for(resource_or_scope)
