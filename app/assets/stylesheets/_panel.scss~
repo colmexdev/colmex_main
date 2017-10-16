@@ -421,7 +421,7 @@ trix-editor div {
 	border-radius: 10px;
 	height: auto;
 	padding: 10px 15px;
-	margin: 0 20px;
+	margin: 20px 20px 0;
 	width: auto;
 	font-weight: 300;
 	font-size: 17px;
