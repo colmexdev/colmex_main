@@ -37,6 +37,8 @@ class ApplicationController < ActionController::Base
   def check_editable
     if request.original_fullpath.include?("editable") && !admin_signed_in?
       store_location_for(:admin, request.original_fullpath )
+    elsif request.original_fullpath.include(/(admins)|(acceder)/) && !admin_signed_in
+      store_location_for(:admin, panel_path )
     end
   end
 
