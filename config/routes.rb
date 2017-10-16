@@ -114,6 +114,7 @@ Rails.application.routes.draw do
       get 'historia' => 'informacion_general#historia', :as => :historia_edit
       get 'historia-75-aniversario' => 'informacion_general#historia_75_años', :as => :hist_75_edit
       get 'premios-distinciones' => 'informacion_general#premios_y_distinciones', :as => :premios_edit
+      get 'principios-eticos' => 'principal#principios_eticos', :as => :principios_edit
     end
 
   end

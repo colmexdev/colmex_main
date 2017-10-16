@@ -92,6 +92,10 @@ GEM
       responders
       warden (~> 1.2.3)
     erubis (2.7.0)
+    exception_handler (0.7.7.0)
+      bundler
+      rails (>= 4.2.0)
+      responders
     execjs (2.7.0)
     figaro (1.1.1)
       thor (~> 0.14)
@@ -233,6 +237,7 @@ DEPENDENCIES
   crossfilter-rails
   d3-rails
   devise
+  exception_handler
   figaro
   font-awesome-sass (~> 4.7.0)
   gon
