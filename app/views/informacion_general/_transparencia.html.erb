@@ -1,0 +1,29 @@
+
+
+<div class="container-fluid" id="resto-cuerpo">
+	<div id="cuerpo" class="principal-chica uk-block-large">
+	<span class="titulo-grande"><%= 'Unidad de Transparencia' %></span><br>
+        <p>&nbsp;</p>
+	<%= @pars[0].texto.html_safe %>
+	<p>&nbsp;</p>
+	<p><span class="titulo-chico">ACTAS DEL COMITÉ DE TRANSPARENCIA </span>
+		<span class="titulo-chico">2016</span></p>
+				<p>&nbsp;</p>
+<% Documento.where('tipo = ?','Unidad de Transparencia').each do |d| %>
+
+<div class="wrapper-links-doc">
+	<div class="img-link-doc">
+		<a href=<%= d.liga.to_s == "" ? d.archivo.url : d.liga %> target="_blank" class="uk-link"><img src=<%= image_url("documento.png") %> alt="documento" class="documento uk-vertical-align-middle"></a>
+	</div>
+	<div class="liga-doc">
+		<a href=<%= d.liga.to_s == "" ? d.archivo.url : d.liga %> target="_blank" class="documento uk-link"><%= (params[:locale] == "es" ? d.nombre : d.nombre_eng) %></a>
+	</div>
+</div>
+<% end %>
+
+<p>&nbsp;</p>
+<%= @pars[1].gsub(/<p>/,"<p style=\"font-size:13px;\">").gsub(/<\/p><p>/,"<br>").html_safe %>
+
+	</div>
+
+</div>

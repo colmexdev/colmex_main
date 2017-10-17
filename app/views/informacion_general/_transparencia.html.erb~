@@ -1,4 +1,4 @@
-<%= render 'principal/barra' %>
+
 
 <div class="container-fluid" id="resto-cuerpo">
 	<div id="cuerpo" class="principal-chica uk-block-large">
@@ -32,4 +32,4 @@ Dr. Luis Manuel Olivares Estrada Tel. 54493000 ext. 2917 - <a href="mailto:loliv
 
 	</div>
 
-<%= render 'principal/footer' %>
+</div>

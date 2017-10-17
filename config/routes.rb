@@ -116,6 +116,7 @@ Rails.application.routes.draw do
       get 'premios-distinciones' => 'informacion_general#premios_y_distinciones', :as => :premios_edit
       get 'principios-eticos' => 'principal#principios_eticos', :as => :principios_edit
       get 'bienes' => 'informacion_general#bienes', :as => :bienes_edit
+      get 'transparencia' => 'informacion_general#transparencia', :as => :transparencia_edit
     end
 
   end
