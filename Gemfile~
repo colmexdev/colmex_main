@@ -23,6 +23,9 @@ gem 'coffee-rails', '~> 4.1.0'
 # gon para pasar parámetros a Javascript
 gem 'gon'
 
+# exception_handler para páginas de error personalizadas
+gem 'exception_handler'
+
 #analytics-ruby para integrar Segment.io para analíticos
 #gem 'analytics-ruby', '~> 2.0.0', :require => "segment/analytics"
 
