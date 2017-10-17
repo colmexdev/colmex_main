@@ -2,6 +2,64 @@
 
 <div class="container-fluid" id="resto-cuerpo">
 	<div id="cuerpo" class="principal-chica uk-block-large">
+
+<% if @editable %>
+
+	<%= form_for(@sitio, :url => {:controller => "panel", :action => "editar", :params => {:set => "Contenido de sitios", :id => @sitio.id}, :uri => request.original_fullpath.gsub(/editable\//,"")}, :html => { :multipart => true }) do |f| %>
+  	<% if @sitio.errors.any? %>
+    	<div id="error_explanation">
+      	<h2><%= pluralize(@sitio.errors.count, "error") %> impidieron generar este objeto:</h2>
+
+      	<ul>
+      	<% @sitio.errors.full_messages.each do |message| %>
+        	<li><%= message %></li>
+      	<% end %>
+     	 </ul>
+    	</div>
+  	<% end %>
+
+	<%= hidden_field_tag :authenticity_token, form_authenticity_token -%>
+
+	<span class="titulo-grande"><%= 'Unidad de Transparencia' %></span><br>
+        <p>&nbsp;</p>
+				<%= fields_for 'pars[]', @pars[0] do |p| %>
+				<div class="field">
+					<%= p.label (params[:locale] == "es" ? :texto : :texto_ingles), (params[:locale] == "es" ? ("Texto (Párrafo " + ((@pars[0].p_ind+1).to_s) + ")") : ("Texto (Inglés, párrafo " + ((@pars[0].p_ind+1).to_s) + ")")) %><br>
+					<%= p.trix_editor (params[:locale] == "es" ? :texto : :texto_ingles), value: (params[:locale] == "es" ? @pars[0].texto.html_safe : @pars[0].texto_ingles.html_safe) %>
+				</div>
+			<% end %>
+	<p>&nbsp;</p>
+	<p><span class="titulo-chico">ACTAS DEL COMITÉ DE TRANSPARENCIA </span>
+		<span class="titulo-chico">2016</span></p>
+				<p>&nbsp;</p>
+<% @docs.each do |d| %>
+
+<div class="wrapper-links-doc">
+	<div class="img-link-doc">
+		<a href=<%= d.liga.to_s == "" ? d.archivo.url : d.liga %> target="_blank" class="uk-link"><img src=<%= image_url("documento.png") %> alt="documento" class="documento uk-vertical-align-middle"></a>
+	</div>
+	<div class="liga-doc">
+		<a href=<%= d.liga.to_s == "" ? d.archivo.url : d.liga %> target="_blank" class="documento uk-link"><%= (params[:locale] == "es" ? d.nombre : d.nombre_eng) %></a>
+	</div>
+</div>
+<% end %>
+
+<p>&nbsp;</p>
+			<%= fields_for 'pars[]', @pars[1] do |p| %>
+				<div class="field">
+					<%= p.label (params[:locale] == "es" ? :texto : :texto_ingles), (params[:locale] == "es" ? ("Texto (Párrafo " + ((@pars[1].p_ind+1).to_s) + ")") : ("Texto (Inglés, párrafo " + ((@pars[1].p_ind+1).to_s) + ")")) %><br>
+					<%= p.trix_editor (params[:locale] == "es" ? :texto : :texto_ingles), value: (params[:locale] == "es" ? @pars[1].texto.html_safe : @pars[1].texto_ingles.html_safe) %>
+				</div>
+			<% end %>
+<br>
+  <div class="actions">
+    <%= f.submit "Guardar cambios" %>
+  </div>
+
+
+<% end %>
+<% else %>
+
 	<span class="titulo-grande"><%= 'Unidad de Transparencia' %></span><br>
         <p>&nbsp;</p>
 	<p>La Unidad de Transparencia de El Colegio de México, A.C. es la encargada de recabar y difundir información relativa a las obligaciones de transparencia, recibir y dar trámite las solicitudes de acceso a la información; así como proponer e implementar acciones conjuntas para asegurar una mayor eficiencia en los procesos de transparencia y protección de datos personales al interior de nuestra institución.</p>
@@ -30,6 +88,10 @@ Personal Operativo de la Unidad de Transparencia:<br>
 Lic. Perla Bouchan Correa Tel. 54493000 ext. 2131 - <a href="mailto:pbouchan@colmex.mx" class="uk-link">pbouchan@colmex.mx</a> /<br>
 Dr. Luis Manuel Olivares Estrada Tel. 54493000 ext. 2917 - <a href="mailto:lolivares@colmex.mx" class="uk-link">lolivares@colmex.mx</a> /</p>
 
+
+<% end %>
 	</div>
+
+
 
 <%= render 'principal/footer' %>

@@ -62,7 +62,7 @@
 
 	<span class="titulo-grande"><%= 'Unidad de Transparencia' %></span><br>
         <p>&nbsp;</p>
-	<p>La Unidad de Transparencia de El Colegio de México, A.C. es la encargada de recabar y difundir información relativa a las obligaciones de transparencia, recibir y dar trámite las solicitudes de acceso a la información; así como proponer e implementar acciones conjuntas para asegurar una mayor eficiencia en los procesos de transparencia y protección de datos personales al interior de nuestra institución.</p>
+	<%= @pars[0].texto.html_safe %>
 	<p>&nbsp;</p>
 	<p><span class="titulo-chico">ACTAS DEL COMITÉ DE TRANSPARENCIA </span>
 		<span class="titulo-chico">2016</span></p>
@@ -80,13 +80,7 @@
 <% end %>
 
 <p>&nbsp;</p>
-<p style="font-size:13px;"><b>Datos de contacto donde se podrán recibir solicitudes de información:</b><br>
-Secretaría Administrativa/Dirección Jurídica.<br>
-Titular de la Unidad de Transparencia: Dr. Álvaro Baillet Gallardo.<br>
-Tel. 54493000 ext. 2904 <a href="mailto:abaillet@colmex.mx" class="uk-link">abaillet@colmex.mx</a><br>
-Personal Operativo de la Unidad de Transparencia:<br>
-Lic. Perla Bouchan Correa Tel. 54493000 ext. 2131 - <a href="mailto:pbouchan@colmex.mx" class="uk-link">pbouchan@colmex.mx</a> /<br>
-Dr. Luis Manuel Olivares Estrada Tel. 54493000 ext. 2917 - <a href="mailto:lolivares@colmex.mx" class="uk-link">lolivares@colmex.mx</a> /</p>
+<%= @pars[1].texto.gsub(/<\/p><p>/,"<br>").gsub(/<p>/,"<p style=\"font-size:13px;\">").html_safe %>
 
 
 <% end %>
