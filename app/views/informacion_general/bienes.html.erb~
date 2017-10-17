@@ -4,7 +4,43 @@
 		<span class="titulo-grande">Relación de bienes muebles e inmuebles</span>
 		<p>&nbsp;</p>
 
-		<p>La relación de los Bienes Muebles e Inmuebles de El Colegio de México se encuentra en el siguiente listado de archivos descargables:</p>
+	<% if @editable %>
+	<%= form_for(@sitio, :url => {:controller => "panel", :action => "editar", :params => {:set => "Contenido de sitios", :id => @sitio.id}, :uri => request.original_fullpath.gsub(/editable\//,"")}, :html => { :multipart => true }) do |f| %>
+  	<% if @sitio.errors.any? %>
+    	<div id="error_explanation">
+      	<h2><%= pluralize(@sitio.errors.count, "error") %> impidieron generar este objeto:</h2>
+
+      	<ul>
+      	<% @sitio.errors.full_messages.each do |message| %>
+        	<li><%= message %></li>
+      	<% end %>
+     	 </ul>
+    	</div>
+  	<% end %>
+
+	<%= hidden_field_tag :authenticity_token, form_authenticity_token -%>
+
+	<%= fields_for 'pars', @pars[0] do |p| %>
+
+		<div class="field">
+		<%= p.label (params[:locale] == "es" ? :texto : :texto_ingles), (params[:locale] == "es" ? ("Texto (Párrafo " + ((@pars[0].p_ind+1).to_s) + ")") : ("Texto (Inglés, párrafo " + ((@pars[0].p_ind+1).to_s) + ")")) %><br>
+		<%= p.trix_editor (params[:locale] == "es" ? :texto : :texto_ingles), value: (params[:locale] == "es" ? @pars[0].texto.html_safe : @pars[0].texto_ingles.html_safe) %>
+		</div>	
+
+	<% end %>
+
+	<br>
+  <div class="actions">
+    <%= f.submit "Guardar cambios" %>
+  </div>
+	<% end %>
+
+	<% else %>
+
+
+
+
+		<%= @pars[0].texto.html_safe %>
     <p>&nbsp;</p>
 
 
@@ -18,6 +54,8 @@
 	</div>
 	</div>
       <% end %>
+
+<% end %>
 
 	</div>
 <%= render 'principal/footer' %>
