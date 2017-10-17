@@ -73,10 +73,8 @@ class InformacionGeneralController < ApplicationController
   end
 
   def bienes
+    is_editable("Relación de bienes")
     @transparencias = Documento.where(:tipo => "Transparencia")
-    #respond_to do |format|
-    #  format.js
-    #end
   end
 
   def asamblea
