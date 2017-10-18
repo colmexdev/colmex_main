@@ -25,7 +25,19 @@
     <p>&nbsp;</p>
     <div class="uk-grid uk-grid-large">
     <div class="uk-width-large-2-5 uk-width-medium-2-5 uk-width-small-2-5">
-    <img src=<%= image_url("centro-ceaa.png") %> alt="Centro de estudios de Asia y África">
+<%= fields_for 'pics[]', @pics[0] do |p| %>
+		<br>
+		<%= image_tag(@pics[0].foto.url, id: "foto_1") %>
+		<br>
+				<%= p.label :foto, raw('<span class="glyphicon glyphicon-upload glyph-padding"></span>Añadir foto') %><br>
+				<%= p.file_field :foto, :onchange => "readURL(this,'#foto_1')" %><br>
+
+		<div class="field">
+				<%= p.label (params[:locale] == "es" ? :caption : :caption_ingles), "Pie de foto (Foto " + ((@pics[0].f_ind+1).to_s) + ")" %><br>
+				<%= p.trix_editor (params[:locale] == "es" ? :caption : :caption_ingles), value: (params[:locale] == "es" ? @pics[0].caption.gsub(/<(((\/)?p)|(br))>/,"").html_safe : @pics[0].caption_ingles.gsub(/<(((\/)?p)|(br))>/,"").html_safe ) %>
+		</div>
+<% end %>
+
     </div>
     <div class="uk-width-large-3-5 uk-width-medium-3-5 uk-width-small-3-5 uk-text-left">
 	<%= fields_for 'pars[]', @pars[0] do |p| %>
@@ -40,7 +52,7 @@
     <hr class="uk-grid-divider">
     <div class="uk-grid uk-grid-large">
     <div class="uk-width-large-2-5 uk-width-medium-2-5 uk-width-small-2-5 centro-mostrar">
-    <img src=<%= image_url("centro-cedua.png") %> alt="Centro de estudios lingüísticos y literarios">
+    <!-- img src=<%= image_url("centro-cedua.png") %> alt="Centro de estudios lingüísticos y literarios" -->
     </div>
     <div class="uk-width-large-3-5 uk-width-medium-3-5 uk-width-small-3-5 uk-text-left">
 	<%= fields_for 'pars[]', @pars[1] do |p| %>
@@ -51,14 +63,40 @@
 	<% end %>
     <a href="http://cedua.colmex.mx/" target="_blank" class="ver-mas uk-margin-large-bottom uk-button-small "><%= t('programas.info') %></a>
     </div>
-    <div class="uk-width-large-2-5 uk-width-medium-2-5 uk-width-small-2-5 centro-borrar">
-    <img src=<%= image_url("centro-cedua.png") %> alt="Centro de estudios Demográficos, Urbanos y ambientales">
+    <div class="uk-width-large-2-5 uk-width-medium-2-5 uk-width-small-2-5">
+<%= fields_for 'pics[]', @pics[1] do |p| %>
+		<br>
+		<%= image_tag(@pics[1].foto.url, id: "foto_2") %>
+		<br>
+				<%= p.label :foto, raw('<span class="glyphicon glyphicon-upload glyph-padding"></span>Añadir foto') %><br>
+				<%= p.file_field :foto, :onchange => "readURL(this,'#foto_2')" %><br>
+
+		<div class="field">
+				<%= p.label (params[:locale] == "es" ? :caption : :caption_ingles), "Pie de foto (Foto " + ((@pics[1].f_ind+1).to_s) + ")" %><br>
+				<%= p.trix_editor (params[:locale] == "es" ? :caption : :caption_ingles), value: (params[:locale] == "es" ? @pics[1].caption.gsub(/<(((\/)?p)|(br))>/,"").html_safe : @pics[1].caption_ingles.gsub(/<(((\/)?p)|(br))>/,"").html_safe ) %>
+		</div>
+
+
+<% end %>
     </div>
     </div>
     <hr class="uk-grid-divider">
     <div class="uk-grid uk-grid-large">
     <div class="uk-width-large-2-5 uk-width-medium-2-5 uk-width-small-2-5">
-    <img src=<%= image_url("centro-cee.png") %> alt="Centro de estudios económicos">
+<%= fields_for 'pics[]', @pics[2] do |p| %>
+		<br>
+		<%= image_tag(@pics[2].foto.url, id: "foto_3") %>
+		<br>
+				<%= p.label :foto, raw('<span class="glyphicon glyphicon-upload glyph-padding"></span>Añadir foto') %><br>
+				<%= p.file_field :foto, :onchange => "readURL(this,'#foto_3')" %><br>
+
+		<div class="field">
+				<%= p.label (params[:locale] == "es" ? :caption : :caption_ingles), "Pie de foto (Foto " + ((@pics[2].f_ind+1).to_s) + ")" %><br>
+				<%= p.trix_editor (params[:locale] == "es" ? :caption : :caption_ingles), value: (params[:locale] == "es" ? @pics[2].caption.gsub(/<(((\/)?p)|(br))>/,"").html_safe : @pics[2].caption_ingles.gsub(/<(((\/)?p)|(br))>/,"").html_safe ) %>
+		</div>
+
+
+<% end %>
     </div>
     <div class="uk-width-large-3-5 uk-width-medium-3-5 uk-width-small-3-5 uk-text-left">
 	<%= fields_for 'pars[]', @pars[2] do |p| %>
@@ -73,7 +111,7 @@
     <hr class="uk-grid-divider">
     <div class="uk-grid uk-grid-large">
     <div class="uk-width-large-2-5 uk-width-medium-2-5 uk-width-small-2-5 centro-mostrar">
-    <img src=<%= image_url("centro-ceh.png") %> alt="Centro de estudios lingüísticos y literarios">
+    <!-- img src=<%= image_url("centro-ceh.png") %> alt="Centro de estudios lingüísticos y literarios" -->
     </div>
     <div class="uk-width-large-3-5 uk-width-medium-3-5 uk-width-small-3-5 uk-text-left">
 	<%= fields_for 'pars[]', @pars[3] do |p| %>
@@ -84,14 +122,40 @@
 	<% end %>
     <a href="http://ceh.colmex.mx/" target="_blank" class="ver-mas uk-margin-large-bottom uk-button-small"><%= t('programas.info') %></a>
     </div>
-    <div class="uk-width-large-2-5 uk-width-medium-2-5 uk-width-small-2-5 centro-borrar">
-    <img src=<%= image_url("centro-ceh.png") %> alt="Centro de estudios Históricos">
+    <div class="uk-width-large-2-5 uk-width-medium-2-5 uk-width-small-2-5">
+<%= fields_for 'pics[]', @pics[3] do |p| %>
+		<br>
+		<%= image_tag(@pics[3].foto.url, id: "foto_4") %>
+		<br>
+				<%= p.label :foto, raw('<span class="glyphicon glyphicon-upload glyph-padding"></span>Añadir foto') %><br>
+				<%= p.file_field :foto, :onchange => "readURL(this,'#foto_4')" %><br>
+
+		<div class="field">
+				<%= p.label (params[:locale] == "es" ? :caption : :caption_ingles), "Pie de foto (Foto " + ((@pics[3].f_ind+1).to_s) + ")" %><br>
+				<%= p.trix_editor (params[:locale] == "es" ? :caption : :caption_ingles), value: (params[:locale] == "es" ? @pics[3].caption.gsub(/<(((\/)?p)|(br))>/,"").html_safe : @pics[3].caption_ingles.gsub(/<(((\/)?p)|(br))>/,"").html_safe ) %>
+		</div>
+
+
+<% end %>
     </div>
     </div>
     <hr class="uk-grid-divider">
     <div class="uk-grid uk-grid-large">
     <div class="uk-width-large-2-5 uk-width-medium-2-5 uk-width-small-2-5">
-    <img src=<%= image_url("centro-cei.png") %> alt="Centro de estudios internacionales">
+<%= fields_for 'pics[]', @pics[4] do |p| %>
+		<br>
+		<%= image_tag(@pics[4].foto.url, id: "foto_5") %>
+		<br>
+				<%= p.label :foto, raw('<span class="glyphicon glyphicon-upload glyph-padding"></span>Añadir foto') %><br>
+				<%= p.file_field :foto, :onchange => "readURL(this,'#foto_5')" %><br>
+
+		<div class="field">
+				<%= p.label (params[:locale] == "es" ? :caption : :caption_ingles), "Pie de foto (Foto " + ((@pics[4].f_ind+1).to_s) + ")" %><br>
+				<%= p.trix_editor (params[:locale] == "es" ? :caption : :caption_ingles), value: (params[:locale] == "es" ? @pics[4].caption.gsub(/<(((\/)?p)|(br))>/,"").html_safe : @pics[4].caption_ingles.gsub(/<(((\/)?p)|(br))>/,"").html_safe ) %>
+		</div>
+
+
+<% end %>
     </div>
     <div class="uk-width-large-3-5 uk-width-medium-3-5 uk-width-small-3-5 uk-text-left">
 	<%= fields_for 'pars[]', @pars[4] do |p| %>
@@ -106,7 +170,7 @@
     <hr class="uk-grid-divider">
     <div class="uk-grid uk-grid-large">
     <div class="uk-width-large-2-5 uk-width-medium-2-5 uk-width-small-2-5 centro-mostrar">
-    <img src=<%= image_url("centro-cell.png") %> alt="Centro de estudios lingüísticos y literarios">
+    <!--img src=<%= image_url("centro-cell.png") %> alt="Centro de estudios lingüísticos y literarios"-->
     </div>
     <div class="uk-width-large-3-5 uk-width-medium-3-5 uk-width-small-3-5 uk-text-left">
 	<%= fields_for 'pars[]', @pars[5] do |p| %>
@@ -117,14 +181,40 @@
 	<% end %>
     <a href="http://cell.colmex.mx/" target="_blank" class="ver-mas uk-margin-large-bottom uk-button-small"><%= t('programas.info') %></a>
     </div>
-    <div class="uk-width-large-2-5 uk-width-medium-2-5 uk-width-small-2-5 centro-borrar">
-    <img src=<%= image_url("centro-cell.png") %> alt="Centro de estudios lingüísticos y literarios">
+    <div class="uk-width-large-2-5 uk-width-medium-2-5 uk-width-small-2-5">
+<%= fields_for 'pics[]', @pics[5] do |p| %>
+		<br>
+		<%= image_tag(@pics[5].foto.url, id: "foto_6") %>
+		<br>
+				<%= p.label :foto, raw('<span class="glyphicon glyphicon-upload glyph-padding"></span>Añadir foto') %><br>
+				<%= p.file_field :foto, :onchange => "readURL(this,'#foto_6')" %><br>
+
+		<div class="field">
+				<%= p.label (params[:locale] == "es" ? :caption : :caption_ingles), "Pie de foto (Foto " + ((@pics[5].f_ind+1).to_s) + ")" %><br>
+				<%= p.trix_editor (params[:locale] == "es" ? :caption : :caption_ingles), value: (params[:locale] == "es" ? @pics[5].caption.gsub(/<(((\/)?p)|(br))>/,"").html_safe : @pics[5].caption_ingles.gsub(/<(((\/)?p)|(br))>/,"").html_safe ) %>
+		</div>
+
+
+<% end %>
     </div>
     </div>
     <hr class="uk-grid-divider">
     <div class="uk-grid uk-grid-large">
     <div class="uk-width-large-2-5 uk-width-medium-2-5 uk-width-small-2-5">
-    <img src=<%= image_url("centro-ces.png") %> alt="Centro de estudios sociológicos">
+<%= fields_for 'pics[]', @pics[6] do |p| %>
+		<br>
+		<%= image_tag(@pics[6].foto.url, id: "foto_7") %>
+		<br>
+				<%= p.label :foto, raw('<span class="glyphicon glyphicon-upload glyph-padding"></span>Añadir foto') %><br>
+				<%= p.file_field :foto, :onchange => "readURL(this,'#foto_7')" %><br>
+
+		<div class="field">
+				<%= p.label (params[:locale] == "es" ? :caption : :caption_ingles), "Pie de foto (Foto " + ((@pics[6].f_ind+1).to_s) + ")" %><br>
+				<%= p.trix_editor (params[:locale] == "es" ? :caption : :caption_ingles), value: (params[:locale] == "es" ? @pics[6].caption.gsub(/<(((\/)?p)|(br))>/,"").html_safe : @pics[6].caption_ingles.gsub(/<(((\/)?p)|(br))>/,"").html_safe ) %>
+		</div>
+
+
+<% end %>
     </div>
     <div class="uk-width-large-3-5 uk-width-medium-3-5 uk-width-small-3-5 uk-text-left">
 	<%= fields_for 'pars[]', @pars[6] do |p| %>
@@ -152,79 +242,79 @@
     <p>&nbsp;</p>
     <div class="uk-grid uk-grid-large">
     <div class="uk-width-large-2-5 uk-width-medium-2-5 uk-width-small-2-5">
-    <img src=<%= image_url("centro-ceaa.png") %> alt="Centro de estudios de Asia y África">
+    <img src=<%= image_url(@pics[0].foto.url) %> alt="Centro de estudios de Asia y África">
     </div>
     <div class="uk-width-large-3-5 uk-width-medium-3-5 uk-width-small-3-5 uk-text-left">
-    <p><%= params[:locale] == "en" ? "Established in 1964, the Center for the Study of Asia and Africa (CEAA) has been a pioneer in Mexico and Latin America in promoting courses, publications and knowledge on Asian and African societies. The professorial staff specializes in the history of the culture, society, politics, economy and languages of the major countries of Asia and Africa. Its academic journal, <i>Estudios de Asia y Africa</i> is the best known and most prestigious of Latin America. The aim of the CEAA has always aimed to train experts from Mexico and other regions of the world who are interested in studying Asia and Africa as well as to build bridges of dialogue and promote academic and international exchanges in our increasingly global world.".html_safe : "Creado en 1964, busca transmitir el conocimiento sobre los países de Asia y África a la sociedad mexicana y latinoamericana, así como el interés por entender la historia de cada país, la cultura, la sociedad, la política, la economía y sus lenguas. Este gran proyecto nació de la necesidad de acercarse de manera profunda a estas regiones del mundo y por concretar puentes de unión." %></p>
+    <%= params[:locale] == "es" ? @pars[0].texto.html_safe : @pars[0].texto_ingles.html_safe %>
     <a href="http://ceaa.colmex.mx/" target="_blank" class="ver-mas uk-margin-large-bottom uk-button-small"><%= t('programas.info') %></a>
     </div>
     </div>
     <hr class="uk-grid-divider">
     <div class="uk-grid uk-grid-large">
     <div class="uk-width-large-2-5 uk-width-medium-2-5 uk-width-small-2-5 centro-mostrar">
-    <img src=<%= image_url("centro-cedua.png") %> alt="Centro de estudios lingüísticos y literarios">
+    <img src=<%= image_url(@pics[1].foto.url) %> alt="Centro de estudios lingüísticos y literarios">
     </div>
     <div class="uk-width-large-3-5 uk-width-medium-3-5 uk-width-small-3-5 uk-text-left">
-    <p><%= params[:locale] == "en" ? "The Center for Demographic, Urban and Environmental Studies began its activities in 1964 as a Center for Economic and Demographic Studies (CEED), with the purpose of conducting and promoting research and teaching in studies related to population and urbanization in Mexico and Latin America. The center soon registered a considerable increase in its activities and, from the 1980s, opened academic programs on the study of the environmental aspects related to population and urban development and from 2004 changed its name to Center for Demographic, Urban and Environmental Studies (CEDUA). The center provides high-level graduate training in a variety of study programs in its fields of specialty and publishes the prestigious academic journal <i>Estudios Demográficos y Urbanos.</i>".html_safe : "El Centro de Estudios Demográficos, Urbanos y Ambientales inició sus actividades en 1964 con el propósito de realizar y promover investigación y docencia en estudios relacionados con la población y la urbanización en México y América Latina. A partir de los años ochenta se inició el estudio de los aspectos ambientales vinculados con la población y el desarrollo urbano." %></p>
+    <%= params[:locale] == "es" ? @pars[1].texto.html_safe : @pars[1].texto_ingles.html_safe %>
     <a href="http://cedua.colmex.mx/" target="_blank" class="ver-mas uk-margin-large-bottom uk-button-small "><%= t('programas.info') %></a>
     </div>
     <div class="uk-width-large-2-5 uk-width-medium-2-5 uk-width-small-2-5 centro-borrar">
-    <img src=<%= image_url("centro-cedua.png") %> alt="Centro de estudios Demográficos, Urbanos y ambientales">
+    <img src=<%= image_url(@pics[1].foto.url) %> alt="Centro de estudios Demográficos, Urbanos y ambientales">
     </div>
     </div>
     <hr class="uk-grid-divider">
     <div class="uk-grid uk-grid-large">
     <div class="uk-width-large-2-5 uk-width-medium-2-5 uk-width-small-2-5">
-    <img src=<%= image_url("centro-cee.png") %> alt="Centro de estudios económicos">
+    <img src=<%= image_url(@pics[2].foto.url) %> alt="Centro de estudios económicos">
     </div>
     <div class="uk-width-large-3-5 uk-width-medium-3-5 uk-width-small-3-5 uk-text-left">
-    <p><%= params[:locale] == "en" ? "Established in 1964, the Center for Economic Studies was the first academic center in Mexico to offer a postgraduate degree in economics. The center offers B.A., Masters and Doctoral degrees in economics, and its professors carry on an intense program of research and academic seminars, with many international participants. It publishes the journal <i>Estudios Económicos (Economic Studies)</i> that appears twice a year from 1986 to date, and is one of the most prestigious publications in economics in Mexico and Latin America.".html_safe : "Fundado en 1964, surgió impulsado por la necesidad de promover la investigación y la docencia en estudios sobre economía, fue el primer recinto académico de México que ofreció un posgrado en Economía. Edita la revista Estudios Económicos que aparece dos veces al año desde 1986, es una de las revistas especializadas en economía más prestigiadas de México y América Latina." %></p>
+    <%= params[:locale] == "es" : @pars[2].texto.html_safe : @pars[2].texto_ingles.html_safe %>
     <a href="http://cee.colmex.mx/" target="_blank" class="ver-mas uk-margin-large-bottom uk-button-small"><%= t('programas.info') %></a>
     </div>
     </div>
     <hr class="uk-grid-divider">
     <div class="uk-grid uk-grid-large">
     <div class="uk-width-large-2-5 uk-width-medium-2-5 uk-width-small-2-5 centro-mostrar">
-    <img src=<%= image_url("centro-ceh.png") %> alt="Centro de estudios lingüísticos y literarios">
+    <img src=<%= image_url(@pics[3].foto.url) %> alt="Centro de estudios lingüísticos y literarios">
     </div>
     <div class="uk-width-large-3-5 uk-width-medium-3-5 uk-width-small-3-5 uk-text-left">
-    <p><%= params[:locale] == "en" ? "The Center for Historical Studies (CEH) was founded in 1941 and has a long and distinguished experience in the research and teaching of history. Its teaching staff is made up of 27 full-time professors-researchers. The CEH offers a Masters and Doctoral program in History (with an emphasis on Mexico and Latin America), the main objective of which is to provide solid training to its students so that they can develop their proficiency in teaching and research centers in universities and research institutes in the humanities and social sciences in Mexico and abroad. The center runs many research seminars and regularly publishes a large number of books on the history of Mexico, Latin America and other regions of the world as well as the noted academic journal, <i>Historia Mexicana</i> which has been published in uninterrupted fashion since 1951 and is well known internationally for its high academic quality.".html_safe : "Fundado en 1941, posee una larga experiencia en las tareas de investigación y docencia. El CEH ofrece un programa de Doctorado en Historia con énfasis en la historia de México y América Latina; el centro publica la revista Historia Mexicana desde julio de 1951." %></p>
+    <%= params[:locale] == "es" ? @pars[3].texto.html_safe : @pars[3].texto_ingles.html_safe %>
     <a href="http://ceh.colmex.mx/" target="_blank" class="ver-mas uk-margin-large-bottom uk-button-small"><%= t('programas.info') %></a>
     </div>
     <div class="uk-width-large-2-5 uk-width-medium-2-5 uk-width-small-2-5 centro-borrar">
-    <img src=<%= image_url("centro-ceh.png") %> alt="Centro de estudios Históricos">
+    <img src=<%= image_url(@pics[3].foto.url) %> alt="Centro de estudios Históricos">
     </div>
     </div>
     <hr class="uk-grid-divider">
     <div class="uk-grid uk-grid-large">
     <div class="uk-width-large-2-5 uk-width-medium-2-5 uk-width-small-2-5">
-    <img src=<%= image_url("centro-cei.png") %> alt="Centro de estudios internacionales">
+    <img src=<%= image_url(@pics[4].foto.url) %> alt="Centro de estudios internacionales">
     </div>
     <div class="uk-width-large-3-5 uk-width-medium-3-5 uk-width-small-3-5 uk-text-left">
-    <p><%= params[:locale] == "en" ? "The Center for International Studies (CEI) was created in 1960 and carries on an extensive program research and teaching as well as a great variety of publications. In the teaching area, the CEI offers two degrees: B.A. in Politics and Public Administration and a B.A. in International Relations, as well as a Masters degree in Political Science. Teaching is conducted mainly by the professors of the CEI but also periodically by visiting professors from foreign universities, as well as public officials of high level, who share their knowledge and experience with students. Every two years, the CEI convenes for application to one of its three programs, which are extremely competitive. More than 60% of the graduates of both degrees in the last twenty years have carried out postgraduate studies (masters and doctorates) in prestigious universities, mainly in the United States and Great Britain. The research program of CEI includes the study of international relations, political science, federal and local public administration, Mexico's political system and foreign policy, as well as regional studies on North America, Europe and Latin America.".html_safe : "En 1960 se creó con la idea de formar estudiosos de las relaciones internacionales capaces de entender la situación de México en el mundo y de conducir la diplomacia mexicana con el mayor profesionalismo. Sus tareas principales son la investigación y la docencia. Publica la Revista <i>Foro Internacional</i>.".html_safe %></p>
+    <%= params[:locale] == "es" ? @pars[4].texto.html_safe : @pars[4].texto_ingles.html_safe %>
     <a href="http://cei.colmex.mx/" target="_blank" class="ver-mas uk-margin-large-bottom uk-button-small"><%= t('programas.info') %></a>
     </div>
     </div>
     <hr class="uk-grid-divider">
     <div class="uk-grid uk-grid-large">
     <div class="uk-width-large-2-5 uk-width-medium-2-5 uk-width-small-2-5 centro-mostrar">
-    <img src=<%= image_url("centro-cell.png") %> alt="Centro de estudios lingüísticos y literarios">
+    <img src=<%= image_url(@pics[5].foto.url) %> alt="Centro de estudios lingüísticos y literarios">
     </div>
     <div class="uk-width-large-3-5 uk-width-medium-3-5 uk-width-small-3-5 uk-text-left">
-    <p><%= params[:locale] == "en" ? "The Center for Literature and Linguistics (CELL) was founded in 1947 by the distinguished intellectuals, Alfonso Reyes and Raimundo Lida, and is a prestigious research and teaching center specializing in studies of Hispanic and Hispanic American literature and linguistics, the latter focusing particularly on the Spanish and Amerindian languages of Mexico. It also runs a program of translation studies which has gained international recognition. Among the many collective works published by CELL, we only mention the Linguistic Atlas of Mexico, the Dictionary of the Spanish of Mexico, the Folkloric Songbook of Mexico and the Catalogue of marginal texts of New Spain. It runs a Seminar of Popular Traditions and hosts the Laboratory on Phonic Studies. The center publishes the <i>Nueva Revista de Filología Hispánica</i>, one of the most prestigious specialized journals in Spanish and Hispanic American literature. Its doctoral programs - in Linguistics and Hispanic Literature - are oriented to the training of high level researchers in their respective areas. The Master's program in Translation, founded in 2004, trains researchers in the field of translation.".html_safe : "Fundado en 1947, está especializado en estudios de literatura hispánica y de lingüística, particularmente hispánica y de las lenguas amerindias de México, y recientemente ha incorporado en su interés los estudios de traducción. Publica la Nueva Revista de Filología Hispánica." %></p>
+    <%= params[:locale] == "es" ? @pars[5].texto.html_safe : @pars[5].texto_ingles.html_safe %>
     <a href="http://cell.colmex.mx/" target="_blank" class="ver-mas uk-margin-large-bottom uk-button-small"><%= t('programas.info') %></a>
     </div>
     <div class="uk-width-large-2-5 uk-width-medium-2-5 uk-width-small-2-5 centro-borrar">
-    <img src=<%= image_url("centro-cell.png") %> alt="Centro de estudios lingüísticos y literarios">
+    <img src=<%= image_url(@pics[5].foto.url) %> alt="Centro de estudios lingüísticos y literarios">
     </div>
     </div>
     <hr class="uk-grid-divider">
     <div class="uk-grid uk-grid-large">
     <div class="uk-width-large-2-5 uk-width-medium-2-5 uk-width-small-2-5">
-    <img src=<%= image_url("centro-ces.png") %> alt="Centro de estudios sociológicos">
+    <img src=<%= image_url(@pics[6].foto.url) %> alt="Centro de estudios sociológicos">
     </div>
     <div class="uk-width-large-3-5 uk-width-medium-3-5 uk-width-small-3-5 uk-text-left">
-    <p><%= params[:locale] == "en" ? "The Center for Sociological Studies (CES) México brings together more than thirty sociologists, political scientists, anthropologists and specialists in various disciplines of the social sciences, with different theoretical approaches, and carries on a distinguished program in research and in teaching. It offers a solid Doctoral Program in Social Science with a Specialization in Sociology. In addition, the CES offers a Master's Program in Gender Studies, as part of its Interdisciplinary Program on Women's Studies. The CES has been recognized as one of the most dynamic spaces for social research in Mexico and Latin America. This is reflected in the high number of academic publications by its members: for example - just in the five-year period 2008-2013- , the research professors who make up the core academic group published more than eighty books, and over one hundred and ninety academic articles and two hundred book chapters. This emphasis on research is also reflected in the high number of degree exams defended by its doctoral students: since its foundation, one hundred and forty-two graduate theses have been approved." : "Desde su fundación, el CES adoptó, como objetivo principal, desarrollar nuevos conocimientos relacionados con los problemas sociales, políticos y económicos de México y América Latina, vinculando a esta tarea la conformación de un sólido Programa de Doctorado en Ciencia Social con Especialidad en Sociología. Edita la revista Estudios Sociológicos." %></p>
+    <%= params[:locale] == "es" ? @pars[6].texto.html_safe : @pars[6].texto_ingles.html_safe %>
     <a href="http://ces.colmex.mx/" target="_blank" class="ver-mas uk-margin-large-bottom uk-button-small"><%= t('programas.info') %></a>
     </div>
     </div>
