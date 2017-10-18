@@ -3,16 +3,46 @@
 	<div id="cuerpo" class="principal-chica uk-block-large">
 
 <script type="text/javascript">initAddThis();</script>
-		
+
+<% if @editable %>
+<%= form_for(@sitio, :url => {:controller => "panel", :action => "editar", :params => {:set => "Contenido de sitios", :id => @sitio.id}, :uri => request.original_fullpath.gsub(/editable\//,"")}, :html => { :multipart => true }) do |f| %>
+  <% if @sitio.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@sitio.errors.count, "error") %> impidieron generar este objeto:</h2>
+
+      <ul>
+      <% @sitio.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+<%= hidden_field_tag :authenticity_token, form_authenticity_token -%>
+
+
     <div class="uk-width-1-1">
     <span class="titulo-grande"><%= t('programas.maestrias') %></span><br>
-    <div class="uk-container-center"><img src=<%= image_url("maestrias-grande.jpg") %> alt="Historia de El Colegio de México"></div>
+    <div class="uk-container-center">
+<%= fields_for 'pics[]', @pics[0] do |p| %>
+		<br>
+		<%= image_tag(@pics[0].foto.url, id: "foto_1") %>
+		<br>
+				<%= p.label :foto, raw('<span class="glyphicon glyphicon-upload glyph-padding"></span>Añadir foto') %><br>
+				<%= p.file_field :foto, :onchange => "readURL(this,'#foto_1')" %><br>
+
+		<div class="field">
+				<%= p.label (params[:locale] == "es" ? :caption : :caption_ingles), "Pie de foto (Foto " + ((@pics[0].f_ind+1).to_s) + ")" %><br>
+				<%= p.trix_editor (params[:locale] == "es" ? :caption : :caption_ingles), value: (params[:locale] == "es" ? @pics[0].caption.gsub(/<(((\/)?p)|(br))>/,"").html_safe : @pics[0].caption_ingles.gsub(/<(((\/)?p)|(br))>/,"").html_safe ) %>
+		</div>
+<% end %>
+		</div>
     <p>&nbsp;</p>    
     <% @maestrias.each do |mt| %>
-    <h2 class="vino uk-margin-large-top"><%= (params[:locale] == "sp" ? ("Maestría en " + mt.titulo) : ("Master in " + mt.traduccion_tit)) %></h2>
+    <h2 class="vino uk-margin-large-top"><%= (params[:locale] == "es" ? ("Maestría en " + mt.titulo) : ("Master in " + mt.traduccion_tit)) %></h2>
     <div class="uk-grid uk-grid-large">
     <div class="uk-width-large-3-5 uk-text-left">
-    <p><%= (params[:locale] == "sp" ? mt.descripcion : mt.traduccion_desc) %></p>
+    <p><%= (params[:locale] == "es" ? mt.descripcion : mt.traduccion_desc) %></p>
     <% if !mt.liga.nil? %>
       <a href=<%= mt.liga %> target="_blank" class="ver-mas uk-margin-large-bottom uk-button-small"><%= t('programas.info') %></a>
     <% end %>
@@ -27,16 +57,53 @@
 			<% if mt.fecha_inicio_conv == mt.fecha_fin_conv %>
 				<%= l(mt.fecha_inicio_conv, format: :mes_anio ).capitalize %>
 			<% else %>
-				<%= (params[:locale] == "sp" ? "Abierta hasta " : "Open until ") + l(mt.fecha_fin_conv, format: :normal) %>
+				<%= (params[:locale] == "es" ? "Abierta hasta " : "Open until ") + l(mt.fecha_fin_conv, format: :normal) %>
 			<% end %>
 		</h4>
     <!-- Go to www.addthis.com/dashboard to customize your tools -->
-    <div class="addthis_inline_share_toolbox" data-url=<%= mt.liga %> data-title="<%= (params[:locale] == "sp" ? ("Maestría en " + mt.titulo) : ("Master in " + mt.traduccion_tit)) %>"></div>
+    <div class="addthis_inline_share_toolbox" data-url=<%= mt.liga %> data-title="<%= (params[:locale] == "es" ? ("Maestría en " + mt.titulo) : ("Master in " + mt.traduccion_tit)) %>"></div>
     </div>
     </div>
     <% end %>
     </div>
 
+
+<% else %>
+		
+    <div class="uk-width-1-1">
+    <span class="titulo-grande"><%= t('programas.maestrias') %></span><br>
+    <div class="uk-container-center"><img src=<%= image_url("maestrias-grande.jpg") %> alt="Historia de El Colegio de México"></div>
+    <p>&nbsp;</p>    
+    <% @maestrias.each do |mt| %>
+    <h2 class="vino uk-margin-large-top"><%= (params[:locale] == "es" ? ("Maestría en " + mt.titulo) : ("Master in " + mt.traduccion_tit)) %></h2>
+    <div class="uk-grid uk-grid-large">
+    <div class="uk-width-large-3-5 uk-text-left">
+    <p><%= (params[:locale] == "es" ? mt.descripcion : mt.traduccion_desc) %></p>
+    <% if !mt.liga.nil? %>
+      <a href=<%= mt.liga %> target="_blank" class="ver-mas uk-margin-large-bottom uk-button-small"><%= t('programas.info') %></a>
+    <% end %>
+    </div>
+    <div class="uk-width-large-2-5">
+		<% if mt.fecha_inicio_clases.present? %>
+    <h3 class="vino uk-margin-bottom-remove"><%= t('programas.promo') %></h3>
+    <h4 class="uk-margin-top-remove"><%= l(mt.fecha_inicio_clases, format: :mes_anio).capitalize %></h4>
+    <% end %>
+    <h3 class="vino uk-margin-bottom-remove"><%= t('programas.prox_conv') %></h3>
+    <h4 class="uk-margin-top-remove">
+			<% if mt.fecha_inicio_conv == mt.fecha_fin_conv %>
+				<%= l(mt.fecha_inicio_conv, format: :mes_anio ).capitalize %>
+			<% else %>
+				<%= (params[:locale] == "es" ? "Abierta hasta " : "Open until ") + l(mt.fecha_fin_conv, format: :normal) %>
+			<% end %>
+		</h4>
+    <!-- Go to www.addthis.com/dashboard to customize your tools -->
+    <div class="addthis_inline_share_toolbox" data-url=<%= mt.liga %> data-title="<%= (params[:locale] == "es" ? ("Maestría en " + mt.titulo) : ("Master in " + mt.traduccion_tit)) %>"></div>
+    </div>
+    </div>
+    <% end %>
+    </div>
+
+<% end %>
 </div>
 <!-- Go to www.addthis.com/dashboard to customize your tools -->
 <script type="text/javascript" src="https://s7.addthis.com/js/300/addthis_widget.js#pubid=ra-57bb682464651c22"></script>

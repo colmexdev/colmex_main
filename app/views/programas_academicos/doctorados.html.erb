@@ -4,6 +4,81 @@
 
 <div class="container-fluid" id="resto-cuerpo">
 	<div id="cuerpo" class="principal-chica uk-block-large">
+
+<% if @editable %>
+<%= form_for(@sitio, :url => {:controller => "panel", :action => "editar", :params => {:set => "Contenido de sitios", :id => @sitio.id}, :uri => request.original_fullpath.gsub(/editable\//,"")}, :html => { :multipart => true }) do |f| %>
+  <% if @sitio.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@sitio.errors.count, "error") %> impidieron generar este objeto:</h2>
+
+      <ul>
+      <% @sitio.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+<%= hidden_field_tag :authenticity_token, form_authenticity_token -%>
+
+
+	<div class="uk-width-1-1">
+    <span class="titulo-grande"><%= t('programas.doctorados') %></span><br>
+    <div class="uk-container-center">
+<%= fields_for 'pics[]', @pics[0] do |p| %>
+		<br>
+		<%= image_tag(@pics[0].foto.url, id: "foto_1") %>
+		<br>
+				<%= p.label :foto, raw('<span class="glyphicon glyphicon-upload glyph-padding"></span>Añadir foto') %><br>
+				<%= p.file_field :foto, :onchange => "readURL(this,'#foto_1')" %><br>
+
+		<div class="field">
+				<%= p.label (params[:locale] == "es" ? :caption : :caption_ingles), "Pie de foto (Foto " + ((@pics[0].f_ind+1).to_s) + ")" %><br>
+				<%= p.trix_editor (params[:locale] == "es" ? :caption : :caption_ingles), value: (params[:locale] == "es" ? @pics[0].caption.gsub(/<(((\/)?p)|(br))>/,"").html_safe : @pics[0].caption_ingles.gsub(/<(((\/)?p)|(br))>/,"").html_safe ) %>
+		</div>
+<% end %>
+		</div>
+    <p>&nbsp;</p>
+    <!--          Aquí empiezan las licenciaturas          -->
+
+
+	<% @doctorados.each do |doc| %>
+    <h2 class="vino uk-margin-large-top"><%= params[:locale] == "es" ? ("Doctorado en " + doc.titulo) : ("Doctorate in " + doc.traduccion_tit) %></h2>
+    <div class="uk-grid uk-grid-large">
+    <div class="uk-width-large-3-5 uk-text-left">
+    <p><%= params[:locale] == "es" ? doc.descripcion : doc.traduccion_desc %></p>
+    <% if !doc.liga.nil? %>
+      <a href=<%= doc.liga %> target="_blank" class="ver-mas uk-margin-large-bottom uk-button-small"><%= t('programas.info') %></a>
+    <% end %>
+    </div>
+    <div class="uk-width-large-2-5">
+    <% if doc.fecha_inicio_clases.present? %>
+    <h3 class="vino uk-margin-bottom-remove"><%= t('programas.promo') %></h3>
+    <h4 class="uk-margin-top-remove"><%= l(doc.fecha_inicio_clases, format: :mes_anio ).capitalize %></h4>
+    <% end %>
+    <h3 class="vino uk-margin-bottom-remove"><%= t('programas.prox_conv') %></h3>
+    <h4 class="uk-margin-top-remove">
+			<% if doc.fecha_inicio_conv == doc.fecha_fin_conv %>
+				<%= l(doc.fecha_inicio_conv, format: :mes_anio ).capitalize %>
+			<% else %>
+				<%= (params[:locale] == "es" ? "Abierta hasta " : "Open until ") + l(doc.fecha_fin_conv, format: :normal) %>
+			<% end %>
+		</h4>
+    <!-- Go to www.addthis.com/dashboard to customize your tools -->
+    <div class="addthis_inline_share_toolbox" data-url=<%= doc.liga %> data-title="<%= params[:locale] == "es" ? ("Doctorado en " + doc.titulo) : ("Doctorate in " + doc.traduccion_tit) %>"></div>
+    </div>
+    </div>
+	<% end %>
+    </div>
+<br>
+<div class="actions">
+<%= f.submit "Guardar cambios"%>
+</div>
+
+<% end %>
+
+<% else %>
+
 	<div class="uk-width-1-1">
     <span class="titulo-grande"><%= t('programas.doctorados') %></span><br>
     <div class="uk-container-center"><img src=<%= image_url("doctorados-grande.jpg") %> alt="Historia de El Colegio de México"></div>
@@ -38,9 +113,9 @@
     </div>
     </div>
 	<% end %>
-
-
     </div>
+
+<% end %>
 	
 	</div>
 

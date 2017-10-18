@@ -1,17 +1,15 @@
-<%= render 'principal/barra' %>
-
 <script type="text/javascript">initAddThis();</script>
 
 <div class="container-fluid" id="resto-cuerpo">
 	<div id="cuerpo" class="principal-chica uk-block-large">
 	<div class="uk-width-1-1">
     <span class="titulo-grande"><%= t('programas.doctorados') %></span><br>
-    <div class="uk-container-center"><img src=<%= image_url("doctorados-grande.jpg") %> alt="Historia de El Colegio de México"></div>
+    <div class="uk-container-center"><img src="<%= image_url(@pics[0].foto.url) %>" alt="Historia de El Colegio de México"></div>
     <p>&nbsp;</p>
     <!--          Aquí empiezan las licenciaturas          -->
 
 
-	<% @doctorados.each do |doc| %>
+	<% Curso.where(:programa => "Doctorado").order(:titulo).each do |doc| %>
     <h2 class="vino uk-margin-large-top"><%= params[:locale] == "es" ? ("Doctorado en " + doc.titulo) : ("Doctorate in " + doc.traduccion_tit) %></h2>
     <div class="uk-grid uk-grid-large">
     <div class="uk-width-large-3-5 uk-text-left">
@@ -46,4 +44,4 @@
 
 <!-- Go to www.addthis.com/dashboard to customize your tools -->
 <script type="text/javascript" src="https://s7.addthis.com/js/300/addthis_widget.js#pubid=ra-57bb682464651c22"></script>
-<%= render 'principal/footer'%>
+</div>

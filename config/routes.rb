@@ -119,6 +119,9 @@ Rails.application.routes.draw do
       get 'transparencia' => 'informacion_general#transparencia', :as => :transparencia_edit
       get 'centros' => "centros_de_estudio#inicio", :as => :centros_edit
       get 'programas' => "programas_academicos#inicio", :as => :programas_edit
+      get "licenciaturas" => "programas_academicos#licenciaturas", :as => :licenciaturas_edit
+      get "maestrias" => "programas_academicos#maestrias", :as => :maestrias_edit
+      get "doctorados" => "programas_academicos#doctorados", :as => :doctorados_edit
     end
 
   end

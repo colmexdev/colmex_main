@@ -38,14 +38,17 @@ class ProgramasAcademicosController < ApplicationController
   end
 
   def maestrias
+    is_editable("Maestrías")
     @maestrias = Curso.where(:programa => "Maestría").order(:titulo)
   end
 
   def licenciaturas
+    is_editable("Licenciaturas")
     @licenciaturas = Curso.where(:programa => "Licenciatura").order(:titulo)
   end
 
   def doctorados
+    is_editable("Doctorados")
     @doctorados = Curso.where(:programa => "Doctorado").order(:titulo)
   end
 

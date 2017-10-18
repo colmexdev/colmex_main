@@ -1,0 +1,43 @@
+
+<div class="container-fluid" id="resto-cuerpo">
+	<div id="cuerpo" class="principal-chica uk-block-large">
+
+<script type="text/javascript">initAddThis();</script>
+		
+    <div class="uk-width-1-1">
+    <span class="titulo-grande"><%= t('programas.maestrias') %></span><br>
+    <div class="uk-container-center"><img src="<%= image_url(@pics[0].foto.url) %>" alt="Maestrías"></div>
+    <p>&nbsp;</p>    
+    <% Curso.where(:programa => "Maestría").order(:titulo).each do |mt| %>
+    <h2 class="vino uk-margin-large-top"><%= (params[:locale] == "es" ? ("Maestría en " + mt.titulo) : ("Master in " + mt.traduccion_tit)) %></h2>
+    <div class="uk-grid uk-grid-large">
+    <div class="uk-width-large-3-5 uk-text-left">
+    <p><%= (params[:locale] == "es" ? mt.descripcion : mt.traduccion_desc) %></p>
+    <% if !mt.liga.nil? %>
+      <a href=<%= mt.liga %> target="_blank" class="ver-mas uk-margin-large-bottom uk-button-small"><%= t('programas.info') %></a>
+    <% end %>
+    </div>
+    <div class="uk-width-large-2-5">
+		<% if mt.fecha_inicio_clases.present? %>
+    <h3 class="vino uk-margin-bottom-remove"><%= t('programas.promo') %></h3>
+    <h4 class="uk-margin-top-remove"><%= l(mt.fecha_inicio_clases, format: :mes_anio).capitalize %></h4>
+    <% end %>
+    <h3 class="vino uk-margin-bottom-remove"><%= t('programas.prox_conv') %></h3>
+    <h4 class="uk-margin-top-remove">
+			<% if mt.fecha_inicio_conv == mt.fecha_fin_conv %>
+				<%= l(mt.fecha_inicio_conv, format: :mes_anio ).capitalize %>
+			<% else %>
+				<%= (params[:locale] == "es" ? "Abierta hasta " : "Open until ") + l(mt.fecha_fin_conv, format: :normal) %>
+			<% end %>
+		</h4>
+    <!-- Go to www.addthis.com/dashboard to customize your tools -->
+    <div class="addthis_inline_share_toolbox" data-url=<%= mt.liga %> data-title="<%= (params[:locale] == "es" ? ("Maestría en " + mt.titulo) : ("Master in " + mt.traduccion_tit)) %>"></div>
+    </div>
+    </div>
+    <% end %>
+    </div>
+
+</div>
+<!-- Go to www.addthis.com/dashboard to customize your tools -->
+<script type="text/javascript" src="https://s7.addthis.com/js/300/addthis_widget.js#pubid=ra-57bb682464651c22"></script>
+</div>
