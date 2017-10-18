@@ -63,7 +63,7 @@
 	<% end %>
     <a href="http://cedua.colmex.mx/" target="_blank" class="ver-mas uk-margin-large-bottom uk-button-small "><%= t('programas.info') %></a>
     </div>
-    <div class="uk-width-large-2-5 uk-width-medium-2-5 uk-width-small-2-5 centro-borrar">
+    <div class="uk-width-large-2-5 uk-width-medium-2-5 uk-width-small-2-5">
 <%= fields_for 'pics[]', @pics[1] do |p| %>
 		<br>
 		<%= image_tag(@pics[1].foto.url, id: "foto_2") %>
@@ -122,7 +122,7 @@
 	<% end %>
     <a href="http://ceh.colmex.mx/" target="_blank" class="ver-mas uk-margin-large-bottom uk-button-small"><%= t('programas.info') %></a>
     </div>
-    <div class="uk-width-large-2-5 uk-width-medium-2-5 uk-width-small-2-5 centro-borrar">
+    <div class="uk-width-large-2-5 uk-width-medium-2-5 uk-width-small-2-5">
 <%= fields_for 'pics[]', @pics[3] do |p| %>
 		<br>
 		<%= image_tag(@pics[3].foto.url, id: "foto_4") %>
@@ -181,7 +181,7 @@
 	<% end %>
     <a href="http://cell.colmex.mx/" target="_blank" class="ver-mas uk-margin-large-bottom uk-button-small"><%= t('programas.info') %></a>
     </div>
-    <div class="uk-width-large-2-5 uk-width-medium-2-5 uk-width-small-2-5 centro-borrar">
+    <div class="uk-width-large-2-5 uk-width-medium-2-5 uk-width-small-2-5">
 <%= fields_for 'pics[]', @pics[5] do |p| %>
 		<br>
 		<%= image_tag(@pics[5].foto.url, id: "foto_6") %>

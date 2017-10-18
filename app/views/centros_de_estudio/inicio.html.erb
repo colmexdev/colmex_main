@@ -268,7 +268,7 @@
     <img src=<%= image_url(@pics[2].foto.url) %> alt="Centro de estudios económicos">
     </div>
     <div class="uk-width-large-3-5 uk-width-medium-3-5 uk-width-small-3-5 uk-text-left">
-    <%= params[:locale] == "es" : @pars[2].texto.html_safe : @pars[2].texto_ingles.html_safe %>
+    <%= params[:locale] == "es" ? @pars[2].texto.html_safe : @pars[2].texto_ingles.html_safe %>
     <a href="http://cee.colmex.mx/" target="_blank" class="ver-mas uk-margin-large-bottom uk-button-small"><%= t('programas.info') %></a>
     </div>
     </div>
