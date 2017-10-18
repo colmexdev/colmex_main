@@ -1,6 +1,120 @@
 <%= render 'principal/barra' %>
 <div class="container-fluid" id="resto-cuerpo">
 	<div id="cuerpo" class="principal-chica uk-block-large">
+
+<% if @editable %>
+
+<%= form_for(@sitio, :url => {:controller => "panel", :action => "editar", :params => {:set => "Contenido de sitios", :id => @sitio.id}, :uri => request.original_fullpath.gsub(/editable\//,"")}, :html => { :multipart => true }) do |f| %>
+  <% if @sitio.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@sitio.errors.count, "error") %> impidieron generar este objeto:</h2>
+
+      <ul>
+      <% @sitio.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+<%= hidden_field_tag :authenticity_token, form_authenticity_token -%>
+
+    <div class="uk-width-1-1">
+    <span class="titulo-grande"><%= t('botones.b3.texto') %></span><br>
+    <p>&nbsp;</p>
+    <!--          Aquí empieza el contenido          -->
+    <div class="uk-grid uk-grid-large uk-margin-large-bottom">
+    <div class="uk-width-large-3-5">
+<%= fields_for 'pics[]', @pics[0] do |p| %>
+		<br>
+		<%= image_tag(@pics[0].foto.url, id: "foto_1") %>
+		<br>
+				<%= p.label :foto, raw('<span class="glyphicon glyphicon-upload glyph-padding"></span>Añadir foto') %><br>
+				<%= p.file_field :foto, :onchange => "readURL(this,'#foto_1')" %><br>
+
+		<div class="field">
+				<%= p.label (params[:locale] == "es" ? :caption : :caption_ingles), "Pie de foto (Foto " + ((@pics[0].f_ind+1).to_s) + ")" %><br>
+				<%= p.trix_editor (params[:locale] == "es" ? :caption : :caption_ingles), value: (params[:locale] == "es" ? @pics[0].caption.gsub(/<(((\/)?p)|(br))>/,"").html_safe : @pics[0].caption_ingles.gsub(/<(((\/)?p)|(br))>/,"").html_safe ) %>
+		</div>
+
+
+<% end %>
+    </div>
+    <div class="uk-width-large-2-5 uk-text-left">
+    <span class="titulo-chico"><%= t('programas.licenciaturas') %></span><br>
+
+    <ul class=" uk-list uk-list-space">
+		<% @licenciaturas.each do |lic| %>
+		  <li class="uk-link sin-pointer"><%= (params[:locale] == "es" ? lic.titulo : lic.traduccion_tit)%></li>
+		<% end %>
+    </ul>
+		<a href=<%= licenciaturas_path %> class="ver-mas uk-margin-large-bottom uk-button-small"><%= t('programas.mas') %></a>
+    </div>
+    </div>
+    <div class="uk-grid uk-grid-large uk-margin-large-bottom">
+    <div class="uk-width-large-3-5">
+<%= fields_for 'pics[]', @pics[1] do |p| %>
+		<br>
+		<%= image_tag(@pics[1].foto.url, id: "foto_2") %>
+		<br>
+				<%= p.label :foto, raw('<span class="glyphicon glyphicon-upload glyph-padding"></span>Añadir foto') %><br>
+				<%= p.file_field :foto, :onchange => "readURL(this,'#foto_2')" %><br>
+
+		<div class="field">
+				<%= p.label (params[:locale] == "es" ? :caption : :caption_ingles), "Pie de foto (Foto " + ((@pics[1].f_ind+1).to_s) + ")" %><br>
+				<%= p.trix_editor (params[:locale] == "es" ? :caption : :caption_ingles), value: (params[:locale] == "es" ? @pics[1].caption.gsub(/<(((\/)?p)|(br))>/,"").html_safe : @pics[1].caption_ingles.gsub(/<(((\/)?p)|(br))>/,"").html_safe ) %>
+		</div>
+
+
+<% end %>
+    </div>
+    <div class="uk-width-large-2-5 uk-text-left">
+    <span class="titulo-chico"><%= t('programas.maestrias') %></span><br>
+
+    <ul class=" uk-list uk-list-space">
+    <% @maestrias.each do |mt| %>
+		  <li class="uk-link sin-pointer"><%= (params[:locale] == "es" ? mt.titulo : mt.traduccion_tit) %></li>
+		<% end %>
+    </ul>
+	<a href=<%= maestrias_path %> class="ver-mas uk-margin-large-bottom uk-button-small"><%= t('programas.mas') %></a>
+    </div>
+    </div>
+    <div class="uk-grid uk-grid-large uk-margin-large-bottom">
+    <div class="uk-width-large-3-5">
+<%= fields_for 'pics[]', @pics[2] do |p| %>
+		<br>
+		<%= image_tag(@pics[2].foto.url, id: "foto_3") %>
+		<br>
+				<%= p.label :foto, raw('<span class="glyphicon glyphicon-upload glyph-padding"></span>Añadir foto') %><br>
+				<%= p.file_field :foto, :onchange => "readURL(this,'#foto_3')" %><br>
+
+		<div class="field">
+				<%= p.label (params[:locale] == "es" ? :caption : :caption_ingles), "Pie de foto (Foto " + ((@pics[2].f_ind+1).to_s) + ")" %><br>
+				<%= p.trix_editor (params[:locale] == "es" ? :caption : :caption_ingles), value: (params[:locale] == "es" ? @pics[2].caption.gsub(/<(((\/)?p)|(br))>/,"").html_safe : @pics[2].caption_ingles.gsub(/<(((\/)?p)|(br))>/,"").html_safe ) %>
+		</div>
+<% end %>
+
+    </div>
+    <div class="uk-width-large-2-5 uk-text-left">
+    <span class="titulo-chico"><%= t('programas.doctorados') %></span><br>
+
+    <ul class=" uk-list uk-list-space">
+    <% @doctorados.each do |doc| %>
+		  <li class="uk-link sin-pointer"><%= (params[:locale] == "es" ? doc.titulo : doc.traduccion_tit) %></li>
+		<% end %>
+    </ul>
+		<a href=<%= doctorados_path %> class="ver-mas uk-margin-large-bottom uk-button-small"><%= t('programas.mas') %></a>
+    </div>
+    </div>
+    </div>
+<br>
+  <div class="actions">
+    <%= f.submit "Guardar cambios" %>
+  </div>
+
+<% end %>
+
+<% else %>
 	
     <div class="uk-width-1-1">
     <span class="titulo-grande"><%= t('botones.b3.texto') %></span><br>
@@ -15,7 +129,7 @@
 
     <ul class=" uk-list uk-list-space">
 		<% @licenciaturas.each do |lic| %>
-		  <li class="uk-link sin-pointer"><%= (params[:locale] == "sp" ? lic.titulo : lic.traduccion_tit)%></li>
+		  <li class="uk-link sin-pointer"><%= (params[:locale] == "es" ? lic.titulo : lic.traduccion_tit)%></li>
 		<% end %>
     </ul>
 		<a href=<%= licenciaturas_path %> class="ver-mas uk-margin-large-bottom uk-button-small"><%= t('programas.mas') %></a>
@@ -30,7 +144,7 @@
 
     <ul class=" uk-list uk-list-space">
     <% @maestrias.each do |mt| %>
-		  <li class="uk-link sin-pointer"><%= (params[:locale] == "sp" ? mt.titulo : mt.traduccion_tit) %></li>
+		  <li class="uk-link sin-pointer"><%= (params[:locale] == "es" ? mt.titulo : mt.traduccion_tit) %></li>
 		<% end %>
     </ul>
 	<a href=<%= maestrias_path %> class="ver-mas uk-margin-large-bottom uk-button-small"><%= t('programas.mas') %></a>
@@ -45,13 +159,15 @@
 
     <ul class=" uk-list uk-list-space">
     <% @doctorados.each do |doc| %>
-		  <li class="uk-link sin-pointer"><%= (params[:locale] == "sp" ? doc.titulo : doc.traduccion_tit) %></li>
+		  <li class="uk-link sin-pointer"><%= (params[:locale] == "es" ? doc.titulo : doc.traduccion_tit) %></li>
 		<% end %>
     </ul>
 		<a href=<%= doctorados_path %> class="ver-mas uk-margin-large-bottom uk-button-small"><%= t('programas.mas') %></a>
     </div>
     </div>
     </div>
+
+<% end %>
 
 	</div>
 

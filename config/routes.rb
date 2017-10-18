@@ -118,6 +118,7 @@ Rails.application.routes.draw do
       get 'bienes' => 'informacion_general#bienes', :as => :bienes_edit
       get 'transparencia' => 'informacion_general#transparencia', :as => :transparencia_edit
       get 'centros' => "centros_de_estudio#inicio", :as => :centros_edit
+      get 'programas' => "programas_academicos#inicio", :as => :programas_edit
     end
 
   end

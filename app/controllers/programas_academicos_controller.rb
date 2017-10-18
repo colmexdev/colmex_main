@@ -1,5 +1,6 @@
 class ProgramasAcademicosController < ApplicationController
   def inicio
+    is_editable("Programas docentes")
     @licenciaturas = Curso.where(:programa => "Licenciatura").order(:titulo)
     @maestrias = Curso.where(:programa => "Maestría").order(:titulo)
     @doctorados = Curso.where(:programa => "Doctorado").order(:titulo)

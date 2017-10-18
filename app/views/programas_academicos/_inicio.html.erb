@@ -1,0 +1,58 @@
+
+<div class="container-fluid" id="resto-cuerpo">
+	<div id="cuerpo" class="principal-chica uk-block-large">
+	
+    <div class="uk-width-1-1">
+    <span class="titulo-grande"><%= t('botones.b3.texto') %></span><br>
+    <p>&nbsp;</p>
+    <!--          Aquí empieza el contenido          -->
+    <div class="uk-grid uk-grid-large uk-margin-large-bottom">
+    <div class="uk-width-large-3-5">
+    <img src="<%= image_url(@pics[0].foto.url) %>" alt="Licenciaturas">
+    </div>
+    <div class="uk-width-large-2-5 uk-text-left">
+    <span class="titulo-chico"><%= t('programas.licenciaturas') %></span><br>
+
+    <ul class=" uk-list uk-list-space">
+		<% Curso.where(:programa => "Licenciatura").order(:titulo).each do |lic| %>
+		  <li class="uk-link sin-pointer"><%= (params[:locale] == "es" ? lic.titulo : lic.traduccion_tit)%></li>
+		<% end %>
+    </ul>
+		<a href=<%= licenciaturas_path %> class="ver-mas uk-margin-large-bottom uk-button-small"><%= t('programas.mas') %></a>
+    </div>
+    </div>
+    <div class="uk-grid uk-grid-large uk-margin-large-bottom">
+    <div class="uk-width-large-3-5">
+    <img src="<%= image_url(@pics[1].foto.url) %>" alt="Maestrías">
+    </div>
+    <div class="uk-width-large-2-5 uk-text-left">
+    <span class="titulo-chico"><%= t('programas.maestrias') %></span><br>
+
+    <ul class=" uk-list uk-list-space">
+    <% Curso.where(:programa => "Maestría").order(:titulo).each do |mt| %>
+		  <li class="uk-link sin-pointer"><%= (params[:locale] == "es" ? mt.titulo : mt.traduccion_tit) %></li>
+		<% end %>
+    </ul>
+	<a href=<%= maestrias_path %> class="ver-mas uk-margin-large-bottom uk-button-small"><%= t('programas.mas') %></a>
+    </div>
+    </div>
+    <div class="uk-grid uk-grid-large uk-margin-large-bottom">
+    <div class="uk-width-large-3-5">
+    <img src="<%= image_url(@pics[2].foto.url) %>" alt="Doctorados">
+    </div>
+    <div class="uk-width-large-2-5 uk-text-left">
+    <span class="titulo-chico"><%= t('programas.doctorados') %></span><br>
+
+    <ul class=" uk-list uk-list-space">
+    <% Curso.where(:programa => "Doctorado").order(:titulo).each do |doc| %>
+		  <li class="uk-link sin-pointer"><%= (params[:locale] == "es" ? doc.titulo : doc.traduccion_tit) %></li>
+		<% end %>
+    </ul>
+		<a href=<%= doctorados_path %> class="ver-mas uk-margin-large-bottom uk-button-small"><%= t('programas.mas') %></a>
+    </div>
+    </div>
+    </div>
+
+	</div>
+
+</div>
