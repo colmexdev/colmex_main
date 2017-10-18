@@ -21,7 +21,7 @@
     <img src=<%= image_url(@pics[1].foto.url) %> alt="Centro de estudios lingüísticos y literarios">
     </div>
     <div class="uk-width-large-3-5 uk-width-medium-3-5 uk-width-small-3-5 uk-text-left">
-    <%= params[:locale] == "es" ? @pars[1].texto.html_safe . @pars[1].texto_ingles.html_safe %>
+    <%= params[:locale] == "es" ? @pars[1].texto.html_safe : @pars[1].texto_ingles.html_safe %>
     <a href="http://cedua.colmex.mx/" target="_blank" class="ver-mas uk-margin-large-bottom uk-button-small "><%= t('programas.info') %></a>
     </div>
     <div class="uk-width-large-2-5 uk-width-medium-2-5 uk-width-small-2-5 centro-borrar">
