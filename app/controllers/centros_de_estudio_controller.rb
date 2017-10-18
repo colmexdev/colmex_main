@@ -1,5 +1,6 @@
 class CentrosDeEstudioController < ApplicationController
   def inicio
+    is_editable("Centros de Estudios")
   end
 
   def ceh
