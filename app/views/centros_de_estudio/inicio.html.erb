@@ -3,6 +3,150 @@
 
 	<div class="principal-chica uk-block-large">
 
+<% if @editable %>
+
+<%= form_for(@sitio, :url => {:controller => "panel", :action => "editar", :params => {:set => "Contenido de sitios", :id => @sitio.id}, :uri => request.original_fullpath.gsub(/editable\//,"")}, :html => { :multipart => true }) do |f| %>
+  <% if @sitio.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@sitio.errors.count, "error") %> impidieron generar este objeto:</h2>
+
+      <ul>
+      <% @sitio.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+<%= hidden_field_tag :authenticity_token, form_authenticity_token -%>
+
+<div class="uk-width-1-1">
+    <span class="titulo-grande"><%= params[:locale] == "en" ?  "Academic Departments of El Colegio de México" : "Centros de Estudios" %></span><br>
+    <p>&nbsp;</p>
+    <div class="uk-grid uk-grid-large">
+    <div class="uk-width-large-2-5 uk-width-medium-2-5 uk-width-small-2-5">
+    <img src=<%= image_url("centro-ceaa.png") %> alt="Centro de estudios de Asia y África">
+    </div>
+    <div class="uk-width-large-3-5 uk-width-medium-3-5 uk-width-small-3-5 uk-text-left">
+	<%= fields_for 'pars[]', @pars[0] do |p| %>
+		<div class="field">
+			<%= p.label (params[:locale] == "es" ? :texto : :texto_ingles), (params[:locale] == "es" ? ("Texto (Párrafo " + ((@pars[0].p_ind+1).to_s) + ")") : ("Texto (Inglés, párrafo " + ((@pars[0].p_ind+1).to_s) + ")")) %><br>
+			<%= p.trix_editor (params[:locale] == "es" ? :texto : :texto_ingles), value: (params[:locale] == "es" ? @pars[0].texto.html_safe : @pars[0].texto_ingles.html_safe) %>
+		</div>
+	<% end %>
+    <a href="http://ceaa.colmex.mx/" target="_blank" class="ver-mas uk-margin-large-bottom uk-button-small"><%= t('programas.info') %></a>
+    </div>
+    </div>
+    <hr class="uk-grid-divider">
+    <div class="uk-grid uk-grid-large">
+    <div class="uk-width-large-2-5 uk-width-medium-2-5 uk-width-small-2-5 centro-mostrar">
+    <img src=<%= image_url("centro-cedua.png") %> alt="Centro de estudios lingüísticos y literarios">
+    </div>
+    <div class="uk-width-large-3-5 uk-width-medium-3-5 uk-width-small-3-5 uk-text-left">
+	<%= fields_for 'pars[]', @pars[1] do |p| %>
+		<div class="field">
+			<%= p.label (params[:locale] == "es" ? :texto : :texto_ingles), (params[:locale] == "es" ? ("Texto (Párrafo " + ((@pars[1].p_ind+1).to_s) + ")") : ("Texto (Inglés, párrafo " + ((@pars[1].p_ind+1).to_s) + ")")) %><br>
+			<%= p.trix_editor (params[:locale] == "es" ? :texto : :texto_ingles), value: (params[:locale] == "es" ? @pars[1].texto.html_safe : @pars[1].texto_ingles.html_safe) %>
+		</div>
+	<% end %>
+    <a href="http://cedua.colmex.mx/" target="_blank" class="ver-mas uk-margin-large-bottom uk-button-small "><%= t('programas.info') %></a>
+    </div>
+    <div class="uk-width-large-2-5 uk-width-medium-2-5 uk-width-small-2-5 centro-borrar">
+    <img src=<%= image_url("centro-cedua.png") %> alt="Centro de estudios Demográficos, Urbanos y ambientales">
+    </div>
+    </div>
+    <hr class="uk-grid-divider">
+    <div class="uk-grid uk-grid-large">
+    <div class="uk-width-large-2-5 uk-width-medium-2-5 uk-width-small-2-5">
+    <img src=<%= image_url("centro-cee.png") %> alt="Centro de estudios económicos">
+    </div>
+    <div class="uk-width-large-3-5 uk-width-medium-3-5 uk-width-small-3-5 uk-text-left">
+	<%= fields_for 'pars[]', @pars[2] do |p| %>
+		<div class="field">
+			<%= p.label (params[:locale] == "es" ? :texto : :texto_ingles), (params[:locale] == "es" ? ("Texto (Párrafo " + ((@pars[2].p_ind+1).to_s) + ")") : ("Texto (Inglés, párrafo " + ((@pars[2].p_ind+1).to_s) + ")")) %><br>
+			<%= p.trix_editor (params[:locale] == "es" ? :texto : :texto_ingles), value: (params[:locale] == "es" ? @pars[2].texto.html_safe : @pars[2].texto_ingles.html_safe) %>
+		</div>
+	<% end %>
+    <a href="http://cee.colmex.mx/" target="_blank" class="ver-mas uk-margin-large-bottom uk-button-small"><%= t('programas.info') %></a>
+    </div>
+    </div>
+    <hr class="uk-grid-divider">
+    <div class="uk-grid uk-grid-large">
+    <div class="uk-width-large-2-5 uk-width-medium-2-5 uk-width-small-2-5 centro-mostrar">
+    <img src=<%= image_url("centro-ceh.png") %> alt="Centro de estudios lingüísticos y literarios">
+    </div>
+    <div class="uk-width-large-3-5 uk-width-medium-3-5 uk-width-small-3-5 uk-text-left">
+	<%= fields_for 'pars[]', @pars[3] do |p| %>
+		<div class="field">
+			<%= p.label (params[:locale] == "es" ? :texto : :texto_ingles), (params[:locale] == "es" ? ("Texto (Párrafo " + ((@pars[3].p_ind+1).to_s) + ")") : ("Texto (Inglés, párrafo " + ((@pars[3].p_ind+1).to_s) + ")")) %><br>
+			<%= p.trix_editor (params[:locale] == "es" ? :texto : :texto_ingles), value: (params[:locale] == "es" ? @pars[3].texto.html_safe : @pars[3].texto_ingles.html_safe) %>
+		</div>
+	<% end %>
+    <a href="http://ceh.colmex.mx/" target="_blank" class="ver-mas uk-margin-large-bottom uk-button-small"><%= t('programas.info') %></a>
+    </div>
+    <div class="uk-width-large-2-5 uk-width-medium-2-5 uk-width-small-2-5 centro-borrar">
+    <img src=<%= image_url("centro-ceh.png") %> alt="Centro de estudios Históricos">
+    </div>
+    </div>
+    <hr class="uk-grid-divider">
+    <div class="uk-grid uk-grid-large">
+    <div class="uk-width-large-2-5 uk-width-medium-2-5 uk-width-small-2-5">
+    <img src=<%= image_url("centro-cei.png") %> alt="Centro de estudios internacionales">
+    </div>
+    <div class="uk-width-large-3-5 uk-width-medium-3-5 uk-width-small-3-5 uk-text-left">
+	<%= fields_for 'pars[]', @pars[4] do |p| %>
+		<div class="field">
+			<%= p.label (params[:locale] == "es" ? :texto : :texto_ingles), (params[:locale] == "es" ? ("Texto (Párrafo " + ((@pars[4].p_ind+1).to_s) + ")") : ("Texto (Inglés, párrafo " + ((@pars[4].p_ind+1).to_s) + ")")) %><br>
+			<%= p.trix_editor (params[:locale] == "es" ? :texto : :texto_ingles), value: (params[:locale] == "es" ? @pars[4].texto.html_safe : @pars[4].texto_ingles.html_safe) %>
+		</div>
+	<% end %>
+    <a href="http://cei.colmex.mx/" target="_blank" class="ver-mas uk-margin-large-bottom uk-button-small"><%= t('programas.info') %></a>
+    </div>
+    </div>
+    <hr class="uk-grid-divider">
+    <div class="uk-grid uk-grid-large">
+    <div class="uk-width-large-2-5 uk-width-medium-2-5 uk-width-small-2-5 centro-mostrar">
+    <img src=<%= image_url("centro-cell.png") %> alt="Centro de estudios lingüísticos y literarios">
+    </div>
+    <div class="uk-width-large-3-5 uk-width-medium-3-5 uk-width-small-3-5 uk-text-left">
+	<%= fields_for 'pars[]', @pars[5] do |p| %>
+		<div class="field">
+			<%= p.label (params[:locale] == "es" ? :texto : :texto_ingles), (params[:locale] == "es" ? ("Texto (Párrafo " + ((@pars[5].p_ind+1).to_s) + ")") : ("Texto (Inglés, párrafo " + ((@pars[5].p_ind+1).to_s) + ")")) %><br>
+			<%= p.trix_editor (params[:locale] == "es" ? :texto : :texto_ingles), value: (params[:locale] == "es" ? @pars[5].texto.html_safe : @pars[5].texto_ingles.html_safe) %>
+		</div>
+	<% end %>
+    <a href="http://cell.colmex.mx/" target="_blank" class="ver-mas uk-margin-large-bottom uk-button-small"><%= t('programas.info') %></a>
+    </div>
+    <div class="uk-width-large-2-5 uk-width-medium-2-5 uk-width-small-2-5 centro-borrar">
+    <img src=<%= image_url("centro-cell.png") %> alt="Centro de estudios lingüísticos y literarios">
+    </div>
+    </div>
+    <hr class="uk-grid-divider">
+    <div class="uk-grid uk-grid-large">
+    <div class="uk-width-large-2-5 uk-width-medium-2-5 uk-width-small-2-5">
+    <img src=<%= image_url("centro-ces.png") %> alt="Centro de estudios sociológicos">
+    </div>
+    <div class="uk-width-large-3-5 uk-width-medium-3-5 uk-width-small-3-5 uk-text-left">
+	<%= fields_for 'pars[]', @pars[6] do |p| %>
+		<div class="field">
+			<%= p.label (params[:locale] == "es" ? :texto : :texto_ingles), (params[:locale] == "es" ? ("Texto (Párrafo " + ((@pars[6].p_ind+1).to_s) + ")") : ("Texto (Inglés, párrafo " + ((@pars[6].p_ind+1).to_s) + ")")) %><br>
+			<%= p.trix_editor (params[:locale] == "es" ? :texto : :texto_ingles), value: (params[:locale] == "es" ? @pars[6].texto.html_safe : @pars[6].texto_ingles.html_safe) %>
+		</div>
+	<% end %>
+    <a href="http://ces.colmex.mx/" target="_blank" class="ver-mas uk-margin-large-bottom uk-button-small"><%= t('programas.info') %></a>
+    </div>
+    </div>
+    </div>
+<br>
+  <div class="actions">
+    <%= f.submit "Guardar cambios" %>
+  </div>
+
+<% end %>
+
+
+<% else %>
+
 <div class="uk-width-1-1">
     <span class="titulo-grande"><%= params[:locale] == "en" ?  "Academic Departments of El Colegio de México" : "Centros de Estudios" %></span><br>
     <p>&nbsp;</p>
@@ -85,6 +229,11 @@
     </div>
     </div>
     </div>
+
+
+<% end %>
+
+
 
 	</div>
 
