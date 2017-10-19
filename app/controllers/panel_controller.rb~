@@ -218,7 +218,7 @@ class PanelController < ApplicationController
 
   def query
     @query = "("
-    keys = params[:keyword].split(/ +/)
+    keys = params[:keyword].split(/ +/).map {|k| '%' + k + '%'}
     logger.debug keys
     @fields.keys.each do |f|
       @query = @query + f.to_s + " like '%" + params[:keyword] + "%'" + (f == @fields.keys[-1] ? ")" : " or ")
