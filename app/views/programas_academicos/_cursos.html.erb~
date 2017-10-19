@@ -26,7 +26,7 @@
     </div>
 
     <div class="uk-width-large-4-5">
-    <span class="titulo-chico morado" id="titulo-render"><%= params[:locale] == "en" ? (@presenciales.count > 0 ? "Short courses" : "") : (Curso.where("programa = ? AND tipo_curso = ? and fecha_fin_conv >= ?", "Curso", "Presencial", Date.current()).count > 0 ? "Cursos presenciales" : "Cursos en línea") %></span><br>
+    <span class="titulo-chico morado" id="titulo-render"><%= params[:locale] == "en" ? (Curso.where("programa = ? AND tipo_curso = ? and fecha_fin_conv >= ?", "Curso", "Presencial", Date.current()).count > 0 ? "Short courses" : "") : (Curso.where("programa = ? AND tipo_curso = ? and fecha_fin_conv >= ?", "Curso", "Presencial", Date.current()).count > 0 ? "Cursos presenciales" : "Cursos en línea") %></span><br>
 
     <div id="cursos-render">
     	<%= render (Curso.where("programa = ? AND tipo_curso = ? and fecha_fin_conv >= ?", "Curso", "Presencial", Date.current()).size > 0 ? 'programas_academicos/presenciales' : 'programas_academicos/electronicos'), params: {tipo: (params[:locale] == "es" ? 'MOOC' : '')} %>

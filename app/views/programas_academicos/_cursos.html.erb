@@ -2,6 +2,9 @@
 <div class="container-fluid" id="resto-cuerpo">
 	<div id="cuerpo" class="principal uk-block-large">
 
+   <% @electronicos = Curso.where("programa = ? AND tipo_curso = ?", "Curso", "En línea") %>
+   <% @presenciales = Curso.where("programa = ? AND tipo_curso = ? and fecha_fin_conv >= ?", "Curso", "Presencial", Date.current()) %>
+
     <div class="uk-width-1-1">
         <span class="titulo-grande"><%= t('botones.b3.opciones.op6') %></span><br>
     <div class="uk-container-center uk-block"><img src="<%= image_url(@pics[0].foto.url) %>" alt="Cursos"></div>
