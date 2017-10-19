@@ -221,7 +221,7 @@ class PanelController < ApplicationController
     @keys = params[:keyword].split(/ +/).map {|k| " like '%" + k.downcase + "%'"}
     @fields.keys.each do |f|
       @h = ""
-      keys.each do |k|
+      @keys.each do |k|
         @h = (@h.size == 0 ? '' : ' AND ') + @h + f.to_s + k
       end
       logger.debug @h
