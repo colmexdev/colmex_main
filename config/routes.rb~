@@ -122,6 +122,7 @@ Rails.application.routes.draw do
       get "licenciaturas" => "programas_academicos#licenciaturas", :as => :licenciaturas_edit
       get "maestrias" => "programas_academicos#maestrias", :as => :maestrias_edit
       get "doctorados" => "programas_academicos#doctorados", :as => :doctorados_edit
+      get "cursos" => "programas_academicos#cursos", :as => :cursos_edit
     end
 
   end

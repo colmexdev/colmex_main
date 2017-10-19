@@ -123,6 +123,7 @@ Rails.application.routes.draw do
       get "maestrias" => "programas_academicos#maestrias", :as => :maestrias_edit
       get "doctorados" => "programas_academicos#doctorados", :as => :doctorados_edit
       get "cursos" => "programas_academicos#cursos", :as => :cursos_edit
+      get 'calendario-escolar' => 'programas_academicos#calendario_escolar', :as => :calendario_edit
     end
 
   end
