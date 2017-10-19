@@ -218,13 +218,13 @@ class PanelController < ApplicationController
 
   def query
     @query = "("
-    @keys = params[:keyword].split(/ +/).map {|k| " like '%" + k.downcase + "%'"}
+    keys = params[:keyword].split(/ +/).map {|k| " like '%" + k.downcase + "%'"}
     @fields.keys.each do |f|
-      @h = ""
-      @keys.each do |k|
-        @h = (@h.size == 0 ? '' : ' AND ') + @h + f.to_s + k
+      h = ""
+      keys.each_with_index do |k,i|
+        h =  h + f.to_s + k + (i == keys.size - 1 ? '' : ' AND ')
       end
-      logger.debug @h
+      logger.debug h
       @query = @query + f.to_s + " like '%" + params[:keyword] + "%'" + (f == @fields.keys[-1] ? ")" : " or ")
     end
   end

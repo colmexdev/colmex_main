@@ -224,8 +224,8 @@ class PanelController < ApplicationController
       keys.each_with_index do |k,i|
         h =  h + f.to_s + k + (i == keys.size - 1 ? '' : ' AND ')
       end
-      logger.debug h
-      @query = @query + f.to_s + " like '%" + params[:keyword] + "%'" + (f == @fields.keys[-1] ? ")" : " or ")
+
+      @query = @query + h + (f == @fields.keys[-1] ? ")" : " or ")
     end
   end
 
