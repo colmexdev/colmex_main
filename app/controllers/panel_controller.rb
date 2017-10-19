@@ -222,7 +222,7 @@ class PanelController < ApplicationController
     @fields.keys.each do |f|
       h = ""
       keys.each do |k|
-        h = (h.size > 0 ? ' AND ' : '') + h +f.to_s + k
+        h = (h == "" ? '' : ' AND ') + h + f.to_s + k
       end
       logger.debug h
       @query = @query + f.to_s + " like '%" + params[:keyword] + "%'" + (f == @fields.keys[-1] ? ")" : " or ")
