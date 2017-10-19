@@ -1,4 +1,4 @@
-<input type="text" name="keyword" id="keyword" <%= params[:keyword].present? ? ('value='+params[:keyword]) : "" %> placeholder="Palabra clave" onchange="hideLink(event,'#index-panel','<%= panel_index_path(set: params[:set], offset: 0) %>',null,document.querySelector('#keyword').value,buildQuery(filteredParams('<%= params[:set] %>')))"><br>
+<input type="text" name="keyword" id="keyword" <%= params[:keyword].present? ? ("value='"+params[:keyword]+"'") : "" %> placeholder="Palabra clave" onchange="hideLink(event,'#index-panel','<%= panel_index_path(set: params[:set], offset: 0) %>',null,document.querySelector('#keyword').value,buildQuery(filteredParams('<%= params[:set] %>')))"><br>
 
 <% if params[:set] == "Descubre" %>
 	<%= select_tag "contenido", options_for_select(Descubre.select(:contenido).distinct.pluck(:contenido).map{|c| [c,c]}, params[:contenido] || ""), include_blank: "Todos" %>
