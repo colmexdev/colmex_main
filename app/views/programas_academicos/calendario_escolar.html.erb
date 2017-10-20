@@ -2,6 +2,148 @@
 <div class="container-fluid" id="resto-cuerpo">
 	<div class="principal-chica uk-block-large" id="cuerpo">
 
+<% if @editable %>
+<%= form_for(@sitio, :url => {:controller => "panel", :action => "editar", :params => {:set => "Contenido de sitios", :id => @sitio.id}, :uri => request.original_fullpath.gsub(/editable\//,"")}, :html => { :multipart => true }) do |f| %>
+  <% if @sitio.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@sitio.errors.count, "error") %> impidieron generar este objeto:</h2>
+
+      <ul>
+      <% @sitio.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+<%= hidden_field_tag :authenticity_token, form_authenticity_token -%>
+
+    <div class="uk-width-1-1">
+    <span class="titulo-grande"><%= params[:locale] == "en" ? "Academic Calendar" : "Calendario Escolar" %></span><br>
+
+	<%= fields_for 'pars[]', @pars[0] do |p| %>
+		<div class="field">
+			<%= p.label (params[:locale] == "es" ? :texto : :texto_ingles), (params[:locale] == "es" ? ("Texto (Párrafo " + ((@pars[0].p_ind+1).to_s) + ")") : ("Texto (Inglés, párrafo " + ((@pars[0].p_ind+1).to_s) + ")")) %><br>
+			<%= p.trix_editor (params[:locale] == "es" ? :texto : :texto_ingles), value: (params[:locale] == "es" ? @pars[0].texto.html_safe : @pars[0].texto_ingles.html_safe) %>
+		</div>
+	<% end %><br><br>
+    <h1 class="titulo-grande vino uk-margin-large-bottom" style="text-align:center"><%= params[:locale] == "en" ? "First Semester" : "Primer Semestre" %></h1>
+    <div class="uk-grid uk-grid-large">
+    <div class="uk-width-large-1-3 uk-width-medium-1-2 uk-text-left uk-margin-large-bottom">
+	<%= fields_for 'pars[]', @pars[1] do |p| %>
+		<div class="field">
+			<%= p.label (params[:locale] == "es" ? :texto : :texto_ingles), (params[:locale] == "es" ? ("Texto (Párrafo " + ((@pars[1].p_ind+1).to_s) + ")") : ("Texto (Inglés, párrafo " + ((@pars[1].p_ind+1).to_s) + ")")) %><br>
+			<%= p.trix_editor (params[:locale] == "es" ? :texto : :texto_ingles), value: (params[:locale] == "es" ? @pars[1].texto.html_safe : @pars[1].texto_ingles.html_safe) %>
+		</div>
+	<% end %>
+    </div>
+    <div class="uk-width-large-1-3 uk-width-medium-1-2 uk-text-left uk-margin-large-bottom">
+	<%= fields_for 'pars[]', @pars[2] do |p| %>
+		<div class="field">
+			<%= p.label (params[:locale] == "es" ? :texto : :texto_ingles), (params[:locale] == "es" ? ("Texto (Párrafo " + ((@pars[2].p_ind+1).to_s) + ")") : ("Texto (Inglés, párrafo " + ((@pars[2].p_ind+1).to_s) + ")")) %><br>
+			<%= p.trix_editor (params[:locale] == "es" ? :texto : :texto_ingles), value: (params[:locale] == "es" ? @pars[2].texto.html_safe : @pars[2].texto_ingles.html_safe) %>
+		</div>
+	<% end %>
+    </div>
+    <div class="uk-width-large-1-3 uk-width-medium-1-2 uk-text-left uk-margin-large-bottom">
+	<%= fields_for 'pars[]', @pars[3] do |p| %>
+		<div class="field">
+			<%= p.label (params[:locale] == "es" ? :texto : :texto_ingles), (params[:locale] == "es" ? ("Texto (Párrafo " + ((@pars[3].p_ind+1).to_s) + ")") : ("Texto (Inglés, párrafo " + ((@pars[3].p_ind+1).to_s) + ")")) %><br>
+			<%= p.trix_editor (params[:locale] == "es" ? :texto : :texto_ingles), value: (params[:locale] == "es" ? @pars[3].texto.html_safe : @pars[3].texto_ingles.html_safe) %>
+		</div>
+	<% end %>
+    </div>
+    <div class="uk-width-large-1-3 uk-width-medium-1-2 uk-text-left uk-margin-large-bottom">
+	<%= fields_for 'pars[]', @pars[4] do |p| %>
+		<div class="field">
+			<%= p.label (params[:locale] == "es" ? :texto : :texto_ingles), (params[:locale] == "es" ? ("Texto (Párrafo " + ((@pars[4].p_ind+1).to_s) + ")") : ("Texto (Inglés, párrafo " + ((@pars[4].p_ind+1).to_s) + ")")) %><br>
+			<%= p.trix_editor (params[:locale] == "es" ? :texto : :texto_ingles), value: (params[:locale] == "es" ? @pars[4].texto.html_safe : @pars[4].texto_ingles.html_safe) %>
+		</div>
+	<% end %>
+    </div>
+    <div class="uk-width-large-1-3 uk-width-medium-1-2 uk-text-left uk-margin-large-bottom">
+	<%= fields_for 'pars[]', @pars[5] do |p| %>
+		<div class="field">
+			<%= p.label (params[:locale] == "es" ? :texto : :texto_ingles), (params[:locale] == "es" ? ("Texto (Párrafo " + ((@pars[5].p_ind+1).to_s) + ")") : ("Texto (Inglés, párrafo " + ((@pars[5].p_ind+1).to_s) + ")")) %><br>
+			<%= p.trix_editor (params[:locale] == "es" ? :texto : :texto_ingles), value: (params[:locale] == "es" ? @pars[5].texto.html_safe : @pars[5].texto_ingles.html_safe) %>
+		</div>
+	<% end %>
+    </div>
+    <div class="uk-width-large-1-3 uk-width-medium-1-2 uk-text-left uk-margin-large-bottom">
+	<%= fields_for 'pars[]', @pars[6] do |p| %>
+		<div class="field">
+			<%= p.label (params[:locale] == "es" ? :texto : :texto_ingles), (params[:locale] == "es" ? ("Texto (Párrafo " + ((@pars[6].p_ind+1).to_s) + ")") : ("Texto (Inglés, párrafo " + ((@pars[6].p_ind+1).to_s) + ")")) %><br>
+			<%= p.trix_editor (params[:locale] == "es" ? :texto : :texto_ingles), value: (params[:locale] == "es" ? @pars[6].texto.html_safe : @pars[6].texto_ingles.html_safe) %>
+		</div>
+	<% end %>
+    </div>
+    </div>
+    <h1 class="titulo-grande vino uk-margin-large-bottom" style="text-align:center"><%= params[:locale] == "en" ? "Second Semester" :"Segundo Semestre" %></h1>
+    <div class="uk-grid uk-grid-large">
+    <div class="uk-width-large-1-3 uk-width-medium-1-2 uk-text-left uk-margin-large-bottom">
+	<%= fields_for 'pars[]', @pars[7] do |p| %>
+		<div class="field">
+			<%= p.label (params[:locale] == "es" ? :texto : :texto_ingles), (params[:locale] == "es" ? ("Texto (Párrafo " + ((@pars[7].p_ind+1).to_s) + ")") : ("Texto (Inglés, párrafo " + ((@pars[7].p_ind+1).to_s) + ")")) %><br>
+			<%= p.trix_editor (params[:locale] == "es" ? :texto : :texto_ingles), value: (params[:locale] == "es" ? @pars[7].texto.html_safe : @pars[7].texto_ingles.html_safe) %>
+		</div>
+	<% end %>
+    </div>
+    <div class="uk-width-large-1-3 uk-width-medium-1-2 uk-text-left uk-margin-large-bottom">
+	<%= fields_for 'pars[]', @pars[8] do |p| %>
+		<div class="field">
+			<%= p.label (params[:locale] == "es" ? :texto : :texto_ingles), (params[:locale] == "es" ? ("Texto (Párrafo " + ((@pars[8].p_ind+1).to_s) + ")") : ("Texto (Inglés, párrafo " + ((@pars[8].p_ind+1).to_s) + ")")) %><br>
+			<%= p.trix_editor (params[:locale] == "es" ? :texto : :texto_ingles), value: (params[:locale] == "es" ? @pars[8].texto.html_safe : @pars[8].texto_ingles.html_safe) %>
+		</div>
+	<% end %>
+    </div>
+    <div class="uk-width-large-1-3 uk-width-medium-1-2 uk-text-left uk-margin-large-bottom">
+	<%= fields_for 'pars[]', @pars[9] do |p| %>
+		<div class="field">
+			<%= p.label (params[:locale] == "es" ? :texto : :texto_ingles), (params[:locale] == "es" ? ("Texto (Párrafo " + ((@pars[9].p_ind+1).to_s) + ")") : ("Texto (Inglés, párrafo " + ((@pars[9].p_ind+1).to_s) + ")")) %><br>
+			<%= p.trix_editor (params[:locale] == "es" ? :texto : :texto_ingles), value: (params[:locale] == "es" ? @pars[9].texto.html_safe : @pars[9].texto_ingles.html_safe) %>
+		</div>
+	<% end %>
+    </div>
+    <div class="uk-width-large-1-3 uk-width-medium-1-2 uk-text-left uk-margin-large-bottom">
+	<%= fields_for 'pars[]', @pars[10] do |p| %>
+		<div class="field">
+			<%= p.label (params[:locale] == "es" ? :texto : :texto_ingles), (params[:locale] == "es" ? ("Texto (Párrafo " + ((@pars[10].p_ind+1).to_s) + ")") : ("Texto (Inglés, párrafo " + ((@pars[10].p_ind+1).to_s) + ")")) %><br>
+			<%= p.trix_editor (params[:locale] == "es" ? :texto : :texto_ingles), value: (params[:locale] == "es" ? @pars[10].texto.html_safe : @pars[10].texto_ingles.html_safe) %>
+		</div>
+	<% end %>
+    </div>
+    <div class="uk-width-large-1-3 uk-width-medium-1-2 uk-text-left uk-margin-large-bottom">
+	<%= fields_for 'pars[]', @pars[11] do |p| %>
+		<div class="field">
+			<%= p.label (params[:locale] == "es" ? :texto : :texto_ingles), (params[:locale] == "es" ? ("Texto (Párrafo " + ((@pars[11].p_ind+1).to_s) + ")") : ("Texto (Inglés, párrafo " + ((@pars[11].p_ind+1).to_s) + ")")) %><br>
+			<%= p.trix_editor (params[:locale] == "es" ? :texto : :texto_ingles), value: (params[:locale] == "es" ? @pars[11].texto.html_safe : @pars[11].texto_ingles.html_safe) %>
+		</div>
+	<% end %>
+    </div>
+    <div class="uk-width-large-1-3 uk-width-medium-1-2 uk-text-left uk-margin-large-bottom">
+	<%= fields_for 'pars[]', @pars[12] do |p| %>
+		<div class="field">
+			<%= p.label (params[:locale] == "es" ? :texto : :texto_ingles), (params[:locale] == "es" ? ("Texto (Párrafo " + ((@pars[12].p_ind+1).to_s) + ")") : ("Texto (Inglés, párrafo " + ((@pars[12].p_ind+1).to_s) + ")")) %><br>
+			<%= p.trix_editor (params[:locale] == "es" ? :texto : :texto_ingles), value: (params[:locale] == "es" ? @pars[12].texto.html_safe : @pars[12].texto_ingles.html_safe) %>
+		</div>
+	<% end %>
+		</div>
+    </div>
+    </div>
+<br>
+		<% if params[:locale] != "en" %>
+		<a href=<%= asset_url("calendario-escolar-2017-2018.pdf") %> target="_blank" class="ver-mas uk-margin-large-bottom uk-button-small">Descargar en PDF (2018)</a>
+		<% end %>
+
+<br>
+<div class="actions">
+<%= f.submit "Guardar cambios" %>
+</div>
+
+<% end %>
+
+<% else %>
+
     <div class="uk-width-1-1">
     <span class="titulo-grande"><%= params[:locale] == "en" ? "Academic Calendar" : "Calendario Escolar" %></span><br>
 
@@ -116,6 +258,8 @@
 		<% if params[:locale] != "en" %>
 		<a href=<%= asset_url("calendario-escolar-2017-2018.pdf") %> target="_blank" class="ver-mas uk-margin-large-bottom uk-button-small">Descargar en PDF (2018)</a>
 		<% end %>
+
+<% end %>
 
 	</div>
 

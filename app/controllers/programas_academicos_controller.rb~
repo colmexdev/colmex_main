@@ -53,6 +53,7 @@ class ProgramasAcademicosController < ApplicationController
   end
 
   def cursos
+    is_editable("Cursos")
     @electronicos = Curso.where("programa = ? AND tipo_curso = ?", "Curso", "En línea")
     @presenciales = Curso.where("programa = ? AND tipo_curso = ? and fecha_fin_conv >= ?", "Curso", "Presencial", Date.current())
   end
