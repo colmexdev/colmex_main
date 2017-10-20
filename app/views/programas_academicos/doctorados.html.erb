@@ -43,7 +43,7 @@
 
 
 	<% @doctorados.each do |doc| %>
-    <h2 class="vino uk-margin-large-top"><%= params[:locale] == "es" ? ("Doctorado en " + doc.titulo.gsub(/<(\/)?div>/,"").html_safe)) : ("Doctorate in " + doc.traduccion_tit.gsub(/<(\/)?div>/,"").html_safe) %></h2>
+    <h2 class="vino uk-margin-large-top"><%= params[:locale] == "es" ? ("Doctorado en " + doc.titulo.gsub(/<(\/)?div>/,"").html_safe) : ("Doctorate in " + doc.traduccion_tit.gsub(/<(\/)?div>/,"").html_safe) %></h2>
     <div class="uk-grid uk-grid-large">
     <div class="uk-width-large-3-5 uk-text-left">
     <p><%= params[:locale] == "es" ? doc.descripcion.html_safe : doc.traduccion_desc.html_safe %></p>
@@ -87,7 +87,7 @@
 
 
 	<% @doctorados.each do |doc| %>
-    <h2 class="vino uk-margin-large-top"><%= params[:locale] == "es" ? ("Doctorado en " + doc.titulo.gsub(/<(\/)?div>/,"").html_safe)) : ("Doctorate in " + doc.traduccion_tit.gsub(/<(\/)?div>/,"").html_safe)) %></h2>
+    <h2 class="vino uk-margin-large-top"><%= params[:locale] == "es" ? ("Doctorado en " + doc.titulo.gsub(/<(\/)?div>/,"").html_safe) : ("Doctorate in " + doc.traduccion_tit.gsub(/<(\/)?div>/,"").html_safe)) %></h2>
     <div class="uk-grid uk-grid-large">
     <div class="uk-width-large-3-5 uk-text-left">
     <p><%= params[:locale] == "es" ? doc.descripcion.html_safe : doc.traduccion_desc.html_safe %></p>
