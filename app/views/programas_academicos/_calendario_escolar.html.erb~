@@ -9,32 +9,32 @@
 
     <h1 class="titulo-grande vino uk-margin-large-bottom" style="text-align:center"><%= params[:locale] == "en" ? "First Semester" : "Primer Semestre" %></h1>
     <div class="uk-grid uk-grid-large">
-		<% if (@pars[1].texto.present? && params[:locale] == "es") && (@pars[1].texto_ingles.present? && params[:locale] == "en") %>
+		<% if (@pars[1].texto.present? && params[:locale] == "es") || (@pars[1].texto_ingles.present? && params[:locale] == "en") %>
     <div class="uk-width-large-1-3 uk-width-medium-1-2 uk-text-left uk-margin-large-bottom">
 		<%= params[:locale] == "es" ? @pars[1].texto.html_safe : @pars[1].texto_ingles.html_safe %>
     </div>
 		<% end %>
-		<% if (@pars[2].texto.present? && params[:locale] == "es") && (@pars[2].texto_ingles.present? && params[:locale] == "en") %>
+		<% if (@pars[2].texto.present? && params[:locale] == "es") || (@pars[2].texto_ingles.present? && params[:locale] == "en") %>
     <div class="uk-width-large-1-3 uk-width-medium-1-2 uk-text-left uk-margin-large-bottom">
 		<%= params[:locale] == "es" ? @pars[2].texto.html_safe : @pars[2].texto_ingles.html_safe %>
     </div>
 		<% end %>
-		<% if (@pars[3].texto.present? && params[:locale] == "es") && (@pars[3].texto_ingles.present? && params[:locale] == "en") %>
+		<% if (@pars[3].texto.present? && params[:locale] == "es") || (@pars[3].texto_ingles.present? && params[:locale] == "en") %>
     <div class="uk-width-large-1-3 uk-width-medium-1-2 uk-text-left uk-margin-large-bottom">
 		<%= params[:locale] == "es" ? @pars[3].texto.html_safe : @pars[3].texto_ingles.html_safe %>
     </div>
 		<% end %>
-		<% if (@pars[4].texto.present? && params[:locale] == "es") && (@pars[4].texto_ingles.present? && params[:locale] == "en") %>
+		<% if (@pars[4].texto.present? && params[:locale] == "es") || (@pars[4].texto_ingles.present? && params[:locale] == "en") %>
     <div class="uk-width-large-1-3 uk-width-medium-1-2 uk-text-left uk-margin-large-bottom">
 		<%= params[:locale] == "es" ? @pars[4].texto.html_safe : @pars[4].texto_ingles.html_safe %>
     </div>
 		<% end %>
-		<% if (@pars[5].texto.present? && params[:locale] == "es") && (@pars[5].texto_ingles.present? && params[:locale] == "en") %>
+		<% if (@pars[5].texto.present? && params[:locale] == "es") || (@pars[5].texto_ingles.present? && params[:locale] == "en") %>
     <div class="uk-width-large-1-3 uk-width-medium-1-2 uk-text-left uk-margin-large-bottom">
 		<%= params[:locale] == "es" ? @pars[5].texto.html_safe : @pars[5].texto_ingles.html_safe %>
     </div>
 		<% end %>
-		<% if (@pars[6].texto.present? && params[:locale] == "es") && (@pars[6].texto_ingles.present? && params[:locale] == "en") %>
+		<% if (@pars[6].texto.present? && params[:locale] == "es") || (@pars[6].texto_ingles.present? && params[:locale] == "en") %>
     <div class="uk-width-large-1-3 uk-width-medium-1-2 uk-text-left uk-margin-large-bottom">
 		<%= params[:locale] == "es" ? @pars[6].texto.html_safe : @pars[6].texto_ingles.html_safe %>
 
@@ -43,32 +43,32 @@
     </div>
     <h1 class="titulo-grande vino uk-margin-large-bottom" style="text-align:center"><%= params[:locale] == "en" ? "Second Semester" :"Segundo Semestre" %></h1>
     <div class="uk-grid uk-grid-large">
-		<% if (@pars[7].texto.present? && params[:locale] == "es") && (@pars[7].texto_ingles.present? && params[:locale] == "en") %>
+		<% if (@pars[7].texto.present? && params[:locale] == "es") || (@pars[7].texto_ingles.present? && params[:locale] == "en") %>
     <div class="uk-width-large-1-3 uk-width-medium-1-2 uk-text-left uk-margin-large-bottom">
 		<%= params[:locale] == "es" ? @pars[7].texto.html_safe : @pars[7].texto_ingles.html_safe %>
     </div>
 		<% end %>
-		<% if (@pars[8].texto.present? && params[:locale] == "es") && (@pars[8].texto_ingles.present? && params[:locale] == "en") %>
+		<% if (@pars[8].texto.present? && params[:locale] == "es") || (@pars[8].texto_ingles.present? && params[:locale] == "en") %>
     <div class="uk-width-large-1-3 uk-width-medium-1-2 uk-text-left uk-margin-large-bottom">
 		<%= params[:locale] == "es" ? @pars[8].texto.html_safe : @pars[8].texto_ingles.html_safe %>
     </div>
 		<% end %>
-		<% if (@pars[9].texto.present? && params[:locale] == "es") && (@pars[9].texto_ingles.present? && params[:locale] == "en") %>
+		<% if (@pars[9].texto.present? && params[:locale] == "es") || (@pars[9].texto_ingles.present? && params[:locale] == "en") %>
     <div class="uk-width-large-1-3 uk-width-medium-1-2 uk-text-left uk-margin-large-bottom">
 		<%= params[:locale] == "es" ? @pars[9].texto.html_safe : @pars[9].texto_ingles.html_safe %>
     </div>
 		<% end %>
-		<% if (@pars[10].texto.present? && params[:locale] == "es") && (@pars[10].texto_ingles.present? && params[:locale] == "en") %>
+		<% if (@pars[10].texto.present? && params[:locale] == "es") || (@pars[10].texto_ingles.present? && params[:locale] == "en") %>
     <div class="uk-width-large-1-3 uk-width-medium-1-2 uk-text-left uk-margin-large-bottom">
 		<%= params[:locale] == "es" ? @pars[10].texto.html_safe : @pars[10].texto_ingles.html_safe %>
     </div>
 		<% end %>
-		<% if (@pars[11].texto.present? && params[:locale] == "es") && (@pars[11].texto_ingles.present? && params[:locale] == "en") %>
+		<% if (@pars[11].texto.present? && params[:locale] == "es") || (@pars[11].texto_ingles.present? && params[:locale] == "en") %>
     <div class="uk-width-large-1-3 uk-width-medium-1-2 uk-text-left uk-margin-large-bottom">
 		<%= params[:locale] == "es" ? @pars[11].texto.html_safe : @pars[11].texto_ingles.html_safe %>
     </div>
 		<% end %>
-		<% if (@pars[12].texto.present? && params[:locale] == "es") && (@pars[12].texto_ingles.present? && params[:locale] == "en") %>
+		<% if (@pars[12].texto.present? && params[:locale] == "es") || (@pars[12].texto_ingles.present? && params[:locale] == "en") %>
     <div class="uk-width-large-1-3 uk-width-medium-1-2 uk-text-left uk-margin-large-bottom">
 		<%= params[:locale] == "es" ? @pars[12].texto.html_safe : @pars[12].texto_ingles.html_safe %>
 		</div>
