@@ -137,7 +137,7 @@
     </div>
     <div class="uk-grid uk-grid-large uk-margin-large-bottom">
     <div class="uk-width-large-3-5">
-    <img src="<%= image_url(!@pics[1].foto.url.include?('vacio') ? @pics[1].foto.url : 'licenciaturas-chica.jpg') %>" alt="Maestrías">
+    <img src="<%= image_url(!@pics[1].foto.url.include?('vacio') ? @pics[1].foto.url : 'maestrias-chica.jpg') %>" alt="Maestrías">
     </div>
     <div class="uk-width-large-2-5 uk-text-left">
     <span class="titulo-chico"><%= t('programas.maestrias') %></span><br>
@@ -152,7 +152,7 @@
     </div>
     <div class="uk-grid uk-grid-large uk-margin-large-bottom">
     <div class="uk-width-large-3-5">
-    <img src="<%= image_url(!@pics[2].foto.url.include?('vacio') ? @pics[2].foto.url : 'licenciaturas-chica.jpg') %>" alt="Doctorados">
+    <img src="<%= image_url(!@pics[2].foto.url.include?('vacio') ? @pics[2].foto.url : 'doctorados-chica.jpg') %>" alt="Doctorados">
     </div>
     <div class="uk-width-large-2-5 uk-text-left">
     <span class="titulo-chico"><%= t('programas.doctorados') %></span><br>
