@@ -6,10 +6,10 @@
     <span class="titulo-grande"><%= params[:locale] == "en" ? "Academic Calendar" : "Calendario Escolar" %></span><br>
 
 <%= params[:locale] == "es" ? @pars[0].texto.gsub(/<div>/,'<span class="titulo-grande"').gsub(/<\/div>/,"</span>").html_safe : @pars[0].texto_ingles.gsub(/<div>/,'<span class="titulo-grande">').gsub(/<\/div>/,"</span>").html_safe %><br><br>
-<% if @pars[0]
+
     <h1 class="titulo-grande vino uk-margin-large-bottom" style="text-align:center"><%= params[:locale] == "en" ? "First Semester" : "Primer Semestre" %></h1>
     <div class="uk-grid uk-grid-large">
-		<% if (@pars[1].texto.present? && params[:locale] == "es") && @pars[1].texto_ingles.present? && params[:locale] == "en") %>
+		<% if (@pars[1].texto.present? && params[:locale] == "es") && (@pars[1].texto_ingles.present? && params[:locale] == "en") %>
     <div class="uk-width-large-1-3 uk-width-medium-1-2 uk-text-left uk-margin-large-bottom">
 		<%= params[:locale] == "es" ? @pars[1].texto.html_safe : @pars[1].texto_ingles.html_safe %>
 <% if false %>
