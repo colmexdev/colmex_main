@@ -15,7 +15,7 @@
 
     <ul class=" uk-list uk-list-space">
 		<% Curso.where(:programa => "Licenciatura").order(:titulo).each do |lic| %>
-		  <li class="uk-link sin-pointer"><%= (params[:locale] == "es" ? lic.titulo : lic.traduccion_tit)%></li>
+		  <li class="uk-link sin-pointer"><%= (params[:locale] == "es" ? lic.titulo.gsub(/<(\/)?div>/,"").html_safe) : lic.traduccion_tit.gsub(/<(\/)?div>/,"").html_safe))%></li>
 		<% end %>
     </ul>
 		<a href=<%= licenciaturas_path %> class="ver-mas uk-margin-large-bottom uk-button-small"><%= t('programas.mas') %></a>
@@ -30,7 +30,7 @@
 
     <ul class=" uk-list uk-list-space">
     <% Curso.where(:programa => "Maestría").order(:titulo).each do |mt| %>
-		  <li class="uk-link sin-pointer"><%= (params[:locale] == "es" ? mt.titulo : mt.traduccion_tit) %></li>
+		  <li class="uk-link sin-pointer"><%= (params[:locale] == "es" ? mt.titulo.gsub(/<(\/)?div>/,"").html_safe) : mt.traduccion_tit.gsub(/<(\/)?div>/,"").html_safe)) %></li>
 		<% end %>
     </ul>
 	<a href=<%= maestrias_path %> class="ver-mas uk-margin-large-bottom uk-button-small"><%= t('programas.mas') %></a>
@@ -45,7 +45,7 @@
 
     <ul class=" uk-list uk-list-space">
     <% Curso.where(:programa => "Doctorado").order(:titulo).each do |doc| %>
-		  <li class="uk-link sin-pointer"><%= (params[:locale] == "es" ? doc.titulo : doc.traduccion_tit) %></li>
+		  <li class="uk-link sin-pointer"><%= (params[:locale] == "es" ? doc.titulo.gsub(/<(\/)?div>/,"").html_safe) : doc.traduccion_tit.gsub(/<(\/)?div>/,"").html_safe)) %></li>
 		<% end %>
     </ul>
 		<a href=<%= doctorados_path %> class="ver-mas uk-margin-large-bottom uk-button-small"><%= t('programas.mas') %></a>
