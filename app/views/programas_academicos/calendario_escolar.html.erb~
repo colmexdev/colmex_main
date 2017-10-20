@@ -147,7 +147,7 @@
     <div class="uk-width-1-1">
     <span class="titulo-grande"><%= params[:locale] == "en" ? "Academic Calendar" : "Calendario Escolar" %></span><br>
 
-<%= params[:locale] == "es" ? @pars[0].texto.gsub(/<p>/,'<span class="titulo-grande"').gsub(/<\/p>/,"</span>").html_safe : @pars[0].texto_ingles.gsub(/<p>/,'<span class="titulo-grande">').gsub(/<\/p>/,"</span>").html_safe %><br><br>
+<%= params[:locale] == "es" ? @pars[0].texto.gsub(/<p>/,'<span class="titulo-grande">').gsub(/<\/p>/,"</span>").html_safe : @pars[0].texto_ingles.gsub(/<p>/,'<span class="titulo-grande">').gsub(/<\/p>/,"</span>").html_safe %><br><br>
 
     <h1 class="titulo-grande vino uk-margin-large-bottom" style="text-align:center"><%= params[:locale] == "en" ? "First Semester" : "Primer Semestre" %></h1>
     <div class="uk-grid uk-grid-large">
