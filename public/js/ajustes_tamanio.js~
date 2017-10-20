@@ -32,6 +32,8 @@ $(document).on("ready", function(){
 			var groupElement = event.target.toolbarElement.querySelector("[data-trix-button-group='text-tools']");
 			var blockElement = event.target.toolbarElement.querySelector("[data-trix-button-group='block-tools']");
 			histElement.style.display = "none";
+			event.target.toolbarElement.querySelector("[data-trix-attribute='code']").style.display = "none";
+			event.target.toolbarElement.querySelector("[data-trix-attribute='quote']").style.display = "none";
 			extendTrix(groupElement,blockElement);
 			clearPars(event.srcElement);
 		})
