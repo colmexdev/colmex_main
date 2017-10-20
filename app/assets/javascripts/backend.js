@@ -138,7 +138,7 @@ function configTrix(){
 		tagName: "h3",
 		terminal: true
 	}
-	Trix.config.blockAttributes.heading3 = {
+	Trix.config.blockAttributes.heading4 = {
 		breakOnReturn: true,
 		group: false,
 		tagName: "h4",
