@@ -32,6 +32,13 @@ $(document).on("ready", function(){
 			var groupElement = event.target.toolbarElement.querySelector("[data-trix-button-group='text-tools']");
 			var blockElement = event.target.toolbarElement.querySelector("[data-trix-button-group='block-tools']");
 			histElement.style.display = "none";
+			if(window.location.href.indexOf("calendario-escolar") != -1){
+				event.target.toolbarElement.querySelector("[data-trix-attribute='paragraph']").style.display = "none";
+				event.target.toolbarElement.querySelector("[data-trix-attribute='number']").style.display = "none";
+				event.target.toolbarElement.querySelector("[data-trix-attribute='bullet']").style.display = "none";
+				event.target.toolbarElement.querySelector("[data-trix-action='decreaseNestingLevel']").style.display = "none";
+				event.target.toolbarElement.querySelector("[data-trix-action='increaseNestingLevel']").style.display = "none";
+			}
 			event.target.toolbarElement.querySelector("[data-trix-attribute='code']").style.display = "none";
 			event.target.toolbarElement.querySelector("[data-trix-attribute='quote']").style.display = "none";
 			extendTrix(groupElement,blockElement);
