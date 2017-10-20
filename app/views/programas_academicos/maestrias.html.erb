@@ -39,10 +39,10 @@
 		</div>
     <p>&nbsp;</p>    
     <% @maestrias.each do |mt| %>
-    <h2 class="vino uk-margin-large-top"><%= (params[:locale] == "es" ? ("Maestría en " + mt.titulo) : ("Master in " + mt.traduccion_tit)) %></h2>
+    <h2 class="vino uk-margin-large-top"><%= (params[:locale] == "es" ? ("Maestría en " + mt.titulo.gsub(/<(\/)?div>/,"").html_safe)) : ("Master in " + mt.traduccion_tit.gsub(/<(\/)?div>/,"").html_safe))) %></h2>
     <div class="uk-grid uk-grid-large">
     <div class="uk-width-large-3-5 uk-text-left">
-    <p><%= (params[:locale] == "es" ? mt.descripcion : mt.traduccion_desc) %></p>
+    <p><%= (params[:locale] == "es" ? mt.descripcion.html_safe : mt.traduccion_desc.html_safe) %></p>
     <% if !mt.liga.nil? %>
       <a href=<%= mt.liga %> target="_blank" class="ver-mas uk-margin-large-bottom uk-button-small"><%= t('programas.info') %></a>
     <% end %>
@@ -80,10 +80,10 @@
     <div class="uk-container-center"><img src=<%= image_url("maestrias-grande.jpg") %> alt="Historia de El Colegio de México"></div>
     <p>&nbsp;</p>    
     <% @maestrias.each do |mt| %>
-    <h2 class="vino uk-margin-large-top"><%= (params[:locale] == "es" ? ("Maestría en " + mt.titulo) : ("Master in " + mt.traduccion_tit)) %></h2>
+    <h2 class="vino uk-margin-large-top"><%= (params[:locale] == "es" ? ("Maestría en " + mt.titulo.gsub(/<(\/)?div>/,"").html_safe)) : ("Master in " + mt.traduccion_tit.gsub(/<(\/)?div>/,"").html_safe))) %></h2>
     <div class="uk-grid uk-grid-large">
     <div class="uk-width-large-3-5 uk-text-left">
-    <p><%= (params[:locale] == "es" ? mt.descripcion : mt.traduccion_desc) %></p>
+    <p><%= (params[:locale] == "es" ? mt.descripcion.html_safe : mt.traduccion_desc.html_safe) %></p>
     <% if !mt.liga.nil? %>
       <a href=<%= mt.liga %> target="_blank" class="ver-mas uk-margin-large-bottom uk-button-small"><%= t('programas.info') %></a>
     <% end %>

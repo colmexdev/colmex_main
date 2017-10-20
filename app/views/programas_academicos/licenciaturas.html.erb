@@ -39,10 +39,10 @@
 
     <!--          Aquí empiezan las licenciaturas          -->
     <% @licenciaturas.each do |lic| %>
-    <h2 class="vino"><%= params[:locale] == "es" ? ("Licenciatura en " + lic.titulo) : ("B.A. in " + lic.traduccion_tit) %></h2>
+    <h2 class="vino"><%= params[:locale] == "es" ? ("Licenciatura en " + lic.titulo.gsub(/<(\/)?div>/,"").html_safe)) : ("B.A. in " + lic.traduccion_tit.gsub(/<(\/)?div>/,"").html_safe)) %></h2>
     <div class="uk-grid uk-grid-large">
     <div class="uk-width-large-3-5 uk-text-left">
-    <p><%= (params[:locale] == "es" ? lic.descripcion : lic.traduccion_desc) %></p>
+    <p><%= (params[:locale] == "es" ? lic.descripcion.html_safe : lic.traduccion_desc.html_safe) %></p>
     <% if !lic.liga.nil? %>
       <a href=<%= lic.liga %> target="_blank" class="ver-mas uk-margin-large-bottom uk-button-small"><%= t('programas.info') %></a>
     <% end %>
@@ -77,10 +77,10 @@
 
     <!--          Aquí empiezan las licenciaturas          -->
     <% @licenciaturas.each do |lic| %>
-    <h2 class="vino"><%= params[:locale] == "es" ? ("Licenciatura en " + lic.titulo) : ("B.A. in " + lic.traduccion_tit) %></h2>
+    <h2 class="vino"><%= params[:locale] == "es" ? ("Licenciatura en " + lic.titulo.gsub(/<(\/)?div>/,"").html_safe)) : ("B.A. in " + lic.traduccion_tit.gsub(/<(\/)?div>/,"").html_safe)) %></h2>
     <div class="uk-grid uk-grid-large">
     <div class="uk-width-large-3-5 uk-text-left">
-    <p><%= (params[:locale] == "es" ? lic.descripcion : lic.traduccion_desc) %></p>
+    <p><%= (params[:locale] == "es" ? lic.descripcion.html_safe : lic.traduccion_desc.html_safe) %></p>
     <% if !lic.liga.nil? %>
       <a href=<%= lic.liga %> target="_blank" class="ver-mas uk-margin-large-bottom uk-button-small"><%= t('programas.info') %></a>
     <% end %>

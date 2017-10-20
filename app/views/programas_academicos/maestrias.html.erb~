@@ -66,8 +66,13 @@
     </div>
     <% end %>
     </div>
+<br>
+<div class="actions">
+<%= f.submit "Guardar cambios" %>
+</div>
 
 
+<% end %>
 <% else %>
 		
     <div class="uk-width-1-1">
