@@ -7,12 +7,12 @@
     <img src=<%= conv.foto.url %> class="uk-border-rounded" alt="Foto curso">
     </div>
     <div class="uk-width-4-5 uk-vertical-align-middle uk-text-left uk-text-break">
-    <h2 class="vino"><%= conv.titulo %></h2>
+    <h2 class="vino"><%= conv.titulo.html_safe %></h2>
     <div class="uk-grid uk-grid-large">
     <div class="uk-width-large-4-6 uk-text-left">
-    <p><%= conv.descripcion %></p>
+    <p><%= conv.descripcion.html_safe %></p>
     <% if conv.imparte.to_s != "" %>
-      <p class="uk-text-left">Impartido por <%= conv.imparte %></p>
+      <p class="uk-text-left">Impartido por <%= conv.imparte.html_safe %></p>
     <% end %>
     <% if !conv.liga.nil? %>
     <a href=<%= conv.liga %> target="_blank" class="ver-mas uk-margin-large-bottom uk-button-small">Más información</a>
