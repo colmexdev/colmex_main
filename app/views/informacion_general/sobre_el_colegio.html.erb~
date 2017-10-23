@@ -70,8 +70,6 @@
   </div>
 	<% end %>
 
-
-
 	<% else %>
 	<div class="uk-width-1-1">
     <div class="uk-grid uk-grid-small">
@@ -91,6 +89,7 @@
 					<li><%= construir_link("bt-flechita.png", "bt-flechita-hover.png",t('botones.b6'),"http://libros.colmex.mx/","link-sobre") %></li>
 					<li><%= construir_link("bt-flechita.png", "bt-flechita-hover.png",t('sobre_col.revistas'),"http://revistas.colmex.mx/","link-sobre") %></li>
 					<li><%= construir_link("bt-flechita.png", "bt-flechita-hover.png",t('sobre_col.pred') ,"http://digital.colmex.mx/","link-sobre") %></li>
+					<li><%= construir_link("bt-flechita.png", "bt-flechita-hover.png",(params[:locale] == "es" ? "Folleto institucional" : "Institutional booklet") ,(params[:locale] == "es" ? Documento.where('nombre = ?','Folleto institucional').first.archivo.url : Documento.where('nombre = ?','Institutional booklet').first.archivo.url),"link-sobre") %></li>
     </ul>
     </div>
     <!--          Aquí termina el menú pequeño          -->
