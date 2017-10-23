@@ -24,6 +24,7 @@ barra_render = false;
 })*/
 
 $(document).on("ready page:load", function(){
+	console.log("Entrando");
 	UIkit.init();
 	try{
 		console.log("Configurando Trix");
