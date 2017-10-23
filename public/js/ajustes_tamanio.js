@@ -43,9 +43,10 @@ $(document).on("ready", function(){
 				event.target.toolbarElement.querySelector("[data-trix-action='decreaseNestingLevel']").style.display = "none";
 				event.target.toolbarElement.querySelector("[data-trix-action='increaseNestingLevel']").style.display = "none";
 			}
-		})
+		});
 	}
 	catch(err){
+		console.log(err);
 	}
 
 	var cw = $('.frame-descubre').width() - 8;
