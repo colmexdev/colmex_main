@@ -35,6 +35,7 @@ class ProgramasAcademicosController < ApplicationController
   end
 
   def calendario_escolar
+    is_editable("Calendario escolar")
   end
 
   def maestrias

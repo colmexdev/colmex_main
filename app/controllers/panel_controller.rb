@@ -273,7 +273,7 @@ class PanelController < ApplicationController
         trix: []
       }, "Imágenes de slider": {
         model: Slider,
-        fields: {liga: "Link",fecha_expiracion: "Fecha de expiración",posicion: "Posición (badge)"},
+        fields: {liga: "Link", link_eng: "Link (inglés)", fecha_expiracion: "Fecha de expiración",posicion: "Posición (badge)"},
         imgs: {imagen: "Imagen",badge: "Badge", badge_eng: "Badge (Inglés)"},
         trix: []
       }, "Cátedras y seminarios": {
@@ -341,7 +341,7 @@ class PanelController < ApplicationController
     elsif params[:set] == "Categorías de 'Descubre'"
       params.require(:content).permit(:tipo, :icono, :tipo_eng)
     elsif params[:set] == "Imágenes de slider"
-      params.require(:slider).permit(:liga, :imagen, :badge, :posicion, :fecha_expiracion, :badge_eng)
+      params.require(:slider).permit(:liga, :imagen, :badge, :posicion, :fecha_expiracion, :badge_eng, :link_eng)
     elsif params[:set] == "Cátedras y seminarios"
       params.require(:catedra).permit(:titulo, :titulo_eng, :descripcion_eng, :descripcion, :liga, :tipo)
     elsif params[:set] == "Frases en página principal"
