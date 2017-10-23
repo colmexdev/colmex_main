@@ -12,7 +12,7 @@
 				<% if params[:locale] == "es" %>
 				<li style="list-style-type:none; margin-bottom:5px;"><%= link_to image_tag('bt-flechita.png', :class => "leave_img") + image_tag("bt-flechita-hover.png", :class => "hover_img") + "Convocatorias abiertas", (request.original_fullpath.include?("editable") ? convocatorias_path : convocatorias_path), :remote => true, :class => "link-sobre", :id => "junta-link" %></li>
 				<% end %>
-				<li style="list-style-type:none; margin-bottom:35px;"><%= link_to image_tag('bt-flechita.png', :class => "leave_img") + image_tag("bt-flechita-hover.png", :class => "hover_img") + (params[:locale] == "en" ? "Admission's procedures" : "Proceso de admisión"), (request.original_fullpath.include?("editable") ? proceso_path : proceso_edit_path), :remote => true, :class => "link-sobre", :id => "presidencia-link" %></li>
+				<li style="list-style-type:none; margin-bottom:35px;"><%= link_to image_tag('bt-flechita.png', :class => "leave_img") + image_tag("bt-flechita-hover.png", :class => "hover_img") + (params[:locale] == "en" ? "Admission's procedures" : "Proceso de admisión"), (request.original_fullpath.include?("editable") ? proceso_edit_path : proceso_path), :remote => true, :class => "link-sobre", :id => "presidencia-link" %></li>
     </ul>
     <!--          Aquí termina el menú pequeño          -->
     </div>
