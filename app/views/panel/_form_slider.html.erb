@@ -16,6 +16,10 @@
     <%= f.text_field :liga %>
   </div>
   <div class="field">
+    <%= f.label :link_eng, "Link (inglés)" %><br>
+    <%= f.text_field :link_eng %>
+  </div>
+  <div class="field">
     <%= f.label :posicion, "Posición del badge" %><br>
     <%= f.select(:posicion, [['Superior izquierda','SI'],['Superior derecha','SD'],['Inferior derecha','ID'],['Inferior izquierda','II'],['Centrado','CC']], :selected => (@obj.posicion || 'SI')) %>
   </div>

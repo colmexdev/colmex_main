@@ -49,8 +49,8 @@ $(document).on("ready", function(){
 		console.log(err);
 	}
 
-	var cw = $('.frame-descubre').width() - 8;
 	try{
+		var cw = $('.frame-descubre')[0].offsetWidth - 8;
 		if(gon.ev_tiny == ""){
 			$("#div_eventos").css("height","0");
 		}
