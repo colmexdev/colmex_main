@@ -8,11 +8,11 @@
     <span class="titulo-grande"><%= params[:locale] == "en" ? "Admissions" : "Admisiones" %></span><br>
     <!--          Aquí empieza el menú pequeño          -->
     <ul style="text-align:left;">
-    	<li style="list-style-type:none; margin-bottom:5px;"><%= link_to(image_tag('bt-flechita.png', :class => "leave_img") + image_tag("bt-flechita-hover.png", :class => "hover_img") + t('botones.b3.texto'), programas_path(editable: true if @editable), :remote => true, :class => "link-sobre", :id => "asamblea-link") %></li>
+    	<li style="list-style-type:none; margin-bottom:5px;"><%= link_to(image_tag('bt-flechita.png', :class => "leave_img") + image_tag("bt-flechita-hover.png", :class => "hover_img") + t('botones.b3.texto'), programas_path(editable: @editable), :remote => true, :class => "link-sobre", :id => "asamblea-link") %></li>
 				<% if params[:locale] == "es" %>
-				<li style="list-style-type:none; margin-bottom:5px;"><%= link_to image_tag('bt-flechita.png', :class => "leave_img") + image_tag("bt-flechita-hover.png", :class => "hover_img") + "Convocatorias abiertas", convocatorias_path(editable: true if @editable), :remote => true, :class => "link-sobre", :id => "junta-link" %></li>
+				<li style="list-style-type:none; margin-bottom:5px;"><%= link_to image_tag('bt-flechita.png', :class => "leave_img") + image_tag("bt-flechita-hover.png", :class => "hover_img") + "Convocatorias abiertas", convocatorias_path(editable: @editable), :remote => true, :class => "link-sobre", :id => "junta-link" %></li>
 				<% end %>
-				<li style="list-style-type:none; margin-bottom:35px;"><%= link_to image_tag('bt-flechita.png', :class => "leave_img") + image_tag("bt-flechita-hover.png", :class => "hover_img") + (params[:locale] == "en" ? "Admission's procedures" : "Proceso de admisión"), proceso_path(editable: true if @editable), :remote => true, :class => "link-sobre", :id => "presidencia-link" %></li>
+				<li style="list-style-type:none; margin-bottom:35px;"><%= link_to image_tag('bt-flechita.png', :class => "leave_img") + image_tag("bt-flechita-hover.png", :class => "hover_img") + (params[:locale] == "en" ? "Admission's procedures" : "Proceso de admisión"), proceso_path(editable: @editable), :remote => true, :class => "link-sobre", :id => "presidencia-link" %></li>
     </ul>
     <!--          Aquí termina el menú pequeño          -->
     </div>
