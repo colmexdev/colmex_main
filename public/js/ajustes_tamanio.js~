@@ -18,12 +18,12 @@ catch(err){
 
 barra_render = false;
 
-$(document).on('page:load', function(){ 
+/*$(document).on('page:load', function(){ 
 	UIkit.init(); 
 	$(document).trigger("scroll"); 
-})
+})*/
 
-$(document).on("ready", function(){
+$(document).on("ready page:load", function(){
 	UIkit.init();
 	try{
 		console.log("Configurando Trix");
@@ -74,8 +74,13 @@ $(document).on("ready", function(){
 	catch(err){
 		descubres = [];
 	}
-	var cw = $('.frame-descubre')[0].offsetWidth - 8;
-	$.each($('.frame-descubre'),function(i,d){d.style.height = cw+'px'});
+
+	try{
+		var cw = $('.frame-descubre')[0].offsetWidth - 8;
+		$.each($('.frame-descubre'),function(i,d){d.style.height = cw+'px'});
+	}
+	catch(err){
+	}
 	//$('.frame-descubre').css({'height':cw+'px'});
 
   agregarAnaliticos();
@@ -89,11 +94,12 @@ $(document).on("ready", function(){
 			$(window).trigger("resize");
 			margenAuto();
 		}
-		catch(err){}}, 850);
-		ajustarImagenes();
+		catch(err){
+		}
+	}, 850);
+	ajustarImagenes();
 	}
 	catch(err){
-
 	}
 
 $(window).on("resize",function(){
