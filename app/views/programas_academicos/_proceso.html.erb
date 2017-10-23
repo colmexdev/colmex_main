@@ -1,10 +1,41 @@
-<% if editable %>
+<% if @editable %>
+<%= form_for(@sitio, :url => {:controller => "panel", :action => "editar", :params => {:set => "Contenido de sitios", :id => @sitio.id}, :uri => request.original_fullpath.gsub(/editable\//,"")}, :html => { :multipart => true }) do |f| %>
+  <% if @sitio.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@sitio.errors.count, "error") %> impidieron generar este objeto:</h2>
 
-<% else %>
+      <ul>
+      <% @sitio.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
 
+<%= hidden_field_tag :authenticity_token, form_authenticity_token -%>
+
+	<%= fields_for 'pars[]', @pars[0] do |p| %>
+		<div class="field">
+			<%= p.label (params[:locale] == "es" ? :texto : :texto_ingles), (params[:locale] == "es" ? ("Texto (Párrafo " + ((@pars[0].p_ind+1).to_s) + ")") : ("Texto (Inglés, párrafo " + ((@pars[0].p_ind+1).to_s) + ")")) %><br>
+			<%= p.trix_editor (params[:locale] == "es" ? :texto : :texto_ingles), value: (params[:locale] == "es" ? @pars[0].texto.html_safe : @pars[0].texto_ingles.html_safe) %>
+		</div>
+	<% end %>
+
+		  <h2 class="vino"><%= params[:locale] == "en" ? "Documentation:" : "Documentación:" %></h2>
+		  <ul class="uk-list uk-list-space uk-margin-large-bottom">
+		  <li><a href=<%= asset_path("nuevo-ingreso-licenciatura.pdf") %> target="_blank" class="uk-margin-large-bottom uk-link"><%= params[:locale] == "en" ? "Students entering BA programs" : "Estudiantes de nuevo ingreso Licenciatura" %></a></li>
+		  <li><a href=<%= asset_path("nuevo-ingreso-posgrados-mexicanos.pdf") %> target="_blank" class="uk-margin-large-bottom uk-link"><%= params[:locale] == "en" ? "Mexican students entering Master's and Doctoral Programs" : "Estudiantes Mexicanos de nuevo ingreso a Maestrías y Doctorados" %></a></li>
+		  <li><a href=<%= asset_path("nuevo-ingreso-posgrados-extranjeros.pdf") %> target="_blank" class="uk-margin-large-bottom uk-link"><%= params[:locale] == "en" ? "Foreign students entering Master's and Doctoral Programs" : "Estudiantes Extranjeros de nuevo ingreso a Maestrías y Doctorados" %></a></li>
+		  </ul>
+
+<br>
+<div class="actiones">
+<%= f.submit "Guardar cambios" %>
+</div>
 
 <% end %>
 
+<% else %>
 
 <p><%= params[:locale] == "en" ? "To be admitted as a regular student in one of the teaching programs offered by El Colegio de México, applicants must undergo a selection process, whose characteristics, terms and periods are established by the board of Professors-Researchers of each Center. The admission process considers the following aspects: a) analysis of the academic curriculum and background of the candidate, including two personal references (academic), a copy of the certificates of completion and qualification of the previous academic level; b) oral or written exams, c) personal interviews and, if applicable, d) approve the course offered." : "Para ser admitido como estudiante regular en alguno de los programas docentes ofrecidos por El Colegio de México, los aspirantes deben someterse a un proceso de selección,  cuyas características, términos y períodos son establecidos por la Junta de Profesores-Investigadores de cada Centro, órgano colegiado máximo del mismo. El proceso de admisión considera los siguientes aspectos: a) análisis del curriculum académico y antecedentes del candidato, entre los cuales deben encontrarse dos referencias personales (académicas), copia de los certificados de terminación y de titulación del nivel académico anterior; b) exámenes orales o escritos, c) entrevistas personales y, si es el caso, d) aprobar el curso propedéutico que se imparta." %></p>
 		  <p><%= params[:locale] == "en" ? "Once the results of the evaluations are gathered, the board of Professor-Researchers of the respective Center decides who are admitted as regular students to attend the program. Its decision is final and is communicated to the candidates via the Academic Coordinator or the Director of the Center." : "Una vez reunidos los resultados de las evaluaciones, la Junta de Profesores-Investigadores del Centro respectivo decide quiénes son admitidos como estudiantes regulares para cursar el programa; su decisión es inapelable y es comunicada a los candidatos vía el Coordinador Académico o el Director del Centro." %></p>
@@ -16,3 +47,8 @@
 		  <li><a href=<%= asset_path("nuevo-ingreso-posgrados-mexicanos.pdf") %> target="_blank" class="uk-margin-large-bottom uk-link"><%= params[:locale] == "en" ? "Mexican students entering Master's and Doctoral Programs" : "Estudiantes Mexicanos de nuevo ingreso a Maestrías y Doctorados" %></a></li>
 		  <li><a href=<%= asset_path("nuevo-ingreso-posgrados-extranjeros.pdf") %> target="_blank" class="uk-margin-large-bottom uk-link"><%= params[:locale] == "en" ? "Foreign students entering Master's and Doctoral Programs" : "Estudiantes Extranjeros de nuevo ingreso a Maestrías y Doctorados" %></a></li>
 		  </ul>
+
+<% end %>
+
+
+
