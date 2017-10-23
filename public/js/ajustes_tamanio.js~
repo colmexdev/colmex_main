@@ -50,7 +50,7 @@ $(document).on("ready", function(){
 	}
 
 	try{
-	var cw = $('.frame-descubre')[0].offsetWidth - 8;
+		var cw = $('.frame-descubre')[0].offsetWidth - 8;
 		if(gon.ev_tiny == ""){
 			$("#div_eventos").css("height","0");
 		}

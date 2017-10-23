@@ -26,6 +26,7 @@ $(document).on('page:load', function(){
 $(document).on("ready", function(){
 	UIkit.init();
 	try{
+		console.log("Configurando Trix");
 		configTrix();
 		addEventListener("trix-initialize", function(event) {
 			var histElement = event.target.toolbarElement.querySelector("[data-trix-button-group='history-tools']");
@@ -50,7 +51,7 @@ $(document).on("ready", function(){
 	}
 
 	try{
-		var cw = $('.frame-descubre')[0].offsetWidth - 8;
+		console.log("Ajustando tamaños de slide eventos");
 		if(gon.ev_tiny == ""){
 			$("#div_eventos").css("height","0");
 		}
@@ -73,11 +74,13 @@ $(document).on("ready", function(){
 	catch(err){
 		descubres = [];
 	}
-
-	$('.frame-descubre').css({'height':cw+'px'});
+	var cw = $('.frame-descubre')[0].offsetWidth - 8;
+	$.each($('.frame-descubre'),function(i,d){d.style.height = cw+'px'});
+	//$('.frame-descubre').css({'height':cw+'px'});
 
   agregarAnaliticos();
 	try{
+		console.log("Ajustando slider principal");
 		var anchos_badges = recabarAnchos();
 		escalarSlider(anchos_badges);
 		setTimeout(function(){
