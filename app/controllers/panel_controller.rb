@@ -92,6 +92,12 @@ class PanelController < ApplicationController
             @pf.save
             i = i + 1
           end
+          i = 0
+          while i < obj_params[:num_listing].to_i
+            @pf = Listing.new({sitio_id: @obj.id, ord_index: i})
+            @pf.save
+            i = i + 1
+          end
         end
         format.js { render :mostrar, params: {set: params[:set], id: @obj.id}, notice: 'Objeto generado exitosamente.' }
       else
@@ -156,9 +162,9 @@ class PanelController < ApplicationController
         end
       elsif @obj.update(obj_params)
         if @sets[params[:set].to_sym][:model] == Sitio
-          @num_pars = Parrafo.where("sitio_id = ?", params[:id])
-          @num_fotos = Foto.where("sitio_id =?", params[:id])
-
+          @num_pars = Parrafo.where("sitio_id = ?", params[:id].to_i)
+          @num_fotos = Foto.where("sitio_id = ?", params[:id].to_i)
+          @num_listing = Listing.where("sitio_id = ?", params[:id].to_i)
           if @num_pars.count < obj_params[:num_parrafos].to_i
             k = 0
             while k < obj_params[:num_parrafos].to_i
@@ -189,6 +195,21 @@ class PanelController < ApplicationController
             end
           end
 
+          if @num_listing.count < obj_params[:num_listing].to_i
+            k = 0
+            while k < obj_params[:num_listing].to_i
+              if Listing.where("sitio_id = ? and ord_index = ?",params[:id].to_i, k).count == 0
+                @pf = Listing.new({sitio_id: params[:id].to_i, ord_index: k})
+                @pf.save
+              end
+              k = k + 1
+            end
+          else
+            while @num_listing.count > obj_params[:num_listing].to_i
+              @num_listing[-1].destroy
+            end
+          end
+
         end
         format.js { render :mostrar, params: {set: params[:set], id: @obj.id}, notice: 'Objeto generado exitosamente.' }
       else
@@ -203,6 +224,7 @@ class PanelController < ApplicationController
     if params[:set] == "Catálogo de sitios"
       Parrafo.where("sitio_id = ?", params[:id].to_i).destroy_all
       Foto.where("sitio_id = ?", params[:id].to_i).destroy_all
+      Listing.where("sitio_id= ?",params[:id].to_i).destroy_all
     end
     @set = @sets[params[:set].to_sym][:model].order(updated_at: :desc).limit(@rpp).offset(0)
     @rpp = 10

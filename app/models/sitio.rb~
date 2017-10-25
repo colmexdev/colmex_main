@@ -1,6 +1,6 @@
 class Sitio < ActiveRecord::Base
-  has_many :fotos, dependent: :destroy
-  has_many :parrafos, dependent: :destroy
+  has_many :fotos, dependent: :delete_all
+  has_many :parrafos, dependent: :delete_all
 
   validates_presence_of :ref
   validates_presence_of :partial

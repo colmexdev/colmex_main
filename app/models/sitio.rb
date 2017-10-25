@@ -6,4 +6,5 @@ class Sitio < ActiveRecord::Base
   validates_presence_of :partial
   validates_presence_of :num_fotos
   validates_presence_of :num_parrafos
+  validates_presence_of :num_listing
 end

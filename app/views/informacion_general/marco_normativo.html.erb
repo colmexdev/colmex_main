@@ -5,6 +5,40 @@
 	<span class="titulo-grande"><%= 'Marco Normativo' %></span><br>
         <p>&nbsp;</p>
 
+<% if @editable %>
+
+<%= form_for(@sitio, :url => {:controller => "panel", :action => "editar", :params => {:set => "Contenido de sitios", :id => @sitio.id}, :uri => request.original_fullpath.gsub(/editable\//,"")}, :html => { :multipart => true }) do |f| %>
+  <% if @sitio.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@sitio.errors.count, "error") %> impidieron generar este objeto:</h2>
+
+      <ul>
+      <% @sitio.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+<%= hidden_field_tag :authenticity_token, form_authenticity_token -%>
+
+<% @sitio.num_listing.times do |i| %>
+<%= fields_for "listings[]", @listings[i] do |l| %>
+<div class="wrapper-links-doc">
+	<%= f.select(:ord_index,options_for_select(@docs.map{|d| [d.nombre.gsub(/<(\/)?div>/,"").html_safe,d.id]}, l.ord_index || @docs[i].id), {}, {})
+</div>
+<% end %>
+<% end %>
+
+<br>
+<div class="actions">
+<%= f.submit "Guardar cambios" %>
+</div %>
+
+<% end %>
+
+<% else %>
+
 <% @docs.each do |d| %>
 
 <div class="wrapper-links-doc">
@@ -15,6 +49,10 @@
 		<a href=<%= d.liga.to_s == "" ? d.archivo.url : d.liga %> target="_blank" class="documento uk-link"><%= (params[:locale] == "es" ? d.nombre.gsub(/<(\/)?div>/,"").html_safe : d.nombre_eng.gsub(/<(\/)?div>/,"").html_safe) %></a>
 	</div>
 </div>
+<% end %>
+
+
+
 <% end %>
 
 	</div>

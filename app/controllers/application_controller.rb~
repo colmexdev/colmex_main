@@ -20,6 +20,7 @@ class ApplicationController < ActionController::Base
     @sitio = Sitio.where("ref = ?",ref).first
     @pars = Parrafo.where("sitio_id = ?", @sitio.id)
     @pics = Foto.where("sitio_id = ?", @sitio.id)
+    @listings = Listing.where("sitio_id = ?",@sitio.id)
   end
 
   def filter_pars_pics
@@ -53,6 +54,15 @@ class ApplicationController < ActionController::Base
 
   def configure_permitted_parameters
     devise_parameter_sanitizer.permit(:sign_up, keys: [:usuario, :password, :password_confirmation, :admin])
+  end
+
+  def is_editable(sect)
+    @editable = request.original_fullpath.include?("editable")
+    get_pars_pics(sect)
+    if(@editable)
+      authenticate_admin!
+      filter_pars_pics
+    end
   end
 end
 
