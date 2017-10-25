@@ -40,7 +40,7 @@
 
 <% else %>
 
-<% @sitio = Sitio.where("ref = ? ","Marco normativo") %>
+<% @sitio = Sitio.where("ref = ? ","Marco normativo").first %>
 <% @lists = Listing.where("sitio_id = ?",@sitio.id).order(:ord_index).pluck(:list_id) %>
 <% @lists.each do |l| %>
 	<% d = Documento.find(l) %>
