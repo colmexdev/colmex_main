@@ -40,7 +40,8 @@
 
 <% else %>
 
-<% @lists = Listing.where("ref = ?","Marco normativo").order(:ord_index).pluck(:list_id) %>
+<% @sitio = Sitio.where("ref = ? ","Marco normativo") %>
+<% @lists = Listing.where("sitio_id = ?",@sitio.id).order(:ord_index).pluck(:list_id) %>
 <% @lists.each do |l| %>
 	<% d = Documento.find(l) %>
 <div class="wrapper-links-doc">
