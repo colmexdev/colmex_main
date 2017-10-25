@@ -160,6 +160,7 @@ class PanelController < ApplicationController
           @vals_list = params[:listings].values
           params[:listings].each_with_index do |p,i|
             Listing.find(@llaves_list[i].to_i).update(list_params(ActionController::Parameters.new(@vals_list[i])))
+          end
         end
         if params[:uri]
           format.html {redirect_to params[:uri]}
