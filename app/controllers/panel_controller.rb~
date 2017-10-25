@@ -94,7 +94,7 @@ class PanelController < ApplicationController
           end
           i = 0
           while i < obj_params[:num_listing].to_i
-            @pf = Listing.new({sitio_id: @obj.id})
+            @pf = Listing.new({sitio_id: @obj.id, ord_index: i})
             @pf.save
             i = i + 1
           end
@@ -162,9 +162,9 @@ class PanelController < ApplicationController
         end
       elsif @obj.update(obj_params)
         if @sets[params[:set].to_sym][:model] == Sitio
-          @num_pars = Parrafo.where("sitio_id = ?", params[:id])
-          @num_fotos = Foto.where("sitio_id =?", params[:id])
-
+          @num_pars = Parrafo.where("sitio_id = ?", params[:id].to_i)
+          @num_fotos = Foto.where("sitio_id = ?", params[:id].to_i)
+          @num_listing = Listing.where("sitio_id = ?", params[:id].to_i)
           if @num_pars.count < obj_params[:num_parrafos].to_i
             k = 0
             while k < obj_params[:num_parrafos].to_i
@@ -192,6 +192,21 @@ class PanelController < ApplicationController
           else
             while @num_fotos.count > obj_params[:num_fotos].to_i
               @num_fotos[-1].destroy
+            end
+          end
+
+          if @num_listing.count < obj_params[:num_listing].to_i
+            k = 0
+            while k < obj_params[:num_listing].to_i
+              if Listing.where("sitio_id = ? and ord_index = ?",params[:id].to_i, k).count == 0
+                @pf = Listing.new({sitio_id: params[:id].to_i, ord_index: k})
+                @pf.save
+              end
+              k = k + 1
+            end
+          else
+            while @num_listing.count > obj_params[:num_listing].to_i
+              @num_listing[-1].destroy
             end
           end
 
