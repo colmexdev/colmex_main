@@ -25,7 +25,7 @@
 <% @sitio.num_listing.times do |i| %>
 <%= fields_for "listings[]", @listings[i] do |l| %>
 <div class="wrapper-links-doc">
-	<%= f.select(:ord_index,options_for_select(@docs.map{|d| [d.nombre.gsub(/<(\/)?div>/,"").html_safe,d.id]}, l.ord_index || @docs[i].id), {}, {}) %>
+	<%= l.select(:ord_index,options_for_select(@docs.map{|d| [d.nombre.gsub(/<(\/)?div>/,"").html_safe,d.id]}, @listings[i].ord_index || @docs[i].id), {}, {}) %>
 </div>
 <% end %>
 <% end %>
