@@ -26,7 +26,7 @@
 <%= fields_for "listings[]", @listings[i] do |l| %>
 <div class="wrapper-links-doc">
 	<%= l.hidden_field :ord_index, value: i %>
-	<%= l.select(:list_id,options_for_select(@docs.map{|d| [d.nombre.gsub(/<(\/)?div>/,"").html_safe,d.id]}, @listings[i].id || @docs[i].id), {}, {}) %>
+	<%= l.select(:list_id,options_for_select(@docs.map{|d| [d.nombre.gsub(/<(\/)?div>/,"").html_safe,d.id]}, @listings[i].list_id || @docs[i].id), {}, {}) %>
 </div>
 <% end %>
 <% end %>
