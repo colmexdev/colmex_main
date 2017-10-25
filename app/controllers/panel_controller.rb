@@ -298,12 +298,12 @@ class PanelController < ApplicationController
         trix: []
       }, "Catálogo de sitios": {
         model: Sitio,
-        fields: {ref: "Página", partial: "URL", num_parrafos: "Párrafos", num_fotos: "Fotos"},
+        fields: {ref: "Página", partial: "URL", num_parrafos: "Párrafos", num_fotos: "Fotos", num_listing: "Listados"},
         imgs: {},
         trix: []
       }, "Contenido de sitios": {
         model: [Sitio,Parrafo, Foto],
-        fields: [{ref: "Página", partial: "URL", num_parrafos: "Párrafos", num_fotos: "Fotos"}, {ref: "Página", texto: "Texto", texto_ingles: "Texto (Inglés)", p_ind: "Párrafo"}, {ref: "Página", f_ind: "Foto"}],
+        fields: [{ref: "Página", partial: "URL", num_parrafos: "Párrafos", num_fotos: "Fotos", num_listing: "Listados"}, {ref: "Página", texto: "Texto", texto_ingles: "Texto (Inglés)", p_ind: "Párrafo"}, {ref: "Página", f_ind: "Foto"}],
         imgs: [{}, {}, {foto: "Foto"}],
         trix: [[],[:texto, :texto_ingles],[]]
       }
@@ -351,7 +351,7 @@ class PanelController < ApplicationController
     elsif params[:set] == "Usuarios gestores"
       params.require(:admin).permit(:usuario, :password, :password_confirmation, :admin)
     elsif params[:set] == "Catálogo de sitios"
-      params.require(:sitio).permit(:ref, :partial, :num_parrafos, :num_fotos)
+      params.require(:sitio).permit(:ref, :partial, :num_parrafos, :num_fotos, :num_listing)
     end
   end
 end

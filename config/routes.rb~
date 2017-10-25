@@ -125,6 +125,8 @@ Rails.application.routes.draw do
       get "cursos" => "programas_academicos#cursos", :as => :cursos_edit
       get 'calendario-escolar' => 'programas_academicos#calendario_escolar', :as => :calendario_edit
       get 'admisiones' => "programas_academicos#admisiones", :as => :admisiones_edit
+      get 'convocatorias' => 'programas_academicos#convocatorias', :as => :convocatorias_edit
+      get 'proceso' => 'programas_academicos#proceso', :as => :proceso_edit
     end
 
   end

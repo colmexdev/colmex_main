@@ -155,6 +155,7 @@ class InformacionGeneralController < ApplicationController
   end
 
   def marco_normativo
+    is_editable("Marco normativo")
     @docs = Documento.where("tipo = ?", "Marco normativo")
   end
 

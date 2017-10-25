@@ -63,6 +63,7 @@ class InformacionGeneralController < ApplicationController
   end
 
   def transparencia
+    is_editable("Unidad de Transparencia")
     @docs = Documento.where('tipo = ?','Unidad de Transparencia')
   end
 
