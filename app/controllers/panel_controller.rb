@@ -155,6 +155,12 @@ class PanelController < ApplicationController
             Foto.find(@llaves_pics[i].to_i).update(pic_params(ActionController::Parameters.new(@vals_pics[i])))
           end
         end
+        if params[:listings].present?
+          @llaves_list = params[:listings].keys
+          @vals_list = params[:listings].values
+          params[:listings].each_with_index do |p,i|
+            Listing.find(@llaves_list[i].to_i).update(list_params(ActionController::Parameters.new(@vals_list[i])))
+        end
         if params[:uri]
           format.html {redirect_to params[:uri]}
         else
@@ -343,6 +349,10 @@ class PanelController < ApplicationController
 
   def pic_params(pics)
     pics.permit(:ref, :foto, :f_ind, :caption, :caption_ingles)
+  end
+
+  def list_params(lists)
+    lists.permit(:ord_index, :list_id, :sitio_id)
   end
 
   def obj_params
