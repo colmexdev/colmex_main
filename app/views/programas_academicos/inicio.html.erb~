@@ -122,10 +122,55 @@
     <!--          Aquí empieza el contenido          -->
     <div class="uk-grid uk-grid-large uk-margin-large-bottom">
 
-		<div class="uk-width-large-1-2">
+		<div class="uk-width-large-1-2" style="padding:0;text-align:center;">
+<iframe class="vid-prog" src="https://www.youtube.com/embed/02ydzqVTyUs"></iframe>
+		</div>
+		<div class="uk-width-large-1-2" style="padding:0;text-align:center;">
+<iframe class="vid-prog" src="https://www.youtube.com/embed/Ec6mkZWdMw0"></iframe>
+		</div>
+		</div>
+<style>
+.vid-prog{width: 420px; height: 315px;}
+</style>
 
+    <div class="uk-grid uk-grid-large uk-margin-large-bottom">
+    <div class="uk-width-large-1-3 uk-text-left">
+    <span class="titulo-chico"><%= t('programas.licenciaturas') %></span><br>
+
+    <ul class=" uk-list uk-list-space">
+		<% @licenciaturas.each do |lic| %>
+		  <li class="uk-link sin-pointer"><%= (params[:locale] == "es" ? lic.titulo.gsub(/<(\/)?div>/,"").html_safe : lic.traduccion_tit.gsub(/<(\/)?div>/,"").html_safe) %></li>
+		<% end %>
+    </ul>
+		<a href="<%= licenciaturas_path(locale: params[:locale]) %>" class="ver-mas uk-margin-large-bottom uk-button-small"><%= t('programas.mas') %></a>
+    </div>
+
+    <div class="uk-width-large-1-3 uk-text-left">
+    <span class="titulo-chico"><%= t('programas.maestrias') %></span><br>
+
+    <ul class=" uk-list uk-list-space">
+    <% @maestrias.each do |mt| %>
+		  <li class="uk-link sin-pointer"><%= (params[:locale] == "es" ? mt.titulo.gsub(/<(\/)?div>/,"").html_safe : mt.traduccion_tit.gsub(/<(\/)?div>/,"").html_safe) %></li>
+		<% end %>
+    </ul>
+	<a href="<%= maestrias_path(locale: params[:locale]) %>" class="ver-mas uk-margin-large-bottom uk-button-small"><%= t('programas.mas') %></a>
+    </div>
+
+    <div class="uk-width-large-1-3 uk-text-left">
+    <span class="titulo-chico"><%= t('programas.doctorados') %></span><br>
+
+    <ul class=" uk-list uk-list-space">
+    <% @doctorados.each do |doc| %>
+		  <li class="uk-link sin-pointer"><%= (params[:locale] == "es" ? doc.titulo.gsub(/<(\/)?div>/,"").html_safe : doc.traduccion_tit.gsub(/<(\/)?div>/,"").html_safe) %></li>
+		<% end %>
+    </ul>
+		<a href="<%= doctorados_path(locale: params[:locale]) %>" class="ver-mas uk-margin-large-bottom uk-button-small"><%= t('programas.mas') %></a>
+    </div>
 		</div>
 
+
+<% if false %>
+    <div class="uk-grid uk-grid-large uk-margin-large-bottom">
     <div class="uk-width-large-3-5">
     <img src="<%= image_url(!@pics[0].foto.url.include?('vacio') ? @pics[0].foto.url : 'licenciaturas-chica.jpg') %>" alt="Licenciaturas">
     </div>
@@ -170,6 +215,9 @@
 		<a href="<%= doctorados_path(locale: params[:locale]) %>" class="ver-mas uk-margin-large-bottom uk-button-small"><%= t('programas.mas') %></a>
     </div>
     </div>
+
+<% end %>
+
     </div>
 
 <% end %>
