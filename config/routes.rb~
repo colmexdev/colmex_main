@@ -127,6 +127,7 @@ Rails.application.routes.draw do
       get 'admisiones' => "programas_academicos#admisiones", :as => :admisiones_edit
       get 'convocatorias' => 'programas_academicos#convocatorias', :as => :convocatorias_edit
       get 'proceso' => 'programas_academicos#proceso', :as => :proceso_edit
+      get 'marco-normativo' => 'informacion_general#marco_normativo', :as => :marco_edit
     end
 
   end

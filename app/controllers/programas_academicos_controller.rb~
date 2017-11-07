@@ -30,6 +30,7 @@ class ProgramasAcademicosController < ApplicationController
   end
 
   def proceso
+    is_editable("Admisiones (proceso)")
     respond_to do |format|
       format.js
     end

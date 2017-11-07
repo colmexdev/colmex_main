@@ -45,7 +45,7 @@
 
     <ul class=" uk-list uk-list-space">
 		<% @licenciaturas.each do |lic| %>
-		  <li class="uk-link sin-pointer"><%= (params[:locale] == "es" ? lic.titulo : lic.traduccion_tit)%></li>
+		  <li class="uk-link sin-pointer"><%= (params[:locale] == "es" ? lic.titulo.gsub(/<(\/)?div>/,"").html_safe : lic.traduccion_tit.gsub(/<(\/)?div>/,"").html_safe)%></li>
 		<% end %>
     </ul>
 		<a href=<%= licenciaturas_path %> class="ver-mas uk-margin-large-bottom uk-button-small"><%= t('programas.mas') %></a>
@@ -73,7 +73,7 @@
 
     <ul class=" uk-list uk-list-space">
     <% @maestrias.each do |mt| %>
-		  <li class="uk-link sin-pointer"><%= (params[:locale] == "es" ? mt.titulo : mt.traduccion_tit) %></li>
+		  <li class="uk-link sin-pointer"><%= (params[:locale] == "es" ? mt.titulo.gsub(/<(\/)?div>/,"").html_safe : mt.traduccion_tit.gsub(/<(\/)?div>/,"").html_safe) %></li>
 		<% end %>
     </ul>
 	<a href=<%= maestrias_path %> class="ver-mas uk-margin-large-bottom uk-button-small"><%= t('programas.mas') %></a>
@@ -100,7 +100,7 @@
 
     <ul class=" uk-list uk-list-space">
     <% @doctorados.each do |doc| %>
-		  <li class="uk-link sin-pointer"><%= (params[:locale] == "es" ? doc.titulo : doc.traduccion_tit) %></li>
+		  <li class="uk-link sin-pointer"><%= (params[:locale] == "es" ? doc.titulo.gsub(/<(\/)?div>/,"").html_safe : doc.traduccion_tit.gsub(/<(\/)?div>/,"").html_safe) %></li>
 		<% end %>
     </ul>
 		<a href=<%= doctorados_path %> class="ver-mas uk-margin-large-bottom uk-button-small"><%= t('programas.mas') %></a>
@@ -121,6 +121,11 @@
     <p>&nbsp;</p>
     <!--          Aquí empieza el contenido          -->
     <div class="uk-grid uk-grid-large uk-margin-large-bottom">
+
+		<div class="uk-width-large-1-2">
+
+		</div>
+
     <div class="uk-width-large-3-5">
     <img src="<%= image_url(!@pics[0].foto.url.include?('vacio') ? @pics[0].foto.url : 'licenciaturas-chica.jpg') %>" alt="Licenciaturas">
     </div>
@@ -129,10 +134,10 @@
 
     <ul class=" uk-list uk-list-space">
 		<% @licenciaturas.each do |lic| %>
-		  <li class="uk-link sin-pointer"><%= (params[:locale] == "es" ? lic.titulo.gsub(/<(\/)?div>/,"").html_safe) : lic.traduccion_tit.gsub(/<(\/)?div>/,"").html_safe)%></li>
+		  <li class="uk-link sin-pointer"><%= (params[:locale] == "es" ? lic.titulo.gsub(/<(\/)?div>/,"").html_safe : lic.traduccion_tit.gsub(/<(\/)?div>/,"").html_safe) %></li>
 		<% end %>
     </ul>
-		<a href=<%= licenciaturas_path %> class="ver-mas uk-margin-large-bottom uk-button-small"><%= t('programas.mas') %></a>
+		<a href="<%= licenciaturas_path(locale: params[:locale]) %>" class="ver-mas uk-margin-large-bottom uk-button-small"><%= t('programas.mas') %></a>
     </div>
     </div>
     <div class="uk-grid uk-grid-large uk-margin-large-bottom">
@@ -144,10 +149,10 @@
 
     <ul class=" uk-list uk-list-space">
     <% @maestrias.each do |mt| %>
-		  <li class="uk-link sin-pointer"><%= (params[:locale] == "es" ? mt.titulo.gsub(/<(\/)?div>/,"").html_safe) : mt.traduccion_tit.gsub(/<(\/)?div>/,"").html_safe) %></li>
+		  <li class="uk-link sin-pointer"><%= (params[:locale] == "es" ? mt.titulo.gsub(/<(\/)?div>/,"").html_safe : mt.traduccion_tit.gsub(/<(\/)?div>/,"").html_safe) %></li>
 		<% end %>
     </ul>
-	<a href=<%= maestrias_path %> class="ver-mas uk-margin-large-bottom uk-button-small"><%= t('programas.mas') %></a>
+	<a href="<%= maestrias_path(locale: params[:locale]) %>" class="ver-mas uk-margin-large-bottom uk-button-small"><%= t('programas.mas') %></a>
     </div>
     </div>
     <div class="uk-grid uk-grid-large uk-margin-large-bottom">
@@ -159,10 +164,10 @@
 
     <ul class=" uk-list uk-list-space">
     <% @doctorados.each do |doc| %>
-		  <li class="uk-link sin-pointer"><%= (params[:locale] == "es" ? doc.titulo.gsub(/<(\/)?div>/,"").html_safe) : doc.traduccion_tit.gsub(/<(\/)?div>/,"").html_safe) %></li>
+		  <li class="uk-link sin-pointer"><%= (params[:locale] == "es" ? doc.titulo.gsub(/<(\/)?div>/,"").html_safe : doc.traduccion_tit.gsub(/<(\/)?div>/,"").html_safe) %></li>
 		<% end %>
     </ul>
-		<a href=<%= doctorados_path %> class="ver-mas uk-margin-large-bottom uk-button-small"><%= t('programas.mas') %></a>
+		<a href="<%= doctorados_path(locale: params[:locale]) %>" class="ver-mas uk-margin-large-bottom uk-button-small"><%= t('programas.mas') %></a>
     </div>
     </div>
     </div>
