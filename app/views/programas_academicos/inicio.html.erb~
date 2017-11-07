@@ -123,10 +123,10 @@
     <div class="uk-grid uk-grid-large uk-margin-large-bottom">
 
 		<div class="uk-width-large-1-2" style="padding:0;text-align:center;">
-<iframe class="vid-prog" src="https://www.youtube.com/embed/02ydzqVTyUs"></iframe>
+<iframe class="vid-prog uk-responsive-width" src="https://www.youtube.com/embed/02ydzqVTyUs"></iframe>
 		</div>
 		<div class="uk-width-large-1-2" style="padding:0;text-align:center;">
-<iframe class="vid-prog" src="https://www.youtube.com/embed/Ec6mkZWdMw0"></iframe>
+<iframe class="vid-prog uk-responsive-width" src="https://www.youtube.com/embed/Ec6mkZWdMw0"></iframe>
 		</div>
 		</div>
 <style>
