@@ -7,17 +7,17 @@
     <img src=<%= conv.foto.url %> class="uk-border-rounded" alt="Foto curso">
     </div>
     <div class="uk-width-4-5 uk-vertical-align-middle uk-text-left uk-text-break">
-    <h2 class="vino"><%= conv.titulo.gsub(/<(\/)?div>/,"").html_safe %></h2>
+    <h2 class="vino"><%= conv.titulo.gsub(/<(\/)?div>/,"").mb_chars.html_safe %></h2>
     <div class="uk-grid uk-grid-large">
     <div class="uk-width-large-4-6 uk-text-left">
-    <p><%= conv.descripcion.gsub(/<(\/)?div>/,"").html_safe %></p>
+    <p><%= conv.descripcion.gsub(/<(\/)?div>/,"").mb_chars.html_safe %></p>
     <% if conv.imparte.to_s != "" %>
-      <p class="uk-text-left">Impartido por <%= conv.imparte.gsub(/<(\/)?div>/,"").html_safe %></p>
+      <p class="uk-text-left">Impartido por <%= conv.imparte.gsub(/<(\/)?div>/,"").mb_chars.html_safe %></p>
     <% end %>
     <% if !conv.liga.nil? %>
     <a href=<%= conv.liga %> target="_blank" class="ver-mas uk-margin-large-bottom uk-button-small">Más información</a>
     <!-- Go to www.addthis.com/dashboard to customize your tools -->
-    <div style="display:inline-block;float:right;" class="addthis_inline_share_toolbox" data-url=<%= conv.liga %> data-title="<%= conv.titulo %>"></div>
+    <div style="display:inline-block;float:right;" class="addthis_inline_share_toolbox" data-url=<%= conv.liga %> data-title="<%= conv.titulo.gsub(/<\/?((div)|(p))>/,"").mb_chars %>"></div>
     <% end %>
     </div>
     <div class="uk-width-large-2-6">

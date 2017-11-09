@@ -1,7 +1,7 @@
 <script type="text/javascript">initAddThis();</script>
 <% @catedras.each do |cat| %>
 	<div>
-	<span class="titulo-chico vino"><%= params[:locale] == "en" ? cat.titulo_eng : cat.titulo %></span><br>
+	<span class="titulo-chico vino"><%= params[:locale] == "en" ? cat.titulo_eng.html_safe : cat.titulo.html_safe %></span><br>
 	<p><%= params[:locale] == "en" ? cat.descripcion_eng.html_safe : cat.descripcion.html_safe %></p>
 	<a href=<%= cat.liga %> target="_blank" class="ver-mas uk-margin-large-bottom uk-button-small"><%= params[:locale] == "en" ? "More information" : "Más información" %></a>
 	<div class="addthis_inline_share_toolbox" data-url=<%= cat.liga %> data-title="<%= params[:locale] == "en" ? cat.titulo_eng : cat.titulo %>" style="display:inline-block; float: right;"></div>

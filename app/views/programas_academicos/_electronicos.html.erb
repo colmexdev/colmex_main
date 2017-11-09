@@ -13,14 +13,14 @@
     <img src=<%= e.foto.url %> class="uk-border-rounded" alt="Foto curso">
     </div>
     <div class="uk-width-4-5 uk-vertical-align-middle uk-text-left uk-text-break">
-    <h2 class="vino"><%= e.titulo %></h2>
+    <h2 class="vino"><%= e.titulo.gsub(/<\/?((div)|(p))>/,"").mb_chars %></h2>
     <% if tip != "Breve" %>
     <div class="uk-grid uk-grid-large">
     <div class="uk-width-large-4-6 uk-text-left">
     <% end %>
-    <p><%= e.descripcion %></p>
+    <p><%= e.descripcion.gsub(/<\/?(div)>/,"").mb_chars %></p>
     <% if e.imparte.to_s != "" %>
-      <p class="uk-text-left">Impartido por <%= e.imparte %></p>
+      <p class="uk-text-left">Impartido por <%= e.imparte.gsub(/<\/?((div)|(p))>/,"").mb_chars %></p>
     <% end %>
 
 		<% if tip == "MOOC" %>
