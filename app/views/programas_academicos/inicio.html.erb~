@@ -122,10 +122,10 @@
     <!--          Aquí empieza el contenido          -->
     <div class="uk-grid uk-grid-large uk-margin-large-bottom">
 
-			<div class="<%= 'uk-width-large-1-' + (params[:locale] == 'es' ? '2' : '3' %>" style="padding-bottom:25px;text-align:center;">
+			<div class="<%= 'uk-width-large-1-' + (params[:locale] == 'es' ? '2' : '3') %>" style="padding-bottom:25px;text-align:center;">
 	<iframe class="vid-prog uk-responsive-width" src="https://www.youtube.com/embed/02ydzqVTyUs"></iframe>
 			</div>
-			<div class="<%= 'uk-width-large-1-' + (params[:locale] == 'es' ? '2' : '3' %>" style="padding-bottom:25px;text-align:center;">
+			<div class="<%= 'uk-width-large-1-' + (params[:locale] == 'es' ? '2' : '3') %>" style="padding-bottom:25px;text-align:center;">
 	<iframe class="vid-prog uk-responsive-width" src="https://www.youtube.com/embed/Ec6mkZWdMw0"></iframe>
 			</div>
 			<% if params[:locale] == "en" %>
