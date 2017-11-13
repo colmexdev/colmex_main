@@ -130,7 +130,7 @@
 			</div>
 			<% if params[:locale] == "en" %>
 			<div class="<%= 'uk-width-large-1-3' %>" style="padding-bottom:25px;text-align:center;">
-	<iframe class="vid-prog uk-responsive-width" src="https://youtu.be/NXclcUHmv00"></iframe>
+	<iframe class="vid-prog uk-responsive-width" src="https://youtube.com/embed/NXclcUHmv00"></iframe>
 			</div>
 			<% end %>
 		</div>
