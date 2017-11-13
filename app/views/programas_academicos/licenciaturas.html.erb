@@ -80,7 +80,7 @@
     <h2 class="vino"><%= params[:locale] == "es" ? ("Licenciatura en " + lic.titulo.gsub(/<(\/)?div>/,"").mb_chars.html_safe) : ("B.A. in " + lic.traduccion_tit.gsub(/<(\/)?div>/,"").mb_chars.html_safe) %></h2>
     <div class="uk-grid uk-grid-large">
     <div class="uk-width-large-3-5 uk-text-left">
-    <p><%= (params[:locale] == "es" ? lic.descripcion.gsub(/<\/?p)>/,"").mb_chars.html_safe : lic.traduccion_desc.gsub(/<\/?p>/,"").mb_chars.html_safe) %></p>
+    <p><%= (params[:locale] == "es" ? lic.descripcion.gsub(/<\/?p>/,"").mb_chars.html_safe : lic.traduccion_desc.gsub(/<\/?p>/,"").mb_chars.html_safe) %></p>
     <% if !lic.liga.nil? %>
       <a href=<%= lic.liga %> target="_blank" class="ver-mas uk-margin-large-bottom uk-button-small"><%= t('programas.info') %></a>
     <% end %>
