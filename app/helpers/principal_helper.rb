@@ -115,11 +115,11 @@ module PrincipalHelper
         bloque_html = bloque_html + ActionController::Base.helpers.image_tag(d.imagen, :class => "imagen-descubre")
       else
         bloque_html = bloque_html + "<p><span class=\"cont-descubre\">" + (params[:locale] == "en" ? Content.where("tipo = ?",d.contenido).first.tipo_eng.mb_chars.upcase : d.contenido.mb_chars.upcase) + "</span></p>"
-        bloque_html = bloque_html + "<p><span class=\"titulo-descubre\">" + d.titulo.gsub(/<(\/)?p>/,"") + "</span></p>"
+        bloque_html = bloque_html + "<p><span class=\"titulo-descubre\">" + d.titulo.gsub(/<(\/)?((p)|(div))>/,"") + "</span></p>"
       end
 bloque_html = bloque_html + "<a href=\"" + d.liga + "\" " + (d.contenido.mb_chars.downcase == "video" ? ("data-uk-lightbox data-lightbox-type=\"iframe\"") : "target=\"_blank\"" ) + "><div class=\"frame-hover\" id=\"frame-" + i.to_s + "-hov\">"
       bloque_html = bloque_html + "<p><span class=\"cont-descubre\">" + (params[:locale] == "en" ? Content.where("tipo = ?",d.contenido).first.tipo_eng.mb_chars.upcase : d.contenido.mb_chars.upcase) + "</span></p>"
-      bloque_html = bloque_html + "<p><span class=\"titulo-descubre\" id=\"tit-desc-" + i.to_s + "\">" + d.titulo.gsub(/<\/?p>/,"") + "</span></p>"
+      bloque_html = bloque_html + "<p><span class=\"titulo-descubre\" id=\"tit-desc-" + i.to_s + "\">" + d.titulo.gsub(/<\/?((p)|(div))>/,"") + "</span></p>"
       bloque_html = bloque_html + ActionController::Base.helpers.image_tag(Content.where(tipo: d.contenido).first.icono.url, :class => "icono-descubre")
       bloque_html = bloque_html + "</div></a></div>"
       i = i + 1
