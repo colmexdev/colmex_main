@@ -129,6 +129,7 @@ Rails.application.routes.draw do
       get 'proceso' => 'programas_academicos#proceso', :as => :proceso_edit
       get 'marco-normativo' => 'informacion_general#marco_normativo', :as => :marco_edit
       get 'autoridades' => 'informacion_general#autoridades', :as => :autoridades_edit
+      get 'operativas' => 'informacion_general#operativas', :as => :operativas_edit
     end
 
   end
