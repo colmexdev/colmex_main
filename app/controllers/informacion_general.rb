@@ -51,6 +51,7 @@ class InformacionGeneralController < ApplicationController
   end
 
   def autoridades
+    is_editable("Autoridades")
     @actas = Documento.where(:tipo => "Junta")
   end
 
