@@ -1,4 +1,35 @@
-    <% @operativas.each do |o| %>
+<%= form_for(@sitio, :url => {:controller => "panel", :action => "editar", :params => {:set => "Contenido de sitios", :id => @sitio.id}, :uri => request.original_fullpath.gsub(/editable\//,"")}, :html => { :multipart => true }) do |f| %>
+  <% if @sitio.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@sitio.errors.count, "error") %> impidieron generar este objeto:</h2>
+
+      <ul>
+      <% @sitio.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+<%= hidden_field_tag :authenticity_token, form_authenticity_token -%>
+
+<% if @editable %>
+	<% @operativas.each_with_index do |d,i| %>
+	<%= fields_for "listings[]", @listings[i] do |l| %>
+	<div class="wrapper-links-doc">
+		<%= l.hidden_field :ord_index, value: i %>
+		<%= l.select(:list_id,options_for_select(@operativas.map{|d| [d.nombre.gsub(/<(\/)?div>/,"").html_safe,d.id]}, @listings[i].list_id || @operativas[i].id), {}, {}) %>
+	</div>
+	<% end %>
+	<% end %>
+
+<% else %>
+
+	<% @sitio = Sitio.where("ref = ? ","Autoridades (operativas)").first %>
+	<% @lists = Listing.where("sitio_id = ?",@sitio.id).order(:ord_index).pluck(:list_id) %>
+	<% @lists.each do |l| %>
+		<% o = Documento.find(l) %>
+
     <div class="uk-margin-large-bottom">
     <h4><%= (o.depto.to_s != "" ? (params[:locale] == "es" ? o.depto.mb_chars.upcase : o.depto_eng.mb_chars.upcase ) : (params[:locale] == "es" ? o.cargo.mb_chars.upcase : o.cargo_eng.mb_chars.upcase )) %></h4>
     <h3 class="vino"><%= o.nombre %></h3>
@@ -7,3 +38,12 @@
     <p class="izq-align"><%= t('sobre.autoridades.ext') %>: <%= o.extension %></p>
     </div>
     <% end %>
+<% end %>
+
+<% if @editable %>
+<div class="actions">
+	<%= f.submit "Guardar cambios" %>
+</div>
+
+<% end %>
+<% end %>
