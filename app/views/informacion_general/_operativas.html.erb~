@@ -28,7 +28,7 @@
 	<% @sitio = Sitio.where("ref = ? ","Autoridades (operativas)").first %>
 	<% @lists = Listing.where("sitio_id = ?",@sitio.id).order(:ord_index).pluck(:list_id) %>
 	<% @lists.each do |l| %>
-		<% o = Documento.find(l) %>
+		<% o = Personal.find(l) %>
 
     <div class="uk-margin-large-bottom">
     <h4><%= (o.depto.to_s != "" ? (params[:locale] == "es" ? o.depto.mb_chars.upcase : o.depto_eng.mb_chars.upcase ) : (params[:locale] == "es" ? o.cargo.mb_chars.upcase : o.cargo_eng.mb_chars.upcase )) %></h4>

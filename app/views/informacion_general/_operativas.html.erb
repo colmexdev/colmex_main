@@ -27,6 +27,7 @@
 
 	<% @sitio = Sitio.where("ref = ? ","Autoridades (operativas)").first %>
 	<% @lists = Listing.where("sitio_id = ?",@sitio.id).order(:ord_index).pluck(:list_id) %>
+	<% logger.debug @lists %>
 	<% @lists.each do |l| %>
 		<% o = Personal.find(l) %>
 
