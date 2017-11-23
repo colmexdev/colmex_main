@@ -14,11 +14,11 @@
 <%= hidden_field_tag :authenticity_token, form_authenticity_token -%>
 
 <% if @editable %>
-	<% @operativas.each_with_index do |d,i| %>
+	<% @bibliotecas.each_with_index do |d,i| %>
 	<%= fields_for "listings[]", @listings[i] do |l| %>
 	<div class="wrapper-links-doc">
 		<%= l.hidden_field :ord_index, value: i %>
-		<%= l.select(:list_id,options_for_select(@operativas.map{|d| [d.nombre.gsub(/<(\/)?div>/,"").html_safe,d.id]}, @listings[i].list_id || @operativas[i].id), {}, {}) %>
+		<%= l.select(:list_id,options_for_select(@bibliotecas.map{|d| [d.nombre.gsub(/<(\/)?div>/,"").html_safe,d.id]}, @listings[i].list_id || @bibliotecas[i].id), {}, {}) %>
 	</div>
 	<% end %>
 	<% end %>
