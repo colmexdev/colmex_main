@@ -141,6 +141,7 @@ class InformacionGeneralController < ApplicationController
   end
 
   def comision
+    is_editable("Autoridades (comisión)")
     @coms = Personal.where("seccion = ?", "Comision")
   end
 
