@@ -28,7 +28,6 @@
 	<% @sitio = Sitio.where("ref = ? ","Autoridades (administración)").first %>
 	<% @lists = Listing.where("sitio_id = ?",@sitio.id).order(:ord_index).pluck(:list_id) %>
 	<% @lists.each do |l| %>
-		<% logger.debug l %>
 		<% a = Personal.find(l) %>
 
     <div class="uk-margin-large-bottom">

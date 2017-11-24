@@ -131,6 +131,7 @@ Rails.application.routes.draw do
       get 'autoridades' => 'informacion_general#autoridades', :as => :autoridades_edit
       get 'operativas' => 'informacion_general#operativas', :as => :operativas_edit
       get 'apoyo' => 'informacion_general#unidades_de_apoyo', :as => :unidades_de_apoyo_edit
+      get 'administracion' => 'informacion_general#administracion', :as => :administracion_edit
     end
 
   end

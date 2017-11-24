@@ -49,14 +49,3 @@
 <% end %>
 <% end %>
 
-<p>&nbsp;</p>
-    <% @admins.each do |a| %>
-    <div class="uk-margin-large-bottom">
-    <h4><%= (params[:locale] == "es" ? a.cargo.mb_chars.upcase : a.cargo_eng.mb_chars.upcase ) %></h4>
-    <h3 class="vino"><%= a.nombre %></h3>
-    <p class="izq-align"><%= t('sobre.autoridades.correo') %>: <a class="uk-link" href="mailto:<%= a.correo %>"><%= a.correo %></a></p>
-    <p class="izq-align"><%= t('sobre.autoridades.tel') %>: <%= a.telefono %></p>
-    <p class="izq-align"><%= t('sobre.autoridades.ext') %>: <%= a.extension %></p>
-    </div>
-    <% end %>
-
