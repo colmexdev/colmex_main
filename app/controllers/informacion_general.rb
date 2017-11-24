@@ -112,6 +112,7 @@ class InformacionGeneralController < ApplicationController
   end
 
   def centros_de_estudio
+    is_editable("Autoridades (centros)")
     @centros = Personal.where(:seccion => "Centros")
     respond_to do |format|
       format.js
