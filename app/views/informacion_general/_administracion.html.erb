@@ -1,3 +1,54 @@
+<%= form_for(@sitio, :url => {:controller => "panel", :action => "editar", :params => {:set => "Contenido de sitios", :id => @sitio.id}, :uri => request.original_fullpath.gsub(/editable\/administracion/,"autoridades")}, :html => { :multipart => true }) do |f| %>
+  <% if @sitio.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@sitio.errors.count, "error") %> impidieron generar este objeto:</h2>
+
+      <ul>
+      <% @sitio.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+<%= hidden_field_tag :authenticity_token, form_authenticity_token -%>
+
+<% if @editable %>
+	<% @admins.each_with_index do |d,i| %>
+	<%= fields_for "listings[]", @listings[i] do |l| %>
+	<div class="wrapper-links-doc">
+		<%= l.hidden_field :ord_index, value: i %>
+		<%= l.select(:list_id,options_for_select(@operativas.map{|d| [d.nombre.gsub(/<(\/)?div>/,"").html_safe,d.id]}, @listings[i].list_id || @admins[i].id), {}, {}) %>
+	</div>
+	<% end %>
+	<% end %>
+
+<% else %>
+
+	<% @sitio = Sitio.where("ref = ? ","Autoridades (administración)").first %>
+	<% @lists = Listing.where("sitio_id = ?",@sitio.id).order(:ord_index).pluck(:list_id) %>
+	<% @lists.each do |l| %>
+		<% logger.debug l %>
+		<% a = Personal.find(l) %>
+
+    <div class="uk-margin-large-bottom">
+    <h4><%= (params[:locale] == "es" ? a.cargo.mb_chars.upcase : a.cargo_eng.mb_chars.upcase ) %></h4>
+    <h3 class="vino"><%= a.nombre %></h3>
+    <p class="izq-align"><%= t('sobre.autoridades.correo') %>: <a class="uk-link" href="mailto:<%= a.correo %>"><%= a.correo %></a></p>
+    <p class="izq-align"><%= t('sobre.autoridades.tel') %>: <%= a.telefono %></p>
+    <p class="izq-align"><%= t('sobre.autoridades.ext') %>: <%= a.extension %></p>
+    </div>
+    <% end %>
+<% end %>
+
+<% if @editable %>
+<div class="actions">
+	<%= f.submit "Guardar cambios" %>
+</div>
+
+<% end %>
+<% end %>
+
 <p>&nbsp;</p>
     <% @admins.each do |a| %>
     <div class="uk-margin-large-bottom">

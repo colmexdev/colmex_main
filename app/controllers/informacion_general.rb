@@ -127,6 +127,7 @@ class InformacionGeneralController < ApplicationController
   end
 
   def administracion
+    is_editable("Autoridades (administración)")
     @admins = Personal.where("seccion = ? AND lower(cargo) like ?", "Administración", "secretari_ administrativ_").union(Personal.where("seccion = ? AND lower(cargo) = ?", "Administración", "dirección de asuntos escolares")).union(Personal.where("seccion = ? AND lower(cargo) like ?", "Administración", "director% de finanzas")).union(Personal.where("seccion = ? AND lower(cargo) like ?", "Administración", "director% de presupuesto y proyectos especiales")).union(Personal.where("seccion = ? AND lower(cargo) like ?", "Administración", "director% de recursos humanos")).union(Personal.where("seccion = ? AND lower(cargo) like ?", "Administración", "director% de servicios generales")).union(Personal.where("seccion = ? AND lower(cargo) = ?", "Administración", "jurídico")).union(Personal.where("seccion = ? AND lower(cargo) like ?", "Administración", "contralor% intern_"))
     respond_to do |format|
       format.js
