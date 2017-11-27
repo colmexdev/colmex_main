@@ -1,8 +1,59 @@
+<%= form_for(@sitio, :url => {:controller => "panel", :action => "editar", :params => {:set => "Contenido de sitios", :id => @sitio.id}, :uri => request.original_fullpath.gsub(/editable\/consejo/,"autoridades")}, :html => { :multipart => true }) do |f| %>
+  <% if @sitio.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@sitio.errors.count, "error") %> impidieron generar este objeto:</h2>
+
+      <ul>
+      <% @sitio.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+<%= hidden_field_tag :authenticity_token, form_authenticity_token -%>
+
+<% if @editable %>
+	<% @consejo.each_with_index do |d,i| %>
+	<%= fields_for "listings[]", @listings[i] do |l| %>
+
   <% @deptos.each do |d| %>
     <h3 style="margin-top:25px;margin-bottom:15px;"><%= d.mb_chars.upcase %></h3>
 		<% condicion = (params[:locale] == "es" ? "depto = ?" : "depto_eng = ?") %>
 		<% @consejo.where(condicion,d).each do |c| %>
-			<h5 style="margin-top:10px;margin-bottom:0px;"><%= c.nombre.mb_chars %></h5>
+			<div class="wrapper-links-doc">
+				<%= l.hidden_field :ord_index, value: i %>
+				<%= l.select(:list_id,options_for_select(@consejo.map{|d| [d.nombre.gsub(/<(\/)?div>/,"").html_safe,d.id]}, @listings[i].list_id || @consejo[i].id), {}, {}) %>
+			</div>
 		<% end %>
   <% end %>
+
+	<% end %>
+	<% end %>
+
+<% else %>
+
+	<% @sitio = Sitio.where("ref = ? ","Autoridades (consejo)").first %>
+	<% @lists = Listing.where("sitio_id = ?",@sitio.id).order(:ord_index).pluck(:list_id) %>
+	<% @it = 0 %>
+  <% @deptos.each_with_index do |d,j| %>
+		  <h3 style="margin-top:25px;margin-bottom:15px;"><%= d.mb_chars.upcase %></h3>
+			<% condicion = (params[:locale] == "es" ? "depto = ?" : "depto_eng = ?") %>
+			<% @totals[j].times do |co| %>
+				<% c = Personal.find(@lists[@it]) %>
+				<h5 style="margin-top:10px;margin-bottom:0px;"><%= c.nombre.mb_chars %></h5>
+				<% @it = @it + 1 %>
+			<% end %>
+
+
+  <% end %>
+<% end %>
+
+<% if @editable %>
+<div class="actions">
+	<%= f.submit "Guardar cambios" %>
+</div>
+
+<% end %>
+<% end %>
 
