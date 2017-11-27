@@ -133,6 +133,7 @@ Rails.application.routes.draw do
       get 'apoyo' => 'informacion_general#unidades_de_apoyo', :as => :unidades_de_apoyo_edit
       get 'administracion' => 'informacion_general#administracion', :as => :administracion_edit
       get 'centros_de_estudio' => 'informacion_general#centros_de_estudio', :as => :centros_autoridades_edit
+      get "comision" => "informacion_general#comision", :as => :comision_edit
     end
 
   end

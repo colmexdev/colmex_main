@@ -1,6 +1,6 @@
   <% @deptos.each do |d| %>
     <h3 style="margin-top:25px;margin-bottom:15px;"><%= d.mb_chars.upcase %></h3>
-		<% condicion = (params[:locale] == "sp" ? "depto = ?" : "depto_eng = ?") %>
+		<% condicion = (params[:locale] == "es" ? "depto = ?" : "depto_eng = ?") %>
 		<% @consejo.where(condicion,d).each do |c| %>
 			<h5 style="margin-top:10px;margin-bottom:0px;"><%= c.nombre.mb_chars %></h5>
 		<% end %>
