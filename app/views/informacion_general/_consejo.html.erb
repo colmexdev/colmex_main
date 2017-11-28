@@ -14,21 +14,21 @@
 <%= hidden_field_tag :authenticity_token, form_authenticity_token -%>
 
 <% if @editable %>
-	<% @consejo.each_with_index do |d,i| %>
-	<%= fields_for "listings[]", @listings[i] do |l| %>
+	<% i = 0 %>
 
-  <% @deptos.each do |d| %>
-    <h3 style="margin-top:25px;margin-bottom:15px;"><%= d.mb_chars.upcase %></h3>
+	<% @deptos.each do |d| %>
+		<h3 style="margin-top:25px;margin-bottom:15px;"><%= d.mb_chars.upcase %></h3>
 		<% condicion = (params[:locale] == "es" ? "depto = ?" : "depto_eng = ?") %>
 		<% @consejo.where(condicion,d).each do |c| %>
-			<div class="wrapper-links-doc">
-				<%= l.hidden_field :ord_index, value: i %>
-				<%= l.select(:list_id,options_for_select(@consejo.map{|d| [d.nombre.gsub(/<(\/)?div>/,"").html_safe,d.id]}, @listings[i].list_id || @consejo[i].id), {}, {}) %>
-			</div>
+			<%= fields_for "listings[]", @listings[i] do |l| %>
+				<div class="wrapper-links-doc">
+					<%= l.hidden_field :ord_index, value: i %>
+					<%= l.select(:list_id,options_for_select(@consejo.map{|d| [d.nombre.gsub(/<(\/)?div>/,"").html_safe,d.id]}, @listings[i].list_id || @consejo[i].id), {}, {}) %>
+				</div>
+				<% i = i + 1 %>
+			<% end %>
 		<% end %>
-  <% end %>
 
-	<% end %>
 	<% end %>
 
 <% else %>
