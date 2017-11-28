@@ -36,6 +36,8 @@
 	<% @sitio = Sitio.where("ref = ? ","Autoridades (consejo)").first %>
 	<% @lists = Listing.where("sitio_id = ?",@sitio.id).order(:ord_index).pluck(:list_id) %>
 	<% @it = 0 %>
+
+	<% if false %>
   <% @deptos.each do |d| %>
     <h3 style="margin-top:25px;margin-bottom:15px;"><%= d.mb_chars.upcase %></h3>
 		<% condicion = (params[:locale] == "es" ? "depto = ?" : "depto_eng = ?") %>
@@ -43,8 +45,8 @@
 			<h5 style="margin-top:10px;margin-bottom:0px;"><%= c.nombre.mb_chars %></h5>
 		<% end %>
   <% end %>
+	<% end %>
 
-	<% if false %>
   <% @deptos.each_with_index do |d,j| %>
 		  <h3 style="margin-top:25px;margin-bottom:15px;"><%= d.mb_chars.upcase %></h3>
 			<% condicion = (params[:locale] == "es" ? "depto = ?" : "depto_eng = ?") %>
@@ -54,7 +56,6 @@
 				<% @it = @it + 1 %>
 			<% end %>
   <% end %>
-	<% end %>
 
 <% end %>
 
