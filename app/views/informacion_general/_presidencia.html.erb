@@ -27,25 +27,29 @@
 		<% end %>
 	<% end %>
 	<br>
+	<% j = 0 %>
 	<h3>Investigadores asociados a centros</h3>
 	<% @profs_centros.each do |d| %>
 		<%= fields_for "listings[]", @listings[i] do |l| %>
 			<div class="wrapper-links-doc">
 				<%= l.hidden_field :ord_index, value: i %>
-				<%= l.select(:list_id,options_for_select(@profs_centros.map{|d| [d.nombre.gsub(/<(\/)?div>/,"").html_safe,d.id]}, @listings[i].list_id || @profs_centros[i].id), {}, {}) %>
+				<%= l.select(:list_id,options_for_select(@profs_centros.map{|d| [d.nombre.gsub(/<(\/)?div>/,"").html_safe,d.id]}, @listings[i].list_id || @profs_centros[j].id), {}, {}) %>
 			</div>
 			<% i = i + 1 %>
+			<% j = j + 1 %>
 		<% end %>
 	<% end %>
 	<br>
+	<% j = 0 %>
 	<h3>Investigadores en proyectos específicos</h3>
 	<% @asociados.each do |d| %>
 		<%= fields_for "listings[]", @listings[i] do |l| %>
 			<div class="wrapper-links-doc">
 				<%= l.hidden_field :ord_index, value: i %>
-				<%= l.select(:list_id,options_for_select(@asociados.map{|d| [d.nombre.gsub(/<(\/)?div>/,"").html_safe,d.id]}, @listings[i].list_id || @asociados[i].id), {}, {}) %>
+				<%= l.select(:list_id,options_for_select(@asociados.map{|d| [d.nombre.gsub(/<(\/)?div>/,"").html_safe,d.id]}, @listings[i].list_id || @asociados[j].id), {}, {}) %>
 			</div>
 			<% i = i + 1 %>
+			<% j = j + 1 %>
 		<% end %>
 	<% end %>
 
