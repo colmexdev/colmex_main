@@ -37,9 +37,10 @@ class ApplicationController < ActionController::Base
   protected
   def check_editable
     if request.original_fullpath.include?("editable") && !admin_signed_in?
+      logger.debug request.original_fullpath
       store_location_for(:admin, request.original_fullpath )
     elsif /(admins)|(acceder)/.match(request.original_fullpath) && !admin_signed_in?
-      logger.debug "Entrada con link directo a backend"
+      logger.debug request.original_fullpath + " -- Backend"
       store_location_for(:admin, panel_path )
     end
   end

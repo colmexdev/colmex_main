@@ -20,7 +20,7 @@ class ApplicationController < ActionController::Base
     @sitio = Sitio.where("ref = ?",ref).first
     @pars = Parrafo.where("sitio_id = ?", @sitio.id)
     @pics = Foto.where("sitio_id = ?", @sitio.id)
-    @listings = Listing.where("sitio_id = ?",@sitio.id)
+    @listings = Listing.where("sitio_id = ?", @sitio.id)
   end
 
   def filter_pars_pics
