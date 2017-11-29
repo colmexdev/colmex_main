@@ -18,7 +18,7 @@
 			<div class="uk-accordion" data-uk-accordion>
 				<h3 class="uk-accordion-title"><%= construir_encabezado("bt-flechita.png", "bt-flechita-abajo.png", t('sobre.autoridades.encabezado_pres')) %></h3>
 				<div class="uk-accordion-content">
-					<h2 class="vino"><%= t('sobre.autoridades.sub_ce') %></h2>
+					<h2 class="vino" style="margin-bottom:15px;"><%= t('sobre.autoridades.sub_ce') %></h2>
 					<% @profs_centros.each do |a| %>
 					<div class="uk-grid uk-grid-medium uk-margin-large-bottom">
 						<div class="uk-width-1-1 uk-vertical-align-middle uk-text-left uk-text-break">
