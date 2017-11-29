@@ -94,6 +94,7 @@ class InformacionGeneralController < ApplicationController
   end
 
   def junta
+    is_editable("Autoridades (junta)")
     @juntas = Personal.where(:seccion => "Junta")
     respond_to do |format|
       format.js

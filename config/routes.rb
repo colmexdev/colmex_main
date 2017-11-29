@@ -136,6 +136,7 @@ Rails.application.routes.draw do
       get "comision" => "informacion_general#comision", :as => :comision_edit
       get "consejo" => "informacion_general#consejo", :as => :consejo_edit
       get 'presidencia' => 'informacion_general#presidencia', :as => :presidencia_edit
+      get 'junta' => 'informacion_general#junta', :as => :junta_edit
     end
 
   end

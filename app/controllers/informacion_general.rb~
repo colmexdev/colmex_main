@@ -101,6 +101,7 @@ class InformacionGeneralController < ApplicationController
   end
 
   def presidencia
+    is_editable("Autoridades (presidencia)")
     @presidencias = Personal.where("seccion = ? and lower(cargo) like ?", "Presidencia", "president_").union(Personal.where("seccion = ? and lower(cargo) like ?", "Presidencia", "secretari_ general")).union(Personal.where("seccion = ? and lower(cargo) like ?", "Presidencia", "coordinador_ general academic_")).union(Personal.where("seccion = ? and lower(cargo) like ?", "Presidencia", "secretari_ academic_")).union(Personal.where("seccion = ? and lower(cargo) like ?", "Presidencia", "secretari_ administrativ_"))
     #@profs_centros = Personal.find(47).union(Personal.find(48)).union(Personal.find(46))
 		@profs_centros = Personal.where("id = ?", 47).union(Personal.where("id = ?", 48)).union(Personal.where("id = ?", 46))
