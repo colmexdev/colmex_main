@@ -42,7 +42,7 @@ class ApplicationController < ActionController::Base
     elsif /(admins)|(acceder)/.match(request.original_fullpath) && !admin_signed_in?
       x = stored_location_for(:admin)
       logger.debug x
-      store_location_for(:admin, (!x.include?("editable") ? x : panel_path) )
+      store_location_for(:admin, (x.include?("editable") ? x : panel_path) )
     end
   end
 
