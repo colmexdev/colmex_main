@@ -42,12 +42,12 @@ class ApplicationController < ActionController::Base
     elsif /(admins)|(acceder)/.match(request.original_fullpath) && !admin_signed_in?
       x = stored_location_for(:admin)
       logger.debug x
-      store_location_for(:admin, (!x.nil? ? x : panel_path) )
+      store_location_for(:admin, (!x.include?("editable") ? x : panel_path) )
     end
   end
 
   def after_sign_in_path_for(resource)
-    /(admins)|(acceder)/.match(request.original_fullpath) ? panel_path : stored_location_for(:admin)
+    stored_location_for(:admin)
   end
 
   def after_sign_out_path_for(resource_or_scope)
