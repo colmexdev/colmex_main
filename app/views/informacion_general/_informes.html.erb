@@ -12,7 +12,7 @@
 		      <a href=<%= d.liga.to_s == "" ? d.archivo.url : d.liga %> target="_blank" class="uk-link"><img src=<%= image_url("documento.png") %> alt="documento" class="documento uk-vertical-align-middle"></a>
 	      </td>
 	      <td style="padding-bottom:5px;padding-top:5px;">
-		      <a href=<%= d.liga.to_s == "" ? d.archivo.url : d.liga %> target="_blank" class="documento uk-link"><%= (params[:locale] == "es" ? d.nombre.gsub(/<\/?p>/,"").mb_chars : d.nombre_eng.gsub(/<\/?p>/,"").mb_chars ) %></a>
+		      <a href=<%= d.liga.to_s == "" ? d.archivo.url : d.liga %> target="_blank" class="documento uk-link"><%= (params[:locale] == "es" ? d.nombre.gsub(/<\/?((p)|(div))>/,"").mb_chars : d.nombre_eng.gsub(/<\/?((p)|(div))>/,"").mb_chars ) %></a>
 	      </td>
       </tr>
       <% end %>
