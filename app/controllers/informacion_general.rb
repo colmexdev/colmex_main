@@ -6,7 +6,7 @@ class InformacionGeneralController < ApplicationController
 
   def premios_y_distinciones
     is_editable("Premios y distinciones")
-    @categorias = Categorium.all
+    @categorias = Categorium.where("nombre != ?","Intro")
     @premiados = Premiado.where("tipo_premio = ?", "Comunidad")
   end
 
