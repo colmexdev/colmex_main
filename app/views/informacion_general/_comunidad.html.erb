@@ -8,7 +8,7 @@
 			<div class="uk-accordion-content">
 				<ul class="uk-list uk-list-line">
 				<% @premiados.where("tipo = ?", c.nombre).order(created_at: :asc).each do |p| %>
-					<li style="margin-bottom: 20px; font-size: 15px;"><p><%= (p.nombre.gsub(/<\/?((div)|(p))>/,"").gsub(/<strong>/,"<b>").gsub(/<\/strong>/,"</b>").split(",").reverse.join(" ") + p.descripcion.gsub(/<\/?((div)|(p))>/,"").gsub(/<strong>/,"<b>").gsub(/<\/strong>/,"</b>").gsub(/<a href="/,"<a class=\"uk-link\" target=\"_blank\" href=\"")).html_safe %></p></li>
+					<li style="margin-bottom: 20px; font-size: 15px;"><p><%= (p.nombre.gsub(/<\/?((div)|(p))>/,"").gsub(/<strong>/,"<b>").gsub(/<\/strong>/,"</b>").split(",").reverse.join(" ") + " " + p.descripcion.gsub(/<\/?((div)|(p))>/,"").gsub(/<strong>/,"<b>").gsub(/<\/strong>/,"</b>").gsub(/<a href="/,"<a class=\"uk-link\" target=\"_blank\" href=\"")).html_safe %></p></li>
 				<% end %>
 				</ul>
 			</div>
