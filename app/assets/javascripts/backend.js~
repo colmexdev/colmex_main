@@ -17,7 +17,6 @@ function adjustWidths(cols){
 }
 
 function hideLink(event,element,link,method,keyword,query){
-	console.log(event);
   keyword = keyword || null;
 	query = query || null;
 	event = event || null;

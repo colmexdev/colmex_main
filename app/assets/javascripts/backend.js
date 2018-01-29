@@ -168,6 +168,7 @@ function configTrix(){
 		inheritable: true
 	}
 	Trix.config.textAttributes.italic.tagName = "i";
+	Trix.config.textAttributes.bold.tagName = "b";
 }
 
 function extendTrix(toolbar,blocks){
