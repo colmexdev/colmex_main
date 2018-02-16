@@ -166,8 +166,7 @@
 
 			<div id="video-colmex">
 				<script type="text/javascript" src="../js/lightbox.js"></script>
-				<a href="
-https://youtu.be/8V1zBV2ABmg" data-uk-lightbox data-lightbox-type="video">
+				<a href="https://youtu.be/iKhbvFip87U" data-uk-lightbox data-lightbox-type="video">
 					<%= image_tag((params[:locale] == "en" ? "video_eng.jpg" : "video.png")) %>
 				</a>
 			</div>
@@ -177,8 +176,8 @@ https://youtu.be/8V1zBV2ABmg" data-uk-lightbox data-lightbox-type="video">
 	<div class="row"> <!-- Fila para frase -->
 		<div class="col-md-12" id="div_frase"> <!-- Columnas para frase -->
 			<% if @frase.try(:cita) != nil %>
-					<blockquote><%= image_tag('comilla-ini.png') %><span><%=  params[:locale] == "es" ? @frase.try(:cita) : @frase.try(:cita_eng) %></span><%= image_tag('comilla-fin.png') %><br><br/></blockquote>
-					<div style="margin:0 auto;width:65%;text-align:right"><strong><%= @frase.try(:autor) %></strong></div>
+					<blockquote><%= image_tag('comilla-ini.png') %><span><%=  params[:locale] == "es" ? @frase.try(:cita).html_safe : @frase.try(:cita_eng).html_safe %></span><%= image_tag('comilla-fin.png') %><br><br/></blockquote>
+					<div style="margin:0 auto;width:65%;text-align:right"><strong><%= @frase.try(:autor).html_safe %></strong></div>
 			<% end %>
 		</div> <!-- Cierre de columnas para frase -->
 	</div> <!-- Cierre de fila para frase -->
