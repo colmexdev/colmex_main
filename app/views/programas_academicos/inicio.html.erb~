@@ -123,7 +123,7 @@
     <div class="uk-grid uk-grid-large uk-margin-large-bottom">
 
 			<div class="<%= 'uk-width-large-1-' + (params[:locale] == 'es' ? '3' : '4') %>" style="padding-bottom:25px;text-align:center;">
-	<iframe class="vid-prog uk-responsive-width" src="https://youtu.be/K6QuLTU2lDY"></iframe>
+	<iframe class="vid-prog uk-responsive-width" src="https://youtube.com/embed/K6QuLTU2lDY"></iframe>
 			</div>
 			<div class="<%= 'uk-width-large-1-' + (params[:locale] == 'es' ? '3' : '4') %>" style="padding-bottom:25px;text-align:center;">
 	<iframe class="vid-prog uk-responsive-width" src="https://www.youtube.com/embed/02ydzqVTyUs"></iframe>
