@@ -138,7 +138,7 @@
 			<% end %>
 		</div>
 <style>
-.vid-prog{width: 420px; }
+.vid-prog{width: 420px; height: <%= params[:locale] == "en" ? "" : "240px" %>;}
 </style>
 
     <div class="uk-grid uk-grid-large uk-margin-large-bottom">

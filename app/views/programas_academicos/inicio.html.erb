@@ -122,23 +122,31 @@
     <!--          Aquí empieza el contenido          -->
     <div class="uk-grid uk-grid-large uk-margin-large-bottom">
 
-			<div class="<%= 'uk-width-large-1-' + (params[:locale] == 'es' ? '3' : '4') %>" style="padding-bottom:25px;text-align:center;">
+			<div class="<%= 'uk-width-large-1-' + (params[:locale] == 'es' ? '3' : '2') %>" style="padding-bottom:25px;text-align:center;">
 	<iframe class="vid-prog uk-responsive-width" src="https://youtube.com/embed/K6QuLTU2lDY"></iframe>
 			</div>
-			<div class="<%= 'uk-width-large-1-' + (params[:locale] == 'es' ? '3' : '4') %>" style="padding-bottom:25px;text-align:center;">
+			<div class="<%= 'uk-width-large-1-' + (params[:locale] == 'es' ? '3' : '2') %>" style="padding-bottom:25px;text-align:center;">
 	<iframe class="vid-prog uk-responsive-width" src="https://www.youtube.com/embed/02ydzqVTyUs"></iframe>
 			</div>
-			<div class="<%= 'uk-width-large-1-' + (params[:locale] == 'es' ? '3' : '4') %>" style="padding-bottom:25px;text-align:center;">
+			<% if params[:locale] == "es" %>
+			<div class="<%= 'uk-width-large-1-' + (params[:locale] == 'es' ? '3' : '2') %>" style="padding-bottom:25px;text-align:center;">
 	<iframe class="vid-prog uk-responsive-width" src="https://www.youtube.com/embed/Ec6mkZWdMw0"></iframe>
 			</div>
-			<% if params[:locale] == "en" %>
-			<div class="<%= 'uk-width-large-1-4' %>" style="padding-bottom:25px;text-align:center;">
+			<% end %>
+
+		</div>
+		<% if params[:locale] == "en" %>
+    <div class="uk-grid uk-grid-large uk-margin-large-bottom">
+			<div class="<%= 'uk-width-large-1-' + (params[:locale] == 'es' ? '3' : '2') %>" style="padding-bottom:25px;text-align:center;">
+	<iframe class="vid-prog uk-responsive-width" src="https://www.youtube.com/embed/Ec6mkZWdMw0"></iframe>
+			</div>
+			<div class="<%= 'uk-width-large-1-2' %>" style="padding-bottom:25px;text-align:center;">
 	<iframe class="vid-prog uk-responsive-width" src="https://youtube.com/embed/NXclcUHmv00"></iframe>
 			</div>
-			<% end %>
 		</div>
+		<% end %>
 <style>
-.vid-prog{width: 420px; height: <%= params[:locale] == "en" ? "" : "240px" %>;}
+.vid-prog{width: 420px; height: <%= params[:locale] == "en" ? "315px" : "240px" %>;}
 </style>
 
     <div class="uk-grid uk-grid-large uk-margin-large-bottom">
