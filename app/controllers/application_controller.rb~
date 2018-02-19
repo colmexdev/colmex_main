@@ -9,7 +9,7 @@ class ApplicationController < ActionController::Base
   include SobreElColegioHelper
 
   def set_locale
-    if params[:locale]  == "en" or params[:locale] == "es"
+    if params[:locale]  == "en" or params[:locale] == "es" or params[:locale] == ""
       I18n.locale = params[:locale] || I18n.default_locale
     else
       raise ActionController::RoutingError.new('Not Found')
