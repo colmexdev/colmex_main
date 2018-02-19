@@ -9,7 +9,11 @@ class ApplicationController < ActionController::Base
   include SobreElColegioHelper
 
   def set_locale
-    I18n.locale = params[:locale] || I18n.default_locale
+    if params[:locale]  == /(en)|(es)/
+      I18n.locale = params[:locale] || I18n.default_locale
+    else
+      raise ActionController::RoutingError.new('Not Found')
+    end
   end
 
   def default_url_options(options={})
