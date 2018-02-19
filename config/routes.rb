@@ -65,7 +65,7 @@ Rails.application.routes.draw do
     get 'profesores-emeritos' => 'informacion_general#profesores_emeritos', :as => :profesores_emeritos
     get 'historia' => 'informacion_general#historia', :as => :historia
     get 'sobre' => 'informacion_general#sobre_el_colegio', :as => :sobre_el_colegio
-    get 'transparencia' => 'informacion_general#transparencia', :as => :transparencia
+    #get 'transparencia' => 'informacion_general#transparencia', :as => :transparencia
     get 'bienes' => 'informacion_general#bienes', :as => :bienes_part
     get 'licitaciones' => 'informacion_general#licitaciones', :as => :licitaciones
     get 'documentacion-institucional' => 'informacion_general#documentacion_institucional', :as => :documentacion
@@ -116,7 +116,7 @@ Rails.application.routes.draw do
       get 'premios-distinciones' => 'informacion_general#premios_y_distinciones', :as => :premios_edit
       get 'principios-eticos' => 'principal#principios_eticos', :as => :principios_edit
       get 'bienes' => 'informacion_general#bienes', :as => :bienes_edit
-      get 'transparencia' => 'informacion_general#transparencia', :as => :transparencia_edit
+      #get 'transparencia' => 'informacion_general#transparencia', :as => :transparencia_edit
       get 'centros' => "centros_de_estudio#inicio", :as => :centros_edit
       get 'programas' => "programas_academicos#inicio", :as => :programas_edit
       get "licenciaturas" => "programas_academicos#licenciaturas", :as => :licenciaturas_edit
