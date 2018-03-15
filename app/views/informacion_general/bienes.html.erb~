@@ -20,7 +20,7 @@
 
 	<%= hidden_field_tag :authenticity_token, form_authenticity_token -%>
 
-	<%= fields_for 'pars', @pars[0] do |p| %>
+	<%= fields_for 'pars[]', @pars[0] do |p| %>
 
 		<div class="field">
 		<%= p.label (params[:locale] == "es" ? :texto : :texto_ingles), (params[:locale] == "es" ? ("Texto (Párrafo " + ((@pars[0].p_ind+1).to_s) + ")") : ("Texto (Inglés, párrafo " + ((@pars[0].p_ind+1).to_s) + ")")) %><br>

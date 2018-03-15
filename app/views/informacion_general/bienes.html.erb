@@ -50,7 +50,7 @@
 		<a href=<%= t.archivo.url %> target="_blank" class="uk-link"><img src=<%= image_url("documento.png") %> alt="documento" class="documento uk-vertical-align-middle"></a>
 	</div>
 	<div class="liga-doc">
-		<a href=<%= t.archivo.url %> target="_blank" class="documento uk-link"><%= t.nombre %></a>
+		<a href=<%= t.archivo.url %> target="_blank" class="documento uk-link"><%= t.nombre.gsub(/<\/?((p)|(div))>/,"") %></a>
 	</div>
 	</div>
       <% end %>
