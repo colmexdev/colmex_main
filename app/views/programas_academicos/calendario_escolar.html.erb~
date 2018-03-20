@@ -197,6 +197,9 @@
 
 <% end %>
 
+<br>
+<hr>
+
   <h1 class="titulo-grande vino uk-margin-large-bottom" style="text-align:center"><%= params[:locale] == "en" ? "First Semester" : "Primer Semestre" %></h1>
   <div class="uk-grid uk-grid-large">
 		<% if (@pars[1].texto.present? && @pars[1].texto != "" && params[:locale] == "es") || (@pars[1].texto_ingles.present? && @pars[1].texto_ingles.present != "" && params[:locale] == "en") %>
