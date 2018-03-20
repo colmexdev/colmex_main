@@ -150,50 +150,6 @@
 
 <%= params[:locale] == "es" ? @pars[0].texto.gsub(/<p>/,'<span class="titulo-chico">').gsub(/<\/p>/,"</span>").html_safe : @pars[0].texto_ingles.gsub(/<p>/,'<span class="titulo-chico">').gsub(/<\/p>/,"</span>").html_safe %><br><br>
 
-
-  <h1 class="titulo-grande vino uk-margin-large-bottom" style="text-align:center"><%= params[:locale] == "en" ? "First Semester" : "Primer Semestre" %></h1>
-  <div class="uk-grid uk-grid-large">
-		<% if (@pars[1].texto.present? && @pars[1].texto != "" && params[:locale] == "es") || (@pars[1].texto_ingles.present? && @pars[1].texto_ingles.present != "" && params[:locale] == "en") %>
-    <div class="uk-width-large-1-3 uk-width-medium-1-2 uk-text-left uk-margin-large-bottom">
-		<h1><%= params[:locale] == "es" ?  ("Agosto " + Date.current.year.to_s) : ("August " + Date.current.year.to_s) %></h1>
-		<%= params[:locale] == "es" ? @pars[1].texto.gsub(/<h2>/,'<h2 class="uk-margin-remove">').gsub(/<h3>/,'<h3 class="uk-margin-remove">').gsub(/<h4>/,'<h4 class="uk-margin-remove">').html_safe : @pars[1].texto_ingles.gsub(/<h2>/,'<h2 class="uk-margin-remove">').gsub(/<h3>/,'<h3 class="uk-margin-remove">').gsub(/<h4>/,'<h4 class="uk-margin-remove">').html_safe %>
-    </div>
-
-		<% if (@pars[2].texto.present? && @pars[2].texto != "" && params[:locale] == "es") || (@pars[2].texto_ingles.present? && @pars[2].texto_ingles != "" && params[:locale] == "en") %>
-    <div class="uk-width-large-1-3 uk-width-medium-1-2 uk-text-left uk-margin-large-bottom">
-		<h1><%= params[:locale] == "es" ?  ("Septiembre " + Date.current.year.to_s) : ("September " + Date.current.year.to_s) %></h1>
-		<%= params[:locale] == "es" ? @pars[2].texto.gsub(/<h2>/,'<h2 class="uk-margin-remove">').gsub(/<h3>/,'<h3 class="uk-margin-remove">').gsub(/<h4>/,'<h4 class="uk-margin-remove">').html_safe : @pars[2].texto_ingles.gsub(/<h2>/,'<h2 class="uk-margin-remove">').gsub(/<h3>/,'<h3 class="uk-margin-remove">').gsub(/<h4>/,'<h4 class="uk-margin-remove">').html_safe %>
-    </div>
-		<% end %>
-		<% if (@pars[3].texto.present? && @pars[3].texto != "" && params[:locale] == "es") || (@pars[3].texto_ingles.present? && @pars[3].texto_ingles != "" && params[:locale] == "en") %>
-    <div class="uk-width-large-1-3 uk-width-medium-1-2 uk-text-left uk-margin-large-bottom">
-		<h1><%= params[:locale] == "es" ?  ("Octubre " + Date.current.year.to_s) : ("October " + Date.current.year.to_s) %></h1>
-		<%= params[:locale] == "es" ? @pars[3].texto.gsub(/<h2>/,'<h2 class="uk-margin-remove">').gsub(/<h3>/,'<h3 class="uk-margin-remove">').gsub(/<h4>/,'<h4 class="uk-margin-remove">').html_safe : @pars[3].texto_ingles.gsub(/<h2>/,'<h2 class="uk-margin-remove">').gsub(/<h3>/,'<h3 class="uk-margin-remove">').gsub(/<h4>/,'<h4 class="uk-margin-remove">').html_safe %>
-    </div>
-		<% end %>
-		<% if (@pars[4].texto.present? && @pars[4].texto != "" && params[:locale] == "es") || (@pars[4].texto_ingles.present? && @pars[4].texto_ingles != "" && params[:locale] == "en") %>
-    <div class="uk-width-large-1-3 uk-width-medium-1-2 uk-text-left uk-margin-large-bottom">
-		<h1><%= params[:locale] == "es" ?  ("Noviembre " + Date.current.year.to_s) : ("November " + Date.current.year.to_s) %></h1>
-		<%= params[:locale] == "es" ? @pars[4].texto.gsub(/<h2>/,'<h2 class="uk-margin-remove">').gsub(/<h3>/,'<h3 class="uk-margin-remove">').gsub(/<h4>/,'<h4 class="uk-margin-remove">').html_safe : @pars[4].texto_ingles.gsub(/<h2>/,'<h2 class="uk-margin-remove">').gsub(/<h3>/,'<h3 class="uk-margin-remove">').gsub(/<h4>/,'<h4 class="uk-margin-remove">').html_safe %>
-    </div>
-		<% end %>
-		<% if (@pars[5].texto.present? && @pars[5].texto != "" && params[:locale] == "es") || (@pars[5].texto_ingles.present? && @pars[5].texto_ingles != "" && params[:locale] == "en") %>
-    <div class="uk-width-large-1-3 uk-width-medium-1-2 uk-text-left uk-margin-large-bottom">
-		<h1><%= params[:locale] == "es" ?  ("Diciembre " + Date.current.year.to_s) : ("December " + Date.current.year.to_s) %></h1>
-		<%= params[:locale] == "es" ? @pars[5].texto.gsub(/<h2>/,'<h2 class="uk-margin-remove">').gsub(/<h3>/,'<h3 class="uk-margin-remove">').gsub(/<h4>/,'<h4 class="uk-margin-remove">').html_safe : @pars[5].texto_ingles.gsub(/<h2>/,'<h2 class="uk-margin-remove">').gsub(/<h3>/,'<h3 class="uk-margin-remove">').gsub(/<h4>/,'<h4 class="uk-margin-remove">').html_safe %>
-    </div>
-		<% end %>
-		<% if (@pars[6].texto.present? && @pars[6].texto != "" && params[:locale] == "es") || (@pars[6].texto_ingles.present? && @pars[6].texto_ingles != "" && params[:locale] == "en") %>
-    <div class="uk-width-large-1-3 uk-width-medium-1-2 uk-text-left uk-margin-large-bottom">
-		<h1><%= params[:locale] == "es" ?  ("Enero " + (Date.current.year + 1).to_s) : ("January " + (Date.current.year + 1).to_s) %></h1>
-		<%= params[:locale] == "es" ? @pars[6].texto.gsub(/<h2>/,'<h2 class="uk-margin-remove">').gsub(/<h3>/,'<h3 class="uk-margin-remove">').gsub(/<h4>/,'<h4 class="uk-margin-remove">').html_safe : @pars[6].texto_ingles.gsub(/<h2>/,'<h2 class="uk-margin-remove">').gsub(/<h3>/,'<h3 class="uk-margin-remove">').gsub(/<h4>/,'<h4 class="uk-margin-remove">').html_safe %>
-
-    </div>
-		<% end %>
-    </div>
-
-<% end %>
-
     <h1 class="titulo-grande vino uk-margin-large-bottom" style="text-align:center"><%= params[:locale] == "en" ? "Second Semester" :"Segundo Semestre" %></h1>
     <div class="uk-grid uk-grid-large">
 		<% if (@pars[7].texto.present? && params[:locale] == "es") || (@pars[7].texto_ingles.present? && params[:locale] == "en") %>
@@ -238,6 +194,49 @@
 		<% if params[:locale] != "en" %>
 		<a href=<%= asset_url("calendario-escolar-2017-2018.pdf") %> target="_blank" class="ver-mas uk-margin-large-bottom uk-button-small">Descargar en PDF (2018)</a>
 		<% end %>
+
+<% end %>
+
+  <h1 class="titulo-grande vino uk-margin-large-bottom" style="text-align:center"><%= params[:locale] == "en" ? "First Semester" : "Primer Semestre" %></h1>
+  <div class="uk-grid uk-grid-large">
+		<% if (@pars[1].texto.present? && @pars[1].texto != "" && params[:locale] == "es") || (@pars[1].texto_ingles.present? && @pars[1].texto_ingles.present != "" && params[:locale] == "en") %>
+    <div class="uk-width-large-1-3 uk-width-medium-1-2 uk-text-left uk-margin-large-bottom">
+		<h1><%= params[:locale] == "es" ?  ("Agosto " + Date.current.year.to_s) : ("August " + Date.current.year.to_s) %></h1>
+		<%= params[:locale] == "es" ? @pars[1].texto.gsub(/<h2>/,'<h2 class="uk-margin-remove">').gsub(/<h3>/,'<h3 class="uk-margin-remove">').gsub(/<h4>/,'<h4 class="uk-margin-remove">').html_safe : @pars[1].texto_ingles.gsub(/<h2>/,'<h2 class="uk-margin-remove">').gsub(/<h3>/,'<h3 class="uk-margin-remove">').gsub(/<h4>/,'<h4 class="uk-margin-remove">').html_safe %>
+    </div>
+
+		<% if (@pars[2].texto.present? && @pars[2].texto != "" && params[:locale] == "es") || (@pars[2].texto_ingles.present? && @pars[2].texto_ingles != "" && params[:locale] == "en") %>
+    <div class="uk-width-large-1-3 uk-width-medium-1-2 uk-text-left uk-margin-large-bottom">
+		<h1><%= params[:locale] == "es" ?  ("Septiembre " + Date.current.year.to_s) : ("September " + Date.current.year.to_s) %></h1>
+		<%= params[:locale] == "es" ? @pars[2].texto.gsub(/<h2>/,'<h2 class="uk-margin-remove">').gsub(/<h3>/,'<h3 class="uk-margin-remove">').gsub(/<h4>/,'<h4 class="uk-margin-remove">').html_safe : @pars[2].texto_ingles.gsub(/<h2>/,'<h2 class="uk-margin-remove">').gsub(/<h3>/,'<h3 class="uk-margin-remove">').gsub(/<h4>/,'<h4 class="uk-margin-remove">').html_safe %>
+    </div>
+		<% end %>
+		<% if (@pars[3].texto.present? && @pars[3].texto != "" && params[:locale] == "es") || (@pars[3].texto_ingles.present? && @pars[3].texto_ingles != "" && params[:locale] == "en") %>
+    <div class="uk-width-large-1-3 uk-width-medium-1-2 uk-text-left uk-margin-large-bottom">
+		<h1><%= params[:locale] == "es" ?  ("Octubre " + Date.current.year.to_s) : ("October " + Date.current.year.to_s) %></h1>
+		<%= params[:locale] == "es" ? @pars[3].texto.gsub(/<h2>/,'<h2 class="uk-margin-remove">').gsub(/<h3>/,'<h3 class="uk-margin-remove">').gsub(/<h4>/,'<h4 class="uk-margin-remove">').html_safe : @pars[3].texto_ingles.gsub(/<h2>/,'<h2 class="uk-margin-remove">').gsub(/<h3>/,'<h3 class="uk-margin-remove">').gsub(/<h4>/,'<h4 class="uk-margin-remove">').html_safe %>
+    </div>
+		<% end %>
+		<% if (@pars[4].texto.present? && @pars[4].texto != "" && params[:locale] == "es") || (@pars[4].texto_ingles.present? && @pars[4].texto_ingles != "" && params[:locale] == "en") %>
+    <div class="uk-width-large-1-3 uk-width-medium-1-2 uk-text-left uk-margin-large-bottom">
+		<h1><%= params[:locale] == "es" ?  ("Noviembre " + Date.current.year.to_s) : ("November " + Date.current.year.to_s) %></h1>
+		<%= params[:locale] == "es" ? @pars[4].texto.gsub(/<h2>/,'<h2 class="uk-margin-remove">').gsub(/<h3>/,'<h3 class="uk-margin-remove">').gsub(/<h4>/,'<h4 class="uk-margin-remove">').html_safe : @pars[4].texto_ingles.gsub(/<h2>/,'<h2 class="uk-margin-remove">').gsub(/<h3>/,'<h3 class="uk-margin-remove">').gsub(/<h4>/,'<h4 class="uk-margin-remove">').html_safe %>
+    </div>
+		<% end %>
+		<% if (@pars[5].texto.present? && @pars[5].texto != "" && params[:locale] == "es") || (@pars[5].texto_ingles.present? && @pars[5].texto_ingles != "" && params[:locale] == "en") %>
+    <div class="uk-width-large-1-3 uk-width-medium-1-2 uk-text-left uk-margin-large-bottom">
+		<h1><%= params[:locale] == "es" ?  ("Diciembre " + Date.current.year.to_s) : ("December " + Date.current.year.to_s) %></h1>
+		<%= params[:locale] == "es" ? @pars[5].texto.gsub(/<h2>/,'<h2 class="uk-margin-remove">').gsub(/<h3>/,'<h3 class="uk-margin-remove">').gsub(/<h4>/,'<h4 class="uk-margin-remove">').html_safe : @pars[5].texto_ingles.gsub(/<h2>/,'<h2 class="uk-margin-remove">').gsub(/<h3>/,'<h3 class="uk-margin-remove">').gsub(/<h4>/,'<h4 class="uk-margin-remove">').html_safe %>
+    </div>
+		<% end %>
+		<% if (@pars[6].texto.present? && @pars[6].texto != "" && params[:locale] == "es") || (@pars[6].texto_ingles.present? && @pars[6].texto_ingles != "" && params[:locale] == "en") %>
+    <div class="uk-width-large-1-3 uk-width-medium-1-2 uk-text-left uk-margin-large-bottom">
+		<h1><%= params[:locale] == "es" ?  ("Enero " + (Date.current.year + 1).to_s) : ("January " + (Date.current.year + 1).to_s) %></h1>
+		<%= params[:locale] == "es" ? @pars[6].texto.gsub(/<h2>/,'<h2 class="uk-margin-remove">').gsub(/<h3>/,'<h3 class="uk-margin-remove">').gsub(/<h4>/,'<h4 class="uk-margin-remove">').html_safe : @pars[6].texto_ingles.gsub(/<h2>/,'<h2 class="uk-margin-remove">').gsub(/<h3>/,'<h3 class="uk-margin-remove">').gsub(/<h4>/,'<h4 class="uk-margin-remove">').html_safe %>
+
+    </div>
+		<% end %>
+    </div>
 
 <% end %>
 
