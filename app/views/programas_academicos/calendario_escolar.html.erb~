@@ -244,7 +244,7 @@
 		<% end %>
     </div>
 
-<% end %>
+
 
     <h1 class="titulo-grande vino uk-margin-large-bottom" style="text-align:center"><%= params[:locale] == "en" ? "Second Semester" :"Segundo Semestre" %></h1>
     <div class="uk-grid uk-grid-large">
@@ -307,7 +307,7 @@
 		<a href=<%= asset_url("calendario-escolar-2018-2019.pdf") %> target="_blank" class="ver-mas uk-margin-large-bottom uk-button-small">Descargar en PDF (2019)</a>
 		<% end %>
 
-
+<% end %>
 
 	</div>
 
