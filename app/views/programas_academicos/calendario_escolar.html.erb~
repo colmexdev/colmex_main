@@ -308,7 +308,7 @@
 		<% end %>
 
 <% end %>
-
+<% end %>
 	</div>
 
 <%= render 'principal/footer' %>
