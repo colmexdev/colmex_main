@@ -149,6 +149,7 @@
 
 <%= params[:locale] == "es" ? @pars[0].texto.gsub(/<p>/,'<span class="titulo-chico">').gsub(/<\/p>/,"</span>").html_safe : @pars[0].texto_ingles.gsub(/<p>/,'<span class="titulo-chico">').gsub(/<\/p>/,"</span>").html_safe %><br><br>
 
+<% if false %>
     <h1 class="titulo-grande vino uk-margin-large-bottom" style="text-align:center"><%= params[:locale] == "en" ? "First Semester" : "Primer Semestre" %></h1>
     <div class="uk-grid uk-grid-large">
 		<% if (@pars[1].texto.present? && params[:locale] == "es") || (@pars[1].texto_ingles.present? && params[:locale] == "en") %>
@@ -183,6 +184,9 @@
     </div>
 		<% end %>
     </div>
+
+<% end %>
+
     <h1 class="titulo-grande vino uk-margin-large-bottom" style="text-align:center"><%= params[:locale] == "en" ? "Second Semester" :"Segundo Semestre" %></h1>
     <div class="uk-grid uk-grid-large">
 		<% if (@pars[7].texto.present? && params[:locale] == "es") || (@pars[7].texto_ingles.present? && params[:locale] == "en") %>
