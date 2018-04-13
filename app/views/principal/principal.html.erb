@@ -100,7 +100,7 @@
 				<% contenidos = Descubre.where("fecha_publicacion <= ? AND fecha_limite_pub >= ?", Date.current(), Date.current()).group(:contenido).order(:contenido).pluck(:contenido) %>
 				<% cont_plural = [] %>
 				<% contenidos.each do |c| %>
-					<% cont_plural << (params[:locale] == "es ? Content.where(tipo: c).plural : Content.where(tipo: c).plural_eng) %>
+					<% cont_plural << (params[:locale] == "es" ? Content.where(tipo: c).plural : Content.where(tipo: c).plural_eng) %>
 				<% end %>
 				<span class="span-filtros"><%= t('filtro') %></span>
 				<%= select_tag("contenido", options_for_select(cont_plural.zip(contenidos)), :include_blank => t('cat'), :onchange => "filtrarDescubres();") %>
