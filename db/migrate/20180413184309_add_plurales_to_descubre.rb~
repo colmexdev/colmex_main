@@ -1,0 +1,6 @@
+class AddPluralesToDescubre < ActiveRecord::Migration
+  def change
+    add_column :descubres, :plural, :text
+    add_column :descubres, :plural_eng, :text
+  end
+end

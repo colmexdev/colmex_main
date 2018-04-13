@@ -6,6 +6,6 @@ class Content < ActiveRecord::Base
                     :default_url => '/link.png';
 
   validates_presence_of :tipo
-
+  validates_presence_of :tipo_eng
   validates_attachment_content_type :icono, :content_type => ['image/jpeg', 'image/png', 'image/jpg']
 end

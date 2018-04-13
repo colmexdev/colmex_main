@@ -28,7 +28,7 @@
 			<% if !@obj.icono.url.nil? %>
 				<img id="icono-td" src="<%= @obj.icono.url %>">
 			<% else %>
-				<span>No hay foto para mostrar.</span>
+				<span>No hay ícono para mostrar.</span>
 			<% end %>
 		</div>
   </div>
