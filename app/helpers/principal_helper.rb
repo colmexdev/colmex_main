@@ -139,7 +139,7 @@ bloque_html = bloque_html + "<a href=\"" + d.liga + "\" " + (d.contenido.mb_char
   end
 
   def pluralizar(categoria,indice)
-    cad_plural = {"Artículo de investigación" => ["Artículos de investigación", "Research papers"], "Curso" => ["Cursos", "Courses"], "Video" => ["Videos", "Videos"], "Convocatoria" => ["Convocatorias", "Calls"], "Premio" => ["Premios", "Prizes"], "Artículo de opinión" => ["Artículos de opinión", "Opinion papers"], "Novedad editorial" => ["Novedades editoriales", "Editorial novelties"], "Proyecto de investigación" => ["Proyectos de investigación", "Research projects"], "Anuncio" => ["Anuncios", "Announcements"], "Podcast" => ["Podcasts", "Podcasts"], "iTunes U" => ["iTunes U", "iTunes U"], "Cartón" => ["Cartones","Comic strips"]}
+    cad_plural = {"Artículo de investigación" => ["Artículos de investigación", "Research papers"], "Curso" => ["Cursos", "Courses"], "Video" => ["Videos", "Videos"], "Convocatoria" => ["Convocatorias", "Calls"], "Premio" => ["Premios", "Prizes"], "Artículo de opinión" => ["Artículos de opinión", "Opinion papers"], "Novedad editorial" => ["Novedades editoriales", "Editorial novelties"], "Proyecto de investigación" => ["Proyectos de investigación", "Research projects"], "Anuncio" => ["Anuncios", "Announcements"], "Podcast" => ["Podcasts", "Podcasts"], "iTunes U" => ["iTunes U", "iTunes U"], "Cartones" => ["Cartones","Comic strips"]}
     return cad_plural[categoria][indice]
   end
 
