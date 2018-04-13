@@ -1,5 +1,4 @@
 class SessionsController < Devise::SessionsController
-  #prepend_before_action :allow_params_authentication!, only: []
 
   def new
     super
