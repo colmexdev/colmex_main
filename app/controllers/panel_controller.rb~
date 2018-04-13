@@ -297,7 +297,7 @@ class PanelController < ApplicationController
         trix: [:titulo]
       }, "Categorías de 'Descubre'": {
         model: Content,
-        fields: {tipo: "Tipo",tipo_eng: "Tipo (Inglés)"},
+        fields: {tipo: "Tipo",tipo_eng: "Tipo (Inglés)", plural: "Tipo en plural", plural_eng: "Tipo en plural (Inglés)"},
         imgs: {icono: "Ícono"},
         trix: []
       }, "Imágenes de slider": {
@@ -372,7 +372,7 @@ class PanelController < ApplicationController
     elsif params[:set] == "Descubre"
       params.require(:descubre).permit(:titulo, :liga, :contenido, :fecha_publicacion, :fecha_limite_pub, :imagen, :tags)
     elsif params[:set] == "Categorías de 'Descubre'"
-      params.require(:content).permit(:tipo, :icono, :tipo_eng)
+      params.require(:content).permit(:tipo, :icono, :tipo_eng, :plural, :plural_eng)
     elsif params[:set] == "Imágenes de slider"
       params.require(:slider).permit(:liga, :imagen, :badge, :posicion, :fecha_expiracion, :badge_eng, :link_eng)
     elsif params[:set] == "Cátedras y seminarios"

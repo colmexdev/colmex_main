@@ -295,7 +295,7 @@ class PanelController < ApplicationController
         fields: {titulo: "Título",liga: "Link",contenido: "Categoría",fecha_publicacion: "Fecha de despliegue",fecha_limite_pub: "Fecha de expiración",tags: "Etiquetas"},
         imgs: {imagen: "Imagen"},
         trix: [:titulo]
-      }, "Categorías de 'Descubre'": {
+      }, "Categorías de Descubre": {
         model: Content,
         fields: {tipo: "Tipo",tipo_eng: "Tipo (Inglés)", plural: "Tipo en plural", plural_eng: "Tipo en plural (Inglés)"},
         imgs: {icono: "Ícono"},
@@ -371,7 +371,7 @@ class PanelController < ApplicationController
       params.require(:documento).permit(:nombre, :tipo, :anio, :archivo, :nombre_eng)
     elsif params[:set] == "Descubre"
       params.require(:descubre).permit(:titulo, :liga, :contenido, :fecha_publicacion, :fecha_limite_pub, :imagen, :tags)
-    elsif params[:set] == "Categorías de 'Descubre'"
+    elsif params[:set] == "Categorías de Descubre"
       params.require(:content).permit(:tipo, :icono, :tipo_eng, :plural, :plural_eng)
     elsif params[:set] == "Imágenes de slider"
       params.require(:slider).permit(:liga, :imagen, :badge, :posicion, :fecha_expiracion, :badge_eng, :link_eng)
