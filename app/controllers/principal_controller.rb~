@@ -58,4 +58,40 @@ class PrincipalController < ApplicationController
 
   def proximamente
   end
+
+  def get_eventos
+    @datos = []
+    offset = params[:offset] || "0"
+    @multi = false
+    @where = ""
+    if params.key?(:crono) && params[:crono] == "true"
+      @where = @where + "DATEADD(day, DATEDIFF(day,'19000101',PARSE(fechaFin AS DATE USING 'es-ES')), CAST(horaFin AS DATETIME2(1))) >= CAST(GETDATE() AS DATETIME2(1))"
+      @multi = true
+    end
+    if params.key?(:centro)
+      @where = @where + (@multi ? " AND " : "") + "centroSiglas = UPPER('" + params[:centro] + "')"
+      @multi = true
+    end
+    if params.key?(:categoria)
+      @where = @where + (@multi ? " AND " : "") + "LOWER(Categoria) like '%" + params[:categoria].downcase + "%'"
+      @multi = true
+    end
+    if params.key?(:tipo)
+      @where = @where + (@multi ? " AND " : "") + "LOWER(tipoActividad) = LOWER('" + params[:tipo] + "')"
+    end
+    begin
+      cliente = TinyTds::Client.new username: 'agendaPRED', password: '@g3NDa#', host: '172.16.40.220', port: '1433'
+      @resultado = cliente.execute("USE Agenda")
+      @resultado.do
+      @resultado = cliente.execute("SELECT * FROM dbo.vw_EventosCategoria" + (@where.size > 0 ? (" WHERE " + @where) : "")  " ORDER BY PARSE(fechaInicio AS DATE USING 'es-ES') ASC, horaInicio ASC OFFSET " + offset + " ROWS " + (params.key?(:limit) ? ("FETCH NEXT " + params[:limit] + " ROWS ONLY;") : ";"))
+      @resultado.each do |r|
+        @datos << r
+      end
+    rescue
+      @datos = {}
+    end
+    respond_to do |format|
+      format.json {render json {videos: @datos}}
+    end
+  end
 end
