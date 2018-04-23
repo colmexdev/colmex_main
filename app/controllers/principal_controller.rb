@@ -61,7 +61,8 @@ class PrincipalController < ApplicationController
 
   def get_eventos
     @datos = []
-    offset = params[:offset] || "0"
+    @limit = params[:limit] || "1"
+    @offset = params[:offset] || "0"
     @multi = false
     @where = ""
     if params.key?(:crono) && params[:crono] == "true"
@@ -83,15 +84,16 @@ class PrincipalController < ApplicationController
       cliente = TinyTds::Client.new username: 'agendaPRED', password: '@g3NDa#', host: '172.16.40.220', port: '1433'
       @resultado = cliente.execute("USE Agenda")
       @resultado.do
-      @resultado = cliente.execute("SELECT * FROM dbo.vw_EventosCategoria" + (@where.size > 0 ? (" WHERE " + @where) : "") + " ORDER BY PARSE(fechaInicio AS DATE USING 'es-ES') ASC, horaInicio ASC OFFSET " + offset + " ROWS " + (params.key?(:limit) ? ("FETCH NEXT " + params[:limit] + " ROWS ONLY;") : ";"))
+      @resultado = cliente.execute("SELECT * FROM dbo.vw_EventosCategoria" + (@where.size > 0 ? (" WHERE " + @where) : "") + " ORDER BY PARSE(fechaInicio AS DATE USING 'es-ES') ASC, horaInicio ASC OFFSET " + (@offset.to_i*@limit.to_i).to_s + " ROWS " + (params.key?(:limit) ? ("FETCH NEXT " + @limit + " ROWS ONLY;") : ";"))
       @resultado.each do |r|
         @datos << r
       end
+      @total = cliente.execute("SELECT * FROM dbo.vw_EventosCategoria" + (@where.size > 0 ? (" WHERE " + @where) : "") + ";").count
     rescue
       @datos = {}
     end
     respond_to do |format|
-      format.json {render json: {videos: @datos}}
+      format.json {render json: {videos: @datos, total: @total, pages: (params.key?(:limit) ? (@total.fdiv(@limit.to_i).ceil) : 1), prev_page: (@offset.to_i - 1 < 0 || @offset.to_i - 1 > @total.fdiv(@limit.to_i).ceil ? nil : @offset.to_i - 1), next_page: (@offset.to_i + 1 > @total.fdiv(@limit.to_i).ceil ? nil : @offset.to_i + 1), first_page: (@offset.to_i == 0), last_page: (@offset.to_i == @total.fdiv(@limit.to_i).ceil)}}
     end
   end
 end
