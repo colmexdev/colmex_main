@@ -93,7 +93,7 @@ class PrincipalController < ApplicationController
       @datos = {}
     end
     respond_to do |format|
-      format.json {render json: {videos: @datos, total: @total, pages: (params.key?(:limit) ? (@total.fdiv(@limit.to_i).ceil) : 1), prev_page: (@offset.to_i - 1 < 0 || @offset.to_i - 1 > @total.fdiv(@limit.to_i).ceil ? nil : @offset.to_i - 1), next_page: (@offset.to_i + 1 > @total.fdiv(@limit.to_i).ceil ? nil : @offset.to_i + 1), first_page: (@offset.to_i == 0), last_page: (@offset.to_i == @total.fdiv(@limit.to_i).ceil)}}
+      format.json {render json: {videos: @datos, total: @total, pages: (params.key?(:limit) ? (@total.fdiv(@limit.to_i).ceil) : 1), curr_page: @offset.to_i + 1, prev_page: (@offset.to_i - 1 < 0 || @offset.to_i >= @total.fdiv(@limit.to_i).ceil ? nil : @offset.to_i), next_page: (@offset.to_i + 1 > @total.fdiv(@limit.to_i).ceil ? nil : @offset.to_i + 2), first_page: (@offset.to_i == 0), last_page: (@offset.to_i + 1 == @total.fdiv(@limit.to_i).ceil)}}
     end
   end
 end
