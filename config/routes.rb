@@ -37,6 +37,8 @@ Rails.application.routes.draw do
 
   get '/' => 'principal#principal', :as => :main_es
 
+  get '/catalogo_eventos' => 'principal#get_eventos', :as => :catalogo_eventos
+
   scope "(:locale)", locale: /(en)|(es)/ do
     get 'centros' => "centros_de_estudio#inicio", :as => :centros_de_estudio
     get 'ceaa' => "centros_de_estudio#ceaa", :as => :ceaa
@@ -142,8 +144,6 @@ Rails.application.routes.draw do
   end
  
   get '/:locale' => 'principal#principal', :as => :main
-
-  get '/catalogo_eventos' => 'principal#get_eventos', :as => :catalogo_eventos
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
