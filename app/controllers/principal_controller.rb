@@ -91,6 +91,7 @@ class PrincipalController < ApplicationController
       @total = cliente.execute("SELECT * FROM dbo.vw_DatosAgenda" + (@where.size > 0 ? (" WHERE " + @where) : "") + ";").count
     rescue
       @datos = {}
+      @total = 0
     end
     respond_to do |format|
       format.json {render json: {videos: @datos, total: @total, pages: (params.key?(:limit) ? (@total.fdiv(@limit.to_i).ceil) : 1), curr_page: @offset.to_i + 1, prev_page: (@offset.to_i - 1 < 0 || @offset.to_i >= @total.fdiv(@limit.to_i).ceil ? nil : @offset.to_i), next_page: (@offset.to_i + 1 >= @total.fdiv(@limit.to_i).ceil ? nil : @offset.to_i + 2), first_page: (@offset.to_i == 0), last_page: (@offset.to_i + 1 == @total.fdiv(@limit.to_i).ceil)}}

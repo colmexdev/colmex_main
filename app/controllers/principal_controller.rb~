@@ -88,7 +88,7 @@ class PrincipalController < ApplicationController
       @resultado.each do |r|
         @datos << r
       end
-      @total = cliente.execute("SELECT * FROM dbo.vw_EventosCategoria" + (@where.size > 0 ? (" WHERE " + @where) : "") + ";").count
+      @total = cliente.execute("SELECT * FROM dbo.vw_DatosAgenda" + (@where.size > 0 ? (" WHERE " + @where) : "") + ";").count
     rescue
       @datos = {}
     end
