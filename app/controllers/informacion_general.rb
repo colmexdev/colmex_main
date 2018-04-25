@@ -105,9 +105,9 @@ class InformacionGeneralController < ApplicationController
     is_editable("Autoridades (presidencia)")
     @presidencias = Personal.where("seccion = ? and lower(cargo) like ?", "Presidencia", "president_").union(Personal.where("seccion = ? and lower(cargo) like ?", "Presidencia", "secretari_ general")).union(Personal.where("seccion = ? and lower(cargo) like ?", "Presidencia", "coordinador_ general academic_")).union(Personal.where("seccion = ? and lower(cargo) like ?", "Presidencia", "secretari_ academic_")).union(Personal.where("seccion = ? and lower(cargo) like ?", "Presidencia", "secretari_ administrativ_"))
     #@profs_centros = Personal.find(47).union(Personal.find(48)).union(Personal.find(46))
-		@profs_centros = Personal.where("id = ?", 47).union(Personal.where("id = ?", 48)).union(Personal.where("id = ?", 46))
+		@profs_centros = Personal.where(seccion: "Asociado a Centro")
 		#@profs_centros = Personal.where("seccion = ? AND nombre = ?", "Asociado","Luis Óscar Gómez Rodríguez †").union(Personal.where("seccion = ? AND nombre = ?", "Asociado","Ma. Guadalupe González González")).union(Personal.where("seccion = ? AND nombre = ?", "Asociado","María Eugenia Zavala"))
-    @asociados = Personal.where("seccion = ? AND id not in (?)","Asociado","46,47,48")
+    @asociados = Personal.where(seccion: "Asociado a proyecto")
     respond_to do |format|
       format.js
     end
