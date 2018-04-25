@@ -107,7 +107,7 @@ class InformacionGeneralController < ApplicationController
     #@profs_centros = Personal.find(47).union(Personal.find(48)).union(Personal.find(46))
 		@profs_centros = Personal.where("id = ?", 47).union(Personal.where("id = ?", 48)).union(Personal.where("id = ?", 46))
 		#@profs_centros = Personal.where("seccion = ? AND nombre = ?", "Asociado","Luis Óscar Gómez Rodríguez †").union(Personal.where("seccion = ? AND nombre = ?", "Asociado","Ma. Guadalupe González González")).union(Personal.where("seccion = ? AND nombre = ?", "Asociado","María Eugenia Zavala"))
-    @asociados = Personal.where("seccion = ? AND id not in ?","Asociado",[46,47,48])
+    @asociados = Personal.where("seccion = ? AND id not in (?)","Asociado","46,47,48")
     respond_to do |format|
       format.js
     end
