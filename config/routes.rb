@@ -32,8 +32,8 @@ Rails.application.routes.draw do
   post 'panel' => 'panel#crear'
   get 'panel/:id' => 'panel#mostrar', :as => :panel_mostrar
   delete 'panel/:id' => 'panel#eliminar', :as => :panel_eliminar
-  put 'panel/editar' => 'panel#actualizar'
-  patch 'panel/editar' => 'panel#actualizar'
+  put 'panel' => 'panel#actualizar'
+  patch 'panel' => 'panel#actualizar'
 
   get '/' => 'principal#principal', :as => :main_es
 

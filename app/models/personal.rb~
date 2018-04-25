@@ -13,6 +13,8 @@ class Personal < ActiveRecord::Base
   validates_attachment_presence :foto, if:  "seccion == 'Centros'"
   validates :depto, presence: true, if: "seccion == 'Centros' or (seccion == 'Operativas' and cargo.blank?) or seccion == 'Consejo'"
   validates :cargo, presence: true, if: "(seccion == 'Operativas' and depto.blank? ) or seccion == 'Administración' or seccion == 'Presidencia' or seccion == 'Asociado'"
+  validates :depto_eng, presence: true, if: "seccion == 'Centros' or (seccion == 'Operativas' and cargo.blank?) or seccion == 'Consejo'"
+  validates :cargo_eng, presence: true, if: "(seccion == 'Operativas' and depto.blank? ) or seccion == 'Administración' or seccion == 'Presidencia' or seccion == 'Asociado'"
  
 
   validates_attachment_content_type :foto, :content_type => ['image/jpeg', 'image/png', 'image/jpg']
