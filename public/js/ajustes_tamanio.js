@@ -83,9 +83,11 @@ $(document).on("ready page:load", function(){
   agregarAnaliticos();
 	try{
 		setTimeout(function(){
-		try{
 			var anchos_badges = recabarAnchos();
 			escalarSlider(anchos_badges);
+		}, 250);
+		setTimeout(function(){
+		try{
 			partirDescubres();
 			$(window).trigger("resize");
 			margenAuto();
