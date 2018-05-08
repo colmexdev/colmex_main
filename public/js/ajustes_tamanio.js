@@ -151,11 +151,11 @@ $(window).on("resize",function(){
 function recabarAnchos(){
 	var arr_w = [];
 	for( var i = 0; i < gon.cant_sliders; i++){
-		console.log($("#badge-"+i).width());
-		var image = new Image();
-		image.onload = function(){
-			var ancho_img = this.width;
-			arr_w.push(ancho_img);
+	//	var image = new Image();
+	//	image.onload = function(){
+	//		var ancho_img = this.width;
+	//		arr_w.push(ancho_img);
+			arr_w.push($("#badge-"+i).outerWidth(true));
 		}
 		image.src = $( "#badge-" + i).attr("src");
 	}
