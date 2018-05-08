@@ -156,8 +156,8 @@ function recabarAnchos(){
 	//		var ancho_img = this.width;
 	//		arr_w.push(ancho_img);
 			arr_w.push($("#badge-"+i).outerWidth(true));
-		}
-		image.src = $( "#badge-" + i).attr("src");
+	//	}
+	//	image.src = $( "#badge-" + i).attr("src");
 	}
 	reajustarBadges(arr_w);
 	return arr_w;
