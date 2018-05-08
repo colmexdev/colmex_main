@@ -82,10 +82,10 @@ $(document).on("ready page:load", function(){
 
   agregarAnaliticos();
 	try{
-		var anchos_badges = recabarAnchos();
-		escalarSlider(anchos_badges);
 		setTimeout(function(){
 		try{
+			var anchos_badges = recabarAnchos();
+			escalarSlider(anchos_badges);
 			partirDescubres();
 			$(window).trigger("resize");
 			margenAuto();
@@ -126,10 +126,10 @@ $(window).on("resize",function(){
 	}
 
 	try{
-		escalarSlider(anchos_badges);
 		setTimeout(function(){
-		partirDescubres();
-		margenAuto();}, 850);
+			escalarSlider(recabarAnchos());
+			partirDescubres();
+			margenAuto();}, 850);
 		ajustarImagenes();
 		if($(".uk-modal").css("display") =="block"){
 			escalarLightbox();
@@ -173,7 +173,7 @@ function escalarSlider(arr_a){
 function reajustarBadges(arr){
 	for( var i = 0; i < gon.cant_sliders; i++){
 		var ancho_nuevo = ($("#div_slider").width() * arr[i]) / 1341;
-		$( "#badge-" + i ).css({"width": ancho_nuevo+"px", "max-width": arr[i]+"px" });
+		$( "#badge-" + i ).css({"width": ancho_nuevo + "px", "max-width": arr[i]+"px" });
 	}
 }
 

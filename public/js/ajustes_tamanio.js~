@@ -24,10 +24,8 @@ barra_render = false;
 })*/
 
 $(document).on("ready page:load", function(){
-	console.log("Entrando");
 	UIkit.init();
 	try{
-		console.log("Configurando Trix");
 		configTrix();
 		addEventListener("trix-initialize", function(event) {
 			var histElement = event.target.toolbarElement.querySelector("[data-trix-button-group='history-tools']");
@@ -52,7 +50,6 @@ $(document).on("ready page:load", function(){
 	}
 
 	try{
-		console.log("Ajustando tamaños de slide eventos");
 		if(gon.ev_tiny == ""){
 			$("#div_eventos").css("height","0");
 		}
@@ -82,11 +79,9 @@ $(document).on("ready page:load", function(){
 	}
 	catch(err){
 	}
-	//$('.frame-descubre').css({'height':cw+'px'});
 
   agregarAnaliticos();
 	try{
-		console.log("Ajustando slider principal");
 		var anchos_badges = recabarAnchos();
 		escalarSlider(anchos_badges);
 		setTimeout(function(){
