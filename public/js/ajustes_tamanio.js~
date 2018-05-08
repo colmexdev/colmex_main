@@ -155,10 +155,10 @@ function recabarAnchos(){
 		image.onload = function(){
 			var ancho_img = this.width;
 			arr_w.push(ancho_img);
-			reajustarBadges(arr_w);
 		}
 		image.src = $( "#badge-" + i).attr("src");
 	}
+	reajustarBadges(arr_w);
 	return arr_w;
 }
 
