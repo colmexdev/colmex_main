@@ -151,15 +151,15 @@ $(window).on("resize",function(){
 function recabarAnchos(){
 	var arr_w = [];
 	for( var i = 0; i < gon.cant_sliders; i++){
-	//	var image = new Image();
-	//	image.onload = function(){
-	//		var ancho_img = this.width;
-	//		arr_w.push(ancho_img);
-			arr_w.push($("#badge-"+i).outerWidth(true));
-	//	}
-	//	image.src = $( "#badge-" + i).attr("src");
+		var image = new Image();
+		image.onload = function(){
+			var ancho_img = this.width;
+			arr_w.push(ancho_img);
+		}
+		image.src = $( "#badge-" + i).attr("src");
 	}
-	reajustarBadges(arr_w);
+	setTimeout(function(){
+		reajustarBadges(arr_w);}, 150);
 	return arr_w;
 }
 
