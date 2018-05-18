@@ -61,7 +61,7 @@ class PrincipalController < ApplicationController
 
   def get_eventos
     @datos = []
-    @limit = params[:limit] || "1"
+    @limit = (params[:limit].to_i > 0 ? params[:limit] : "0") || "0"
     @offset = params[:offset] || "0"
     @multi = false
     @where = ""
@@ -84,7 +84,7 @@ class PrincipalController < ApplicationController
       cliente = TinyTds::Client.new username: 'agendaPRED', password: '@g3NDa#', host: '172.16.40.220', port: '1433'
       @resultado = cliente.execute("USE Agenda")
       @resultado.do
-      @resultado = cliente.execute("SELECT * FROM dbo.vw_DatosAgenda" + (@where.size > 0 ? (" WHERE " + @where) : "") + " ORDER BY PARSE(fechaInicio AS DATE USING 'es-ES') ASC, horaInicio ASC OFFSET " + (@offset.to_i*@limit.to_i).to_s + " ROWS " + (params.key?(:limit) ? ("FETCH NEXT " + @limit + " ROWS ONLY;") : ";"))
+      @resultado = cliente.execute("SELECT * FROM dbo.vw_DatosAgenda" + (@where.size > 0 ? (" WHERE " + @where) : "") + " ORDER BY PARSE(fechaInicio AS DATE USING 'es-ES') ASC, horaInicio ASC OFFSET " + (@offset.to_i*@limit.to_i).to_s + " ROWS " + (@limit != "0" ? ("FETCH NEXT " + @limit + " ROWS ONLY;") : ";"))
       @resultado.each do |r|
         @datos << r
       end
