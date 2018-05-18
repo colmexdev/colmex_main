@@ -61,7 +61,8 @@ class PrincipalController < ApplicationController
 
   def get_eventos
     @datos = []
-    @limit = (params[:limit].to_i > 0 ? params[:limit] : "0") || "0"
+    @limit = params[:limit] || "0"
+    @limit = "0" if @limit.to_i < 0 else @limit
     @offset = params[:offset] || "0"
     @multi = false
     @where = ""
