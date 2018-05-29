@@ -1364,7 +1364,8 @@ ul.ul-nav { display: table;
 
 	.img-banner{
 		position:relative;
-		width: 440px;
+		/*width: 440px;*/
+		height: 100%;
 		max-width: -webkit-calc(100% - 50px);
 		max-width: -moz-calc(100% - 50px);
 		max-width: calc(100% - 50px);
