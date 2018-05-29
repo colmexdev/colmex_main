@@ -85,6 +85,7 @@ $(document).on("ready page:load", function(){
 		setTimeout(function(){
 			var anchos_badges = recabarAnchos();
 			escalarSlider(anchos_badges);
+			escalarBanner("div-banner-pres",230,900);
 		}, 250);
 		setTimeout(function(){
 		try{
@@ -129,6 +130,7 @@ $(window).on("resize",function(){
 
 	try{
 		setTimeout(function(){
+			escalarBanner("div-banner-pres",230,900);
 			escalarSlider(recabarAnchos());
 			partirDescubres();
 			margenAuto();}, 850);
@@ -171,6 +173,11 @@ function escalarSlider(arr_a){
 	$('#div_slider').css({'height':alto_slide+'px'});
 	$('.ghost-slider').css("height",alto_slide+"px");
 	reajustarBadges(arr_a);
+}
+
+function escalarBanner(el,mh,mw){
+	var ancho_el = document.getElementById(el).offsetWidth;
+	$('#'+el).css({'height': (ancho_el*(mh/mw))+'px'});
 }
 
 function reajustarBadges(arr){
