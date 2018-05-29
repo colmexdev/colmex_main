@@ -1354,7 +1354,9 @@ ul.ul-nav { display: table;
 
 //Estilos que afectan al banner de Presidencia
 #div-banner-pres{
-	background-color: #F3F3F3;
+	/*background-color: #F3F3F3;*/
+	background-image: image-url('fondo.jpg');
+	background-repeat: repeat-x;
 	z-index: 27;
 	box-shadow: rgba(0, 0, 0, 0.172549) 0px 6px 12px;
 	position: relative;
