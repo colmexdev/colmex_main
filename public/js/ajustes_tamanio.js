@@ -82,21 +82,21 @@ $(document).on("ready page:load", function(){
 
   agregarAnaliticos();
 	try{
+		escalarBanner("div-banner-pres",230,900);
 		setTimeout(function(){
 			var anchos_badges = recabarAnchos();
 			escalarSlider(anchos_badges);
-			escalarBanner("div-banner-pres",230,900);
 		}, 250);
 		setTimeout(function(){
-		try{
-			partirDescubres();
-			$(window).trigger("resize");
-			margenAuto();
-		}
-		catch(err){
-		}
-	}, 850);
-	ajustarImagenes();
+			try{
+				partirDescubres();
+				$(window).trigger("resize");
+				margenAuto();
+			}
+			catch(err){
+			}
+		}, 850);
+		ajustarImagenes();
 	}
 	catch(err){
 	}
@@ -129,8 +129,8 @@ $(window).on("resize",function(){
 	}
 
 	try{
+		escalarBanner("div-banner-pres",230,900);
 		setTimeout(function(){
-			escalarBanner("div-banner-pres",230,900);
 			escalarSlider(recabarAnchos());
 			partirDescubres();
 			margenAuto();}, 850);
