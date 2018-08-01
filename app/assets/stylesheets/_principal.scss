@@ -2104,6 +2104,8 @@ ul.ul-nav { display: table;
 }
 
 .uk-width-4-6.uk-vertical-align-middle.uk-text-left.uk-text-break h4 {
-	white-space: pre;
+	-webkit-hyphens: none;
+	-moz-hyphens: none;
+	hyphens: none;
 }
 
