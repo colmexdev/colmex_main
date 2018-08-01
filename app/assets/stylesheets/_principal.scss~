@@ -1354,15 +1354,20 @@ ul.ul-nav { display: table;
 
 //Estilos que afectan al banner de Presidencia
 #div-banner-pres{
-	background-color: #F3F3F3;
+	/*background-color: #F3F3F3;*/
+	background-image: image-url('fondo.jpg');
+	background-repeat: repeat-x;
+	background-size: 100% 100%;
 	z-index: 27;
 	box-shadow: rgba(0, 0, 0, 0.172549) 0px 6px 12px;
 	position: relative;
 	height: 230px;
+	max-height: 230px;
 
 	.img-banner{
-		position:relative;
-		width: 440px;
+		position: relative;
+		width: auto;
+		height: 100%;
 		max-width: -webkit-calc(100% - 50px);
 		max-width: -moz-calc(100% - 50px);
 		max-width: calc(100% - 50px);
@@ -1922,7 +1927,7 @@ ul.ul-nav { display: table;
 			max-width: 75%;
 		}
 
-		>img:hover { opacity: 0.7; } 
+		>img:hover { /*opacity: 0.7;*/ } 
 	}
 }
 
@@ -2098,4 +2103,7 @@ ul.ul-nav { display: table;
 	#boton-top { bottom: 150px; }
 }
 
+.uk-width-4-6.uk-vertical-align-middle.uk-text-left.uk-text-break h4 {
+	white-space: pre;
+}
 
