@@ -87,7 +87,7 @@ class InformacionGeneralController < ApplicationController
 
   def operativas
     is_editable("Autoridades (operativas)")
-    @operativas = Personal.where("seccion = ? AND lower(depto) = ?", "Operativas", "oficina de vinculación institucional").union(Personal.where("seccion = ? AND lower(depto) = ?", "Operativas", "oficina de intercambio académico")).union(Personal.where("seccion = ? AND lower(depto) = ?", "Operativas", "coordinación de promoción de programas académicos y pnpc")).union(Personal.where("seccion = ? AND lower(depto) = ?", "Operativas", "oficina de planeación académica y transparencia")).union(Personal.where("seccion = ? AND lower(depto) = ?", "Operativas", "oficina de comunicación digital")).union(Personal.where("seccion = ? AND lower(depto) = ?", "Operativas", "oficina de apoyo a proyectos institucionales"))
+    @operativas = Personal.where("seccion = ? AND lower(depto) = ?", "Operativas", "oficina de vinculación institucional").union(Personal.where("seccion = ? AND lower(depto) = ?", "Operativas", "oficina de intercambio académico")).union(Personal.where("seccion = ? AND lower(depto) = ?", "Operativas", "oficina de promoción de programas académicos y pnpc")).union(Personal.where("seccion = ? AND lower(depto) = ?", "Operativas", "oficina de planeación académica y transparencia")).union(Personal.where("seccion = ? AND lower(depto) = ?", "Operativas", "oficina de comunicación digital")).union(Personal.where("seccion = ? AND lower(depto) = ?", "Operativas", "oficina de apoyo a proyectos institucionales"))
     respond_to do |format|
       format.js
     end
