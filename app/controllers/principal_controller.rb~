@@ -97,4 +97,22 @@ class PrincipalController < ApplicationController
       format.json {render json: {videos: @datos, total: @total, pages: (params.key?(:limit) ? (@total.fdiv(@limit.to_i).ceil) : 1), curr_page: @offset.to_i + 1, prev_page: (@offset.to_i - 1 < 0 || @offset.to_i >= @total.fdiv(@limit.to_i).ceil ? nil : @offset.to_i), next_page: (@offset.to_i + 1 >= @total.fdiv(@limit.to_i).ceil ? nil : @offset.to_i + 2), first_page: (@offset.to_i == 0), last_page: (@offset.to_i + 1 == @total.fdiv(@limit.to_i).ceil || (@total == 0 && @offset.to_i == 0))}}
     end
   end
+
+  def cinta_eventos
+    begin
+      cliente = TinyTds::Client.new username: 'agendaPRED', password: '@g3NDa#', host: '172.16.40.220', port: '1433'
+      @resultado = cliente.execute("USE Agenda")
+      @resultado.do
+      @resultado = cliente.execute("SELECT * FROM dbo.vw_DatosAgenda WHERE DATEADD(day, DATEDIFF(day,'19000101',PARSE(fechaFin AS DATE USING 'es-ES')), CAST(horaFin AS DATETIME2(1))) >= CAST(GETDATE() AS DATETIME2(1)) AND CentroSigles = 'CEE' ORDER BY PARSE(fechaInicio AS DATE USING 'es-ES') ASC, horaInicio ASC")
+      @ev_big, @ev_small, @ev_tiny = construye_slider_eventos(@resultado)
+    rescue => e
+      @ev_big, @ev_small, @ev_tiny = "", "" ,""
+    end
+
+    respond_to do |format|
+      format.html
+      format.json { render json: {ev_big: @ev_big, ev_med: @ev_small, ev_small: @ev_tiny}}
+    end
+  end
+
 end
