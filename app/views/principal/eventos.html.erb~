@@ -1,0 +1,50 @@
+	<div class="row" style="margin:0;"> <!-- Fila para eventos -->
+		<div class="col-md-12" id="div_eventos" style="padding:0;"> <!-- Columnas para eventos -->
+			<div id="carouselEventos" class="carousel slide" data-ride="carousel" data-interval="false">
+
+				<!-- Wrapper for slides -->
+		    <div class="carousel-inner" id="render_eventos" role="listbox" >
+
+		    </div>
+
+				<!-- Left and right controls -->
+				<a class="left carousel-control" href="#carouselEventos" role="button" data-slide="prev">
+					<i class="fa fa-chevron-left" aria-hidden="true" style="display:table-cell;color:#993366;text-shadow:none;vertical-align:middle;"></i>
+					<span class="sr-only">Anterior</span>
+				</a>
+				<a class="right carousel-control" href="#carouselEventos" role="button" data-slide="next">
+					<i class="fa fa-chevron-right" aria-hidden="true" style="display:table-cell;color:#993366;text-shadow:none;vertical-align:middle;"></i>
+					<span class="sr-only">Siguiente</span>
+				</a>
+			</div> <!-- Cierre de slider -->
+
+
+		</div> <!-- Cierre de columnas para eventos -->
+	</div> <!-- Cierre de fila para eventos -->
+
+<script type="text/javascript">
+  function scaleEventos(big,med,small){
+			try{
+				if(small == ""){
+					$("#div_eventos").css("height","0");
+				}
+				else{
+					if(ancho < 785){ document.getElementById("render_eventos").innerHTML = small; }
+					else if(ancho < 1150){ document.getElementById("render_eventos").innerHTML = med; }
+					else{ document.getElementById("render_eventos").innerHTML = big;}
+				}
+			}
+			catch(err){
+			}
+	}
+
+	$.ajax({
+		method: 'get',
+		dataType: 'JSON',
+		url: 'https://www.colmex.mx/eventos.json',
+		success: function(result){
+			var ancho = Math.max(document.documentElement.clientWidth, window.innerWidth || document.body.ClientWidth || 0);
+
+		}
+	});
+</script>
