@@ -41,7 +41,7 @@
 	$.ajax({
 		method: 'get',
 		dataType: 'JSON',
-		url: 'https://www.colmex.mx/cinta_eventos',
+		url: 'https://www.colmex.mx/eventos.json',
 		success: function(result){
 			var ancho = Math.max(document.documentElement.clientWidth, window.innerWidth || document.body.ClientWidth || 0);
 			scaleEventos(result["ev_big"], result["ev_med"], result["ev_small"]);
