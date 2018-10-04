@@ -148,6 +148,7 @@
     <div class="uk-width-1-1">
     <span class="titulo-grande"><%= params[:locale] == "en" ? "Academic Calendar" : "Calendario Escolar" %></span><br>
 
+<% if false %>
 <%= params[:locale] == "es" ? @pars[0].texto.gsub(/<p>/,'<span class="titulo-chico">').gsub(/<\/p>/,"</span>").html_safe : @pars[0].texto_ingles.gsub(/<p>/,'<span class="titulo-chico">').gsub(/<\/p>/,"</span>").html_safe %><br><br>
 
     <h1 class="titulo-grande vino uk-margin-large-bottom" style="text-align:center"><%= params[:locale] == "en" ? "Second Semester" :"Segundo Semestre" %></h1>
@@ -199,6 +200,7 @@
 
 <br>
 <hr>
+<% end %>
 
 <span class="titulo-chico"><%= params[:locale] == "es" ? "Año académico 2018 - 2019" : "Academic year 2018 - 2019" %></span><br><br>
 
