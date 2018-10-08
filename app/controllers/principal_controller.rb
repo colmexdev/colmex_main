@@ -82,7 +82,7 @@ class PrincipalController < ApplicationController
       @multi = true
     end
     if params.key?(:anio)
-      @where = @where + (@multi ? " AND " : "") + "SUBSTRING(fechaInicio,1,4) = '" + params[:anio] + "'"
+      @where = @where + (@multi ? " AND " : "") + "SUBSTRING(fechaInicio,7,4) = '" + params[:anio] + "'"
     end
     begin
       cliente = TinyTds::Client.new username: 'agendaPRED', password: '@g3NDa#', host: '172.16.40.220', port: '1433'
