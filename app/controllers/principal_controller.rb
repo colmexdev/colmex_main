@@ -79,6 +79,10 @@ class PrincipalController < ApplicationController
     end
     if params.key?(:tipo)
       @where = @where + (@multi ? " AND " : "") + "LOWER(tipoActividad) = LOWER('" + params[:tipo] + "')"
+      @multi = true
+    end
+    if params.key?(:anio)
+      @where = @where + (@multi ? " AND " : "") + "year(fechaInicio) = " + params[:anio]
     end
     begin
       cliente = TinyTds::Client.new username: 'agendaPRED', password: '@g3NDa#', host: '172.16.40.220', port: '1433'
