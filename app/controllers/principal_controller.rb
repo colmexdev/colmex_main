@@ -82,7 +82,7 @@ class PrincipalController < ApplicationController
       @multi = true
     end
     if params.key?(:tipos)
-      @where = @where + (@multi ? " AND " : "") + "LOWER(tipoActividad) LIKE '%" + params[:tipo] + "%'"
+      @where = @where + (@multi ? " AND " : "") + "LOWER(tipoActividad) LIKE '%" + params[:tipos] + "%'"
       @multi = true
     end
     if params.key?(:anio)

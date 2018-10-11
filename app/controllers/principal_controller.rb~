@@ -81,6 +81,10 @@ class PrincipalController < ApplicationController
       @where = @where + (@multi ? " AND " : "") + "LOWER(tipoActividad) = LOWER('" + params[:tipo] + "')"
       @multi = true
     end
+    if params.key?(:tipos)
+      @where = @where + (@multi ? " AND " : "") + "LOWER(tipoActividad) LIKE '%" + params[:tipo] + "%'"
+      @multi = true
+    end
     if params.key?(:anio)
       @where = @where + (@multi ? " AND " : "") + "SUBSTRING(fechaInicio,7,4) = '" + params[:anio] + "'"
     end
