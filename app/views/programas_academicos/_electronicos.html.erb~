@@ -25,7 +25,7 @@
 
 		<% if tip == "MOOC" %>
 		  <% if e.liga.present? %>
-		    <a href=<%= e.liga %> target="_blank" class="ver-mas uk-margin-large-bottom uk-button-small"><%= t('centros.boton') %></a>
+		    <a href=<%= e.liga %> target="_blank" class="ver-mas uk-margin-large-bottom uk-button-small"><%= !e.titulo.include?("Literatura y cultura tradicional de México") ? t('centros.boton') : (params[:locale] == "es" ? "Ver en iTunesU" : "Watch on iTunes U") %></a>
 		  <% end %>
 		<% end %>
 
@@ -66,6 +66,8 @@
     <h3 class="vino uk-margin-bottom-remove">
     <% if !e.fecha_inicio_conv.nil? and !e.fecha_fin_conv.nil? %>
       <%= "Próxima convocatoria" %>
+		<% elsif tip == "MOOC" and !e.fecha_inicio_conv.nil? and !e.fecha_fin_conv.nil?  %>
+			<%= "Convocatorias por anunciarse" %>
     <% end %>
     </h3>
     <h4 class="uk-margin-top-remove">
@@ -86,7 +88,7 @@
     <% if !e.fecha_fin_clases.nil? && e.fecha_inicio_clases > Date.current() && e.tipo_curso_linea == "MOOC" && e.tipo_curso == "En línea" %>
       <%= "Convocatoria abierta" %>
     <% else %>
-      <%= tip == "MOOC" ? "Curso abierto" : "Convocatoria cerrada" %>
+      <%= tip == "MOOC" ? "Inscripciones cerradas en MéxicoX" : "Convocatoria cerrada" %>
     <% end %>
     </h3>
     <% if tip == "MOOC" && !e.liga.nil? %>
