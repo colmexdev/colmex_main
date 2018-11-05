@@ -25,7 +25,7 @@
 
 		<% if tip == "MOOC" %>
 		  <% if e.liga.present? %>
-		    <a href=<%= e.liga %> target="_blank" class="ver-mas uk-margin-large-bottom uk-button-small"><%= !e.titulo.include?("Literatura y cultura tradicional de México") ? t('centros.boton') : (params[:locale] == "es" ? "Ver en iTunesU" : "Watch on iTunes U") %></a>
+		    <a href=<%= e.liga %> target="_blank" class="ver-mas uk-margin-large-bottom uk-button-small"><%= !e.titulo.include?("Literatura y cultura tradicional de México") ? t('centros.boton') : (params[:locale] == "es" ? "Watch on iTunes U" : "Ver en iTunesU") %></a>
 		  <% end %>
 		<% end %>
 
