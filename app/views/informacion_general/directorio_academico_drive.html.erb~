@@ -3,7 +3,14 @@
 <%= include_gon %>
 
 <script type="text/javascript" src="/js/filtro_directorio.js"></script>
-
+<script>
+function filterDir(){
+	$.ajax({
+		url: '/dir-acad-test.js',
+		success: function(){}
+	});
+}
+</script>
 
 <div class="container-fluid" id="resto-cuerpo">
 	<div id="cuerpo" class="principal-chica uk-block-large">
@@ -23,28 +30,28 @@
 			</div>
 			<div class="col-xs-12" id="filtro-inic" style="text-align:center;padding-left:0;">
 			<% for i in 65..90 %>
-				<span class="inics letra" id=<%= "inic_" + i.chr %> style="cursor:pointer; margin:0 3px;font-size:24px;color:#909090;" onclick=<%= "filtrarDirectorio('" + i.chr + "')" %>><%= i.chr %></span>
+				<span class="inics letra" id=<%= "inic_" + i.chr %> style="cursor:pointer; margin:0 3px;font-size:24px;color:#909090;" onclick=<%= "filterDir('" + i.chr + "')" %>><%= i.chr %></span>
 			<% end %>
 			</div>
 			<div class="col-md-4 col-xs-12 filtro center" id="filtro-nombre">
-				<h3 style="display:inline-block;margin-right:8px;">Buscar por:</h3><%= text_field_tag("nombre", "", :oninput => "filtrarDirectorio();", :placeholder => "Nombre") %>
+				<h3 style="display:inline-block;margin-right:8px;">Buscar por:</h3><%= text_field_tag("nombre", "", :oninput => "filterDir(['nombre','linea','centro']);", :placeholder => "Nombre") %>
 			</div>
 			<div class="col-md-4 col-xs-12 center" id="filtro-linea" style="padding-left:5px;">
-				<%= text_field_tag("linea", "", :oninput => "filtrarDirectorio();", :placeholder => "Tema y/o línea de investigación") %><br>
+				<%= text_field_tag("linea", "", :oninput => "filterDir(['nombre','linea','centro']);", :placeholder => "Tema y/o línea de investigación") %><br>
 				<% if false %>
 				<p style="font-size:12px;margin-top:0;text-align:left;">Los temas de investigación utilizan lenguaje libre.</p>
 				<% end %>
 			</div>
 			<% if false %>
 			<div class="col-md-4 col-xs-12 center" id="filtro-mail" style="padding-left:15px;">
-				<%= text_field_tag("correo", "", :oninput => "filtrarDirectorio();", :placeholder => "Línea de investigación") %><br>
+				<%= text_field_tag("correo", "", :oninput => "filterDir(['nombre','linea','centro']);", :placeholder => "Línea de investigación") %><br>
 				<p style="font-size:12px;margin-top:0;text-align:left;">Las líneas de investigación utilizan lenguaje controlado.</p>
 			</div>
 			<% end %>
 		</div>
 		<div class="row">
 			<div class="col-xs-12 col-md-4 center" id="filtro-centro">
-				<h3 style="display:inline-block;margin-right:8px;">Filtrar por:</h3><%= select_tag("contenido", options_for_select([["CEAA", "Asia y África"], ["CEDUA","Demográficos, Urbanos y Ambientales"], ["CEE", "Económicos"], ["CEH","Históricos"], ["CEI","Internacionales"], ["CELL", "Lingüisticos y Literarios"], ["CES","Sociológicos"]]), :include_blank => "Centro de Estudios", :onchange => "filtrarDirectorio();") %>
+				<h3 style="display:inline-block;margin-right:8px;">Filtrar por:</h3><%= select_tag("centro", options_for_select([["CEAA", "Asia y África"], ["CEDUA","Demográficos, Urbanos y Ambientales"], ["CEE", "Económicos"], ["CEH","Históricos"], ["CEI","Internacionales"], ["CELL", "Lingüisticos y Literarios"], ["CES","Sociológicos"]]), :include_blank => "Centro de Estudios", :onchange => "filterDir(['nombre','linea','centro']);") %>
 			</div>
 			<div class="col-xs-12 col-md-4 center" id="filtro-limpiar" style="text-align:left;">
 				<div id="boton_limpiar">
@@ -60,7 +67,7 @@
 			</div>
 			<div class="col-xs-12 acordeon-premios" id="busqueda">
 				<div class="uk-accordion" id="acordeon" data-uk-accordion>
-					<%= construir_docentes(@ac_json) %>
+					<%= @profs.as_json %>
 				</div>
 			</div>
 		</div>
