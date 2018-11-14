@@ -87,7 +87,7 @@ class InformacionGeneralController < ApplicationController
 
   def operativas
     is_editable("Autoridades (operativas)")
-    @operativas = Personal.where("seccion = ? AND lower(depto) = ?", "Operativas", "oficina de vinculación institucional").union(Personal.where("seccion = ? AND lower(depto) = ?", "Operativas", "oficina de intercambio académico")).union(Personal.where("seccion = ? AND lower(depto) = ?", "Operativas", "coordinación de promoción de programas académicos y pnpc")).union(Personal.where("seccion = ? AND lower(depto) = ?", "Operativas", "oficina de planeación académica y transparencia")).union(Personal.where("seccion = ? AND lower(depto) = ?", "Operativas", "oficina de comunicación digital")).union(Personal.where("seccion = ? AND lower(depto) = ?", "Operativas", "oficina de apoyo a proyectos institucionales"))
+    @operativas = Personal.where("seccion = ? AND lower(depto) = ?", "Operativas", "oficina de vinculación institucional").union(Personal.where("seccion = ? AND lower(depto) = ?", "Operativas", "oficina de intercambio académico")).union(Personal.where("seccion = ? AND lower(depto) = ?", "Operativas", "oficina de promoción de programas académicos y pnpc")).union(Personal.where("seccion = ? AND lower(depto) = ?", "Operativas", "oficina de planeación académica y transparencia")).union(Personal.where("seccion = ? AND lower(depto) = ?", "Operativas", "oficina de comunicación digital")).union(Personal.where("seccion = ? AND lower(depto) = ?", "Operativas", "oficina de apoyo a proyectos institucionales"))
     respond_to do |format|
       format.js
     end
@@ -185,6 +185,14 @@ class InformacionGeneralController < ApplicationController
   end
 
   def directorio_academico
+    where = (params.key?(:conds) ? build_query(params[:conds]) : "")
+    limite = 15.0
+    @profs = Teacher.where(where).offset(params.key?(:offset) ? params[:offset].to_i*limite : 0).limit(limite)
+    @pags = (@profs.count/limite).ceil
+    respond_to do |format|
+      format.html
+      format.js
+    end
   end
 
   def recuperar_docentes

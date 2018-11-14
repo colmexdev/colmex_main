@@ -96,6 +96,7 @@ Rails.application.routes.draw do
     get 'marco-normativo' => 'informacion_general#marco_normativo', :as => :marco
     get 'presenciales' => 'programas_academicos#presenciales', :as => :presenciales
     get 'electronicos' => 'programas_academicos#electronicos', :as => :electronicos
+    get 'dir-acad-test' => 'informacion_general#directorio_academico_drive', :as => :dir
 
     get 'calendario-escolar' => 'programas_academicos#calendario_escolar', :as => :calendario
 

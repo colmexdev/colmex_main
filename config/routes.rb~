@@ -40,6 +40,7 @@ Rails.application.routes.draw do
   get '/' => 'principal#principal', :as => :main_es
 
   get '/catalogo_eventos' => 'principal#get_eventos', :as => :catalogo_eventos
+  get '/cinta_eventos' => 'principal#cinta_eventos', :as => :cinta_eventos
 
   scope "(:locale)", locale: /(en)|(es)/ do
     get 'centros' => "centros_de_estudio#inicio", :as => :centros_de_estudio
