@@ -35,11 +35,11 @@ $("#acordeon").html(prof_html);
 var pags_html = "";
 			<% @pags.times do |p| %>
 				<% if p == 0 %>
-					pags_html = pags_html + '<div class="numeros" style="margin:0 2px;display:inline-block;cursor:pointer;" id="sep-ant"><a class="numeros" href="<%= dir_path(params: {offset: 0}) %>" data-remote="true"><</a></div>';
+					pags_html = pags_html + '<div class="numeros" style="margin:0 2px;display:inline-block;cursor:pointer;" id="sep-ant"><a class="numeros" href="<%= dir_path(params: {offset: (params[:offset].to_i - 1 < 0 ? 0 : (params[:offset].to_i - 1))}) %>" data-remote="true"><</a></div>';
 				<% end %>
-				pags_html = pags_html + '<div class="numeros" style="margin:0 5px;display:inline-block;cursor:pointer;"><a class="numeros" style="<%= p == 0 ? 'color:rgb(153, 51, 102)' : '' %>" href="<%= dir_path(params: {offset: p}) %>" data-remote="true"><%= p+1 %></a></div>';
+				pags_html = pags_html + '<div class="numeros" style="margin:0 5px;display:inline-block;cursor:pointer;"><a class="numeros" style="<%= p == params[:offset].to_i ? 'color:rgb(153, 51, 102)' : '' %>" href="<%= dir_path(params: {offset: p}) %>" data-remote="true"><%= p+1 %></a></div>';
 				<% if p == @pags - 1 %>
-					pags_html = pags_html + '<div class="numeros" style="margin:0 2px;display:inline-block;cursor:pointer;" id="sep-nxt"><a class="numeros" href="<%= dir_path(params: {offset: 1}) %>" data-remote="true">></a></div>';
+					pags_html = pags_html + '<div class="numeros" style="margin:0 2px;display:inline-block;cursor:pointer;" id="sep-nxt"><a class="numeros" href="<%= dir_path(params: {offset: (params[:offset].to_i + 1 >= @pags ? @pags : (params[:offset] + 1))}) %>" data-remote="true">></a></div>';
 				<% end %>
 			<% end %>
 $("#separadores").html (pags_html);
