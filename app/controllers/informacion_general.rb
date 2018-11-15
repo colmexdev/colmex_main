@@ -185,7 +185,7 @@ class InformacionGeneralController < ApplicationController
   end
 
   def directorio_academico_drive
-    where = (params.key?(:conds) ? build_query(params[:conds]) : "")
+    where = (params.key?(:conds) ? build_query(params[:conds]) : "centro NOT IN ('JUBILADO', 'BDCV')")
     limite = 15.0
     @profs = Teacher.where(where).offset(params.key?(:offset) ? params[:offset].to_i*limite : 0).limit(limite)
     @pags = (Teacher.where(where).count/limite).ceil
