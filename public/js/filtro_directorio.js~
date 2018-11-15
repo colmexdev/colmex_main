@@ -1,3 +1,4 @@
+if(window.location.pathname != "/dir-acad-test"){
 docentes = (typeof gon.academicos !== 'undefined' ? clone(JSON.parse(gon.academicos)) : "");
 agregarVisible(docentes);
 data = crossfilter(docentes);
@@ -9,6 +10,7 @@ academicosPorInicial = data.dimension(function(d){ return d["inicial"]});
 vistas = 0;
 total = 0;
 vista_act = 0;
+}
 
 function partirDirectorio(visibles){
 	var apartados;

@@ -1,4 +1,4 @@
-if(window.location.pathname != "/dir-acad-test"){
+if(window.location.pathname != "/es/dir-acad-test" && window.location.pathname != "/en/dir-acad-test"){
 docentes = (typeof gon.academicos !== 'undefined' ? clone(JSON.parse(gon.academicos)) : "");
 agregarVisible(docentes);
 data = crossfilter(docentes);
