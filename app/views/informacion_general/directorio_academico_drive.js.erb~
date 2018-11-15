@@ -1,4 +1,4 @@
-var prof_html = ""
+var prof_html = '<div class="uk-accordion" id="acordeon" data-uk-accordion>';
 <% centros = {'CEAA' => 'DE ASIA Y ÁFRICA', 'CEDUA' => 'DEMOGRÁFICOS, URBANOS Y AMBIENTALES', 'CEE' => 'ECONÓMICOS', 'CEH' => 'HISTÓRICOS', 'CEI' => 'INTERNACIONALES', 'CELL' => 'LINGÜÍSTICOS Y LITERARIOS', 'CES' => 'SOCIOLÓGICOS'} %>
 <% @profs.each do |p| %>
 						prof_html = prof_html = '<h3  class="uk-accordion-title"><%= raw(construir_encabezado("bt-flechita.png", "bt-flechita-abajo.png", p.nombre)) %></h3>' +
@@ -29,8 +29,8 @@ var prof_html = ""
 								'</div>' +
 							'</div>';
 <% end %>
-
-$("#acordeon").html(prof_html);
+prof_html = prof_html + '</div>';
+$("#busqueda").html(prof_html);
 
 var pags_html = "";
 			<% @pags.times do |p| %>
@@ -39,7 +39,7 @@ var pags_html = "";
 				<% end %>
 				pags_html = pags_html + '<div class="numeros" style="margin:0 5px;display:inline-block;cursor:pointer;"><a class="numeros" style="<%= p == params[:offset].to_i ? 'color:rgb(153, 51, 102)' : '' %>" href="<%= dir_path(params: {offset: p}) %>" data-remote="true"><%= p+1 %></a></div>';
 				<% if p == @pags - 1 %>
-					pags_html = pags_html + '<div class="numeros" style="margin:0 2px;display:inline-block;cursor:pointer;" id="sep-nxt"><a class="numeros" href="<%= dir_path(params: {offset: (params[:offset].to_i + 1 >= @pags ? @pags : (params[:offset] + 1))}) %>" data-remote="true">></a></div>';
+					pags_html = pags_html + '<div class="numeros" style="margin:0 2px;display:inline-block;cursor:pointer;" id="sep-nxt"><a class="numeros" href="<%= dir_path(params: {offset: (params[:offset].to_i + 1 >= @pags ? @pags : (params[:offset].to_i + 1))}) %>" data-remote="true">></a></div>';
 				<% end %>
 			<% end %>
 $("#separadores").html (pags_html);

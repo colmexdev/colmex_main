@@ -188,7 +188,7 @@ class InformacionGeneralController < ApplicationController
     where = (params.key?(:conds) ? build_query(params[:conds]) : "")
     limite = 10.0
     @profs = Teacher.where(where).offset(params.key?(:offset) ? params[:offset].to_i*limite : 0).limit(limite)
-    @pags = (@profs.count/limite).ceil
+    @pags = (Teacher.where(where).count/limite).ceil
     respond_to do |format|
       format.html
       format.js
