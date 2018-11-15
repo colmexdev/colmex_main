@@ -1,23 +1,31 @@
+docentes = (typeof gon.academicos !== 'undefined' ? clone(JSON.parse(gon.academicos)) : "");
+agregarVisible(docentes);
+data = crossfilter(docentes);
+academicosPorNombre = data.dimension(function(d){ return limpiarPuntuacion(d["nombre"].toLowerCase())});
+academicosPorLinea = data.dimension(function(d){ return limpiarPuntuacion(d["libres"].join(" ").toLowerCase()/* + " " + d["conts"].join(" ").toLowerCase()*/)});
+//academicosPorTema = data.dimension(function(d){return limpiarPuntuacion(d["conts"].join(" ").toLowerCase() + " " + d["libres"].join(" ").toLowerCase())});
+academicosPorCentro = data.dimension(function(d){ return d["adscripcion"]});
+academicosPorInicial = data.dimension(function(d){ return d["inicial"]});
 vistas = 0;
 total = 0;
 vista_act = 0;
 
-function partirDirectorio(visibles,docs){
+function partirDirectorio(visibles){
 	var apartados;
 	vistas = Math.floor(visibles.length/15);
 	if(visibles.length%15 == 0)
 		vistas = vistas - 1;
 	var i;
-	$("#separadores").html("<div class=\"numeros\" style=\"margin:0 2px;display:inline-block;cursor:pointer;\" id=\"sep-ant\" onclick=\"muestra(docs,"+"'ant'"+")\">" + "\<" + "</div>");
+	$("#separadores").html("<div class=\"numeros\" style=\"margin:0 2px;display:inline-block;cursor:pointer;\" id=\"sep-ant\" onclick=\"muestra("+"'ant'"+")\">" + "\<" + "</div>");
 	for(i=0; i<=vistas; i++){
-		$("#separadores").append("<div class=\"numeros\" style=\"margin:0 5px;display:inline-block;cursor:pointer;\" id=\"sep-" + i + "\" onclick=\"muestra(docs,"+i+")\">" + (i+1) + "</div>");
+		$("#separadores").append("<div class=\"numeros\" style=\"margin:0 5px;display:inline-block;cursor:pointer;\" id=\"sep-" + i + "\" onclick=\"muestra("+i+")\">" + (i+1) + "</div>");
 	}
-	$("#separadores").append("<div class=\"numeros\" style=\"margin:0 2px;display:inline-block;cursor:pointer;\" id=\"sep-sig\" onclick=\"muestra(docs,"+"'sig'"+")\">" + "\>" + "</div>");
-	muestra(docs,0);
+	$("#separadores").append("<div class=\"numeros\" style=\"margin:0 2px;display:inline-block;cursor:pointer;\" id=\"sep-sig\" onclick=\"muestra("+"'sig'"+")\">" + "\>" + "</div>");
+	muestra(0);
 }
 
 
-function filtrarDirectorio(docs,axn,axl,axc,axi,b){
+function filtrarDirectorio(b){
 	b = b || '0';
 	var accordion = UIkit.accordion(UIkit.$('#acordeon'));
 	accordion.find('[data-wrapper]').each(function(){
@@ -25,11 +33,11 @@ function filtrarDirectorio(docs,axn,axl,axc,axi,b){
 			accordion.toggleItem(UIkit.$(this), true, true); 
 		}
 	});
-	axn.filterAll();
+	academicosPorNombre.filterAll();
 //	academicosPorTema.filterAll();
-	axl.filterAll();
-	axc.filterAll();
-	axi.filterAll();
+	academicosPorLinea.filterAll();
+	academicosPorCentro.filterAll();
+	academicosPorInicial.filterAll();
 	var busqueda = [];
 	if(b != '0'){
 		$("#nombre").val("");
@@ -49,8 +57,8 @@ function filtrarDirectorio(docs,axn,axl,axc,axi,b){
 		if($("#linea").val() != "") busqueda.push("(Tema(s): " + $("#linea").val() + ")");
 	}
 
-	var academicosFiltradosPorCentro = axc.filter(function(d){ return ( (b != '0' || centrosAFiltrar == "") ? true : d == centrosAFiltrar )}).top(Infinity);
-	var academicosFiltradosPorNombre = axn.filter(function(d){
+	var academicosFiltradosPorCentro = academicosPorCentro.filter(function(d){ return ( (b != '0' || centrosAFiltrar == "") ? true : d == centrosAFiltrar )}).top(Infinity);
+	var academicosFiltradosPorNombre = academicosPorNombre.filter(function(d){
 		if(b != '0' || nombresAFiltrar.join("").split("").length == 0) return true;
 		//var nombre = limpiarPuntuacion(d.toLowerCase()); 
 		for(var j = 0; j < nombresAFiltrar.length; j++){
@@ -59,7 +67,7 @@ function filtrarDirectorio(docs,axn,axl,axc,axi,b){
 		return true;
 
 	}).top(Infinity);
-	var academicosFiltradosPorInicial = axi.filter(function(d){ return ((typeof b === 'object' ||  b == '0') ? true : d == b)}).top(Infinity);
+	var academicosFiltradosPorInicial = academicosPorInicial.filter(function(d){ return ((typeof b === 'object' ||  b == '0') ? true : d == b)}).top(Infinity);
 
 /*	var academicosFiltradosPorTema = academicosPorTema.filter(function(d){ 
 		if( (typeof b !== 'object') && temasAFiltrar == []) return true;
@@ -74,7 +82,7 @@ function filtrarDirectorio(docs,axn,axl,axc,axi,b){
 		}
 		//return ((b != '0' ||correosAFiltrar == "") ? true : limpiarPuntuacion(d.toLowerCase()).indexOf(correosAFiltrar.toLowerCase()) != -1)
 	}).top(Infinity); */
-	var academicosFiltradosPorLinea = axl.filter(function(d){ 
+	var academicosFiltradosPorLinea = academicosPorLinea.filter(function(d){ 
 		if(lineasAFiltrar.join("").split("").length == 0) return true;
 
 		for(var j = 0; j < lineasAFiltrar.length; j++){
@@ -89,9 +97,9 @@ function filtrarDirectorio(docs,axn,axl,axc,axi,b){
 	}
 
 	mostrarBusqueda(busqueda);
-	actualizarVisibleDirectorio(docs,axl);
-	renderFrase(axl,docs);
-	partirDirectorio(axl,docs);
+	actualizarVisibleDirectorio(academicosFiltradosPorLinea);
+	renderFrase(academicosFiltradosPorLinea);
+	partirDirectorio(academicosFiltradosPorLinea);
 }
 
 function mostrarBusqueda(params){
@@ -104,11 +112,11 @@ function mostrarBusqueda(params){
 	document.getElementById("filete-top").style.borderTopStyle = "solid";
 }
 
-function renderFrase(arreglo,docs){
+function renderFrase(arreglo){
 	uno_visible = false;
 	var borrar_frase = (document.getElementById("frase-desc") != null && arreglo.length > 0);
-	for(var i = 0; i < docs.length; i++){
-		if(docs[i]["visible"]){
+	for(var i = 0; i < docentes.length; i++){
+		if(docentes[i]["visible"]){
 			uno_visible = true;
 			break;
 		}
@@ -123,23 +131,23 @@ function renderFrase(arreglo,docs){
 	}
 }
 
-function actualizarVisibleDirectorio(docs,visibles){
+function actualizarVisibleDirectorio(visibles){
 	total = 0;
-	for(var i = 0; i < docs.length; i++){
-		docs[i]["visible"] = false;
-		docs[i]["vista"] = -1;
+	for(var i = 0; i < docentes.length; i++){
+		docentes[i]["visible"] = false;
+		docentes[i]["vista"] = -1;
 		$("#doc-"+i).attr("class","uk-accordion-title");
 	}
 	for(var i = 0; i < visibles.length; i++){
-		docs[visibles[i]["index"]]["visible"] = true;
-		docs[visibles[i]["index"]]["vista"] = Math.floor(i/15);
+		docentes[visibles[i]["index"]]["visible"] = true;
+		docentes[visibles[i]["index"]]["vista"] = Math.floor(i/15);
 		$("#doc-"+visibles[i]["index"]).attr("class","uk-accordion-title view-"+visibles[i]["index"]);
 		total = total + 1;
 	}
-	reescalarDirectorio(docs);
+	reescalarDirectorio();
 }
 
-function muestra(pag,docs){
+function muestra(pag){
 	var i;
 	var accordion = UIkit.accordion(UIkit.$('#acordeon'));
 	accordion.find('[data-wrapper]').each(function(){
@@ -199,14 +207,14 @@ function muestra(pag,docs){
 		$("#sep-"+i).css({"color":"#909090"});
 	}
 
-	for(i=0;i<docs.length;i++){
-		$("#doc-"+i).css({"display": (docs[i]["vista"] == vista_act ? "block" : "none")});
+	for(i=0;i<docentes.length;i++){
+		$("#doc-"+i).css({"display": (docentes[i]["vista"] == vista_act ? "block" : "none")});
 	}
 	
 	$("#sep-"+vista_act).css({"color": "#993366"});
 }
 
-function borrarDocentes(event,docs){
+function borrarDocentes(event){
 	var accordion = UIkit.accordion(UIkit.$('#acordeon'));
 	accordion.find('[data-wrapper]').each(function(){
 		if(UIkit.$(this)[0].firstElementChild.className.indexOf("uk-active") != -1){
@@ -217,7 +225,7 @@ function borrarDocentes(event,docs){
 	//$("#correo").val("");
 	$("#linea").val("");
 	$("#contenido").val("");
-	for(var i = 0; i < docs.length; i++){
+	for(var i = 0; i < docentes.length; i++){
 		$("#doc-"+i).css({"display": "none"});
 	}
 	$("#separadores").html("");
@@ -228,9 +236,9 @@ function borrarDocentes(event,docs){
 	event.preventDefault();
 }
 
-function reescalarDirectorio(docs){
-	for(var i = 0; i < docs.length; i++){
-		$("#doc-"+i).css({"display": (docs[i]["visible"] ? "block" : "none")/*, "width" : (descubres[i]["visible"] ? "" : 0), "border" : (descubres[i]["visible"] ? "solid 4px #fff" : "none") */});
+function reescalarDirectorio(){
+	for(var i = 0; i < docentes.length; i++){
+		$("#doc-"+i).css({"display": (docentes[i]["visible"] ? "block" : "none")/*, "width" : (descubres[i]["visible"] ? "" : 0), "border" : (descubres[i]["visible"] ? "solid 4px #fff" : "none") */});
 	}
 }
 
