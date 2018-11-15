@@ -1,7 +1,7 @@
 var prof_html = '<div class="uk-accordion" id="acordeon" data-uk-accordion>';
 <% centros = {'CEAA' => 'DE ASIA Y ÁFRICA', 'CEDUA' => 'DEMOGRÁFICOS, URBANOS Y AMBIENTALES', 'CEE' => 'ECONÓMICOS', 'CEH' => 'HISTÓRICOS', 'CEI' => 'INTERNACIONALES', 'CELL' => 'LINGÜÍSTICOS Y LITERARIOS', 'CES' => 'SOCIOLÓGICOS', 'Jubilado' => 'PROGRAMA DE ESTUDIOS INTERDISCIPLINARIOS', 'BDCV' => 'BIBLIOTECA DANIEL COSÍO VILLEGAS'} %>
 <% @profs.each do |p| %>
-						prof_html = prof_html + '<h3  class="uk-accordion-title"><%= image_tag("bt-flechita.png", :class => "leave_img") + image_tag("bt-flechita-abajo.png", :class => "hover_img") + p.nombre.gsub("'","&#39;") %></h3>' +
+						prof_html = prof_html + '<h3  class="uk-accordion-title"><%= image_tag("bt-flechita.png", :class => "leave_img") + image_tag("bt-flechita-abajo.png", :class => "hover_img") + raw(p.nombre.gsub("'","&#39;")) %></h3>' +
 							'<div class="uk-accordion-content">' +
 								'<div class="uk-grid uk-grid-medium uk-margin-large-bottom">' +
 									'<div class="uk-width-large-1-5 uk-width-medium-1-5 uk-width-small-1-5 uk-text-center">' +
