@@ -103,11 +103,11 @@ function filterDir(){
 		<div id="separadores" style="text-align:center;margin:10px auto;">
 			<% @pags.times do |p| %>
 				<% if p == 0 %>
-					<div class="numeros" style="margin:0 2px;display:inline-block;cursor:pointer;" id="sep-ant"><a href="<%= dir_path(params: {offset: 0}) %>" data-remote="true"><</a></div>
+					<div class="numeros" style="margin:0 2px;display:inline-block;cursor:pointer;" id="sep-ant"><a class="numeros" href="<%= dir_path(params: {offset: 0}) %>" data-remote="true"><</a></div>
 				<% end %>
 				<div class="numeros" style="margin:0 5px;display:inline-block;cursor:pointer;"><a href="<%= dir_path(params: {offset: p}) %>" data-remote="true"><%= p+1 %></div>	
 				<% if p == @pags - 1 %>
-					<div class="numeros" style="margin:0 2px;display:inline-block;cursor:pointer;" id="sep-nxt"><a href="<%= dir_path(params: {offset: 1}) %>" data-remote="true">></a></div>
+					<div class="numeros" style="margin:0 2px;display:inline-block;cursor:pointer;" id="sep-nxt"><a class="numeros" href="<%= dir_path(params: {offset: 1}) %>" data-remote="true">></a></div>
 				<% end %>
 			<% end %>
 		</div>
