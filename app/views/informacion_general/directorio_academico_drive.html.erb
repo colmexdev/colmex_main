@@ -4,9 +4,18 @@
 
 <script type="text/javascript" src="/js/filtro_directorio.js"></script>
 <script>
-function filterDir(){
+function filterDir(fields){
+	var where = "";
+	if(typeof fields == "string"){
+		where = "&inic="+fields;
+	}
+	else{
+		for(var i = 0; i < fields.length; i++){
+			where = where + ($("#"+fields[i]).val() != "" ? ("&" + fields[i] + "=" + $("#"+fields[i]).val()) : "");
+		}
+	}
 	$.ajax({
-		url: '/dir-acad-test.js',
+		url: '/dir-acad-test.js&offset=0' + where,
 		success: function(){}
 	});
 }
@@ -67,7 +76,7 @@ function filterDir(){
 			</div>
 			<div class="col-xs-12 acordeon-premios" id="busqueda">
 				<div class="uk-accordion" id="acordeon" data-uk-accordion>
-<% centros = {'CEAA' => 'DE ASIA Y ÁFRICA', 'CEDUA' => 'DEMOGRÁFICOS, URBANOS Y AMBIENTALES', 'CEE' => 'ECONÓMICOS', 'CEH' => 'HISTÓRICOS', 'CEI' => 'INTERNACIONALES', 'CELL' => 'LINGÜÍSTICOS Y LITERARIOS', 'CES' => 'SOCIOLÓGICOS'} %>
+<% centros = {'CEAA' => 'DE ASIA Y ÁFRICA', 'CEDUA' => 'DEMOGRÁFICOS, URBANOS Y AMBIENTALES', 'CEE' => 'ECONÓMICOS', 'CEH' => 'HISTÓRICOS', 'CEI' => 'INTERNACIONALES', 'CELL' => 'LINGÜÍSTICOS Y LITERARIOS', 'CES' => 'SOCIOLÓGICOS', 'Jubilado' => 'PROGRAMA DE ESTUDIOS INTERDISCIPLINARIOS', 'BDCV' => 'BIBLIOTECA DANIEL COSÍO VILLEGAS'} %>
 					<% @profs.each do |p| %>
 						<h3  class="uk-accordion-title"><%= raw(construir_encabezado("bt-flechita.png", "bt-flechita-abajo.png", p.nombre)) %></h3>
 							<div class="uk-accordion-content">
