@@ -67,7 +67,16 @@ function filterDir(){
 			</div>
 			<div class="col-xs-12 acordeon-premios" id="busqueda">
 				<div class="uk-accordion" id="acordeon" data-uk-accordion>
-					<%= @profs.as_json %>
+					<% @profs.each do |p| %>
+						<h3 style="display:none" class="uk-accordion-title"><%= raw(construir_encabezado("bt-flechita.png", "bt-flechita-abajo.png", p.nombre)) %></h3>
+							<div class="uk-accordion-content">
+								<div class="uk-grid uk-grid-medium uk-margin-large-bottom">
+									<div class="uk-width-large-1-5 uk-width-medium-1-5 uk-width-small-1-5 uk-text-center">
+										<img src="/persona.jpg" class="uk-border-rounded" alt="Foto Académico">
+									</div>
+									<div class="uk-width-large-4-5 uk-width-medium-4-5 uk-width-small-4-5 uk-text-left uk-text-break">
+										<p style="font-family:'Gotham SSm A', 'Gotham SSm B', Lato, sans-serif; font-size: 16px; font-weight: 700; color: #444444;margin-bottom:3px;text-align:left;" ><%= " CENTRO DE ESTUDIOS " + (d["adscripcion"].include?("Asia") ? "DE " + d["adscripcion"].mb_chars.upcase : (d["adscripcion"].include?("Lingüistico") ? "LINGÜÍSTICOS Y LITERARIOS" : d["adscripcion"].mb_chars.upcase)) %></p>
+					<% end %>
 				</div>
 			</div>
 		</div>
