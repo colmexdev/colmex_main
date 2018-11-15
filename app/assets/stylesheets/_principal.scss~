@@ -1322,8 +1322,8 @@ ul.ul-nav { display: table;
 		a{ 
 			img{ 
 				@include centrado; 
-				max-height: 140px;
-				max-width: 220px;
+				max-height: 150px;
+				max-width: 240px;
 			} 
 
 		}
