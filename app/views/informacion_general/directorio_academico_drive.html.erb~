@@ -7,7 +7,7 @@
 function filterDir(fields){
 	var where = "";
 	if(typeof fields == "string"){
-		where = "&inic="+fields;
+		where = "&conds[inic]="+fields;
 	}
 	else{
 		for(var i = 0; i < fields.length; i++){

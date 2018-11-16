@@ -15,7 +15,7 @@ function filterDir(fields){
 		}
 	}
 	$.ajax({
-		url: '/<%= params[:locale] %>/dir-acad-test.js&offset=0' + where,
+		url: '/<%= params[:locale] %>/dir-acad-test.js?offset=0' + where,
 		success: function(){}
 	});
 }
