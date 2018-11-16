@@ -60,7 +60,7 @@ function filterDir(fields){
 		</div>
 		<div class="row">
 			<div class="col-xs-12 col-md-4 center" id="filtro-centro">
-				<h3 style="display:inline-block;margin-right:8px;">Filtrar por:</h3><%= select_tag("centro", options_for_select([["CEAA", "Asia y África"], ["CEDUA","Demográficos, Urbanos y Ambientales"], ["CEE", "Económicos"], ["CEH","Históricos"], ["CEI","Internacionales"], ["CELL", "Lingüisticos y Literarios"], ["CES","Sociológicos"],["Jubilado","PEI"],["BDCV","Biblioteca"]]), :include_blank => "Centro de Estudios", :onchange => "filterDir(['nombre','linea','centro']);") %>
+				<h3 style="display:inline-block;margin-right:8px;">Filtrar por:</h3><%= select_tag("centro", options_for_select([["CEAA", "CEAA"], ["CEDUA","CEDUA"], ["CEE", "CEE"], ["CEH","CEH"], ["CEI","CEI"], ["CELL", "CELL"], ["CES","CES"],["PEI","Jubilado"],["Biblioteca","BDCV"]]), :include_blank => "Centro de Estudios", :onchange => "filterDir(['nombre','linea','centro']);") %>
 			</div>
 			<div class="col-xs-12 col-md-4 center" id="filtro-limpiar" style="text-align:left;">
 				<div id="boton_limpiar">
