@@ -44,6 +44,9 @@ var pags_html = "";
 			<% end %>
 $("#separadores").html (pags_html);
 
+$("#c_l").html("Total: <%= @total %>");
+$("#c_r").html("Total: <%= @total %>");
+
 	var accordion = UIkit.accordion(UIkit.$('#acordeon'));
 	accordion.find('[data-wrapper]').each(function(){
 		if(UIkit.$(this)[0].firstElementChild.className.indexOf("uk-active") != -1){
