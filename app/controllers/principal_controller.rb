@@ -56,6 +56,18 @@ class PrincipalController < ApplicationController
   def aviso_de_privacidad
   end
 
+  def aviso_completo
+    respond_to do |format|
+      format.js
+    end
+  end
+
+  def aviso_simple
+    respond_to do |format|
+      format.js
+    end
+  end
+
   def proximamente
   end
 

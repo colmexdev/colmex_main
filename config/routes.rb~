@@ -96,6 +96,7 @@ Rails.application.routes.draw do
     get 'marco-normativo' => 'informacion_general#marco_normativo', :as => :marco
     get 'presenciales' => 'programas_academicos#presenciales', :as => :presenciales
     get 'electronicos' => 'programas_academicos#electronicos', :as => :electronicos
+    get 'dir-acad-test' => 'informacion_general#directorio_academico_drive', :as => :dir
 
     get 'calendario-escolar' => 'programas_academicos#calendario_escolar', :as => :calendario
 
@@ -113,6 +114,8 @@ Rails.application.routes.draw do
     get "mapa-sitio" => "principal#sitemap", :as => :sitemap
     get 'proximamente' => 'principal#proximamente', :as => :soon
     get 'aviso-privacidad' => 'principal#aviso_de_privacidad', :as => :aviso
+    get 'aviso-completo' => 'principal#priv_completo', :as => :priv
+    get 'aviso-simple' => 'principal#priv_simple', :as => :priv_simple
 
     scope "editable" do
       get 'sobre' => 'informacion_general#sobre_el_colegio', :as => :sobre_el_colegio_edit

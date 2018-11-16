@@ -1,67 +1,27 @@
 <%= render 'principal/barra' %>
 
-<div id="resto-cuerpo" class="container-fluid">
-	<div id="cuerpo" class="uk-block-large principal-chica">
+<div class="container-fluid" id="resto-cuerpo">
+	<div id="cuerpo" class="principal-chica uk-block-large">
 
-<span class="titulo-grande">Aviso de privacidad</span>
-<p>&nbsp;</p>
-<p>El Colegio de México, A.C., con domicilio en Carretera Picacho Ajusco número 20, Colonia Ampliación Fuentes del Pedregal, Alcaldía de Tlalpan, código postal 14110, Ciudad de México, es el responsable de los datos personales que proporcione a través de los portales https://www.colmex.mx y agenda.colmex.mx a fin de acreditar su identidad como usuario.</p>
+<div class="uk-width-1-1">
+    <div class="uk-grid uk-grid-medium">
+    <div class="uk-width-large-2-5 uk-text-center-small uk-text-center-medium uk-text-left" style="border-right: 2px solid #EEEEEE">
+    <span class="titulo-grande" style="margin-right:40px;"><%= "Aviso de Privacidad" %></span><br>
+    <!--          Aquí empieza el menú pequeño          -->
+    <ul style="text-align:left;">
+				<li style="list-style-type:none;margin-bottom:5px;"><%= link_to(image_tag('bt-flechita.png', :class => "leave_img") + image_tag("bt-flechita-hover.png", :class => "hover_img") + "Aviso de Privacidad", priv_path, :remote => true, :class => "link-sobre", :id => "priv-link") %></li>
+				<li style="list-style-type:none;margin-bottom:5px;"><%= link_to image_tag('bt-flechita.png', :class => "leave_img") + image_tag("bt-flechita-hover.png", :class => "hover_img") + "Aviso de Privacidad simplificado", priv_simple_path, :remote => true, :class => "link-sobre", :id => "priv-simple-link" %></li>
 
-<p>Sus datos personales serán protegidos conforme a lo dispuesto por la Ley General de Protección de Datos Personales en Posesión de Sujetos Obligados y los Lineamientos Generales de Protección de Datos Personales para el Sector Público, bajo los principios de licitud, finalidad, lealtad, consentimiento, calidad, proporcionalidad, información y responsabilidad, así como con las medidas de seguridad pertinentes.</p>
+    </ul>
+    <!--          Aquí termina el menú pequeño          -->
+    </div>
+    <div class="uk-width-large-3-5">
 
-<p><span class="titulo-chico morado">Datos personales solicitados y fines requeridos</span></p>
+				<%= render "principal/aviso_completo" %>
 
-<p>El tratamiento de los datos personales, por parte de El Colegio de México, A.C. requiere del consentimiento libre, previo, expreso e informado de los titulares de los mismos. No se solicitarán datos sensibles.</p>
-<p>Sus datos personales podrán ser utilizados para atender solicitudes, peticiones y requerimientos que realice como usuario, contar con datos de control, estadísticos e informes sobre los servicios brindados; promover las actividades institucionales de difusión, realizar reportes y encuestas de calidad, así como para fines de contacto y transmisión de eventos educativos, de investigación y culturales vía diversas plataformas digitales.
-Para cumplir con los fines antes mencionados, El Colegio de México, A.C. solicita únicamente los datos que se encuentran los portales https://www.colmex.mx y agenda.colmex.mx. tales como datos generales y correo electrónico.</p>
-
-<p><span class="titulo-chico morado">Fundamento jurídico para el tratamiento de datos personales</span></p>
-
-<p>El tratamiento de los datos personales de los usuarios se realiza con fundamento en lo establecido en el artículo 3, fracciones II, VII, IX, XI, XX y 26, 27 y 28 de la Ley General de Protección de Datos Personales en Posesión de Sujetos Obligados, así como los artículos 35, 36, 37, 38, 39, 40, 41 y 42 de los Lineamientos Generales de Protección de Datos Personales para el Sector Público.</p>
-
-<p><span class="titulo-chico morado">Derechos ARCO</span></p>
-
-<p>Usted podrá ejercer sus derechos de acceso, rectificación, cancelación u oposición de sus datos personales (derechos ARCO) directamente ante la Unidad de Transparencia de El Colegio de México, A.C. o bien, a través de la Plataforma Nacional de Transparencia <a class="uk-link" href="https://www.plataformadetransparencia.org.mx" target="_blank">https://www.plataformadetransparencia.org.mx</a>, y a través del correo electrónico <a class="uk-link" target="_blank" href="mailto:unidadtransparencia@colmex.mx">unidadtransparencia@colmex.mx</a>.</p>
-
-<p>Los requisitos para la solicitud serán:</p>
-<ol>
-<li>Nombre del titular y su domicilio o cualquier otro medio para recibir notificaciones.</li>
-<li>Los documentos que acrediten la identidad del titular y, en su caso, la personalidad e identidad de su representante.</li>
-<li>De ser posible, el área responsable que trata los datos personales y ante la cual se presenta la solicitud.</li>
-<li>La descripción clara y precisa de los datos personales respecto de los que se busca ejercer alguno de los derechos ARCO.</li>
-<li>La descripción del derecho ARCO que se pretende ejercer, o bien, lo que solicita el titular.</li>
-<li>Cualquier otro elemento o documento que facilite la localización de los datos personales.</li>
-
-<p><span class="titulo-chico morado">Uso de Cookies</span></p>
-
-<p>El Colegio de México, A.C. utiliza cookies para ayudar a obtener información que permite mejorar la experiencia de los usuarios y brindarles un mejor servicio.
-En cualquier momento los usuarios pueden eliminar las cookies accediendo a las preferencias de configuración de sus navegadores.</p>
-
-<p><span class="titulo-chico morado">Veracidad de la información proporcionada</span></p>
-
-<p>La información deberá ser veraz y completa. Los usuarios responderán en todo momento por la veracidad de los datos proporcionados y en ningún caso El Colegio de México, A.C. será responsable a este respecto.</p>
-
-<p><span class="titulo-chico morado">Confidencialidad de los menores de edad</span></p>
-
-<p>El Colegio de México, A.C. no solicita información de identificación personal a menores de edad. Los menores siempre deben solicitar autorización a sus padres o tutores antes de enviar información personal.</p>
-
-<p><span class="titulo-chico morado">Transferencia de datos personales</span></p>
-
-<p>Se informa que no se realizarán transferencias de datos personales nacionales o internacionales, a menos que exista consentimiento de su titular, salvo las excepciones previstas en los artículos 22, 66 y 70 de Ley General de Protección de Datos Personales en Posesión de Sujetos Obligados.</p>
-
-<p><span class="titulo-chico morado">Domicilio de la Unidad de Transparencia</span></p>
-
-<p>Carretera Picacho Ajusco número 20, Colonia Ampliación Fuentes del Pedregal, Alcaldía de Tlalpan, código postal 14110, Ciudad de México.</p>
-
-<p><span class="titulo-chico morado">Cambios al aviso de privacidad</span></p>
-
-<p>En caso de que exista un cambio a este aviso de privacidad, se hará del conocimiento de los usuarios en el portal <a class="uk-link" href="#">https://www.colmex.mx/es/aviso-privacidad</a>.</p>
-
-<p><span class="titulo-chico morado">Fecha de elaboración</span></p>
-
-<p>La fecha de aprobación del presente aviso por parte del Comité de Transparencia fue el quince de octubre de 2018.</p>
-
-
-
+		</div>
 	</div>
+	</div>
+	</div>
+
 <%= render 'principal/footer' %>

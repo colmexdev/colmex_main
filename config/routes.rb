@@ -114,6 +114,8 @@ Rails.application.routes.draw do
     get "mapa-sitio" => "principal#sitemap", :as => :sitemap
     get 'proximamente' => 'principal#proximamente', :as => :soon
     get 'aviso-privacidad' => 'principal#aviso_de_privacidad', :as => :aviso
+    get 'aviso-completo' => 'principal#aviso_completo', :as => :priv
+    get 'aviso-simple' => 'principal#aviso_simple', :as => :priv_simple
 
     scope "editable" do
       get 'sobre' => 'informacion_general#sobre_el_colegio', :as => :sobre_el_colegio_edit
