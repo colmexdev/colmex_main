@@ -11,7 +11,7 @@ function filterDir(fields){
 	}
 	else{
 		for(var i = 0; i < fields.length; i++){
-			where = where + ($("#"+fields[i]).val() != "" ? ("&" + fields[i] + "=" + $("#"+fields[i]).val()) : "");
+			where = where + ($("#"+fields[i]).val() != "" ? ("&conds[" + fields[i] + "]=" + $("#"+fields[i]).val()) : "");
 		}
 	}
 	$.ajax({
