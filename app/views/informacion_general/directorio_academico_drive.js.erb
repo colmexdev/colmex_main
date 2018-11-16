@@ -8,7 +8,7 @@ var prof_html = '<div class="uk-accordion" id="acordeon" data-uk-accordion>';
 										'<img src="/persona.jpg" class="uk-border-rounded" alt="Foto Académico">' +
 									'</div>' +
 									'<div class="uk-width-large-4-5 uk-width-medium-4-5 uk-width-small-4-5 uk-text-left uk-text-break">' +
-										'<p style="font-family:\'Gotham SSm A\', \'Gotham SSm B\', Lato, sans-serif; font-size: 16px; font-weight: 700; color: #444444;margin-bottom:3px;text-align:left;" ><%= centros.key?(p.centro) ? ("CENTRO DE ESTUDIOS " + centros[p.centro]) : "" %></p>' +
+										'<p style="font-family:\'Gotham SSm A\', \'Gotham SSm B\', Lato, sans-serif; font-size: 16px; font-weight: 700; color: #444444;margin-bottom:3px;text-align:left;" ><%= centros[p.centro] %></p>' +
 										'<p style="margin-top:0;margin-bottom:0;text-align:left;"><span class="titulo-chico vino" style="font-size:22px;"><%= p.nombre %></span></p>' +
 										'<div class="uk-grid uk-grid-medium uk-margin-large-bottom">' +
 											'<div class="uk-width-1-2">' +
