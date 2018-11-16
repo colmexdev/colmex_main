@@ -185,7 +185,7 @@ class InformacionGeneralController < ApplicationController
   end
 
   def directorio_academico_drive
-    where = (params.key?(:conds) ? build_query(params[:conds]) : "")
+    where = (params.key?(:conds) ? build_query(params[:conds],params[:locale]) : "")
     limite = 15.0
     @profs = Teacher.where(where).offset(params.key?(:offset) ? params[:offset].to_i*limite : 0).limit(limite)
     @pags = (Teacher.where(where).count/limite).ceil
@@ -193,6 +193,26 @@ class InformacionGeneralController < ApplicationController
       format.html
       format.js
     end
+  end
+
+  def build_query(params,locale)
+    multi = false
+    where = ""
+    if params.key?(:nombre)
+      where = "lower(nombre) like '%" + params[:nombre].downcase + "%'"
+      multi = true
+    end
+    if params.key?(:centro)
+      where = where + (multi ? " AND " : "") + "upper(centro) = '" + params[:centro].upcase + "'"
+      multi = true
+    end
+    if params.key?(:linea)
+      where = where + (multi ? " AND " : "") + "lower(temas_" + (locale == "es" ? "esp" : "ing") + ") like '%" + params[:linea].downcase + "%'"
+    end
+    if params.key?(:inic)
+      where = "nombre like '" + params[:inic] + "%'"
+    end
+    return where
   end
 
   def recuperar_docentes
