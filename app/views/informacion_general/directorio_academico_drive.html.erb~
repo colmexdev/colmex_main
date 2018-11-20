@@ -82,7 +82,6 @@ function filterDir(fields){
 				</div>
 			</div>
 			<div class="col-xs-12 acordeon-premios" id="busqueda">
-<% if params.key?(:offset) %>
 				<div class="uk-accordion" id="acordeon" data-uk-accordion>
 <% centros = {'CEAA' => 'CENTRO DE ESTUDIOS DE ASIA Y ÁFRICA', 'CEDUA' => 'CENTRO DE ESTUDIOS DEMOGRÁFICOS, URBANOS Y AMBIENTALES', 'CEE' => 'CENTRO DE ESTUDIOS ECONÓMICOS', 'CEH' => 'CENTRO DE ESTUDIOS HISTÓRICOS', 'CEI' => 'CENTRO DE ESTUDIOS INTERNACIONALES', 'CELL' => 'CENTRO DE ESTUDIOS LINGÜÍSTICOS Y LITERARIOS', 'CES' => 'CENTRO DE ESTUDIOS SOCIOLÓGICOS', 'Jubilado' => 'PROGRAMA DE ESTUDIOS INTERDISCIPLINARIOS', 'BDCV' => 'BIBLIOTECA DANIEL COSÍO VILLEGAS'} %>
 					<% @profs.each do |p| %>
@@ -115,9 +114,12 @@ function filterDir(fields){
 							</div>
 					<% end %>
 				</div>
+
 			</div>
 		</div>
+
 		<div id="separadores" style="text-align:center;margin:10px auto;">
+<% if params.key?(:offset) %>
 			<% @pags.times do |p| %>
 				<% if p == 0 %>
 					<div class="numeros" style="margin:0 2px;display:inline-block;cursor:pointer;" id="sep-ant"><a class="numeros" href="<%= directorio_path(params: {locale: params[:locale], offset: 0}) %>" data-remote="true"><</a></div>
@@ -127,8 +129,9 @@ function filterDir(fields){
 					<div class="numeros" style="margin:0 2px;display:inline-block;cursor:pointer;" id="sep-nxt"><a class="numeros" href="<%= directorio_path(params: {locale: params[:locale], offset: 1}) %>" data-remote="true">></a></div>
 				<% end %>
 			<% end %>
-		</div>
 <% end %>
+		</div>
+
 	</div>
 
 <%= render 'principal/footer' %>
