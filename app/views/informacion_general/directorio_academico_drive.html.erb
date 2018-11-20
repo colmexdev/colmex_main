@@ -26,18 +26,18 @@ function filterDir(fields){
 
 		<div class="row">
 			<div class="col-xs-12" style="padding-left:0;">
-				<span class="titulo-grande">Directorio académico</span><br>
+				<span class="titulo-grande"><%= params[:locale] == "es" ? "Directorio académico" : "Academic staff" %></span><br>
 			</div>
 			<div class="col-xs-12" style="padding-left:0;">
-				<p style="margin-top:25px;margin-bottom:25px">Aquí podrás encontrar información general sobre la planta académica de El Colegio de México.<br>
-Para cualquier duda o aclaración, ponerse en contacto con <a href="mailto:guvega@colmex.mx" class="uk-link">Guadalupe Vega Díaz (guvega@colmex.mx)</a>.</p>
+				<p style="margin-top:25px;margin-bottom:25px"><%= params[:locale] == "es" ? "Aquí podrás encontrar información general sobre la planta académica de El Colegio de México." : "Here you can find general information about the academic staff of El Colegio de México." %><br>
+<%= params[:locale] == "es" ? "Para cualquier duda o aclaración, ponerse en contacto con " : "For any questions or inquiries, contact " %> <a href="mailto:guvega@colmex.mx" class="uk-link">Guadalupe Vega Díaz (guvega@colmex.mx)</a>.</p>
 
 			</div>
 		</div>
 
 		<div class="row" id="filtros-dir">
 			<div class="col-xs-12" style="padding-left:0;">
-				<h3>Buscar por orden alfabético.</h3>
+				<h3><%= params[:locale] == "es" ? "Buscar por orden alfabético." : "Search by alphabetical order" %></h3>
 			</div>
 			<div class="col-xs-12" id="filtro-inic" style="text-align:center;padding-left:0;">
 			<% for i in 65..90 %>
@@ -45,10 +45,10 @@ Para cualquier duda o aclaración, ponerse en contacto con <a href="mailto:guveg
 			<% end %>
 			</div>
 			<div class="col-md-4 col-xs-12 filtro center" id="filtro-nombre">
-				<h3 style="display:inline-block;margin-right:8px;">Buscar por:</h3><%= text_field_tag("nombre", "", :oninput => "filterDir(['nombre','linea','centro']);", :placeholder => "Nombre") %>
+				<h3 style="display:inline-block;margin-right:8px;"><%= params[:locale] == "es" ? "Buscar por:" : "Search by" %></h3><%= text_field_tag("nombre", "", :oninput => "filterDir(['nombre','linea','centro']);", :placeholder => (params[:locale] == "es" ? "Nombre" : "Name")) %>
 			</div>
 			<div class="col-md-4 col-xs-12 center" id="filtro-linea" style="padding-left:5px;">
-				<%= text_field_tag("linea", "", :oninput => "filterDir(['nombre','linea','centro']);", :placeholder => "Tema y/o línea de investigación") %><br>
+				<%= text_field_tag("linea", "", :oninput => "filterDir(['nombre','linea','centro']);", :placeholder => (params[:locale] == "es ? "Tema y/o línea de investigación" : "Research topic")) %><br>
 				<% if false %>
 				<p style="font-size:12px;margin-top:0;text-align:left;">Los temas de investigación utilizan lenguaje libre.</p>
 				<% end %>
@@ -62,11 +62,11 @@ Para cualquier duda o aclaración, ponerse en contacto con <a href="mailto:guveg
 		</div>
 		<div class="row">
 			<div class="col-xs-12 col-md-4 center" id="filtro-centro">
-				<h3 style="display:inline-block;margin-right:8px;">Filtrar por:</h3><%= select_tag("centro", options_for_select([["CEAA", "CEAA"], ["CEDUA","CEDUA"], ["CEE", "CEE"], ["CEH","CEH"], ["CEI","CEI"], ["CELL", "CELL"], ["CES","CES"],["PEI","Jubilado"],["BDCV","BDCV"]]), :include_blank => "Centro de Estudios", :onchange => "filterDir(['nombre','linea','centro']);") %>
+				<h3 style="display:inline-block;margin-right:8px;"><%= params[:locale] == "es" ? "Filtrar por:" : "Filter by:" %></h3><%= select_tag("centro", options_for_select([["CEAA", "CEAA"], ["CEDUA","CEDUA"], ["CEE", "CEE"], ["CEH","CEH"], ["CEI","CEI"], ["CELL", "CELL"], ["CES","CES"],["PEI","Jubilado"],["BDCV","BDCV"]]), :include_blank => (params[:locale] == "es" ? "Centro de Estudios" : "Research Center"), :onchange => "filterDir(['nombre','linea','centro']);") %>
 			</div>
 			<div class="col-xs-12 col-md-4 center" id="filtro-limpiar" style="text-align:left;">
 				<div id="boton_limpiar">
-					<a href="#" onclick="borrarDocentes(event,docentes);" class="boton-donar"><span><%= "Limpiar búsqueda" %></span></a>
+					<a href="#" onclick="borrarDocentes(event,docentes);" class="boton-donar"><span><%= params[:locale] == "es" ? "Limpiar búsqueda" : "Clean filters" %></span></a>
 				</div>
 			</div>
 		</div>
@@ -96,19 +96,19 @@ Para cualquier duda o aclaración, ponerse en contacto con <a href="mailto:guveg
 										<p style="margin-top:0;margin-bottom:0;text-align:left;"><span class="titulo-chico vino" style="font-size:22px;"><%= p.nombre %></span></p>
 										<div class="uk-grid uk-grid-medium uk-margin-large-bottom">
 											<div class="uk-width-1-2">
-												<p style="font-size:15px;margin-bottom:3px;text-align:left;"><span style="font-weight:700;">Correo: </span><a class="uk-link" href="mailto:<%= p.correo %>"><%= p.correo %></a></p>
-												<p style="font-size:15px;margin-top:0;margin-bottom:0;text-align:left;"><span style="font-weight:700;">Teléfono:</span> <span>+(52) 55 5449 3000</span></p>
-												<p style="font-size:15px;margin-top:3px;text-align:left;"><span style="font-weight:700;">Extensión:</span> <span><%= p.extension %></span></p>
+												<p style="font-size:15px;margin-bottom:3px;text-align:left;"><span style="font-weight:700;"><%= params[:locale] == "es" ? "Correo:" : "Email:" %> </span><a class="uk-link" href="mailto:<%= p.correo %>"><%= p.correo %></a></p>
+												<p style="font-size:15px;margin-top:0;margin-bottom:0;text-align:left;"><span style="font-weight:700;"><%= params[:locale] == "es" ? "Teléfono:" "Telephone:" %></span> <span>+(52) 55 5449 3000</span></p>
+												<p style="font-size:15px;margin-top:3px;text-align:left;"><span style="font-weight:700;"><%= params[:locale] == "es" ? "Extensión:" Extension:" %></span> <span><%= p.extension %></span></p>
 											</div>
 											<div class="uk-width-1-2">
 												<p style="font-size:15px;margin-top:0;margin-bottom:0;text-align:left;"><span style="font-weight:700;">VIAF: </span><span><%= raw(p.viaf.split(/ *\/ */)[0]) %></span></p>
 												<p style="font-size:15px;margin-top:0;margin-bottom:0;text-align:left;"><span style="font-weight:700;">ORCID: </span><span><%= raw(p.orcid.split(/ *\/ */)[0]) %></span></p>
 												<p style="font-size:15px;margin-top:0;margin-bottom:0;text-align:left;"><span style="font-weight:700;">ISNI: </span><span><%= raw(p.isni.split(/ *\/ */)[0]) %></span></p>
 												<p style="font-size:15px;margin-top:0;margin-bottom:0;text-align:left;"><span style="font-weight:700;">CVU-COLMEX: </span><span><%= raw(p.cvu.split(/ *\/ */)[0]) %></span></p>
-												<p style="font-size:15px;margin-bottom:3px;text-align:left;"><span style="font-weight:700;">Sitio web: </span><a class="uk-link" href="<%= p.sitio %>" target="_blank"><%= p.sitio.present? ? (p.sitio[0..20] + (p.sitio.size >= 25 ? "..." : "")) : "" %></a></p>
+												<p style="font-size:15px;margin-bottom:3px;text-align:left;"><span style="font-weight:700;"><%= params[:locale] == "es" ? "Sitio web:" : "Website" %> </span><a class="uk-link" href="<%= p.sitio %>" target="_blank"><%= p.sitio.present? ? (p.sitio[0..20] + (p.sitio.size >= 25 ? "..." : "")) : "" %></a></p>
 											</div>
 										</div>
-										<h5>Temas de investigación: <span style="font-weight:300;"><%= params[:locale] == "es" ? p.temas_esp : p.temas_ing %></span></h5>
+										<h5><%= params[:locale] == "es" ? "Temas de investigación:" : "Research topics:" %> <span style="font-weight:300;"><%= params[:locale] == "es" ? p.temas_esp : p.temas_ing %></span></h5>
 									</div>
 								</div>
 							</div>
