@@ -82,6 +82,7 @@ function filterDir(fields){
 				</div>
 			</div>
 			<div class="col-xs-12 acordeon-premios" id="busqueda">
+<% if params.key?(:offset) %>
 				<div class="uk-accordion" id="acordeon" data-uk-accordion>
 <% centros = {'CEAA' => 'CENTRO DE ESTUDIOS DE ASIA Y ÁFRICA', 'CEDUA' => 'CENTRO DE ESTUDIOS DEMOGRÁFICOS, URBANOS Y AMBIENTALES', 'CEE' => 'CENTRO DE ESTUDIOS ECONÓMICOS', 'CEH' => 'CENTRO DE ESTUDIOS HISTÓRICOS', 'CEI' => 'CENTRO DE ESTUDIOS INTERNACIONALES', 'CELL' => 'CENTRO DE ESTUDIOS LINGÜÍSTICOS Y LITERARIOS', 'CES' => 'CENTRO DE ESTUDIOS SOCIOLÓGICOS', 'Jubilado' => 'PROGRAMA DE ESTUDIOS INTERDISCIPLINARIOS', 'BDCV' => 'BIBLIOTECA DANIEL COSÍO VILLEGAS'} %>
 					<% @profs.each do |p| %>
@@ -127,6 +128,7 @@ function filterDir(fields){
 				<% end %>
 			<% end %>
 		</div>
+<% end %>
 	</div>
 
 <%= render 'principal/footer' %>
