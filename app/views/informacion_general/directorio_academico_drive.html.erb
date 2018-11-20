@@ -119,11 +119,11 @@ Para cualquier duda o aclaración, ponerse en contacto con <a href="mailto:guveg
 		<div id="separadores" style="text-align:center;margin:10px auto;">
 			<% @pags.times do |p| %>
 				<% if p == 0 %>
-					<div class="numeros" style="margin:0 2px;display:inline-block;cursor:pointer;" id="sep-ant"><a class="numeros" href="<%= directorio_academico_path(params: {locale: params[:locale], offset: 0}) %>" data-remote="true"><</a></div>
+					<div class="numeros" style="margin:0 2px;display:inline-block;cursor:pointer;" id="sep-ant"><a class="numeros" href="<%= directorio_path(params: {locale: params[:locale], offset: 0}) %>" data-remote="true"><</a></div>
 				<% end %>
-				<div class="numeros" style="margin:0 5px;display:inline-block;cursor:pointer;"><a class="numeros" style="<%= p == 0 ? 'color:rgb(153, 51, 102)' : '' %>" href="<%= directorio_academico_path(params: {locale: params[:locale], offset: p}) %>" data-remote="true"><%= p+1 %></a></div>	
+				<div class="numeros" style="margin:0 5px;display:inline-block;cursor:pointer;"><a class="numeros" style="<%= p == 0 ? 'color:rgb(153, 51, 102)' : '' %>" href="<%= directorio_path(params: {locale: params[:locale], offset: p}) %>" data-remote="true"><%= p+1 %></a></div>	
 				<% if p == @pags - 1 %>
-					<div class="numeros" style="margin:0 2px;display:inline-block;cursor:pointer;" id="sep-nxt"><a class="numeros" href="<%= directorio_academico_path(params: {locale: params[:locale], offset: 1}) %>" data-remote="true">></a></div>
+					<div class="numeros" style="margin:0 2px;display:inline-block;cursor:pointer;" id="sep-nxt"><a class="numeros" href="<%= directorio_path(params: {locale: params[:locale], offset: 1}) %>" data-remote="true">></a></div>
 				<% end %>
 			<% end %>
 		</div>

@@ -15,7 +15,7 @@ function filterDir(fields){
 		}
 	}
 	$.ajax({
-		url: '/<%= params[:locale] %>/directorio_academico.js?offset=0' + where,
+		url: '/<%= params[:locale] %>/directorio-academico.js?offset=0' + where,
 		success: function(){}
 	});
 }
