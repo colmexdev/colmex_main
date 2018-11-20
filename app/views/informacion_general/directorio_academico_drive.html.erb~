@@ -75,13 +75,14 @@ function filterDir(fields){
 			<script type="text/javascript" src="../js/accordion.js"></script>
 			<div class="col-xs-12" style="text-align:left;padding-top:20px;" id="filete-top">
 				<div style="float:left;display:inline-block;height:100%;text-align:left;width:50%;">
-					<h3 id="c_l" class="titulo-chico vino">Total: <%= @total %></h3>
+					<h3 id="c_l" class="titulo-chico vino"></h3>
 				</div>
 				<div style="float:right;display:inline-block;height:100%;text-align:right;width:50%;">
-					<h3 id="c_r" class="titulo-chico vino">Total: <%= @total %></h3>
+					<h3 id="c_r" class="titulo-chico vino"></h3>
 				</div>
 			</div>
 			<div class="col-xs-12 acordeon-premios" id="busqueda">
+<% if false %>
 				<div class="uk-accordion" id="acordeon" data-uk-accordion>
 <% centros = {'CEAA' => 'CENTRO DE ESTUDIOS DE ASIA Y ÁFRICA', 'CEDUA' => 'CENTRO DE ESTUDIOS DEMOGRÁFICOS, URBANOS Y AMBIENTALES', 'CEE' => 'CENTRO DE ESTUDIOS ECONÓMICOS', 'CEH' => 'CENTRO DE ESTUDIOS HISTÓRICOS', 'CEI' => 'CENTRO DE ESTUDIOS INTERNACIONALES', 'CELL' => 'CENTRO DE ESTUDIOS LINGÜÍSTICOS Y LITERARIOS', 'CES' => 'CENTRO DE ESTUDIOS SOCIOLÓGICOS', 'Jubilado' => 'PROGRAMA DE ESTUDIOS INTERDISCIPLINARIOS', 'BDCV' => 'BIBLIOTECA DANIEL COSÍO VILLEGAS'} %>
 					<% @profs.each do |p| %>
@@ -113,8 +114,8 @@ function filterDir(fields){
 								</div>
 							</div>
 					<% end %>
+<% end %>
 				</div>
-
 			</div>
 		</div>
 
