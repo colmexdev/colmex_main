@@ -19,6 +19,23 @@ function filterDir(fields){
 		success: function(){}
 	});
 }
+
+function clean(){
+	$(".inics.letra").css("color","");
+	$("#nombre").val("");
+	$("#linea").val("");
+	$("#centro").val("");
+	$.ajax({
+		url: '/<%= params[:locale] %>/directorio-academico.js?offset=0',
+		success: function(){
+			$("#busqueda").html("");
+			$("c_l").html("");
+			$("#c_r").html("");
+			$("#separadores").html("");
+		}
+	});
+	
+}
 </script>
 
 <div class="container-fluid" id="resto-cuerpo">
@@ -66,7 +83,7 @@ function filterDir(fields){
 			</div>
 			<div class="col-xs-12 col-md-4 center" id="filtro-limpiar" style="text-align:left;">
 				<div id="boton_limpiar">
-					<a href="#" onclick="borrarDocentes(event,docentes);" class="boton-donar"><span><%= params[:locale] == "es" ? "Limpiar búsqueda" : "Clean filters" %></span></a>
+					<a href="#" onclick="clean();" class="boton-donar"><span><%= params[:locale] == "es" ? "Limpiar búsqueda" : "Clean filters" %></span></a>
 				</div>
 			</div>
 		</div>

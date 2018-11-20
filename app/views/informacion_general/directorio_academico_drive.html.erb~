@@ -114,8 +114,8 @@ function filterDir(fields){
 								</div>
 							</div>
 					<% end %>
-<% end %>
 				</div>
+<% end %>
 			</div>
 		</div>
 
