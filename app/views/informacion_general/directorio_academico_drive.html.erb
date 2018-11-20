@@ -115,8 +115,10 @@ function filterDir(fields){
 							</div>
 					<% end %>
 				</div>
+<% end %>
 			</div>
 		</div>
+<% if params.key?(:offset) %>
 		<div id="separadores" style="text-align:center;margin:10px auto;">
 			<% @pags.times do |p| %>
 				<% if p == 0 %>
