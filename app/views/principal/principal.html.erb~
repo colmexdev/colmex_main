@@ -186,7 +186,7 @@
 				<%= link_to(image_tag('portal-obligaciones-transparencia.jpg', :id => "img-transp"), "http://portaltransparencia.gob.mx/buscador/search/search.do?method=begin&searchBy=0&idDependenciaZoom=11120", :target => "_blank") %>
 				</div>
 				<div style="display:inline-block;width:20%;float:left;position:relative;" id="div-pnt">
-				<%= link_to(image_tag('pnt-logo.png', :id => "img-pnt"), "http://www.plataformadetransparencia.org.mx/web/guest/sistema-portales", :target => "_blank") %>
+				<%= link_to(image_tag('pnt-logo.png', :id => "img-pnt"), "http://consultapublicamx.inai.org.mx:8080/vut-web/?idSujetoObigadoParametro=126&idEntidadParametro=33&idSectorParametro=21", :target => "_blank") %>
 				</div>
 				<div style="display:inline-block;width:20%;float:left;position:relative;" id="div-cont">
 				<%= link_to(image_tag('contraloria-social.png', :id => "img-cont"), "http://promepcm.colmex.mx/", :target => "_blank") %>
