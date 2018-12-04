@@ -29,7 +29,7 @@ function clean(){
 		url: '/<%= params[:locale] %>/directorio-academico.js?offset=0',
 		success: function(){
 			$("#busqueda").html("");
-			$("c_l").html("");
+			$("#c_l").html("");
 			$("#c_r").html("");
 			$("#separadores").html("");
 		}

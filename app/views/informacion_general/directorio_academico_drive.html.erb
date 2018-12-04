@@ -46,8 +46,12 @@ function clean(){
 				<span class="titulo-grande"><%= params[:locale] == "es" ? "Directorio académico" : "Academic staff" %></span><br>
 			</div>
 			<div class="col-xs-12" style="padding-left:0;">
-				<p style="margin-top:25px;margin-bottom:25px"><%= params[:locale] == "es" ? "Aquí podrás encontrar información general sobre la planta académica de El Colegio de México." : "Here you can find general information about the academic staff of El Colegio de México." %><br>
-<%= params[:locale] == "es" ? "Para cualquier duda o aclaración, ponerse en contacto con " : "For any questions or inquiries, contact " %> <a href="mailto:guvega@colmex.mx" class="uk-link">Guadalupe Vega Díaz (guvega@colmex.mx)</a>.</p>
+				<p style="margin-top:25px;margin-bottom:25px"><%= params[:locale] == "es" ? "Aquí podrás encontrar información general sobre la planta académica de El Colegio de México." : "Here you can find general information about the academic staff of El Colegio de México." %>
+<% if false %>
+<br>
+<%= params[:locale] == "es" ? "Para cualquier duda o aclaración, ponerse en contacto con " : "For any questions or inquiries, contact " %> <a href="mailto:guvega@colmex.mx" class="uk-link">Guadalupe Vega Díaz (guvega@colmex.mx)</a>.
+<% end %>
+</p>
 
 			</div>
 		</div>
