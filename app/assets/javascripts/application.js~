@@ -25,3 +25,4 @@
 //= require sobre_el_colegio
 //= require backend
 //= require d3
+//= require trix
