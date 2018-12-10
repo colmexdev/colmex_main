@@ -54,6 +54,7 @@ $(document).on("ready page:load", function(){
 				$("#cuerpo a").target = "_blank";
 		}
 	}
+	catch(err){}
 	try{
 		if(gon.ev_tiny == ""){
 			$("#div_eventos").css("height","0");

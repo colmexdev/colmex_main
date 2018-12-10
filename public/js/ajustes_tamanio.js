@@ -51,7 +51,7 @@ $(document).on("ready page:load", function(){
 	try{
 		for(var i = 0; i < $("#cuerpo a").length; i++){
 			if(($("#cuerpo a")[i].href.indexOf(window.location.origin) != -1 && $("#cuerpo a")[i].href.indexOf("pdfs") != -1) || $("#cuerpo a")[i].href.indexOf(window.location.origin) == -1)
-				$("#cuerpo a").target = "_blank";
+				$("#cuerpo a")[i].target = "_blank";
 		}
 	}
 	catch(err){}
