@@ -2,6 +2,9 @@ $(document).on("scroll", function(event) {
   var y = $(this).scrollTop();
   var ancho_act = Math.max(document.documentElement.clientWidth, window.innerWidth || document.body.ClientWidth || 0);
 	try{
+		ligas();
+	} catch(err) {}
+	try{
 		var alto_logo = document.getElementById("div_logo").clientHeight;
 		if (y > 200 || barra_render) {
 			$("#forma-search").css("display", "none");
@@ -129,6 +132,13 @@ function ajustarCuerpo(scroll){
 function regresarArriba(){
 	$("html, body").animate({ scrollTop: 0 }, 1800);
   return false;
+}
+
+function ligas(){
+	for(var i = 0; i < $("#cuerpo a").length; i++){
+		if(($("#cuerpo a")[i].href.indexOf(window.location.origin) != -1 && $("#cuerpo a")[i].href.indexOf("pdfs") != -1) || $("#cuerpo a")[i].href.indexOf(window.location.origin) == -1)
+			$("#cuerpo a")[i].target = "_blank";
+	}
 }
 
 function initAddThis(){

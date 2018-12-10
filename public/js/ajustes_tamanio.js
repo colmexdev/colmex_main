@@ -24,10 +24,6 @@ barra_render = false;
 })*/
 
 $(document).on("ready", function(){
-	try{
-		ligas();
-	} catch(err) {}
-	console.log("Ligas");
 	UIkit.init();
 	try{
 		configTrix();
@@ -400,12 +396,5 @@ function agregarVisible(desc){
 	for(var i = 0; i < desc.length; i++){
 		desc[i]["visible"] = true;
 		desc[i]["index"] = i;
-	}
-}
-
-function ligas(){
-	for(var i = 0; i < $("#cuerpo a").length; i++){
-		if(($("#cuerpo a")[i].href.indexOf(window.location.origin) != -1 && $("#cuerpo a")[i].href.indexOf("pdfs") != -1) || $("#cuerpo a")[i].href.indexOf(window.location.origin) == -1)
-			$("#cuerpo a")[i].target = "_blank";
 	}
 }

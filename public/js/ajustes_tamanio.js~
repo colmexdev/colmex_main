@@ -24,7 +24,6 @@ barra_render = false;
 })*/
 
 $(document).on("ready", function(){
-	ligas();
 	UIkit.init();
 	try{
 		configTrix();
@@ -400,9 +399,4 @@ function agregarVisible(desc){
 	}
 }
 
-function ligas(){
-	for(var i = 0; i < $("#cuerpo a").length; i++){
-		if(($("#cuerpo a")[i].href.indexOf(window.location.origin) != -1 && $("#cuerpo a")[i].href.indexOf("pdfs") != -1) || $("#cuerpo a")[i].href.indexOf(window.location.origin) == -1)
-			$("#cuerpo a")[i].target = "_blank";
-	}
-}
+
