@@ -49,13 +49,6 @@ $(document).on("ready page:load", function(){
 		console.log(err);
 	}
 	try{
-		for(var i = 0; i < $("#cuerpo a").length; i++){
-			if(($("#cuerpo a")[i].href.indexOf(window.location.origin) != -1 && $("#cuerpo a")[i].href.indexOf("pdfs") != -1) || $("#cuerpo a")[i].href.indexOf(window.location.origin) == -1)
-				$("#cuerpo a")[i].target = "_blank";
-		}
-	}
-	catch(err){}
-	try{
 		if(gon.ev_tiny == ""){
 			$("#div_eventos").css("height","0");
 		}
@@ -106,6 +99,15 @@ $(document).on("ready page:load", function(){
 	}
 	catch(err){
 	}
+
+$(document).ready(function(){
+
+		for(var i = 0; i < $("#cuerpo a").length; i++){
+			if(($("#cuerpo a")[i].href.indexOf(window.location.origin) != -1 && $("#cuerpo a")[i].href.indexOf("pdfs") != -1) || $("#cuerpo a")[i].href.indexOf(window.location.origin) == -1)
+				$("#cuerpo a")[i].target = "_blank";
+		}
+
+});
 
 $(window).on("resize",function(){
 
