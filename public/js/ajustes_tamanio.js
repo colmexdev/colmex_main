@@ -23,8 +23,10 @@ barra_render = false;
 	$(document).trigger("scroll"); 
 })*/
 
-$(document).on("ready page:load", function(){
-	ligas();
+$(document).on("ready", function(){
+	try{
+		ligas();
+	} catch(err) {}
 	console.log("Ligas");
 	UIkit.init();
 	try{
