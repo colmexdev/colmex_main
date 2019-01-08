@@ -210,7 +210,7 @@
   <div class="uk-grid uk-grid-large">
 		<% if (@pars[1].texto.present? && @pars[1].texto != "" && params[:locale] == "es") || (@pars[1].texto_ingles.present? && @pars[1].texto_ingles.present? != "" && params[:locale] == "en") %>
     <div class="uk-width-large-1-3 uk-width-medium-1-2 uk-text-left uk-margin-large-bottom">
-		<h1><%= params[:locale] == "es" ?  ("Agosto " + (Date.current.year-1).to_s) : ("August " + (Date.current.year-1).to_s) %></h1>
+		<h1><%= params[:locale] == "es" ?  ("Agosto " + Date.current.year.to_s) : ("August " + Date.current.year.to_s) %></h1>
 		<%= params[:locale] == "es" ? @pars[1].texto.gsub(/<h2>/,'<h2 class="uk-margin-remove vino">').gsub(/<h3>/,'<h3 class="uk-margin-remove">').gsub(/<h4>/,'<h4 class="uk-margin-remove">').html_safe : @pars[1].texto_ingles.gsub(/<h2>/,'<h2 class="uk-margin-remove vino">').gsub(/<h3>/,'<h3 class="uk-margin-remove">').gsub(/<h4>/,'<h4 class="uk-margin-remove">').html_safe %>
     </div>
 
@@ -240,7 +240,7 @@
 		<% end %>
 		<% if (@pars[6].texto.present? && @pars[6].texto != "" && params[:locale] == "es") || (@pars[6].texto_ingles.present? && @pars[6].texto_ingles != "" && params[:locale] == "en") %>
     <div class="uk-width-large-1-3 uk-width-medium-1-2 uk-text-left uk-margin-large-bottom">
-		<h1><%= params[:locale] == "es" ?  ("Enero " + ((Date.current.year-1) + 1).to_s) : ("January " + ((Date.current.year-1) + 1).to_s) %></h1>
+		<h1><%= params[:locale] == "es" ?  ("Enero " + (Date.current.year).to_s) : ("January " + (Date.current.year).to_s) %></h1>
 		<%= params[:locale] == "es" ? @pars[6].texto.gsub(/<h2>/,'<h2 class="uk-margin-remove vino">').gsub(/<h3>/,'<h3 class="uk-margin-remove">').gsub(/<h4>/,'<h4 class="uk-margin-remove">').html_safe : @pars[6].texto_ingles.gsub(/<h2>/,'<h2 class="uk-margin-remove vino">').gsub(/<h3>/,'<h3 class="uk-margin-remove">').gsub(/<h4>/,'<h4 class="uk-margin-remove">').html_safe %>
 
     </div>
@@ -253,7 +253,7 @@
     <div class="uk-grid uk-grid-large">
 
     <div class="uk-width-large-1-3 uk-width-medium-1-2 uk-text-left uk-margin-large-bottom">
-		<h1><%= params[:locale] == "es" ?  ("Enero " + ((Date.current.year-1) + 1).to_s) : ("January " + ((Date.current.year-1) + 1).to_s) %></h1>
+		<h1><%= params[:locale] == "es" ?  ("Enero " + (Date.current.year).to_s) : ("January " + (Date.current.year).to_s) %></h1>
 			<h2 class="uk-margin-remove vino">8</h2>
 			<h3 class="uk-margin-remove">Reanudación de actividades</h3>
 			<h2 class="uk-margin-remove vino">10</h2>
@@ -263,25 +263,25 @@
     </div>
 
     <div class="uk-width-large-1-3 uk-width-medium-1-2 uk-text-left uk-margin-large-bottom">
-		<h1><%= params[:locale] == "es" ?  ("Febrero " + ((Date.current.year-1)+1).to_s) : ("February " + ((Date.current.year-1)+1).to_s) %></h1>
+		<h1><%= params[:locale] == "es" ?  ("Febrero " + (Date.current.year).to_s) : ("February " + (Date.current.year).to_s) %></h1>
 			<h2 class="uk-margin-remove vino">4</h2>
 			<h3 class="uk-margin-remove">Asueto oficial</h3>
     </div>
 
     <div class="uk-width-large-1-3 uk-width-medium-1-2 uk-text-left uk-margin-large-bottom">
-		<h1><%= params[:locale] == "es" ?  ("Marzo " + ((Date.current.year-1)+1).to_s) : ("March " + ((Date.current.year-1)+1).to_s) %></h1>
+		<h1><%= params[:locale] == "es" ?  ("Marzo " + (Date.current.year).to_s) : ("March " + (Date.current.year).to_s) %></h1>
 			<h2 class="uk-margin-remove vino">18</h2>
 			<h3 class="uk-margin-remove">Asueto oficial</h3>
     </div>
 
     <div class="uk-width-large-1-3 uk-width-medium-1-2 uk-text-left uk-margin-large-bottom">
-		<h1><%= params[:locale] == "es" ?  ("Abril " + ((Date.current.year-1)+1).to_s) : ("April " + ((Date.current.year-1)+1).to_s) %></h1>
+		<h1><%= params[:locale] == "es" ?  ("Abril " + (Date.current.year+1).to_s) : ("April " + (Date.current.year+1).to_s) %></h1>
 			<h2 class="uk-margin-remove vino">15-16-17-18-19</h2>
 			<h3 class="uk-margin-remove">Suspensión de actividades (Semana Santa)</h3>
     </div>
 
     <div class="uk-width-large-1-3 uk-width-medium-1-2 uk-text-left uk-margin-large-bottom">
-		<h1><%= params[:locale] == "es" ?  ("Mayo " + ((Date.current.year-1)+1).to_s) : ("May " + ((Date.current.year-1)+1).to_s) %></h1>
+		<h1><%= params[:locale] == "es" ?  ("Mayo " + (Date.current.year).to_s) : ("May " + (Date.current.year).to_s) %></h1>
 			<h2 class="uk-margin-remove vino">1</h2>
 			<h3 class="uk-margin-remove">Asueto oficial</h3>
 			<h2 class="uk-margin-remove vino">13-14-15-16-17</h2>
@@ -295,7 +295,7 @@
     </div>
 
     <div class="uk-width-large-1-3 uk-width-medium-1-2 uk-text-left uk-margin-large-bottom">
-		<h1><%= params[:locale] == "es" ?  ("Junio " + ((Date.current.year-1)+1).to_s) : ("June " + ((Date.current.year-1)+1).to_s) %></h1>
+		<h1><%= params[:locale] == "es" ?  ("Junio " + (Date.current.year).to_s) : ("June " + (Date.current.year).to_s) %></h1>
 			<h2 class="uk-margin-remove vino">3</h2>
 			<h3 class="uk-margin-remove">Entrega de calificaciones Asuntos Escolares</h3>
 			<h2 class="uk-margin-remove vino">Junio 3 - Agosto 2*</h2>
