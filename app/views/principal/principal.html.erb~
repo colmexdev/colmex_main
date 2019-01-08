@@ -87,7 +87,7 @@
 
 	<div class="row"><!-- Fila para banners de presidencia -->
 		<div class="col-md-12" id="div-banner-pres">
-			<%= link_to image_tag((params[:locale] == "es" ? "anuncio.png" : "anuncio-desigualdades-ingles.png"), class: "img-banner"), (params[:locale] == "es" ? "https://desigualdades.colmex.mx/informe2018" : "https://desigualdades.colmex.mx/Colmex-InequalitiesInMexico2018-FILG.pdf"), target: "_blank" %>
+			<%= link_to image_tag((params[:locale] == "es" ? "anuncio.png" : "anuncio-desigualdades-ingles.png"), class: "img-banner"), (params[:locale] == "es" ? "https://desigualdades.colmex.mx/informe2018" : "https://desigualdades.colmex.mx/inequalities-in-mexico-2018.pdf"), target: "_blank" %>
 		</div>
 	</div>
 

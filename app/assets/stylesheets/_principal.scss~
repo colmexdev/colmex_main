@@ -2109,3 +2109,10 @@ ul.ul-nav { display: table;
 	hyphens: none;
 }
 
+a.numeros{
+	color: rgb(144,144,144);
+}
+
+a.numeros:hover, a.numeros:active{
+	color: rgb(153, 51, 102);
+}
