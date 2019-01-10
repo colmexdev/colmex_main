@@ -76,11 +76,11 @@ class ProgramasAcademicosController < ApplicationController
 
   def catedras_y_seminarios
 		@centros = Catedra.distinct.pluck(:tipo)
-    @catedras = Catedra.where(("tipo = ? AND " + (params[:locale] == "en" ? "titulo_eng" : "titulo") + " != ''"), "Institucionales")
+    @catedras = Catedra.where(("tipo = ? AND " + (params[:locale] == "en" ? "titulo_eng" : "titulo") + " != ''"), "Institucionales").order(updated_at: :desc)
   end
 
   def catedras
-    @catedras = Catedra.where(("tipo = ? AND " + (params[:locale] == "en" ? "titulo_eng" : "titulo") + " != ''"), params[:grupo])
+    @catedras = Catedra.where(("tipo = ? AND " + (params[:locale] == "en" ? "titulo_eng" : "titulo") + " != ''"), params[:grupo]).order(params[:grupo] == "Institucionales" ? {updated_at: :desc} : "")
     respond_to do |format|
       format.js
     end
