@@ -80,7 +80,7 @@ class ProgramasAcademicosController < ApplicationController
   end
 
   def catedras
-    @catedras = Catedra.where(("tipo = ? AND " + (params[:locale] == "en" ? "titulo_eng" : "titulo") + " != ''"), params[:grupo]).order(params[:grupo] == "Institucionales" ? {updated_at: :desc} : "")
+    @catedras = Catedra.where(("tipo = ? AND " + (params[:locale] == "en" ? "titulo_eng" : "titulo") + " != ''"), params[:grupo]).order(params[:grupo] == "Institucionales" ? {updated_at: :desc} : {})
     respond_to do |format|
       format.js
     end
