@@ -76,7 +76,7 @@ class ProgramasAcademicosController < ApplicationController
 
   def catedras_y_seminarios
 		@centros = Catedra.distinct.pluck(:tipo)
-    @catedras = Catedra.where(("tipo = ? AND " + (params[:locale] == "en" ? "titulo_eng" : "titulo") + " != ''"), "Institucionales").order(updated_at: :desc)
+    @catedras = Catedra.where(("tipo = ? AND " + (params[:locale] == "en" ? "titulo_eng" : "titulo") + " != ''"), "Institucionales").order(updated_at: :asc)
   end
 
   def catedras
