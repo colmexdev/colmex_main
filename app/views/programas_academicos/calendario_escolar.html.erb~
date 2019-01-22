@@ -1,6 +1,6 @@
 <%= render 'principal/barra' %>
 <div class="container-fluid" id="resto-cuerpo">
-	<div class="principal-chica uk-block-large" id="cuerpo" style="margin-left:0;">
+	<div class="principal-chica uk-block-large" id="cuerpo">
 
 <% if @editable %>
 <%= form_for(@sitio, :url => {:controller => "panel", :action => "editar", :params => {:set => "Contenido de sitios", :id => @sitio.id}, :uri => request.original_fullpath.gsub(/editable\//,"")}, :html => { :multipart => true }) do |f| %>
@@ -314,5 +314,5 @@
 
 <% end %>
 	</div>
-
+</div>
 <%= render 'principal/footer' %>
