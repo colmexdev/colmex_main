@@ -131,8 +131,8 @@ en:
     doctorados: "Doctorates"
     mas: "See more"
     info: "See more"
-    prox_conv: "Next announcement date"
-    promo: "Program's start date"
+    prox_conv: "Next applications for entrances"
+    promo: "Program begins"
   date:
     formats:
       long: "%A, %B %d"
