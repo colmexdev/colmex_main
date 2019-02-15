@@ -102,7 +102,16 @@ class PrincipalController < ApplicationController
       @multi = true
     end
     if params.key?(:titulo)
-      @where = @where + "LOWER(tituloActividad) = '" + params[:titulo].downcase + "'"
+      @where = @where + (@multi ? " AND " : "") + "LOWER(tituloActividad) = '" + params[:titulo].downcase + "'"
+      @multi = true
+    end
+    if params.key?(:titulos)
+      @where = @where + "("
+      params[:titulos].split(",").each_with_index do |t,i|
+        @where = @where + (i == 0 ? "" : " OR ") + "LOWER(tituloActividad) = '" + t.downcase + "'"
+      end
+      @where = @where + ")"
+      @multi = true
     end
     begin
       cliente = TinyTds::Client.new username: 'agendaPRED', password: '@g3NDa#', host: '172.16.40.220', port: '1433'
