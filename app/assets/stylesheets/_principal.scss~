@@ -1393,7 +1393,7 @@ ul.ul-nav { display: table;
 		display: block;
 		margin: 0 auto;
 		width: 70%;
-		max-width: 1800px;
+		max-width: 1200px;
 		/*max-width: -webkit-calc(100% - 50px);
 		max-width: -moz-calc(100% - 50px);
 		max-width: calc(100% - 50px);*/
