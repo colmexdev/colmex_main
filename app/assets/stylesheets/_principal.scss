@@ -1388,13 +1388,13 @@ ul.ul-nav { display: table;
 	height: 230px;
 	max-height: 230px;
 
-	.img-banner{
+	#img-banner{
 		position: relative;
-		width: auto;
-		/*height: 100%;
+		/*width: auto;*/
+		height: 100%;
 		max-width: -webkit-calc(100% - 50px);
 		max-width: -moz-calc(100% - 50px);
-		max-width: calc(100% - 50px);*/
+		max-width: calc(100% - 50px);
 		@include centrado;
 	}
 }
