@@ -90,7 +90,7 @@
 			<%= link_to image_tag((params[:locale] == "es" ? "logo-red.png" : "logo-red-eng.png"), class: "img-banner"), "https://desigualdades.colmex.mx", target: "_blank" %>
 		</div>
 		<div class="col-md-12" id="div-banner-pres-2">
-			<%= link_to "", "https://agenda.colmex.mx/imagenes%20web/PDF/conv-ariim-2019.pdf", target: "_blank" %>
+			<%= link_to image_tag("convocatoria-migracion.jpg", id: "img-banner"), "https://agenda.colmex.mx/imagenes%20web/PDF/conv-ariim-2019.pdf", target: "_blank" %>
 		</div>
 	</div>
 
