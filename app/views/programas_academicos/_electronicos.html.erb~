@@ -64,10 +64,9 @@
       <% end %>
     </h4>
     <h3 class="vino uk-margin-bottom-remove">
-    <% if !e.fecha_inicio_conv.nil? and !e.fecha_fin_conv.nil? %>
+    <% if !e.fecha_inicio_conv.nil? or !e.fecha_fin_conv.nil? %>
       <%= "Próxima convocatoria" %>
-		<% elsif tip == "MOOC"  %>
-			<%= "Convocatorias por anunciarse" %>
+
     <% end %>
     </h3>
     <h4 class="uk-margin-top-remove">
@@ -88,7 +87,7 @@
     <% if !e.fecha_fin_clases.nil? && e.fecha_inicio_clases > Date.current() && e.tipo_curso_linea == "MOOC" && e.tipo_curso == "En línea" %>
       <%= "Convocatoria abierta" %>
     <% else %>
-      <%= tip == "MOOC" ? "Inscripciones cerradas en MéxicoX" : "Convocatoria cerrada" %>
+      <%= tip == "MOOC" ? "" : "Convocatoria cerrada" %>
     <% end %>
     </h3>
     <% if tip == "MOOC" && !e.liga.nil? %>
