@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  nombre: MyText
+  proyecto: MyText
+  centro: MyText
+  correo: MyText
+  sitio: MyText
+  extension: 1
+  temas: MyText
+
+two:
+  nombre: MyText
+  proyecto: MyText
+  centro: MyText
+  correo: MyText
+  sitio: MyText
+  extension: 1
+  temas: MyText

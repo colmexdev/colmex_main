@@ -1,0 +1,8 @@
+class Beneficiary < ActiveRecord::Base
+
+  validates_presence_of :nombre
+  validates_presence_of :proyecto
+  validates_presence_of :centro
+  validates_presence_of :index
+
+end

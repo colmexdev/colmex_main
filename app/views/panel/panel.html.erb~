@@ -55,7 +55,7 @@
 				<a class="link-panel" onclick="hideLink(event,'#ops-lat','<%= panel_index_path(:set => "Descubre", :offset => 0) %>')">Descubre</a>
 				</li>
 				<li class="op-gest">
-				<a class="link-panel" onclick="hideLink(event,'#ops-lat','<%= panel_index_path(:set => "Categorías de 'Descubre'", :offset => 0) %>')">Categorías de 'Descubre'</a>
+				<a class="link-panel" onclick="hideLink(event,'#ops-lat','<%= panel_index_path(:set => "Categorías de Descubre", :offset => 0) %>')">Categorías de Descubre</a>
 				</li>
 				<% if false %>
 				<%= link_to "Editar galerías", galleries_path, class: "link-panel" %><br />
@@ -69,6 +69,9 @@
 				</li>
 				<li class="op-gest">
 				<a class="link-panel" onclick="hideLink(event,'#ops-lat','<%= panel_index_path(:set => "Frases en página principal", :offset => 0) %>')">Frases en página principal</a>
+				</li>
+				<li class="op-gest">
+				<a class="link-panel" onclick="hideLink(event,'#ops-lat','<%= panel_index_path(:set => "Becarios postdoctorales", :offset => 0) %>')">Becarios postdoctorales</a>
 				</li>
 				<% end %>
 				<li class="op-gest">
