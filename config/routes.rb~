@@ -98,6 +98,8 @@ Rails.application.routes.draw do
     get 'electronicos' => 'programas_academicos#electronicos', :as => :electronicos
     get 'dir-acad-test' => 'informacion_general#directorio_academico', :as => :dir
 
+    get 'becas-postdoctorales' => 'principal#becas_postdoctorales', :as => :postdocs
+
     get 'calendario-escolar' => 'programas_academicos#calendario_escolar', :as => :calendario
 
     get 'principios-eticos' => 'principal#principios_eticos', :as => :principios
