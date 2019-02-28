@@ -92,11 +92,11 @@ Rails.application.routes.draw do
     get 'historia-75-aniversario' => 'informacion_general#historia_75_años', :as => :historia75
     get 'comunidad' => 'informacion_general#comunidad', :as => :otorgadoscomunidad
     get 'colegio' => 'informacion_general#colegio', :as => :otorgadoscolegio
-    get 'directorio-academico' => 'informacion_general#directorio_academico', :as => :directorio
+    get 'directorio-academico' => 'informacion_general#directorio_academico_drive', :as => :directorio
     get 'marco-normativo' => 'informacion_general#marco_normativo', :as => :marco
     get 'presenciales' => 'programas_academicos#presenciales', :as => :presenciales
     get 'electronicos' => 'programas_academicos#electronicos', :as => :electronicos
-    get 'dir-acad-test' => 'informacion_general#directorio_academico_drive', :as => :dir
+    get 'dir-acad-test' => 'informacion_general#directorio_academico', :as => :dir
 
     get 'calendario-escolar' => 'programas_academicos#calendario_escolar', :as => :calendario
 

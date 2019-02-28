@@ -150,7 +150,7 @@ class InformacionGeneralController < ApplicationController
   end
 
   def comunidad
-    @categorias = Categorium.all
+    @categorias = Categorium.where("nombre != ?","Intro")
     @premiados = Premiado.where("tipo_premio = ?", "Comunidad")
     respond_to do |format|
       format.js
