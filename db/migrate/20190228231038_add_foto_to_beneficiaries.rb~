@@ -1,5 +1,5 @@
 class AddFotoToBeneficiaries < ActiveRecord::Migration
   def change
-    add_attachment :beneficiaries, :foto
+    add_column :beneficiaries, :foto, :attachment
   end
 end
