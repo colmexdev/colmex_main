@@ -35,6 +35,7 @@
 										<p style="margin-top:0;margin-bottom:0;text-align:left;"><span class="titulo-chico vino" style="font-size:22px;"><%= p.nombre %></span></p>
 										<div class="uk-grid uk-grid-medium uk-margin-large-bottom">
 											<div class="uk-width-1-2">
+												<p style="font-size:15px;margin-bottom:3px;text-align:left;"><span style="font-weight:700;"><%= p.proyecto.downcase.include?("seminario") ? "Seminario: " : "Proyecto: " %> </span><a class="uk-link" href="mailto:<%= p.correo %>"><%= p.proyecto %></a></p>
 <% if p.correo.present? %>
 												<p style="font-size:15px;margin-bottom:3px;text-align:left;"><span style="font-weight:700;"><%= params[:locale] == "es" ? "Correo:" : "Email:" %> </span><a class="uk-link" href="mailto:<%= p.correo %>"><%= p.correo %></a></p>
 <% end %>
