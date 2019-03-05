@@ -88,7 +88,7 @@
 <li><%= construir_link("bt-flechita.png", "bt-flechita-hover.png", "Centros de Estudios",centros_de_estudio_url,"link-sobre",false) %></li>
 					<li><%= construir_link("bt-flechita.png", "bt-flechita-hover.png",t('botones.b6'),"http://libros.colmex.mx/","link-sobre") %></li>
 					<li><%= construir_link("bt-flechita.png", "bt-flechita-hover.png",t('sobre_col.revistas'),"http://revistas.colmex.mx/","link-sobre") %></li>
-					<li><%= construir_link("bt-flechita.png", "bt-flechita-hover.png",t('sobre_col.pred') ,"http://digital.colmex.mx/","link-sobre") %></li>
+					<li><%= construir_link("bt-flechita.png", "bt-flechita-hover.png",t('sobre_col.pred') ,"https://coed.colmex.mx/","link-sobre") %></li>
 					<li><%= construir_link("bt-flechita.png", "bt-flechita-hover.png",(params[:locale] == "es" ? "Folleto institucional" : "Institutional brochure") ,(params[:locale] == "es" ? Documento.where('nombre like ?','%Folleto institucional%').first.archivo.url : Documento.where('nombre like ?','%Institutional booklet%').first.archivo.url),"link-sobre") %></li>
     </ul>
     </div>
