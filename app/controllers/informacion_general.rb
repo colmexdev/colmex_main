@@ -191,12 +191,13 @@ class InformacionGeneralController < ApplicationController
   def directorio_academico_drive
     where = (params.key?(:conds) ? build_query(params[:conds],params[:locale]) : "")
     limite = 15.0
-    @profs = Teacher.where(where).offset(params.key?(:offset) ? params[:offset].to_i*limite : 0).limit(limite)
+    @profs = Teacher.where(where).order(nombre: :desc).offset(params.key?(:offset) ? params[:offset].to_i*limite : 0).limit(limite)
     @pags = (Teacher.where(where).count/limite).ceil
     @total = Teacher.where(where).count
     respond_to do |format|
       format.html
       format.js
+      format.json {render json: {profs: @profs, total: @total, pags: @pags}}
     end
   end
 
