@@ -216,7 +216,7 @@ class InformacionGeneralController < ApplicationController
       where = where + (multi ? " AND " : "") + "lower(temas_" + (locale == "es" ? "esp" : "ing") + ") like '%" + params[:linea].downcase + "%'"
     end
     if params.key?(:inic)
-      where = "nombre like '" + params[:inic] + "%'"
+      where = where + (multi ? " AND " : "") + "nombre like '" + params[:inic] + "%'"
     end
     return where
   end

@@ -197,7 +197,7 @@ class InformacionGeneralController < ApplicationController
     respond_to do |format|
       format.html
       format.js
-      format.json {render json: {profs: @profs, offset: (params[:offset].to_i || 0), limit: (params[:limite].to_i || 15), total: @total, pags: @pags}}
+      format.json {render json: {profs: @profs, offset: (params[:offset].to_i || 0), limit: (params.key?(:limite) ? params[:limite].to_i : 15), total: @total, pags: @pags}}
     end
   end
 
