@@ -4,6 +4,20 @@ class InformacionGeneralController < ApplicationController
     @becarios = Beneficiary.order(index: :asc)
   end
 
+  def becarios
+    @becarios = Beneficiary.order(index: :asc)
+    respond_to do |format|
+      format.js
+    end
+  end
+
+  def convocatoriasp
+    #@becarios = Beneficiary.order(index: :asc)
+    respond_to do |format|
+      format.js
+    end
+  end
+
   def historia_75_años
     is_editable("El Colegio de México en sus 75 años: 1940 - 2015")
   end

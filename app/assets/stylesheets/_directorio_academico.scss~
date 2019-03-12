@@ -74,7 +74,7 @@
 	background-color: #7E3355;
 	font-size: 18px;
 	display: inline-block;
-	border-radius: 1px;
+	border-radius: 5px;
 	margin-left:15px;
 	margin-top:20px;
 	margin-bottom:30px;

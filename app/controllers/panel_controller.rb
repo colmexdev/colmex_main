@@ -325,6 +325,11 @@ class PanelController < ApplicationController
         fields: {nombre: "Nombre", proyecto: "Proyecto", centro: "Adscripción", correo: "Correo lectrónico", sitio: "Sitio web", extension: "Extensión", temas: "Temas de investigación", index: "Índice"},
         imgs: {foto: "Foto"},
         trix: []
+      }, "Convocatoria de beca postdoctoral": {
+        model: Convocatoriap,
+        fields: {titulo: "Título", liga: "Liga"},
+        imgs: {imagen: "Imagen", documento: "Documento"},
+        trix: []
       }, "Usuarios gestores": {
         model: Admin,
         fields: {usuario: "Usuario",admin: "Tipo"},
@@ -388,6 +393,8 @@ class PanelController < ApplicationController
       params.require(:academico).permit(:nombre, :adscripcion, :lineas_investigacion, :correo, :pagina, :foto, :inicial)
     elsif params[:set] == "Becarios postdoctorales"
       params.require(:beneficiary).permit(:nombre, :proyecto, :centro, :correo, :extension, :sitio, :temas, :index, :foto)
+    elsif params[:set] == "Convocatoria de beca postdoctoral"
+      params.require(:convocatoriap).permit(:titulo, :imagen, :documento, :liga)
     elsif params[:set] == "Usuarios gestores"
       params.require(:admin).permit(:usuario, :password, :password_confirmation, :admin)
     elsif params[:set] == "Catálogo de sitios"
