@@ -14,7 +14,7 @@
     <!--          Aquí termina el menú pequeño          -->
 		</div>
 	
-		<div class="uk-width-3-5">
+		<div class="uk-width-3-5" id="becas-renderer">
 			<%= render 'informacion_generl/becas' %>
 		</div>
 	</div>
