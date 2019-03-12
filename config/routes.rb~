@@ -99,7 +99,7 @@ Rails.application.routes.draw do
     get 'dir-acad-test' => 'informacion_general#directorio_academico', :as => :dir
 
     get 'becas-postdoctorales' => 'informacion_general#becas_postdoctorales', :as => :postdocs
-    get 'beneficiarios' => 'informacion_general#beneficiarios', :as => :beneficiarios
+    get 'beneficiarios' => 'informacion_general#becas', :as => :becarios
     get 'convocatorias-pasadas' => 'informacion_general#convocatoriasp', :as => :conv_pd
 
     get 'calendario-escolar' => 'programas_academicos#calendario_escolar', :as => :calendario

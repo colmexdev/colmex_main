@@ -1,5 +1,13 @@
-		<div class="row">
-			<div class="col-xs-12" style="padding-left:0;">
-				<span class="titulo-grande"><%= params[:locale] == "es" ? "Convocatorias pasadas" : "Convocatorias pasadas" %></span><br>
-			</div>
-		</div>
+<div class="row">
+	<div class="col-xs-12" style="padding-left:0;">
+		<span class="titulo-grande"><%= params[:locale] == "es" ? "Convocatorias pasadas" : "Convocatorias pasadas" %></span><br>
+	</div>
+</div>
+
+<div class="row">
+	<div class="col xs-6 col-md-3">
+		<a href="/becas/Migdep.pdf" target="_blank">
+		<img src="/img/conv-posdoc-migdep.jpg">
+		</a>
+	</div>
+</div>

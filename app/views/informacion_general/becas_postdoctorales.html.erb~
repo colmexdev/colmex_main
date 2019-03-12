@@ -15,7 +15,7 @@
 		</div>
 	
 		<div class="uk-width-3-5" id="becas-renderer">
-			<%= render 'informacion_generl/becas' %>
+			<%= render 'informacion_general/becas' %>
 		</div>
 	</div>
 
