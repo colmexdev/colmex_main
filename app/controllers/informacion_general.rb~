@@ -4,7 +4,7 @@ class InformacionGeneralController < ApplicationController
     @becarios = Beneficiary.order(index: :asc)
   end
 
-  def beneficiarios
+  def becarios
     @becarios = Beneficiary.order(index: :asc)
     respond_to do |format|
       format.js
@@ -230,7 +230,7 @@ class InformacionGeneralController < ApplicationController
       where = where + (multi ? " AND " : "") + "lower(temas_" + (locale == "es" ? "esp" : "ing") + ") like '%" + params[:linea].downcase + "%'"
     end
     if params.key?(:inic)
-      where = "nombre like '" + params[:inic] + "%'"
+      where = where + (multi ? " AND " : "") + "nombre like '" + params[:inic] + "%'"
     end
     return where
   end
