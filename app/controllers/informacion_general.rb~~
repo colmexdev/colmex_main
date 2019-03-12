@@ -4,6 +4,7 @@ class InformacionGeneralController < ApplicationController
     @becarios = Beneficiary.order(index: :asc)
   end
 
+<<<<<<< HEAD
   def beneficiarios
     @becarios = Beneficiary.order(index: :asc)
     respond_to do |format|
@@ -18,6 +19,8 @@ class InformacionGeneralController < ApplicationController
     end
   end
 
+=======
+>>>>>>> c1a777b2eda91c41edd1a0f1695136076f0f674d
   def historia_75_años
     is_editable("El Colegio de México en sus 75 años: 1940 - 2015")
   end

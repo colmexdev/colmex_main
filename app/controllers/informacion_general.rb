@@ -204,13 +204,14 @@ class InformacionGeneralController < ApplicationController
 
   def directorio_academico_drive
     where = (params.key?(:conds) ? build_query(params[:conds],params[:locale]) : "")
-    limite = 15.0
-    @profs = Teacher.where(where).offset(params.key?(:offset) ? params[:offset].to_i*limite : 0).limit(limite)
+    limite = params[:limite] || 15.0
+    @profs = Teacher.where(where).order(nombre: :asc).offset(params.key?(:offset) ? params[:offset].to_i*limite : 0).limit(limite)
     @pags = (Teacher.where(where).count/limite).ceil
     @total = Teacher.where(where).count
     respond_to do |format|
       format.html
       format.js
+      format.json {render json: {profs: @profs, offset: (params[:offset].to_i || 0), limit: (params.key?(:limite) ? params[:limite].to_i : 15), total: @total, pags: @pags}}
     end
   end
 
@@ -229,7 +230,7 @@ class InformacionGeneralController < ApplicationController
       where = where + (multi ? " AND " : "") + "lower(temas_" + (locale == "es" ? "esp" : "ing") + ") like '%" + params[:linea].downcase + "%'"
     end
     if params.key?(:inic)
-      where = "nombre like '" + params[:inic] + "%'"
+      where = where + (multi ? " AND " : "") + "nombre like '" + params[:inic] + "%'"
     end
     return where
   end
