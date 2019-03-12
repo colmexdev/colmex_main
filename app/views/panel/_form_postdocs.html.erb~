@@ -22,7 +22,7 @@
   </div>
   <div class="field">
     <%= f.label :centro, "Adscripción" %><br>
-    <%= f.select(:centro, [['CEAA','CEAA'],['CEDUA','CEDUA'],['CEE','CEE'],['CEH','CEH'],['CEI','CEI'],['CELL','CELL'],['CES','CES']], :selected => (@obj.centro || 'CEAA')) %>
+    <%= f.text_field :centro %>
   </div>
   <div class="field">
     <%= f.label :correo, "Correo electrónico" %><br>
@@ -31,6 +31,10 @@
   <div class="field">
     <%= f.label :sitio, "Sitio web" %><br>
     <%= f.text_field :sitio %>
+  </div>
+  <div class="field">
+    <%= f.label :red, "Red social (opcional)" %><br>
+    <%= f.text_field :red %>
   </div>
   <div class="field">
     <%= f.label :extension, "Extensión telefónica" %><br>
