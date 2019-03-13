@@ -6,7 +6,7 @@
 
 <div class="row">
 	<% @convs.each do |c| %>
-	<div class="col-xs-6" style="padding:5px; margin 5px;text-align:center;">
+	<div class="col-xs-12 col-md-6" style="padding:5px; margin 5px;text-align:center;">
 		<a href="<%= c.documento.url %>" target="_blank">
 		<img src="<%= c.imagen.url %>">
 		</a>
