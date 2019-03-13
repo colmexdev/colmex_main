@@ -4,7 +4,7 @@ class InformacionGeneralController < ApplicationController
     @becarios = Beneficiary.order(index: :asc)
   end
 
-  def becarios
+  def becas
     @becarios = Beneficiary.order(index: :asc)
     respond_to do |format|
       format.js
