@@ -1,13 +1,15 @@
 <div class="row">
 	<div class="col-xs-12" style="padding-left:0;">
-		<span class="titulo-grande" style="border:none;"><%= params[:locale] == "es" ? "Convocatorias pasadas" : "Convocatorias pasadas" %></span><br>
+		<span class="titulo-grande" style="border:none;"><%= params[:locale] == "es" ? "Convocatorias pasadas" : "Convocatorias anteriores" %></span><br>
 	</div>
 </div>
 
 <div class="row">
-	<div class="col xs-6 col-md-3">
-		<a href="/becas/Migdep.pdf" target="_blank">
-		<img src="/img/conv-posdoc-migdep.jpg">
+	<% @convs.each do |c| %>
+	<div class="col-xs-6" style="padding:5px; margin 5px;text-align:center;">
+		<a href="<%= c.documento.url %>" target="_blank">
+		<img src="<%= c.imagen.url %>">
 		</a>
 	</div>
+<% end %>
 </div>
