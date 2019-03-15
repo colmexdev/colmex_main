@@ -24,7 +24,7 @@ class InformacionGeneralController < ApplicationController
 
   def premios_y_distinciones
     is_editable("Premios y distinciones")
-    @categorias = Categorium.where("nombre != ?","Intro")
+    @categorias = Categorium.where("nombre != ?","Intro").order(updated_at: :asc)
     @premiados = Premiado.where("tipo_premio = ?", "Comunidad")
   end
 
@@ -168,7 +168,7 @@ class InformacionGeneralController < ApplicationController
   end
 
   def comunidad
-    @categorias = Categorium.where("nombre != ?","Intro")
+    @categorias = Categorium.where("nombre != ?","Intro").order(updated_at: :asc)
     @premiados = Premiado.where("tipo_premio = ?", "Comunidad")
     respond_to do |format|
       format.js

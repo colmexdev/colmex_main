@@ -12,7 +12,7 @@ class InformacionGeneralController < ApplicationController
   end
 
   def convocatoriasp
-    @convs = Convocatoriap.order()
+    @convs = Convocatoriap.order("")
     respond_to do |format|
       format.js
     end
