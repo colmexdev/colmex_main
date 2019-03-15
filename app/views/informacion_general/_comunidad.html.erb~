@@ -4,13 +4,16 @@
 
 	<div class="uk-accordion" data-uk-accordion>
 		<% @categorias.each do |c| %>
-			<h3 class="uk-accordion-title"><%= construir_encabezado("bt-flechita.png", "bt-flechita-abajo.png", (params[:locale] != "en" ? c.nombre : c.nombre_eng)) %></h3>
+			<h3 class="uk-accordion-title"><%= construir_encabezado("bt-flechita.png", "bt-flechita-abajo.png", (params[:locale] != "en" ? (c.nombre == "Profesores-Investigadores" ? "Planta docente" : c.nombre) : (c.nombre == "Profesores-Investigadores" ? "Planta docente" : c.nombre_eng))) %></h3>
 			<div class="uk-accordion-content">
+<% if c.nombre == "Profesores-Investigadores" %>
+Cuatro estudiantes del Centro de Estudios Históricos recibieron reconocimientos a proyectos de tesos por el Instituto Nacional de Estudios Históricos de las Revoluciones de México, forman parte de esta selección:
+<% end %>
 				<ul class="uk-list uk-list-line">
 				<% @premiados.where("tipo = ?", c.nombre).order(created_at: :asc).each do |p| %>
 					<li style="margin-bottom: 20px; font-size: 15px;"><p><%= (p.nombre.gsub(/<\/?((div)|(p))>/,"").gsub(/<strong>/,"<b>").gsub(/<\/strong>/,"</b>").split(",").reverse.join(" ") + (c.nombre != "Institucionales" ? ", " : " ") + p.descripcion.gsub(/<\/?((div)|(p))>/,"").gsub(/<strong>/,"<b>").gsub(/<\/strong>/,"</b>").gsub(/<a href="/,"<a class=\"uk-link\" target=\"_blank\" href=\"")).html_safe %><br>
 <% if p.liga.present? %>
-				<a href=<%= p.liga %> target="_blank" class="ver-mas uk-margin-large-bottom uk-button-small">Más información</a>
+				<a href=<%= p.liga %> target="_blank" class="uk-link">Más información</a>
 <% end %>
 		</p></li>
 				<% end %>
