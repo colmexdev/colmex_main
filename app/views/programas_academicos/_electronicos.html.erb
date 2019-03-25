@@ -18,14 +18,14 @@
     <div class="uk-grid uk-grid-large">
     <div class="uk-width-large-4-6 uk-text-left">
     <% end %>
-    <p><%= e.descripcion.gsub(/<\/?(div)>/,"").mb_chars %></p>
+    <p><%= e.descripcion.gsub(/<\/?(div)>/,"").mb_chars.html_safe %></p>
     <% if e.imparte.to_s != "" %>
       <p class="uk-text-left">Impartido por <%= e.imparte.gsub(/<\/?((div)|(p))>/,"").mb_chars %></p>
     <% end %>
 
 		<% if tip == "MOOC" %>
 		  <% if e.liga.present? %>
-		    <a href=<%= e.liga %> target="_blank" class="ver-mas uk-margin-large-bottom uk-button-small"><%= !e.titulo.include?("Literatura y cultura tradicional de México") ? t('centros.boton') : (params[:locale] == "es" ? "Watch on iTunes U" : "Ver en iTunesU") %></a>
+		    <a href=<%= e.liga %> target="_blank" class="ver-mas uk-margin-large-bottom uk-button-small"><%= !e.titulo.include?("Literatura y cultura tradicional de México") ? t('centros.boton') : (params[:locale] == "en" ? "Watch on iTunes U" : "Ver en iTunesU") %></a>
 		  <% end %>
 		<% end %>
 
