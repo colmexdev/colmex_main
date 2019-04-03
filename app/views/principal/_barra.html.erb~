@@ -52,6 +52,9 @@
 							<li><a href="http://directorio.colmex.mx/" target="_blank"><%= t('botones.b1.opciones.op1') %></a></li>
 		          <li><a href="<%= documentacion_path %>"><%= t('botones.b1.opciones.op4') %></a></li>
 		          <li><a href="<%= profesores_emeritos_path %>"><%= t('botones.b1.opciones.op5') %></a></li>
+<% if params[:locale] == "es" %>
+		          <li><a href="<%= postdocs_path %>"><%= 'Becas postdoctorales' %></a></li>
+<% end %>
 		          <li><a href="<%= premios_path %>"><%= t('botones.b1.opciones.op6') %></a></li>
 		          <li><a href="http://agenda.colmex.mx/Convocatorias" target="_blank"><%= t('botones.b3.opciones.op8') %></a></li>
 							<li><a href="<%= principios_path %>" class="sublink"><%= t('footer.liga1') %></a></li>
@@ -166,6 +169,9 @@
 							<li><a href="http://directorio.colmex.mx/" target="_blank"><%= t('botones.b1.opciones.op1') %></a></li>
 		          <li><a href="<%= documentacion_path %>"><%= t('botones.b1.opciones.op4') %></a></li>
 		          <li><a href="<%= profesores_emeritos_path %>"><%= t('botones.b1.opciones.op5') %></a></li>
+<% if params[:locale] == "es" %>
+		          <li><a href="<%= postdocs_path %>"><%= 'Becas postdoctorales' %></a></li>
+<% end %>
 		          <li><a href="<%= premios_path %>"><%= t('botones.b1.opciones.op6') %></a></li>
 		          <li><a href="http://agenda.colmex.mx/Convocatorias" target="_blank"><%= t('botones.b3.opciones.op8') %></a></li>
 							<li><a href="<%= principios_path %>"><%= t('footer.liga1') %></a></li>
@@ -239,6 +245,9 @@
 		<li><a href="http://directorio.colmex.mx" class="sublink" target="_blank"><%= t('botones.b1.opciones.op1') %></a></li>
           	<li><a href="<%= documentacion_path %>" class="sublink"><%= t('botones.b1.opciones.op4') %></a></li>
           	<li><a href="<%= profesores_emeritos_path %>" class="sublink"><%= t('botones.b1.opciones.op5') %></a></li>
+<% if params[:locale] == "es" %>
+          	<li><a href="<%= postdocs_path %>" class="sublink"><%= 'Becas postdoctorales' %></a></li>
+<% end %>
           	<li><a href="<%= premios_path %>" class="sublink"><%= t('botones.b1.opciones.op6') %></a></li>
           	<li><a href="http://agenda.colmex.mx/Convocatorias" target="_blank" class="sublink"><%= t('botones.b3.opciones.op8') %></a></li>
 						<li><a href="<%= principios_path %>" class="sublink"><%= t('footer.liga1') %></a></li>
