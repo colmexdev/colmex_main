@@ -39,7 +39,7 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 
 #tiny_tds y activerecord-sqlserver-adapter para conexión con la base remota
-gem 'tiny_tds'
+gem 'tiny_tds', '1.3.0'
 gem 'activerecord-sqlserver-adapter'
 
 # Paperclip para manejar la subida de imágenes
