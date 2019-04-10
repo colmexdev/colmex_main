@@ -322,7 +322,7 @@ class PanelController < ApplicationController
         trix: []
       }, "Becarios postdoctorales": {
         model: Beneficiary,
-        fields: {nombre: "Nombre", proyecto: "Proyecto", centro: "Adscripción", correo: "Correo lectrónico", sitio: "Sitio web", extension: "Extensión", temas: "Temas de investigación", index: "Índice"},
+        fields: {nombre: "Nombre", proyecto: "Proyecto", centro: "Adscripción", correo: "Correo lectrónico", sitio: "Sitio web", extension: "Extensión", temas: "Temas de investigación", index: "Índice", red: "Red social"},
         imgs: {foto: "Foto"},
         trix: []
       }, "Convocatoria de beca postdoctoral": {
@@ -392,7 +392,7 @@ class PanelController < ApplicationController
     elsif params[:set] == "Directorio académico"
       params.require(:academico).permit(:nombre, :adscripcion, :lineas_investigacion, :correo, :pagina, :foto, :inicial)
     elsif params[:set] == "Becarios postdoctorales"
-      params.require(:beneficiary).permit(:nombre, :proyecto, :centro, :correo, :extension, :sitio, :temas, :index, :foto)
+      params.require(:beneficiary).permit(:nombre, :proyecto, :centro, :correo, :extension, :sitio, :temas, :index, :foto, :red)
     elsif params[:set] == "Convocatoria de beca postdoctoral"
       params.require(:convocatoriap).permit(:titulo, :imagen, :documento, :liga)
     elsif params[:set] == "Usuarios gestores"

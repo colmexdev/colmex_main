@@ -3,4 +3,5 @@ class Premiado < ActiveRecord::Base
   validates_presence_of :descripcion
   validates_presence_of :tipo, if: "tipo_premio == 'Comunidad'"
   validates_presence_of :tipo_premio
+  validates_presence_of :liga, if: "tipo_premio == 'Colegio'"
 end

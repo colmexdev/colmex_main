@@ -282,7 +282,7 @@ class PanelController < ApplicationController
         trix: []
       }, "Premios y distinciones": {
         model: Premiado,
-        fields: {nombre: "Nombre", descripcion: "Descripción",tipo_premio: "Otorgado a",tipo: "Sección (comunidad)",liga: "Link"},
+        fields: {nombre: "Nombre", descripcion: "Descripción",tipo_premio: "Otorgado a",tipo: "Sección (comunidad)",liga: "Link",indice:"Índice"},
         imgs: {},
         trix: [:nombre, :descripcion]
       }, "Documentos varios": {
@@ -376,7 +376,7 @@ class PanelController < ApplicationController
     elsif params[:set] == "Categorías de Premios"
       params.require(:categorium).permit(:nombre,:nombre_eng)
     elsif params[:set] == "Premios y distinciones"
-      params.require(:premiado).permit(:nombre, :descripcion, :tipo, :tipo_premio, :liga)
+      params.require(:premiado).permit(:nombre, :descripcion, :tipo, :tipo_premio, :liga,:indice)
     elsif params[:set] == "Documentos varios"
       params.require(:documento).permit(:nombre, :tipo, :anio, :archivo, :nombre_eng)
     elsif params[:set] == "Descubre"
