@@ -7,7 +7,7 @@
 			<h3 class="uk-accordion-title"><%= construir_encabezado("bt-flechita.png", "bt-flechita-abajo.png", (params[:locale] != "en" ? (c.nombre == "Profesores-Investigadores" ? "Planta docente" : c.nombre) : (c.nombre == "Profesores-Investigadores" ? "Planta docente" : c.nombre_eng))) %></h3>
 			<div class="uk-accordion-content">
 <% if c.nombre == "Estudiantes" %>
-Cuatro estudiantes del Centro de Estudios Históricos recibieron reconocimientos a proyectos de tesis por el Instituto Nacional de Estudios Históricos de las Revoluciones de México, forman parte de esta selección:
+Cuatro estudiantes del Centro de Estudios Históricos recibieron reconocimientos a proyectos de tesis por el Instituto Nacional de Estudios Históricos de las Revoluciones de México, forman parte de esta selección:<br>
 <% end %>
 				<ul class="uk-list uk-list-line">
 				<% @premiados.where("tipo = ?", c.nombre).order(created_at: :asc).each do |p| %>

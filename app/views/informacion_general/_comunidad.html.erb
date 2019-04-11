@@ -10,7 +10,7 @@
 Cuatro estudiantes del Centro de Estudios Históricos recibieron reconocimientos a proyectos de tesis por el Instituto Nacional de Estudios Históricos de las Revoluciones de México, forman parte de esta selección:<br>
 <% end %>
 				<ul class="uk-list uk-list-line">
-				<% @premiados.where("tipo = ?", c.nombre).order(created_at: :asc).each do |p| %>
+				<% @premiados.where("tipo = ?", c.nombre).order(indice: :asc).each do |p| %>
 					<li style="margin-bottom: 20px; font-size: 15px;"><p><%= (p.nombre.gsub(/<\/?((div)|(p))>/,"").gsub(/<strong>/,"<b>").gsub(/<\/strong>/,"</b>").split(",").reverse.join(" ") + (c.nombre != "Institucionales" ? ", " : " ") + p.descripcion.gsub(/<\/?((div)|(p))>/,"").gsub(/<strong>/,"<b>").gsub(/<\/strong>/,"</b>").gsub(/<a href="/,"<a class=\"uk-link\" target=\"_blank\" href=\"")).html_safe %><br>
 <% if p.liga.present? %>
 				<a href=<%= p.liga %> target="_blank" class="uk-link">Más información</a>
