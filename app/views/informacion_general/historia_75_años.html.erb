@@ -169,7 +169,7 @@
 	    <span class="titulo-grande">El Colegio de México en sus 75 años: 1940-2015</span><br>
     <span class="titulo-chico">por Clara E. Lida</span><br>
     <span class="titulo-chico">Centro de Estudios Históricos</span>
-    <div class="uk-container-center uk-block"><%= image_tag(@pics[0].foto.url) %>
+    <div class="uk-container-center uk-block"><%= image_tag('75-encabezado.jpg') %>
 		<% if @pics[0].caption.present? %>
 			<br>
 			<h6 class="uk-text-break"><%= @pics[0].caption.gsub(/<(((\/)?p)|(br))>/,"").html_safe %></h6>
@@ -177,7 +177,7 @@
 		</div>
     <div class="uk-grid uk-grid-medium">
     <div class="uk-width-large-3-10 uk-width-medium-3-10 uk-width-small-2-5 uk-text-left">
-    <%= image_tag(@pics[1].foto.url) %>
+    <%= image_tag('daniel-cosio-villegas.jpg') %>
 		<% if @pics[1].caption.present? %>
 			<br>
     	<h6 class="uk-text-break"><%= @pics[1].caption.gsub(/<(((\/)?p)|(br))>/,"").html_safe %></h6>
@@ -192,14 +192,14 @@
 <p>&nbsp;</p>
     </div>
     <div class="uk-width-large-2-10 uk-width-medium-2-10 uk-width-small-2-6  uk-text-left">
-    <%= image_tag(@pics[2].foto.url) %>
+    <%= image_tag('alfonso-reyes.jpg') %>
 		<% if @pics[2].caption.present? %>
 			<br>
     	<h6 class="uk-text-break"><%= @pics[2].caption.gsub(/<(((\/)?p)|(br))>/,"").html_safe %></h6>
 		<% end %>
     </div>
     <div class="uk-width-large-3-10 uk-width-medium-3-10 uk-width-small-2-5  uk-text-left">
-    <%= image_tag(@pics[3].foto.url) %>
+    <%= image_tag('75aniversario-2.png') %>
 		<% if @pics[3].caption.present? %>
 			<br>
    	 <h6 class="uk-text-break"><%= @pics[3].caption.gsub(/<(((\/)?p)|(br))>/,"").html_safe %></h6>
@@ -217,7 +217,7 @@
 		<% end %>
     </div>
     <div class="uk-width-large-2-10 uk-width-medium-2-10 uk-width-small-2-6  uk-text-left">
-    <%= image_tag(@pics[4].foto.url) %>
+    <%= image_tag('75aniversario-3.png') %>
 		<% if @pics[4].caption.present? %>
 			<br>
     	<h6 class="uk-text-break"><%= @pics[4].caption.gsub(/<(((\/)?p)|(br))>/,"").html_safe %></h6>

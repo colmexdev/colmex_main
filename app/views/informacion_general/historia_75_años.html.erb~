@@ -180,7 +180,7 @@
     <%= image_tag(@pics[1].foto.url) %>
 		<% if @pics[1].caption.present? %>
 			<br>
-    	<h6 class="uk-text-break">@pics[1].caption.gsub(/<(((\/)?p)|(br))>/,"").html_safe %></h6>
+    	<h6 class="uk-text-break"><%= @pics[1].caption.gsub(/<(((\/)?p)|(br))>/,"").html_safe %></h6>
 		<% end %>
     </div>
     <div class="uk-width-large-7-10 uk-width-medium-7-10 uk-width-small-3-5">

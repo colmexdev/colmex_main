@@ -79,7 +79,7 @@
     				<span class="titulo-chico"><%= t('historia.historia') %></span><br>
     				<span class="titulo-grande">El Colegio de México</span>
     			</div>
-    			<%= image_tag(@pics[0].foto.url, :style=> "margin-bottom:25px;") %>
+    			<%= image_tag('historia.jpg', :style=> "margin-bottom:25px;") %>
     		</div>
     		<div class="uk-width-large-3-5">
 					<%= params[:locale] == "es" ? @pars[0].texto.html_safe : @pars[0].texto_ingles.html_safe %>
