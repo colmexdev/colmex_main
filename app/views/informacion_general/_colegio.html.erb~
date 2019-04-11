@@ -8,7 +8,9 @@
 				<ul class="uk-list uk-list-line">
 					<li style="margin-bottom: 20px; font-size: 15px;"><p><%=  p.descripcion.html_safe %></p></li>
 				</ul>
+<% if p.liga.present? %>
 				<a href=<%= p.liga %> target="_blank" class="ver-mas uk-margin-large-bottom uk-button-small">Más información</a>
+<% end %>
 			</div>
 		<% end %>
 	</div>

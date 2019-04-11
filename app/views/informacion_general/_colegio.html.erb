@@ -3,7 +3,7 @@
 
 	<div class="uk-accordion" data-uk-accordion>
 		<% @premiados.each do |p| %>
-			<h3 class="uk-accordion-title"><%= construir_encabezado("bt-flechita.png", "bt-flechita-abajo.png", p.nombre.gusb(/<\/?(p|(div))>/,"") %></h3>
+			<h3 class="uk-accordion-title"><%= construir_encabezado("bt-flechita.png", "bt-flechita-abajo.png", p.nombre.gsub(/<\/?(p|(div))>/,"") %></h3>
 			<div class="uk-accordion-content">
 				<ul class="uk-list uk-list-line">
 					<li style="margin-bottom: 20px; font-size: 15px;"><p><%=  p.descripcion.html_safe %></p></li>
