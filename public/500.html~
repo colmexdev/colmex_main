@@ -159,6 +159,7 @@ f;f=d[e];e++)if(a.hasOwnProperty(f)&&"undefined"!=typeof a[f])try{var g=[];c[f]=
 
 <style>
 .botones .no-dropdown { width: calc(33.33% - 2px); }
+#footer-centro { border-right: none; border- left: none; }
 </style>
 
 
