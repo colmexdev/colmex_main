@@ -9,8 +9,8 @@
   <meta name="csrf-param" content="authenticity_token">
 <meta name="csrf-token" content="xkL+MmL1leC85KTuCjgzLnbIRtzHJAl6mYupaYBrswR26sK+YoaSK5aeYaxyMPZI92XydtX456SXKVhyV60iAw==">
 <style>
-ul.botones li.no-dropdown { width: calc(33.33% - 2px); }
-#footer_centro { border-right: none; border- left: none; }
+ul.botones li.no-dropdown { width: calc(33.33% - 2px) !important; }
+#footer_centro { border-right: none !important; border-left: none !important; }
 </style>
 
 	<meta http-equiv="content-type" content="text/html; charset=utf-8">
@@ -338,6 +338,25 @@ f;f=d[e];e++)if(a.hasOwnProperty(f)&&"undefined"!=typeof a[f])try{var g=[];c[f]=
 		<div class="uk-width-1-1">
 			<img src="https://www.colmex.mx/mensaje-mantenimiento.png">
     </div> 
+
+<div class="row"> <!-- Fila para transparencia -->
+		<div id="div_transparencia" style="height: 185px;"> <!-- Columnas para transparencia-->
+				<div style="display: inline-block; width: 20%; float: left; position: relative; height: 145px; line-height: 145px;" id="div-inai">
+				<a target="_blank" href="http://inicio.ifai.org.mx/SitePages/ifai.aspx"><img id="img-inai" src="/assets/transp-izq-ed78301fb1a99011f5eea63abe64d9cfc0ec43dcab676f046ee5a7d7e880b2bb.png" alt="Transp izq"></a>
+				</div>
+				<div style="display: inline-block; width: 40%; float: left; position: relative; height: 145px; line-height: 145px;" id="div-portal">
+				<a target="_blank" href="http://portaltransparencia.gob.mx/buscador/search/search.do?method=begin&amp;searchBy=0&amp;idDependenciaZoom=11120"><img id="img-transp" src="/assets/portal-obligaciones-transparencia-26c2d3793f828aa714b07c57615c74d676a0df1b15ebd60fc7e93ecaa8e49b7e.jpg" alt="Portal obligaciones transparencia"></a>
+				</div>
+				<div style="display: inline-block; width: 20%; float: left; position: relative; height: 145px; line-height: 145px;" id="div-pnt">
+				<a target="_blank" href="http://consultapublicamx.inai.org.mx:8080/vut-web/?idSujetoObigadoParametro=126&amp;idEntidadParametro=33&amp;idSectorParametro=21"><img id="img-pnt" src="/assets/pnt-logo-6d301d8e9939baa5fbb828b36f3b3e8843ea951060398739f46702bf0c2dd13a.png" alt="Pnt logo" style="width: 177px;"></a>
+				</div>
+				<div style="display: inline-block; width: 20%; float: left; position: relative; height: 145px; line-height: 145px;" id="div-cont">
+				<a target="_blank" href="http://promepcm.colmex.mx/"><img id="img-cont" src="/assets/contraloria-social-47d8f24f5512f9bd5440fabb4c40876a90becbec2af7f39b50fe92de809f3a76.png" alt="Contraloria social" style="width: 177px;"></a>
+				</div>
+		</div> <!-- Cierre de columnas para transparencia -->
+	</div>
+
+
 	</div>
 
 
