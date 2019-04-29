@@ -9,8 +9,8 @@
   <meta name="csrf-param" content="authenticity_token">
 <meta name="csrf-token" content="xkL+MmL1leC85KTuCjgzLnbIRtzHJAl6mYupaYBrswR26sK+YoaSK5aeYaxyMPZI92XydtX456SXKVhyV60iAw==">
 <style>
-.botones .no-dropdown { width: calc(33.33% - 2px); }
-#footer-centro { border-right: none; border- left: none; }
+ul.botones li.no-dropdown { width: calc(33.33% - 2px); }
+#footer_centro { border-right: none; border- left: none; }
 </style>
 
 	<meta http-equiv="content-type" content="text/html; charset=utf-8">
