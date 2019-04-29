@@ -9,7 +9,7 @@
   <meta name="csrf-param" content="authenticity_token">
 <meta name="csrf-token" content="xkL+MmL1leC85KTuCjgzLnbIRtzHJAl6mYupaYBrswR26sK+YoaSK5aeYaxyMPZI92XydtX456SXKVhyV60iAw==">
 <style>
-ul.botones li.no-dropdown { width: calc(33.33% - 2px) !important; }
+ul.botones li.no-dropdown, ul.botones li.dropdown { width: calc(25% - 2px) !important; }
 #footer_centro { border-right: none !important; border-left: none !important; }
 </style>
 
@@ -122,6 +122,7 @@ f;f=d[e];e++)if(a.hasOwnProperty(f)&&"undefined"!=typeof a[f])try{var g=[];c[f]=
 
 		        </ul>
 		    </li>
+-->
 
 				<li class="dropdown" id="dropdown2">
 		      <a href="" class="dropdown-toggle" data-hover="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span>Centros de Estudios</span></a>
@@ -136,6 +137,7 @@ f;f=d[e];e++)if(a.hasOwnProperty(f)&&"undefined"!=typeof a[f])try{var g=[];c[f]=
 		        </ul>
 		    </li>
 
+<!--
 				<li class="dropdown" id="dropdown3">
 		      <a href="https://www.colmex.mx/es/programas" class="dropdown-toggle" data-hover="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span>Programas docentes</span></a>
 		        <ul class="dropdown-menu">
@@ -207,10 +209,9 @@ f;f=d[e];e++)if(a.hasOwnProperty(f)&&"undefined"!=typeof a[f])try{var g=[];c[f]=
 							<li><a href="/es/bienes">Relación de bienes</a></li>
 							<li><a href="http://transparencia.colmex.mx" target="_blank">Transparencia</a></li>
 
-
-
 		        </ul>
 		    </li>
+-->
 
 				<li class="dropdown" id="dropdown2">
 		      <a href="" class="dropdown-toggle" data-hover="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span>Centros de Estudios</span></a>
@@ -225,6 +226,7 @@ f;f=d[e];e++)if(a.hasOwnProperty(f)&&"undefined"!=typeof a[f])try{var g=[];c[f]=
 		        </ul>
 		    </li>
 
+<!--
 				<li class="dropdown" id="dropdown3">
 		      <a href="/es/programas" class="dropdown-toggle" data-hover="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span>Programas docentes</span></a>
 		        <ul class="dropdown-menu">
@@ -275,9 +277,10 @@ f;f=d[e];e++)if(a.hasOwnProperty(f)&&"undefined"!=typeof a[f])try{var g=[];c[f]=
 						<li><a href="/es/bienes" class="sublink">Relación de bienes</a></li>
 						<li><a href="http://transparencia.colmex.mx" class="sublink" target="_blank">Transparencia</a></li>
 
-
 					</ul></div>
 				</li>
+-->
+
 				<li class="uk-parent" aria-expanded="false">
 					<a href="#">Centros de Estudios</a>
 					<div style="overflow:hidden;height:0;position:relative;" class="uk-hidden"><ul class="uk-nav-sub">
@@ -290,6 +293,8 @@ f;f=d[e];e++)if(a.hasOwnProperty(f)&&"undefined"!=typeof a[f])try{var g=[];c[f]=
           	<li><a href="http://ces.colmex.mx/" target="_blank" class="sublink">Centro de Estudios Sociológicos</a></li>
 					</ul></div>
 				</li>
+
+<!--
 				<li class="uk-parent" aria-expanded="false">
 					<a href="#">Programas docentes</a>
 					<div style="overflow:hidden;height:0;position:relative;" class="uk-hidden"><ul class="uk-nav-sub">
