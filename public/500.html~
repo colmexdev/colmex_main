@@ -85,8 +85,10 @@ f;f=d[e];e++)if(a.hasOwnProperty(f)&&"undefined"!=typeof a[f])try{var g=[];c[f]=
 			  <!-- Collect the nav links, forms, and other content for toggling -->
 			  <div class="navbar-collapse" id="barra_nav">
 			    <ul class="nav navbar-nav reajustable">
-						
+
+<!--						
 						<li class="nav_opciones idioma" id="idioma-top"><a class="inactivo" id="idioma_en" href="/en">English</a></li>
+-->
 						
 						<li class="nav_opciones" id="logo-main"><a href="/?locale=es"><img src="/assets/colmex-5f07a8b09f687e8cbf6e08b130e55a2a1c621c39bc4fa927cacfa2026b2bfa3c.png" alt="Colmex"></a></li>
 						<li class="nav_opciones mail"><a href="http://portal.office.com" target="_blank"><img src="/assets/mail-839b5e24efe83c47b5cccb1d6ded30e90a2df54d5f2e66ee1804dd0562a57108.png" alt="Mail"><span class="borrable">Correo electrónico</span></a></li>
@@ -158,7 +160,10 @@ f;f=d[e];e++)if(a.hasOwnProperty(f)&&"undefined"!=typeof a[f])try{var g=[];c[f]=
 				<li class="no-dropdown"><a href="https://publicaciones.colmex.mx/" target="_blank"><span>Publicaciones</span></a></li>
 
 				<li class="no-dropdown"><a href=" http://agenda.colmex.mx" target="_blank"><span>Agenda</span></a></li>
+
+<!--
 				<li class="no-dropdown"><a href="/en"><span style="color:#993366;">English</span></a></li>
+-->
 				
 			</ul> <!-- Cierre del menú -->
 </div>
@@ -344,7 +349,7 @@ f;f=d[e];e++)if(a.hasOwnProperty(f)&&"undefined"!=typeof a[f])try{var g=[];c[f]=
 			<img src="https://www.colmex.mx/mensaje-mantenimiento.png">
     </div> 
 
-<div class="row"> <!-- Fila para transparencia -->
+<div class="row" style="margin-top: 35px;"> <!-- Fila para transparencia -->
 		<div id="div_transparencia" style="height: 185px;"> <!-- Columnas para transparencia-->
 				<div style="display: inline-block; width: 20%; float: left; position: relative; height: 145px; line-height: 145px;" id="div-inai">
 				<a target="_blank" href="http://inicio.ifai.org.mx/SitePages/ifai.aspx"><img id="img-inai" src="/assets/transp-izq-ed78301fb1a99011f5eea63abe64d9cfc0ec43dcab676f046ee5a7d7e880b2bb.png" alt="Transp izq"></a>
