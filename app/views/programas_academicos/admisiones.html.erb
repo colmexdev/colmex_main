@@ -8,7 +8,7 @@
     <span class="titulo-grande"><%= params[:locale] == "en" ? "Admissions" : "Admisiones" %></span><br>
     <!--          Aquí empieza el menú pequeño          -->
     <ul style="text-align:left;">
-				<% if params[:locale] == "es" %>
+				<% if params[:locale] == "es" && @convocatorias.size > 0 %>
 				<li style="list-style-type:none; margin-bottom:5px;"><%= link_to image_tag('bt-flechita.png', :class => "leave_img") + image_tag("bt-flechita-hover.png", :class => "hover_img") + "Convocatorias abiertas", (request.original_fullpath.include?("editable") ? convocatorias_path : convocatorias_path), :remote => true, :class => "link-sobre", :id => "junta-link" %></li>
 				<% end %>
     	<li style="list-style-type:none; margin-bottom:5px;"><%= link_to(image_tag('bt-flechita.png', :class => "leave_img") + image_tag("bt-flechita-hover.png", :class => "hover_img") + t('botones.b3.texto'), (request.original_fullpath.include?("editable") ? programas_path : programas_path), :remote => true, :class => "link-sobre", :id => "asamblea-link") %></li>
@@ -17,9 +17,9 @@
     <!--          Aquí termina el menú pequeño          -->
     </div>
     <div class="uk-width-large-7-10">
-			<span class="titulo-grande morado" id="titulo-render"><%= t('botones.b3.texto') %></span>
+			<span class="titulo-grande morado" id="titulo-render"><%= @convocatorias.size == 0 || params[:locale] == "en" ? t('botones.b3.texto') : "Convocatorias abiertas" %></span>
 			<div id="admisiones-render" style="padding-top: 15px;">
-				<%= render "programas_academicos/convocatorias" %>
+				<%= render (@convocatorias.size == 0 || params[:locale] == "en" ? "porgramas_academicos/programas" : "programas_academicos/convocatorias") %>
 			</div>
 		</div>
 		</div>
