@@ -77,8 +77,8 @@ class PrincipalController < ApplicationController
     @offset = params[:offset] || "0"
     @multi = false
     @where = ""
-    if params.key?(:crono) && params[:crono] == "true"
-      @where = @where + "DATEADD(day, DATEDIFF(day,'19000101',PARSE(fechaFin AS DATE USING 'es-ES')), CAST(horaFin AS DATETIME2(1))) >= CAST(GETDATE() AS DATETIME2(1))"
+    if params.key?(:crono)
+      @where = @where + "DATEADD(day, DATEDIFF(day,'19000101',PARSE(fechaFin AS DATE USING 'es-ES')), CAST(horaFin AS DATETIME2(1))) #{params[:crono] == "true" ? ">=" : "<="} CAST(GETDATE() AS DATETIME2(1))"
       @multi = true
     end
     if params.key?(:centro)

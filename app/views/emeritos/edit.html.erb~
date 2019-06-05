@@ -1,6 +1,0 @@
-<h1>Editing Emerito</h1>
-
-<%= render 'form' %>
-
-<%= link_to 'Show', @emerito %> |
-<%= link_to 'Back', emeritos_path %>

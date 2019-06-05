@@ -1,5 +1,0 @@
-<h1>New Personal</h1>
-
-<%= render 'form' %>
-
-<%= link_to 'Back', personals_path %>

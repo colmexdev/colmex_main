@@ -1,3 +1,0 @@
-
-$("#titulo-render").html("<%= "Relación de bienes muebles e inmuebles" %>");
-$("#transp-render").html("<%= j render :partial => 'bienes/index' %>");
