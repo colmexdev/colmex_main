@@ -19,7 +19,7 @@
     <div class="uk-width-large-7-10">
 			<span class="titulo-grande morado" id="titulo-render"><%= @convocatorias.size == 0 || params[:locale] == "en" ? t('botones.b3.texto') : "Convocatorias abiertas" %></span>
 			<div id="admisiones-render" style="padding-top: 15px;">
-				<%= render (@convocatorias.size == 0 || params[:locale] == "en" ? "porgramas_academicos/programas" : "programas_academicos/convocatorias") %>
+				<%= render (@convocatorias.size == 0 || params[:locale] == "en" ? "programas_academicos/programas" : "programas_academicos/convocatorias") %>
 			</div>
 		</div>
 		</div>
