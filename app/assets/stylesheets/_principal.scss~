@@ -1382,14 +1382,15 @@ ul.ul-nav { display: table;
 }
 
 #div-banner-pres-2{
+	background-color: #FFF;
 	/*background-image: image-url('convocatoria-migracion.jpg');*/
 	/*background-size: 100% 100%;*/
 	z-index: 27;
-	box-shadow: rgba(0, 0, 0, 0.172549) 0px 6px 12px;
-	/*position: relative;*/
+	/*box-shadow: rgba(0, 0, 0, 0.172549) 0px 6px 12px;*/
+	position: relative;
 	height: auto;
 	padding-top: 15px;
-	/*max-height: 230px;*/
+	max-height: 230px;
 
 	#img-banner{
 		display: block;
@@ -1399,7 +1400,7 @@ ul.ul-nav { display: table;
 		/*max-width: -webkit-calc(100% - 50px);
 		max-width: -moz-calc(100% - 50px);
 		max-width: calc(100% - 50px);*/
-		/*@include centrado;*/
+		@include centrado;
 	}
 }
 
