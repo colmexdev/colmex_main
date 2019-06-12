@@ -32,7 +32,7 @@
 					<td class="ind-cell left-align">
 					<% if s.public_send(f).present? %>
 						<% if !s.public_send(f).content_type.include?("image") %>
-							<object type="application/pdf" data="<%= s.public_send(f).url %>"><embed src="<%= s.public_send(f).url %>" type="application/pdf"></object>
+							<object style="width:100%" type="application/pdf" data="<%= s.public_send(f).url %>"><embed style="width:100%" src="<%= s.public_send(f).url %>" type="application/pdf"></object>
 						<% else %>
 							<%= image_tag s.public_send(f).url %>
 						<% end %>
