@@ -22,8 +22,8 @@
 										<img src="<%= p.imagen.url %>" class="uk-border-rounded" alt="Convocatoria">
 									</div>
 									<div class="uk-width-large-1-4 uk-width-medium-1-4 uk-width-small-1-4 uk-text-left uk-text-break">
-										<p><span class="morado">Inicio de convocatoria:</span> <%= l(p.fecha_ic, format: :mes_anio %></p>
-										<p><span class="morado">Fin de convocatoria:</span> <%= l(p.fecha_fc, format: :mes_anio %></p>
+										<p><span class="morado">Inicio de convocatoria:</span> <%= l(p.fecha_ic, format: :mes_anio) %></p>
+										<p><span class="morado">Fin de convocatoria:</span> <%= l(p.fecha_fc, format: :mes_anio) %></p>
 							<% if p.liga.present? %>
 								<a href="<%= p.liga %>" target="_blank" class="ver-mas uk-margin-large-bottom uk-button-small"><%= t('programas.info') %></a>
 							<% end %>
