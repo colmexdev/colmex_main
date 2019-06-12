@@ -18,13 +18,20 @@ class InformacionGeneralController < ApplicationController
     end
   end
 
+  def convocatorias_vigentes
+    @convs = Convocatoriap.where("fecha_fc is not null and fecha_fc <= ?",Date.today)
+    respond_to do |format|
+      format.js
+    end
+  end
+
   def historia_75_años
     is_editable("El Colegio de México en sus 75 años: 1940 - 2015")
   end
 
   def premios_y_distinciones
     is_editable("Premios y distinciones")
-    @categorias = Categorium.where("nombre != ?","Intro")
+    @categorias = Categorium.where("nombre != ?","Intro").order(updated_at: :asc)
     @premiados = Premiado.where("tipo_premio = ?", "Comunidad")
   end
 
@@ -168,7 +175,7 @@ class InformacionGeneralController < ApplicationController
   end
 
   def comunidad
-    @categorias = Categorium.where("nombre != ?","Intro")
+    @categorias = Categorium.where("nombre != ?","Intro").order(updated_at: :asc)
     @premiados = Premiado.where("tipo_premio = ?", "Comunidad")
     respond_to do |format|
       format.js

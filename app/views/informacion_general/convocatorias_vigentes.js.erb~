@@ -1,0 +1,1 @@
+$("#becas-renderer").html("<%= j render partial: 'becas' %>")
