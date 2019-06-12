@@ -20,7 +20,7 @@ class InformacionGeneralController < ApplicationController
   end
 
   def convocatorias_vigentes
-    @convs = Convocatoriap.where("fecha_fc is not null and fecha_fc <= ?",Date.today)
+    @convs = Convocatoriap.where("fecha_fc is not null and fecha_fc >= ?",Date.today)
     respond_to do |format|
       format.js
     end

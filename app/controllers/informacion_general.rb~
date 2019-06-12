@@ -2,7 +2,7 @@ class InformacionGeneralController < ApplicationController
 
   def becas_postdoctorales
     @becarios = Beneficiary.order(index: :asc)
-    @vigentes = Convocatoriap.where("fecha_fc is not null and fecha_fc <= ?",Date.today)
+    @vigentes = Convocatoriap.where("fecha_fc is not null and fecha_fc >= ?",Date.today)
   end
 
   def becas
