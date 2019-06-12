@@ -1392,7 +1392,7 @@ ul.ul-nav { display: table;
 	padding-top: 15px;
 	max-height: 230px;
 
-	#img-banner{
+	#img-banner-2{
 		display: block;
 		margin: 0 auto;
 		width: 70%;
