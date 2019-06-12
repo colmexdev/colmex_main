@@ -1398,6 +1398,7 @@ ul.ul-nav { display: table;
 		margin: 0 auto;
 		width: 70%;
 		max-width: 1200px;
+		margin: 20px auto;
 		/*max-width: -webkit-calc(100% - 50px);
 		max-width: -moz-calc(100% - 50px);
 		max-width: calc(100% - 50px);*/
