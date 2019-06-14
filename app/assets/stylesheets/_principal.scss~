@@ -1367,6 +1367,7 @@ ul.ul-nav { display: table;
 	position: relative;
 	height: auto;/*230px;
 	max-height: 230px;*/
+	padding: 30px 15px;
 	text-align: center;
 
 	.img-banner{
