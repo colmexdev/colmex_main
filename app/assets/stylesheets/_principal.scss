@@ -1365,11 +1365,13 @@ ul.ul-nav { display: table;
 	z-index: 27;
 	/*box-shadow: rgba(0, 0, 0, 0.172549) 0px 6px 12px;*/
 	position: relative;
-	height: 230px;
-	max-height: 230px;
+	height: auto;/*230px;
+	max-height: 230px;*/
+	padding: 30px 0;
+	text-align: center;
 
 	.img-banner{
-		position: relative;
+		/*position: relative;*/
 		width: auto;
 		max-height:170px;
 		height: 90%;
@@ -1377,7 +1379,7 @@ ul.ul-nav { display: table;
 		max-width: -webkit-calc(100% - 50px);
 		max-width: -moz-calc(100% - 50px);
 		max-width: calc(100% - 50px);*/
-		@include centrado;
+		/*@include centrado;*/
 	}
 }
 
@@ -1391,13 +1393,15 @@ ul.ul-nav { display: table;
 	height: auto;
 	padding: 30px 0;
 	/*max-height: 230px;*/
-	text-align:center;
+	text-align: center;
 
 	.img-banner{
 		/*display: block;*/
 		margin: 0 auto;
-		width: 70%;
-		max-width: 1200px;
+		width: auto;
+		max-height: 170px;
+		height: 90%;
+		/*max-width: 1200px;*/
 		/*margin: 20px auto;*/
 		/*max-width: -webkit-calc(100% - 50px);
 		max-width: -moz-calc(100% - 50px);
