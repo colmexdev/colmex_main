@@ -128,7 +128,7 @@ $(window).on("resize",function(){
 	}
 
 	try{
-		escalarBanner("div-banner-pres",230,900);
+		//escalarBanner("div-banner-pres",230,900);
 		setTimeout(function(){
 			escalarSlider(recabarAnchos());
 			partirDescubres();
