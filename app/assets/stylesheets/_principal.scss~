@@ -1374,7 +1374,7 @@ ul.ul-nav { display: table;
 		/*position: relative;*/
 		width: auto;
 		max-height:170px;
-		height: 90%;
+		height: auto;
 		/*height: 100%;
 		max-width: -webkit-calc(100% - 50px);
 		max-width: -moz-calc(100% - 50px);
@@ -1400,7 +1400,7 @@ ul.ul-nav { display: table;
 		margin: 0 auto;
 		width: auto;
 		max-height: 170px;
-		height: 90%;
+		height: auto;
 		/*max-width: 1200px;*/
 		/*margin: 20px auto;*/
 		/*max-width: -webkit-calc(100% - 50px);
