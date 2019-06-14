@@ -81,7 +81,7 @@ $(document).on("ready", function(){
 
   agregarAnaliticos();
 	try{
-		escalarBanner("div-banner-pres",230,900);
+		//escalarBanner("div-banner-pres",230,900);
 		setTimeout(function(){
 			var anchos_badges = recabarAnchos();
 			escalarSlider(anchos_badges);
