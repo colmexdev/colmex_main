@@ -13,7 +13,7 @@ class InformacionGeneralController < ApplicationController
   end
 
   def convocatoriasp
-    @convs = Convocatoriap.order("")
+    @convs = Convocatoriap.where("fecha_fc is null or fecha_fc < ?",Date.today).order("")
     respond_to do |format|
       format.js
     end
