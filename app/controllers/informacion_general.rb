@@ -212,7 +212,7 @@ class InformacionGeneralController < ApplicationController
 
   def directorio_academico_drive
     where = (params.key?(:conds) ? build_query(params[:conds],params[:locale]) : "")
-    limite = (params.key?(:limite) ? (params[:limite].to_f || 15.0) : 1.0)
+    limite = (params.key?(:limite) ? (params[:limite].to_f || 15.0) : 15.0)
     @profs = Teacher.where(where).order(nombre: :asc).offset(params.key?(:offset) ? params[:offset].to_i*limite : 0).limit(limite)
     @pags = (Teacher.where(where).count/limite).ceil
     @total = Teacher.where(where).count
