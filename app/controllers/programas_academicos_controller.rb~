@@ -8,9 +8,9 @@ class ProgramasAcademicosController < ApplicationController
 
   def admisiones
 		@convocatorias = Curso.where("programa = ? AND fecha_fin_conv >= ? AND fecha_inicio_conv <= ?", "Licenciatura", Date.current(), Date.current()).union(Curso.where("programa = ? AND fecha_fin_conv >= ? AND fecha_inicio_conv <= ?", "Maestría", Date.current(), Date.current())).union(Curso.where("programa = ? AND fecha_fin_conv >= ? AND fecha_inicio_conv <= ?", "Doctorado", Date.current(), Date.current())).union(Curso.where("programa = ? AND fecha_fin_conv >= ? AND fecha_inicio_conv <= ?", "Curso", Date.current(), Date.current())).order(:titulo)
-    #@licenciaturas = Curso.where(:programa => "Licenciatura").order(:titulo)
-    #@maestrias = Curso.where(:programa => "Maestría").order(:titulo)
-    #@doctorados = Curso.where(:programa => "Doctorado").order(:titulo)
+    @licenciaturas = Curso.where(:programa => "Licenciatura").order(:titulo)
+    @maestrias = Curso.where(:programa => "Maestría").order(:titulo)
+    @doctorados = Curso.where(:programa => "Doctorado").order(:titulo)
   end
 
   def programas
