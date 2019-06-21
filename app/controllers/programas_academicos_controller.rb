@@ -65,7 +65,7 @@ class ProgramasAcademicosController < ApplicationController
     @presenciales = Curso.where("programa = ? AND tipo_curso = ? and fecha_fin_conv >= ?", "Curso", "Presencial", Date.current())
     respond_to do |format|
       format.js
-      format.json { render json: {cursos: @presenciales, imgs: @electronicos.map{|c| c.imagen.url }} }
+      format.json { render json: {cursos: @presenciales, imgs: @presenciales.map{|c| c.foto.url }} }
     end
   end
 
@@ -73,7 +73,7 @@ class ProgramasAcademicosController < ApplicationController
     @electronicos = Curso.where("programa = ? AND tipo_curso = ?", "Curso", "En línea")
     respond_to do |format|
       format.js
-      format.json {render json: {cursos: @electronicos, imgs: @electronicos.map{|c| c.imagen.url }} }
+      format.json {render json: {cursos: @electronicos, imgs: @electronicos.map{|c| c.foto.url }} }
     end
   end
 
