@@ -14,6 +14,9 @@
 					<h3 id="c_r" class="titulo-chico vino"></h3>
 				</div>
 			</div>
+			<div class="col-xs-12 uk-margin-large-bottom">
+<p>Uno de los objetivos del Colmex es apoyar el trabajo de jóvenes investigadores por lo que en 2018 iniciamos un programa de becarios/as postdoctorales propio. Su propósito es becar a personas recién doctoradas con un perfil temático específico que se seleccionan mediante una convocatoria pública y de manera colegiada. Los becarios colaboran de tiempo completo en algún centro de estudios, seminario de las redes interdisciplinarias o un proyecto institucional. En este primer año, recibimos más de 50 candidaturas y seleccionamos a cinco personas para participar en el Programa.</p>
+			</div>
 			<div class="col-xs-12 acordeon-premios" id="busqueda">
 				<div class="uk-accordion" id="acordeon">
 					<% @becarios.each do |p| %>
@@ -41,7 +44,7 @@
 <p style="font-size:15px;margin-top:0;margin-bottom:0;text-align:left;"><span style="font-weight:700;"><%= params[:locale] == "es" ? "Sitio web:" : "Website" %> </span><a class="uk-link" href="<%= p.sitio %>" target="_blank"><%= p.sitio.present? ? (p.sitio[0..20] + (p.sitio.size >= 25 ? "..." : "")) : "" %></a></p>
 <% end %>
 <% if p.red.present? %>
-												<p style="font-size:15px;margin-top:5px;margin-bottom:0;text-align:left;"><a href="<%= 'https://www.twitter.com/'+ p.red[1..-1] %>" class="uk-link"><span><%= p.red %></span></a></p>
+												<p style="font-size:15px;margin-top:5px;margin-bottom:0;text-align:left;"><a href="<%= 'https://www.twitter.com/'+ p.red[1..-1] %>" class="uk-link"><%= image_tag 'twitter-vino.png' %> <span><%= p.red %></span></a></p>
 <% end %>
 											</div>
 										</div>

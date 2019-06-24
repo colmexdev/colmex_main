@@ -8,9 +8,9 @@ class ProgramasAcademicosController < ApplicationController
 
   def admisiones
 		@convocatorias = Curso.where("programa = ? AND fecha_fin_conv >= ? AND fecha_inicio_conv <= ?", "Licenciatura", Date.current(), Date.current()).union(Curso.where("programa = ? AND fecha_fin_conv >= ? AND fecha_inicio_conv <= ?", "Maestría", Date.current(), Date.current())).union(Curso.where("programa = ? AND fecha_fin_conv >= ? AND fecha_inicio_conv <= ?", "Doctorado", Date.current(), Date.current())).union(Curso.where("programa = ? AND fecha_fin_conv >= ? AND fecha_inicio_conv <= ?", "Curso", Date.current(), Date.current())).order(:titulo)
-    #@licenciaturas = Curso.where(:programa => "Licenciatura").order(:titulo)
-    #@maestrias = Curso.where(:programa => "Maestría").order(:titulo)
-    #@doctorados = Curso.where(:programa => "Doctorado").order(:titulo)
+    @licenciaturas = Curso.where(:programa => "Licenciatura").order(:titulo)
+    @maestrias = Curso.where(:programa => "Maestría").order(:titulo)
+    @doctorados = Curso.where(:programa => "Doctorado").order(:titulo)
   end
 
   def programas
@@ -65,6 +65,7 @@ class ProgramasAcademicosController < ApplicationController
     @presenciales = Curso.where("programa = ? AND tipo_curso = ? and fecha_fin_conv >= ?", "Curso", "Presencial", Date.current())
     respond_to do |format|
       format.js
+      format.json { render json: {cursos: @presenciales, imgs: @presenciales.map{|c| c.foto.url }} }
     end
   end
 
@@ -72,6 +73,7 @@ class ProgramasAcademicosController < ApplicationController
     @electronicos = Curso.where("programa = ? AND tipo_curso = ?", "Curso", "En línea")
     respond_to do |format|
       format.js
+      format.json {render json: {cursos: @electronicos, imgs: @electronicos.map{|c| c.foto.url }} }
     end
   end
 

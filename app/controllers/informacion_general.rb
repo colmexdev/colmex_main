@@ -2,6 +2,7 @@ class InformacionGeneralController < ApplicationController
 
   def becas_postdoctorales
     @becarios = Beneficiary.order(index: :asc)
+    @vigentes = Convocatoriap.where("fecha_fc is not null and fecha_fc >= ?",Date.today)
   end
 
   def becas
@@ -12,7 +13,14 @@ class InformacionGeneralController < ApplicationController
   end
 
   def convocatoriasp
-    @convs = Convocatoriap.order("")
+    @convs = Convocatoriap.where("fecha_fc is null or fecha_fc < ?",Date.today).order("")
+    respond_to do |format|
+      format.js
+    end
+  end
+
+  def convocatorias_vigentes
+    @convs = Convocatoriap.where("fecha_fc is not null and fecha_fc >= ?",Date.today)
     respond_to do |format|
       format.js
     end
@@ -204,7 +212,7 @@ class InformacionGeneralController < ApplicationController
 
   def directorio_academico_drive
     where = (params.key?(:conds) ? build_query(params[:conds],params[:locale]) : "")
-    limite = params[:limite] || 15.0
+    limite = (params.key?(:limite) ? (params[:limite].to_f || 15.0) : 15.0)
     @profs = Teacher.where(where).order(nombre: :asc).offset(params.key?(:offset) ? params[:offset].to_i*limite : 0).limit(limite)
     @pags = (Teacher.where(where).count/limite).ceil
     @total = Teacher.where(where).count

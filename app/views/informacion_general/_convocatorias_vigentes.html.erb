@@ -1,0 +1,52 @@
+		<div class="row">
+			<div class="col-xs-12" style="padding-left:0;">
+				<span class="titulo-grande" style="border:none;"><%= params[:locale] == "es" ? "Convocatorias vigentes" : "Convocatorias vigentes" %></span><br>
+			</div>
+		</div>
+
+		<div class="row">
+			<script type="text/javascript" src="../js/accordion.js"></script>
+			<div class="col-xs-12" style="text-align:left;padding-top:20px;" id="filete-top">
+				<div style="float:left;display:inline-block;height:100%;text-align:left;width:50%;">
+					<h3 id="c_l" class="titulo-chico vino"></h3>
+				</div>
+				<div style="float:right;display:inline-block;height:100%;text-align:right;width:50%;">
+					<h3 id="c_r" class="titulo-chico vino"></h3>
+				</div>
+			</div>
+			<div class="col-xs-12 acordeon-premios" id="busqueda">
+				<div class="uk-accordion" id="acordeon" style="width: 100%">
+					<% @convs.each do |p| %>
+								<div class="uk-grid uk-grid-medium uk-margin-large-bottom">
+									<div class="uk-width-large-3-4 uk-width-medium-3-4 uk-width-small-3-4 uk-text-center">
+										<img src="<%= p.imagen.url %>" class="uk-border-rounded" alt="Convocatoria">
+									</div>
+									<div class="uk-width-large-1-4 uk-width-medium-1-4 uk-width-small-1-4 uk-text-left uk-text-break">
+										<p style="text-align:left"><strong class="vino">Inicio de convocatoria:</strong> <%= l(p.fecha_ic, format: :mes_anio) %></p>
+										<p style="text-align:left"><strong class="vino">Fin de convocatoria:</strong> <%= l(p.fecha_fc, format: :mes_anio) %></p>
+							<% if p.liga.present? %>
+								<a href="<%= p.liga %>" target="_blank" class="ver-mas uk-margin-large-bottom uk-button-small" style="font-size:11px !important"><%= t('programas.info') %></a>
+							<% end %>
+									</div>
+								</div>
+					<% end %>
+				</div>
+
+			</div>
+		</div>
+
+<% if false %>
+		<div id="separadores" style="text-align:center;margin:10px auto;">
+<% if params.key?(:offset) %>
+			<% @pags.times do |p| %>
+				<% if p == 0 %>
+					<div class="numeros" style="margin:0 2px;display:inline-block;cursor:pointer;" id="sep-ant"><a class="numeros" href="<%= directorio_path(params: {locale: params[:locale], offset: 0}) %>" data-remote="true"><</a></div>
+				<% end %>
+				<div class="numeros" style="margin:0 5px;display:inline-block;cursor:pointer;"><a class="numeros" style="<%= p == 0 ? 'color:rgb(153, 51, 102)' : '' %>" href="<%= directorio_path(params: {locale: params[:locale], offset: p}) %>" data-remote="true"><%= p+1 %></a></div>	
+				<% if p == @pags - 1 %>
+					<div class="numeros" style="margin:0 2px;display:inline-block;cursor:pointer;" id="sep-nxt"><a class="numeros" href="<%= directorio_path(params: {locale: params[:locale], offset: 1}) %>" data-remote="true">></a></div>
+				<% end %>
+			<% end %>
+<% end %>
+		</div>
+<% end %>

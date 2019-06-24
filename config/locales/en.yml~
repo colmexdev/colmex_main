@@ -107,7 +107,7 @@ en:
       correo: "E-mail"
       tel: "Phone number"
       ext: "Extension"
-      encabezado_pres: "Investigators related to Presidency (since January 1st, 2017)"
+      encabezado_pres: "Investigators related to Presidency"
       sub_ce: "Researchers related to Academic Centers"
       sub_inv: "Investigators on specific projects"
     documentacion:

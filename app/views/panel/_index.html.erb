@@ -29,19 +29,15 @@
         <td class="ind-cell"><%= raw(s[f.to_s]) %></td>
 				<% end %>
 				<% @imgs.keys.each do |f| %>
-					<% if f.to_s == "foto" %>
-						<td class="ind-cell"><%= image_tag(s.foto.url) %></td>
-					<% elsif f.to_s == "imagen" %>
-						<td class="ind-cell"><%= image_tag(s.imagen.url) %></td>
-					<% elsif f.to_s == "icono" %>
-						<td class="ind-cell"><%= image_tag(s.icono.url) %></td>	
-					<% elsif f.to_s == "badge" %>
-						<td class="ind-cell"><%= image_tag(s.badge.url) %></td>	
-					<% elsif f.to_s == "badge_eng" %>
-						<td class="ind-cell"><%= image_tag(s.badge_eng.url) %></td>	
-					<% elsif f.to_s == "archivo" %>
-						<td class="ind-cell"><%= link_to image_tag("documento.png"), s.archivo.url, target: "_blank" %></td>
+					<td class="ind-cell left-align">
+					<% if s.public_send(f).present? %>
+						<% if !s.public_send(f).content_type.include?("image") %>
+							<object style="width:100%" type="application/pdf" data="<%= s.public_send(f).url %>"><embed style="width:100%" src="<%= s.public_send(f).url %>" type="application/pdf"></object>
+						<% else %>
+							<%= image_tag s.public_send(f).url %>
+						<% end %>
 					<% end %>
+					</td>
 				<% end %>
 				<td class="ind-cell-img" style="width:130px;">
 					<a class="link-img-panel" onclick="hideLink(event,'#index-panel','<%= panel_mostrar_path(:set => params[:set], :id => s.id) %>')"><span class="clickable-g glyphicon glyphicon-eye-open"></span></a>

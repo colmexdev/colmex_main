@@ -327,7 +327,7 @@ class PanelController < ApplicationController
         trix: []
       }, "Convocatoria de beca postdoctoral": {
         model: Convocatoriap,
-        fields: {titulo: "Título", liga: "Liga"},
+        fields: {titulo: "Título", liga: "Liga", fecha_ic: "Fecha de inicio de convocatoria", fecha_fc: "Fecha final de convocatoria"},
         imgs: {imagen: "Imagen", documento: "Documento"},
         trix: []
       }, "Usuarios gestores": {

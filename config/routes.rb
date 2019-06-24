@@ -38,6 +38,9 @@ Rails.application.routes.draw do
   patch 'panel' => 'panel#actualizar'
 
   get '/' => 'principal#principal', :as => :main_es
+  match "/404", :to => "errors#not_found", :via => :all
+  match "/500", :to => "errors#internal_server_error", :via => :all
+  get "/500_e", :to => "errors#internal_server_error"
 
   get '/catalogo_eventos' => 'principal#get_eventos', :as => :catalogo_eventos
   get '/cinta_eventos' => 'principal#cinta_eventos', :as => :cinta_eventos
@@ -99,6 +102,7 @@ Rails.application.routes.draw do
     get 'dir-acad-test' => 'informacion_general#directorio_academico', :as => :dir
 
     get 'becas-postdoctorales' => 'informacion_general#becas_postdoctorales', :as => :postdocs
+    get 'convocatorias-vigentes' => 'informacion_general#convocatorias_vigentes', :as => :pd_vig
     get 'becarios' => 'informacion_general#becas', :as => :becarios
     get 'convocatorias-pasadas' => 'informacion_general#convocatoriasp', :as => :conv_pd
 
@@ -153,7 +157,7 @@ Rails.application.routes.draw do
 
   end
  
-  get '/:locale' => 'principal#principal', :as => :main
+  get '/:locale' => 'principal#principal', :as => :main, :locale => /(en)|(es)/
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
