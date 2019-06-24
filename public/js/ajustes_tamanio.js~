@@ -398,5 +398,3 @@ function agregarVisible(desc){
 		desc[i]["index"] = i;
 	}
 }
-
-

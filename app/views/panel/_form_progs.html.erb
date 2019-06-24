@@ -28,6 +28,10 @@
     <%= f.trix_editor :traduccion_desc %>
   </div>
   <div class="field">
+    <%= f.label :centro, "Centro de Estudios" %><br>
+    <%= f.select(:centro, [["CEAA","CEAA"],["CEDUA","CEDUA"],["CEE","CEE"],["CEH","CEH"],["CEI","CEI"],["CELL","CELL"],["CES","CES"]], selected: (@obj.centro || "CEAA")) %>
+  </div>
+  <div class="field">
     <%= f.label :fecha_inicio_conv, "Fecha de inicio de convocatoria" %><br>
     <%= f.text_field :fecha_inicio_conv, {"data-uk-datepicker" => "{format: 'YYYY-MM-DD'}"} %>
   </div>

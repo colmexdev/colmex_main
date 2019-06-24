@@ -64,8 +64,8 @@
     <%= f.trix_editor :imparte %>
   </div>
   <div class="field">
-    <%= f.label :tags, "Etiquetas" %><br>
-    <%= f.trix_editor :tags %>
+    <%= f.label :tags, "Etiquetas (separadas por coma)" %><br>
+    <%= f.text_area :tags %>
   </div>
   <div class="field" style="height:250px;">
 		<div class="photo-upload">
