@@ -69,7 +69,7 @@ function filteredParams(set){
 	else if(set == "Directorio de Autoridades") return [["seccion","=",0]];
 	else if(set == "Documentos varios") return [["tipo","=",0]];
 	else if(set == "Cátedras y seminarios") return [["tipo","=",0]];
-	else if(set == "Directorio académico") return [["adscripcion","=",0]];
+	else if(set == "Directorio académico") return [["centro","=",0]];
 	else return [];
 }
 
