@@ -316,8 +316,8 @@ class PanelController < ApplicationController
         imgs: {},
         trix: [:cita, :cita_eng, :autor]
       }, "Directorio académico": {
-        model: Academico,
-        fields: {nombre: "Nombre",inicial: "Inicial",correo: "Correo electrónico",adscripcion: "Centro de Estudios",lineas_investigacion: "Líneas de investigación",pagina: "Sitio personal"},
+        model: Teacher,
+        fields: {nombre: "Nombre",correo: "Correo electrónico",centro: "Centro de Estudios",viaf: "VIAF",orcid: "ORCID",isni: "ISNI",cvu: "CVU",temas_esp: "Temas de investigación (español)",temas_ing: "Temas de investigación (inglés)",sitio: "Sitio personal",extension: "Extensión telefónica"},
         imgs: {foto: "Foto"},
         trix: []
       }, "Becarios postdoctorales": {
@@ -390,7 +390,7 @@ class PanelController < ApplicationController
     elsif params[:set] == "Frases en página principal"
       params.require(:frase).permit(:cita, :autor, :cita_eng)
     elsif params[:set] == "Directorio académico"
-      params.require(:academico).permit(:nombre, :adscripcion, :lineas_investigacion, :correo, :pagina, :foto, :inicial)
+      params.require(:teacher).permit(:nombre, :centro, :viaf, :orcid, :isni, :cvu, :sitio, :extension, :temas_esp, :temas_ing, :correo, :foto )
     elsif params[:set] == "Becarios postdoctorales"
       params.require(:beneficiary).permit(:nombre, :proyecto, :centro, :correo, :extension, :sitio, :temas, :index, :foto, :red)
     elsif params[:set] == "Convocatoria de beca postdoctoral"
