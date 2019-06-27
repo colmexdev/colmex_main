@@ -1,5 +1,4 @@
 class Teacher < ActiveRecord::Base
-  
   has_attached_file :foto, :styles => {},
                     :url => "/assets/academicos/:style/:basename_:id.:extension",
                     :path => ":rails_root/public/assets/academicos/:style/:basename_:id.:extension",
