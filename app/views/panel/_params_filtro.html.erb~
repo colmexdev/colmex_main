@@ -11,7 +11,7 @@
 <% elsif params[:set] == "Cátedras y seminarios" %>
 	<%= select_tag "tipo", options_for_select(Catedra.select(:tipo).distinct.pluck(:tipo).map{|t| [t,t]}, params[:tipo] || ""), include_blank: "Todos" %>
 <% elsif params[:set] == "Directorio académico" %>
-	<%= select_tag "adscripcion", options_for_select(Academico.select(:adscripcion).distinct.pluck(:adscripcion).map{|a| [a,a]},params[:adscripcion] || ""), include_blank: "Todos" %>
+	<%= select_tag "Centro", options_for_select(Teacher.select(:centro).distinct.pluck(:adscripcion).map{|a| [a,a]},params[:centro] || ""), include_blank: "Todos" %>
 <% end %>
 
 <script type="text/javascript">
