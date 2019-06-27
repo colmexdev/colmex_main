@@ -267,7 +267,7 @@ class PanelController < ApplicationController
         trix: [:nombre, :semblanza, :semblanza_eng]
       }, "Programas docentes": {
         model: Curso,
-        fields: {titulo: "Título",descripcion: "Descripción",fecha_inicio_conv: "Inicio de convocatoria",fecha_fin_conv: "Fin de convocatoria",fecha_inicio_clases: "Inicio de clases",fecha_fin_clases: "Fin de clases",liga: "Link",programa: "Programa docente",tipo_curso: "Tipo de curso",imparte: "Impartido por",traduccion_tit: "Título (Inglés)", traduccion_desc: "Descripción (Inglés)"},
+        fields: {titulo: "Título",descripcion: "Descripción", centro: "Centro de Estudios", fecha_inicio_conv: "Inicio de convocatoria",fecha_fin_conv: "Fin de convocatoria",fecha_inicio_clases: "Inicio de clases",fecha_fin_clases: "Fin de clases",liga: "Link",programa: "Programa docente",tipo_curso: "Tipo de curso",imparte: "Impartido por",traduccion_tit: "Título (Inglés)", traduccion_desc: "Descripción (Inglés)"},
         imgs: {foto: "Foto"},
         trix: [:titulo, :traduccion_tit, :descripcion, :imparte, :traduccion_desc]
       }, "Directorio de Autoridades": {
@@ -370,7 +370,7 @@ class PanelController < ApplicationController
     if params[:set] == "Profesores eméritos"
       params.require(:emerito).permit(:nombre, :fecha_anexion, :centro, :semblanza, :foto, :semblanza_eng)
     elsif params[:set] == "Programas docentes"
-      params.require(:curso).permit(:titulo, :descripcion, :fecha_inicio_conv, :fecha_fin_conv, :fecha_inicio_clases, :liga, :programa, :tipo_curso, :traduccion_tit, :traduccion_desc, :tags, :fecha_fin_clases, :tipo_curso_linea, :foto, :imparte)
+      params.require(:curso).permit(:titulo, :descripcion, :fecha_inicio_conv, :fecha_fin_conv, :fecha_inicio_clases, :liga, :programa, :tipo_curso, :traduccion_tit, :traduccion_desc, :tags, :fecha_fin_clases, :tipo_curso_linea, :foto, :imparte, :centro)
     elsif params[:set] == "Directorio de Autoridades"
       params.require(:personal).permit(:nombre, :seccion, :correo, :telefono, :extension, :cargo, :depto, :foto, :cargo_eng, :depto_eng)
     elsif params[:set] == "Categorías de Premios"

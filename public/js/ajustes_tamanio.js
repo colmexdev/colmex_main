@@ -26,29 +26,6 @@ barra_render = false;
 $(document).on("ready", function(){
 	UIkit.init();
 	try{
-		configTrix();
-		addEventListener("trix-initialize", function(event) {
-			var histElement = event.target.toolbarElement.querySelector("[data-trix-button-group='history-tools']");
-			var groupElement = event.target.toolbarElement.querySelector("[data-trix-button-group='text-tools']");
-			var blockElement = event.target.toolbarElement.querySelector("[data-trix-button-group='block-tools']");
-			histElement.style.display = "none";
-			event.target.toolbarElement.querySelector("[data-trix-attribute='code']").style.display = "none";
-			event.target.toolbarElement.querySelector("[data-trix-attribute='quote']").style.display = "none";
-			extendTrix(groupElement,blockElement);
-			clearPars(event.srcElement);
-			if(window.location.href.indexOf("calendario-escolar") != -1){
-				event.target.toolbarElement.querySelector("[data-trix-attribute='paragraph']").style.display = "none";
-				event.target.toolbarElement.querySelector("[data-trix-attribute='number']").style.display = "none";
-				event.target.toolbarElement.querySelector("[data-trix-attribute='bullet']").style.display = "none";
-				event.target.toolbarElement.querySelector("[data-trix-action='decreaseNestingLevel']").style.display = "none";
-				event.target.toolbarElement.querySelector("[data-trix-action='increaseNestingLevel']").style.display = "none";
-			}
-		});
-	}
-	catch(err){
-		console.log(err);
-	}
-	try{
 		if(gon.ev_tiny == ""){
 			$("#div_eventos").css("height","0");
 		}
