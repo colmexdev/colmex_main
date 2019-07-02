@@ -106,8 +106,8 @@ $(window).on("resize",function(){
 
 	try{
 		//escalarBanner("div-banner-pres",230,900);
+		escalarSlider(recabarAnchos());
 		setTimeout(function(){
-			escalarSlider(recabarAnchos());
 			partirDescubres();
 			margenAuto();}, 850);
 		ajustarImagenes();
