@@ -162,7 +162,7 @@ function reajustarBadges(arr){
 	for( var i = 0; i < document.querySelectorAll(".ghost-slider").length; i++){
 		var imagen = new Image();
 		imagen.onload = function(){
-			var ancho = Math.min($("#div_slider").width(),this.width);
+			var ancho = Math.min(1341,this.width);
 			var ancho_nuevo = ($("#div_slider").width() * ancho) / 1341;
 			document.querySelector("img[src='" + this.src.replace(window.location.origin,'') + "']").style.maxWidth = ancho_nuevo + "px";
 		};
