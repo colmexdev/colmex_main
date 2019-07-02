@@ -158,7 +158,8 @@ function escalarBanner(el,mh,mw){
 
 function reajustarBadges(arr){
 	for( var i = 0; i < document.querySelector(".ghost-slider").length; i++){
-		if(document.querySelector("#badge-" + i))
+		if(document.querySelector("#badge-" + i).classList.contains("cc"))
+			continue;
 		var ancho_nuevo = ($("#div_slider").width() * arr[i]) / 1341;
 		$( "#badge-" + i ).css({"max-width": ancho_nuevo + "px"/*, "max-width": arr[i]+"px" */});
 	}
