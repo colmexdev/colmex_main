@@ -106,7 +106,7 @@ $(window).on("resize",function(){
 
 	try{
 		//escalarBanner("div-banner-pres",230,900);
-		//escalarSlider(recabarAnchos());
+		escalarSlider(recabarAnchos());
 		setTimeout(function(){
 			partirDescubres();
 			margenAuto();}, 850);
