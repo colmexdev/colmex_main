@@ -167,7 +167,7 @@ function reajustarBadges(arr){
 		var imagen = new Image();
 		imagen.onload = function(){
 			ancho = this.width;
-			anchos.push(this.src,this.width)
+			anchos.push(this.width)
 		};
 		imagen.src = document.querySelector("#badge-"+i).getAttribute("src");
 	}
