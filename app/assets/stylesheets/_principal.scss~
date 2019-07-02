@@ -849,7 +849,7 @@ ul.ul-nav { display: table;
 #div_slider{
 	text-align: center;
 	max-height: 570px;
-	min-height: 240px;
+	/*min-height: 240px;*/
 
 	#myCarousel{
 	    	position: relative;
@@ -892,7 +892,7 @@ ul.ul-nav { display: table;
 					width: 100%;
 					text-align: center;
 					@include centrado;
-					min-height:240px;
+					/*min-height:240px;*/
 				}
 			
 				.ghost-slider{
@@ -931,11 +931,22 @@ ul.ul-nav { display: table;
 	}
 }
 
-	.si { top: 35px; left: 100px; }
+	.si { top: 0; left: 0; }
+	.sc { top: 0; left: 50%; transform: translateX(-50%); }
+	.sd { top: 0; right: 0; }
+	.ci { top: 50%; transform: translateY(-50%); right: 0; }
+	.cc	{ @include centrado; }
+	.cd { top: 50%; transform: translateY(-50%); left: 0; }
+	.ii { bottom: 0; left: 0; }
+	.ic { bottom: 0; left: 50%; transform: translateX(-50%); }
+	.id { bottom: 0; right: 0; }
+	.si, .sc, .sd, .ci, .cc, .cd, .ii, .ic, .id { margin: 4%; }
+
+/*	.si { top: 35px; left: 100px; }
 	.sd { top: 35px; right: 100px; }
 	.id { bottom: 50px; right: 100px; }
 	.ii { bottom: 50px; left: 100px; }
-	.cc	{ @include centrado; }
+	.cc	{ @include centrado; }*/
 
 //Clases que afectan la sección de eventos
 #div_eventos{
