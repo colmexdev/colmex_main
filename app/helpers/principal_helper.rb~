@@ -22,7 +22,7 @@ module PrincipalHelper
     if sliders == 0
       return bloque_html, bloque_opt_html, bloque_tiny_html
     end
-    slides = (sliders.each.length / 4).ceil
+    slides = (sliders.each.length.to_f / 4).ceil
     j = 0
     primer_item = true;
     if sliders.each.length % 4 != 0
