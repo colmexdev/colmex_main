@@ -159,7 +159,7 @@ function escalarBanner(el,mh,mw){
 function reajustarBadges(arr){
 	for( var i = 0; i < gon.cant_sliders; i++){
 		var ancho_nuevo = ($("#div_slider").width() * arr[i]) / 1341;
-		/*$( "#badge-" + i ).css({"width": ancho_nuevo + "px", "max-width": arr[i]+"px" });*/
+		$( "#badge-" + i ).css({"width": ancho_nuevo + "px"/*, "max-width": arr[i]+"px" */});
 	}
 }
 
