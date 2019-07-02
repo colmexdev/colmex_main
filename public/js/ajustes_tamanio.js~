@@ -160,8 +160,14 @@ function reajustarBadges(arr){
 	for( var i = 0; i < document.querySelectorAll(".ghost-slider").length; i++){
 		if(document.querySelector("#badge-" + i).classList.contains("cc"))
 			continue;
-		var ancho_nuevo = ($("#div_slider").width() * arr[i]) / 1341;
-		$( "#badge-" + i ).css({"max-width": ancho_nuevo + "px"/*, "max-width": arr[i]+"px" */});
+		var ancho;
+		var imagen = new Image();
+		imagen.onload = function(){
+			ancho = this.width;
+		};
+		imagen.src = document.querySelector("#badge-"+i).getAttribute("src");
+		var ancho_nuevo = ($("#div_slider").width() * /*arr[i]*/ancho) / 1341;
+		document.querySelector( "#badge-" + i ).style.maxWidth = ancho_nuevo + "px";/*({"max-width": ancho_nuevo + "px", "max-width": arr[i]+"px" });*/
 	}
 	console.log(arr);
 }
