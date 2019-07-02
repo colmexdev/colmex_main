@@ -160,7 +160,7 @@ function reajustarBadges(arr){
 	for( var i = 0; i < document.querySelector(".ghost-slider").length; i++){
 		if(document.querySelector("#badge-" + i))
 		var ancho_nuevo = ($("#div_slider").width() * arr[i]) / 1341;
-		$( "#badge-" + i ).css({"mx-width": ancho_nuevo + "px"/*, "max-width": arr[i]+"px" */});
+		$( "#badge-" + i ).css({"max-width": ancho_nuevo + "px"/*, "max-width": arr[i]+"px" */});
 	}
 }
 
