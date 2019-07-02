@@ -130,7 +130,7 @@ $(window).on("resize",function(){
 
 function recabarAnchos(){
 	var arr_w = [];
-	for( var i = 0; i < document.querySelectorAll(".ghost-slider").length; i++){
+	for( var i = 0; i < document.querySelectorAll(".ghost-slider img").length; i++){
 		var image = new Image();
 		image.onload = function(){
 			var ancho_img = this.width;
