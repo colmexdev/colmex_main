@@ -159,24 +159,25 @@ function escalarBanner(el,mh,mw){
 }
 
 function reajustarBadges(arr){
-	var anchos = [];
+	var anchos_img = [];
 	for( var i = 0; i < document.querySelectorAll(".ghost-slider").length; i++){
 		//if(document.querySelector("#badge-" + i).classList.contains("cc"))
 		//	continue;
-		var ancho;
+		var ancho = 0;
 		var imagen = new Image();
 		imagen.onload = function(){
 			ancho = this.width;
-			anchos.push(this.width)
+			anchos_img.push(this.width)
 		};
 		imagen.src = document.querySelector("#badge-"+i).getAttribute("src");
+		//document.querySelector( "#badge-" + i ).style.maxWidth = ancho_nuevo + "px";
 	}
-	console.log(anchos);
+	console.log(anchos_img.length);
 	for(var i = 0; i < anchos.length; i++){
-		var ancho_nuevo = ($("#div_slider").width() * /*arr[i]*/anchos[i]) / 1341;
-		console.log(imagen.src);
+		var ancho_nuevo = ($("#div_slider").width() * /*arr[i]*/anchos_img[i]) / 1341;
+	//	console.log(imagen.src);
 		console.log(ancho_nuevo);
-		document.querySelector( "#badge-" + i ).style.maxWidth = ancho_nuevo + "px";/*({"max-width": ancho_nuevo + "px", "max-width": arr[i]+"px" });*/
+	//	document.querySelector( "#badge-" + i ).style.maxWidth = ancho_nuevo + "px";/*({"max-width": ancho_nuevo + "px", "max-width": arr[i]+"px" });*/
 	}
 }
 
