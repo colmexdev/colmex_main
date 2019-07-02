@@ -168,10 +168,11 @@ function reajustarBadges(arr){
 			ancho = this.width;
 		};
 		imagen.src = document.querySelector("#badge-"+i).getAttribute("src");
+		console.log(imagen.src);
+		console.log(imagen.width);
 		var ancho_nuevo = ($("#div_slider").width() * /*arr[i]*/ancho) / 1341;
 		document.querySelector( "#badge-" + i ).style.maxWidth = ancho_nuevo + "px";/*({"max-width": ancho_nuevo + "px", "max-width": arr[i]+"px" });*/
 	}
-	console.log("Algo");
 }
 
 function llenaConfirmacion(valor){

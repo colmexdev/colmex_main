@@ -171,7 +171,7 @@ function reajustarBadges(arr){
 		var ancho_nuevo = ($("#div_slider").width() * /*arr[i]*/ancho) / 1341;
 		document.querySelector( "#badge-" + i ).style.maxWidth = ancho_nuevo + "px";/*({"max-width": ancho_nuevo + "px", "max-width": arr[i]+"px" });*/
 	}
-	console.log(arr);
+	console.log("Algo");
 }
 
 function llenaConfirmacion(valor){
