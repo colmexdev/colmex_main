@@ -106,7 +106,7 @@ $(window).on("resize",function(){
 
 	try{
 		//escalarBanner("div-banner-pres",230,900);
-		escalarSlider(recabarAnchos());
+		//escalarSlider(recabarAnchos());
 		setTimeout(function(){
 			partirDescubres();
 			margenAuto();}, 850);
@@ -138,8 +138,8 @@ function recabarAnchos(){
 		}
 		image.src = $("#badge-" + i).attr("src");
 	}
-	setTimeout(function(){
-		reajustarBadges(arr_w);}, 150);
+	//setTimeout(function(){
+	//	reajustarBadges(arr_w);}, 150);
 	return arr_w;
 }
 
