@@ -130,7 +130,7 @@ $(window).on("resize",function(){
 
 function recabarAnchos(){
 	var arr_w = [];
-	for( var i = 0; i < document.querySelector(".ghost-slider").length; i++){
+	for( var i = 0; i < document.querySelectorAll(".ghost-slider").length; i++){
 		var image = new Image();
 		image.onload = function(){
 			var ancho_img = this.width;
@@ -157,13 +157,13 @@ function escalarBanner(el,mh,mw){
 }
 
 function reajustarBadges(arr){
-	for( var i = 0; i < document.querySelector(".ghost-slider").length; i++){
+	for( var i = 0; i < document.querySelectorAll(".ghost-slider").length; i++){
 		if(document.querySelector("#badge-" + i).classList.contains("cc"))
 			continue;
 		var ancho_nuevo = ($("#div_slider").width() * arr[i]) / 1341;
 		$( "#badge-" + i ).css({"max-width": ancho_nuevo + "px"/*, "max-width": arr[i]+"px" */});
 	}
-	console.log("Algo");
+	console.log(arr);
 }
 
 function llenaConfirmacion(valor){
