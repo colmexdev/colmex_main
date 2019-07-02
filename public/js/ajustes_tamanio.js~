@@ -138,8 +138,8 @@ function recabarAnchos(){
 		}
 		image.src = $("#badge-" + i).attr("src");
 	}
-	//setTimeout(function(){
-	//	reajustarBadges(arr_w);}, 150);
+	setTimeout(function(){
+		reajustarBadges(arr_w);}, 150);
 	return arr_w;
 }
 
@@ -148,7 +148,7 @@ function escalarSlider(arr_a){
 	var alto_slide = ancho_slide*(17/40);
 	$('#div_slider').css({'height':alto_slide+'px'});
 	/*$('.ghost-slider').css("height",alto_slide+"px");*/
-	reajustarBadges(arr_a);
+	//reajustarBadges(arr_a);
 }
 
 function escalarBanner(el,mh,mw){
