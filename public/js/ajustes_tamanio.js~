@@ -136,10 +136,10 @@ function recabarAnchos(){
 			var ancho_img = this.width;
 			arr_w.push(ancho_img);
 		}
-		image.src = $( "#badge-" + i).attr("src");
+		image.src = $("#badge-" + i).attr("src");
 	}
-	setTimeout(function(){
-		reajustarBadges(arr_w);}, 150);
+	//setTimeout(function(){
+	//	reajustarBadges(arr_w);}, 150);
 	return arr_w;
 }
 
