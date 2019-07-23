@@ -102,6 +102,7 @@ Rails.application.routes.draw do
     get 'dir-acad-test' => 'informacion_general#directorio_academico', :as => :dir
 
     get 'becas-postdoctorales' => 'informacion_general#becas_postdoctorales', :as => :postdocs
+    get 'convocatorias-vigentes' => 'informacion_general#convocatorias_vigentes', :as => :pd_vig
     get 'becarios' => 'informacion_general#becas', :as => :becarios
     get 'convocatorias-pasadas' => 'informacion_general#convocatoriasp', :as => :conv_pd
 

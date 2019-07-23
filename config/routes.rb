@@ -96,7 +96,7 @@ Rails.application.routes.draw do
     get 'comunidad' => 'informacion_general#comunidad', :as => :otorgadoscomunidad
     get 'colegio' => 'informacion_general#colegio', :as => :otorgadoscolegio
     get 'directorio-academico' => 'informacion_general#directorio_academico_drive', :as => :directorio
-    get 'marco-normativo' => 'informacion_general#marco_normativo', :as => :marco
+    #get 'marco-normativo' => 'informacion_general#marco_normativo', :as => :marco
     get 'presenciales' => 'programas_academicos#presenciales', :as => :presenciales
     get 'electronicos' => 'programas_academicos#electronicos', :as => :electronicos
     get 'dir-acad-test' => 'informacion_general#directorio_academico', :as => :dir
@@ -143,7 +143,7 @@ Rails.application.routes.draw do
       get 'admisiones' => "programas_academicos#admisiones", :as => :admisiones_edit
       get 'convocatorias' => 'programas_academicos#convocatorias', :as => :convocatorias_edit
       get 'proceso' => 'programas_academicos#proceso', :as => :proceso_edit
-      get 'marco-normativo' => 'informacion_general#marco_normativo', :as => :marco_edit
+      #get 'marco-normativo' => 'informacion_general#marco_normativo', :as => :marco_edit
       get 'autoridades' => 'informacion_general#autoridades', :as => :autoridades_edit
       get 'operativas' => 'informacion_general#operativas', :as => :operativas_edit
       get 'apoyo' => 'informacion_general#unidades_de_apoyo', :as => :unidades_de_apoyo_edit
