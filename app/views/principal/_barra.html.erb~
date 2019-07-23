@@ -14,9 +14,9 @@
 						<!-- Logotipo del COLMEX miniatura en barra con scroll -->
 						<li class="nav_opciones" id="logo-main"><a href="<%= root_path %>"><%= image_tag("colmex.png") %></a></li>
 						<!-- Liga a correo institucional -->
-						<li class="nav_opciones mail"><a href="http://portal.office.com" target="_blank"><%= image_tag("mail.png") %><span class="borrable"><%= t('navbar.mail') %></span></a></li>
+						<li class="nav_opciones mail"><a href="https://portal.office.com" target="_blank"><%= image_tag("mail.png") %><span class="borrable"><%= t('navbar.mail') %></span></a></li>
 						<!-- Liga a Intranet COLMEX -->
-						<li class="nav_opciones intranet"><a href="http://intranet.colmex.mx/" target="_blank"><%= image_tag("intranet.png") %><span class="borrable"><%= t('navbar.intranet') %></span></a></li>
+						<li class="nav_opciones intranet"><a href="https://intranet.colmex.mx/" target="_blank"><%= image_tag("intranet.png") %><span class="borrable"><%= t('navbar.intranet') %></span></a></li>
 						<!-- Selector de idioma en barra con scroll -->
 						<li class="nav_opciones idioma" id="idioma-small-scroll"><%= link_to (I18n.locale == :es ? "English" : "Español"), {:controller => controller_name, :action => action_name, :locale => (I18n.locale == :en ? "es" : "en" ), :condicion => (params[:condicion] if action_name == "resultados_busqueda")}, :class => "inactivo" , :id => 'idioma_en' %></li>
 						<!-- Toggle button (hamburguesa) para desplegar menú lateral -->
@@ -35,7 +35,7 @@
 									<li><a href="<%= historia_path %>"><%= t('botones.b1.opciones.op3') %></a></li>
 									<li><a href="<%= autoridades_path %>"><%= t('botones.b1.opciones.op2') %></a></li>
 									<li><a href="<%= directorio_path %>"><%= I18n.locale == :en ? "Academic Staff" : "Directorio académico" %></a></li>
-									<li><a href="http://directorio.colmex.mx/" target="_blank"><%= t('botones.b1.opciones.op1') %></a></li>
+									<li><a href="https://directorio.colmex.mx/" target="_blank"><%= t('botones.b1.opciones.op1') %></a></li>
 									<li><a href="<%= documentacion_path %>"><%= t('botones.b1.opciones.op4') %></a></li>
 									<li><a href="<%= profesores_emeritos_path %>"><%= t('botones.b1.opciones.op5') %></a></li>
 									<!-- Becas postdoctorales sólo se muestra en español -->
@@ -43,7 +43,7 @@
 										<li><a href="<%= postdocs_path %>"><%= 'Becas postdoctorales' %></a></li>
 									<% end %>
 									<li><a href="<%= premios_path %>"><%= t('botones.b1.opciones.op6') %></a></li>
-									<li><a href="http://agenda.colmex.mx/Convocatorias" target="_blank"><%= t('botones.b3.opciones.op8') %></a></li>
+									<li><a href="https://agenda.colmex.mx/Convocatorias" target="_blank"><%= t('botones.b3.opciones.op8') %></a></li>
 									<li><a href="<%= principios_path %>" class="sublink"><%= t('footer.liga1') %></a></li>
 									<!-- Licitaciones, Relación de bienes y Transparencia sólo aparecen en español -->
 									<% if I18n.locale != :en %>
@@ -57,13 +57,13 @@
 							<li class="dropdown" id="dropdown2">
 								<a href="<%= I18n.locale == :en ? centros_de_estudio_path(locale: "en") : "" %>" class="dropdown-toggle" data-hover="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span><%= t('botones.b2.texto') %></span></a>
 								<ul class="dropdown-menu">
-									<li><a href="http://ceaa.colmex.mx/" target="_blank"><%= t('botones.b2.opciones.op1') %></a></li>
-									<li><a href="http://cedua.colmex.mx/" target="_blank"><%= t('botones.b2.opciones.op2') %></a></li>
-									<li><a href="http://cee.colmex.mx/" target="_blank"><%= t('botones.b2.opciones.op3') %></a></li>
-									<li><a href="http://ceh.colmex.mx/" target="_blank"><%= t('botones.b2.opciones.op4') %></a></li>
-									<li><a href="http://cei.colmex.mx/" target="_blank"><%= t('botones.b2.opciones.op5') %></a></li>
-									<li><a href="http://cell.colmex.mx/" target="_blank"><%= t('botones.b2.opciones.op6') %></a></li>
-									<li><a href="http://ces.colmex.mx/" target="_blank"><%= t('botones.b2.opciones.op7') %></a></li>
+									<li><a href="https://ceaa.colmex.mx/" target="_blank"><%= t('botones.b2.opciones.op1') %></a></li>
+									<li><a href="https://cedua.colmex.mx/" target="_blank"><%= t('botones.b2.opciones.op2') %></a></li>
+									<li><a href="https://cee.colmex.mx/" target="_blank"><%= t('botones.b2.opciones.op3') %></a></li>
+									<li><a href="https://ceh.colmex.mx/" target="_blank"><%= t('botones.b2.opciones.op4') %></a></li>
+									<li><a href="https://cei.colmex.mx/" target="_blank"><%= t('botones.b2.opciones.op5') %></a></li>
+									<li><a href="https://cell.colmex.mx/" target="_blank"><%= t('botones.b2.opciones.op6') %></a></li>
+									<li><a href="https://ces.colmex.mx/" target="_blank"><%= t('botones.b2.opciones.op7') %></a></li>
 								</ul>
 							</li>
 							<!-- Programas académicos -->
@@ -79,16 +79,16 @@
 									<% end %>
 									<li><a href="<%= catedras_seminarios_path %>"><%= t('botones.b3.opciones.op9') %></a></li>
 									<li><a href="<%= admisiones_path %>"><%= t('botones.b3.opciones.op4') %></a></li>
-									<li><a href="<%= (I18n.locale != :en ? 'http://oia.colmex.mx/' : 'http://oia.colmex.mx/index.php/home' ) %>" target="_blank"><%= t('botones.b3.opciones.op5') %></a></li>
+									<li><a href="<%= (I18n.locale != :en ? 'https://oia.colmex.mx/' : 'https://oia.colmex.mx/index.php/home' ) %>" target="_blank"><%= t('botones.b3.opciones.op5') %></a></li>
 									<li><a href="<%= calendario_path %>"><%= t('botones.b3.opciones.op7') %></a></li>
 								</ul>
 							</li>
 							<!-- Liga a Biblioteca -->
-							<li class="no-dropdown"><a href="http://biblioteca.colmex.mx/" target="_blank"><span><%= t('botones.b4') %></span></a></li>
+							<li class="no-dropdown"><a href="https://biblioteca.colmex.mx/" target="_blank"><span><%= t('botones.b4') %></span></a></li>
 							<!-- Liga a Publicaciones -->
 							<li class="no-dropdown"><a href="https://publicaciones.colmex.mx/" target="_blank"><span><%= t('botones.b6') %></span></a></li>
 							<!-- Liga a Agenda -->
-							<li class="no-dropdown"><a href=" http://agenda.colmex.mx" target="_blank"><span><%= t('botones.b5') %></span></a></li>
+							<li class="no-dropdown"><a href=" https://agenda.colmex.mx" target="_blank"><span><%= t('botones.b5') %></span></a></li>
 							<!-- Control de idioma del lado derecho -->
 							<% idioma = "<span style=\"color:#993366;\">" + (I18n.locale == :es ? "English" : "Español") + "</span>" %>
 							<li class="no-dropdown"><%= link_to raw(idioma), {:controller => controller_name, :action => action_name, :locale => (I18n.locale == :en ? "es" : "en" ), :condicion => (params[:condicion] if action_name == "resultados_busqueda")}  %></li>
@@ -154,7 +154,7 @@
 						<li><a href="<%= historia_path %>"><%= t('botones.b1.opciones.op3') %></a></li>
 						<li><a href="<%= autoridades_path %>"><%= t('botones.b1.opciones.op2') %></a></li>
 						<li><a href="<%= directorio_path %>"><%= I18n.locale == :en ? "Academic Staff" : "Directorio académico" %></a></li>
-						<li><a href="http://directorio.colmex.mx/" target="_blank"><%= t('botones.b1.opciones.op1') %></a></li>
+						<li><a href="https://directorio.colmex.mx/" target="_blank"><%= t('botones.b1.opciones.op1') %></a></li>
 						<li><a href="<%= documentacion_path %>"><%= t('botones.b1.opciones.op4') %></a></li>
 						<li><a href="<%= profesores_emeritos_path %>"><%= t('botones.b1.opciones.op5') %></a></li>
 						<!-- Becas postdoctorales sólo es visible en la navegación en español -->
@@ -162,7 +162,7 @@
 						<li><a href="<%= postdocs_path %>"><%= 'Becas postdoctorales' %></a></li>
 						<% end %>
 						<li><a href="<%= premios_path %>"><%= t('botones.b1.opciones.op6') %></a></li>
-						<li><a href="http://agenda.colmex.mx/Convocatorias" target="_blank"><%= t('botones.b3.opciones.op8') %></a></li>
+						<li><a href="https://agenda.colmex.mx/Convocatorias" target="_blank"><%= t('botones.b3.opciones.op8') %></a></li>
 						<li><a href="<%= principios_path %>"><%= t('footer.liga1') %></a></li>
 						<!-- Licitaciones, Relación de bienes y Transparencia sólo son visibles en la navegación en español -->
 						<% if I18n.locale != :en %>
@@ -176,13 +176,13 @@
 				<li class="dropdown" id="dropdown2">
 					<a href="<%= I18n.locale == :en ? centros_de_estudio_path(locale: "en") : "" %>" class="dropdown-toggle" data-hover="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span><%= t('botones.b2.texto') %></span></a>
 					<ul class="dropdown-menu">
-						<li><a href="http://ceaa.colmex.mx/" target="_blank"><%= t('botones.b2.opciones.op1') %></a></li>
-						<li><a href="http://cedua.colmex.mx/" target="_blank"><%= t('botones.b2.opciones.op2') %></a></li>
-						<li><a href="http://cee.colmex.mx/" target="_blank"><%= t('botones.b2.opciones.op3') %></a></li>
-						<li><a href="http://ceh.colmex.mx/" target="_blank"><%= t('botones.b2.opciones.op4') %></a></li>
-						<li><a href="http://cei.colmex.mx/" target="_blank"><%= t('botones.b2.opciones.op5') %></a></li>
-						<li><a href="http://cell.colmex.mx/" target="_blank"><%= t('botones.b2.opciones.op6') %></a></li>
-						<li><a href="http://ces.colmex.mx/" target="_blank"><%= t('botones.b2.opciones.op7') %></a></li>
+						<li><a href="https://ceaa.colmex.mx/" target="_blank"><%= t('botones.b2.opciones.op1') %></a></li>
+						<li><a href="https://cedua.colmex.mx/" target="_blank"><%= t('botones.b2.opciones.op2') %></a></li>
+						<li><a href="https://cee.colmex.mx/" target="_blank"><%= t('botones.b2.opciones.op3') %></a></li>
+						<li><a href="https://ceh.colmex.mx/" target="_blank"><%= t('botones.b2.opciones.op4') %></a></li>
+						<li><a href="https://cei.colmex.mx/" target="_blank"><%= t('botones.b2.opciones.op5') %></a></li>
+						<li><a href="https://cell.colmex.mx/" target="_blank"><%= t('botones.b2.opciones.op6') %></a></li>
+						<li><a href="https://ces.colmex.mx/" target="_blank"><%= t('botones.b2.opciones.op7') %></a></li>
 					</ul>
 				</li>
 				<!-- Programas académicos -->
@@ -197,16 +197,16 @@
 						<% end %>
 						<li><a href="<%= catedras_seminarios_path %>"><%= t('botones.b3.opciones.op9') %></a></li>
 						<li><a href="<%= admisiones_path %>"><%= t('botones.b3.opciones.op4') %></a></li>
-						<li><a href="<%= (I18n.locale != :en ? 'http://oia.colmex.mx/' : 'http://oia.colmex.mx/index.php/home' ) %>" target="_blank"><%= t('botones.b3.opciones.op5') %></a></li>
+						<li><a href="<%= (I18n.locale != :en ? 'https://oia.colmex.mx/' : 'https://oia.colmex.mx/index.php/home' ) %>" target="_blank"><%= t('botones.b3.opciones.op5') %></a></li>
 						<li><a href="<%= calendario_path %>"><%= t('botones.b3.opciones.op7') %></a></li>
 					</ul>
 				</li>
 				<!-- Enlace a Biblioteca -->
-				<li class="no-dropdown"><a href="http://biblioteca.colmex.mx/" target="_blank"><span><%= t('botones.b4') %></span></a></li>
+				<li class="no-dropdown"><a href="https://biblioteca.colmex.mx/" target="_blank"><span><%= t('botones.b4') %></span></a></li>
 				<!-- Enlace a Publicaciones -->
 				<li class="no-dropdown"><a href="https://publicaciones.colmex.mx/" target="_blank"><span><%= t('botones.b6') %></span></a></li>
 				<!-- Enlace a Agenda -->
-				<li class="no-dropdown"><a href=" http://agenda.colmex.mx" target="_blank"><span><%= t('botones.b5') %></span></a></li>
+				<li class="no-dropdown"><a href=" https://agenda.colmex.mx" target="_blank"><span><%= t('botones.b5') %></span></a></li>
 			</ul> <!-- Cierre del menú -->
 		</div> <!-- Cierre de columnas para menú -->
 	</div> <!-- Cierre de div fila para menú -->
@@ -224,7 +224,7 @@
 						<li><a href="<%= historia_path %>" class="sublink"><%= t('botones.b1.opciones.op3') %></a></li>
 						<li><a href="<%= autoridades_path %>" class="sublink"><%= t('botones.b1.opciones.op2') %></a></li>
 						<li><a href="<%= directorio_path %>" class="sublink"><%= I18n.locale == :en ? "Academic Staff" : "Directorio académico" %></a></li>
-						<li><a href="http://directorio.colmex.mx" class="sublink" target="_blank"><%= t('botones.b1.opciones.op1') %></a></li>
+						<li><a href="https://directorio.colmex.mx" class="sublink" target="_blank"><%= t('botones.b1.opciones.op1') %></a></li>
 						<li><a href="<%= documentacion_path %>" class="sublink"><%= t('botones.b1.opciones.op4') %></a></li>
 						<li><a href="<%= profesores_emeritos_path %>" class="sublink"><%= t('botones.b1.opciones.op5') %></a></li>
 						<!-- Becas postdoctorales sólo aparece en la navgación en español -->
@@ -232,7 +232,7 @@
 						<li><a href="<%= postdocs_path %>" class="sublink"><%= 'Becas postdoctorales' %></a></li>
 						<% end %>
 						<li><a href="<%= premios_path %>" class="sublink"><%= t('botones.b1.opciones.op6') %></a></li>
-						<li><a href="http://agenda.colmex.mx/Convocatorias" target="_blank" class="sublink"><%= t('botones.b3.opciones.op8') %></a></li>
+						<li><a href="https://agenda.colmex.mx/Convocatorias" target="_blank" class="sublink"><%= t('botones.b3.opciones.op8') %></a></li>
 						<li><a href="<%= principios_path %>" class="sublink"><%= t('footer.liga1') %></a></li>
 						<!-- Licitaciones, Relación de bienes y Transparencia sólo son visibles en la navegación en español -->
 						<% if I18n.locale != :en %>
@@ -246,13 +246,13 @@
 				<li class="uk-parent">
 					<a href="<%= I18n.locale == :en ? centros_de_estudio_path(locale: "en") : "#" %>"><%= t('botones.b2.texto') %></a>
 					<ul class="uk-nav-sub">
-						<li><a href="http://ceaa.colmex.mx/" target="_blank" class="sublink"><%= t('botones.b2.opciones.op1') %></a></li>
-						<li><a href="http://cedua.colmex.mx/" target="_blank" class="sublink"><%= t('botones.b2.opciones.op2') %></a></li>
-						<li><a href="http://cee.colmex.mx/" target="_blank" class="sublink"><%= t('botones.b2.opciones.op3') %></a></li>
-						<li><a href="http://ceh.colmex.mx/" target="_blank" class="sublink"><%= t('botones.b2.opciones.op4') %></a></li>
-						<li><a href="http://cei.colmex.mx/" target="_blank" class="sublink"><%= t('botones.b2.opciones.op5') %></a></li>
-						<li><a href="http://cell.colmex.mx/" target="_blank" class="sublink"><%= t('botones.b2.opciones.op6') %></a></li>
-						<li><a href="http://ces.colmex.mx/" target="_blank" class="sublink"><%= t('botones.b2.opciones.op7') %></a></li>
+						<li><a href="https://ceaa.colmex.mx/" target="_blank" class="sublink"><%= t('botones.b2.opciones.op1') %></a></li>
+						<li><a href="https://cedua.colmex.mx/" target="_blank" class="sublink"><%= t('botones.b2.opciones.op2') %></a></li>
+						<li><a href="https://cee.colmex.mx/" target="_blank" class="sublink"><%= t('botones.b2.opciones.op3') %></a></li>
+						<li><a href="https://ceh.colmex.mx/" target="_blank" class="sublink"><%= t('botones.b2.opciones.op4') %></a></li>
+						<li><a href="https://cei.colmex.mx/" target="_blank" class="sublink"><%= t('botones.b2.opciones.op5') %></a></li>
+						<li><a href="https://cell.colmex.mx/" target="_blank" class="sublink"><%= t('botones.b2.opciones.op6') %></a></li>
+						<li><a href="https://ces.colmex.mx/" target="_blank" class="sublink"><%= t('botones.b2.opciones.op7') %></a></li>
 					</ul>
 				</li>
 				<!-- Programas académicos -->
@@ -267,16 +267,16 @@
 						<% end %>
 						<li><a href="<%= catedras_seminarios_path %>" class="sublink"><%= t('botones.b3.opciones.op9') %></a></li>
 						<li><a href="<%= admisiones_path %>" class="sublink"><%= t('botones.b3.opciones.op4') %></a></li>
-						<li><a href="<%= (I18n.locale != :en ? 'http://oia.colmex.mx/' : 'http://oia.colmex.mx/index.php/home' ) %>" class="sublink" target="_blank"><%= t('botones.b3.opciones.op5') %></a></li>
+						<li><a href="<%= (I18n.locale != :en ? 'https://oia.colmex.mx/' : 'https://oia.colmex.mx/index.php/home' ) %>" class="sublink" target="_blank"><%= t('botones.b3.opciones.op5') %></a></li>
 						<li><a href="<%= calendario_path %>" class="sublink"><%= t('botones.b3.opciones.op7') %></a></li>
 					</ul>
 				</li>
 				<!-- Enlace a Biblioteca -->
-				<li class="uk-parent"><a href="http://biblioteca.colmex.mx/" target="_blank"><%= t('botones.b4') %></a></li>
+				<li class="uk-parent"><a href="https://biblioteca.colmex.mx/" target="_blank"><%= t('botones.b4') %></a></li>
 				<!-- Enlace a Publicaciones -->
 				<li class="uk-parent"><a href="https://publicaciones.colmex.mx/" target="_blank"><%= t('botones.b6') %></a></li>
 				<!-- Enlace a Agenda -->
-				<li class="uk-parent"><a href=" http://agenda.colmex.mx" target="_blank"><%= t('botones.b5') %></a></li>
+				<li class="uk-parent"><a href=" https://agenda.colmex.mx" target="_blank"><%= t('botones.b5') %></a></li>
 				<!-- Campo de búsqueda (no habilitado) -->
 				<% if false %>
 				<li class="links-side" id="search-lat">
