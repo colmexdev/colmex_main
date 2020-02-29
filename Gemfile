@@ -3,7 +3,7 @@ ruby '2.3.1'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.6'
-gem 'rake', '12.3.2'
+gem 'rake', '12.3.3'
 # Use mysql as the database for Active Record
 gem 'mysql2', '>= 0.3.13', '< 0.5'
 gem 'active_record_union'
